@@ -1,28 +1,41 @@
-import Game.Levels.DemoWorld
+import Game.Levels.ImplicationWorld
+import Game.Levels.ConjunctionWorld
+-- import Game.Levels.FunctionWorld
+-- import Game.Levels.ProductWorld
+-- import Game.Levels.DisjunctionWorld
+-- import Game.Levels.CoproductWorld
+-- import Game.Levels.EqualityWorld
 
 -- Here's what we'll put on the title screen
-Title "Hello World Game"
+Title "Computer-Verified Proof: a Hands-On Introduction to Interactive Theorem Proving"
 Introduction
 "
-This text appears on the starting page where one selects the world/level to play.
-You can use markdown.
+Mathematicians from all over &mdash; most of whom have never met one another &mdash; nevertheless agree to an incredible extent about the natural of the mathematical universe. How did this degree of consensus come about?
+
+Firstly mathematicians have developed a precise formal language which allows them to define new abstract concepts and state their properties in an unambiguous way. A mathematical *proposition* is a well-formed mathematical statement that is either true or false, for instance:
+
+* &ldquo;There are infinitely many prime numbers.&rdquo;
+* &ldquo;Every prime number is even.&rdquo;
+* &ldquo;There are infinitely many prime numbers that are two less than another prime.&rdquo;
+
+Mathematicians distinguish between the true propositions, the false ones, and the ones whose truth value is not yet known through *proofs* made precise in the formal language of mathematical logic. The aim of this game is to introduce these proof techniques using a tool called a computer proof assistant that can provide real-time feedback to a theorem prover about the status of a logical argument that is currently under development.
 "
 
 Info "
-Here you can put additional information about the game. It is accessible
-from the starting through the drop-down menu.
-
-For example: Game version, Credits, Link to Github and Zulip, etc.
-
-Use markdown.
+This was created using the GameSkeleton Github Repo from the Lean Games Server hosted by ADAM: Anticipating the Digital Age of Mathematics at Heinrich Heine University Düsseldorf.
 "
 
 /-! Information to be displayed on the servers landing page. -/
-Languages "en"
-CaptionShort "Game Template"
-CaptionLong "You should use this game as a template for your own game and add your own levels."
+Languages "English"
+CaptionShort "FYS270"
+CaptionLong "First Year Seminar 270"
 -- Prerequisites "" -- add this if your game depends on other games
 -- CoverImage "images/cover.png"
+
+Dependency ImplicationWorld → ConjunctionWorld
+-- Dependency ImplicationWorld → FunctionWorld → ProductWorld
+-- Dependency ConjunctionWorld → ProductWorld → CoproductWorld
+-- Dependency ConjunctionWorld → DisjunctionWorld → CoproductWorld → EqualityWorld
 
 /-! Build the game. Show's warnings if it found a problem with your game. -/
 MakeGame
