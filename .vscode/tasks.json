@@ -1,0 +1,31 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "lake: build",
+      "detail": "build lean files",
+      "type": "shell",
+      "command": "lake build",
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+    },
+    {
+      "label": "game: open browser",
+      "command": "${input:openSimpleBrowser}",
+      "problemMatcher": [],
+      // "runOptions": {
+      //   "runOn": "folderOpen"
+      // }
+    },
+  ],
+  "inputs": [
+    {
+      "id": "openSimpleBrowser",
+      "type": "command",
+      "command": "simpleBrowser.show",
+      "args": ["http://localhost:3000"]
+    }
+  ]
+}

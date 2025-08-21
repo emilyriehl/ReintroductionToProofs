@@ -1,0 +1,30 @@
+name: Build
+run-name: Build the game and save artifact
+on:
+  workflow_dispatch:
+  push:
+    branches:
+    - "main"
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: leanprover/lean-action@v1
+        with:
+          use-github-cache: false
+
+      - name: compress built game
+        #run: tar -czvf ../game.tar.gz .
+        run: zip game.zip * .lake/ .i18n/ -r
+
+      - name: upload compressed game folder
+        uses: actions/upload-artifact@v4
+        with:
+          name: build-for-server-import
+          path: |
+            game.zip
+
+      - name: What next?
+        run: echo "To export the game to the Game Server, open https://adam.math.hhu.de/import/trigger/${GITHUB_REPOSITORY,,} \n Afterwards, you can play the game at https://adam.math.hhu.de/#/g/${GITHUB_REPOSITORY,,}"
