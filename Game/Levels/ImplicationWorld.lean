@@ -12,7 +12,9 @@ World "ImplicationWorld"
 Title "Implication World"
 
 Introduction "
-We begin our study of propositional logic by introducing the logical connective *implication* denoted by `→`. For arbitrary *propositions* `P` and `Q`, `P → Q` is a new proposition asserting that *if* `P` *is true then* `Q` *is true*.
+We begin our study of propositional logic by introducing the logical connective *implication* denoted by `→`.
+
+For arbitrary *propositions* `P` and `Q`, `P → Q` is a new proposition asserting that *if* `P` *is true then* `Q` *is true*.
 
 To understand how implications work in logic we must learn:
 
