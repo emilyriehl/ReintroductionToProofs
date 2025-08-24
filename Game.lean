@@ -1,10 +1,10 @@
 import Game.Levels.ImplicationWorld
 import Game.Levels.ConjunctionWorld
--- import Game.Levels.FunctionWorld
--- import Game.Levels.ProductWorld
--- import Game.Levels.DisjunctionWorld
--- import Game.Levels.CoproductWorld
--- import Game.Levels.EqualityWorld
+import Game.Levels.FunctionWorld
+import Game.Levels.ProductWorld
+import Game.Levels.DisjunctionWorld
+import Game.Levels.CoproductWorld
+import Game.Levels.EqualityWorld
 
 -- Here's what we'll put on the title screen
 Title "Computer-Verified Proof: a Hands-On Introduction to Interactive Theorem Proving"
@@ -39,9 +39,9 @@ CaptionLong "First Year Seminar 270"
 -- CoverImage "images/cover.png"
 
 Dependency ImplicationWorld → ConjunctionWorld
--- Dependency ImplicationWorld → FunctionWorld → ProductWorld
--- Dependency ConjunctionWorld → ProductWorld → CoproductWorld
--- Dependency ConjunctionWorld → DisjunctionWorld → CoproductWorld → EqualityWorld
+Dependency ImplicationWorld → FunctionWorld → ProductWorld
+Dependency ConjunctionWorld → ProductWorld → CoproductWorld
+Dependency ConjunctionWorld → DisjunctionWorld → CoproductWorld → EqualityWorld
 
 /-! Build the game. Show's warnings if it found a problem with your game. -/
 MakeGame

@@ -189,6 +189,10 @@ msgid "The proof you have just constructed is now recorded as a theorem in the l
 "In fact `P ∧ Q` is true if and only if `Q ∧ P` is true, as we will now demonstrate."
 msgstr ""
 
+#: Game.Levels.ConjunctionWorld.L09_UniversalProperty
+msgid "`(P → Q) ∧ (P → R)` is true if and only if `P → (Q ∧ R)` is true."
+msgstr ""
+
 #: Game.Levels.ConjunctionWorld.L02_UsingAnd
 msgid "A hypothesis `h : P ∧ Q` provides explicit proofs of both `P` and `Q` which are denoted in Lean by `h.1 : P` and `h.2 : Q`."
 msgstr ""
@@ -369,16 +373,6 @@ msgstr ""
 msgid "Now we are ready for the boss level!"
 msgstr ""
 
-#: Game.Levels.ConjunctionWorld.L10_BossLevel
-msgid "For the Boss Level of Conjunction World, the task is to show another logical equivalence,\n"
-"this time between the conjoined implications `(P → Q) ∧ (P → R)` and the implication `P → Q ∧ R`.\n"
-"\n"
-"The proof will require a new idea, which previews the next level. We've seen that for propositions `S` and `T`,\n"
-"`S → (S → T) → T` can be proven by introducing hypotheses `s : S` and `h : S → T`, at which point the goal is to prove `T`.\n"
-"Then applying the hypothesis `h` reduces the goal to proving `S` which we know is true by `s`. In fact, the element\n"
-"`h s : T` is a proof of `T`, namely the proof constructed by applying the hypothesis `h` to the hypothesis `s`."
-msgstr ""
-
 #: Game.Levels.ConjunctionWorld.L05_Associativity
 msgid "Associativity"
 msgstr ""
@@ -513,18 +507,16 @@ msgstr ""
 msgid "Now the goal is just to prove `P`. Type `exact «{h}».1` to supply this proof."
 msgstr ""
 
-#: Game.Levels.ConjunctionWorld.L09_UniversalProperty
-msgid "The task in this level is to show another logical equivalence,\n"
-"this time between the conjoined implications `(P → Q) ∧ (P → R)` and the implication `P → Q ∧ R`.\n"
-"\n"
-"The proof will require a new idea, which previews the next level. We've seen that for propositions `S` and `T`,\n"
-"`S → (S → T) → T` can be proven by introducing hypotheses `s : S` and `h : S → T`, at which point the goal is to prove `T`.\n"
-"Then applying the hypothesis `h` reduces the goal to proving `S` which we know is true by `s`. In fact, the element\n"
-"`h s : T` is a proof of `T`, namely the proof constructed by applying the hypothesis `h` to the hypothesis `s`."
-msgstr ""
-
 #: Game.Levels.ConjunctionWorld.L02_UsingAnd
 msgid "Using And"
+msgstr ""
+
+#: Game.Levels.ConjunctionWorld.L10_BossLevel
+msgid "For the Boss Level of Conjunction World, the task is to prove a complicated implication.\n"
+"\n"
+"After introducing all of the allowed hypotheses, you may find it helpful to prove that some intermediate propositions are true using the `have` tactic.\n"
+"\n"
+"Good luck!"
 msgstr ""
 
 #: Game.Levels.ImplicationWorld.L06_ProvingAssumedImplication
@@ -579,6 +571,20 @@ msgstr ""
 
 #: Game.Levels.ImplicationWorld.L01_ByAssumption
 msgid "You can click on `retry` to attempt a different proof. Try typing `assumption` instead."
+msgstr ""
+
+#: Game.Levels.ConjunctionWorld.L09_UniversalProperty
+msgid "The task in this level is to show another logical equivalence,\n"
+"this time between the conjoined implications `(P → Q) ∧ (P → R)` and the implication `P → Q ∧ R`, which is implicitly parenthesized as `P → (Q ∧ R)`.\n"
+"\n"
+"The proof will require an idea that we have not used for a while. We've seen that for propositions `S` and `T`,\n"
+"`S → (S → T) → T` can be proven by introducing hypotheses `s : S` and `h : S → T`, at which point the goal is to prove `T`.\n"
+"Then applying the hypothesis `h` reduces the goal to proving `S` which we know is true by `s`.\n"
+"\n"
+"Recall there is special notation\n"
+"`h s : T` for the proof constructed by applying the hypothesis `h` to the hypothesis `s`.\n"
+"\n"
+"The intuition behind this notation will be explained in the next world."
 msgstr ""
 
 #: Game.Levels.ImplicationWorld.L07_OnParentheses
