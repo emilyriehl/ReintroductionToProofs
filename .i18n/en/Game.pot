@@ -36,6 +36,10 @@ msgstr ""
 msgid "If the goal is to prove `S` and we have a hypothesis `s : S`, the tactic `exact s` supplies the required proof."
 msgstr ""
 
+#: Game
+msgid "This was created using the GameSkeleton Github Repo from the Lean Games Server hosted by ADAM: Anticipating the Digital Age of Mathematics at Heinrich Heine University Düsseldorf. It is designed for a first year seminar course taught at Johns Hopkins University in Fall 2025 with the title `Computer-Verified Proof: a Hands-On Introduction to Interactive Theorem Proving`."
+msgstr ""
+
 #: Game.Levels.ConjunctionWorld.L05_Associativity
 msgid "Conjunction is associative: `(P ∧ Q) ∧ R` is true if and only if `P ∧ (Q ∧ R)` is true."
 msgstr ""
@@ -331,10 +335,6 @@ msgstr ""
 
 #: Game.Levels.ImplicationWorld.L09_BossLevel
 msgid "Next move on to Conjunction World to meet our second logical connective."
-msgstr ""
-
-#: Game
-msgid "This was created using the GameSkeleton Github Repo from the Lean Games Server hosted by ADAM: Anticipating the Digital Age of Mathematics at Heinrich Heine University Düsseldorf."
 msgstr ""
 
 #: Game.Levels.ImplicationWorld
