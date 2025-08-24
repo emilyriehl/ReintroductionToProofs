@@ -15,6 +15,7 @@ Introduction "Recall that implication is *NOT* associative: the propositions `(P
 One reason that mathematical statements of the form `P → (Q → R)` are more prevalent is that this is implied by `P ∧ Q → R`, which is implicitly parenthesized as `(P ∧ Q) → R`.
 "
 
+/-- `P ∧ Q → R` implies `P → Q → R`. -/
 Statement And.curry {P Q R : Prop} (h : P ∧ Q → R) : P → Q → R := by
   Hint (hidden := true) "Can we apply our hypothesis yet or must we act on the goal first?"
   intro p

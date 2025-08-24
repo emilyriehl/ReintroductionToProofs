@@ -13,14 +13,16 @@ World "ConjunctionWorld"
 Title "Conjunction World"
 
 Introduction "
-The logical connective of *conjunction*, denoted by `∧`, is the mathematical version of *and*. For arbitrary propositions `P` and `Q`, `P ∧ Q` is a new proposition asserting that `P` *and* `Q` *are both true*.
+The logical connective of *conjunction*, denoted by `∧`, is the mathematical version of *and*.
+
+For arbitrary propositions `P` and `Q`, `P ∧ Q` is a new proposition asserting that `P` *and* `Q` *are both true*.
 
 To understand how conjunctions work in logic we must learn:
 
 * How to prove theorems of the form `P ∧ Q`.
 * How to use a hypothesis of the form `P ∧ Q` to prove something else.
 
-To prove `P ∧ Q`, one must supply proofs `p : P` and `q : Q`, which can be done using the syntax `⟨p,q⟩ : P ∧ Q`. Use '\\\\<' and '\\\\>' to type the angle braces.
+To prove `P ∧ Q`, one must supply proofs `p : P` and `q : Q`, which can be done using the syntax `⟨p,q⟩ : P ∧ Q`. Use '\\\\<' and '\\\\>' to type the angle brackets.
 
 If we have a proof `h : P ∧ Q` then we can extract proofs that `P` and `Q` are true using the syntax `h.1 : P` and `h.2 : Q`.
 "

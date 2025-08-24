@@ -7,13 +7,7 @@ Title "Introducing And"
 
 Introduction "To prove a conjunction `P ∧ Q` we need to supply a proof of both `P` and `Q`."
 
-/--
-The `constructor` tactic can be used when the goal is a conjunction (among other settings to be introduced later) to split the goal into cases.
--/
-
-TacticDoc constructor
-
-
+/-- If `P` is true and `Q` is true then `P ∧ Q` is true. -/
 Statement {P Q : Prop} (p : P) (q : Q) : P ∧ Q := by
   Hint "Use the tactic `constructor` to ask Lean to break up the goal into steps, of first proving `{P}` and then proving `{Q}`."
   constructor
@@ -24,8 +18,9 @@ Statement {P Q : Prop} (p : P) (q : Q) : P ∧ Q := by
 
 Conclusion "Alternatively, you can type `exact ⟨p,q⟩' using '\\\\<' and '\\\\>' to type the angle braces."
 
-/- Use these commands to add items to the game's inventory. -/
+/--
+The `constructor` tactic can be used when the goal is a conjunction (among other settings) to split the goal into cases.
+-/
+TacticDoc constructor
 
 NewTactic constructor
--- NewTheorem Prop.modus_ponens
--- NewDefinition Nat Add Eq

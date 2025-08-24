@@ -5,7 +5,7 @@ Level 2
 
 Title "Using And"
 
-Introduction "A hypothesis `h : P ∧ Q` provides explicit proofs of both `P` and `Q` which are denoted by `h.1 : P` and `h.2 : Q`."
+Introduction "A hypothesis `h : P ∧ Q` provides explicit proofs of both `P` and `Q` which are denoted in Lean by `h.1 : P` and `h.2 : Q`."
 
 Statement {P Q : Prop} (h : P ∧ Q) : P ∧ Q := by
   Hint "This can be solved in two ways. Can you find them both?"
@@ -16,5 +16,3 @@ Statement {P Q : Prop} (h : P ∧ Q) : P ∧ Q := by
   exact h.2
 
 Conclusion "If this is your first time solving this level, delete your proof, and try to find another solution."
-
-/- Use these commands to add items to the game's inventory. -/

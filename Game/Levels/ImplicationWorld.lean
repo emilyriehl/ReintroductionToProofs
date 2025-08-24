@@ -2,7 +2,7 @@ import Game.Levels.ImplicationWorld.L01_ByAssumption
 import Game.Levels.ImplicationWorld.L02_ModusPonens
 import Game.Levels.ImplicationWorld.L03_ComposingImplication
 import Game.Levels.ImplicationWorld.L04_ProvingImplication
-import Game.Levels.ImplicationWorld.L05_ProvingAssumption
+import Game.Levels.ImplicationWorld.L05_ProvingImpliedAssumption
 import Game.Levels.ImplicationWorld.L06_ProvingAssumedImplication
 import Game.Levels.ImplicationWorld.L07_OnParentheses
 import Game.Levels.ImplicationWorld.L08_ModusPonensAgain
@@ -12,7 +12,13 @@ World "ImplicationWorld"
 Title "Implication World"
 
 Introduction "
-We begin our study of propositional logic by introducing the logical connective *implication* denoted by `→`.
+We begin our study of proofs with *propositional logic*.
+
+Many mathematical propositions are built out of simpler propositions using logical connectives. The structure of a compound proposition &mdash; that is, which connectives appear where &mdash; often suggests proof techniques, as we will discover.
+
+To study these connectives, we require *proposition variables* &mdash; denoted with letters like `P`, `Q`, `R` &mdash; which stand for generic propositions, which may be true or false.
+
+In this level we study the logical connective *implication* denoted by `→`.
 
 For arbitrary *propositions* `P` and `Q`, `P → Q` is a new proposition asserting that *if* `P` *is true then* `Q` *is true*.
 

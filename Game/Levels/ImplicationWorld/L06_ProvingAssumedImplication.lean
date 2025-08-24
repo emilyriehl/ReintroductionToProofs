@@ -12,6 +12,7 @@ To delete a proof (or proof attempt) and start over, you might find it helpful t
 You can also delete a proof attempt in line by line in `typewriter mode` using the `retry` button to the right of that line."
 
 
+/-- If `P → Q` is true, then `P → Q` is true. -/
 Statement {P Q : Prop} (h : P → Q) : P → Q := by
   Hint (hidden := true) "Which tactics can be used to prove `{P} → {Q}` with our given assumptions?"
   Branch
@@ -21,10 +22,4 @@ Statement {P Q : Prop} (h : P → Q) : P → Q := by
     exact p
   exact h
 
-Conclusion "Let us now explore other implications that are provable with this strategy."
-
-/- Use these commands to add items to the game's inventory. -/
-
--- NewTactic intro
--- NewTheorem Prop.modus_ponens
--- NewDefinition Nat Add Eq
+Conclusion "The lesson of this level is to pay attention to the big picture, namely what exactly you are being asked ot prove under what hypotheses."

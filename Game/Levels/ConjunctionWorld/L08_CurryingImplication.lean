@@ -1,4 +1,6 @@
 import Game.Metadata
+import Game.Levels.ConjunctionWorld.L06_CompoundImplication
+import Game.Levels.ConjunctionWorld.L07_MoreCompoundImplication
 
 World "ConjunctionWorld"
 Level 8
@@ -10,6 +12,8 @@ Introduction "We now establish a logical equivalence between `P ∧ Q → R` and
 This is why implications of the form `P → (Q → R)` are so much more common than implications of the form `(P → Q) → R`.
 
 The name `Currying` will be explained in a future level.
+
+Note the two implications have been added to the theorem library, should you wish to use them.
 "
 
 Statement {P Q R : Prop} : (P ∧ Q → R) ↔ (P → Q → R) := by
@@ -21,5 +25,3 @@ Statement {P Q R : Prop} : (P ∧ Q → R) ↔ (P → Q → R) := by
   exact h pq.1 pq.2
 
 Conclusion "In the next level we'll meet the universal property of conjunctions."
-
-/- Use these commands to add items to the game's inventory. -/

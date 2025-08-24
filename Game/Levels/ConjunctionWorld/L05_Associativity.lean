@@ -11,8 +11,11 @@ Lean likes to drop parentheses whenever possible so uses `P ∧ Q ∧ R` as an a
 
 Given a proof `h : (P ∧ Q) ∧ R`, we obtain proofs `h.1 : P ∧ Q` and `h.2 : R`. From the first of these,
 we obtain further proofs `h.1.1 : P` and `h.1.2 : Q`.
+
+Similarly, given proofs `p : P`, `q : Q`, `r : R`, then `⟨⟨p, q⟩, r⟩ : (P ∧ Q) ∧ R` while `⟨p, ⟨q, r⟩⟩ : P ∧ (Q ∧ R)`. Lean allows the shorthand `⟨p, q, r⟩ : P ∧ Q ∧ R` for the latter proof.
 "
 
+/-- Conjunction is associative: `(P ∧ Q) ∧ R` is true if and only if `P ∧ (Q ∧ R)` is true. -/
 Statement {P Q R : Prop} : (P ∧ Q) ∧ R ↔ P ∧ (Q ∧ R) := by
   constructor
   intro h
@@ -35,6 +38,6 @@ Statement {P Q R : Prop} : (P ∧ Q) ∧ R ↔ P ∧ (Q ∧ R) := by
   exact k.2.1
   exact k.2.2
 
-Conclusion "Transition here."
+Conclusion "Can you solve this level with only one use of the `constructor` tactic? In fact, even this can be avoided using syntax we have not yet introduced: a two line proof `intro s` followed by `exact t` can be written `fun s ↦ t` writing `\\mapsto` to type `↦`."
 
 /- Use these commands to add items to the game's inventory. -/

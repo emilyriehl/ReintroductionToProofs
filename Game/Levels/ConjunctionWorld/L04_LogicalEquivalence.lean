@@ -13,12 +13,17 @@ DefinitionDoc iff as "↔"
 
 NewDefinition iff
 
-Introduction "Two propositions `P` and `Q` are *logically equivalent* if `P` implies `Q` and `Q` also implies `P`. The assertion that `P` and `Q` are logically equivalent can be expressed by the compound proposition `(P → Q) ∧ (Q → P)`.
+Introduction "Two propositions `P` and `Q` are *logically equivalent* if `P` implies `Q` and `Q` also implies `P`.
 
-Because this notion will appear frequently in what follows, we introduce `P ↔ Q` as a useful shorthand for `(P → Q) ∧ (Q → P)`. See the list of definitions to the right for a reminder about what the symbol `↔` means.
+The assertion that `P` and `Q` are logically equivalent can be expressed by the compound proposition `(P → Q) ∧ (Q → P)`.
+
+Because this notion will appear frequently in what follows, we introduce `P ↔ Q` as a useful shorthand for `(P → Q) ∧ (Q → P)`.
+
+See the library of definitions to the right for a reminder about what the symbol `↔` means.
 
 The notion of logical equivalence enables us to upgrade our understanding of associativity of symmetry as follows."
 
+/-- `P ∧ Q` is true if and only if `Q ∧ P` is true. -/
 Statement {P Q : Prop} : P ∧ Q ↔ Q ∧ P := by
   Hint "Recall that `S ↔ T` is an abbreviation for `(S → T) ∧ (T → S)`. What is the outermost connective here? Which tactic can be used to break this into subgoals?"
   constructor

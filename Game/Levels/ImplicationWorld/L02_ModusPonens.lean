@@ -18,7 +18,7 @@ Statement {P Q : Prop} (p : P) (h : P → Q) : Q := by
   Hint (hidden := true) "Type `exact {p}` to tell Lean that `{p}` is a proof of `{P}`."
   exact p
 
-Conclusion "Congratulations!"
+Conclusion "Here `apply` is another tactic, which can be found in the library above right."
 
 /- Use these commands to add items to the game's inventory. -/
 
