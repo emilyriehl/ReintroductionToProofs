@@ -10,7 +10,7 @@ Introduction "Now we are in the setting of two proposition variables `P` and `Q`
 It follows from both of these facts that `Q` is also true and we can construct a proof by applying the hypothesis `h` to the proof `p`.
 "
 
-/-- If `P` is true and `P → Q` is true then `Q` is true. -/
+/-- If `P` is true and `P → Q` is true, then `Q` is true. -/
 Statement {P Q : Prop} (p : P) (h : P → Q) : Q := by
   Hint "The hypothesis `{h}` can be used to convert a proof of `{P}` into a proof of `{Q}`. This can be thought of as a step that reduces the problem of proving `{Q}` to the problem of proving `{P}`. To apply this hypothesis type `apply {h}`."
   apply h

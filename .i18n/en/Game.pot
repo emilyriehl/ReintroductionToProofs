@@ -1,7 +1,7 @@
 msgid ""
 msgstr "Project-Id-Version: Game v4.22.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-08-24\n"
+"POT-Creation-Date: 2025-08-25\n"
 "Last-Translator: \n"
 "Language-Team: none\n"
 "Language: en\n"
@@ -52,6 +52,10 @@ msgstr ""
 msgid "To use the hypothesis `«{p}»` to reach this conclusion type `exact «{p}»`."
 msgstr ""
 
+#: Game.Levels.ConjunctionWorld.L07_MoreCompoundImplication
+msgid "`P → Q → R` implies `P ∧ Q → R`."
+msgstr ""
+
 #: Game.Levels.ImplicationWorld.L06_ProvingAssumedImplication
 msgid "If `P → Q` is true, then `P → Q` is true."
 msgstr ""
@@ -68,6 +72,16 @@ msgstr ""
 
 #: Game.Levels.ImplicationWorld.L07_OnParentheses
 msgid "On Parentheses"
+msgstr ""
+
+#: Game.Levels.ImplicationWorld.L04_ProvingImplication
+msgid "To prove an implication `P → Q` one needs to give a construction of a proof of `Q` from a hypothesized proof of `P`.\n"
+"\n"
+"In particular, to prove that `P → Q` it suffices to assume that we have a proof `p : P` &mdash; even if `P` is false and such a proof does not exist &mdash; in which case the new goal is to find a proof of `Q`.\n"
+"\n"
+"When the goal has the form `P → Q`, type `intro p` to introduce an assumption `p : P` and update the goal to proving `Q` &mdash; asking for a proof that `Q` is true under the assumption that `P` is true.\n"
+"\n"
+"In this level, we will see that for any proposition `P`, `P → P` is true. Indeed, this is the case even if `P` itself is false!"
 msgstr ""
 
 #: Game.Levels.ConjunctionWorld.L09_UniversalProperty
@@ -107,6 +121,10 @@ msgstr ""
 msgid "Next move on to `Function World` to learn about types and functions."
 msgstr ""
 
+#: Game.Levels.ConjunctionWorld.L10_BossLevel
+msgid "If `P`, `R → S ∧ T`, `U → P → R`, `(U → Y) → Z`, `W ∧ T ∧ V → X ∧ Y`, and `S → V ∧ W` are true, then `Z` is true."
+msgstr ""
+
 #: Game.Levels.ConjunctionWorld.L08_CurryingImplication
 msgid "We now establish a logical equivalence between `P ∧ Q → R` and `P → Q → R`.\n"
 "\n"
@@ -117,9 +135,8 @@ msgid "We now establish a logical equivalence between `P ∧ Q → R` and `P →
 "Note the two implications have been added to the theorem library, should you wish to use them."
 msgstr ""
 
-#: Game.Levels.ImplicationWorld.L02_ModusPonens
-#: Game.Levels.ImplicationWorld.L08_ModusPonensAgain
-msgid "If `P` is true and `P → Q` is true then `Q` is true."
+#: Game.Levels.ImplicationWorld.L04_ProvingImplication
+msgid "For any proposition `P`, `P` implies `P` is true."
 msgstr ""
 
 #: Game.Levels.ConjunctionWorld.L01_IntroducingAnd
@@ -146,6 +163,10 @@ msgstr ""
 msgid "Modus Ponens Again"
 msgstr ""
 
+#: Game.Levels.ConjunctionWorld.L01_IntroducingAnd
+msgid "If `P` is true and `Q` is true, then `P ∧ Q` is true."
+msgstr ""
+
 #: Game.Levels.ConjunctionWorld.L03_Symmetry
 #: Game.Levels.ConjunctionWorld.L03_Symmetry
 msgid "Note the goal window in the interactive theorem prover keeps track of exactly what proposition you are trying to prove."
@@ -158,6 +179,14 @@ msgstr ""
 #: Game.Levels.ImplicationWorld.L03_ComposingImplication
 #: Game.Levels.ImplicationWorld.L03_ComposingImplication
 msgid "In the presence of a hypothesis `h : S → T`, the tactic `apply h` reduces the problem of proving `T` to the problem of proving `S`. Can this be used here?"
+msgstr ""
+
+#: Game.Levels.ImplicationWorld.L05_ProvingImpliedAssumption
+msgid "To prove an implication `S → T` one needs to give a construction of a proof of `T` from a proof of `S`. As we will see in the following example, it is not necessary to actually *use* the assumption that `S` is true after introducing it.\n"
+"\n"
+"In this level we will consider two propositions `P` and `Q` and assume that the proposition `P` is true.\n"
+"\n"
+"It follows that `Q → P` is true, no matter whether `Q` is true or false."
 msgstr ""
 
 #: Game.Levels.ImplicationWorld.L04_ProvingImplication
@@ -187,14 +216,16 @@ msgstr ""
 msgid "What is the outermost logical connective? What tactic is used to prove statements of this form?"
 msgstr ""
 
-#: Game.Levels.ConjunctionWorld.L03_Symmetry
-msgid "The proof you have just constructed is now recorded as a theorem in the library to the right.\n"
-"\n"
-"In fact `P ∧ Q` is true if and only if `Q ∧ P` is true, as we will now demonstrate."
-msgstr ""
-
 #: Game.Levels.ConjunctionWorld.L09_UniversalProperty
 msgid "`(P → Q) ∧ (P → R)` is true if and only if `P → (Q ∧ R)` is true."
+msgstr ""
+
+#: Game.Levels.ConjunctionWorld.L06_CompoundImplication
+msgid "Now how do we prove a conjunction?"
+msgstr ""
+
+#: Game.Levels.ImplicationWorld.L08_ModusPonensAgain
+msgid "If `P` is true, then if `P → Q` is true, then `Q` is true."
 msgstr ""
 
 #: Game.Levels.ConjunctionWorld.L02_UsingAnd
@@ -203,10 +234,6 @@ msgstr ""
 
 #: Game.Levels.ConjunctionWorld.L04_LogicalEquivalence
 msgid "Recall that `S ↔ T` is an abbreviation for `(S → T) ∧ (T → S)`. What is the outermost connective here? Which tactic can be used to break this into subgoals?"
-msgstr ""
-
-#: Game.Levels.ConjunctionWorld.L06_CompoundImplication
-msgid "Now how do we prove a conjunction?"
 msgstr ""
 
 #: Game.Levels.ImplicationWorld.L05_ProvingImpliedAssumption
@@ -229,10 +256,6 @@ msgstr ""
 msgid "Proving Assumed Implication"
 msgstr ""
 
-#: Game.Levels.ConjunctionWorld.L01_IntroducingAnd
-msgid "If `P` is true and `Q` is true then `P ∧ Q` is true."
-msgstr ""
-
 #: Game.Levels.ConjunctionWorld.L03_Symmetry
 msgid "If `P ∧ Q` is true, then `Q ∧ P` is too.\n"
 "\n"
@@ -247,8 +270,18 @@ msgid "Modus ponens tells us that under hypotheses `p : P` and `h : P → Q` the
 "Can you see why the following theorem is another form of modus ponens?"
 msgstr ""
 
+#: Game.Levels.ConjunctionWorld.L02_UsingAnd
+msgid "If `P ∧ Q` is true then `P ∧ Q` is true."
+msgstr ""
+
 #: Game.Levels.ImplicationWorld.L08_ModusPonensAgain
 msgid "Since `«{h}» «{p}» : «{Q}»` It is possible to solve this level with `exact «{h}» «{p}»`."
+msgstr ""
+
+#: Game.Levels.ConjunctionWorld.L03_Symmetry
+msgid "The proof you have just constructed is now recorded as a theorem called `And.symm` in the library to the right.\n"
+"\n"
+"In fact `P ∧ Q` is true if and only if `Q ∧ P` is true, as we will now demonstrate."
 msgstr ""
 
 #: Game.Levels.ConjunctionWorld.L06_CompoundImplication
@@ -273,10 +306,6 @@ msgid "An interative theorem prover &mdash; in this case Lean &mdash; helps the 
 "But it is a bit more precise to tell Lean this is true by the assumption `p` which can be done by typing `exact p`.\n"
 "\n"
 "Note both `assumption` and `exact` are *tactics* that are built into Lean. You can now find them in the tactic library on the upper right."
-msgstr ""
-
-#: Game.Levels.ImplicationWorld.L07_OnParentheses
-msgid "If `P → Q` and `Q → R` then `P → R`."
 msgstr ""
 
 #: Game.Levels.ConjunctionWorld.L07_MoreCompoundImplication
@@ -314,10 +343,6 @@ msgstr ""
 msgid "Can you solve this level with only one use of the `constructor` tactic? In fact, even this can be avoided using syntax we have not yet introduced: a two line proof `intro s` followed by `exact t` can be written `fun s ↦ t` writing `\\mapsto` to type `↦`."
 msgstr ""
 
-#: Game.Levels.ImplicationWorld.L05_ProvingImpliedAssumption
-msgid "To prove an implication `S → T` one needs to give a construction of a proof of `T` from a proof of `S`. As we will see in the following example, it is not necessary to actually *use* the assumption that `S` is true after introducing it."
-msgstr ""
-
 #: Game.Levels.ConjunctionWorld
 msgid "The logical connective of *conjunction*, denoted by `∧`, is the mathematical version of *and*.\n"
 "\n"
@@ -335,6 +360,16 @@ msgstr ""
 
 #: Game.Levels.ImplicationWorld.L09_BossLevel
 msgid "Next move on to Conjunction World to meet our second logical connective."
+msgstr ""
+
+#: Game.Levels.ImplicationWorld.L09_BossLevel
+msgid "Each world will end with a `Boss Level`, which is intended to be more challenging than the levels that came before. Have fun with this.\n"
+"\n"
+"While it is not necessary to solve this level, you may enjoy experimenting with the new `have` tactic that is now added to the tactic library.\n"
+"\n"
+"The `have` tactic can be used to add new hypotheses provided you can supply a proof. For example, given assumptions `p : P` and `h : P → Q`, type `have q : Q := h p` to add a proof `q : Q` defined by `h p`.\n"
+"\n"
+"To delete a proof (or proof attempt) and start over click on the button labelled `</>` in the upper right hand corner to enter `editor mode`. Then delete all the lines of your first proof (or proof attempt). Clicking on `>_` takes you back to `typewriter mode`."
 msgstr ""
 
 #: Game.Levels.ImplicationWorld
@@ -382,6 +417,10 @@ msgstr ""
 msgid "Note the `.1` and `.2` notation can be iterated."
 msgstr ""
 
+#: Game.Levels.ImplicationWorld.L01_ByAssumption
+msgid "If the proposition `P` is true, then `P` is true."
+msgstr ""
+
 #: Game.Levels.ConjunctionWorld.L01_IntroducingAnd
 msgid "Now Lean reminds you of the other goal, which is to prove `Q`. Which tactic applies here?"
 msgstr ""
@@ -398,10 +437,6 @@ msgstr ""
 
 #: Game.Levels.ConjunctionWorld.L08_CurryingImplication
 msgid "In the next level we'll meet the universal property of conjunctions."
-msgstr ""
-
-#: Game.Levels.ImplicationWorld.L01_ByAssumption
-msgid "Assuming the proposition `P` is true, prove `P`."
 msgstr ""
 
 #: Game.Levels.ConjunctionWorld.L06_CompoundImplication
@@ -463,6 +498,10 @@ msgstr ""
 msgid "Given a hypothesis `h : P ∧ Q` for some propositions `P` and `Q`, `And.symm h` is a proof of `Q ∧ P`."
 msgstr ""
 
+#: Game.Levels.ImplicationWorld.L07_OnParentheses
+msgid "If `P → Q`, then if `Q → R`, then `P → R`."
+msgstr ""
+
 #: Game.Levels.ImplicationWorld.L06_ProvingAssumedImplication
 msgid "The lesson of this level is to pay attention to the big picture, namely what exactly you are being asked ot prove under what hypotheses."
 msgstr ""
@@ -471,6 +510,10 @@ msgstr ""
 msgid "To prove an implication, which in this case has the form `«{Q}» → «{P}»`, type `intro q` to introduce an assumption `q : «{Q}»` and update the goal to `«{P}»`.\n"
 "\n"
 "It is also possible to type simply `intro` in which case Lean will automatically generate a name for the proof of `«{Q}»`."
+msgstr ""
+
+#: Game.Levels.ImplicationWorld.L02_ModusPonens
+msgid "If `P` is true and `P → Q` is true, then `Q` is true."
 msgstr ""
 
 #: Game.Levels.ConjunctionWorld.L01_IntroducingAnd
@@ -535,14 +578,6 @@ msgstr ""
 msgid "Alternatively, you can type `exact ⟨p,q⟩' using '\\\\<' and '\\\\>' to type the angle braces."
 msgstr ""
 
-#: Game.Levels.ImplicationWorld.L04_ProvingImplication
-msgid "To prove an implication `P → Q` one needs to give a construction of a proof of `Q` from a hypothesized proof of `P`.\n"
-"\n"
-"In particular, to prove that `P → Q` it suffices to assume that we have a proof `p : P` &mdash; even if `P` is false and such a proof does not exist &mdash; in which case the new goal is to find a proof of `Q`.\n"
-"\n"
-"When the goal has the form `P → Q`, type `intro p` to introduce an assumption `p : P` and update the goal to proving `Q` &mdash; asking for a proof that `Q` is true under the assumption that `P` is true."
-msgstr ""
-
 #: Game.Levels.ConjunctionWorld.L02_UsingAnd
 msgid "Now Lean reminds you of the other goal, which is to prove `Q`. Type `exact «{h}».2` to supply this proof."
 msgstr ""
@@ -553,6 +588,10 @@ msgstr ""
 
 #: Game.Levels.ConjunctionWorld.L02_UsingAnd
 msgid "If this is your first time solving this level, delete your proof, and try to find another solution."
+msgstr ""
+
+#: Game.Levels.ConjunctionWorld.L08_CurryingImplication
+msgid "`P ∧ Q → R` is true if and only if `P → Q → R` is true."
 msgstr ""
 
 #: Game.Levels.ConjunctionWorld.L07_MoreCompoundImplication
@@ -625,12 +664,4 @@ msgid "Mathematicians from all over &mdash; most of whom have never met one anot
 "The aim of this game will be to introduce proof writing in a computer proof assistant while developing skils that can be used to develop proofs in other contexts: on paper, in conversation with a friend, or in your head.\n"
 "\n"
 "There is one caveat, that we will address explicitly. The formal vocabulary we will introduce to discuss mathematical proof is somewhat different from the one that most mathematicians learn. The mathematics we will be developing is essentially unchanged but the formal language introduced here will make it easier to be fully precise about every step in a proof, as is required to convince a computer that a logical argument in sound."
-msgstr ""
-
-#: Game.Levels.ImplicationWorld.L09_BossLevel
-msgid "Each world will end with a `Boss Level`, which is intended to be more challenging than the levels that came before. Have fun with this.\n"
-"\n"
-"While it is not necessary to solve this level, you may enjoy experimenting with the new `have` tactic that is now added to the tactic library.\n"
-"\n"
-"To delete a proof (or proof attempt) and start over click on the button labelled `</>` in the upper right hand corner to enter `editor mode`. Then delete all the lines of your first proof (or proof attempt). Clicking on `>_` takes you back to `typewriter mode`."
 msgstr ""

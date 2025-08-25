@@ -14,6 +14,7 @@ After introducing all of the allowed hypotheses, you may find it helpful to prov
 Good luck!
 "
 
+/-- If `P`, `R → S ∧ T`, `U → P → R`, `(U → Y) → Z`, `W ∧ T ∧ V → X ∧ Y`, and `S → V ∧ W` are true, then `Z` is true. -/
 Statement {P Q R S T U V W X Y Z : Prop} : P → (R → S ∧ T) → (U → P → R) → ((U → Y) → Z) → (W ∧ T ∧ V → X ∧ Y) → (S → V ∧ W) → Z := by
   intro p h k l g f
   apply l

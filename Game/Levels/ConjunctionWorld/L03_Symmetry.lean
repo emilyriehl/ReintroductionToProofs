@@ -24,7 +24,7 @@ Statement {P Q : Prop} : P ∧ Q → Q ∧ P := by
   Hint (hidden := true) "Note the goal window in the interactive theorem prover keeps track of exactly what proposition you are trying to prove."
   exact h.1
 
-Conclusion "The proof you have just constructed is now recorded as a theorem in the library to the right.
+Conclusion "The proof you have just constructed is now recorded as a theorem called `And.symm` in the library to the right.
 
 In fact `P ∧ Q` is true if and only if `Q ∧ P` is true, as we will now demonstrate."
 
