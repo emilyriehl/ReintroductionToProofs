@@ -28,6 +28,9 @@ Conclusion "You can click on `retry` to attempt a different proof. Try typing `a
 
 /- Use these commands to add items to the game's inventory. -/
 
+/-- The `assumption` tactic tries to solve the main goal using a hypothesis of compatible type, or else fails. -/
+TacticDoc assumption
+
 NewTactic assumption exact
 -- NewTheorem Prop.modus_ponens
 -- NewDefinition Nat Add Eq

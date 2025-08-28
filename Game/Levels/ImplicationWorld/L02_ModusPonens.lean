@@ -22,6 +22,10 @@ Conclusion "Here `apply` is another tactic, which can be found in the library ab
 
 /- Use these commands to add items to the game's inventory. -/
 
+/-- The `apply` tactic can be used when the goal matches the conclusion of an implication.
+For example if the goal is `Q` and there is a hypothesis `h : P → Q`, then `apply h` updates the goal to `P`. If the goal is `T` and there is a hypothesis `e : R → S → T`, then `apply e` produces two subgoals, one each for `R` and `S`. -/
+TacticDoc apply
+
 NewTactic apply
 -- NewTheorem Prop.modus_ponens
 -- NewDefinition Nat Add Eq
