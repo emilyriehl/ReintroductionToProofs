@@ -1,13 +1,18 @@
 msgid ""
 msgstr "Project-Id-Version: Game v4.22.0\n"
 "Report-Msgid-Bugs-To: \n"
+<<<<<<< HEAD
 "POT-Creation-Date: 2025-08-25\n"
+=======
+"POT-Creation-Date: 2025-08-15\n"
+>>>>>>> 0d9087256d37dca92f66f8d40219bc69a22dfd67
 "Last-Translator: \n"
 "Language-Team: none\n"
 "Language: en\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit"
 
+<<<<<<< HEAD
 #: Game.Levels.ConjunctionWorld.L04_LogicalEquivalence
 msgid "`P ∧ Q` is true if and only if `Q ∧ P` is true."
 msgstr ""
@@ -89,10 +94,13 @@ msgstr ""
 msgid "We can apply the proof `«{h}» : P → Q ∧ R` to the proof `«{p}»: P` to obtain `«{h}» «{p}» : Q ∧ R`. How can these be used to prove the goal?"
 msgstr ""
 
+=======
+>>>>>>> 0d9087256d37dca92f66f8d40219bc69a22dfd67
 #: GameServer.RpcHandlers
 msgid "level completed with warnings… 🎭"
 msgstr ""
 
+<<<<<<< HEAD
 #: Game.Levels.ImplicationWorld.L02_ModusPonens
 msgid "Modus Ponens"
 msgstr ""
@@ -524,12 +532,17 @@ msgstr ""
 #: Game.Levels.ImplicationWorld.L07_OnParentheses
 #: Game.Levels.ImplicationWorld.L07_OnParentheses
 msgid "As the goal is to prove an implication, the tactic `intro` can be used to introduce a hypothesis and update the goal. Before using this tactic, try to figure out which hypothesis will be assumed and what the goal will be, using the discussion about the implicit parenthesization above."
+=======
+#: Game.Levels.DemoWorld.L01_HelloWorld
+msgid "Hello World"
+>>>>>>> 0d9087256d37dca92f66f8d40219bc69a22dfd67
 msgstr ""
 
 #: GameServer.RpcHandlers
 msgid "level completed! 🎉"
 msgstr ""
 
+<<<<<<< HEAD
 #: Game.Levels.ConjunctionWorld.L09_UniversalProperty
 msgid "Universal Property"
 msgstr ""
@@ -664,4 +677,52 @@ msgid "Mathematicians from all over &mdash; most of whom have never met one anot
 "The aim of this game will be to introduce proof writing in a computer proof assistant while developing skils that can be used to develop proofs in other contexts: on paper, in conversation with a friend, or in your head.\n"
 "\n"
 "There is one caveat, that we will address explicitly. The formal vocabulary we will introduce to discuss mathematical proof is somewhat different from the one that most mathematicians learn. The mathematics we will be developing is essentially unchanged but the formal language introduced here will make it easier to be fully precise about every step in a proof, as is required to convince a computer that a logical argument in sound."
+=======
+#: Game
+msgid "Hello World Game"
+msgstr ""
+
+#: Game
+msgid "This text appears on the starting page where one selects the world/level to play.\n"
+"You can use markdown."
+msgstr ""
+
+#: GameServer.RpcHandlers
+msgid "intermediate goal solved! 🎉"
+msgstr ""
+
+#: Game
+msgid "You should use this game as a template for your own game and add your own levels."
+msgstr ""
+
+#: Game.Levels.DemoWorld.L01_HelloWorld
+msgid "This last message appears if the level is solved."
+msgstr ""
+
+#: Game.Levels.DemoWorld.L01_HelloWorld
+msgid "This text is shown as first message when the level is played.\n"
+"You can insert hints in the proof below. They will appear in this side panel\n"
+"depending on the proof a user provides."
+msgstr ""
+
+#: Game.Levels.DemoWorld
+msgid "This introduction is shown before one enters level 1 of the demo world. Use markdown."
+msgstr ""
+
+#: Game
+msgid "Here you can put additional information about the game. It is accessible\n"
+"from the starting through the drop-down menu.\n"
+"\n"
+"For example: Game version, Credits, Link to Github and Zulip, etc.\n"
+"\n"
+"Use markdown."
+msgstr ""
+
+#: Game.Levels.DemoWorld
+msgid "Demo World"
+msgstr ""
+
+#: Game
+msgid "Game Template"
+>>>>>>> 0d9087256d37dca92f66f8d40219bc69a22dfd67
 msgstr ""
