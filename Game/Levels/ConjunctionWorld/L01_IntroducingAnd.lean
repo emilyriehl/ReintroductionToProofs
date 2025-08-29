@@ -7,7 +7,7 @@ Title "Introducing And"
 
 Introduction "To prove a conjunction `P ∧ Q` we need to supply a proof of both `P` and `Q`."
 
-/-- If `P` is true and `Q` is true then `P ∧ Q` is true. -/
+/-- If `P` is true and `Q` is true, then `P ∧ Q` is true. -/
 Statement {P Q : Prop} (p : P) (q : Q) : P ∧ Q := by
   Hint "Use the tactic `constructor` to ask Lean to break up the goal into steps, of first proving `{P}` and then proving `{Q}`."
   constructor

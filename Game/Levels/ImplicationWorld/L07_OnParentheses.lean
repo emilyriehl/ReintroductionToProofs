@@ -15,7 +15,7 @@ More generally, `P → Q → R → S → T` refers to `P → (Q → (R → (S �
 
 Explicit parentheses must be used to express statements with any other parenthesizations."
 
-/-- If `P → Q` and `Q → R` then `P → R`. -/
+/-- If `P → Q`, then if `Q → R`, then `P → R`. -/
 Statement {P Q R : Prop} : (P → Q) → (Q → R) → (P → R) := by
   Hint (hidden := true) "As the goal is to prove an implication, the tactic `intro` can be used to introduce a hypothesis and update the goal. Before using this tactic, try to figure out which hypothesis will be assumed and what the goal will be, using the discussion about the implicit parenthesization above."
   intro h1

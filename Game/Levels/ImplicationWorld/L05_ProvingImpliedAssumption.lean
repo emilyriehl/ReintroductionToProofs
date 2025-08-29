@@ -5,7 +5,11 @@ Level 5
 
 Title "Proving Implied Assumption"
 
-Introduction "To prove an implication `S → T` one needs to give a construction of a proof of `T` from a proof of `S`. As we will see in the following example, it is not necessary to actually *use* the assumption that `S` is true after introducing it."
+Introduction "To prove an implication `S → T` one needs to give a construction of a proof of `T` from a proof of `S`. As we will see in the following example, it is not necessary to actually *use* the assumption that `S` is true after introducing it.
+
+In this level we will consider two propositions `P` and `Q` and assume that the proposition `P` is true.
+
+It follows that `Q → P` is true, no matter whether `Q` is true or false."
 
 /-- If `P` is true, then for any proposition `Q`, `Q → P` is always true. -/
 Statement {P Q : Prop} (p : P) : Q → P := by

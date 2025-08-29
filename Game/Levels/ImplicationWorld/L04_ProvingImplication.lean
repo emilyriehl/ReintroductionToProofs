@@ -9,8 +9,11 @@ Introduction "To prove an implication `P → Q` one needs to give a construction
 
 In particular, to prove that `P → Q` it suffices to assume that we have a proof `p : P` &mdash; even if `P` is false and such a proof does not exist &mdash; in which case the new goal is to find a proof of `Q`.
 
-When the goal has the form `P → Q`, type `intro p` to introduce an assumption `p : P` and update the goal to proving `Q` &mdash; asking for a proof that `Q` is true under the assumption that `P` is true."
+When the goal has the form `P → Q`, type `intro p` to introduce an assumption `p : P` and update the goal to proving `Q` &mdash; asking for a proof that `Q` is true under the assumption that `P` is true.
 
+In this level, we will see that for any proposition `P`, `P → P` is true. Indeed, this is the case even if `P` itself is false!"
+
+/-- For any proposition `P`, `P` implies `P` is true. -/
 Statement {P : Prop} : P → P := by
   Hint "When the goal has the form `{P} → {P}`, type `intro p` to introduce an assumption `p : {P}` and update the goal to `{P}`.
 
@@ -22,6 +25,9 @@ Statement {P : Prop} : P → P := by
 Conclusion "Let us now explore other implications that are provable with this strategy."
 
 /- Use these commands to add items to the game's inventory. -/
+
+/-- The `intro` tactic, short for *introduction*, is used to introduce one or more hypotheses when the goal is an implication. It can be used itself or followed by names for those hypotheses. For example, when the goal is `P → Q`, type `intro p` to add an assumption `p : P` and update the goal to `Q`. When the goal is `P → Q → R`, type `intro p q` to add assumptions `p : P` and `q : Q` and update the goal to `R`. -/
+TacticDoc intro
 
 NewTactic intro
 -- NewTheorem Prop.modus_ponens

@@ -19,7 +19,7 @@ But it is a bit more precise to tell Lean this is true by the assumption `p` whi
 
 Note both `assumption` and `exact` are *tactics* that are built into Lean. You can now find them in the tactic library on the upper right."
 
-/-- Assuming the proposition `P` is true, prove `P`.-/
+/-- If the proposition `P` is true, then `P` is true.-/
 Statement {P : Prop} (p : P) : P := by
   Hint "To use the hypothesis `{p}` to reach this conclusion type `exact {p}`."
   exact p
@@ -27,6 +27,9 @@ Statement {P : Prop} (p : P) : P := by
 Conclusion "You can click on `retry` to attempt a different proof. Try typing `assumption` instead."
 
 /- Use these commands to add items to the game's inventory. -/
+
+/-- The `assumption` tactic tries to solve the main goal using a hypothesis of compatible type, or else fails. -/
+TacticDoc assumption
 
 NewTactic assumption exact
 -- NewTheorem Prop.modus_ponens

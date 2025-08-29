@@ -15,6 +15,7 @@ Introduction "In the previous level we proved that `P ∧ Q → R` implies `P �
 We now show that `(P → Q → R)` implies `P ∧ Q → R`.
 "
 
+/-- `P → Q → R` implies `P ∧ Q → R`. -/
 Statement And.uncurry {P Q R : Prop} (h : P → Q → R) : P ∧ Q → R := by
   Hint (hidden := true) "Can we apply our hypothesis yet or must we act on the goal first?"
   intro pq

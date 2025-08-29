@@ -16,6 +16,7 @@ The name `Currying` will be explained in a future level.
 Note the two implications have been added to the theorem library, should you wish to use them.
 "
 
+/-- `P ∧ Q → R` is true if and only if `P → Q → R` is true. -/
 Statement {P Q R : Prop} : (P ∧ Q → R) ↔ (P → Q → R) := by
   Hint (hidden := true) "What is the outermost logical connective? What tactic is used to prove statements of this form?"
   constructor

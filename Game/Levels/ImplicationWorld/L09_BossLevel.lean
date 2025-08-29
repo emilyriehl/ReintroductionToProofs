@@ -9,6 +9,8 @@ Introduction "Each world will end with a `Boss Level`, which is intended to be m
 
 While it is not necessary to solve this level, you may enjoy experimenting with the new `have` tactic that is now added to the tactic library.
 
+The `have` tactic can be used to add new hypotheses provided you can supply a proof. For example, given assumptions `p : P` and `h : P → Q`, type `have q : Q := h p` to add a proof `q : Q` defined by `h p`.
+
 To delete a proof (or proof attempt) and start over click on the button labelled `</>` in the upper right hand corner to enter `editor mode`. Then delete all the lines of your first proof (or proof attempt). Clicking on `>_` takes you back to `typewriter mode`."
 
 /-- If `S → X`, `T → W`, `R → Y`, `W → Q`, `U → S`, `Y → T`, `X → V`, `Q → U`, `V → Z` and `P → R` are true then `P` implies `Z`. -/

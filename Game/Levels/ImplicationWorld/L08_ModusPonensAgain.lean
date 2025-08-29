@@ -11,7 +11,7 @@ In fact there is another syntax that may be used to write this proof. In Lean, w
 
 Can you see why the following theorem is another form of modus ponens?"
 
-/-- If `P` is true and `P → Q` is true then `Q` is true. -/
+/-- If `P` is true, then if `P → Q` is true, then `Q` is true. -/
 Statement {P Q : Prop} : P → (P → Q) → Q := by
   intro p
   intro h
