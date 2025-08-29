@@ -1,5 +1,5 @@
 import Game.Metadata
-import Game.Levels.FunctionWorld.L07_SwappingInputs
+import Game.Levels.FunctionWorld
 
 World "EqualityWorld"
 Level 5
