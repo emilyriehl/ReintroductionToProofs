@@ -24,11 +24,4 @@ Statement {A B : Type} : A → (A → B) → B := by
 
 Conclusion "The evaluation function has type `ev : A → (A → B) → B` and is defined by the formula `fun a f ↦ f a`. By swapping variables, we can also think of evaluation as defining a function `(A → B) → A → B` where this latter function is defined by `fun f a ↦ f a`."
 
--- hack: can be removed if naming the Statement in level 7 doesn't error anymore
-def swap {A B C : Type} : (A → B → C) → (B → A → C) := by
-  intro f
-  intro b
-  intro a
-  exact f a b
-
-NewDefinition ev Function.swap
+NewDefinition ev

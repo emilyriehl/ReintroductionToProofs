@@ -15,6 +15,9 @@ Introduction "The simplest example of a function is the identity function, which
 
 To define a function `f : A → B` one must define a rule that converts an arbitrary element `x : A` to some element of type `B`. Start by typing `intro x` to add an arbitrary element `x : A` to the context and update the goal to a term of type `B`."
 
+/--
+For a type `A`, the identity function `id : A → A` is the function defined by sending and arbitrary element `a : A` to itself.
+-/
 Statement {A : Type} : A → A := by
   Hint "To define a function, in this case a term of type `{A} → {A}`, one must define a rule to convert an arbitrary element `x : {A}` to some element of type `{A}`. Start by typing `intro x` to add an arbitrary element of type `{A}` to the context."
   intro x

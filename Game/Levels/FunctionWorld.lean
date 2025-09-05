@@ -3,8 +3,8 @@ import Game.Levels.FunctionWorld.L02_UsingFunctions
 import Game.Levels.FunctionWorld.L03_ComposingFunctions
 import Game.Levels.FunctionWorld.L04_ConstantFunctions
 import Game.Levels.FunctionWorld.L05_MultivariableFunctions
-import Game.Levels.FunctionWorld.L06_CompositionRevisited
-import Game.Levels.FunctionWorld.L07_SwappingInputs
+import Game.Levels.FunctionWorld.L06_SwappingInputs
+import Game.Levels.FunctionWorld.L07_CompositionRevisited
 import Game.Levels.FunctionWorld.L08_Evaluation
 import Game.Levels.FunctionWorld.L09_BossLevel
 

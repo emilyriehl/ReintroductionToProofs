@@ -1,7 +1,7 @@
 msgid ""
 msgstr "Project-Id-Version: Game v4.22.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-09-04\n"
+"POT-Creation-Date: 2025-09-05\n"
 "Last-Translator: \n"
 "Language-Team: none\n"
 "Language: en\n"
@@ -170,6 +170,10 @@ msgstr ""
 msgid "We've seen that functions out of a coproduct can be split into component functions. Similarly, component functions `g : A → C` and `h : B → C` can be assembled into a function of type `A ⊕ B → C`, as we will explore in the next level."
 msgstr ""
 
+#: Game.Levels.FunctionWorld.L07_CompositionRevisited
+msgid "Define the composition of two functions as a multivariable function between function types."
+msgstr ""
+
 #: Game.Levels.CoproductWorld.L05_Symmetry
 #: Game.Levels.CoproductWorld.L05_Symmetry
 msgid "Which function might be useful to apply here?"
@@ -183,7 +187,7 @@ msgstr ""
 msgid "What sort of inputs does the function `«{f}»` require and how can these be extracted from `«{p}»`?"
 msgstr ""
 
-#: Game.Levels.FunctionWorld.L06_CompositionRevisited
+#: Game.Levels.FunctionWorld.L07_CompositionRevisited
 msgid "Composition revisited"
 msgstr ""
 
@@ -199,24 +203,8 @@ msgstr ""
 msgid "We'll now study the second type of element of in a coproduct type."
 msgstr ""
 
-#: Game.Levels.FunctionWorld
-msgid "We now consider general types in addition to propositions. For example, we have types `ℕ` of\n"
-"natural numbers, `ℤ` of integers, `ℚ` of rational numbers, `ℝ` of real numbers, `ℂ` of natural\n"
-"numbers, and so on.  We use variables like `A` and `B` to denote general types, analogously to the\n"
-"proposition variables `P` and `Q`.\n"
-"\n"
-"A type `A` can contain elements `x : A` and `y : A`. For propositions `P` and `Q`, we thought of\n"
-"elements `p : P` and `q : Q` as *proofs* that these propositions are true. In the case of\n"
-"propositions, what mattered was whether `P` had any elements or not. The elements themselves don't\n"
-"carry any information beyond witnessing the truth of the proposition. By contrast, the type `ℕ` of\n"
-"natural numbers contains infinitely many distinct elements: `0 : ℕ`, `1 : ℕ` and so on.\n"
-"\n"
-"We will meet various *type forming operations* that take types and form a new type. The first and\n"
-"arguably most important of these is the type `A → B` of functions from `A` to `B`. An element\n"
-"`f : A → B` defines a *function* from `A` to `B`.\n"
-"\n"
-"In this level, we will explain how to define and use functions and explore the analogy between\n"
-"function types `A → B` and the implication proposition `P → Q`."
+#: Game.Levels.FunctionWorld.L07_CompositionRevisited
+msgid "The `swap` function exchanges the inputs of a function of two variables. For a function with two variables `f : A → B → C`, `swap f : B → A → C` is the function that sends `b : B` and `a : A` to `f a b : C`."
 msgstr ""
 
 #: Game.Levels.CoproductWorld.L06_Associativity
@@ -241,10 +229,6 @@ msgstr ""
 
 #: Game.Levels.ImplicationWorld.L05_ProvingImpliedAssumption
 msgid "Now the goal is to prove `«{P}»` using *any* of our given hypotheses. Which tactic can be used to supply this proof?"
-msgstr ""
-
-#: Game.Levels.FunctionWorld.L03_ComposingFunctions
-msgid "Can you solve this level in one line by using `exact fun x ↦ ?` with the appropriate thing in place of the `?`?"
 msgstr ""
 
 #: Game.Levels.ProductWorld.L05_Associativity
@@ -381,6 +365,10 @@ msgid "The product type comes with function of type `A × B → B × A` which sw
 "The swap function can be defined by introducing a variable `p : A × B`, projecting to its components `p.1 : A` and `p.2 : B`, then reassembling these to give an element of type `B × A`."
 msgstr ""
 
+#: Game.Levels.FunctionWorld.L03_ComposingFunctions
+msgid "Given functions `g : B → C` and `f : A → B`, define the composite function `g ∘ f : A → C` that sends `x : A` to `g (f x)`."
+msgstr ""
+
 #: Game.Levels.ConjunctionWorld.L09_UniversalProperty
 msgid "Now we are ready for the boss level."
 msgstr ""
@@ -407,6 +395,14 @@ msgstr ""
 msgid "Currying Implication"
 msgstr ""
 
+#: Game.Levels.FunctionWorld.L04_ConstantFunctions
+msgid "Given a term `a : A` and any type `B`, there is a function of type `B → A` which is *constant* at `a : A`.\n"
+"\n"
+"This means that for any input `x : B` the output is always the element `a : A`.\n"
+"\n"
+"Can you figure out how to define this function?"
+msgstr ""
+
 #: Game.Levels.DisjunctionWorld.L07_DisjunctionBossLevel
 #: Game.Levels.DisjunctionWorld.L07_DisjunctionBossLevel
 msgid "Thus the outermost logical connective is the `∨` combining `P ∧ R` and `(P ∧ S) ∨ ((Q ∧ R) ∨ (Q ∧ S))`."
@@ -427,7 +423,7 @@ msgstr ""
 msgid "Associativity"
 msgstr ""
 
-#: Game.Levels.FunctionWorld.L07_SwappingInputs
+#: Game.Levels.FunctionWorld.L06_SwappingInputs
 msgid "Swapping inputs"
 msgstr ""
 
@@ -456,22 +452,20 @@ msgstr ""
 msgid "Since `«{f}»` is a function with two variables, after `apply «{f}»` we now have two goals, where we need to supply first an element of type `«{A}»` and then an element of type `«{B}»`."
 msgstr ""
 
-#: Game.Levels.FunctionWorld.L03_ComposingFunctions
-msgid "Given functions `f : A → B` and `g : B → C` there is a *composite function* from `A` to\n"
-"`C`. It is defined to be the function that sends `x : A` first to the element `f a : B` and then\n"
-"to the element `g (f a) : C`."
-msgstr ""
-
 #: Game.Levels.FunctionWorld
 msgid "Function World"
 msgstr ""
 
-#: Game.Levels.FunctionWorld.L07_SwappingInputs
+#: Game.Levels.FunctionWorld.L06_SwappingInputs
 msgid "Look carefully at the order of the arguments of `«{f}»`."
 msgstr ""
 
 #: Game.Levels.ConjunctionWorld.L06_CompoundImplication
 msgid "Can we apply our hypothesis now?"
+msgstr ""
+
+#: Game.Levels.FunctionWorld.L05_MultivariableFunctions
+msgid "Given an element `a : A` and a function of two variables `f : A → B → C`, define a function from `B → C` by evaluating the first variable of `f` at the element `a`."
 msgstr ""
 
 #: Game.Levels.CoproductWorld.L04_UniversalProperty
@@ -560,11 +554,7 @@ msgstr ""
 msgid "As the goal is to prove an implication, the tactic `intro` can be used to introduce a hypothesis and update the goal. Before using this tactic, try to figure out which hypothesis will be assumed and what the goal will be, using the discussion about the implicit parenthesization above."
 msgstr ""
 
-#: Game.Levels.FunctionWorld.L05_MultivariableFunctions
-msgid "An element of type `A → B → C`, which abbreviates the type `A → (B → C)`, can be thought of as a function of two variables. Given `f : A → B → C` and `a : A`, then `f a : B → C` is a function from `B` to `C`. Then given `b : B` we can apply the function `f a` to get an element `f a b : C`."
-msgstr ""
-
-#: Game.Levels.FunctionWorld.L06_CompositionRevisited
+#: Game.Levels.FunctionWorld.L07_CompositionRevisited
 msgid "For types `A`, `B`, and `C`, the function `comp : (B → C) → (A → B) → (A → C)` takes a function `f : A → B` and a function `g : B → C` to the composite function `comp g f : A → C` defined to take `a : A` to the element `g (f a) : C`."
 msgstr ""
 
@@ -575,13 +565,13 @@ msgid "The goal is a term of a function type so type `intro p` to give yourself 
 msgstr ""
 
 #: Game.Levels.FunctionWorld.L05_MultivariableFunctions
-#: Game.Levels.FunctionWorld.L07_SwappingInputs
+#: Game.Levels.FunctionWorld.L06_SwappingInputs
 msgid "This level can be solved by starting with `exact` or starting with `intro`. If you start with `intro`, then you can continue with `exact` or with `apply`. If this is your first time solving this level, try to find a different solution."
 msgstr ""
 
-#: Game.Levels.FunctionWorld.L07_SwappingInputs
-#: Game.Levels.FunctionWorld.L07_SwappingInputs
-#: Game.Levels.FunctionWorld.L07_SwappingInputs
+#: Game.Levels.FunctionWorld.L06_SwappingInputs
+#: Game.Levels.FunctionWorld.L06_SwappingInputs
+#: Game.Levels.FunctionWorld.L06_SwappingInputs
 #: Game.Levels.FunctionWorld.L08_Evaluation
 #: Game.Levels.FunctionWorld.L08_Evaluation
 msgid "When in doubt, start defining a function by using the tactic `intro` followed by your preferred variable name."
@@ -596,7 +586,7 @@ msgstr ""
 msgid "Universal Property"
 msgstr ""
 
-#: Game.Levels.FunctionWorld.L07_SwappingInputs
+#: Game.Levels.FunctionWorld.L06_SwappingInputs
 msgid "An element of type `A → B → C` can be thought of as a function of two variables. Given `f : A → B → C`, `a : A`, and `b : B`, `f a b : C` denotes `f` applied first to `a` and then to `b`. From a function of type `A → B → C`, we can define a function of type `B → A → C` by swapping the order of the input variables."
 msgstr ""
 
@@ -793,6 +783,10 @@ msgid "You can solve this level in one level by just giving the entire formula f
 "`exact fun x ↦ x`, using `\\mapsto` to type `↦`. This tells Lean that the answer is the function defined on an input element `x` to have an output value `x`."
 msgstr ""
 
+#: Game.Levels.FunctionWorld.L04_ConstantFunctions
+msgid "For any types `A` and `B` and element `a : A`, there is a constant function `const a : B → A` that sends any `x : B` to the element `a : A`."
+msgstr ""
+
 #: Game.Levels.ConjunctionWorld.L05_Associativity
 msgid "Conjunction is associative: `(P ∧ Q) ∧ R` is true if and only if `P ∧ (Q ∧ R)` is true."
 msgstr ""
@@ -837,16 +831,6 @@ msgstr ""
 msgid "What tactics can be used to break a goal involving conjunction into subgoals?"
 msgstr ""
 
-#: Game.Levels.ImplicationWorld.L04_ProvingImplication
-msgid "To prove an implication `P → Q` one needs to give a construction of a proof of `Q` from a hypothesized proof of `P`.\n"
-"\n"
-"In particular, to prove that `P → Q` it suffices to assume that we have a proof `p : P` &mdash; even if `P` is false and such a proof does not exist &mdash; in which case the new goal is to find a proof of `Q`.\n"
-"\n"
-"When the goal has the form `P → Q`, type `intro p` to introduce an assumption `p : P` and update the goal to proving `Q` &mdash; asking for a proof that `Q` is true under the assumption that `P` is true.\n"
-"\n"
-"In this level, we will see that for any proposition `P`, `P → P` is true. Indeed, this is the case even if `P` itself is false!"
-msgstr ""
-
 #: Game.Levels.ProductWorld.L06_Currying
 #: Game.Levels.ProductWorld.L06_Currying
 #: Game.Levels.ProductWorld.L06_Currying
@@ -858,6 +842,16 @@ msgstr ""
 #: Game.Levels.ProductWorld.L08_ComponentFunctions
 #: Game.Levels.ProductWorld.L09_UniversalProperty
 msgid "The goal is a function type, so start with `intro`."
+msgstr ""
+
+#: Game.Levels.ImplicationWorld.L04_ProvingImplication
+msgid "To prove an implication `P → Q` one needs to give a construction of a proof of `Q` from a hypothesized proof of `P`.\n"
+"\n"
+"In particular, to prove that `P → Q` it suffices to assume that we have a proof `p : P` &mdash; even if `P` is false and such a proof does not exist &mdash; in which case the new goal is to find a proof of `Q`.\n"
+"\n"
+"When the goal has the form `P → Q`, type `intro p` to introduce an assumption `p : P` and update the goal to proving `Q` &mdash; asking for a proof that `Q` is true under the assumption that `P` is true.\n"
+"\n"
+"In this level, we will see that for any proposition `P`, `P → P` is true. Indeed, this is the case even if `P` itself is false!"
 msgstr ""
 
 #: Game.Levels.CoproductWorld.L08_BossLevel
@@ -874,16 +868,40 @@ msgstr ""
 msgid "level completed with warnings… 🎭"
 msgstr ""
 
+#: Game.Levels.FunctionWorld
+msgid "The slogan *propositions as types* tells us that we can consider propositions as special cases of *types*.\n"
+"\n"
+"For example, there are types `ℕ` of\n"
+"natural numbers, `ℤ` of integers, `ℚ` of rational numbers, `ℝ` of real numbers, `ℂ` of natural\n"
+"numbers, and so on.\n"
+"\n"
+"We use capital variables like `A` and `B` to denote general types, analogously to the proposition variables `P` and `Q`.\n"
+"\n"
+"A type `A` can contain elements `x : A` and `y : A`. For propositions `P` and `Q`, we thought of\n"
+"elements `p : P` and `q : Q` as *proofs* that these propositions are true.\n"
+"\n"
+"In the case of\n"
+"propositions, what mattered was whether `P` had any elements or not. The elements themselves don't\n"
+"carry any information beyond witnessing the truth of the proposition.\n"
+"\n"
+"By contrast, the type `ℕ` of\n"
+"natural numbers contains infinitely many distinct elements: `0 : ℕ`, `1 : ℕ` and so on.\n"
+"\n"
+"Just as logical connectives like `→` and `∧` can be used to build more complicated propositions out of existing propositions, *type forming operations* can be used to build new types from existing types.\n"
+"\n"
+"The first and arguably most important of these is the type `A → B` of functions from `A` to `B`. An element\n"
+"`f : A → B` defines a *function* from `A` to `B`.\n"
+"\n"
+"In this level, we will explain how to define and use functions and explore the analogy suggested by the fact that we use the same notation for\n"
+"function types `A → B` as for the implication proposition `P → Q`."
+msgstr ""
+
 #: Game.Levels.ProductWorld.L02_FirstProjection
 msgid "Now type `exact «{p}».1` to return the first projection."
 msgstr ""
 
 #: Game.Levels.CoproductWorld.L05_Symmetry
 msgid "The coproduct type, like the product type, is *symmetric*, and in particular has a canonical map `swap : A ⊕ B → B ⊕ A`. Your task in this level is to define it."
-msgstr ""
-
-#: Game.Levels.FunctionWorld.L06_CompositionRevisited
-msgid "Can you solve this level in one line by using `exact fun g f a ↦ ?` with the appropriate thing in place of the `?`?"
 msgstr ""
 
 #: Game.Levels.CoproductWorld.L01_LeftInclusion
@@ -924,14 +942,6 @@ msgstr ""
 msgid "Multiple hypothesis can be introduced at once by writing `intro h1 h2 h3` etc. You might consider using names that will help you remember which propositions each hypothesis proves!"
 msgstr ""
 
-#: Game.Levels.FunctionWorld.L06_CompositionRevisited
-msgid "Recall that given functions `f : A → B` and `g : B → C` there is a *composite function* from `A` to\n"
-"`C`. It is defined to be the function that sends `x : A` first to the element `f a : B` and then\n"
-"to the element `g (f a) : C`.\n"
-"\n"
-"Define composition as a multivariable function `comp : (B → C) → (A → B) → (A → C)`. We think of composition as the function that takes `g : B → C` and `f : A → B` to the composite function `comp g f : A → C`. It can also be thought of a function that takes `g`, `f`, and `a : A` to the term `g (f a) : A`."
-msgstr ""
-
 #: Game.Levels.FunctionWorld.L08_Evaluation
 msgid "Evaluation"
 msgstr ""
@@ -961,12 +971,18 @@ msgid "We now establish a logical equivalence between `P ∧ Q → R` and `P →
 msgstr ""
 
 #: Game.Levels.FunctionWorld.L03_ComposingFunctions
-#: Game.Levels.FunctionWorld.L06_CompositionRevisited
+#: Game.Levels.FunctionWorld.L07_CompositionRevisited
 msgid "Now that the goal is an element of type `«{C}»` there are several ways to proceed. You can use `exact` or `apply`."
 msgstr ""
 
 #: Game.Levels.CoproductWorld.L02_RightInclusion
 msgid "To use the built in function `Sum.inr : B → A ⊕ B` to change the goal from `A ⊕ B` to `B` type `apply Sum.inr`."
+msgstr ""
+
+#: Game.Levels.FunctionWorld.L07_CompositionRevisited
+msgid "Can you solve this level in one line by using `exact fun g f a ↦ ?` with the appropriate thing in place of the `?`?\n"
+"\n"
+"Can you solve this level in one line by using `exact fun g f ↦ ?` with the appropriate thing in place of the `?`?"
 msgstr ""
 
 #: Game.Levels.FunctionWorld.L02_UsingFunctions
@@ -1066,6 +1082,10 @@ msgid "Given an element `a : A` and an element `b : B` there is a corresponding 
 "Alternatively, you can apply the `constructor` tactic which allows you to first input the first component and then input the second component."
 msgstr ""
 
+#: Game.Levels.FunctionWorld.L02_UsingFunctions
+msgid "Given a function `f : A → B` and an element `a : A`, there is an element `f a : B` obtained by evaluating the function `f` at `a`."
+msgstr ""
+
 #: Game.Levels.ProductWorld.L07_Uncurrying
 msgid "Uncurrying"
 msgstr ""
@@ -1114,7 +1134,7 @@ msgstr ""
 msgid "Proving Assumed Implication"
 msgstr ""
 
-#: Game.Levels.FunctionWorld.L06_CompositionRevisited
+#: Game.Levels.FunctionWorld.L07_CompositionRevisited
 msgid "To define a function with multiple variables you can apply the intro tactic twice, for instance by typing `intro g f` or even `intro g f a`."
 msgstr ""
 
@@ -1158,10 +1178,6 @@ msgstr ""
 
 #: Game.Levels.DisjunctionWorld.L05_Associativity
 msgid "This proves the associativity of disjunction."
-msgstr ""
-
-#: Game.Levels.FunctionWorld.L04_ConstantFunctions
-msgid "Given a term `a : A` and any type `B`, there is a function of type `B → A` which is *constant* at `a : A`."
 msgstr ""
 
 #: Game.Levels.ImplicationWorld.L01_ByAssumption
@@ -1212,10 +1228,6 @@ msgstr ""
 
 #: Game.Levels.ConjunctionWorld.L05_Associativity
 msgid "Can you solve this level with only one use of the `constructor` tactic? In fact, even this can be avoided using syntax we have not yet introduced: a two line proof `intro s` followed by `exact t` can be written `fun s ↦ t` writing `\\mapsto` to type `↦`."
-msgstr ""
-
-#: Game.Levels.FunctionWorld.L07_SwappingInputs
-msgid "The `swap` function exchanges the inputs of a function of two variables. For a function with two variables `f : A → B → C`, `Function.swap f : B → A → C` is the function that sends `b : B` and `a : A` to `f a b : C`."
 msgstr ""
 
 #: Game.Levels.FunctionWorld.L04_ConstantFunctions
@@ -1274,6 +1286,22 @@ msgstr ""
 msgid "For propositions `P`, `Q`, and `R`, `And.uncurry` is a proof that `P → Q → R` implies `P ∧ Q → R`."
 msgstr ""
 
+#: Game.Levels.FunctionWorld.L07_CompositionRevisited
+msgid "Recall that given functions `f : A → B` and `g : B → C` there is a *composite function* from `A` to\n"
+"`C` denoted `g ∘ f : A → C`, using `\\circ` to type `∘`.\n"
+"\n"
+"The function `g ∘ f` is defined to be the function that sends `a : A` first to the element `f a : B` and then\n"
+"to the element `g (f a) : C`.\n"
+"\n"
+"Define composition as a multivariable function betwene function types `comp : (B → C) → (A → B) → (A → C)`.\n"
+"\n"
+"We think of composition as the function that takes `g : B → C` and `f : A → B` to the composite function `comp g f : A → C`.\n"
+"\n"
+"It can also be thought of a function that takes `g`, `f`, and `a : A` to the element `g (f a) : C`.\n"
+"\n"
+"Aside: Lean treats the functions `comp` and `∘` slightly differently because the former uses the usual notation for multivariable functions (where the arguments are provided afterwards as `comp g f`) while the latter uses infix notation (where the function name appears inbetween the two arguments as `g ∘ f`)."
+msgstr ""
+
 #: Game.Levels.ProductWorld.L04_Symmetry
 msgid "For types `A` and `B`, the swapping function has type `A × B → B × A` and can be thought of as the function that sends a pair `⟨a, b⟩` to the pair `⟨b, a⟩`."
 msgstr ""
@@ -1285,6 +1313,10 @@ msgstr ""
 
 #: Game.Levels.ConjunctionWorld.L05_Associativity
 msgid "Think carefully about what `«{k}»` proves and what proofs can be extracted from this."
+msgstr ""
+
+#: Game.Levels.FunctionWorld.L03_ComposingFunctions
+msgid "Given functions `f : A → B` and `g : B → C`, the *composite function* `g ∘ f : A → C` is defined to send `x : A` to the element `g (f x)`."
 msgstr ""
 
 #: Game.Levels.ImplicationWorld.L08_ModusPonensAgain
@@ -1322,6 +1354,10 @@ msgid "Consider a function `f : A → B → C`. We've defined a corresponding fu
 "In general, two functions `f g : X → Y` are *equal* just when `f x = g x` for all inputs `x : X`. This rule is called *function extensionality*.\n"
 "\n"
 "When faced with a goal of the form `f = g` where `f` and `g` are functions belonging to the type `X → Y`, the tactic `ext x` will reduce to the problem of proving `f x = g x` for a generic variable `x : X`."
+msgstr ""
+
+#: Game.Levels.FunctionWorld.L01_IdentityFunction
+msgid "For a type `A`, the identity function `id : A → A` is the function defined by sending and arbitrary element `a : A` to itself."
 msgstr ""
 
 #: Game.Levels.ConjunctionWorld.L08_CurryingImplication
@@ -1437,6 +1473,14 @@ msgstr ""
 msgid "Component Functions"
 msgstr ""
 
+#: Game.Levels.FunctionWorld.L05_MultivariableFunctions
+msgid "An element of type `A → B → C`, which abbreviates the type `A → (B → C)`, can be thought of as a function of two variables.\n"
+"\n"
+"Given `f : A → B → C` and `a : A`, then `f a : B → C` is a function from `B` to `C`.\n"
+"\n"
+"Then given `b : B` we can apply the function `f a` to get an element `f a b : C`."
+msgstr ""
+
 #: Game.Levels.ProductWorld.L05_Associativity
 msgid "Given three types `A`, `B`, and `C`, the product type construction may be iterated to define types `(A × B) × C` and `A × (B × C)`, the latter of which is abbreviated `A × B × C`.\n"
 "\n"
@@ -1457,6 +1501,14 @@ msgstr ""
 
 #: Game.Levels.ImplicationWorld.L02_ModusPonens
 msgid "Here `apply` is another tactic, which can be found in the library above right."
+msgstr ""
+
+#: Game.Levels.FunctionWorld.L03_ComposingFunctions
+msgid "Lean has built in notation for the composite of `f : A → B` and `g : B → C` namely `g ∘ f : A → C`, using `\\circ` to type `∘`.\n"
+"\n"
+"Given `x : A`, `(g ∘ f) x` is defined to be the element `g (f x)`, which is why the function `g` appears on the left of `f` in the notation `g ∘ f`.\n"
+"\n"
+"Try solving this level with `exact g ∘ f`."
 msgstr ""
 
 #: Game.Levels.ImplicationWorld.L05_ProvingImpliedAssumption
@@ -1481,6 +1533,18 @@ msgstr ""
 
 #: Game.Levels.ConjunctionWorld.L01_IntroducingAnd
 msgid "Alternatively, you can type `exact ⟨p,q⟩' using '\\\\<' and '\\\\>' to type the angle braces."
+msgstr ""
+
+#: Game.Levels.FunctionWorld.L03_ComposingFunctions
+msgid "Given functions `f : A → B` and `g : B → C` there is a *composite function* from `A` to\n"
+"`C`.\n"
+"\n"
+"It is defined to be the function that sends `x : A` first to the element `f x : B` and then\n"
+"to the element `g (f x) : C`.\n"
+"\n"
+"Can you solve this level in one line by using `exact fun x ↦ ?` with the appropriate thing in place of the `?`?\n"
+"\n"
+"Alternatively, you can use other tactics to define the required function step by step."
 msgstr ""
 
 #: Game.Levels.DisjunctionWorld.L05_Associativity

@@ -6,9 +6,14 @@ Level 5
 Title "Multivariable functions"
 
 
-Introduction "An element of type `A → B → C`, which abbreviates the type `A → (B → C)`, can be thought of as a function of two variables. Given `f : A → B → C` and `a : A`, then `f a : B → C` is a function from `B` to `C`. Then given `b : B` we can apply the function `f a` to get an element `f a b : C`.
+Introduction "An element of type `A → B → C`, which abbreviates the type `A → (B → C)`, can be thought of as a function of two variables.
+
+Given `f : A → B → C` and `a : A`, then `f a : B → C` is a function from `B` to `C`.
+
+Then given `b : B` we can apply the function `f a` to get an element `f a b : C`.
 "
 
+/-- Given an element `a : A` and a function of two variables `f : A → B → C`, define a function from `B → C` by evaluating the first variable of `f` at the element `a`. -/
 Statement {A B C : Type} (a : A) (f : A → B → C) : B → C := by
   intro b
   Hint (hidden := true) "You can use the tactic `exact` by supplying `{f}` with two arguments, in the correct order, with spaces in between (but no parentheses). Alternatively you can use the tactic `apply`."
