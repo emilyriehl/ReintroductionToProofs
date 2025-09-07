@@ -23,4 +23,4 @@ Statement {A B C : Type} (a : A) (f : A → B → C) : B → C := by
   Hint (hidden := true) "Both `exact b` and `assumption` can be used here."
   exact b
 
-Conclusion "This level can be solved by starting with `exact` or starting with `intro`. If you start with `intro`, then you can continue with `exact` or with `apply`. If this is your first time solving this level, try to find a different solution."
+Conclusion "This level can be solved by starting with `exact`, starting with `apply`, or starting with `intro`. If you start with `intro`, then you can continue with `exact` or with `apply`. If this is your first time solving this level, try to find a different solution."

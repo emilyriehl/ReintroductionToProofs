@@ -16,7 +16,7 @@ Introduction "Recall that given functions `f : A → B` and `g : B → C` there 
 The function `g ∘ f` is defined to be the function that sends `a : A` first to the element `f a : B` and then
 to the element `g (f a) : C`.
 
-Define composition as a multivariable function betwene function types `comp : (B → C) → (A → B) → (A → C)`.
+Define composition as a multivariable function between function types `comp : (B → C) → (A → B) → (A → C)`.
 
 We think of composition as the function that takes `g : B → C` and `f : A → B` to the composite function `comp g f : A → C`.
 
@@ -40,16 +40,15 @@ Can you solve this level in one line by using `exact fun g f ↦ ?` with the app
 /--
 The `swap` function exchanges the inputs of a function of two variables. For a function with two variables `f : A → B → C`, `swap f : B → A → C` is the function that sends `b : B` and `a : A` to `f a b : C`.
 -/
-DefinitionDoc swap as "swap"
+DefinitionDoc Function.swap as "Function.swap"
 
 -- hack: can be removed if naming the Statement in level 7 doesn't error anymore
-def swap {A B C : Type} : (A → B → C) → (B → A → C) := by
+def Function.swap {A B C : Type} : (A → B → C) → (B → A → C) := by
   intro f
   intro b
   intro a
   exact f a b
 
-NewDefinition swap
+-- NewDefinition Function.swap
 
--- Commented out because broken.
 -- NewDefinition comp

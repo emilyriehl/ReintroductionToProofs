@@ -15,6 +15,7 @@ Introduction "While an element of type `A → (B → C)`, more commonly written 
 For example, if we are given `a : A`, then it is possible to define a function of type `(A → B) → B` which is called *evaluation* at `a : A`. Given `f : A → B`, we return `f a : B`.
 "
 
+/-- Define the *evaluation* function that takes `a : A` and `f : A → B` to `f a : B`. -/
 Statement {A B : Type} : A → (A → B) → B := by
   Hint (hidden := true) "When in doubt, start defining a function by using the tactic `intro` followed by your preferred variable name."
   intro a
@@ -24,4 +25,4 @@ Statement {A B : Type} : A → (A → B) → B := by
 
 Conclusion "The evaluation function has type `ev : A → (A → B) → B` and is defined by the formula `fun a f ↦ f a`. By swapping variables, we can also think of evaluation as defining a function `(A → B) → A → B` where this latter function is defined by `fun f a ↦ f a`."
 
-NewDefinition ev
+-- NewDefinition ev

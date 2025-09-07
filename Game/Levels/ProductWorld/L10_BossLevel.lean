@@ -9,10 +9,15 @@ Introduction "The objective is to define a function that takes 5 variables as in
 variables as outputs as a composite &mdash; in a much more complicated sense than we have seen thusfar &mdash; of the given functions. Can you do it?
 "
 
+/-- Given functions of types `B × D → M`, `E → Y × N`, `A → M → X`, and `C → N → Z`, there is a function from the product type `A × B × C × D × E` to the product type `X × Y × Z`. -/
 Statement {A B C D E M N X Y Z : Type} :
   (B × D → M) → (E → Y × N) → (A → M → X) → (C → N → Z) → (A × B × C × D × E → X × Y × Z):= by
   intro f g h k p
-  rcases p with ⟨a, b, c, d, e⟩
+  have a := p.1
+  have b := p.2.1
+  have c := p.2.2.1
+  have d := p.2.2.2.1
+  have e := p.2.2.2.2
   constructor
   apply h
   exact a

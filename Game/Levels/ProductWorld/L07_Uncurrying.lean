@@ -19,6 +19,7 @@ In summary, the types `A × B → C` and `A → B → C` both provide a notion o
 The process of converting a function of type  `A → B → C` to one of type `A × B → C` is called *uncurrying* and is defined by the function below.
 "
 
+/-- Define the uncurrying function, convering a function of two variables into a function out of a product type. -/
 Statement {A B C : Type} : (A → B → C) → (A × B → C) := by
   Hint (hidden := true) "The goal is a function type, so start with `intro`."
   intro f
@@ -29,6 +30,6 @@ Statement {A B C : Type} : (A → B → C) → (A × B → C) := by
   exact f p.1 p.2
 
 
-Conclusion "We'll now study the reverse process, which converts a function of type `A → B → C` to a function of type `A × B → C`."
+Conclusion "The operations of *currying* and *uncurrying* are inverses in a sense we will be able to make precise later."
 
-NewDefinition uncurry
+-- NewDefinition uncurry

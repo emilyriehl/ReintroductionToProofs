@@ -37,4 +37,9 @@ The first and arguably most important of these is the type `A → B` of function
 
 In this level, we will explain how to define and use functions and explore the analogy suggested by the fact that we use the same notation for
 function types `A → B` as for the implication proposition `P → Q`.
+
+To understand how functions work in type theory we must learn:
+
+* How to construct elements of type `A → B`.
+* How to use elements of type `A → B` to construct elements of other types.
 "
