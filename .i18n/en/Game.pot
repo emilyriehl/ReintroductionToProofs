@@ -1,15 +1,15 @@
 msgid ""
 msgstr "Project-Id-Version: Game v4.22.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-08-29\n"
+"POT-Creation-Date: 2025-09-07\n"
 "Last-Translator: \n"
 "Language-Team: none\n"
 "Language: en\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit"
 
-#: Game.Levels.ConjunctionWorld.L04_LogicalEquivalence
-msgid "`P ∧ Q` is true if and only if `Q ∧ P` is true."
+#: Game.Levels.ProductWorld.L09_UniversalProperty
+msgid "Universal property"
 msgstr ""
 
 #: Game.Levels.ImplicationWorld.L04_ProvingImplication
@@ -20,36 +20,47 @@ msgstr ""
 msgid "This proves that `(P → Q → R) → (P ∧ Q → R)`. We can now conclude that `P ∧ Q → R` and `P → Q → R` are logically equivalent."
 msgstr ""
 
-#: Game.Levels.ImplicationWorld.L01_ByAssumption
-msgid "By Assumption"
-msgstr ""
-
-#: Game
-msgid "Computer-Verified Proof: a Hands-On Introduction to Interactive Theorem Proving"
+#: Game.Levels.ProductWorld.L10_BossLevel
+msgid "Given functions of types `B × D → M`, `E → Y × N`, `A → M → X`, and `C → N → Z`, there is a function from the product type `A × B × C × D × E` to the product type `X × Y × Z`."
 msgstr ""
 
 #: GameServer.RpcHandlers
 msgid "intermediate goal solved! 🎉"
 msgstr ""
 
-#: Game.Levels.ImplicationWorld.L03_ComposingImplication
-msgid "If the goal is to prove `S` and we have a hypothesis `s : S`, the tactic `exact s` supplies the required proof."
+#: Game.Levels.ProductWorld.L02_FirstProjection
+#: Game.Levels.ProductWorld.L03_SecondProjection
+msgid "The product type comes with *projection functions* of type `A × B → A` and `A × B → B` which take an element `p : A × B` and return the corresponding components from `A` and `B` respectively.\n"
+"\n"
+"In Lean, the elements defined by projecting from `p : A × B` are denoted `p.1 : A` and `p.2 : B`."
 msgstr ""
 
 #: Game
 msgid "This was created using the GameSkeleton Github Repo from the Lean Games Server hosted by ADAM: Anticipating the Digital Age of Mathematics at Heinrich Heine University Düsseldorf. It is designed for a first year seminar course taught at Johns Hopkins University in Fall 2025 with the title `Computer-Verified Proof: a Hands-On Introduction to Interactive Theorem Proving`."
 msgstr ""
 
-#: Game.Levels.ConjunctionWorld.L05_Associativity
-msgid "Conjunction is associative: `(P ∧ Q) ∧ R` is true if and only if `P ∧ (Q ∧ R)` is true."
+#: Game.Levels.ProductWorld.L06_Currying
+msgid "Consider a function `f : A × B → C` mapping out of a product type.\n"
+"\n"
+"This function takes an ordered pair of elements &mdash; defined from `a : A` and `b : B` &mdash; and returns an element of type `C` denoted by `f ⟨a,b⟩`. Does this sound familiar?\n"
+"\n"
+"Recall that terms of type `g : A → B → C` aree functions of two variables.\n"
+"\n"
+"The function `g` takes a list of two elements `a : A` and `b : B` and returns an element of type `C` denoted by `g a b : C`.\n"
+"\n"
+"In summary, the types `A × B → C` and `A → B → C` both provide a notion of function of two variables, with inputs from the types `A` and `B` and output in the type `C`.\n"
+"\n"
+"The difference is that `f : A × B → C` is thought of as a function that takes a pair `⟨a, b⟩ : A × B` to an element of type `C`, while `g : A → B → C` is thought of as a function that takes `a : A` to a function `g a : B → C` (which then takes `b : B` to an element of type `C`).\n"
+"\n"
+"The process of converting a function of type `A × B → C` to one of type `A → B → C` is called *currying* and is defined by the function below."
 msgstr ""
 
-#: Game.Levels.ConjunctionWorld.L07_MoreCompoundImplication
-msgid "Since `h` is a compound implication, we have multiple hypothesis to satisfy. We must prove that `P` is true and also prove that `Q` is true. Fortunately, our assumptions cover both cases."
+#: Game.Levels.FunctionWorld.L06_SwappingInputs
+msgid "Note that for a particular multvariable function `f : A → B → C`, its type dictates that the variable of type `A` must be supplied before the variable of type `B`. But as observed in this level, we can then define a corresponding function `swap f : B → A → C` which encodes the same information."
 msgstr ""
 
-#: Game.Levels.ImplicationWorld.L01_ByAssumption
-msgid "To use the hypothesis `«{p}»` to reach this conclusion type `exact «{p}»`."
+#: Game.Levels.ProductWorld.L07_Uncurrying
+msgid "The operations of *currying* and *uncurrying* are inverses in a sense we will be able to make precise later."
 msgstr ""
 
 #: Game.Levels.ConjunctionWorld.L07_MoreCompoundImplication
@@ -60,28 +71,19 @@ msgstr ""
 msgid "If `P → Q` is true, then `P → Q` is true."
 msgstr ""
 
-#: Game.Levels.ConjunctionWorld.L05_Associativity
-#: Game.Levels.ConjunctionWorld.L05_Associativity
-#: Game.Levels.ConjunctionWorld.L05_Associativity
-msgid "What tactics can be used to break a goal involving conjunction into subgoals?"
-msgstr ""
-
 #: Game.Levels.ConjunctionWorld.L01_IntroducingAnd
 msgid "Introducing And"
 msgstr ""
 
-#: Game.Levels.ImplicationWorld.L07_OnParentheses
-msgid "On Parentheses"
+#: Game.Levels.FunctionWorld.L01_IdentityFunction
+msgid "The simplest example of a function is the identity function, which may be defined for any type `A`. The identity function\n"
+"`id : A → A` is defined to carry any element `a : A` to itself.\n"
+"\n"
+"To define a function `f : A → B` one must define a rule that converts an arbitrary element `x : A` to some element of type `B`. Start by typing `intro x` to add an arbitrary element `x : A` to the context and update the goal to a term of type `B`."
 msgstr ""
 
-#: Game.Levels.ImplicationWorld.L04_ProvingImplication
-msgid "To prove an implication `P → Q` one needs to give a construction of a proof of `Q` from a hypothesized proof of `P`.\n"
-"\n"
-"In particular, to prove that `P → Q` it suffices to assume that we have a proof `p : P` &mdash; even if `P` is false and such a proof does not exist &mdash; in which case the new goal is to find a proof of `Q`.\n"
-"\n"
-"When the goal has the form `P → Q`, type `intro p` to introduce an assumption `p : P` and update the goal to proving `Q` &mdash; asking for a proof that `Q` is true under the assumption that `P` is true.\n"
-"\n"
-"In this level, we will see that for any proposition `P`, `P → P` is true. Indeed, this is the case even if `P` itself is false!"
+#: Game.Levels.ImplicationWorld.L07_OnParentheses
+msgid "On Parentheses"
 msgstr ""
 
 #: Game.Levels.ConjunctionWorld.L09_UniversalProperty
@@ -89,175 +91,96 @@ msgstr ""
 msgid "We can apply the proof `«{h}» : P → Q ∧ R` to the proof `«{p}»: P` to obtain `«{h}» «{p}» : Q ∧ R`. How can these be used to prove the goal?"
 msgstr ""
 
-#: GameServer.RpcHandlers
-msgid "level completed with warnings… 🎭"
+#: Game.Levels.FunctionWorld.L09_BossLevel
+msgid "For the function Boss Level, we consider an arbitrary pair of types, which we call `V` and `F` &mdash; for *vector space* and *field* respectively &mdash; because the function to be defined below has a connection to linear algebra that is not explained here.\n"
+"\n"
+"Can you define it?"
 msgstr ""
 
-#: Game.Levels.ImplicationWorld.L02_ModusPonens
-msgid "Modus Ponens"
-msgstr ""
-
-#: Game.Levels.ImplicationWorld.L03_ComposingImplication
-msgid "Now we are in the setting of three proposition variables `P`, `Q`, and `R` with several hypotheses.\n"
-"\n"
-"The first assumption provides a proof `p` that the proposition `P` is true.\n"
-"\n"
-"The second provides a proof `h1` that the implication `P → Q` is true.\n"
-"\n"
-"The final hypothesis provides a proof `h2` that `Q → R` is true. Our goal is to conclude that `R` is true.\n"
-"\n"
-"If you need help, click the button `Show more help!` for reminders/hints."
-msgstr ""
-
-#: Game.Levels.ImplicationWorld.L09_BossLevel
-msgid "The `have` tactic can be used to add new hypotheses provided you can supply a proof. For example, given assumptions `p : P` and `h : P → Q`, type `have q : Q := h p` to add a proof `q : Q` defined by `h p`."
-msgstr ""
-
-#: Game.Levels.ImplicationWorld.L09_BossLevel
-msgid "Multiple hypothesis can be introduced at once by writing `intro h1 h2 h3` etc. You might consider using names that will help you remember which propositions each hypothesis proves!"
+#: Game.Levels.FunctionWorld.L01_IdentityFunction
+msgid "To define a function, in this case a term of type `«{A}» → «{A}»`, one must define a rule to convert an arbitrary element `x : «{A}»` to some element of type `«{A}»`. Start by typing `intro x` to add an arbitrary element of type `«{A}»` to the context."
 msgstr ""
 
 #: Game.Levels.ConjunctionWorld.L10_BossLevel
 msgid "Next move on to `Function World` to learn about types and functions."
 msgstr ""
 
-#: Game.Levels.ConjunctionWorld.L10_BossLevel
-msgid "If `P`, `R → S ∧ T`, `U → P → R`, `(U → Y) → Z`, `W ∧ T ∧ V → X ∧ Y`, and `S → V ∧ W` are true, then `Z` is true."
-msgstr ""
-
-#: Game.Levels.ConjunctionWorld.L08_CurryingImplication
-msgid "We now establish a logical equivalence between `P ∧ Q → R` and `P → Q → R`.\n"
-"\n"
-"This is why implications of the form `P → (Q → R)` are so much more common than implications of the form `(P → Q) → R`.\n"
-"\n"
-"The name `Currying` will be explained in a future level.\n"
-"\n"
-"Note the two implications have been added to the theorem library, should you wish to use them."
-msgstr ""
-
 #: Game.Levels.ImplicationWorld.L04_ProvingImplication
 msgid "For any proposition `P`, `P` implies `P` is true."
+msgstr ""
+
+#: Game.Levels.ProductWorld.L09_UniversalProperty
+msgid "The *universal property* of the product is the correspondence between functions `X → A × B` into a product and pairs of functions `(X → A) × (X → B)`.\n"
+"\n"
+"We are now ready for the boss level of Product World."
 msgstr ""
 
 #: Game.Levels.ConjunctionWorld.L01_IntroducingAnd
 msgid "To prove a conjunction `P ∧ Q` we need to supply a proof of both `P` and `Q`."
 msgstr ""
 
+#: Game.Levels.FunctionWorld.L01_IdentityFunction
+msgid "Now the goal is an element of type `«{A}»`, which should be thought of as result of applying the function to the element `«{x}» : «{A}»`. In the case of the identity function, we want to return `«{x}» : «{A}»` again which is done by typing `exact «{x}»`."
+msgstr ""
+
 #: Game.Levels.ConjunctionWorld.L06_CompoundImplication
 msgid "For propositions `P`, `Q`, and `R`, `And.curry` is a proof that `P ∧ Q → R` implies `P → Q → R`."
 msgstr ""
 
-#: Game.Levels.ConjunctionWorld.L04_LogicalEquivalence
-msgid "Two propositions `P` and `Q` are *logically equivalent* if `P` implies `Q` and `Q` also implies `P`.\n"
-"\n"
-"The assertion that `P` and `Q` are logically equivalent can be expressed by the compound proposition `(P → Q) ∧ (Q → P)`.\n"
-"\n"
-"Because this notion will appear frequently in what follows, we introduce `P ↔ Q` as a useful shorthand for `(P → Q) ∧ (Q → P)`.\n"
-"\n"
-"See the library of definitions to the right for a reminder about what the symbol `↔` means.\n"
-"\n"
-"The notion of logical equivalence enables us to upgrade our understanding of associativity of symmetry as follows."
+#: Game.Levels.FunctionWorld.L08_Evaluation
+msgid "For types `A` and `B`, the evaluation function has type `A → (A → B) → B`, meaning that for `a : A`, `ev a` has type `(A → B) → B`."
 msgstr ""
 
-#: Game.Levels.ImplicationWorld.L08_ModusPonensAgain
-msgid "Modus Ponens Again"
-msgstr ""
-
-#: Game.Levels.ConjunctionWorld.L01_IntroducingAnd
-msgid "If `P` is true and `Q` is true, then `P ∧ Q` is true."
-msgstr ""
-
-#: Game.Levels.ConjunctionWorld.L03_Symmetry
-#: Game.Levels.ConjunctionWorld.L03_Symmetry
-msgid "Note the goal window in the interactive theorem prover keeps track of exactly what proposition you are trying to prove."
+#: Game.Levels.FunctionWorld.L07_CompositionRevisited
+msgid "Define the composition of two functions as a multivariable function between function types."
 msgstr ""
 
 #: Game.Levels.ConjunctionWorld.L01_IntroducingAnd
 msgid "The `constructor` tactic can be used when the goal is a conjunction (among other settings) to split the goal into cases."
 msgstr ""
 
-#: Game.Levels.ImplicationWorld.L03_ComposingImplication
-#: Game.Levels.ImplicationWorld.L03_ComposingImplication
-msgid "In the presence of a hypothesis `h : S → T`, the tactic `apply h` reduces the problem of proving `T` to the problem of proving `S`. Can this be used here?"
+#: Game.Levels.ProductWorld.L07_Uncurrying
+msgid "What sort of inputs does the function `«{f}»` require and how can these be extracted from `«{p}»`?"
 msgstr ""
 
-#: Game.Levels.ImplicationWorld.L05_ProvingImpliedAssumption
-msgid "To prove an implication `S → T` one needs to give a construction of a proof of `T` from a proof of `S`. As we will see in the following example, it is not necessary to actually *use* the assumption that `S` is true after introducing it.\n"
-"\n"
-"In this level we will consider two propositions `P` and `Q` and assume that the proposition `P` is true.\n"
-"\n"
-"It follows that `Q → P` is true, no matter whether `Q` is true or false."
+#: Game.Levels.FunctionWorld.L07_CompositionRevisited
+msgid "Composition revisited"
 msgstr ""
 
-#: Game.Levels.ImplicationWorld.L04_ProvingImplication
-msgid "Proving Implication"
-msgstr ""
-
-#: Game.Levels.ImplicationWorld
-msgid "We begin our study of proofs with *propositional logic*.\n"
-"\n"
-"Many mathematical propositions are built out of simpler propositions using logical connectives. The structure of a compound proposition &mdash; that is, which connectives appear where &mdash; often suggests proof techniques, as we will discover.\n"
-"\n"
-"To study these connectives, we require *proposition variables* &mdash; denoted with letters like `P`, `Q`, `R` &mdash; which stand for generic propositions, which may be true or false.\n"
-"\n"
-"In this level we study the logical connective *implication* denoted by `→`.\n"
-"\n"
-"For arbitrary *propositions* `P` and `Q`, `P → Q` is a new proposition asserting that *if* `P` *is true then* `Q` *is true*.\n"
-"\n"
-"To understand how implications work in logic we must learn:\n"
-"\n"
-"* How to prove theorems of the form `P → Q`.\n"
-"* How to use a hypothesis of the form `P → Q` to prove something else.\n"
-"\n"
-"We'll learn the rules for proving implications and using implications in the levels that follow."
-msgstr ""
-
-#: Game.Levels.ConjunctionWorld.L08_CurryingImplication
-msgid "What is the outermost logical connective? What tactic is used to prove statements of this form?"
+#: Game.Levels.ProductWorld.L09_UniversalProperty
+msgid "Combine a pair of functions `g : X → A` and `h : X → A` into a single function from `X` to the product type `A × B`."
 msgstr ""
 
 #: Game.Levels.ImplicationWorld.L04_ProvingImplication
 msgid "The `intro` tactic, short for *introduction*, is used to introduce one or more hypotheses when the goal is an implication. It can be used itself or followed by names for those hypotheses. For example, when the goal is `P → Q`, type `intro p` to add an assumption `p : P` and update the goal to `Q`. When the goal is `P → Q → R`, type `intro p q` to add assumptions `p : P` and `q : Q` and update the goal to `R`."
 msgstr ""
 
+#: Game.Levels.ConjunctionWorld.L08_CurryingImplication
+msgid "What is the outermost logical connective? What tactic is used to prove statements of this form?"
+msgstr ""
+
+#: Game.Levels.FunctionWorld.L07_CompositionRevisited
+msgid "The `swap` function exchanges the inputs of a function of two variables. For a function with two variables `f : A → B → C`, `swap f : B → A → C` is the function that sends `b : B` and `a : A` to `f a b : C`."
+msgstr ""
+
 #: Game.Levels.ConjunctionWorld.L09_UniversalProperty
 msgid "`(P → Q) ∧ (P → R)` is true if and only if `P → (Q ∧ R)` is true."
-msgstr ""
-
-#: Game.Levels.ConjunctionWorld.L06_CompoundImplication
-msgid "Now how do we prove a conjunction?"
-msgstr ""
-
-#: Game.Levels.ImplicationWorld.L08_ModusPonensAgain
-msgid "If `P` is true, then if `P → Q` is true, then `Q` is true."
-msgstr ""
-
-#: Game.Levels.ConjunctionWorld.L02_UsingAnd
-msgid "A hypothesis `h : P ∧ Q` provides explicit proofs of both `P` and `Q` which are denoted in Lean by `h.1 : P` and `h.2 : Q`."
 msgstr ""
 
 #: Game.Levels.ConjunctionWorld.L04_LogicalEquivalence
 msgid "Recall that `S ↔ T` is an abbreviation for `(S → T) ∧ (T → S)`. What is the outermost connective here? Which tactic can be used to break this into subgoals?"
 msgstr ""
 
+#: Game.Levels.ProductWorld.L05_Associativity
+msgid "Product types are associative: for types `A`, `B`, and `C`, there are canonical functions in each direction between the types `(A × B) × C` and `A × (B × C)`."
+msgstr ""
+
 #: Game.Levels.ImplicationWorld.L05_ProvingImpliedAssumption
 msgid "Now the goal is to prove `«{P}»` using *any* of our given hypotheses. Which tactic can be used to supply this proof?"
 msgstr ""
 
-#: Game.Levels.ImplicationWorld.L02_ModusPonens
-msgid "The hypothesis `«{h}»` can be used to convert a proof of `«{P}»` into a proof of `«{Q}»`. This can be thought of as a step that reduces the problem of proving `«{Q}»` to the problem of proving `«{P}»`. To apply this hypothesis type `apply «{h}»`."
-msgstr ""
-
-#: Game.Levels.ImplicationWorld.L03_ComposingImplication
-msgid "If `P` is true, `P → Q` is true, and `Q → R` is true, then `R` is true."
-msgstr ""
-
-#: Game.Levels.ConjunctionWorld.L02_UsingAnd
-msgid "This can be solved in two ways. Can you find them both?"
-msgstr ""
-
-#: Game.Levels.ImplicationWorld.L06_ProvingAssumedImplication
-msgid "Proving Assumed Implication"
+#: Game.Levels.ProductWorld.L03_SecondProjection
+msgid "Second Projection"
 msgstr ""
 
 #: Game.Levels.ConjunctionWorld.L03_Symmetry
@@ -266,26 +189,16 @@ msgid "If `P ∧ Q` is true, then `Q ∧ P` is too.\n"
 "In other words, `P ∧ Q` implies `Q ∧ P`, as is expressed by the proposition `P ∧ Q → Q ∧ P` which is implicitly parenthesized as `(P ∧ Q) → (Q ∧ P)`."
 msgstr ""
 
-#: Game.Levels.ImplicationWorld.L08_ModusPonensAgain
-msgid "Modus ponens tells us that under hypotheses `p : P` and `h : P → Q` then `Q` is true.\n"
-"\n"
-"In fact there is another syntax that may be used to write this proof. In Lean, we may write `h p : Q` for the proof of `Q` obtained by applying the hypothesis `h : P → Q` to the proof `p : P`.\n"
-"\n"
-"Can you see why the following theorem is another form of modus ponens?"
+#: Game.Levels.FunctionWorld.L02_UsingFunctions
+msgid "Using Functions"
 msgstr ""
 
-#: Game.Levels.ConjunctionWorld.L02_UsingAnd
-msgid "If `P ∧ Q` is true then `P ∧ Q` is true."
+#: Game.Levels.ProductWorld.L06_Currying
+msgid "Currying"
 msgstr ""
 
-#: Game.Levels.ImplicationWorld.L08_ModusPonensAgain
-msgid "Since `«{h}» «{p}» : «{Q}»` It is possible to solve this level with `exact «{h}» «{p}»`."
-msgstr ""
-
-#: Game.Levels.ConjunctionWorld.L03_Symmetry
-msgid "The proof you have just constructed is now recorded as a theorem called `And.symm` in the library to the right.\n"
-"\n"
-"In fact `P ∧ Q` is true if and only if `Q ∧ P` is true, as we will now demonstrate."
+#: Game.Levels.FunctionWorld.L06_SwappingInputs
+msgid "From a function of two variables, define another function of two variables, where the inputs are swapped."
 msgstr ""
 
 #: Game.Levels.ConjunctionWorld.L06_CompoundImplication
@@ -296,41 +209,17 @@ msgstr ""
 msgid "For compound implications &mdash; statements of the form `P → Q → R → S → T` &mdash; you can type `intro p q r s` to introduce hypothesis `p : P`, `q : Q`, `r : R`, and `s : S` all at once."
 msgstr ""
 
-#: Game.Levels.ImplicationWorld.L01_ByAssumption
-msgid "An interative theorem prover &mdash; in this case Lean &mdash; helps the user &mdash; this means you &mdash; keep track of the state of a proof.\n"
-"\n"
-"In the `Active Goal` window, Lean keeps track of the `objects` and `assumptions` &mdash; which together define the hypotheses of a mathematical statement &mdash; as well as the `goal` &mdash; meaning the thing we are trying to prove.\n"
-"\n"
-"Our first mathematical theorem is about an arbitrary proposition `P` which can be any well-formed mathematical statement.\n"
-"\n"
-"The hypothesis `p : P`  can be thought of as providing a *proof* `p` that the proposition `P` is true. Our objective is to conclude that `P` is true, given this hypothesis.\n"
-"\n"
-"This is true by assumption, and you can type `assumption` to tell Lean this.\n"
-"\n"
-"But it is a bit more precise to tell Lean this is true by the assumption `p` which can be done by typing `exact p`.\n"
-"\n"
-"Note both `assumption` and `exact` are *tactics* that are built into Lean. You can now find them in the tactic library on the upper right."
+#: Game.Levels.ProductWorld.L08_ComponentFunctions
+#: Game.Levels.ProductWorld.L08_ComponentFunctions
+msgid "If this is not the term you want, how can you use it to define the correct term?"
 msgstr ""
 
-#: Game.Levels.ConjunctionWorld.L07_MoreCompoundImplication
-msgid "In the previous level we proved that `P ∧ Q → R` implies `P → Q → R`.\n"
-"\n"
-"We now show that `(P → Q → R)` implies `P ∧ Q → R`."
+#: Game.Levels.FunctionWorld.L05_MultivariableFunctions
+msgid "This level can be solved by starting with `exact`, starting with `apply`, or starting with `intro`. If you start with `intro`, then you can continue with `exact` or with `apply`. If this is your first time solving this level, try to find a different solution."
 msgstr ""
 
-#: Game.Levels.ImplicationWorld.L05_ProvingImpliedAssumption
-msgid "If `P` is true, then for any proposition `Q`, `Q → P` is always true."
-msgstr ""
-
-#: Game.Levels.ConjunctionWorld.L05_Associativity
-msgid "For propositions `P`, `Q`, and `R`, `(P ∧ Q) ∧ R` is true if and only if `P ∧ (Q ∧ R)` is true.\n"
-"\n"
-"Lean likes to drop parentheses whenever possible so uses `P ∧ Q ∧ R` as an abbreviation for `P ∧ (Q ∧ R)`. While it's difficult to remember this convention, at least the two possible statements are logically equivalent!\n"
-"\n"
-"Given a proof `h : (P ∧ Q) ∧ R`, we obtain proofs `h.1 : P ∧ Q` and `h.2 : R`. From the first of these,\n"
-"we obtain further proofs `h.1.1 : P` and `h.1.2 : Q`.\n"
-"\n"
-"Similarly, given proofs `p : P`, `q : Q`, `r : R`, then `⟨⟨p, q⟩, r⟩ : (P ∧ Q) ∧ R` while `⟨p, ⟨q, r⟩⟩ : P ∧ (Q ∧ R)`. Lean allows the shorthand `⟨p, q, r⟩ : P ∧ Q ∧ R` for the latter proof."
+#: Game.Levels.ProductWorld.L06_Currying
+msgid "We'll now study the reverse process, which converts a function of type `A → B → C` to a function of type `A × B → C`."
 msgstr ""
 
 #: Game.Levels.ImplicationWorld.L04_ProvingImplication
@@ -343,27 +232,26 @@ msgstr ""
 msgid "If `S → X`, `T → W`, `R → Y`, `W → Q`, `U → S`, `Y → T`, `X → V`, `Q → U`, `V → Z` and `P → R` are true then `P` implies `Z`."
 msgstr ""
 
-#: Game.Levels.ConjunctionWorld.L05_Associativity
-msgid "Can you solve this level with only one use of the `constructor` tactic? In fact, even this can be avoided using syntax we have not yet introduced: a two line proof `intro s` followed by `exact t` can be written `fun s ↦ t` writing `\\mapsto` to type `↦`."
+#: Game.Levels.ConjunctionWorld.L01_IntroducingAnd
+msgid "Alternatively, you can type `exact ⟨p,q⟩' using '\\\\<' and '\\\\>' to type the angle brackets."
 msgstr ""
 
-#: Game.Levels.ConjunctionWorld
-msgid "The logical connective of *conjunction*, denoted by `∧`, is the mathematical version of *and*.\n"
+#: Game.Levels.ProductWorld.L05_Associativity
+msgid "Given three types `A`, `B`, and `C`, the product type construction may be iterated to define types `(A × B) × C` and `A × (B × C)`, the latter of which is abbreviated `A × B × C`.\n"
 "\n"
-"For arbitrary propositions `P` and `Q`, `P ∧ Q` is a new proposition asserting that `P` *and* `Q` *are both true*.\n"
+"A term `p : (A × B) × C` has projections `p.1 : A × B` and `p.2 : C`. Then `p.1 : A × B` has further projections `p.1.1 : A` and `p.1.2 : B`.\n"
 "\n"
-"To understand how conjunctions work in logic we must learn:\n"
+"Use this to define a *pair* of functions, the first of type `((A × B) × C) → (A × (B × C))` and the second of type `(A × (B × C)) → ((A × B) × C)`. That is, define a single element of type\n"
 "\n"
-"* How to prove theorems of the form `P ∧ Q`.\n"
-"* How to use a hypothesis of the form `P ∧ Q` to prove something else.\n"
+"`(((A × B) × C) → (A × (B × C))) × ((A × (B × C)) → ((A × B) × C))`\n"
 "\n"
-"To prove `P ∧ Q`, one must supply proofs `p : P` and `q : Q`, which can be done using the syntax `⟨p,q⟩ : P ∧ Q`. Use '\\\\<' and '\\\\>' to type the angle brackets.\n"
+"Note some shorthands are available for `A × B × C` but not for `(A × B) × C`.\n"
 "\n"
-"If we have a proof `h : P ∧ Q` then we can extract proofs that `P` and `Q` are true using the syntax `h.1 : P` and `h.2 : Q`."
+"Given `a : A`, `b : B`, and `c : C`, we may write `⟨a,b,c⟩ : A × B × C` to abbreviate `⟨a, ⟨b,c⟩⟩ : A × (B × C)`."
 msgstr ""
 
-#: Game.Levels.ImplicationWorld.L09_BossLevel
-msgid "Next move on to Conjunction World to meet our second logical connective."
+#: Game.Levels.ProductWorld.L04_Symmetry
+msgid "Product types are symmetric: an element of type `A × B` has a corresponding element of type `B × A` with components swapped."
 msgstr ""
 
 #: Game.Levels.ImplicationWorld.L09_BossLevel
@@ -376,24 +264,32 @@ msgid "Each world will end with a `Boss Level`, which is intended to be more cha
 "To delete a proof (or proof attempt) and start over click on the button labelled `</>` in the upper right hand corner to enter `editor mode`. Then delete all the lines of your first proof (or proof attempt). Clicking on `>_` takes you back to `typewriter mode`."
 msgstr ""
 
-#: Game.Levels.ImplicationWorld
-msgid "Implication World"
-msgstr ""
-
-#: Game.Levels.ConjunctionWorld.L07_MoreCompoundImplication
-msgid "For propositions `P`, `Q`, and `R`, `And.uncurry` is a proof that `P → Q → R` implies `P ∧ Q → R`."
+#: Game.Levels.FunctionWorld.L05_MultivariableFunctions
+msgid "You can use the tactic `exact` by supplying `«{f}»` with two arguments, in the correct order, with spaces in between (but no parentheses). Alternatively you can use the tactic `apply`."
 msgstr ""
 
 #: Game.Levels.ImplicationWorld.L03_ComposingImplication
 msgid "Composing Implication"
 msgstr ""
 
+#: Game.Levels.ProductWorld.L04_Symmetry
+msgid "The product type comes with function of type `A × B → B × A` which swaps the elements of an ordered pair.\n"
+"\n"
+"The swap function can be defined by introducing a variable `p : A × B`, projecting to its components `p.1 : A` and `p.2 : B`, then reassembling these to give an element of type `B × A`."
+msgstr ""
+
 #: Game.Levels.ConjunctionWorld.L03_Symmetry
 msgid "`P ∧ Q` implies `Q ∧ P`."
 msgstr ""
 
-#: Game.Levels.ConjunctionWorld.L05_Associativity
-msgid "Think carefully about what `«{k}»` proves and what proofs can be extracted from this."
+#: Game.Levels.FunctionWorld.L08_Evaluation
+msgid "While an element of type `A → (B → C)`, more commonly written as `A → B → C`, is a function of two variables, an element of type `(A → B) → C` is instead a function that takes a function `f : A → B` as input and returns an element of type `C`.\n"
+"\n"
+"For example, if we are given `a : A`, then it is possible to define a function of type `(A → B) → B` which is called *evaluation* at `a : A`. Given `f : A → B`, we return `f a : B`."
+msgstr ""
+
+#: Game.Levels.FunctionWorld.L03_ComposingFunctions
+msgid "Given functions `g : B → C` and `f : A → B`, define the composite function `g ∘ f : A → C` that sends `x : A` to `g (f x)`."
 msgstr ""
 
 #: Game.Levels.ConjunctionWorld.L09_UniversalProperty
@@ -408,12 +304,25 @@ msgstr ""
 msgid "Currying Implication"
 msgstr ""
 
-#: Game.Levels.ImplicationWorld.L08_ModusPonensAgain
-msgid "Now we are ready for the boss level!"
+#: Game.Levels.ProductWorld.L07_Uncurrying
+msgid "Define the uncurrying function, convering a function of two variables into a function out of a product type."
+msgstr ""
+
+#: Game.Levels.FunctionWorld.L04_ConstantFunctions
+msgid "Given a term `a : A` and any type `B`, there is a function of type `B → A` which is *constant* at `a : A`.\n"
+"\n"
+"This means that for any input `x : B` the output is always the element `a : A`.\n"
+"\n"
+"Can you figure out how to define this function?"
 msgstr ""
 
 #: Game.Levels.ConjunctionWorld.L05_Associativity
+#: Game.Levels.ProductWorld.L05_Associativity
 msgid "Associativity"
+msgstr ""
+
+#: Game.Levels.FunctionWorld.L06_SwappingInputs
+msgid "Swapping inputs"
 msgstr ""
 
 #: Game.Levels.ConjunctionWorld.L05_Associativity
@@ -425,73 +334,101 @@ msgstr ""
 msgid "If the proposition `P` is true, then `P` is true."
 msgstr ""
 
-#: Game.Levels.ConjunctionWorld.L06_CompoundImplication
-msgid "Recall that implication is *NOT* associative: the propositions `(P → Q) → R` and `P → (Q → R)` are not logically equivalent, and `P → Q → R` is an abbreviation for the former.\n"
+#: Game.Levels.FunctionWorld
+msgid "The slogan *propositions as types* tells us that we can consider propositions as special cases of *types*.\n"
 "\n"
-"One reason that mathematical statements of the form `P → (Q → R)` are more prevalent is that this is implied by `P ∧ Q → R`, which is implicitly parenthesized as `(P ∧ Q) → R`."
+"For example, there are types `ℕ` of\n"
+"natural numbers, `ℤ` of integers, `ℚ` of rational numbers, `ℝ` of real numbers, `ℂ` of natural\n"
+"numbers, and so on.\n"
+"\n"
+"We use capital variables like `A` and `B` to denote general types, analogously to the proposition variables `P` and `Q`.\n"
+"\n"
+"A type `A` can contain elements `x : A` and `y : A`. For propositions `P` and `Q`, we thought of\n"
+"elements `p : P` and `q : Q` as *proofs* that these propositions are true.\n"
+"\n"
+"In the case of\n"
+"propositions, what mattered was whether `P` had any elements or not. The elements themselves don't\n"
+"carry any information beyond witnessing the truth of the proposition.\n"
+"\n"
+"By contrast, the type `ℕ` of\n"
+"natural numbers contains infinitely many distinct elements: `0 : ℕ`, `1 : ℕ` and so on.\n"
+"\n"
+"Just as logical connectives like `→` and `∧` can be used to build more complicated propositions out of existing propositions, *type forming operations* can be used to build new types from existing types.\n"
+"\n"
+"The first and arguably most important of these is the type `A → B` of functions from `A` to `B`. An element\n"
+"`f : A → B` defines a *function* from `A` to `B`.\n"
+"\n"
+"In this level, we will explain how to define and use functions and explore the analogy suggested by the fact that we use the same notation for\n"
+"function types `A → B` as for the implication proposition `P → Q`.\n"
+"\n"
+"To understand how functions work in type theory we must learn:\n"
+"\n"
+"* How to construct elements of type `A → B`.\n"
+"* How to use elements of type `A → B` to construct elements of other types."
 msgstr ""
 
-#: Game.Levels.ConjunctionWorld.L01_IntroducingAnd
-msgid "Now Lean reminds you of the other goal, which is to prove `Q`. Which tactic applies here?"
+#: Game.Levels.ProductWorld.L01_Pairing
+msgid "Pairing"
 msgstr ""
 
-#: Game.Levels.ImplicationWorld.L01_ByAssumption
-msgid "The `assumption` tactic tries to solve the main goal using a hypothesis of compatible type, or else fails."
+#: Game.Levels.ProductWorld.L06_Currying
+msgid "The function `curry : (A × B → C) → (A → B → C)` converts a function out of a product type `A × B` into `C` into a function from the type `A` to the type of functions `B → C`."
+msgstr ""
+
+#: Game.Levels.FunctionWorld.L05_MultivariableFunctions
+msgid "Since `«{f}»` is a function with two variables, after `apply «{f}»` we now have two goals, where we need to supply first an element of type `«{A}»` and then an element of type `«{B}»`."
+msgstr ""
+
+#: Game.Levels.FunctionWorld
+msgid "Function World"
+msgstr ""
+
+#: Game.Levels.FunctionWorld.L06_SwappingInputs
+msgid "Look carefully at the order of the arguments of `«{f}»`."
 msgstr ""
 
 #: Game.Levels.ConjunctionWorld.L06_CompoundImplication
 msgid "Can we apply our hypothesis now?"
 msgstr ""
 
-#: Game.Levels.ConjunctionWorld.L08_CurryingImplication
-msgid "In the next level we'll meet the universal property of conjunctions."
+#: Game.Levels.ProductWorld.L04_Symmetry
+msgid "Are function types symmetric? Why or why not?"
+msgstr ""
+
+#: Game.Levels.FunctionWorld.L05_MultivariableFunctions
+msgid "Given an element `a : A` and a function of two variables `f : A → B → C`, define a function from `B → C` by evaluating the first variable of `f` at the element `a`."
+msgstr ""
+
+#: Game.Levels.ProductWorld.L02_FirstProjection
+msgid "First Projection"
 msgstr ""
 
 #: Game.Levels.ConjunctionWorld.L06_CompoundImplication
 msgid "Compound Implication"
 msgstr ""
 
-#: Game.Levels.ConjunctionWorld.L06_CompoundImplication
-#: Game.Levels.ConjunctionWorld.L06_CompoundImplication
-#: Game.Levels.ConjunctionWorld.L07_MoreCompoundImplication
-#: Game.Levels.ConjunctionWorld.L07_MoreCompoundImplication
-msgid "Can we apply our hypothesis yet or must we act on the goal first?"
-msgstr ""
-
 #: Game.Levels.ConjunctionWorld.L04_LogicalEquivalence
 msgid "Did you give the same proof twice? If so, why does this make sense? If not, could you have done this? In fact, we gave a name `And.symm` to the proof given in the previous level, as you can see in the list of theorems to the right. Try typing `exact And.symm` at an appropriate place in your proof."
 msgstr ""
 
-#: Game.Levels.ConjunctionWorld.L04_LogicalEquivalence
-msgid "`P ↔ Q`, read as &ldquo;`P` if and only if `Q`&rdquo; is an abbreviation for `(P → Q) ∧ (Q → P)`."
+#: Game.Levels.ProductWorld.L10_BossLevel
+msgid "Move on to Disjunction World to learn about another logical operation."
 msgstr ""
 
-#: Game.Levels.ConjunctionWorld.L05_Associativity
-msgid "Think carefully about what `«{h}»` proves and what proofs can be extracted from this."
+#: Game.Levels.ProductWorld.L01_Pairing
+msgid "If this is your first time solving this level, go back and solve it another way."
 msgstr ""
 
 #: Game
 msgid "FYS270"
 msgstr ""
 
-#: Game.Levels.ImplicationWorld.L07_OnParentheses
-msgid "For propositions `P`, `Q`, and `R`, the propositions `(P → Q) → R` and `P → (Q → R)` are not the same.\n"
-"\n"
-"The first asserts that `R` is true assuming `P → Q`. The second asserts that `Q → R` is true assuming `P`, or equivalently, that `R` is true assuming `P` and also assuming `Q`.\n"
-"\n"
-"Mathematical statements of this second form `P → (Q → R)` are much more common. Thus the shorthand `P → Q → R` implicitly refers to `P → (Q → R)`, not to the other parenthesization.\n"
-"\n"
-"More generally, `P → Q → R → S → T` refers to `P → (Q → (R → (S → T)))`.\n"
-"\n"
-"Explicit parentheses must be used to express statements with any other parenthesizations."
-msgstr ""
-
 #: Game.Levels.ImplicationWorld.L03_ComposingImplication
 msgid "We've seen that an implication `h : P → Q` can be applied in the presense of a proof `p : P` to provide a proof of the proposition `Q`. This explains how implications are *used* in proofs of other statements. In the next level, we will see how implications can be *proven*."
 msgstr ""
 
-#: Game.Levels.ConjunctionWorld
-msgid "Conjunction World"
+#: Game.Levels.FunctionWorld.L01_IdentityFunction
+msgid "Identity Function"
 msgstr ""
 
 #: Game.Levels.ImplicationWorld.L06_ProvingAssumedImplication
@@ -502,16 +439,14 @@ msgid "There are two ways to prove that `P → Q` under the assumption given bel
 "You can also delete a proof attempt in line by line in `typewriter mode` using the `retry` button to the right of that line."
 msgstr ""
 
-#: Game.Levels.ConjunctionWorld.L03_Symmetry
-msgid "Given a hypothesis `h : P ∧ Q` for some propositions `P` and `Q`, `And.symm h` is a proof of `Q ∧ P`."
-msgstr ""
-
-#: Game.Levels.ImplicationWorld.L07_OnParentheses
-msgid "If `P → Q`, then if `Q → R`, then `P → R`."
-msgstr ""
-
-#: Game.Levels.ImplicationWorld.L06_ProvingAssumedImplication
-msgid "The lesson of this level is to pay attention to the big picture, namely what exactly you are being asked ot prove under what hypotheses."
+#: Game.Levels.ProductWorld.L01_Pairing
+msgid "Given an element `a : A` and an element `b : B` there is a corresponding element of the product type `A × B` that is denoted by `⟨a , b⟩ : A × B`.\n"
+"\n"
+"This element should be thought of as an *ordered pair* whose first component is the element `a : A` and whose second element is the element `b : B`.\n"
+"\n"
+"This can be input directly by typing `exact ⟨a,b⟩' using '\\\\<' and '\\\\>' to type the angle brackets; note the spacing around the angle brackets and the commas is not important.\n"
+"\n"
+"Alternatively, you can apply the `constructor` tactic which allows you to first input the first component and then input the second component."
 msgstr ""
 
 #: Game.Levels.ImplicationWorld.L05_ProvingImpliedAssumption
@@ -520,12 +455,8 @@ msgid "To prove an implication, which in this case has the form `«{Q}» → «{
 "It is also possible to type simply `intro` in which case Lean will automatically generate a name for the proof of `«{Q}»`."
 msgstr ""
 
-#: Game.Levels.ImplicationWorld.L02_ModusPonens
-msgid "If `P` is true and `P → Q` is true, then `Q` is true."
-msgstr ""
-
-#: Game.Levels.ConjunctionWorld.L01_IntroducingAnd
-msgid "Use the tactic `constructor` to ask Lean to break up the goal into steps, of first proving `«{P}»` and then proving `«{Q}»`."
+#: Game.Levels.ImplicationWorld.L06_ProvingAssumedImplication
+msgid "The lesson of this level is to pay attention to the big picture, namely what exactly you are being asked ot prove under what hypotheses."
 msgstr ""
 
 #: Game.Levels.ImplicationWorld.L07_OnParentheses
@@ -534,24 +465,30 @@ msgstr ""
 msgid "As the goal is to prove an implication, the tactic `intro` can be used to introduce a hypothesis and update the goal. Before using this tactic, try to figure out which hypothesis will be assumed and what the goal will be, using the discussion about the implicit parenthesization above."
 msgstr ""
 
-#: GameServer.RpcHandlers
-msgid "level completed! 🎉"
+#: Game.Levels.FunctionWorld.L07_CompositionRevisited
+msgid "For types `A`, `B`, and `C`, the function `comp : (B → C) → (A → B) → (A → C)` takes a function `f : A → B` and a function `g : B → C` to the composite function `comp g f : A → C` defined to take `a : A` to the element `g (f a) : C`."
+msgstr ""
+
+#: Game.Levels.ProductWorld.L02_FirstProjection
+#: Game.Levels.ProductWorld.L03_SecondProjection
+#: Game.Levels.ProductWorld.L04_Symmetry
+msgid "The goal is a term of a function type so type `intro p` to give yourself a term `p : A × B`."
+msgstr ""
+
+#: Game.Levels.FunctionWorld.L06_SwappingInputs
+#: Game.Levels.FunctionWorld.L06_SwappingInputs
+#: Game.Levels.FunctionWorld.L06_SwappingInputs
+#: Game.Levels.FunctionWorld.L08_Evaluation
+#: Game.Levels.FunctionWorld.L08_Evaluation
+msgid "When in doubt, start defining a function by using the tactic `intro` followed by your preferred variable name."
 msgstr ""
 
 #: Game.Levels.ConjunctionWorld.L09_UniversalProperty
 msgid "Universal Property"
 msgstr ""
 
-#: Game.Levels.ConjunctionWorld.L01_IntroducingAnd
-msgid "Now the goal is just to prove `P`. Type `exact «{p}»` to supply this proof."
-msgstr ""
-
-#: Game.Levels.ImplicationWorld.L02_ModusPonens
-msgid "Here `apply` is another tactic, which can be found in the library above right."
-msgstr ""
-
-#: Game.Levels.ImplicationWorld.L05_ProvingImpliedAssumption
-msgid "Proving Implied Assumption"
+#: Game.Levels.FunctionWorld.L04_ConstantFunctions
+msgid "Constant functions"
 msgstr ""
 
 #: Game.Levels.ConjunctionWorld.L02_UsingAnd
@@ -575,6 +512,7 @@ msgid "Which tactics can be used to prove `«{P}» → «{Q}»` with our given a
 msgstr ""
 
 #: Game.Levels.ConjunctionWorld.L03_Symmetry
+#: Game.Levels.ProductWorld.L04_Symmetry
 msgid "Symmetry"
 msgstr ""
 
@@ -582,8 +520,12 @@ msgstr ""
 msgid "Now your goal is a proof of `«{P}»`. Can you figure out how to finish the proof? If you need a reminder, click the button `Show more help!`"
 msgstr ""
 
-#: Game.Levels.ConjunctionWorld.L01_IntroducingAnd
-msgid "Alternatively, you can type `exact ⟨p,q⟩' using '\\\\<' and '\\\\>' to type the angle braces."
+#: Game.Levels.FunctionWorld.L05_MultivariableFunctions
+msgid "Multivariable functions"
+msgstr ""
+
+#: Game.Levels.ConjunctionWorld.L02_UsingAnd
+msgid "Now Lean reminds you of the other goal, which is to prove `Q`. Type `exact «{h}».2` to supply this proof."
 msgstr ""
 
 #: Game.Levels.ImplicationWorld.L02_ModusPonens
@@ -591,34 +533,697 @@ msgid "The `apply` tactic can be used when the goal matches the conclusion of an
 "For example if the goal is `Q` and there is a hypothesis `h : P → Q`, then `apply h` updates the goal to `P`. If the goal is `T` and there is a hypothesis `e : R → S → T`, then `apply e` produces two subgoals, one each for `R` and `S`."
 msgstr ""
 
-#: Game.Levels.ConjunctionWorld.L02_UsingAnd
-msgid "Now Lean reminds you of the other goal, which is to prove `Q`. Type `exact «{h}».2` to supply this proof."
+#: Game.Levels.ProductWorld.L08_ComponentFunctions
+msgid "A function into a product type has a pair of component functions."
 msgstr ""
 
-#: Game.Levels.ConjunctionWorld.L03_Symmetry
-msgid "In a compound proposition, the outermost logical connective (the one applied last in forming the proposition) often determines the overall proof strategy."
+#: Game.Levels.ProductWorld.L04_Symmetry
+msgid "Now the goal is an element of a product type. How can such elements be defined?"
 msgstr ""
 
 #: Game.Levels.ConjunctionWorld.L02_UsingAnd
 msgid "If this is your first time solving this level, delete your proof, and try to find another solution."
 msgstr ""
 
-#: Game.Levels.ConjunctionWorld.L08_CurryingImplication
-msgid "`P ∧ Q → R` is true if and only if `P → Q → R` is true."
-msgstr ""
-
-#: Game.Levels.ConjunctionWorld.L07_MoreCompoundImplication
-msgid "More Compound Implication"
-msgstr ""
-
-#: Game.Levels.ConjunctionWorld.L04_LogicalEquivalence
-msgid "Logical Equivalence"
+#: Game.Levels.FunctionWorld.L01_IdentityFunction
+msgid "For a type `A`, `id : A → A` is the function defined by sending `a : A` to `a : A`."
 msgstr ""
 
 #: Game.Levels.ImplicationWorld.L02_ModusPonens
 msgid "Now we are in the setting of two proposition variables `P` and `Q` with two hypotheses. The first assumption provides a proof `p` that the proposition `P` is true. The second provides a proof `h` that the implication `P → Q` is true.\n"
 "\n"
 "It follows from both of these facts that `Q` is also true and we can construct a proof by applying the hypothesis `h` to the proof `p`."
+msgstr ""
+
+#: Game.Levels.FunctionWorld.L04_ConstantFunctions
+msgid "For a term `a : A` and a type `B`, `const a : B → A` is the function defined by sending `x : B` to `a : A`."
+msgstr ""
+
+#: Game.Levels.ImplicationWorld.L07_OnParentheses
+msgid "Now you can start to apply some hypotheses to reduce the goal to one of your assumptions. Which tactic can be used here?"
+msgstr ""
+
+#: Game.Levels.ImplicationWorld.L04_ProvingImplication
+#: Game.Levels.ImplicationWorld.L05_ProvingImpliedAssumption
+msgid "Let us now explore other implications that are provable with this strategy."
+msgstr ""
+
+#: Game.Levels.ProductWorld.L08_ComponentFunctions
+msgid "The goal is a product type. You can use `constructor` to split into two goals, defining each component function separately."
+msgstr ""
+
+#: Game.Levels.FunctionWorld.L05_MultivariableFunctions
+msgid "Both `exact b` and `assumption` can be used here."
+msgstr ""
+
+#: Game.Levels.ConjunctionWorld.L04_LogicalEquivalence
+msgid "`P ∧ Q` is true if and only if `Q ∧ P` is true."
+msgstr ""
+
+#: Game.Levels.ImplicationWorld.L01_ByAssumption
+msgid "By Assumption"
+msgstr ""
+
+#: Game
+msgid "Computer-Verified Proof: a Hands-On Introduction to Interactive Theorem Proving"
+msgstr ""
+
+#: Game.Levels.ProductWorld.L10_BossLevel
+msgid "The objective is to define a function that takes 5 variables as inputs and has three\n"
+"variables as outputs as a composite &mdash; in a much more complicated sense than we have seen thusfar &mdash; of the given functions. Can you do it?"
+msgstr ""
+
+#: Game.Levels.ImplicationWorld.L03_ComposingImplication
+msgid "If the goal is to prove `S` and we have a hypothesis `s : S`, the tactic `exact s` supplies the required proof."
+msgstr ""
+
+#: Game.Levels.FunctionWorld.L01_IdentityFunction
+msgid "You can solve this level in one level by just giving the entire formula for the function as\n"
+"`exact fun x ↦ x`, using `\\mapsto` to type `↦`. This tells Lean that the answer is the function defined on an input element `x` to have an output value `x`."
+msgstr ""
+
+#: Game.Levels.FunctionWorld.L04_ConstantFunctions
+msgid "For any types `A` and `B` and element `a : A`, there is a constant function `const a : B → A` that sends any `x : B` to the element `a : A`."
+msgstr ""
+
+#: Game.Levels.ConjunctionWorld.L05_Associativity
+msgid "Conjunction is associative: `(P ∧ Q) ∧ R` is true if and only if `P ∧ (Q ∧ R)` is true."
+msgstr ""
+
+#: Game.Levels.FunctionWorld.L09_BossLevel
+msgid "Move on to Product World to meet a second type forming operation."
+msgstr ""
+
+#: Game.Levels.ImplicationWorld.L01_ByAssumption
+msgid "To use the hypothesis `«{p}»` to reach this conclusion type `exact «{p}»`."
+msgstr ""
+
+#: Game.Levels.ConjunctionWorld.L07_MoreCompoundImplication
+msgid "Since `h` is a compound implication, we have multiple hypothesis to satisfy. We must prove that `P` is true and also prove that `Q` is true. Fortunately, our assumptions cover both cases."
+msgstr ""
+
+#: Game.Levels.ProductWorld.L08_ComponentFunctions
+msgid "We've seen that a function `f : A × B → C` out of a product can be regarded as a function of two variables `curry f : A → B → C`.\n"
+"\n"
+"How should we think about a function into a product?\n"
+"\n"
+"Given a function `f : X → A × B` from a type `X` into a product type `A × B` one can define a pair of functions with types `X → A` and `X → B` that for `x : X` record the values `(f x).1 : A` and `(f x).2 : B` defined by projecting the pair `f x : A × B` to its components.\n"
+"\n"
+"These might be called the *component functions* associated to `f : X → A × B`.\n"
+"\n"
+"Define a function that extracts the component functions associated to a function into a product."
+msgstr ""
+
+#: Game.Levels.ConjunctionWorld.L05_Associativity
+#: Game.Levels.ConjunctionWorld.L05_Associativity
+#: Game.Levels.ConjunctionWorld.L05_Associativity
+msgid "What tactics can be used to break a goal involving conjunction into subgoals?"
+msgstr ""
+
+#: Game.Levels.ProductWorld.L06_Currying
+#: Game.Levels.ProductWorld.L06_Currying
+#: Game.Levels.ProductWorld.L06_Currying
+#: Game.Levels.ProductWorld.L07_Uncurrying
+#: Game.Levels.ProductWorld.L07_Uncurrying
+#: Game.Levels.ProductWorld.L07_Uncurrying
+#: Game.Levels.ProductWorld.L08_ComponentFunctions
+#: Game.Levels.ProductWorld.L08_ComponentFunctions
+#: Game.Levels.ProductWorld.L08_ComponentFunctions
+#: Game.Levels.ProductWorld.L09_UniversalProperty
+msgid "The goal is a function type, so start with `intro`."
+msgstr ""
+
+#: Game.Levels.ImplicationWorld.L04_ProvingImplication
+msgid "To prove an implication `P → Q` one needs to give a construction of a proof of `Q` from a hypothesized proof of `P`.\n"
+"\n"
+"In particular, to prove that `P → Q` it suffices to assume that we have a proof `p : P` &mdash; even if `P` is false and such a proof does not exist &mdash; in which case the new goal is to find a proof of `Q`.\n"
+"\n"
+"When the goal has the form `P → Q`, type `intro p` to introduce an assumption `p : P` and update the goal to proving `Q` &mdash; asking for a proof that `Q` is true under the assumption that `P` is true.\n"
+"\n"
+"In this level, we will see that for any proposition `P`, `P → P` is true. Indeed, this is the case even if `P` itself is false!"
+msgstr ""
+
+#: GameServer.RpcHandlers
+msgid "level completed with warnings… 🎭"
+msgstr ""
+
+#: Game.Levels.ProductWorld.L02_FirstProjection
+msgid "Now type `exact «{p}».1` to return the first projection."
+msgstr ""
+
+#: Game.Levels.ImplicationWorld.L03_ComposingImplication
+msgid "Now we are in the setting of three proposition variables `P`, `Q`, and `R` with several hypotheses.\n"
+"\n"
+"The first assumption provides a proof `p` that the proposition `P` is true.\n"
+"\n"
+"The second provides a proof `h1` that the implication `P → Q` is true.\n"
+"\n"
+"The final hypothesis provides a proof `h2` that `Q → R` is true. Our goal is to conclude that `R` is true.\n"
+"\n"
+"If you need help, click the button `Show more help!` for reminders/hints."
+msgstr ""
+
+#: Game.Levels.ImplicationWorld.L02_ModusPonens
+msgid "Modus Ponens"
+msgstr ""
+
+#: Game.Levels.ImplicationWorld.L09_BossLevel
+msgid "The `have` tactic can be used to add new hypotheses provided you can supply a proof. For example, given assumptions `p : P` and `h : P → Q`, type `have q : Q := h p` to add a proof `q : Q` defined by `h p`."
+msgstr ""
+
+#: Game.Levels.ImplicationWorld.L09_BossLevel
+msgid "Multiple hypothesis can be introduced at once by writing `intro h1 h2 h3` etc. You might consider using names that will help you remember which propositions each hypothesis proves!"
+msgstr ""
+
+#: Game.Levels.FunctionWorld.L08_Evaluation
+msgid "Evaluation"
+msgstr ""
+
+#: Game.Levels.ProductWorld.L03_SecondProjection
+msgid "Define the canonical function projecting from a product type to its second argument."
+msgstr ""
+
+#: Game.Levels.ConjunctionWorld.L10_BossLevel
+msgid "If `P`, `R → S ∧ T`, `U → P → R`, `(U → Y) → Z`, `W ∧ T ∧ V → X ∧ Y`, and `S → V ∧ W` are true, then `Z` is true."
+msgstr ""
+
+#: Game.Levels.FunctionWorld.L03_ComposingFunctions
+msgid "Composing functions"
+msgstr ""
+
+#: Game.Levels.ConjunctionWorld.L08_CurryingImplication
+msgid "We now establish a logical equivalence between `P ∧ Q → R` and `P → Q → R`.\n"
+"\n"
+"This is why implications of the form `P → (Q → R)` are so much more common than implications of the form `(P → Q) → R`.\n"
+"\n"
+"The name `Currying` will be explained in a future level.\n"
+"\n"
+"Note the two implications have been added to the theorem library, should you wish to use them."
+msgstr ""
+
+#: Game.Levels.FunctionWorld.L03_ComposingFunctions
+#: Game.Levels.FunctionWorld.L07_CompositionRevisited
+msgid "Now that the goal is an element of type `«{C}»` there are several ways to proceed. You can use `exact` or `apply`."
+msgstr ""
+
+#: Game.Levels.FunctionWorld.L08_Evaluation
+msgid "Define the *evaluation* function that takes `a : A` and `f : A → B` to `f a : B`."
+msgstr ""
+
+#: Game.Levels.FunctionWorld.L07_CompositionRevisited
+msgid "Can you solve this level in one line by using `exact fun g f a ↦ ?` with the appropriate thing in place of the `?`?\n"
+"\n"
+"Can you solve this level in one line by using `exact fun g f ↦ ?` with the appropriate thing in place of the `?`?"
+msgstr ""
+
+#: Game.Levels.FunctionWorld.L02_UsingFunctions
+msgid "Given a function `f : A → B` and any element `a : A`. You can apply the function `f` to `a` to obtain an element `f a : B` of type `B`."
+msgstr ""
+
+#: Game.Levels.ConjunctionWorld.L04_LogicalEquivalence
+msgid "Two propositions `P` and `Q` are *logically equivalent* if `P` implies `Q` and `Q` also implies `P`.\n"
+"\n"
+"The assertion that `P` and `Q` are logically equivalent can be expressed by the compound proposition `(P → Q) ∧ (Q → P)`.\n"
+"\n"
+"Because this notion will appear frequently in what follows, we introduce `P ↔ Q` as a useful shorthand for `(P → Q) ∧ (Q → P)`.\n"
+"\n"
+"See the library of definitions to the right for a reminder about what the symbol `↔` means.\n"
+"\n"
+"The notion of logical equivalence enables us to upgrade our understanding of associativity of symmetry as follows."
+msgstr ""
+
+#: Game.Levels.ProductWorld.L01_Pairing
+msgid "Now Lean asks you to supply an element of type `«{A}»`. Which tactic applies here?"
+msgstr ""
+
+#: Game.Levels.ImplicationWorld.L08_ModusPonensAgain
+msgid "Modus Ponens Again"
+msgstr ""
+
+#: Game.Levels.ConjunctionWorld.L03_Symmetry
+#: Game.Levels.ConjunctionWorld.L03_Symmetry
+msgid "Note the goal window in the interactive theorem prover keeps track of exactly what proposition you are trying to prove."
+msgstr ""
+
+#: Game.Levels.ConjunctionWorld.L01_IntroducingAnd
+msgid "If `P` is true and `Q` is true, then `P ∧ Q` is true."
+msgstr ""
+
+#: Game.Levels.ImplicationWorld.L03_ComposingImplication
+#: Game.Levels.ImplicationWorld.L03_ComposingImplication
+msgid "In the presence of a hypothesis `h : S → T`, the tactic `apply h` reduces the problem of proving `T` to the problem of proving `S`. Can this be used here?"
+msgstr ""
+
+#: Game.Levels.ImplicationWorld
+msgid "We begin our study of proofs with *propositional logic*.\n"
+"\n"
+"Many mathematical propositions are built out of simpler propositions using logical connectives. The structure of a compound proposition &mdash; that is, which connectives appear where &mdash; often suggests proof techniques, as we will discover.\n"
+"\n"
+"To study these connectives, we require *proposition variables* &mdash; denoted with letters like `P`, `Q`, `R` &mdash; which stand for generic propositions, which may be true or false.\n"
+"\n"
+"In this level we study the logical connective *implication* denoted by `→`.\n"
+"\n"
+"For arbitrary *propositions* `P` and `Q`, `P → Q` is a new proposition asserting that *if* `P` *is true then* `Q` *is true*.\n"
+"\n"
+"To understand how implications work in logic we must learn:\n"
+"\n"
+"* How to prove theorems of the form `P → Q`.\n"
+"* How to use a hypothesis of the form `P → Q` to prove something else.\n"
+"\n"
+"We'll learn the rules for proving implications and using implications in the levels that follow."
+msgstr ""
+
+#: Game.Levels.ImplicationWorld.L04_ProvingImplication
+msgid "Proving Implication"
+msgstr ""
+
+#: Game.Levels.ImplicationWorld.L05_ProvingImpliedAssumption
+msgid "To prove an implication `S → T` one needs to give a construction of a proof of `T` from a proof of `S`. As we will see in the following example, it is not necessary to actually *use* the assumption that `S` is true after introducing it.\n"
+"\n"
+"In this level we will consider two propositions `P` and `Q` and assume that the proposition `P` is true.\n"
+"\n"
+"It follows that `Q → P` is true, no matter whether `Q` is true or false."
+msgstr ""
+
+#: Game.Levels.FunctionWorld.L02_UsingFunctions
+msgid "Given a function `f : A → B` and an element `a : A`, there is an element `f a : B` obtained by evaluating the function `f` at `a`."
+msgstr ""
+
+#: Game.Levels.ProductWorld.L07_Uncurrying
+msgid "Uncurrying"
+msgstr ""
+
+#: Game.Levels.ConjunctionWorld.L02_UsingAnd
+msgid "A hypothesis `h : P ∧ Q` provides explicit proofs of both `P` and `Q` which are denoted in Lean by `h.1 : P` and `h.2 : Q`."
+msgstr ""
+
+#: Game.Levels.ImplicationWorld.L08_ModusPonensAgain
+msgid "If `P` is true, then if `P → Q` is true, then `Q` is true."
+msgstr ""
+
+#: Game.Levels.ConjunctionWorld.L06_CompoundImplication
+msgid "Now how do we prove a conjunction?"
+msgstr ""
+
+#: Game.Levels.ConjunctionWorld.L02_UsingAnd
+msgid "This can be solved in two ways. Can you find them both?"
+msgstr ""
+
+#: Game.Levels.ImplicationWorld.L03_ComposingImplication
+msgid "If `P` is true, `P → Q` is true, and `Q → R` is true, then `R` is true."
+msgstr ""
+
+#: Game.Levels.ImplicationWorld.L02_ModusPonens
+msgid "The hypothesis `«{h}»` can be used to convert a proof of `«{P}»` into a proof of `«{Q}»`. This can be thought of as a step that reduces the problem of proving `«{Q}»` to the problem of proving `«{P}»`. To apply this hypothesis type `apply «{h}»`."
+msgstr ""
+
+#: Game.Levels.FunctionWorld.L08_Evaluation
+msgid "The evaluation function has type `ev : A → (A → B) → B` and is defined by the formula `fun a f ↦ f a`. By swapping variables, we can also think of evaluation as defining a function `(A → B) → A → B` where this latter function is defined by `fun f a ↦ f a`."
+msgstr ""
+
+#: Game.Levels.ProductWorld.L03_SecondProjection
+msgid "Now type `exact «{p}».2` to return the first projection."
+msgstr ""
+
+#: Game.Levels.ImplicationWorld.L06_ProvingAssumedImplication
+msgid "Proving Assumed Implication"
+msgstr ""
+
+#: Game.Levels.FunctionWorld.L07_CompositionRevisited
+msgid "To define a function with multiple variables you can apply the intro tactic twice, for instance by typing `intro g f` or even `intro g f a`."
+msgstr ""
+
+#: Game.Levels.FunctionWorld.L02_UsingFunctions
+msgid "There is another way to solve this level. Start with `apply f` and see what happens. Have you seen a construction like this before?"
+msgstr ""
+
+#: Game.Levels.ConjunctionWorld.L02_UsingAnd
+msgid "If `P ∧ Q` is true then `P ∧ Q` is true."
+msgstr ""
+
+#: Game.Levels.ImplicationWorld.L08_ModusPonensAgain
+msgid "Modus ponens tells us that under hypotheses `p : P` and `h : P → Q` then `Q` is true.\n"
+"\n"
+"In fact there is another syntax that may be used to write this proof. In Lean, we may write `h p : Q` for the proof of `Q` obtained by applying the hypothesis `h : P → Q` to the proof `p : P`.\n"
+"\n"
+"Can you see why the following theorem is another form of modus ponens?"
+msgstr ""
+
+#: Game.Levels.ConjunctionWorld.L03_Symmetry
+msgid "The proof you have just constructed is now recorded as a theorem called `And.symm` in the library to the right.\n"
+"\n"
+"In fact `P ∧ Q` is true if and only if `Q ∧ P` is true, as we will now demonstrate."
+msgstr ""
+
+#: Game.Levels.ImplicationWorld.L08_ModusPonensAgain
+msgid "Since `«{h}» «{p}» : «{Q}»` It is possible to solve this level with `exact «{h}» «{p}»`."
+msgstr ""
+
+#: Game.Levels.FunctionWorld.L07_CompositionRevisited
+msgid "Recall that given functions `f : A → B` and `g : B → C` there is a *composite function* from `A` to\n"
+"`C` denoted `g ∘ f : A → C`, using `\\circ` to type `∘`.\n"
+"\n"
+"The function `g ∘ f` is defined to be the function that sends `a : A` first to the element `f a : B` and then\n"
+"to the element `g (f a) : C`.\n"
+"\n"
+"Define composition as a multivariable function between function types `comp : (B → C) → (A → B) → (A → C)`.\n"
+"\n"
+"We think of composition as the function that takes `g : B → C` and `f : A → B` to the composite function `comp g f : A → C`.\n"
+"\n"
+"It can also be thought of a function that takes `g`, `f`, and `a : A` to the element `g (f a) : C`.\n"
+"\n"
+"Aside: Lean treats the functions `comp` and `∘` slightly differently because the former uses the usual notation for multivariable functions (where the arguments are provided afterwards as `comp g f`) while the latter uses infix notation (where the function name appears inbetween the two arguments as `g ∘ f`)."
+msgstr ""
+
+#: Game.Levels.FunctionWorld.L06_SwappingInputs
+msgid "Recall that an element of type `A → B → C` can be thought of as a function of two variables.\n"
+"\n"
+"Given `f : A → B → C`, `a : A`, and `b : B`, `f a b : C` denotes `f` applied first to `a` and then to `b`.\n"
+"\n"
+"From a function of type `A → B → C`, we can define a function of type `B → A → C` by swapping the order of the variables that are input into the function."
+msgstr ""
+
+#: Game.Levels.ImplicationWorld.L01_ByAssumption
+msgid "An interative theorem prover &mdash; in this case Lean &mdash; helps the user &mdash; this means you &mdash; keep track of the state of a proof.\n"
+"\n"
+"In the `Active Goal` window, Lean keeps track of the `objects` and `assumptions` &mdash; which together define the hypotheses of a mathematical statement &mdash; as well as the `goal` &mdash; meaning the thing we are trying to prove.\n"
+"\n"
+"Our first mathematical theorem is about an arbitrary proposition `P` which can be any well-formed mathematical statement.\n"
+"\n"
+"The hypothesis `p : P`  can be thought of as providing a *proof* `p` that the proposition `P` is true. Our objective is to conclude that `P` is true, given this hypothesis.\n"
+"\n"
+"This is true by assumption, and you can type `assumption` to tell Lean this.\n"
+"\n"
+"But it is a bit more precise to tell Lean this is true by the assumption `p` which can be done by typing `exact p`.\n"
+"\n"
+"Note both `assumption` and `exact` are *tactics* that are built into Lean. You can now find them in the tactic library on the upper right."
+msgstr ""
+
+#: Game.Levels.ProductWorld.L09_UniversalProperty
+msgid "Here `«{f}» : («{X}» → «{A}») × («{X}» → «{B}»)` is really a pair of functions. Use `rcases «{f}» with ⟨g,h⟩` to break `«{f}»` into a pair of functions `g : «{X}» → «{A}»` and 'h : «{X}» → «{B}»`."
+msgstr ""
+
+#: Game.Levels.ProductWorld
+msgid "In Function World, we learned that for any types `A` and `B` there is a new type `A → B` whose elements `f : A → B` are *functions* from `A` to `B`.\n"
+"\n"
+"In this world, we'll meet another binary type forming operation.\n"
+"\n"
+"Given two types `A` and `B`, there is a type `A × B` called the *product type* whose elements `p : A × B` should be thought of as encoding ordered pairs of elements, one from `A` and one from `B`.\n"
+"\n"
+"Like the analogy between function types and implication, there is a close analogy between product types and the logical operation of conjunction.\n"
+"\n"
+"To understand how products work in type theory we must learn:\n"
+"\n"
+"* How to construct elements of type `A × B`.\n"
+"* How to use elements of type `A × B` to construct elements of other types."
+msgstr ""
+
+#: Game.Levels.ConjunctionWorld.L07_MoreCompoundImplication
+msgid "In the previous level we proved that `P ∧ Q → R` implies `P → Q → R`.\n"
+"\n"
+"We now show that `(P → Q → R)` implies `P ∧ Q → R`."
+msgstr ""
+
+#: Game.Levels.ProductWorld.L08_ComponentFunctions
+msgid "We've seen that functions `f : X → A × B` into product types can be decomposed into component functions `fun x ↦ (f x).1 : X → A` and `fun x ↦ (f x).2 : X → B`.\n"
+"\n"
+"We'll now consider the reversed process, defining a function into a product type from a pair of component functions."
+msgstr ""
+
+#: Game.Levels.ConjunctionWorld.L05_Associativity
+msgid "For propositions `P`, `Q`, and `R`, `(P ∧ Q) ∧ R` is true if and only if `P ∧ (Q ∧ R)` is true.\n"
+"\n"
+"Lean likes to drop parentheses whenever possible so uses `P ∧ Q ∧ R` as an abbreviation for `P ∧ (Q ∧ R)`. While it's difficult to remember this convention, at least the two possible statements are logically equivalent!\n"
+"\n"
+"Given a proof `h : (P ∧ Q) ∧ R`, we obtain proofs `h.1 : P ∧ Q` and `h.2 : R`. From the first of these,\n"
+"we obtain further proofs `h.1.1 : P` and `h.1.2 : Q`.\n"
+"\n"
+"Similarly, given proofs `p : P`, `q : Q`, `r : R`, then `⟨⟨p, q⟩, r⟩ : (P ∧ Q) ∧ R` while `⟨p, ⟨q, r⟩⟩ : P ∧ (Q ∧ R)`. Lean allows the shorthand `⟨p, q, r⟩ : P ∧ Q ∧ R` for the latter proof."
+msgstr ""
+
+#: Game.Levels.ImplicationWorld.L05_ProvingImpliedAssumption
+msgid "If `P` is true, then for any proposition `Q`, `Q → P` is always true."
+msgstr ""
+
+#: Game.Levels.ProductWorld.L05_Associativity
+msgid "Are function types associative? Why or why not?"
+msgstr ""
+
+#: Game.Levels.ConjunctionWorld.L05_Associativity
+msgid "Can you solve this level with only one use of the `constructor` tactic? In fact, even this can be avoided using syntax we have not yet introduced: a two line proof `intro s` followed by `exact t` can be written `fun s ↦ t` writing `\\mapsto` to type `↦`."
+msgstr ""
+
+#: Game.Levels.FunctionWorld.L04_ConstantFunctions
+msgid "The formula for the constant function is `fun x ↦ a`. In other words, given any input `x : B`, the output is always the specified term `a : A`. Since the formula for the output does not depend on the input term, this can also be written as `fun _ ↦ a`, so try solving this level with `exact fun _ ↦ a`"
+msgstr ""
+
+#: Game.Levels.ProductWorld.L05_Associativity
+msgid "The goal is a product of function types, so to define an element you need to define two different functions. Each will take some work, so start with the `constructor` tactic to split one goal into two goals."
+msgstr ""
+
+#: Game.Levels.ConjunctionWorld
+msgid "The logical connective of *conjunction*, denoted by `∧`, is the mathematical version of *and*.\n"
+"\n"
+"For arbitrary propositions `P` and `Q`, `P ∧ Q` is a new proposition asserting that `P` *and* `Q` *are both true*.\n"
+"\n"
+"To understand how conjunctions work in logic we must learn:\n"
+"\n"
+"* How to prove theorems of the form `P ∧ Q`.\n"
+"* How to use a hypothesis of the form `P ∧ Q` to prove something else.\n"
+"\n"
+"To prove `P ∧ Q`, one must supply proofs `p : P` and `q : Q`, which can be done using the syntax `⟨p,q⟩ : P ∧ Q`. Use '\\\\<' and '\\\\>' to type the angle brackets.\n"
+"\n"
+"If we have a proof `h : P ∧ Q` then we can extract proofs that `P` and `Q` are true using the syntax `h.1 : P` and `h.2 : Q`."
+msgstr ""
+
+#: Game.Levels.ImplicationWorld.L09_BossLevel
+msgid "Next move on to Conjunction World to meet our second logical connective."
+msgstr ""
+
+#: Game.Levels.ImplicationWorld
+msgid "Implication World"
+msgstr ""
+
+#: Game.Levels.ConjunctionWorld.L07_MoreCompoundImplication
+msgid "For propositions `P`, `Q`, and `R`, `And.uncurry` is a proof that `P → Q → R` implies `P ∧ Q → R`."
+msgstr ""
+
+#: Game.Levels.ProductWorld.L04_Symmetry
+msgid "For types `A` and `B`, the swapping function has type `A × B → B × A` and can be thought of as the function that sends a pair `⟨a, b⟩` to the pair `⟨b, a⟩`."
+msgstr ""
+
+#: Game.Levels.ProductWorld.L08_ComponentFunctions
+#: Game.Levels.ProductWorld.L08_ComponentFunctions
+msgid "What is the type of the term `«{f}» «{x}»`? If you're not sure, you can type `exact «{f}» «{x}»` and read the error message to find out."
+msgstr ""
+
+#: Game.Levels.ConjunctionWorld.L05_Associativity
+msgid "Think carefully about what `«{k}»` proves and what proofs can be extracted from this."
+msgstr ""
+
+#: Game.Levels.FunctionWorld.L03_ComposingFunctions
+msgid "Given functions `f : A → B` and `g : B → C`, the *composite function* `g ∘ f : A → C` is defined to send `x : A` to the element `g (f x)`."
+msgstr ""
+
+#: Game.Levels.ImplicationWorld.L08_ModusPonensAgain
+msgid "Now we are ready for the boss level!"
+msgstr ""
+
+#: Game.Levels.ConjunctionWorld.L01_IntroducingAnd
+msgid "Now Lean reminds you of the other goal, which is to prove `Q`. Which tactic applies here?"
+msgstr ""
+
+#: Game.Levels.ConjunctionWorld.L06_CompoundImplication
+msgid "Recall that implication is *NOT* associative: the propositions `(P → Q) → R` and `P → (Q → R)` are not logically equivalent, and `P → Q → R` is an abbreviation for the former.\n"
+"\n"
+"One reason that mathematical statements of the form `P → (Q → R)` are more prevalent is that this is implied by `P ∧ Q → R`, which is implicitly parenthesized as `(P ∧ Q) → R`."
+msgstr ""
+
+#: Game.Levels.ImplicationWorld.L01_ByAssumption
+msgid "The `assumption` tactic tries to solve the main goal using a hypothesis of compatible type, or else fails."
+msgstr ""
+
+#: Game.Levels.FunctionWorld.L01_IdentityFunction
+msgid "For a type `A`, the identity function `id : A → A` is the function defined by sending and arbitrary element `a : A` to itself."
+msgstr ""
+
+#: Game.Levels.ConjunctionWorld.L08_CurryingImplication
+msgid "In the next level we'll meet the universal property of conjunctions."
+msgstr ""
+
+#: Game.Levels.ConjunctionWorld.L06_CompoundImplication
+#: Game.Levels.ConjunctionWorld.L06_CompoundImplication
+#: Game.Levels.ConjunctionWorld.L07_MoreCompoundImplication
+#: Game.Levels.ConjunctionWorld.L07_MoreCompoundImplication
+msgid "Can we apply our hypothesis yet or must we act on the goal first?"
+msgstr ""
+
+#: Game.Levels.ProductWorld.L05_Associativity
+msgid "Now the goal is a function type. What tactic is used to define functions?"
+msgstr ""
+
+#: Game.Levels.ConjunctionWorld.L05_Associativity
+msgid "Think carefully about what `«{h}»` proves and what proofs can be extracted from this."
+msgstr ""
+
+#: Game.Levels.ConjunctionWorld.L04_LogicalEquivalence
+msgid "`P ↔ Q`, read as &ldquo;`P` if and only if `Q`&rdquo; is an abbreviation for `(P → Q) ∧ (Q → P)`."
+msgstr ""
+
+#: Game.Levels.ProductWorld.L01_Pairing
+msgid "Now Lean asks you to supply an element of type `«{B}»`. Which tactic applies here?"
+msgstr ""
+
+#: Game.Levels.ImplicationWorld.L07_OnParentheses
+msgid "For propositions `P`, `Q`, and `R`, the propositions `(P → Q) → R` and `P → (Q → R)` are not the same.\n"
+"\n"
+"The first asserts that `R` is true assuming `P → Q`. The second asserts that `Q → R` is true assuming `P`, or equivalently, that `R` is true assuming `P` and also assuming `Q`.\n"
+"\n"
+"Mathematical statements of this second form `P → (Q → R)` are much more common. Thus the shorthand `P → Q → R` implicitly refers to `P → (Q → R)`, not to the other parenthesization.\n"
+"\n"
+"More generally, `P → Q → R → S → T` refers to `P → (Q → (R → (S → T)))`.\n"
+"\n"
+"Explicit parentheses must be used to express statements with any other parenthesizations."
+msgstr ""
+
+#: Game.Levels.FunctionWorld.L09_BossLevel
+msgid "Given a function of type `((((V → F) → F) → F) → F)` there is a canonically defined function of type `(V → F) → F`."
+msgstr ""
+
+#: Game.Levels.ProductWorld.L02_FirstProjection
+msgid "Define the canonical function projecting from a product type to its first argument."
+msgstr ""
+
+#: Game.Levels.ConjunctionWorld
+msgid "Conjunction World"
+msgstr ""
+
+#: Game.Levels.ConjunctionWorld.L03_Symmetry
+msgid "Given a hypothesis `h : P ∧ Q` for some propositions `P` and `Q`, `And.symm h` is a proof of `Q ∧ P`."
+msgstr ""
+
+#: Game.Levels.ImplicationWorld.L07_OnParentheses
+msgid "If `P → Q`, then if `Q → R`, then `P → R`."
+msgstr ""
+
+#: Game.Levels.ProductWorld.L07_Uncurrying
+msgid "Consider a function `f : A × B → C` mapping out of a product type. This function takes an ordered pair of elements, one from `A` and one from `B` and returns an element of type `C` denoted by `f ⟨a,b⟩`. Does this sound familiar?\n"
+"\n"
+"Recall that terms of type `g : A → B → C` were functions of two variables. The function `g` takes `a : A` and `b : B` and returns an element of type `C` denoted by `g a b : C`, which is basically\n"
+"\n"
+"In summary, the types `A × B → C` and `A → B → C` both provide a notion of function of two variables, with inputs from the types `A` and `B` and output in the type `C`. The difference is that `f : A × B → C` is thought of as a function that takes a pair `⟨a, b⟩ : A × B` to an element of type `C`, while `g : A → B → C` is thought of as a function that takes `a : A` to a function `g a : B → C` (which then takes `b : B` to an element of type `C`).\n"
+"\n"
+"The process of converting a function of type  `A → B → C` to one of type `A × B → C` is called *uncurrying* and is defined by the function below."
+msgstr ""
+
+#: Game.Levels.ImplicationWorld.L02_ModusPonens
+msgid "If `P` is true and `P → Q` is true, then `Q` is true."
+msgstr ""
+
+#: Game.Levels.ConjunctionWorld.L01_IntroducingAnd
+msgid "Use the tactic `constructor` to ask Lean to break up the goal into steps, of first proving `«{P}»` and then proving `«{Q}»`."
+msgstr ""
+
+#: Game.Levels.ProductWorld
+msgid "Product World"
+msgstr ""
+
+#: GameServer.RpcHandlers
+msgid "level completed! 🎉"
+msgstr ""
+
+#: Game.Levels.ProductWorld.L08_ComponentFunctions
+msgid "Component Functions"
+msgstr ""
+
+#: Game.Levels.FunctionWorld.L05_MultivariableFunctions
+msgid "An element of type `A → B → C`, which abbreviates the type `A → (B → C)`, can be thought of as a function of two variables.\n"
+"\n"
+"Given `f : A → B → C` and `a : A`, then `f a : B → C` is a function from `B` to `C`.\n"
+"\n"
+"Then given `b : B` we can apply the function `f a` to get an element `f a b : C`."
+msgstr ""
+
+#: Game.Levels.ConjunctionWorld.L01_IntroducingAnd
+msgid "Now the goal is just to prove `P`. Type `exact «{p}»` to supply this proof."
+msgstr ""
+
+#: Game.Levels.ProductWorld.L06_Currying
+msgid "Define the currying function, convering a function out of a product type into a function of two variables."
+msgstr ""
+
+#: Game.Levels.ImplicationWorld.L02_ModusPonens
+msgid "Here `apply` is another tactic, which can be found in the library above right."
+msgstr ""
+
+#: Game.Levels.FunctionWorld.L03_ComposingFunctions
+msgid "Lean has built in notation for the composite of `f : A → B` and `g : B → C` namely `g ∘ f : A → C`, using `\\circ` to type `∘`.\n"
+"\n"
+"Given `x : A`, `(g ∘ f) x` is defined to be the element `g (f x)`, which is why the function `g` appears on the left of `f` in the notation `g ∘ f`.\n"
+"\n"
+"Try solving this level with `exact g ∘ f`."
+msgstr ""
+
+#: Game.Levels.ImplicationWorld.L05_ProvingImpliedAssumption
+msgid "Proving Implied Assumption"
+msgstr ""
+
+#: Game.Levels.ProductWorld.L01_Pairing
+msgid "By pairing any element `a : A` with any element `b : B`, there is an element `⟨a, b⟩ : A × B`."
+msgstr ""
+
+#: Game.Levels.ProductWorld.L02_FirstProjection
+msgid "The projection function `A × B → B` is defined similarly."
+msgstr ""
+
+#: Game.Levels.ProductWorld.L03_SecondProjection
+msgid "In the next level, we'll use the projection functions to prove symmetry of product types."
+msgstr ""
+
+#: Game.Levels.ProductWorld.L09_UniversalProperty
+msgid "We've seen that functions `f : X → A × B` into product types can be decomposed into component functions `fun x ↦ (f x).1 : X → A` and `fun x ↦ (f x).2 : X → B`.\n"
+"\n"
+"We'll now consider the reversed process, defining a function into a product type from a pair of component functions.\n"
+"\n"
+"To that end consider an arbitrary pair of functions `g : X → A` and `h : X → B` that have the same domain type `X` but are otherwise unrelated.\n"
+"\n"
+"These functions can be combined to define a single function of type `X → A × B` whose component functions are defined by `g` and `h`, respectively."
+msgstr ""
+
+#: Game.Levels.FunctionWorld.L03_ComposingFunctions
+msgid "Given functions `f : A → B` and `g : B → C` there is a *composite function* from `A` to\n"
+"`C`.\n"
+"\n"
+"It is defined to be the function that sends `x : A` first to the element `f x : B` and then\n"
+"to the element `g (f x) : C`.\n"
+"\n"
+"Can you solve this level in one line by using `exact fun x ↦ ?` with the appropriate thing in place of the `?`?\n"
+"\n"
+"Alternatively, you can use other tactics to define the required function step by step."
+msgstr ""
+
+#: Game.Levels.ProductWorld.L06_Currying
+msgid "What sort of inputs does the function `«{f}»` require?"
+msgstr ""
+
+#: Game.Levels.ConjunctionWorld.L03_Symmetry
+msgid "In a compound proposition, the outermost logical connective (the one applied last in forming the proposition) often determines the overall proof strategy."
+msgstr ""
+
+#: Game.Levels.ConjunctionWorld.L08_CurryingImplication
+msgid "`P ∧ Q → R` is true if and only if `P → Q → R` is true."
+msgstr ""
+
+#: Game.Levels.FunctionWorld.L02_UsingFunctions
+msgid "The syntax for the application of the function `«{f}» : «{A}» → «{B}»` on the element `«{a}» : «{A}»` is just `«{f}» «{a}»`. So type `exact «{f}» «{a}»` to obtain an element of type `B`."
+msgstr ""
+
+#: Game.Levels.ConjunctionWorld.L04_LogicalEquivalence
+msgid "Logical Equivalence"
+msgstr ""
+
+#: Game.Levels.ConjunctionWorld.L07_MoreCompoundImplication
+msgid "More Compound Implication"
 msgstr ""
 
 #: Game.Levels.ImplicationWorld.L01_ByAssumption
@@ -639,21 +1244,23 @@ msgid "The task in this level is to show another logical equivalence,\n"
 "The intuition behind this notation will be explained in the next world."
 msgstr ""
 
-#: Game.Levels.ImplicationWorld.L07_OnParentheses
-msgid "Now you can start to apply some hypotheses to reduce the goal to one of your assumptions. Which tactic can be used here?"
+#: Game.Levels.ProductWorld.L07_Uncurrying
+msgid "The function `uncurry : (A → B → C) → (A × B → C)` converts a function from the type `A` to the type of functions `B → C` into a function out of a product type `A × B` into `C`."
 msgstr ""
 
 #: Game.Levels.ImplicationWorld.L02_ModusPonens
 msgid "Type `exact «{p}»` to tell Lean that `«{p}»` is a proof of `«{P}»`."
 msgstr ""
 
-#: Game.Levels.ImplicationWorld.L04_ProvingImplication
-#: Game.Levels.ImplicationWorld.L05_ProvingImpliedAssumption
-msgid "Let us now explore other implications that are provable with this strategy."
+#: Game.Levels.FunctionWorld.L03_ComposingFunctions
+msgid "To define a function from `«{A}»` to `«{C}»`, type `intro x` to introduce an\n"
+"arbitrary element of type `«{A}»`."
 msgstr ""
 
 #: Game.Levels.ImplicationWorld.L09_BossLevel
 #: Game.Levels.ConjunctionWorld.L10_BossLevel
+#: Game.Levels.FunctionWorld.L09_BossLevel
+#: Game.Levels.ProductWorld.L10_BossLevel
 msgid "Boss Level"
 msgstr ""
 

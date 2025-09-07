@@ -16,7 +16,7 @@ Statement {P Q : Prop} (p : P) (q : Q) : P ∧ Q := by
   Hint (hidden := true) "Now Lean reminds you of the other goal, which is to prove `Q`. Which tactic applies here?"
   exact q
 
-Conclusion "Alternatively, you can type `exact ⟨p,q⟩' using '\\\\<' and '\\\\>' to type the angle braces."
+Conclusion "Alternatively, you can type `exact ⟨p,q⟩' using '\\\\<' and '\\\\>' to type the angle brackets."
 
 /--
 The `constructor` tactic can be used when the goal is a conjunction (among other settings) to split the goal into cases.

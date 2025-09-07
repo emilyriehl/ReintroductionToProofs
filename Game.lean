@@ -1,7 +1,7 @@
 import Game.Levels.ImplicationWorld
 import Game.Levels.ConjunctionWorld
--- import Game.Levels.FunctionWorld
--- import Game.Levels.ProductWorld
+import Game.Levels.FunctionWorld
+import Game.Levels.ProductWorld
 -- import Game.Levels.DisjunctionWorld
 -- import Game.Levels.CoproductWorld
 -- import Game.Levels.EqualityWorld
@@ -39,9 +39,13 @@ CaptionLong "First Year Seminar 270"
 CoverImage "images/blue-jay.jpg"
 
 Dependency ImplicationWorld → ConjunctionWorld
--- Dependency ImplicationWorld → FunctionWorld → ProductWorld
--- Dependency ConjunctionWorld → ProductWorld → CoproductWorld
--- Dependency ConjunctionWorld → DisjunctionWorld → CoproductWorld → EqualityWorld
+Dependency ImplicationWorld → FunctionWorld
+Dependency FunctionWorld → ProductWorld
+Dependency ConjunctionWorld → ProductWorld
+-- Dependency ConjunctionWorld → DisjunctionWorld
+-- Dependency DisjunctionWorld → CoproductWorld
+-- Dependency ProductWorld → CoproductWorld
+-- Dependency CoproductWorld → EqualityWorld
 
 /-! Build the game. Show's warnings if it found a problem with your game. -/
 MakeGame
