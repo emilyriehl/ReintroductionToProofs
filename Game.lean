@@ -2,8 +2,8 @@ import Game.Levels.ImplicationWorld
 import Game.Levels.ConjunctionWorld
 import Game.Levels.FunctionWorld
 import Game.Levels.ProductWorld
--- import Game.Levels.DisjunctionWorld
--- import Game.Levels.CoproductWorld
+import Game.Levels.DisjunctionWorld
+import Game.Levels.CoproductWorld
 -- import Game.Levels.EqualityWorld
 
 -- Here's what we'll put on the title screen
@@ -42,9 +42,11 @@ Dependency ImplicationWorld → ConjunctionWorld
 Dependency ImplicationWorld → FunctionWorld
 Dependency FunctionWorld → ProductWorld
 Dependency ConjunctionWorld → ProductWorld
--- Dependency ConjunctionWorld → DisjunctionWorld
--- Dependency DisjunctionWorld → CoproductWorld
--- Dependency ProductWorld → CoproductWorld
+Dependency ProductWorld → DisjunctionWorld --does not actually exist
+Dependency ConjunctionWorld → DisjunctionWorld
+Dependency ProductWorld → CoproductWorld
+Dependency DisjunctionWorld → CoproductWorld
+
 -- Dependency CoproductWorld → EqualityWorld
 
 /-! Build the game. Show's warnings if it found a problem with your game. -/

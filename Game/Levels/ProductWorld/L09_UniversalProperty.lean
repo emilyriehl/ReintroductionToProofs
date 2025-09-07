@@ -18,12 +18,15 @@ These functions can be combined to define a single function of type `X → A × 
 Statement {X A B : Type} : (X → A) × (X → B) → (X → A × B):= by
   Hint (hidden := true) "The goal is a function type, so start with `intro`."
   intro f
-  Hint "Here `{f} : ({X} → {A}) × ({X} → {B})` is really a pair of functions. Use `rcases {f} with ⟨g,h⟩` to break `{f}` into a pair of functions `g : {X} → {A}` and 'h : {X} → {B}`."
-  rcases f with ⟨g, h⟩
+  Hint (hidden := true) "The goal is a still function type, so continue with `intro`."
   intro x
+  Hint (hidden := true) "The goal is a product type, so `constructor` can be used to break the goal into pieces."
   constructor
-  exact g x
-  exact h x
+  Hint (hidden := true) "What sort of type does `{f}` belong to? Can we extract other elements from an element of this type?"
+  Hint (hidden := true) "What type does `{f}.1` belong to? Is this useful?"
+  exact f.1 x
+  Hint (hidden := true) "What type does `{f}.2` belong to? Is this useful?"
+  exact f.2 x
 
 Conclusion "The *universal property* of the product is the correspondence between functions `X → A × B` into a product and pairs of functions `(X → A) × (X → B)`.
 
