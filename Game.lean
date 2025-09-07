@@ -42,9 +42,11 @@ Dependency ImplicationWorld → ConjunctionWorld
 Dependency ImplicationWorld → FunctionWorld
 Dependency FunctionWorld → ProductWorld
 Dependency ConjunctionWorld → ProductWorld
+-- Dependency ProductWorld → DisjunctionWorld
 -- Dependency ConjunctionWorld → DisjunctionWorld
--- Dependency DisjunctionWorld → CoproductWorld
 -- Dependency ProductWorld → CoproductWorld
+-- Dependency DisjunctionWorld → CoproductWorld
+
 -- Dependency CoproductWorld → EqualityWorld
 
 /-! Build the game. Show's warnings if it found a problem with your game. -/

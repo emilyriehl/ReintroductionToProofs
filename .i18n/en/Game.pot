@@ -135,6 +135,10 @@ msgstr ""
 msgid "Define the composition of two functions as a multivariable function between function types."
 msgstr ""
 
+#: Game.Levels.ProductWorld.L09_UniversalProperty
+msgid "What type does `«{f}».1` belong to? Is this useful?"
+msgstr ""
+
 #: Game.Levels.ConjunctionWorld.L01_IntroducingAnd
 msgid "The `constructor` tactic can be used when the goal is a conjunction (among other settings) to split the goal into cases."
 msgstr ""
@@ -205,6 +209,10 @@ msgstr ""
 msgid "`P ∧ Q → R` implies `P → Q → R`."
 msgstr ""
 
+#: Game.Levels.ProductWorld.L09_UniversalProperty
+msgid "What sort of type does `«{f}»` belong to? Can we extract other elements from an element of this type?"
+msgstr ""
+
 #: Game.Levels.ImplicationWorld.L07_OnParentheses
 msgid "For compound implications &mdash; statements of the form `P → Q → R → S → T` &mdash; you can type `intro p q r s` to introduce hypothesis `p : P`, `q : Q`, `r : R`, and `s : S` all at once."
 msgstr ""
@@ -226,6 +234,10 @@ msgstr ""
 msgid "When the goal has the form `«{P}» → «{P}»`, type `intro p` to introduce an assumption `p : «{P}»` and update the goal to `«{P}»`.\n"
 "\n"
 "It is also possible to type simply `intro` in which case Lean will automatically generate a name for the proof of `«{P}»`."
+msgstr ""
+
+#: Game.Levels.ProductWorld.L09_UniversalProperty
+msgid "What type does `«{f}».2` belong to? Is this useful?"
 msgstr ""
 
 #: Game.Levels.ImplicationWorld.L09_BossLevel
@@ -919,10 +931,6 @@ msgid "An interative theorem prover &mdash; in this case Lean &mdash; helps the 
 "Note both `assumption` and `exact` are *tactics* that are built into Lean. You can now find them in the tactic library on the upper right."
 msgstr ""
 
-#: Game.Levels.ProductWorld.L09_UniversalProperty
-msgid "Here `«{f}» : («{X}» → «{A}») × («{X}» → «{B}»)` is really a pair of functions. Use `rcases «{f}» with ⟨g,h⟩` to break `«{f}»` into a pair of functions `g : «{X}» → «{A}»` and 'h : «{X}» → «{B}»`."
-msgstr ""
-
 #: Game.Levels.ProductWorld
 msgid "In Function World, we learned that for any types `A` and `B` there is a new type `A → B` whose elements `f : A → B` are *functions* from `A` to `B`.\n"
 "\n"
@@ -1010,6 +1018,10 @@ msgstr ""
 
 #: Game.Levels.ProductWorld.L04_Symmetry
 msgid "For types `A` and `B`, the swapping function has type `A × B → B × A` and can be thought of as the function that sends a pair `⟨a, b⟩` to the pair `⟨b, a⟩`."
+msgstr ""
+
+#: Game.Levels.ProductWorld.L09_UniversalProperty
+msgid "The goal is a still function type, so continue with `intro`."
 msgstr ""
 
 #: Game.Levels.ProductWorld.L08_ComponentFunctions
@@ -1200,6 +1212,10 @@ msgid "Given functions `f : A → B` and `g : B → C` there is a *composite fun
 "Can you solve this level in one line by using `exact fun x ↦ ?` with the appropriate thing in place of the `?`?\n"
 "\n"
 "Alternatively, you can use other tactics to define the required function step by step."
+msgstr ""
+
+#: Game.Levels.ProductWorld.L09_UniversalProperty
+msgid "The goal is a product type, so `constructor` can be used to break the goal into pieces."
 msgstr ""
 
 #: Game.Levels.ProductWorld.L06_Currying
