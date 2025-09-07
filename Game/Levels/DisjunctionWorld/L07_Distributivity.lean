@@ -1,12 +1,17 @@
 import Game.Metadata
 
 World "DisjunctionWorld"
-Level 6
+Level 7
 
 Title "Distributivity"
 
-Introduction "What does it mean if `P ∧ (Q ∨ R)` holds? Then certainly `P` is true and also `Q ∨ R` is true. So we can conclude that `P ∧ Q` is true or `P ∧ R` is true, demonstrating the following logical equivalence."
+Introduction "What does it mean if `P ∧ (Q ∨ R)` holds?
 
+Then certainly `P` is true and also `Q ∨ R` is true.
+
+So we can conclude that `P ∧ Q` is true or `P ∧ R` is true, demonstrating the following logical equivalence."
+
+/-- Conjunction distributes over disjunction: `P ∧ (Q ∨ R)` and `(P ∧ Q) ∨ (P ∧ R)` are logically equivalent. -/
 Statement {P Q R : Prop} : P ∧ (Q ∨ R) ↔ (P ∧ Q) ∨ (P ∧ R) := by
   Hint (hidden := true) "What is the outermost logical connective?"
   constructor
@@ -32,7 +37,4 @@ Statement {P Q R : Prop} : P ∧ (Q ∨ R) ↔ (P ∧ Q) ∨ (P ∧ R) := by
   exact h_1.2
   exact ⟨h_1.1, Or.inr h_1.2⟩
 
-Conclusion "This proves the that conjunction distributes over disjunction. We are now ready for the boss level in Disjunction World."
-
--- FIX:
--- NewTactic have
+Conclusion "This proves the that conjunction distributes over disjunction. A more involved form of distributivity appears in the next level."

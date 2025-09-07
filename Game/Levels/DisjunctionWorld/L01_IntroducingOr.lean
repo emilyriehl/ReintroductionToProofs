@@ -21,6 +21,7 @@ For propositions `P` and `Q`, `Or.inr` is a proof that `Q → (P ∨ Q)`.
 -/
 TheoremDoc Or.inr as "inr" in "Or"
 
+/-- There are two ways to prove `P ∨ Q` from the given hypotheses. Can you find them both?-/
 Statement {P Q : Prop} (p : P) (q : Q) : P ∨ Q := by
   Hint "You have two choices: to reduce to the case of proving the left proposition or to reduce to the case of proving the right proposition. Type `apply Or.inl` to tell Lean you'd like too prove the left proposition or type `apply Or.inr` to tell Lean you'd like to prove the right proposition."
   Branch

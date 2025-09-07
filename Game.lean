@@ -42,7 +42,6 @@ Dependency ImplicationWorld → ConjunctionWorld
 Dependency ImplicationWorld → FunctionWorld
 Dependency FunctionWorld → ProductWorld
 Dependency ConjunctionWorld → ProductWorld
-Dependency ProductWorld → DisjunctionWorld --does not actually exist
 Dependency ConjunctionWorld → DisjunctionWorld
 Dependency ProductWorld → CoproductWorld
 Dependency DisjunctionWorld → CoproductWorld

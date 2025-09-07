@@ -1,12 +1,19 @@
 import Game.Metadata
 
 World "DisjunctionWorld"
-Level 5
+Level 6
 
 Title "Associativity"
 
-Introduction "Similarly, for propositions `P`, `Q`, and `R`, `(P ∨ Q) ∨ R` holds if and only if `P ∨ (Q ∨ R)` holds. Lean uses `P ∨ Q ∨ R` as an abbreviation for `P ∨ (Q ∨ R)`."
+Introduction "Similarly, for propositions `P`, `Q`, and `R`, `(P ∨ Q) ∨ R` holds if and only if `P ∨ (Q ∨ R)` holds.
 
+Lean uses `P ∨ Q ∨ R` as an abbreviation for `P ∨ (Q ∨ R)`.
+
+Given a hypothesis `h₁ : (P ∨ Q) ∨ R`, `cases h₁` will split the hypothesis into two cases: one assuming that `P ∨ Q` is true and the other assuming `R` is true.
+
+Similarly given a hypothesis `h₂ : P ∨ Q ∨ R`, `cases h₂` the hypothesis into two cases: one assuming that `P` is true and the other assuming `Q ∨ R` is true."
+
+/-- Or is associative: `(P ∨ Q) ∨ R` is true if and only if `P ∨ (Q ∨ R)` is true.-/
 Statement {P Q R : Prop} : (P ∨ Q) ∨ R ↔ P ∨ Q ∨ R := by
   Hint (hidden := true) "What is the outermost logical connective?"
   constructor
@@ -28,6 +35,9 @@ Statement {P Q R : Prop} : (P ∨ Q) ∨ R ↔ P ∨ Q ∨ R := by
   exact Or.inl (Or.inr hq)
   exact Or.inr hr
 
-Conclusion "This proves the associativity of disjunction."
+Conclusion "This proves the associativity of disjunction.
+
+Note the `rcases` tactic allows more general patterns of disjunctions. Given `h : (P ∨ Q) ∨ R` try `rcases h with (p | q) | r`. Similarly, given `k : P ∨ Q ∨ R`, try `rcases k with p | q | r`.
+"
 
 /- Use these commands to add items to the game's inventory. -/

@@ -10,9 +10,12 @@ Level 2
 
 Title "And Implies Or"
 
-Introduction "The proposition `P ∧ Q` is *stronger* than the proposition `P ∨ Q` because `P ∧ Q → P ∨ Q` is true in general, but the implication `P ∨ Q → P ∧ Q` does not necessarily hold."
+Introduction "The proposition `P ∧ Q` is *stronger* than the proposition `P ∨ Q` because `P ∧ Q → P ∨ Q` is true in general, but the implication `P ∨ Q → P ∧ Q` does not necessarily hold.
+
+Note the implication `P ∧ Q → P ∨ Q` holds because the mathematical *or* is &ldquo;inclusive&rdquo;, meaning that if `P` and `Q` are both true, then `P ∨ Q` is true, and in fact can be proven in two different ways."
 
 
+/-- `P ∧ Q` implies `P ∨ Q`. -/
 Statement {P Q : Prop} : P ∧ Q → P ∨ Q := by
   Hint (hidden := true) "What is the outermost logical connective?"
   intro h

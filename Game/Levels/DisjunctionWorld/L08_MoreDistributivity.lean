@@ -1,17 +1,25 @@
 import Game.Metadata
 
 World "DisjunctionWorld"
-Level 7
+Level 8
 
-Title "Disjunction Boss Level"
+Title "More Distributivity"
 
-Introduction "We've now reached the boss level in the disjunction world. If `P ∨ Q` holds and `R ∨ S` holds then at least one of the following four propositions holds: `P ∧ R` or `P ∧ S` or `Q ∧ R` or `Q ∧ S`. Demonstrate the following logical equivalence."
+Introduction "A more involved form of distributivity is also true.
 
+If `P ∨ Q` holds and `R ∨ S` holds then at least one of the following four propositions holds: `P ∧ R` or `P ∧ S` or `Q ∧ R` or `Q ∧ S`.
+
+Demonstrate the following logical equivalence."
+
+/-- `(P ∨ Q) ∧ (R ∨ S)` holds if and only if `(P ∧ R) ∨ (P ∧ S) ∨ (Q ∧ R) ∨ (Q ∧ S)` holds. -/
 Statement {P Q R S : Prop} : (P ∨ Q) ∧ (R ∨ S) ↔ (P ∧ R) ∨ (P ∧ S) ∨ (Q ∧ R) ∨ (Q ∧ S) := by
   Hint (hidden := true) "What is the outermost logical connective?"
   constructor
   intro h
+  Hint (hidden := true) "What can you conclude from the hypothesis `{h}`?"
+  Hint (hidden := true) "Try `have pq : P ∨ Q := {h}.1`."
   have pq := h.1
+  Hint (hidden := true) "Try `have rs : R ∨ S := {h}.2`."
   have rs := h.2
   cases pq
   cases rs
@@ -67,4 +75,4 @@ Statement {P Q R S : Prop} : (P ∨ Q) ∧ (R ∨ S) ↔ (P ∧ R) ∨ (P ∧ S)
   apply Or.inr
   exact h_1.2
 
-Conclusion "Congratulations!"
+Conclusion "We are now ready for the Boss Level of Disjunction World."
