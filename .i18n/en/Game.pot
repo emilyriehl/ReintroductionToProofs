@@ -467,15 +467,6 @@ msgstr ""
 msgid "The lesson of this level is to pay attention to the big picture, namely what exactly you are being asked ot prove under what hypotheses."
 msgstr ""
 
-#: Game.Levels.ProductWorld.L10_BossLevel
-msgid "The objective of this Boss Level is to define a function that takes give variables as inputs and has three\n"
-"variables as outputs.\n"
-"\n"
-"This function is defined as a composite &mdash; in a much more complicated sense than we have seen thusfar &mdash; of the given functions.\n"
-"\n"
-"Can you do it?"
-msgstr ""
-
 #: Game.Levels.ImplicationWorld.L07_OnParentheses
 #: Game.Levels.ImplicationWorld.L07_OnParentheses
 #: Game.Levels.ImplicationWorld.L07_OnParentheses
@@ -601,6 +592,15 @@ msgstr ""
 
 #: Game.Levels.ConjunctionWorld.L04_LogicalEquivalence
 msgid "`P ∧ Q` is true if and only if `Q ∧ P` is true."
+msgstr ""
+
+#: Game.Levels.ProductWorld.L10_BossLevel
+msgid "The objective of this Boss Level is to define a function that takes five variables as inputs and has three\n"
+"variables as outputs.\n"
+"\n"
+"This function is defined as a composite &mdash; in a much more complicated sense than we have seen thusfar &mdash; of the given functions.\n"
+"\n"
+"Can you do it?"
 msgstr ""
 
 #: Game.Levels.ImplicationWorld.L01_ByAssumption

@@ -5,7 +5,7 @@ Level 10
 
 Title "Boss Level"
 
-Introduction "The objective of this Boss Level is to define a function that takes give variables as inputs and has three
+Introduction "The objective of this Boss Level is to define a function that takes five variables as inputs and has three
 variables as outputs.
 
 This function is defined as a composite &mdash; in a much more complicated sense than we have seen thusfar &mdash; of the given functions.
