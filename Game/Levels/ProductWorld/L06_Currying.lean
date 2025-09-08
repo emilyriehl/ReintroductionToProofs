@@ -5,11 +5,6 @@ Level 6
 
 Title "Currying"
 
-/--
-The function `curry : (A × B → C) → (A → B → C)` converts a function out of a product type `A × B` into `C` into a function from the type `A` to the type of functions `B → C`.
--/
-DefinitionDoc curry as "curry"
-
 Introduction "Consider a function `f : A × B → C` mapping out of a product type.
 
 This function takes an ordered pair of elements &mdash; defined from `a : A` and `b : B` &mdash; and returns an element of type `C` denoted by `f ⟨a,b⟩`. Does this sound familiar?
@@ -36,7 +31,13 @@ Statement {A B C : Type} : (A × B → C) → (A → B → C) := by
   Hint (hidden := true) "What sort of inputs does the function `{f}` require?"
   exact f ⟨a, b⟩
 
+Conclusion "Lean uses the name `Function.curry : (A × B → C) → (A → B → C)` for the function you have just defined. This function has been added to the library of definitions.
 
-Conclusion "We'll now study the reverse process, which converts a function of type `A → B → C` to a function of type `A × B → C`."
+We'll now study the reverse process, which converts a function of type `A → B → C` to a function of type `A × B → C`."
 
--- NewDefinition curry
+/--
+For any types `A`, `B`, and `C`, `Function.curry : (A × B → C) → (A → B → C)` is the function that sends `f : A × B → C` to the function that sends `a : A` and `b : B` to `f ⟨a, b⟩ : C`.
+-/
+DefinitionDoc Function.curry as "Function.curry"
+
+NewDefinition Function.curry

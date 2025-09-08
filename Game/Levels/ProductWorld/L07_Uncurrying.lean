@@ -5,11 +5,6 @@ Level 7
 
 Title "Uncurrying"
 
-/--
-The function `uncurry : (A → B → C) → (A × B → C)` converts a function from the type `A` to the type of functions `B → C` into a function out of a product type `A × B` into `C`.
--/
-DefinitionDoc uncurry as "uncurry"
-
 Introduction "Consider a function `f : A × B → C` mapping out of a product type. This function takes an ordered pair of elements, one from `A` and one from `B` and returns an element of type `C` denoted by `f ⟨a,b⟩`. Does this sound familiar?
 
 Recall that terms of type `g : A → B → C` were functions of two variables. The function `g` takes `a : A` and `b : B` and returns an element of type `C` denoted by `g a b : C`, which is basically
@@ -29,7 +24,13 @@ Statement {A B C : Type} : (A → B → C) → (A × B → C) := by
   Hint (hidden := true) "What sort of inputs does the function `{f}` require and how can these be extracted from `{p}`?"
   exact f p.1 p.2
 
+Conclusion "Lean uses the name `Function.uncurry : (A → B → C) → (A × B → C)` for the function you have just defined. This function has been added to the library of definitions.
 
-Conclusion "The operations of *currying* and *uncurrying* are inverses in a sense we will be able to make precise later."
+The operations of *currying* and *uncurrying* are inverses in a sense we will be able to make precise later."
 
--- NewDefinition uncurry
+/--
+For any types `A`, `B`, and `C`, `Function.uncurry : (A → B → C) → (A × B → C)` is the function that sends `f : A → B → C` to the function that sends `p : A × B` to `f p.1 p.2 : C`.
+-/
+DefinitionDoc Function.uncurry as "Function.uncurry"
+
+NewDefinition Function.uncurry
