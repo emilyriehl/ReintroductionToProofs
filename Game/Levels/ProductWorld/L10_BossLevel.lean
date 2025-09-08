@@ -5,8 +5,12 @@ Level 10
 
 Title "Boss Level"
 
-Introduction "The objective is to define a function that takes 5 variables as inputs and has three
-variables as outputs as a composite &mdash; in a much more complicated sense than we have seen thusfar &mdash; of the given functions. Can you do it?
+Introduction "The objective of this Boss Level is to define a function that takes give variables as inputs and has three
+variables as outputs.
+
+This function is defined as a composite &mdash; in a much more complicated sense than we have seen thusfar &mdash; of the given functions.
+
+Can you do it?
 "
 
 /-- Given functions of types `B × D → M`, `E → Y × N`, `A → M → X`, and `C → N → Z`, there is a function from the product type `A × B × C × D × E` to the product type `X × Y × Z`. -/
