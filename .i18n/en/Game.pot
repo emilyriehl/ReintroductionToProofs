@@ -59,10 +59,6 @@ msgstr ""
 msgid "Note that for a particular multvariable function `f : A → B → C`, its type dictates that the variable of type `A` must be supplied before the variable of type `B`. But as observed in this level, we can then define a corresponding function `swap f : B → A → C` which encodes the same information."
 msgstr ""
 
-#: Game.Levels.ProductWorld.L07_Uncurrying
-msgid "The operations of *currying* and *uncurrying* are inverses in a sense we will be able to make precise later."
-msgstr ""
-
 #: Game.Levels.ConjunctionWorld.L07_MoreCompoundImplication
 msgid "`P → Q → R` implies `P ∧ Q → R`."
 msgstr ""
@@ -226,10 +222,6 @@ msgstr ""
 msgid "This level can be solved by starting with `exact`, starting with `apply`, or starting with `intro`. If you start with `intro`, then you can continue with `exact` or with `apply`. If this is your first time solving this level, try to find a different solution."
 msgstr ""
 
-#: Game.Levels.ProductWorld.L06_Currying
-msgid "We'll now study the reverse process, which converts a function of type `A → B → C` to a function of type `A × B → C`."
-msgstr ""
-
 #: Game.Levels.ImplicationWorld.L04_ProvingImplication
 msgid "When the goal has the form `«{P}» → «{P}»`, type `intro p` to introduce an assumption `p : «{P}»` and update the goal to `«{P}»`.\n"
 "\n"
@@ -264,6 +256,10 @@ msgstr ""
 
 #: Game.Levels.ProductWorld.L04_Symmetry
 msgid "Product types are symmetric: an element of type `A × B` has a corresponding element of type `B × A` with components swapped."
+msgstr ""
+
+#: Game.Levels.ProductWorld.L07_Uncurrying
+msgid "For any types `A`, `B`, and `C`, `Function.uncurry : (A → B → C) → (A × B → C)` is the function that sends `f : A → B → C` to the function that sends `p : A × B` to `f p.1 p.2 : C`."
 msgstr ""
 
 #: Game.Levels.ImplicationWorld.L09_BossLevel
@@ -381,10 +377,6 @@ msgstr ""
 
 #: Game.Levels.ProductWorld.L01_Pairing
 msgid "Pairing"
-msgstr ""
-
-#: Game.Levels.ProductWorld.L06_Currying
-msgid "The function `curry : (A × B → C) → (A → B → C)` converts a function out of a product type `A × B` into `C` into a function from the type `A` to the type of functions `B → C`."
 msgstr ""
 
 #: Game.Levels.FunctionWorld.L05_MultivariableFunctions
@@ -831,6 +823,12 @@ msgid "To prove an implication `S → T` one needs to give a construction of a p
 "It follows that `Q → P` is true, no matter whether `Q` is true or false."
 msgstr ""
 
+#: Game.Levels.ProductWorld.L07_Uncurrying
+msgid "Lean uses the name `Function.uncurry : (A → B → C) → (A × B → C)` for the function you have just defined. This function has been added to the library of definitions.\n"
+"\n"
+"The operations of *currying* and *uncurrying* are inverses in a sense we will be able to make precise later."
+msgstr ""
+
 #: Game.Levels.FunctionWorld.L02_UsingFunctions
 msgid "Given a function `f : A → B` and an element `a : A`, there is an element `f a : B` obtained by evaluating the function `f` at `a`."
 msgstr ""
@@ -881,6 +879,16 @@ msgstr ""
 
 #: Game.Levels.FunctionWorld.L02_UsingFunctions
 msgid "There is another way to solve this level. Start with `apply f` and see what happens. Have you seen a construction like this before?"
+msgstr ""
+
+#: Game.Levels.ProductWorld.L06_Currying
+msgid "Lean uses the name `Function.curry : (A × B → C) → (A → B → C)` for the function you have just defined. This function has been added to the library of definitions.\n"
+"\n"
+"We'll now study the reverse process, which converts a function of type `A → B → C` to a function of type `A × B → C`."
+msgstr ""
+
+#: Game.Levels.ProductWorld.L06_Currying
+msgid "For any types `A`, `B`, and `C`, `Function.curry : (A × B → C) → (A → B → C)` is the function that sends `f : A × B → C` to the function that sends `a : A` and `b : B` to `f ⟨a, b⟩ : C`."
 msgstr ""
 
 #: Game.Levels.ConjunctionWorld.L02_UsingAnd
@@ -1268,10 +1276,6 @@ msgid "The task in this level is to show another logical equivalence,\n"
 "`h s : T` for the proof constructed by applying the hypothesis `h` to the hypothesis `s`.\n"
 "\n"
 "The intuition behind this notation will be explained in the next world."
-msgstr ""
-
-#: Game.Levels.ProductWorld.L07_Uncurrying
-msgid "The function `uncurry : (A → B → C) → (A × B → C)` converts a function from the type `A` to the type of functions `B → C` into a function out of a product type `A × B` into `C`."
 msgstr ""
 
 #: Game.Levels.ImplicationWorld.L02_ModusPonens
