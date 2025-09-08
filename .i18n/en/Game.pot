@@ -467,6 +467,15 @@ msgstr ""
 msgid "The lesson of this level is to pay attention to the big picture, namely what exactly you are being asked ot prove under what hypotheses."
 msgstr ""
 
+#: Game.Levels.ProductWorld.L10_BossLevel
+msgid "The objective of this Boss Level is to define a function that takes give variables as inputs and has three\n"
+"variables as outputs.\n"
+"\n"
+"This function is defined as a composite &mdash; in a much more complicated sense than we have seen thusfar &mdash; of the given functions.\n"
+"\n"
+"Can you do it?"
+msgstr ""
+
 #: Game.Levels.ImplicationWorld.L07_OnParentheses
 #: Game.Levels.ImplicationWorld.L07_OnParentheses
 #: Game.Levels.ImplicationWorld.L07_OnParentheses
@@ -600,11 +609,6 @@ msgstr ""
 
 #: Game
 msgid "Computer-Verified Proof: a Hands-On Introduction to Interactive Theorem Proving"
-msgstr ""
-
-#: Game.Levels.ProductWorld.L10_BossLevel
-msgid "The objective is to define a function that takes 5 variables as inputs and has three\n"
-"variables as outputs as a composite &mdash; in a much more complicated sense than we have seen thusfar &mdash; of the given functions. Can you do it?"
 msgstr ""
 
 #: Game.Levels.ImplicationWorld.L03_ComposingImplication
