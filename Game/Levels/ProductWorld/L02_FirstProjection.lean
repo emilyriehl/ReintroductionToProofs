@@ -16,4 +16,11 @@ Statement {A B : Type} : A × B → A:= by
   Hint (hidden := true) "Now type `exact {p}.1` to return the first projection."
   exact p.1
 
-Conclusion "The projection function `A × B → B` is defined similarly."
+Conclusion "Lean uses the name `Prod.fst : A × B → A` for the function you have just defined. This function has been added to the library of definitions."
+
+/--
+For any types `A` and `B`, `Prod.fst : A × B → A` is the function that sends `p : A × B` to its first coordinate `p.1 : A`.
+-/
+DefinitionDoc Prod.fst as "Prod.fst"
+
+NewDefinition Prod.fst
