@@ -16,4 +16,13 @@ Statement {A B : Type} : A × B → B := by
   Hint (hidden := true) "Now type `exact {p}.2` to return the first projection."
   exact p.2
 
-Conclusion "In the next level, we'll use the projection functions to prove symmetry of product types."
+Conclusion "Lean uses the name `Prod.snd : A × B → B` for the function you have just defined. This function has been added to the library of definitions.
+
+In the next level, we'll use the projection functions to prove symmetry of product types."
+
+/--
+For any types `A` and `B`, `Prod.snd : A × B → B` is the function that sends `p : A × B` to its second coordinate `p.2 : B`.
+-/
+DefinitionDoc Prod.snd as "Prod.snd"
+
+NewDefinition Prod.snd

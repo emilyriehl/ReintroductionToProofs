@@ -1,7 +1,7 @@
 msgid ""
 msgstr "Project-Id-Version: Game v4.22.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-09-07\n"
+"POT-Creation-Date: 2025-09-08\n"
 "Last-Translator: \n"
 "Language-Team: none\n"
 "Language: en\n"
@@ -461,6 +461,10 @@ msgid "Given an element `a : A` and an element `b : B` there is a corresponding 
 "Alternatively, you can apply the `constructor` tactic which allows you to first input the first component and then input the second component."
 msgstr ""
 
+#: Game.Levels.ProductWorld.L03_SecondProjection
+msgid "For any types `A` and `B`, `Prod.snd : A × B → B` is the function that sends `p : A × B` to its second coordinate `p.2 : B`."
+msgstr ""
+
 #: Game.Levels.ImplicationWorld.L05_ProvingImpliedAssumption
 msgid "To prove an implication, which in this case has the form `«{Q}» → «{P}»`, type `intro q` to introduce an assumption `q : «{Q}»` and update the goal to `«{P}»`.\n"
 "\n"
@@ -505,6 +509,12 @@ msgstr ""
 
 #: Game.Levels.ConjunctionWorld.L02_UsingAnd
 msgid "Now the goal is just to prove `P`. Type `exact «{h}».1` to supply this proof."
+msgstr ""
+
+#: Game.Levels.ProductWorld.L03_SecondProjection
+msgid "Lean uses the name `Prod.snd : A × B → B` for the function you have just defined. This function has been added to the library of definitions.\n"
+"\n"
+"In the next level, we'll use the projection functions to prove symmetry of product types."
 msgstr ""
 
 #: Game.Levels.ConjunctionWorld.L02_UsingAnd
@@ -624,6 +634,10 @@ msgstr ""
 
 #: Game.Levels.FunctionWorld.L09_BossLevel
 msgid "Move on to Product World to meet a second type forming operation."
+msgstr ""
+
+#: Game.Levels.ProductWorld.L02_FirstProjection
+msgid "Lean uses the name `Prod.fst : A × B → A` for the function you have just defined. This function has been added to the library of definitions."
 msgstr ""
 
 #: Game.Levels.ImplicationWorld.L01_ByAssumption
@@ -849,12 +863,12 @@ msgstr ""
 msgid "The hypothesis `«{h}»` can be used to convert a proof of `«{P}»` into a proof of `«{Q}»`. This can be thought of as a step that reduces the problem of proving `«{Q}»` to the problem of proving `«{P}»`. To apply this hypothesis type `apply «{h}»`."
 msgstr ""
 
-#: Game.Levels.FunctionWorld.L08_Evaluation
-msgid "The evaluation function has type `ev : A → (A → B) → B` and is defined by the formula `fun a f ↦ f a`. By swapping variables, we can also think of evaluation as defining a function `(A → B) → A → B` where this latter function is defined by `fun f a ↦ f a`."
-msgstr ""
-
 #: Game.Levels.ProductWorld.L03_SecondProjection
 msgid "Now type `exact «{p}».2` to return the first projection."
+msgstr ""
+
+#: Game.Levels.FunctionWorld.L08_Evaluation
+msgid "The evaluation function has type `ev : A → (A → B) → B` and is defined by the formula `fun a f ↦ f a`. By swapping variables, we can also think of evaluation as defining a function `(A → B) → A → B` where this latter function is defined by `fun f a ↦ f a`."
 msgstr ""
 
 #: Game.Levels.ImplicationWorld.L06_ProvingAssumedImplication
@@ -1185,11 +1199,7 @@ msgid "By pairing any element `a : A` with any element `b : B`, there is an elem
 msgstr ""
 
 #: Game.Levels.ProductWorld.L02_FirstProjection
-msgid "The projection function `A × B → B` is defined similarly."
-msgstr ""
-
-#: Game.Levels.ProductWorld.L03_SecondProjection
-msgid "In the next level, we'll use the projection functions to prove symmetry of product types."
+msgid "For any types `A` and `B`, `Prod.fst : A × B → A` is the function that sends `p : A × B` to its first coordinate `p.1 : A`."
 msgstr ""
 
 #: Game.Levels.ProductWorld.L09_UniversalProperty
