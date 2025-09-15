@@ -14,6 +14,7 @@ The other component function is defined by composing `f : A ⊕ B → C` with th
 Since a *single* function of type `A ⊕ B → C` decomposes into a pair of functions of types `A → C` and `B → C`, we will define a function from the function type `A ⊕ B → C` into the product of the function types `(A → C) × (B → C)`.
 "
 
+/-- A function of type `A ⊕ B → C` may be split into component functions of types `A → C` and `B → C`. -/
 Statement {A B C : Type} : (A ⊕ B → C) → (A → C) × (B → C) := by
   Hint (hidden := true) "Use the `intro` tactic to define a term in a function type."
   intro f
