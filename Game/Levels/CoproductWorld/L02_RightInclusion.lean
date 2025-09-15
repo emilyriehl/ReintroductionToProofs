@@ -17,6 +17,7 @@ For types `A` and `B`, the function `Sum.inr : B → A ⊕ B` can be used to inc
 -/
 DefinitionDoc Sum.inr as "Sum.inr"
 
+/-- For any `b : B`, there is an element `Sum.inr b : A ⊕ B`. -/
 Statement {A B : Type} (b : B) : A ⊕ B := by
   Hint "To use the built in function `Sum.inr : B → A ⊕ B` to change the goal from `A ⊕ B` to `B` type `apply Sum.inr`."
   apply Sum.inr
