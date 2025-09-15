@@ -1,7 +1,7 @@
 msgid ""
 msgstr "Project-Id-Version: Game v4.22.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-09-08\n"
+"POT-Creation-Date: 2025-09-15\n"
 "Last-Translator: \n"
 "Language-Team: none\n"
 "Language: en\n"
@@ -9,7 +9,12 @@ msgstr "Project-Id-Version: Game v4.22.0\n"
 "Content-Transfer-Encoding: 8bit"
 
 #: Game.Levels.ProductWorld.L09_UniversalProperty
+#: Game.Levels.CoproductWorld.L04_UniversalProperty
 msgid "Universal property"
+msgstr ""
+
+#: Game.Levels.CoproductWorld.L02_RightInclusion
+msgid "Right Inclusion"
 msgstr ""
 
 #: Game.Levels.ImplicationWorld.L04_ProvingImplication
@@ -22,6 +27,22 @@ msgstr ""
 
 #: Game.Levels.ProductWorld.L10_BossLevel
 msgid "Given functions of types `B × D → M`, `E → Y × N`, `A → M → X`, and `C → N → Z`, there is a function from the product type `A × B × C × D × E` to the product type `X × Y × Z`."
+msgstr ""
+
+#: Game.Levels.DisjunctionWorld.L03_UsingOr
+msgid "Given a hypothesis `h : P ∨ Q` we know that *either* `P` or `Q` is true (or possibly both are true).\n"
+"\n"
+"But we don't know *which* of `P` or `Q` is true.\n"
+"\n"
+"If we want to use a hypothesis like this to prove some other proposition `R` is true we need proofs that cover either of the two cases: that is, we need to show that `P` implies `R` (whether or not `Q` is true) and also that `Q` implies `R` (whether or not `P` is true).\n"
+"\n"
+"If we have an assumption of the form `h : P ∨ Q`, then type `cases h` to ask Lean to consider both cases: the first being that `P` is true and the second being that `Q` is true.\n"
+"\n"
+"There is another tactic, similar to `cases`, which allows you to give explicit names for the hypotheses assumed in each case.\n"
+"\n"
+"If given a hypothesis `h : P ∨ Q`, then `rcases h with p | q` can be used in place of `cases h` to give hypotheses `p : P` in the first case and `q : Q` in the second. (Here you can choose any variable names for `p` and `q`.)\n"
+"\n"
+"For example, arguing by cases, we can prove that or is symmetric, that is that `P ∨ Q` implies `Q ∨ P`."
 msgstr ""
 
 #: GameServer.RpcHandlers
@@ -55,12 +76,24 @@ msgid "Consider a function `f : A × B → C` mapping out of a product type.\n"
 "The process of converting a function of type `A × B → C` to one of type `A → B → C` is called *currying* and is defined by the function below."
 msgstr ""
 
+#: Game.Levels.CoproductWorld.L07_Distributivity
+msgid "Now we're ready for the boss level."
+msgstr ""
+
+#: Game.Levels.DisjunctionWorld.L09_BossLevel
+msgid "Disjunction Boss Level"
+msgstr ""
+
 #: Game.Levels.FunctionWorld.L06_SwappingInputs
 msgid "Note that for a particular multvariable function `f : A → B → C`, its type dictates that the variable of type `A` must be supplied before the variable of type `B`. But as observed in this level, we can then define a corresponding function `swap f : B → A → C` which encodes the same information."
 msgstr ""
 
 #: Game.Levels.ConjunctionWorld.L07_MoreCompoundImplication
 msgid "`P → Q → R` implies `P ∧ Q → R`."
+msgstr ""
+
+#: Game.Levels.DisjunctionWorld.L07_Distributivity
+msgid "Recall that `«{h}».1 : «{P}»` and `«{h}».2 : «{Q}» ∨ «{R}»`. We can introduce these as named variables in the context by typing `have p := «{h}».1` and `have qr := «{h}».2` where `p` and `qr` are variable names you get to pick. This allows you to case split on an explicitly named variable. Alternatively, type `cases «{h}».2`, or use `rcases` to name your own variables."
 msgstr ""
 
 #: Game.Levels.ImplicationWorld.L06_ProvingAssumedImplication
@@ -82,9 +115,17 @@ msgstr ""
 msgid "On Parentheses"
 msgstr ""
 
+#: Game.Levels.CoproductWorld.L04_UniversalProperty
+msgid "We will see later that functions of type `A ⊕ B → C` are uniquely determined by their component functions `(A → C) × (B → C)`."
+msgstr ""
+
 #: Game.Levels.ConjunctionWorld.L09_UniversalProperty
 #: Game.Levels.ConjunctionWorld.L09_UniversalProperty
 msgid "We can apply the proof `«{h}» : P → Q ∧ R` to the proof `«{p}»: P` to obtain `«{h}» «{p}» : Q ∧ R`. How can these be used to prove the goal?"
+msgstr ""
+
+#: Game.Levels.DisjunctionWorld.L01_IntroducingOr
+msgid "For propositions `P` and `Q`, `Or.inl` is a proof that `P → (P ∨ Q)`."
 msgstr ""
 
 #: Game.Levels.FunctionWorld.L09_BossLevel
@@ -97,12 +138,58 @@ msgstr ""
 msgid "To define a function, in this case a term of type `«{A}» → «{A}»`, one must define a rule to convert an arbitrary element `x : «{A}»` to some element of type `«{A}»`. Start by typing `intro x` to add an arbitrary element of type `«{A}»` to the context."
 msgstr ""
 
+#: Game.Levels.DisjunctionWorld.L03_UsingOr
+msgid "This proves the symmetry of disjunction. Practice using both the `cases` and `rcases` tactics to get used to them."
+msgstr ""
+
+#: Game.Levels.DisjunctionWorld
+msgid "The logical connective of *disjunction*, denoted by `∨`, is the mathematical version of *or*.\n"
+"\n"
+"For arbitrary propositions `P` and `Q`, `P ∨ Q` is a new proposition asserting that at least one of `P` *or* `Q` *are true*.\n"
+"\n"
+"To understand how conjunctions work in logic we must learn:\n"
+"\n"
+"* How to prove theorems of the form `P ∨ Q`.\n"
+"* How to use a hypothesis of the form `P ∨ Q` to prove something else.\n"
+"\n"
+"There are two strategies to prove `P ∨ Q`. It suffices to supply a proof of `P` and it also suffices to supply a proof of `Q`.\n"
+"\n"
+"Note that the mathematical &ldquo;or&rdquo; is *inclusive*, meaning that if `P` and `Q` are both true, then `P ∨ Q` is true.\n"
+"\n"
+"Using a hypothesis `h : P ∨ Q` leads to a proof strategy of arguing &ldquo;by cases&rdquo; as we will soon discover."
+msgstr ""
+
 #: Game.Levels.ConjunctionWorld.L10_BossLevel
 msgid "Next move on to `Function World` to learn about types and functions."
 msgstr ""
 
+#: Game.Levels.DisjunctionWorld.L04_Symmetry
+msgid "We can improve our understanding of the symmetry of disjunction as follows.\n"
+"\n"
+"For propositions `P` and `Q`, `P ∨ Q` is true if and only if `Q ∨ P` is true."
+msgstr ""
+
+#: Game.Levels.DisjunctionWorld.L02_AndImpliesOr
+#: Game.Levels.DisjunctionWorld.L03_UsingOr
+#: Game.Levels.DisjunctionWorld.L04_Symmetry
+#: Game.Levels.DisjunctionWorld.L05_UniversalProperty
+#: Game.Levels.DisjunctionWorld.L06_Associativity
+#: Game.Levels.DisjunctionWorld.L07_Distributivity
+#: Game.Levels.DisjunctionWorld.L07_Distributivity
+#: Game.Levels.DisjunctionWorld.L08_MoreDistributivity
+msgid "What is the outermost logical connective?"
+msgstr ""
+
 #: Game.Levels.ImplicationWorld.L04_ProvingImplication
 msgid "For any proposition `P`, `P` implies `P` is true."
+msgstr ""
+
+#: Game.Levels.DisjunctionWorld.L08_MoreDistributivity
+msgid "Try `have pq : P ∨ Q := «{h}».1`."
+msgstr ""
+
+#: Game.Levels.DisjunctionWorld.L05_UniversalProperty
+msgid "`P ∨ Q → R` is true if and only if `(P → R) ∧ (Q → R)` is true."
 msgstr ""
 
 #: Game.Levels.ProductWorld.L09_UniversalProperty
@@ -119,6 +206,12 @@ msgstr ""
 msgid "Now the goal is an element of type `«{A}»`, which should be thought of as result of applying the function to the element `«{x}» : «{A}»`. In the case of the identity function, we want to return `«{x}» : «{A}»` again which is done by typing `exact «{x}»`."
 msgstr ""
 
+#: Game.Levels.CoproductWorld.L03_ComponentFunctions
+msgid "Consider a function `f : A ⊕ B → C` mapping out of a coproduct type. By composing with the function `Sum.inl : A → A ⊕ B` we obtain a function `g : A → C` which can be thought of as one of the two *component functions* associated to `f`. The other component function is defined by composing `f : A ⊕ B → C` with the function `Sum.inr : B → A ⊕ B` to obtain a function `h : B → C`.\n"
+"\n"
+"Since a *single* function of type `A ⊕ B → C` decomposes into a pair of functions of types `A → C` and `B → C`, we will define a function from the function type `A ⊕ B → C` into the product of the function types `(A → C) × (B → C)`."
+msgstr ""
+
 #: Game.Levels.ConjunctionWorld.L06_CompoundImplication
 msgid "For propositions `P`, `Q`, and `R`, `And.curry` is a proof that `P ∧ Q → R` implies `P → Q → R`."
 msgstr ""
@@ -127,8 +220,17 @@ msgstr ""
 msgid "For types `A` and `B`, the evaluation function has type `A → (A → B) → B`, meaning that for `a : A`, `ev a` has type `(A → B) → B`."
 msgstr ""
 
+#: Game.Levels.CoproductWorld.L03_ComponentFunctions
+msgid "We've seen that functions out of a coproduct can be split into component functions. Similarly, component functions `g : A → C` and `h : B → C` can be assembled into a function of type `A ⊕ B → C`, as we will explore in the next level."
+msgstr ""
+
 #: Game.Levels.FunctionWorld.L07_CompositionRevisited
 msgid "Define the composition of two functions as a multivariable function between function types."
+msgstr ""
+
+#: Game.Levels.CoproductWorld.L05_Symmetry
+#: Game.Levels.CoproductWorld.L05_Symmetry
+msgid "Which function might be useful to apply here?"
 msgstr ""
 
 #: Game.Levels.ProductWorld.L09_UniversalProperty
@@ -159,8 +261,24 @@ msgstr ""
 msgid "What is the outermost logical connective? What tactic is used to prove statements of this form?"
 msgstr ""
 
+#: Game.Levels.CoproductWorld.L01_LeftInclusion
+msgid "We'll now study the second type of element of in a coproduct type."
+msgstr ""
+
 #: Game.Levels.FunctionWorld.L07_CompositionRevisited
 msgid "The `swap` function exchanges the inputs of a function of two variables. For a function with two variables `f : A → B → C`, `swap f : B → A → C` is the function that sends `b : B` and `a : A` to `f a b : C`."
+msgstr ""
+
+#: Game.Levels.CoproductWorld.L06_Associativity
+msgid "Next we will study the relationship between products and coproducts."
+msgstr ""
+
+#: Game.Levels.DisjunctionWorld.L08_MoreDistributivity
+msgid "This completes the proof in the case where `P ∨ Q` holds because `P` holds. Now we've started the case where `Q` holds, which requires another case split over the proof `«{rs}» : «{R}» ∨ «{S}»`."
+msgstr ""
+
+#: Game.Levels.CoproductWorld.L01_LeftInclusion
+msgid "For types `A` and `B`, the function `Sum.inl : A → A ⊕ B` can be used to include elements of type `A` as elements of the coproduct type `A ⊕ B`."
 msgstr ""
 
 #: Game.Levels.ConjunctionWorld.L09_UniversalProperty
@@ -193,12 +311,25 @@ msgstr ""
 msgid "Using Functions"
 msgstr ""
 
+#: Game.Levels.DisjunctionWorld.L01_IntroducingOr
+msgid "There are two ways to prove `P ∨ Q` from the given hypotheses. Can you find them both?"
+msgstr ""
+
 #: Game.Levels.ProductWorld.L06_Currying
 msgid "Currying"
 msgstr ""
 
 #: Game.Levels.FunctionWorld.L06_SwappingInputs
 msgid "From a function of two variables, define another function of two variables, where the inputs are swapped."
+msgstr ""
+
+#: Game.Levels.DisjunctionWorld.L06_Associativity
+msgid "You can use `cases «{hpqr}»` to split your hypothesis into cases or `rcases «{hpqr}» with hpq | hr` to name your own variables."
+msgstr ""
+
+#: Game.Levels.DisjunctionWorld.L06_Associativity
+#: Game.Levels.DisjunctionWorld.L06_Associativity
+msgid "Here the goal is parenthesized as `«{P}» ∨ («{Q}» ∨ «{R}»)`. Using your hypothesis, are you trying to prove the left-hand proposition or the right-hand one?"
 msgstr ""
 
 #: Game.Levels.ConjunctionWorld.L06_CompoundImplication
@@ -209,8 +340,16 @@ msgstr ""
 msgid "What sort of type does `«{f}»` belong to? Can we extract other elements from an element of this type?"
 msgstr ""
 
+#: Game.Levels.DisjunctionWorld.L03_UsingOr
+msgid "Note now that Lean provides two goals, both of which are to prove that `«{Q}» ∨ «{P}»` is true, under two different hypothesies. Your first task is to prove the theorem in the first case."
+msgstr ""
+
 #: Game.Levels.ImplicationWorld.L07_OnParentheses
 msgid "For compound implications &mdash; statements of the form `P → Q → R → S → T` &mdash; you can type `intro p q r s` to introduce hypothesis `p : P`, `q : Q`, `r : R`, and `s : S` all at once."
+msgstr ""
+
+#: Game.Levels.DisjunctionWorld.L07_Distributivity
+msgid "This proves the that conjunction distributes over disjunction. A more involved form of distributivity appears in the next level."
 msgstr ""
 
 #: Game.Levels.ProductWorld.L08_ComponentFunctions
@@ -222,10 +361,18 @@ msgstr ""
 msgid "This level can be solved by starting with `exact`, starting with `apply`, or starting with `intro`. If you start with `intro`, then you can continue with `exact` or with `apply`. If this is your first time solving this level, try to find a different solution."
 msgstr ""
 
+#: Game.Levels.DisjunctionWorld.L02_AndImpliesOr
+msgid "And Implies Or"
+msgstr ""
+
 #: Game.Levels.ImplicationWorld.L04_ProvingImplication
 msgid "When the goal has the form `«{P}» → «{P}»`, type `intro p` to introduce an assumption `p : «{P}»` and update the goal to `«{P}»`.\n"
 "\n"
 "It is also possible to type simply `intro` in which case Lean will automatically generate a name for the proof of `«{P}»`."
+msgstr ""
+
+#: Game.Levels.CoproductWorld.L06_Associativity
+msgid "Now use `cases «{p}»` or `rcases «{p}» with a | x` or similar to give your own variable names."
 msgstr ""
 
 #: Game.Levels.ProductWorld.L09_UniversalProperty
@@ -238,6 +385,10 @@ msgstr ""
 
 #: Game.Levels.ConjunctionWorld.L01_IntroducingAnd
 msgid "Alternatively, you can type `exact ⟨p,q⟩' using '\\\\<' and '\\\\>' to type the angle brackets."
+msgstr ""
+
+#: Game.Levels.CoproductWorld.L02_RightInclusion
+msgid "We'll now study how hypotheses `x : A ⊕ B` can be used."
 msgstr ""
 
 #: Game.Levels.ProductWorld.L05_Associativity
@@ -276,6 +427,10 @@ msgstr ""
 msgid "You can use the tactic `exact` by supplying `«{f}»` with two arguments, in the correct order, with spaces in between (but no parentheses). Alternatively you can use the tactic `apply`."
 msgstr ""
 
+#: Game.Levels.DisjunctionWorld.L06_Associativity
+msgid "Or is associative: `(P ∨ Q) ∨ R` is true if and only if `P ∨ (Q ∨ R)` is true."
+msgstr ""
+
 #: Game.Levels.ImplicationWorld.L03_ComposingImplication
 msgid "Composing Implication"
 msgstr ""
@@ -304,12 +459,28 @@ msgstr ""
 msgid "Now we are ready for the boss level."
 msgstr ""
 
+#: Game.Levels.CoproductWorld.L02_RightInclusion
+msgid "For types `A` and `B`, the function `Sum.inr : B → A ⊕ B` can be used to include elements of type `B` as elements of the coproduct type `A ⊕ B`."
+msgstr ""
+
+#: Game.Levels.CoproductWorld.L01_LeftInclusion
+msgid "For types `A` and `B`, the coproduct type `A ⊕ B` has two kinds of elements. The first kind can be thought of as copies of elements `a : A` included into the coproduct `A ⊕ B` *on the left*.\n"
+"\n"
+"Lean has a built in function called `Sum.inl : A → A ⊕ B`."
+msgstr ""
+
 #: Game.Levels.ConjunctionWorld.L06_CompoundImplication
 msgid "This proves that `(P ∧ Q → R) → (P → Q → R)`. We will now investigate the converse implication."
 msgstr ""
 
 #: Game.Levels.ConjunctionWorld.L08_CurryingImplication
 msgid "Currying Implication"
+msgstr ""
+
+#: Game.Levels.DisjunctionWorld.L06_Associativity
+msgid "This proves the associativity of disjunction.\n"
+"\n"
+"Note the `rcases` tactic allows more general patterns of disjunctions. Given `h : (P ∨ Q) ∨ R` try `rcases h with (p | q) | r`. Similarly, given `k : P ∨ Q ∨ R`, try `rcases k with p | q | r`."
 msgstr ""
 
 #: Game.Levels.ProductWorld.L07_Uncurrying
@@ -324,8 +495,23 @@ msgid "Given a term `a : A` and any type `B`, there is a function of type `B →
 "Can you figure out how to define this function?"
 msgstr ""
 
+#: Game.Levels.DisjunctionWorld.L08_MoreDistributivity
+#: Game.Levels.DisjunctionWorld.L08_MoreDistributivity
+msgid "Thus the outermost logical connective is the `∨` combining `P ∧ R` and `(P ∧ S) ∨ ((Q ∧ R) ∨ (Q ∧ S))`."
+msgstr ""
+
+#: Game.Levels.DisjunctionWorld.L01_IntroducingOr
+msgid "To prove a disjunction `P ∨ Q` it suffices to supply a proof of either `P` or of `Q`.\n"
+"\n"
+"Thus under the hypothesis that `P` and `Q` are both true, there are two ways to prove `P ∨ Q`: one using `p : P` and one using `q : Q`.\n"
+"\n"
+"Note `exact p` or `exact q` won't work as these are proofs of different propositions."
+msgstr ""
+
 #: Game.Levels.ConjunctionWorld.L05_Associativity
 #: Game.Levels.ProductWorld.L05_Associativity
+#: Game.Levels.DisjunctionWorld.L06_Associativity
+#: Game.Levels.CoproductWorld.L06_Associativity
 msgid "Associativity"
 msgstr ""
 
@@ -391,6 +577,10 @@ msgstr ""
 msgid "Look carefully at the order of the arguments of `«{f}»`."
 msgstr ""
 
+#: Game.Levels.DisjunctionWorld.L08_MoreDistributivity
+msgid "Try `have rs : R ∨ S := «{h}».2`."
+msgstr ""
+
 #: Game.Levels.ConjunctionWorld.L06_CompoundImplication
 msgid "Can we apply our hypothesis now?"
 msgstr ""
@@ -403,8 +593,34 @@ msgstr ""
 msgid "Given an element `a : A` and a function of two variables `f : A → B → C`, define a function from `B → C` by evaluating the first variable of `f` at the element `a`."
 msgstr ""
 
+#: Game.Levels.DisjunctionWorld.L08_MoreDistributivity
+msgid "A more involved form of distributivity is also true.\n"
+"\n"
+"If `P ∨ Q` holds and `R ∨ S` holds then at least one of the following four propositions holds: `P ∧ R` or `P ∧ S` or `Q ∧ R` or `Q ∧ S`.\n"
+"\n"
+"Demonstrate the following logical equivalence."
+msgstr ""
+
+#: Game.Levels.CoproductWorld.L04_UniversalProperty
+msgid "A function `f : A ⊕ B → C` mapping out of a coproduct type may be *broken apart* into component functions of types `A → C` and `B → C`.\n"
+"\n"
+"Conversely, given an arbitrary pair of functions `g : A → C` and `h : B → C`, one can build a function of type `A ⊕ B → C`. This function is defined by introducing a variable term `x : A ⊕ B` and then splitting into two cases: the case where `x` is of the form `Sum.inl a` for some `a : A` and the case where `x` is of the form `Sum.inr b` for some `b : B`. In the first case, the function `g` can be used to define an element `g a : C`, while in the second case the function `h` can be used to define an element `h b : C`.\n"
+"\n"
+"This construction should be reminiscent of a proof by cases involving a hypothesis `x` that a disjunction is true."
+msgstr ""
+
+#: Game.Levels.DisjunctionWorld.L08_MoreDistributivity
+#: Game.Levels.DisjunctionWorld.L08_MoreDistributivity
+msgid "The implicit parentheses in the goal are to the right `(P ∧ R) ∨ ((P ∧ S) ∨ ((Q ∧ R) ∨ (Q ∧ S)))`."
+msgstr ""
+
 #: Game.Levels.ProductWorld.L02_FirstProjection
 msgid "First Projection"
+msgstr ""
+
+#: Game.Levels.DisjunctionWorld.L05_UniversalProperty
+#: Game.Levels.DisjunctionWorld.L05_UniversalProperty
+msgid "Try applying the hypothesis `«{h}»`."
 msgstr ""
 
 #: Game.Levels.ConjunctionWorld.L06_CompoundImplication
@@ -421,6 +637,10 @@ msgstr ""
 
 #: Game.Levels.ProductWorld.L01_Pairing
 msgid "If this is your first time solving this level, go back and solve it another way."
+msgstr ""
+
+#: Game.Levels.DisjunctionWorld.L01_IntroducingOr
+msgid "Introducing Or"
 msgstr ""
 
 #: Game
@@ -491,12 +711,23 @@ msgstr ""
 msgid "When in doubt, start defining a function by using the tactic `intro` followed by your preferred variable name."
 msgstr ""
 
+#: Game.Levels.DisjunctionWorld.L01_IntroducingOr
+#: Game.Levels.DisjunctionWorld.L02_AndImpliesOr
+msgid "If this is your first time solving this level, delete your code and prove the same theorem another way."
+msgstr ""
+
 #: Game.Levels.ConjunctionWorld.L09_UniversalProperty
+#: Game.Levels.DisjunctionWorld.L05_UniversalProperty
 msgid "Universal Property"
 msgstr ""
 
 #: Game.Levels.FunctionWorld.L04_ConstantFunctions
 msgid "Constant functions"
+msgstr ""
+
+#: Game.Levels.DisjunctionWorld.L09_BossLevel
+msgid "If `T ∨ U → V ∧ Y` and `Q → P → T` and `Y → Q → W` and\n"
+"`(V ∧ W) ∨ (X ∧ Y) → Z` and `(R → S → U) ∧ (V → R → X)` then  `P ∧ (Q ∨ R) ∧ S` implies `Z`."
 msgstr ""
 
 #: Game.Levels.ConjunctionWorld.L02_UsingAnd
@@ -513,6 +744,10 @@ msgstr ""
 msgid "Using And"
 msgstr ""
 
+#: Game.Levels.DisjunctionWorld.L09_BossLevel
+msgid "Move on to Coproduct World to learn about the type theoretic analog of the logical operation of disjunction."
+msgstr ""
+
 #: Game.Levels.ConjunctionWorld.L10_BossLevel
 msgid "For the Boss Level of Conjunction World, the task is to prove a complicated implication.\n"
 "\n"
@@ -521,12 +756,23 @@ msgid "For the Boss Level of Conjunction World, the task is to prove a complicat
 "Good luck!"
 msgstr ""
 
+#: Game.Levels.DisjunctionWorld.L03_UsingOr
+#: Game.Levels.DisjunctionWorld.L03_UsingOr
+msgid "You can solve the goal by explicitly referring to the named hypothesis that Lean supplied or by typing `assumption` to indicate that the goal matches an assumption."
+msgstr ""
+
+#: Game.Levels.DisjunctionWorld.L01_IntroducingOr
+msgid "For propositions `P` and `Q`, `Or.inr` is a proof that `Q → (P ∨ Q)`."
+msgstr ""
+
 #: Game.Levels.ImplicationWorld.L06_ProvingAssumedImplication
 msgid "Which tactics can be used to prove `«{P}» → «{Q}»` with our given assumptions?"
 msgstr ""
 
 #: Game.Levels.ConjunctionWorld.L03_Symmetry
 #: Game.Levels.ProductWorld.L04_Symmetry
+#: Game.Levels.DisjunctionWorld.L04_Symmetry
+#: Game.Levels.CoproductWorld.L05_Symmetry
 msgid "Symmetry"
 msgstr ""
 
@@ -534,8 +780,18 @@ msgstr ""
 msgid "Now your goal is a proof of `«{P}»`. Can you figure out how to finish the proof? If you need a reminder, click the button `Show more help!`"
 msgstr ""
 
+#: Game.Levels.DisjunctionWorld.L09_BossLevel
+msgid "We've now reached the Boss Level in the disjunction world.\n"
+"\n"
+"This level illustrates that proofs by cases can be somewhat delicate."
+msgstr ""
+
 #: Game.Levels.FunctionWorld.L05_MultivariableFunctions
 msgid "Multivariable functions"
+msgstr ""
+
+#: Game.Levels.DisjunctionWorld.L03_UsingOr
+msgid "For propositions `P` and `Q`, `Or.symm` is a proof that `P ∨ Q → Q ∨ P`."
 msgstr ""
 
 #: Game.Levels.ConjunctionWorld.L02_UsingAnd
@@ -545,6 +801,11 @@ msgstr ""
 #: Game.Levels.ImplicationWorld.L02_ModusPonens
 msgid "The `apply` tactic can be used when the goal matches the conclusion of an implication.\n"
 "For example if the goal is `Q` and there is a hypothesis `h : P → Q`, then `apply h` updates the goal to `P`. If the goal is `T` and there is a hypothesis `e : R → S → T`, then `apply e` produces two subgoals, one each for `R` and `S`."
+msgstr ""
+
+#: Game.Levels.DisjunctionWorld.L04_Symmetry
+#: Game.Levels.DisjunctionWorld.L04_Symmetry
+msgid "The goal is an implication you've already proven. You can use `exact` together with the name of that result, to solve this goal in one line. Alternatively, you can just prove it again."
 msgstr ""
 
 #: Game.Levels.ProductWorld.L08_ComponentFunctions
@@ -573,6 +834,14 @@ msgstr ""
 msgid "For a term `a : A` and a type `B`, `const a : B → A` is the function defined by sending `x : B` to `a : A`."
 msgstr ""
 
+#: Game.Levels.DisjunctionWorld.L03_UsingOr
+msgid "Note now that you've completed the proof in the first case, Lean expects you to provide a proof in the second case."
+msgstr ""
+
+#: Game.Levels.CoproductWorld.L08_BossLevel
+msgid "Congratulations!"
+msgstr ""
+
 #: Game.Levels.ImplicationWorld.L07_OnParentheses
 msgid "Now you can start to apply some hypotheses to reduce the goal to one of your assumptions. Which tactic can be used here?"
 msgstr ""
@@ -584,6 +853,14 @@ msgstr ""
 
 #: Game.Levels.ProductWorld.L08_ComponentFunctions
 msgid "The goal is a product type. You can use `constructor` to split into two goals, defining each component function separately."
+msgstr ""
+
+#: Game.Levels.DisjunctionWorld.L03_UsingOr
+msgid "Using Or"
+msgstr ""
+
+#: Game.Levels.DisjunctionWorld.L04_Symmetry
+msgid "`P ∨ Q` is true if and only if `Q ∨ P` is true."
 msgstr ""
 
 #: Game.Levels.FunctionWorld.L05_MultivariableFunctions
@@ -632,6 +909,11 @@ msgstr ""
 msgid "Move on to Product World to meet a second type forming operation."
 msgstr ""
 
+#: Game.Levels.CoproductWorld.L04_UniversalProperty
+#: Game.Levels.CoproductWorld.L05_Symmetry
+msgid "Use either `cases «{x}»` or `rcases «{x}» with a | b` to consider the possible cases for the variable `«{x}» : A ⊕ B`."
+msgstr ""
+
 #: Game.Levels.ProductWorld.L02_FirstProjection
 msgid "Lean uses the name `Prod.fst : A × B → A` for the function you have just defined. This function has been added to the library of definitions."
 msgstr ""
@@ -642,6 +924,10 @@ msgstr ""
 
 #: Game.Levels.ConjunctionWorld.L07_MoreCompoundImplication
 msgid "Since `h` is a compound implication, we have multiple hypothesis to satisfy. We must prove that `P` is true and also prove that `Q` is true. Fortunately, our assumptions cover both cases."
+msgstr ""
+
+#: Game.Levels.CoproductWorld.L01_LeftInclusion
+msgid "Left Inclusion"
 msgstr ""
 
 #: Game.Levels.ProductWorld.L08_ComponentFunctions
@@ -685,12 +971,44 @@ msgid "To prove an implication `P → Q` one needs to give a construction of a p
 "In this level, we will see that for any proposition `P`, `P → P` is true. Indeed, this is the case even if `P` itself is false!"
 msgstr ""
 
+#: Game.Levels.CoproductWorld.L08_BossLevel
+msgid "For the boss level, your task is to:\n"
+"\n"
+"* break apart a function from a coproduct type into a product type into four separate component functions and\n"
+"\n"
+"* then reassemble four component functions to a single function from a coproduct type into a product type.\n"
+"\n"
+"Good luck!"
+msgstr ""
+
 #: GameServer.RpcHandlers
 msgid "level completed with warnings… 🎭"
 msgstr ""
 
+#: Game.Levels.DisjunctionWorld.L05_UniversalProperty
+msgid "What must be true in order to have `P ∨ Q → R`?\n"
+"\n"
+"On the one hand, if `P ∨ Q → R` is true, then `P → R` is true, because `P` implies `P ∨ Q`, which implies `R`.\n"
+"\n"
+"Similar reasoning shows that if `P ∨ Q → R` is true, then `Q → R` is true.\n"
+"\n"
+"Conversely, if *either* `P → R` or `Q → R` are true, this does not necessarily imply that `P ∨ Q → R` is true. Can you see why?\n"
+"\n"
+"However, if *both* `P → R` and `Q → R` are true, then `P ∨ Q → R` is true.\n"
+"\n"
+"The aim of this level is to establish a logical equivalence between `P ∨ Q → R` and `(P → R) ∧ (Q → R)`."
+msgstr ""
+
 #: Game.Levels.ProductWorld.L02_FirstProjection
 msgid "Now type `exact «{p}».1` to return the first projection."
+msgstr ""
+
+#: Game.Levels.CoproductWorld.L05_Symmetry
+msgid "The coproduct type, like the product type, is *symmetric*, and in particular has a canonical map `swap : A ⊕ B → B ⊕ A`. Your task in this level is to define it."
+msgstr ""
+
+#: Game.Levels.CoproductWorld.L01_LeftInclusion
+msgid "To use the built in function `Sum.inl : A → A ⊕ B` to change the goal from `A ⊕ B` to `A` type `apply Sum.inl`."
 msgstr ""
 
 #: Game.Levels.ImplicationWorld.L03_ComposingImplication
@@ -713,6 +1031,10 @@ msgstr ""
 msgid "The `have` tactic can be used to add new hypotheses provided you can supply a proof. For example, given assumptions `p : P` and `h : P → Q`, type `have q : Q := h p` to add a proof `q : Q` defined by `h p`."
 msgstr ""
 
+#: Game.Levels.DisjunctionWorld
+msgid "Disjunction World"
+msgstr ""
+
 #: Game.Levels.ImplicationWorld.L09_BossLevel
 msgid "Multiple hypothesis can be introduced at once by writing `intro h1 h2 h3` etc. You might consider using names that will help you remember which propositions each hypothesis proves!"
 msgstr ""
@@ -731,6 +1053,16 @@ msgstr ""
 
 #: Game.Levels.FunctionWorld.L03_ComposingFunctions
 msgid "Composing functions"
+msgstr ""
+
+#: Game.Levels.DisjunctionWorld.L06_Associativity
+msgid "Similarly, for propositions `P`, `Q`, and `R`, `(P ∨ Q) ∨ R` holds if and only if `P ∨ (Q ∨ R)` holds.\n"
+"\n"
+"Lean uses `P ∨ Q ∨ R` as an abbreviation for `P ∨ (Q ∨ R)`.\n"
+"\n"
+"Given a hypothesis `h₁ : (P ∨ Q) ∨ R`, `cases h₁` will split the hypothesis into two cases: one assuming that `P ∨ Q` is true and the other assuming `R` is true.\n"
+"\n"
+"Similarly given a hypothesis `h₂ : P ∨ Q ∨ R`, `cases h₂` the hypothesis into two cases: one assuming that `P` is true and the other assuming `Q ∨ R` is true."
 msgstr ""
 
 #: Game.Levels.ConjunctionWorld.L08_CurryingImplication
@@ -752,6 +1084,10 @@ msgstr ""
 msgid "Define the *evaluation* function that takes `a : A` and `f : A → B` to `f a : B`."
 msgstr ""
 
+#: Game.Levels.CoproductWorld.L02_RightInclusion
+msgid "To use the built in function `Sum.inr : B → A ⊕ B` to change the goal from `A ⊕ B` to `B` type `apply Sum.inr`."
+msgstr ""
+
 #: Game.Levels.FunctionWorld.L07_CompositionRevisited
 msgid "Can you solve this level in one line by using `exact fun g f a ↦ ?` with the appropriate thing in place of the `?`?\n"
 "\n"
@@ -760,6 +1096,14 @@ msgstr ""
 
 #: Game.Levels.FunctionWorld.L02_UsingFunctions
 msgid "Given a function `f : A → B` and any element `a : A`. You can apply the function `f` to `a` to obtain an element `f a : B` of type `B`."
+msgstr ""
+
+#: Game.Levels.CoproductWorld.L02_RightInclusion
+msgid "For types `A` and `B`, the coproduct type `A ⊕ B` has two kinds of elements. The second kind can be thought of as copies of elements `b : A` included into the coproduct `A ⊕ B` *on the right*.\n"
+"\n"
+"Lean has a built in function called `Sum.inr : B → A ⊕ B`.\n"
+"\n"
+"Note that `Sum.inl, Sum.inr : A → A ⊕ A` are *different functions* (as long as the type `A` is non-empty) in a way we will be able to make more precise later."
 msgstr ""
 
 #: Game.Levels.ConjunctionWorld.L04_LogicalEquivalence
@@ -789,6 +1133,14 @@ msgstr ""
 
 #: Game.Levels.ConjunctionWorld.L01_IntroducingAnd
 msgid "If `P` is true and `Q` is true, then `P ∧ Q` is true."
+msgstr ""
+
+#: Game.Levels.DisjunctionWorld.L08_MoreDistributivity
+msgid "We are now ready for the Boss Level of Disjunction World."
+msgstr ""
+
+#: Game.Levels.DisjunctionWorld.L03_UsingOr
+msgid "After introducing the hypothesis `«{h}» : «{P}» ∨ «{Q}»`, type `cases h` to ask Lean to consider both cases: the first being that `P` is true and the second being that `Q` is true."
 msgstr ""
 
 #: Game.Levels.ImplicationWorld.L03_ComposingImplication
@@ -827,14 +1179,26 @@ msgid "To prove an implication `S → T` one needs to give a construction of a p
 "It follows that `Q → P` is true, no matter whether `Q` is true or false."
 msgstr ""
 
+#: Game.Levels.DisjunctionWorld.L01_IntroducingOr
+msgid "You have two choices: to reduce to the case of proving the left proposition or to reduce to the case of proving the right proposition. Type `apply Or.inl` to tell Lean you'd like too prove the left proposition or type `apply Or.inr` to tell Lean you'd like to prove the right proposition."
+msgstr ""
+
 #: Game.Levels.ProductWorld.L07_Uncurrying
 msgid "Lean uses the name `Function.uncurry : (A → B → C) → (A × B → C)` for the function you have just defined. This function has been added to the library of definitions.\n"
 "\n"
 "The operations of *currying* and *uncurrying* are inverses in a sense we will be able to make precise later."
 msgstr ""
 
+#: Game.Levels.DisjunctionWorld.L08_MoreDistributivity
+msgid "What can you conclude from the hypothesis `«{h}»`?"
+msgstr ""
+
 #: Game.Levels.FunctionWorld.L02_UsingFunctions
 msgid "Given a function `f : A → B` and an element `a : A`, there is an element `f a : B` obtained by evaluating the function `f` at `a`."
+msgstr ""
+
+#: Game.Levels.CoproductWorld.L08_BossLevel
+msgid "A function of type `A ⊕ B → C × D` can be broken into component functions of type `(A → C) × (B → C) × (A → D) × (B → D)` and conversely the component functions assemble into a function from the coproduct type to the product type."
 msgstr ""
 
 #: Game.Levels.ProductWorld.L07_Uncurrying
@@ -865,6 +1229,14 @@ msgstr ""
 msgid "The hypothesis `«{h}»` can be used to convert a proof of `«{P}»` into a proof of `«{Q}»`. This can be thought of as a step that reduces the problem of proving `«{Q}»` to the problem of proving `«{P}»`. To apply this hypothesis type `apply «{h}»`."
 msgstr ""
 
+#: Game.Levels.CoproductWorld.L07_Distributivity
+msgid "How should we think about an element of type `x : A × (B ⊕ C)`?.\n"
+"\n"
+"Since `x` belongs to a product type, it can be split into two components. That is `x` has the form of a pair `⟨y, z⟩` with `y : A` and `z : B ⊕ C`. And since `z` belongs to a coproduct type, there are two possible cases: it can have the form `Sum.inl b` for some `b : B` or it can have the form `Sum.inr c` for some `c : C`. In the first case, the original `x : A × (B ⊕ C)` is a pair of the form `⟨y, Sum.inl b⟩` coming from `⟨y, b⟩ : A × B` which in the second case `x` is a pair of the form `⟨y, Sum.inr c⟩` coming from `⟨y, c⟩ : A × C`.\n"
+"\n"
+"This explains the *distributivity* of products over coproducts, which can be encoded by a pair of functions, one of the form `A × (B ⊕ C) → (A × B) ⊕ (A × C)` and the other of the form `(A × B) ⊕ (A × C) → A × (B ⊕ C)`."
+msgstr ""
+
 #: Game.Levels.ProductWorld.L03_SecondProjection
 msgid "Now type `exact «{p}».2` to return the first projection."
 msgstr ""
@@ -891,8 +1263,16 @@ msgid "Lean uses the name `Function.curry : (A × B → C) → (A → B → C)` 
 "We'll now study the reverse process, which converts a function of type `A → B → C` to a function of type `A × B → C`."
 msgstr ""
 
+#: Game.Levels.CoproductWorld.L05_Symmetry
+msgid "We will see later that the composite of the swap function with itself is the identity."
+msgstr ""
+
 #: Game.Levels.ProductWorld.L06_Currying
 msgid "For any types `A`, `B`, and `C`, `Function.curry : (A × B → C) → (A → B → C)` is the function that sends `f : A × B → C` to the function that sends `a : A` and `b : B` to `f ⟨a, b⟩ : C`."
+msgstr ""
+
+#: Game.Levels.CoproductWorld
+msgid "Coproduct World"
 msgstr ""
 
 #: Game.Levels.ConjunctionWorld.L02_UsingAnd
@@ -931,6 +1311,14 @@ msgid "Recall that given functions `f : A → B` and `g : B → C` there is a *c
 "It can also be thought of a function that takes `g`, `f`, and `a : A` to the element `g (f a) : C`.\n"
 "\n"
 "Aside: Lean treats the functions `comp` and `∘` slightly differently because the former uses the usual notation for multivariable functions (where the arguments are provided afterwards as `comp g f`) while the latter uses infix notation (where the function name appears inbetween the two arguments as `g ∘ f`)."
+msgstr ""
+
+#: Game.Levels.DisjunctionWorld.L06_Associativity
+msgid "The hypothesis generated by the `cases` tactic isn't directly useable yet. Try `cases «{hqr}»` again, or `rcases «{hqr}» with hq | hr` to name your own variables."
+msgstr ""
+
+#: Game.Levels.DisjunctionWorld.L02_AndImpliesOr
+msgid "`P ∧ Q` implies `P ∨ Q`."
 msgstr ""
 
 #: Game.Levels.FunctionWorld.L06_SwappingInputs
@@ -972,6 +1360,10 @@ msgid "In Function World, we learned that for any types `A` and `B` there is a n
 "* How to use elements of type `A × B` to construct elements of other types."
 msgstr ""
 
+#: Game.Levels.DisjunctionWorld.L08_MoreDistributivity
+msgid "More Distributivity"
+msgstr ""
+
 #: Game.Levels.ConjunctionWorld.L07_MoreCompoundImplication
 msgid "In the previous level we proved that `P ∧ Q → R` implies `P → Q → R`.\n"
 "\n"
@@ -1011,7 +1403,24 @@ msgstr ""
 msgid "The formula for the constant function is `fun x ↦ a`. In other words, given any input `x : B`, the output is always the specified term `a : A`. Since the formula for the output does not depend on the input term, this can also be written as `fun _ ↦ a`, so try solving this level with `exact fun _ ↦ a`"
 msgstr ""
 
+#: Game.Levels.CoproductWorld
+msgid "Given any types `A` and `B` we have studied\n"
+"\n"
+"* function types `A → B` whose elements `f : A → B` are *functions* from `A` to `B` and\n"
+"\n"
+"* product types `A × B` whose elements `⟨a, b⟩ : A × B` are *pairs* of elements `a : A` and `b : B`.\n"
+"\n"
+"In this world, we'll study another binary type forming operation. Given two types `A` and `B`, there is a type `A ⊕ B` called the *coproduct type* which has two types of elements:\n"
+"\n"
+"* elements `a : A` define elements `Sum.inl a : A ⊕ B`\n"
+"* elements `b : B` define elements `Sum.inr b : A ⊕ B`.\n"
+"\n"
+"Like the analogy between function types and implication, and product types and conjunction, there is a close analogy between coproduct types and the logical operation of disjunction."
+msgstr ""
+
 #: Game.Levels.ProductWorld.L05_Associativity
+#: Game.Levels.CoproductWorld.L06_Associativity
+#: Game.Levels.CoproductWorld.L07_Distributivity
 msgid "The goal is a product of function types, so to define an element you need to define two different functions. Each will take some work, so start with the `constructor` tactic to split one goal into two goals."
 msgstr ""
 
@@ -1032,6 +1441,10 @@ msgstr ""
 
 #: Game.Levels.ImplicationWorld.L09_BossLevel
 msgid "Next move on to Conjunction World to meet our second logical connective."
+msgstr ""
+
+#: Game.Levels.DisjunctionWorld.L07_Distributivity
+msgid "Conjunction distributes over disjunction: `P ∧ (Q ∨ R)` and `(P ∧ Q) ∨ (P ∧ R)` are logically equivalent."
 msgstr ""
 
 #: Game.Levels.ImplicationWorld
@@ -1081,6 +1494,10 @@ msgstr ""
 msgid "The `assumption` tactic tries to solve the main goal using a hypothesis of compatible type, or else fails."
 msgstr ""
 
+#: Game.Levels.DisjunctionWorld.L05_UniversalProperty
+msgid "This logical equivalence captures the *universal property* of disjunction, explaining how the mathematical or is used in a proof."
+msgstr ""
+
 #: Game.Levels.FunctionWorld.L01_IdentityFunction
 msgid "For a type `A`, the identity function `id : A → A` is the function defined by sending and arbitrary element `a : A` to itself."
 msgstr ""
@@ -1097,6 +1514,9 @@ msgid "Can we apply our hypothesis yet or must we act on the goal first?"
 msgstr ""
 
 #: Game.Levels.ProductWorld.L05_Associativity
+#: Game.Levels.CoproductWorld.L06_Associativity
+#: Game.Levels.CoproductWorld.L07_Distributivity
+#: Game.Levels.CoproductWorld.L07_Distributivity
 msgid "Now the goal is a function type. What tactic is used to define functions?"
 msgstr ""
 
@@ -1106,6 +1526,14 @@ msgstr ""
 
 #: Game.Levels.ConjunctionWorld.L04_LogicalEquivalence
 msgid "`P ↔ Q`, read as &ldquo;`P` if and only if `Q`&rdquo; is an abbreviation for `(P → Q) ∧ (Q → P)`."
+msgstr ""
+
+#: Game.Levels.DisjunctionWorld.L07_Distributivity
+msgid "What does it mean if `P ∧ (Q ∨ R)` holds?\n"
+"\n"
+"Then certainly `P` is true and also `Q ∨ R` is true.\n"
+"\n"
+"So we can conclude that `P ∧ Q` is true or `P ∧ R` is true, demonstrating the following logical equivalence."
 msgstr ""
 
 #: Game.Levels.ProductWorld.L01_Pairing
@@ -1132,12 +1560,28 @@ msgstr ""
 msgid "Define the canonical function projecting from a product type to its first argument."
 msgstr ""
 
+#: Game.Levels.CoproductWorld.L03_ComponentFunctions
+#: Game.Levels.CoproductWorld.L04_UniversalProperty
+#: Game.Levels.CoproductWorld.L05_Symmetry
+msgid "Use the `intro` tactic to define a term in a function type."
+msgstr ""
+
 #: Game.Levels.ConjunctionWorld
 msgid "Conjunction World"
 msgstr ""
 
 #: Game.Levels.ConjunctionWorld.L03_Symmetry
 msgid "Given a hypothesis `h : P ∧ Q` for some propositions `P` and `Q`, `And.symm h` is a proof of `Q ∧ P`."
+msgstr ""
+
+#: Game.Levels.CoproductWorld.L06_Associativity
+msgid "Given three types `A`, `B`, and `C`, the coproduct type construction may be iterated to define types `(A ⊕ B) ⊕ C` and `A ⊕ (B ⊕ C)`, the latter of which is abbreviated `A ⊕ B ⊕ C`.\n"
+"\n"
+"For both of these types, there are three cases of elements: those coming from `a : A`, those coming from `b : B`, and those coming from `c : C`. The notation for the corresponding elements of the iterated coproduct type depends on the parentheses: the terms `b : B` include as `Sum.inl (Sum.inr b) : (A ⊕ B) ⊕ C` but include as `Sum.inr (Sum.inl b) : A ⊕ (B ⊕ C)`.\n"
+"\n"
+"The objective in this level is to define a pair of functions between these types in each direction, the first of type `((A ⊕ B) ⊕ C) → (A ⊕ (B ⊕ C))` and the second of type `(A ⊕ (B ⊕ C)) → ((A ⊕ B) ⊕ C)`. That is, define a single element of type\n"
+"\n"
+"`(((A ⊕ B) ⊕ C) → (A ⊕ (B ⊕ C))) × ((A ⊕ (B ⊕ C)) → ((A ⊕ B) ⊕ C))`"
 msgstr ""
 
 #: Game.Levels.ImplicationWorld.L07_OnParentheses
@@ -1171,6 +1615,7 @@ msgid "level completed! 🎉"
 msgstr ""
 
 #: Game.Levels.ProductWorld.L08_ComponentFunctions
+#: Game.Levels.CoproductWorld.L03_ComponentFunctions
 msgid "Component Functions"
 msgstr ""
 
@@ -1186,12 +1631,24 @@ msgstr ""
 msgid "Now the goal is just to prove `P`. Type `exact «{p}»` to supply this proof."
 msgstr ""
 
+#: Game.Levels.CoproductWorld.L06_Associativity
+msgid "Now use `cases «{p}»` or `rcases «{p}» with x | c` or similar to give your own variable names."
+msgstr ""
+
 #: Game.Levels.ProductWorld.L06_Currying
 msgid "Define the currying function, convering a function out of a product type into a function of two variables."
 msgstr ""
 
 #: Game.Levels.ImplicationWorld.L02_ModusPonens
 msgid "Here `apply` is another tactic, which can be found in the library above right."
+msgstr ""
+
+#: Game.Levels.DisjunctionWorld.L05_UniversalProperty
+msgid "What implications can you extract from `«{h}»`?"
+msgstr ""
+
+#: Game.Levels.DisjunctionWorld.L08_MoreDistributivity
+msgid "`(P ∨ Q) ∧ (R ∨ S)` holds if and only if `(P ∧ R) ∨ (P ∧ S) ∨ (Q ∧ R) ∨ (Q ∧ S)` holds."
 msgstr ""
 
 #: Game.Levels.FunctionWorld.L03_ComposingFunctions
@@ -1214,6 +1671,10 @@ msgstr ""
 msgid "For any types `A` and `B`, `Prod.fst : A × B → A` is the function that sends `p : A × B` to its first coordinate `p.1 : A`."
 msgstr ""
 
+#: Game.Levels.CoproductWorld.L03_ComponentFunctions
+msgid "Now the goal is a product type. The `constructor` tactic will split into two subgoals, defining the functions `«{A}» → «{C}»` and `«{B}» → «{C}»` respectively."
+msgstr ""
+
 #: Game.Levels.ProductWorld.L09_UniversalProperty
 msgid "We've seen that functions `f : X → A × B` into product types can be decomposed into component functions `fun x ↦ (f x).1 : X → A` and `fun x ↦ (f x).2 : X → B`.\n"
 "\n"
@@ -1222,6 +1683,16 @@ msgid "We've seen that functions `f : X → A × B` into product types can be de
 "To that end consider an arbitrary pair of functions `g : X → A` and `h : X → B` that have the same domain type `X` but are otherwise unrelated.\n"
 "\n"
 "These functions can be combined to define a single function of type `X → A × B` whose component functions are defined by `g` and `h`, respectively."
+msgstr ""
+
+#: Game.Levels.CoproductWorld.L08_BossLevel
+msgid "Boss level"
+msgstr ""
+
+#: Game.Levels.DisjunctionWorld.L02_AndImpliesOr
+msgid "The proposition `P ∧ Q` is *stronger* than the proposition `P ∨ Q` because `P ∧ Q → P ∨ Q` is true in general, but the implication `P ∨ Q → P ∧ Q` does not necessarily hold.\n"
+"\n"
+"Note the implication `P ∧ Q → P ∨ Q` holds because the mathematical *or* is &ldquo;inclusive&rdquo;, meaning that if `P` and `Q` are both true, then `P ∨ Q` is true, and in fact can be proven in two different ways."
 msgstr ""
 
 #: Game.Levels.FunctionWorld.L03_ComposingFunctions
@@ -1240,8 +1711,25 @@ msgstr ""
 msgid "The goal is a product type, so `constructor` can be used to break the goal into pieces."
 msgstr ""
 
+#: Game.Levels.DisjunctionWorld.L04_Symmetry
+msgid "Did you give the same proof twice? If so, why does this make sense? If not, could you have done this? In fact, we gave a name `Or.symm` to the proof given in the previous level, as you can see in the list of theorems to the right. Try typing `exact Or.symm` at an appropriate place in your proof."
+msgstr ""
+
 #: Game.Levels.ProductWorld.L06_Currying
 msgid "What sort of inputs does the function `«{f}»` require?"
+msgstr ""
+
+#: Game.Levels.DisjunctionWorld.L07_Distributivity
+#: Game.Levels.CoproductWorld.L07_Distributivity
+msgid "Distributivity"
+msgstr ""
+
+#: Game.Levels.DisjunctionWorld.L06_Associativity
+msgid "The hypothesis generated by the `cases` tactic isn't directly useable yet. Try `cases «{hpq}»` again, or `rcases «{hpq}» with hp | hq` to name your own variables."
+msgstr ""
+
+#: Game.Levels.DisjunctionWorld.L03_UsingOr
+msgid "Recall `Or.inl` and `Or.inr` refer to the left and right propositions in a disjunction `S ∨ T`."
 msgstr ""
 
 #: Game.Levels.ConjunctionWorld.L03_Symmetry
@@ -1262,6 +1750,10 @@ msgstr ""
 
 #: Game.Levels.ConjunctionWorld.L07_MoreCompoundImplication
 msgid "More Compound Implication"
+msgstr ""
+
+#: Game.Levels.CoproductWorld.L07_Distributivity
+msgid "You can use `cases` or `rcases` either on `«{p}»` to split it up into components or directly on its component in `B ⊕ C`.Be careful to use the syntax that is appropriate for terms of product or coproduct types, respectively."
 msgstr ""
 
 #: Game.Levels.ImplicationWorld.L01_ByAssumption
