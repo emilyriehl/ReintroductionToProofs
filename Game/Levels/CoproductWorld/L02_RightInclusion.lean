@@ -9,7 +9,7 @@ Introduction "For types `A` and `B`, the coproduct type `A ⊕ B` has two kinds 
 
 Lean has a built in function called `Sum.inr : B → A ⊕ B`.
 
-Note that `Sum.inl, Sum.inr : A → A ⊕ A` are *different functions* (as long as the type `A` is non-empty) in a way we will be able to make more precise later.
+Note that `Sum.inl, Sum.inr : A → A ⊕ A` are *different functions* (as long as the type `A` has at least one element) in a way we will be able to make more precise later.
 "
 
 /--
@@ -24,4 +24,4 @@ Statement {A B : Type} (b : B) : A ⊕ B := by
 
 NewDefinition Sum.inr
 
-Conclusion "We'll now study how hypotheses `x : A ⊕ B` can be used."
+Conclusion "We'll now study how hypothesis `x : A ⊕ B` can be used."
