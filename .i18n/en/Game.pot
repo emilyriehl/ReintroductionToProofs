@@ -167,6 +167,10 @@ msgstr ""
 msgid "Next move on to `Function World` to learn about types and functions."
 msgstr ""
 
+#: Game.Levels.EmptyWorld.L01_FromEmpty
+msgid "The goal is a function type. What tactic can be used to define an element?"
+msgstr ""
+
 #: Game.Levels.DisjunctionWorld.L04_Symmetry
 msgid "We can improve our understanding of the symmetry of disjunction as follows.\n"
 "\n"
@@ -208,6 +212,24 @@ msgstr ""
 
 #: Game.Levels.FunctionWorld.L01_IdentityFunction
 msgid "Now the goal is an element of type `«{A}»`, which should be thought of as result of applying the function to the element `«{x}» : «{A}»`. In the case of the identity function, we want to return `«{x}» : «{A}»` again which is done by typing `exact «{x}»`."
+msgstr ""
+
+#: Game.Levels.EmptyWorld
+msgid "In this world, we will introduce the empty type, which is commonly denoted by `Empty` in Lean.\n"
+"\n"
+"In general, types can be characterized by:\n"
+"* Introduction rules: which explain how to construct elements of the given type.\n"
+"* Elimination rules: which explain how to use elements of the given type to construct elements of other types.\n"
+"\n"
+"In the case of the empty type, there are no introduction rules. This corresponds colloquially to the idea that the empty type has &ldquo;no elements.&rdquo;\n"
+"\n"
+"The elimination rule for the empty type defines a function from the `Empty` type to any other type `A`, with no obligations on the type `A`.\n"
+"\n"
+"There is another way to understand why the type `Empty → A` should always have an element.\n"
+"\n"
+"In order to define a function `X → A` one must fulfill the following obligation: for each `x : X` one must specify an element of `A`. In the case of functions `Empty → A`, the empty type has no elements, so there are no obligations.\n"
+"\n"
+"In this world, we will explore constructions involving the `Empty` type."
 msgstr ""
 
 #: Game.Levels.ConjunctionWorld.L06_CompoundImplication
@@ -269,6 +291,14 @@ msgstr ""
 
 #: Game.Levels.FunctionWorld.L07_CompositionRevisited
 msgid "The `swap` function exchanges the inputs of a function of two variables. For a function with two variables `f : A → B → C`, `swap f : B → A → C` is the function that sends `b : B` and `a : A` to `f a b : C`."
+msgstr ""
+
+#: Game.Levels.EmptyWorld.L01_FromEmpty
+msgid "The type `Empty` has no elements &mdash or, more precisely, the type `Empty` has no introduction rules.\n"
+"\n"
+"Consequently, for any other type `A`, there is always a function `Empty → A`.\n"
+"\n"
+"The task in this level is to define it."
 msgstr ""
 
 #: Game.Levels.CoproductWorld.L06_Associativity
@@ -569,6 +599,10 @@ msgstr ""
 
 #: Game.Levels.CoproductWorld.L06_Associativity
 msgid "For types `A`, `B`, and `C`, there are canonical functions between the types `(A ⊕ B) ⊕ C` and `A ⊕ (B ⊕ C)`."
+msgstr ""
+
+#: Game.Levels.EmptyWorld.L01_FromEmpty
+msgid "For any type `A`, there is a function `Empty → A` encoding the elimination rule of the empty type."
 msgstr ""
 
 #: Game.Levels.FunctionWorld.L05_MultivariableFunctions
@@ -911,6 +945,10 @@ msgstr ""
 msgid "Conjunction is associative: `(P ∧ Q) ∧ R` is true if and only if `P ∧ (Q ∧ R)` is true."
 msgstr ""
 
+#: Game.Levels.EmptyWorld.L01_FromEmpty
+msgid "For any type `A`, there is a function `Empty.elim : Empty → A` expressing the elimination rule of the empty type."
+msgstr ""
+
 #: Game.Levels.FunctionWorld.L09_BossLevel
 msgid "Move on to Product World to meet a second type forming operation."
 msgstr ""
@@ -1211,6 +1249,10 @@ msgstr ""
 
 #: Game.Levels.FunctionWorld.L02_UsingFunctions
 msgid "Given a function `f : A → B` and an element `a : A`, there is an element `f a : B` obtained by evaluating the function `f` at `a`."
+msgstr ""
+
+#: Game.Levels.EmptyWorld.L01_FromEmpty
+msgid "Lean has a built-in name `Empty.elim : Empty → A` for the function you have just defined. Thus `exact Empty.elim` will also solve this level. This function has been added to the library."
 msgstr ""
 
 #: Game.Levels.CoproductWorld.L08_BossLevel
@@ -1594,6 +1636,10 @@ msgstr ""
 msgid "Conjunction World"
 msgstr ""
 
+#: Game.Levels.EmptyWorld.L01_FromEmpty
+msgid "From Empty"
+msgstr ""
+
 #: Game.Levels.ConjunctionWorld.L03_Symmetry
 msgid "Given a hypothesis `h : P ∧ Q` for some propositions `P` and `Q`, `And.symm h` is a proof of `Q ∧ P`."
 msgstr ""
@@ -1679,6 +1725,10 @@ msgstr ""
 
 #: Game.Levels.DisjunctionWorld.L03_UsingOr
 msgid "`rcases` is a tactic that will perform `cases` recursively, according to a pattern. One use is to provide explicit names for variables in each subgoal. For example, given a hypothesis `h : P ∨ Q`, `rcases h with p | q` can be used in place of `cases h` to give hypotheses `p : P` in the first case and `q : Q`."
+msgstr ""
+
+#: Game.Levels.EmptyWorld.L01_FromEmpty
+msgid "Type `cases «{p}»` to ask Lean to consider all possible cases involving an element of the empty type. As there are no cases, this will complete the proof."
 msgstr ""
 
 #: Game.Levels.DisjunctionWorld.L05_UniversalProperty
@@ -1824,6 +1874,10 @@ msgid "The task in this level is to show another logical equivalence,\n"
 "`h s : T` for the proof constructed by applying the hypothesis `h` to the hypothesis `s`.\n"
 "\n"
 "The intuition behind this notation will be explained in the next world."
+msgstr ""
+
+#: Game.Levels.EmptyWorld
+msgid "Empty World"
 msgstr ""
 
 #: Game.Levels.ImplicationWorld.L02_ModusPonens
