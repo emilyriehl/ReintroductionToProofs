@@ -41,6 +41,14 @@ Statement {P Q : Prop} : P ∨ Q → Q ∨ P := by
 
 Conclusion "This proves the symmetry of disjunction. Practice using both the `cases` and `rcases` tactics to get used to them."
 
+/-- Assuming `x` is a variable in the local context with an inductive type, `cases x` splits the main goal, producing one goal for each constructor of the inductive type, in which the target is replaced by a general instance of that constructor. If the type of an element in the local context depends on `x`, that element is reverted and reintroduced afterward, so that the case split affects that hypothesis as well. `cases` detects unreachable cases and closes them automatically.
+
+For example, given an assumption `h : P ∨ Q`, `cases h` splits the main goal into two goals, one assuming `P` holds and the other assuming `Q` holds. -/
+TacticDoc cases
+
+/-- `rcases` is a tactic that will perform `cases` recursively, according to a pattern. One use is to provide explicit names for variables in each subgoal. For example, given a hypothesis `h : P ∨ Q`, `rcases h with p | q` can be used in place of `cases h` to give hypotheses `p : P` in the first case and `q : Q`. -/
+TacticDoc rcases
+
 /- Use these commands to add items to the game's inventory. -/
-NewTactic cases rcases assumption
+NewTactic cases rcases
 NewTheorem Or.symm

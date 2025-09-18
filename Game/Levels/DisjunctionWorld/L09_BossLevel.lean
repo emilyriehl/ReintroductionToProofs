@@ -10,6 +10,8 @@ Introduction "We've now reached the Boss Level in the disjunction world.
 This level illustrates that proofs by cases can be somewhat delicate.
 "
 
+/-- If `T ∨ U → V ∧ Y` and `Q → P → T` and `Y → Q → W` and
+`(V ∧ W) ∨ (X ∧ Y) → Z` and `(R → S → U) ∧ (V → R → X)` then  `P ∧ (Q ∨ R) ∧ S` implies `Z`. -/
 Statement {P Q R S T U V W X Y Z : Prop} : (T ∨ U → V ∧ Y) → (Q → P → T) → (Y → Q → W) →
 ((V ∧ W) ∨ (X ∧ Y) → Z) → (R → S → U) ∧ (V → R → X) →  P ∧ (Q ∨ R) ∧ S →
 Z := by

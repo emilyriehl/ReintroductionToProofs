@@ -5,10 +5,11 @@ Level 5
 
 Title "Symmetry"
 
-Introduction "The coproduct type, like the product type, is *symmetric*, and in particular has a canonical map `swap : A ⊕ B → B ⊕ A`. Your task in this level is to define it.
+Introduction "The coproduct type, like the product type, is *symmetric*, and in particular has a canonical map of type `A ⊕ B → B ⊕ A`. Your task in this level is to define it.
 "
 
-Statement {A B : Type} : (A ⊕ B → B ⊕ A) := by
+/-- For any types `A` and `B`, there is a canonical function of type `A ⊕ B → B ⊕ A`. -/
+Statement {A B : Type} : A ⊕ B → B ⊕ A := by
   Hint (hidden := true) "Use the `intro` tactic to define a term in a function type."
   intro x
   Hint (hidden := true) "Use either `cases {x}` or `rcases {x} with a | b` to consider the possible cases for the variable `{x} : A ⊕ B`."
@@ -21,4 +22,4 @@ Statement {A B : Type} : (A ⊕ B → B ⊕ A) := by
   exact b
 
 
-Conclusion "We will see later that the composite of the swap function with itself is the identity."
+Conclusion "The same construction defines a function of type `B ⊕ A → A ⊕ B`, demonstrating the symmetry of the coproduct."

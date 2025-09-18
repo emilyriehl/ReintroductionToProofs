@@ -13,6 +13,7 @@ Since `x` belongs to a product type, it can be split into two components. That i
 This explains the *distributivity* of products over coproducts, which can be encoded by a pair of functions, one of the form `A × (B ⊕ C) → (A × B) ⊕ (A × C)` and the other of the form `(A × B) ⊕ (A × C) → A × (B ⊕ C)`.
 "
 
+/-- For types `A`, `B`, and `C`, there are canonical functions between the types `A × (B ⊕ C)` and `(A × B) ⊕ (A × C)`. -/
 Statement {A B C : Type} : (A × (B ⊕ C) → (A × B) ⊕ (A × C)) × ((A × B) ⊕ (A × C) → A × (B ⊕ C)) := by
   Hint (hidden := true) "The goal is a product of function types, so to define an element you need to define two different functions. Each will take some work, so start with the `constructor` tactic to split one goal into two goals."
   constructor
