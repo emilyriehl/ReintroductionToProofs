@@ -10,6 +10,7 @@ import Game.Levels.CoproductWorld
 Title "Computer-Verified Proof: a Hands-On Introduction to Interactive Theorem Proving"
 Introduction
 "
+<<<<<<< HEAD
 Mathematicians from all over &mdash; most of whom have never met one another &mdash; nevertheless agree to an incredible extent about the nature of the mathematical universe. How did this degree of consensus come about?
 
 Firstly mathematicians have developed a precise formal language which allows them to define new abstract concepts and state their properties in an unambiguous way. A mathematical *proposition* is a well-formed mathematical statement that is either true or false, for instance:
@@ -29,6 +30,19 @@ There is one caveat, that we will address explicitly. The formal vocabulary we w
 
 Info "
 This was created using the GameSkeleton Github Repo from the Lean Games Server hosted by ADAM: Anticipating the Digital Age of Mathematics at Heinrich Heine University Düsseldorf. It is designed for a first year seminar course taught at Johns Hopkins University in Fall 2025 with the title `Computer-Verified Proof: a Hands-On Introduction to Interactive Theorem Proving`.
+=======
+This text appears on the starting page where one selects the world/level to play.
+You can use **markdown**.
+"
+
+Info "
+Here you can put additional information about the game. It is accessible
+from the starting through the drop-down menu.
+
+For example: Game version, Credits, Link to Github and Zulip, etc.
+
+Use **markdown**.
+>>>>>>> b6cc582bc20bb8d5aef4387dd936f53843e2b7c4
 "
 
 /-! Information to be displayed on the servers landing page. -/
