@@ -19,7 +19,6 @@ Statement {A : Type} : Empty → A := by
   Hint "Type `cases {p}` to ask Lean to consider all possible cases involving an element of the empty type. As there are no cases, this will complete the proof."
   cases p
 
-
 Conclusion "Lean has a built-in name `Empty.elim : Empty → A` for the function you have just defined. Thus `exact Empty.elim` will also solve this level. This function has been added to the library."
 
 -- DefinitionTab "Empty"
@@ -27,8 +26,6 @@ Conclusion "Lean has a built-in name `Empty.elim : Empty → A` for the function
 /--
 For any type `A`, there is a function `Empty.elim : Empty → A` expressing the elimination rule of the empty type.
 -/
-DefinitionDoc Empty.elim as "Empty.elim"
-
--- DefinitionDoc Empty.elim as "elim" in "Empty"
+DefinitionDoc Empty.elim as "Empty.elim" -- in "Empty"
 
 NewDefinition Empty.elim

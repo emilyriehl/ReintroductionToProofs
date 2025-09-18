@@ -168,6 +168,8 @@ msgid "Next move on to `Function World` to learn about types and functions."
 msgstr ""
 
 #: Game.Levels.EmptyWorld.L01_FromEmpty
+#: Game.Levels.EmptyWorld.L02_ToEmpty
+#: Game.Levels.EmptyWorld.L02_ToEmpty
 msgid "The goal is a function type. What tactic can be used to define an element?"
 msgstr ""
 
@@ -212,24 +214,6 @@ msgstr ""
 
 #: Game.Levels.FunctionWorld.L01_IdentityFunction
 msgid "Now the goal is an element of type `«{A}»`, which should be thought of as result of applying the function to the element `«{x}» : «{A}»`. In the case of the identity function, we want to return `«{x}» : «{A}»` again which is done by typing `exact «{x}»`."
-msgstr ""
-
-#: Game.Levels.EmptyWorld
-msgid "In this world, we will introduce the empty type, which is commonly denoted by `Empty` in Lean.\n"
-"\n"
-"In general, types can be characterized by:\n"
-"* Introduction rules: which explain how to construct elements of the given type.\n"
-"* Elimination rules: which explain how to use elements of the given type to construct elements of other types.\n"
-"\n"
-"In the case of the empty type, there are no introduction rules. This corresponds colloquially to the idea that the empty type has &ldquo;no elements.&rdquo;\n"
-"\n"
-"The elimination rule for the empty type defines a function from the `Empty` type to any other type `A`, with no obligations on the type `A`.\n"
-"\n"
-"There is another way to understand why the type `Empty → A` should always have an element.\n"
-"\n"
-"In order to define a function `X → A` one must fulfill the following obligation: for each `x : X` one must specify an element of `A`. In the case of functions `Empty → A`, the empty type has no elements, so there are no obligations.\n"
-"\n"
-"In this world, we will explore constructions involving the `Empty` type."
 msgstr ""
 
 #: Game.Levels.ConjunctionWorld.L06_CompoundImplication
@@ -315,6 +299,10 @@ msgstr ""
 
 #: Game.Levels.ConjunctionWorld.L09_UniversalProperty
 msgid "`(P → Q) ∧ (P → R)` is true if and only if `P → (Q ∧ R)` is true."
+msgstr ""
+
+#: Game.Levels.EmptyWorld.L02_ToEmpty
+msgid "For any type `A`, if there is a function `f : A → Empty` and there is an element `a : A`, then there is an element of the `Empty` type."
 msgstr ""
 
 #: Game.Levels.ConjunctionWorld.L04_LogicalEquivalence
@@ -507,6 +495,10 @@ msgstr ""
 
 #: Game.Levels.ConjunctionWorld.L08_CurryingImplication
 msgid "Currying Implication"
+msgstr ""
+
+#: Game.Levels.EmptyWorld.L02_ToEmpty
+msgid "To Empty"
 msgstr ""
 
 #: Game.Levels.DisjunctionWorld.L06_Associativity
@@ -1148,6 +1140,24 @@ msgid "Can you solve this level in one line by using `exact fun g f a ↦ ?` wit
 "Can you solve this level in one line by using `exact fun g f ↦ ?` with the appropriate thing in place of the `?`?"
 msgstr ""
 
+#: Game.Levels.EmptyWorld
+msgid "In this world, we will introduce the *empty type*, which is commonly denoted by `Empty` in Lean.\n"
+"\n"
+"In general, types can be characterized by:\n"
+"* Introduction rules: which explain how to construct elements of the given type.\n"
+"* Elimination rules: which explain how to use elements of the given type to construct elements of other types.\n"
+"\n"
+"In the case of the empty type, there are no introduction rules. This corresponds colloquially to the idea that the empty type has &ldquo;no elements.&rdquo;\n"
+"\n"
+"The elimination rule for the empty type defines a function from the `Empty` type to any other type `A`, with no obligations on the type `A`.\n"
+"\n"
+"There is another way to understand why the type `Empty → A` should always have an element.\n"
+"\n"
+"In order to define a function `X → A` one must fulfill the following obligation: for each `x : X` one must specify an element of `A`. In the case of functions `Empty → A`, the empty type has no elements, so there are no obligations.\n"
+"\n"
+"In this world, we will explore constructions involving the `Empty` type."
+msgstr ""
+
 #: Game.Levels.FunctionWorld.L02_UsingFunctions
 msgid "Given a function `f : A → B` and any element `a : A`. You can apply the function `f` to `a` to obtain an element `f a : B` of type `B`."
 msgstr ""
@@ -1231,6 +1241,16 @@ msgid "To prove an implication `S → T` one needs to give a construction of a p
 "In this level we will consider two propositions `P` and `Q` and assume that the proposition `P` is true.\n"
 "\n"
 "It follows that `Q → P` is true, no matter whether `Q` is true or false."
+msgstr ""
+
+#: Game.Levels.EmptyWorld.L02_ToEmpty
+msgid "We have seen that any type `A` has a function from the empty type `Empty.elim : Empty → A`.\n"
+"\n"
+"By contrast, if there is a function `f : A → Empty` from `A` to the empty type `Empty` then `A` must be very special: this is only possible if `A` is *equivalent* to the empty type.\n"
+"\n"
+"We do not have all the tools needed to define equivalence of types just yet, so in this level we observe something else.\n"
+"\n"
+"We will see that if there is a function `f : A → Empty` and if there is an element `a : A`, then we get an element of the empty type, which is very strange indeed!"
 msgstr ""
 
 #: Game.Levels.DisjunctionWorld.L01_IntroducingOr
@@ -1414,6 +1434,10 @@ msgid "In Function World, we learned that for any types `A` and `B` there is a n
 "* How to use elements of type `A × B` to construct elements of other types."
 msgstr ""
 
+#: Game.Levels.EmptyWorld.L02_ToEmpty
+msgid "We have an assumption `«{f}» : A → Empty`. What can be done with an element of a function type?"
+msgstr ""
+
 #: Game.Levels.DisjunctionWorld.L08_MoreDistributivity
 msgid "More Distributivity"
 msgstr ""
@@ -1570,6 +1594,10 @@ msgstr ""
 
 #: Game.Levels.ConjunctionWorld.L08_CurryingImplication
 msgid "In the next level we'll meet the universal property of conjunctions."
+msgstr ""
+
+#: Game.Levels.EmptyWorld.L02_ToEmpty
+msgid "In summary, something very strange happens if the types `A` and `A → Empty` both have elements."
 msgstr ""
 
 #: Game.Levels.ConjunctionWorld.L06_CompoundImplication

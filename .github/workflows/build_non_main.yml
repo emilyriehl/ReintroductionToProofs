@@ -1,4 +1,4 @@
-name: Build
+name: build-non-main
 run-name: Build the game
 on:
   workflow_dispatch:

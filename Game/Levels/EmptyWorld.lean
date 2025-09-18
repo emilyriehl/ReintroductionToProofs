@@ -1,4 +1,5 @@
 import Game.Levels.EmptyWorld.L01_FromEmpty
+import Game.Levels.EmptyWorld.L02_ToEmpty
 
 World "EmptyWorld"
 Title "Empty World"
