@@ -26,14 +26,14 @@ Statement {P Q R S : Prop} : (P ∨ Q) ∧ (R ∨ S) ↔ (P ∧ R) ∨ (P ∧ S)
   Hint (hidden := true) "The implicit parentheses in the goal are to the right `(P ∧ R) ∨ ((P ∧ S) ∨ ((Q ∧ R) ∨ (Q ∧ S)))`."
   Hint (hidden := true) "Thus the outermost logical connective is the `∨` combining `P ∧ R` and `(P ∧ S) ∨ ((Q ∧ R) ∨ (Q ∧ S))`."
   apply Or.inl
-  apply And.intro
+  constructor
   assumption
   assumption
   Hint (hidden := true) "The implicit parentheses in the goal are to the right `(P ∧ R) ∨ ((P ∧ S) ∨ ((Q ∧ R) ∨ (Q ∧ S)))`."
   Hint (hidden := true) "Thus the outermost logical connective is the `∨` combining `P ∧ R` and `(P ∧ S) ∨ ((Q ∧ R) ∨ (Q ∧ S))`."
   apply Or.inr
   apply Or.inl
-  apply And.intro
+  constructor
   assumption
   assumption
   Hint (hidden := true) "This completes the proof in the case where `P ∨ Q` holds because `P` holds. Now we've started the case where `Q` holds, which requires another case split over the proof `{rs} : {R} ∨ {S}`."
@@ -41,13 +41,13 @@ Statement {P Q R S : Prop} : (P ∨ Q) ∧ (R ∨ S) ↔ (P ∧ R) ∨ (P ∧ S)
   apply Or.inr
   apply Or.inr
   apply Or.inl
-  apply And.intro
+  constructor
   assumption
   assumption
   apply Or.inr
   apply Or.inr
   apply Or.inr
-  apply And.intro
+  constructor
   assumption
   assumption
   intro h

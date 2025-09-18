@@ -56,6 +56,10 @@ msgid "The product type comes with *projection functions* of type `A × B → A`
 "In Lean, the elements defined by projecting from `p : A × B` are denoted `p.1 : A` and `p.2 : B`."
 msgstr ""
 
+#: Game
+msgid "This was created using the GameSkeleton Github Repo from the Lean Games Server hosted by ADAM: Anticipating the Digital Age of Mathematics at Heinrich Heine University Düsseldorf. It is designed for a first year seminar course taught at Johns Hopkins University in Fall 2025 with the title `Computer-Verified Proof: a Hands-On Introduction to Interactive Theorem Proving`."
+msgstr ""
+
 #: Game.Levels.ProductWorld.L06_Currying
 msgid "Consider a function `f : A × B → C` mapping out of a product type.\n"
 "\n"
@@ -293,16 +297,6 @@ msgstr ""
 
 #: Game.Levels.ImplicationWorld.L05_ProvingImpliedAssumption
 msgid "Now the goal is to prove `«{P}»` using *any* of our given hypotheses. Which tactic can be used to supply this proof?"
-msgstr ""
-
-#: Game
-msgid "Here you can put additional information about the game. It is accessible\n"
-"from the starting through the drop-down menu.\n"
-"\n"
-"For example: Game version, Credits, Link to Github and Zulip, etc.\n"
-"\n"
-"Use **markdown**.\n"
-">>>>>>> b6cc582bc20bb8d5aef4387dd936f53843e2b7c4"
 msgstr ""
 
 #: Game.Levels.ProductWorld.L03_SecondProjection
@@ -1500,25 +1494,6 @@ msgstr ""
 msgid "Now we are ready for the boss level!"
 msgstr ""
 
-#: Game
-msgid "<<<<<<< HEAD\n"
-"Mathematicians from all over &mdash; most of whom have never met one another &mdash; nevertheless agree to an incredible extent about the nature of the mathematical universe. How did this degree of consensus come about?\n"
-"\n"
-"Firstly mathematicians have developed a precise formal language which allows them to define new abstract concepts and state their properties in an unambiguous way. A mathematical *proposition* is a well-formed mathematical statement that is either true or false, for instance:\n"
-"\n"
-"* &ldquo;There are infinitely many prime numbers.&rdquo;\n"
-"* &ldquo;Every prime number is even.&rdquo;\n"
-"* &ldquo;There are infinitely many prime numbers that are two less than another prime.&rdquo;\n"
-"\n"
-"Mathematicians distinguish between the true propositions, the false ones, and the ones whose truth value is not yet known through *proofs* made precise in the formal language of mathematical logic.\n"
-"\n"
-"While the idea of a mathematical proof is over 2000 years old, the practice of proof writing continues to evolve. Today mathematicians may elect to use a tool called a computer proof assistant that can provide real-time feedback to a theorem prover about the status of a logical argument that is currently under development.\n"
-"\n"
-"The aim of this game will be to introduce proof writing in a computer proof assistant while developing skils that can be used to develop proofs in other contexts: on paper, in conversation with a friend, or in your head.\n"
-"\n"
-"There is one caveat, that we will address explicitly. The formal vocabulary we will introduce to discuss mathematical proof is somewhat different from the one that most mathematicians learn. The mathematics we will be developing is essentially unchanged but the formal language introduced here will make it easier to be fully precise about every step in a proof, as is required to convince a computer that a logical argument in sound."
-msgstr ""
-
 #: Game.Levels.CoproductWorld.L02_RightInclusion
 msgid "For types `A` and `B`, the coproduct type `A ⊕ B` has two kinds of elements. The second kind can be thought of as copies of elements `b : A` included into the coproduct `A ⊕ B` *on the right*.\n"
 "\n"
@@ -1565,13 +1540,6 @@ msgstr ""
 #: Game.Levels.CoproductWorld.L07_Distributivity
 #: Game.Levels.CoproductWorld.L07_Distributivity
 msgid "Now the goal is a function type. What tactic is used to define functions?"
-msgstr ""
-
-#: Game
-msgid "This was created using the GameSkeleton Github Repo from the Lean Games Server hosted by ADAM: Anticipating the Digital Age of Mathematics at Heinrich Heine University Düsseldorf. It is designed for a first year seminar course taught at Johns Hopkins University in Fall 2025 with the title `Computer-Verified Proof: a Hands-On Introduction to Interactive Theorem Proving`.\n"
-"=======\n"
-"This text appears on the starting page where one selects the world/level to play.\n"
-"You can use **markdown**."
 msgstr ""
 
 #: Game.Levels.ConjunctionWorld.L05_Associativity
@@ -1874,4 +1842,22 @@ msgstr ""
 
 #: Game
 msgid "First Year Seminar 270"
+msgstr ""
+
+#: Game
+msgid "Mathematicians from all over &mdash; most of whom have never met one another &mdash; nevertheless agree to an incredible extent about the nature of the mathematical universe. How did this degree of consensus come about?\n"
+"\n"
+"Firstly mathematicians have developed a precise formal language which allows them to define new abstract concepts and state their properties in an unambiguous way. A mathematical *proposition* is a well-formed mathematical statement that is either true or false, for instance:\n"
+"\n"
+"* &ldquo;There are infinitely many prime numbers.&rdquo;\n"
+"* &ldquo;Every prime number is even.&rdquo;\n"
+"* &ldquo;There are infinitely many prime numbers that are two less than another prime.&rdquo;\n"
+"\n"
+"Mathematicians distinguish between the true propositions, the false ones, and the ones whose truth value is not yet known through *proofs* made precise in the formal language of mathematical logic.\n"
+"\n"
+"While the idea of a mathematical proof is over 2000 years old, the practice of proof writing continues to evolve. Today mathematicians may elect to use a tool called a computer proof assistant that can provide real-time feedback to a theorem prover about the status of a logical argument that is currently under development.\n"
+"\n"
+"The aim of this game will be to introduce proof writing in a computer proof assistant while developing skils that can be used to develop proofs in other contexts: on paper, in conversation with a friend, or in your head.\n"
+"\n"
+"There is one caveat, that we will address explicitly. The formal vocabulary we will introduce to discuss mathematical proof is somewhat different from the one that most mathematicians learn. The mathematics we will be developing is essentially unchanged but the formal language introduced here will make it easier to be fully precise about every step in a proof, as is required to convince a computer that a logical argument in sound."
 msgstr ""
