@@ -26,10 +26,11 @@ Statement {P : Prop} (p : P) : P := by
 
 Conclusion "You can click on `retry` to attempt a different proof. Try typing `assumption` instead."
 
-/- Use these commands to add items to the game's inventory. -/
-
 /-- The `assumption` tactic tries to solve the main goal using a hypothesis of compatible type, or else fails. -/
 TacticDoc assumption
+
+/-- If there is an assumption `e : E` and the goal has type `E`, then `exact e` closes the goal. -/
+TacticDoc exact
 
 NewTactic assumption exact
 -- NewTheorem Prop.modus_ponens
