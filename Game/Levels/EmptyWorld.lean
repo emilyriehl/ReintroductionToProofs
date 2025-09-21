@@ -1,5 +1,10 @@
 import Game.Levels.EmptyWorld.L01_FromEmpty
 import Game.Levels.EmptyWorld.L02_ToEmpty
+import Game.Levels.EmptyWorld.L03_ThroughEmpty
+import Game.Levels.EmptyWorld.L04_Composition
+import Game.Levels.EmptyWorld.L05_ProductWithEmpty
+import Game.Levels.EmptyWorld.L06_CoproductWithEmpty
+import Game.Levels.EmptyWorld.L07_BossLevel
 
 World "EmptyWorld"
 Title "Empty World"

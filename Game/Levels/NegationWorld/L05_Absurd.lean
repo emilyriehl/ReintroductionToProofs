@@ -11,6 +11,10 @@ Introduction "In the last level we provided the *law of noncontradiction*:
 
 In this level, we will see that it is possible to prove any proposition `Q` from the hypothesis that both `P` and `¬ P` are true.
 
+In other words, `P → ¬ P → Q` is always true.
+
+If we swapped the hypothesis, a similar proof would also show that `¬ P → P → Q` is true. In other words, if `P` is false, then `P → Q` is always true.
+
 The proof requires a bit of cleverness, but you can ask for a few hints if you get stuck.
 "
 

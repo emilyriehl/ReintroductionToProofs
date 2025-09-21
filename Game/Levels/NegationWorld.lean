@@ -3,6 +3,12 @@ import Game.Levels.NegationWorld.L02_Negation
 import Game.Levels.NegationWorld.L03_DoubleNegation
 import Game.Levels.NegationWorld.L04_Noncontradiction
 import Game.Levels.NegationWorld.L05_Absurd
+import Game.Levels.NegationWorld.L06_ModusTollens
+import Game.Levels.NegationWorld.L07_NegatingImplication
+import Game.Levels.NegationWorld.L08_NegatingDisjunction
+import Game.Levels.NegationWorld.L09_NegatingConjunction
+import Game.Levels.NegationWorld.L10_TripleNegation
+import Game.Levels.NegationWorld.L11_BossLevel
 
 World "NegationWorld"
 Title "Negation World"

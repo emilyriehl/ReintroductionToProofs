@@ -1,7 +1,7 @@
 msgid ""
 msgstr "Project-Id-Version: Game v4.22.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-09-18\n"
+"POT-Creation-Date: 2025-09-20\n"
 "Last-Translator: \n"
 "Language-Team: none\n"
 "Language: en\n"
@@ -22,6 +22,10 @@ msgstr ""
 msgid "The product type comes with *projection functions* of type `A × B → A` and `A × B → B` which take an element `p : A × B` and return the corresponding components from `A` and `B` respectively.\n"
 "\n"
 "In Lean, the elements defined by projecting from `p : A × B` are denoted `p.1 : A` and `p.2 : B`."
+msgstr ""
+
+#: Game.Levels.EmptyWorld.L03_ThroughEmpty
+msgid "We assumptions `«{f}» : A → Empty` and `«{a}» : A`? What can you construct using this?"
 msgstr ""
 
 #: Game.Levels.ProductWorld.L06_Currying
@@ -81,6 +85,10 @@ msgstr ""
 msgid "We will see later that functions of type `A ⊕ B → C` are uniquely determined by their component functions `(A → C) × (B → C)`."
 msgstr ""
 
+#: Game.Levels.ClassicalWorld.L02_ExcludedMiddle
+msgid "In classical logic, for any proposition `P`, `P` is true or `¬ P` is true."
+msgstr ""
+
 #: Game.Levels.DisjunctionWorld.L01_IntroducingOr
 msgid "For propositions `P` and `Q`, `Or.inl` is a proof that `P → (P ∨ Q)`."
 msgstr ""
@@ -100,6 +108,8 @@ msgstr ""
 #: Game.Levels.EmptyWorld.L01_FromEmpty
 #: Game.Levels.EmptyWorld.L02_ToEmpty
 #: Game.Levels.EmptyWorld.L02_ToEmpty
+#: Game.Levels.EmptyWorld.L03_ThroughEmpty
+#: Game.Levels.EmptyWorld.L03_ThroughEmpty
 #: Game.Levels.NegationWorld.L02_Negation
 #: Game.Levels.NegationWorld.L02_Negation
 #: Game.Levels.NegationWorld.L03_DoubleNegation
@@ -139,6 +149,10 @@ msgstr ""
 
 #: Game.Levels.ConjunctionWorld.L06_CompoundImplication
 msgid "For propositions `P`, `Q`, and `R`, `And.curry` is a proof that `P ∧ Q → R` implies `P → Q → R`."
+msgstr ""
+
+#: Game.Levels.EmptyWorld.L05_ProductWithEmpty
+msgid "For any type `A`, there are functions in both directions between the types `Empty` and `A × Empty`."
 msgstr ""
 
 #: Game.Levels.CoproductWorld.L05_Symmetry
@@ -190,12 +204,12 @@ msgstr ""
 msgid "There are two ways to prove `P ∨ Q` from the given hypotheses. Can you find them both?"
 msgstr ""
 
-#: Game.Levels.ProductWorld.L06_Currying
-msgid "Currying"
-msgstr ""
-
 #: Game.Levels.NegationWorld.L01_ExFalso
 msgid "Type `cases «{p}»` to ask Lean to consider all possible cases involving a proof of false. As there are no cases, this will complete the proof."
+msgstr ""
+
+#: Game.Levels.ProductWorld.L06_Currying
+msgid "Currying"
 msgstr ""
 
 #: Game.Levels.FunctionWorld.L06_SwappingInputs
@@ -204,6 +218,10 @@ msgstr ""
 
 #: Game.Levels.DisjunctionWorld.L06_Associativity
 msgid "You can use `cases «{hpqr}»` to split your hypothesis into cases or `rcases «{hpqr}» with hpq | hr` to name your own variables."
+msgstr ""
+
+#: Game.Levels.NegationWorld.L10_TripleNegation
+msgid "Does either proof in this logical equivalence seem familiar? Do they both seem familar?"
 msgstr ""
 
 #: Game.Levels.ProductWorld.L09_UniversalProperty
@@ -219,14 +237,37 @@ msgstr ""
 msgid "If this is not the term you want, how can you use it to define the correct term?"
 msgstr ""
 
+#: Game.Levels.EmptyWorld.L03_ThroughEmpty
+msgid "Again, something very strange happens if the types `A` and `A → Empty` both have elements."
+msgstr ""
+
+#: Game.Levels.NegationWorld.L07_NegatingImplication
+msgid "Negating Implication"
+msgstr ""
+
 #: Game.Levels.ImplicationWorld.L04_ProvingImplication
 msgid "When the goal has the form `«{P}» → «{P}»`, type `intro p` to introduce an assumption `p : «{P}»` and update the goal to `«{P}»`.\n"
 "\n"
 "It is also possible to type simply `intro` in which case Lean will automatically generate a name for the proof of `«{P}»`."
 msgstr ""
 
+#: Game.Levels.NegationWorld.L06_ModusTollens
+msgid "In this level we will study the relationship between an implication `P → Q` and its *contrapositive*, which is the statement `¬ Q → ¬ P`.\n"
+"\n"
+"The objective in this level is to prove that `P → Q` implies `¬ Q → ¬ P`.\n"
+"\n"
+"In fact, the construction of this proof should feel very familiar!\n"
+"\n"
+"The other direction of implication is considerably more subtle and will be discussed in the next world."
+msgstr ""
+
 #: Game.Levels.ImplicationWorld.L09_BossLevel
 msgid "If `S → X`, `T → W`, `R → Y`, `W → Q`, `U → S`, `Y → T`, `X → V`, `Q → U`, `V → Z` and `P → R` are true then `P` implies `Z`."
+msgstr ""
+
+#: Game.Levels.NegationWorld.L10_TripleNegation
+#: Game.Levels.NegationWorld.L10_TripleNegation
+msgid "What is the logical form of the goal?"
 msgstr ""
 
 #: Game.Levels.ProductWorld.L05_Associativity
@@ -243,12 +284,12 @@ msgid "Given three types `A`, `B`, and `C`, the product type construction may be
 "Given `a : A`, `b : B`, and `c : C`, we may write `⟨a,b,c⟩ : A × B × C` to abbreviate `⟨a, ⟨b,c⟩⟩ : A × (B × C)`."
 msgstr ""
 
-#: Game.Levels.ProductWorld.L04_Symmetry
-msgid "Product types are symmetric: an element of type `A × B` has a corresponding element of type `B × A` with components swapped."
-msgstr ""
-
 #: Game.Levels.NegationWorld.L03_DoubleNegation
 msgid "Do you see how this relates to the previous level?"
+msgstr ""
+
+#: Game.Levels.ProductWorld.L04_Symmetry
+msgid "Product types are symmetric: an element of type `A × B` has a corresponding element of type `B × A` with components swapped."
 msgstr ""
 
 #: Game.Levels.ProductWorld.L07_Uncurrying
@@ -287,6 +328,10 @@ msgstr ""
 
 #: Game.Levels.NegationWorld.L03_DoubleNegation
 msgid "For any proposition `P`, `P → ¬ ¬ P`."
+msgstr ""
+
+#: Game.Levels.NegationWorld.L09_NegatingConjunction
+msgid "How can we apply the hypothesis `«{nq}»`?"
 msgstr ""
 
 #: Game.Levels.ConjunctionWorld.L08_CurryingImplication
@@ -375,6 +420,22 @@ msgstr ""
 msgid "Given an element `a : A` and a function of two variables `f : A → B → C`, define a function from `B → C` by evaluating the first variable of `f` at the element `a`."
 msgstr ""
 
+#: Game.Levels.NegationWorld.L09_NegatingConjunction
+msgid "In this level, we will study the proposition `¬ (P ∧ Q)`.\n"
+"\n"
+"How would we disprove the implication `P ∧ Q`?\n"
+"\n"
+"What does it mean for `P ∧ Q` to be false?\n"
+"\n"
+"On the one hand, it suffices for just `P` to be false.\n"
+"\n"
+"On the other hand, it suffices for just `Q to be false.\n"
+"\n"
+"That is, if either `P` or `Q` is false, then `P ∧ Q` is false.\n"
+"\n"
+"In this level, we will prove that `¬ P ∨ ¬ Q` implies `¬ (P ∧ Q)`."
+msgstr ""
+
 #: Game.Levels.DisjunctionWorld.L08_MoreDistributivity
 msgid "A more involved form of distributivity is also true.\n"
 "\n"
@@ -386,6 +447,10 @@ msgstr ""
 #: Game.Levels.DisjunctionWorld.L08_MoreDistributivity
 #: Game.Levels.DisjunctionWorld.L08_MoreDistributivity
 msgid "The implicit parentheses in the goal are to the right `(P ∧ R) ∨ ((P ∧ S) ∨ ((Q ∧ R) ∨ (Q ∧ S)))`."
+msgstr ""
+
+#: Game.Levels.NegationWorld.L07_NegatingImplication
+msgid "Try `apply «{nq}»`."
 msgstr ""
 
 #: Game.Levels.ConjunctionWorld.L06_CompoundImplication
@@ -412,6 +477,10 @@ msgstr ""
 msgid "`¬ P`, read as &ldquo; not `P`&rdquo; is an abbreviation for `P → False`."
 msgstr ""
 
+#: Game.Levels.NegationWorld.L10_TripleNegation
+msgid "Does this goal seem familiar? If not, it's okay to just follow your nose and let the logical structure guide you."
+msgstr ""
+
 #: Game.Levels.ProductWorld.L01_Pairing
 msgid "Given an element `a : A` and an element `b : B` there is a corresponding element of the product type `A × B` that is denoted by `⟨a , b⟩ : A × B`.\n"
 "\n"
@@ -430,8 +499,16 @@ msgid "There are two ways to prove that `P → Q` under the assumption given bel
 "You can also delete a proof attempt in line by line in `typewriter mode` using the `retry` button to the right of that line."
 msgstr ""
 
+#: Game.Levels.EmptyWorld.L03_ThroughEmpty
+msgid "For any types `A` and `B`, if there is a function `f : A → Empty` then there is also a function `A → B`."
+msgstr ""
+
 #: Game.Levels.ImplicationWorld.L06_ProvingAssumedImplication
 msgid "The lesson of this level is to pay attention to the big picture, namely what exactly you are being asked ot prove under what hypotheses."
+msgstr ""
+
+#: Game.Levels.NegationWorld.L07_NegatingImplication
+msgid "What can we prove with the hypotheses `«{i}»` and `«{p}»`?"
 msgstr ""
 
 #: Game.Levels.FunctionWorld.L07_CompositionRevisited
@@ -449,6 +526,10 @@ msgstr ""
 #: Game.Levels.DisjunctionWorld.L01_IntroducingOr
 #: Game.Levels.DisjunctionWorld.L02_AndImpliesOr
 msgid "If this is your first time solving this level, delete your code and prove the same theorem another way."
+msgstr ""
+
+#: Game.Levels.NegationWorld.L10_TripleNegation
+msgid "Triple Negation"
 msgstr ""
 
 #: Game.Levels.FunctionWorld.L04_ConstantFunctions
@@ -475,6 +556,10 @@ msgid "For the Boss Level of Conjunction World, the task is to prove a complicat
 "Good luck!"
 msgstr ""
 
+#: Game.Levels.EmptyWorld.L06_CoproductWithEmpty
+msgid "Coproduct With Empty"
+msgstr ""
+
 #: Game.Levels.ImplicationWorld.L06_ProvingAssumedImplication
 msgid "Which tactics can be used to prove `«{P}» → «{Q}»` with our given assumptions?"
 msgstr ""
@@ -494,6 +579,10 @@ msgstr ""
 msgid "Now your goal is a proof of `«{P}»`. Can you figure out how to finish the proof? If you need a reminder, click the button `Show more help!`"
 msgstr ""
 
+#: Game.Levels.NegationWorld.L09_NegatingConjunction
+msgid "Negating Conjunction"
+msgstr ""
+
 #: Game.Levels.DisjunctionWorld.L09_BossLevel
 msgid "We've now reached the Boss Level in the disjunction world.\n"
 "\n"
@@ -502,6 +591,10 @@ msgstr ""
 
 #: Game.Levels.ImplicationWorld.L01_ByAssumption
 msgid "If there is an assumption `e : E` and the goal has type `E`, then `exact e` closes the goal."
+msgstr ""
+
+#: Game.Levels.NegationWorld.L07_NegatingImplication
+msgid "The converse implication is more subtle, and will be addressed in the next world."
 msgstr ""
 
 #: Game.Levels.ImplicationWorld.L02_ModusPonens
@@ -529,6 +622,10 @@ msgstr ""
 msgid "`P ∨ Q` is true if and only if `Q ∨ P` is true."
 msgstr ""
 
+#: Game.Levels.NegationWorld.L08_NegatingDisjunction
+msgid "Have another look at the Universal Property Level of Disjunction World. How are these statements related?"
+msgstr ""
+
 #: Game.Levels.ConjunctionWorld.L04_LogicalEquivalence
 msgid "`P ∧ Q` is true if and only if `Q ∧ P` is true."
 msgstr ""
@@ -548,6 +645,16 @@ msgstr ""
 
 #: Game
 msgid "Computer-Verified Proof: a Hands-On Introduction to Interactive Theorem Proving"
+msgstr ""
+
+#: Game.Levels.EmptyWorld.L03_ThroughEmpty
+msgid "In this level, we will explore another weird consequence of the hypothesis that we have a function of type `A → Empty`.\n"
+"\n"
+"Let `A` and `B` be any types and assume there is a function `f : A → Empty`.\n"
+"\n"
+"Then it is always possible to define a function `A → B`.\n"
+"\n"
+"The proof requires a bit of cleverness, but you can ask for a few hints if you get stuck."
 msgstr ""
 
 #: Game.Levels.FunctionWorld.L01_IdentityFunction
@@ -713,12 +820,26 @@ msgstr ""
 msgid "Two functions `g : A → C` and `h : B → C` combine to define a single function of type `A ⊕ B → C`."
 msgstr ""
 
+#: Game.Levels.ClassicalWorld
+msgid "In Negation World, we proved various tautologies involving negation such as\n"
+"\n"
+"* `P → ¬ ¬ P`\n"
+"* `(P → Q) → (¬ Q → ¬ P)`\n"
+"* `¬ P ∨ ¬ Q → ¬ (P ∧ Q)`\n"
+"\n"
+"But we were not able to prove the converses of any of these implications. Why not?"
+msgstr ""
+
 #: Game.Levels.NegationWorld.L01_ExFalso
 msgid "For any proposition `P`, `False.elim : False → P` proves that `False` implies `P`."
 msgstr ""
 
 #: Game.Levels.DisjunctionWorld.L08_MoreDistributivity
 msgid "We are now ready for the Boss Level of Disjunction World."
+msgstr ""
+
+#: Game.Levels.NegationWorld.L07_NegatingImplication
+msgid "Try `have p : P := «{pnq}».1` to add a proof of `P` to your assumptions."
 msgstr ""
 
 #: Game.Levels.ImplicationWorld.L03_ComposingImplication
@@ -732,6 +853,14 @@ msgid "To prove an implication `S → T` one needs to give a construction of a p
 "In this level we will consider two propositions `P` and `Q` and assume that the proposition `P` is true.\n"
 "\n"
 "It follows that `Q → P` is true, no matter whether `Q` is true or false."
+msgstr ""
+
+#: Game.Levels.NegationWorld.L09_NegatingConjunction
+msgid "How can we apply the hypothesis `«{np}»`?"
+msgstr ""
+
+#: Game.Levels.ClassicalWorld.L01_ByContradiction
+msgid "Type `exact byContradiction` to tell Lean that we are appealing to the proof by contradiction strategy."
 msgstr ""
 
 #: Game.Levels.EmptyWorld.L02_ToEmpty
@@ -788,6 +917,10 @@ msgstr ""
 
 #: Game.Levels.ProductWorld.L06_Currying
 msgid "For any types `A`, `B`, and `C`, `Function.curry : (A × B → C) → (A → B → C)` is the function that sends `f : A × B → C` to the function that sends `a : A` and `b : B` to `f ⟨a, b⟩ : C`."
+msgstr ""
+
+#: Game.Levels.NegationWorld.L07_NegatingImplication
+msgid "Try `have q : Q := «{i}» «{p}»` to add a proof of `Q` to your assumptions."
 msgstr ""
 
 #: Game.Levels.ConjunctionWorld.L02_UsingAnd
@@ -895,8 +1028,17 @@ msgstr ""
 msgid "Implication World"
 msgstr ""
 
+#: Game.Levels.EmptyWorld.L05_ProductWithEmpty
+#: Game.Levels.EmptyWorld.L06_CoproductWithEmpty
+msgid "How do you construct elements of a function type?"
+msgstr ""
+
 #: Game.Levels.ConjunctionWorld.L07_MoreCompoundImplication
 msgid "For propositions `P`, `Q`, and `R`, `And.uncurry` is a proof that `P → Q → R` implies `P ∧ Q → R`."
+msgstr ""
+
+#: Game.Levels.NegationWorld.L10_TripleNegation
+msgid "How can you use `«{p}»` and `«{np}»` to get a contradiction?"
 msgstr ""
 
 #: Game.Levels.NegationWorld.L02_Negation
@@ -907,12 +1049,20 @@ msgstr ""
 msgid "This logical equivalence captures the *universal property* of disjunction, explaining how the mathematical or is used in a proof."
 msgstr ""
 
-#: Game.Levels.FunctionWorld.L01_IdentityFunction
-msgid "For a type `A`, the identity function `id : A → A` is the function defined by sending and arbitrary element `a : A` to itself."
+#: Game.Levels.NegationWorld.L09_NegatingConjunction
+msgid "The converse implication is more subtle because if `P ∧ Q` is false we don't know which of `P` or `Q` is false. This will be addressed in the next world."
 msgstr ""
 
 #: Game.Levels.NegationWorld.L01_ExFalso
 msgid "Lean has a built-in name `False.elim : Empty → P` for the theorem you have just proven. Thus `exact False.elim` will also solve this level. This theorem has been added to the library."
+msgstr ""
+
+#: Game.Levels.FunctionWorld.L01_IdentityFunction
+msgid "For a type `A`, the identity function `id : A → A` is the function defined by sending and arbitrary element `a : A` to itself."
+msgstr ""
+
+#: Game.Levels.NegationWorld.L08_NegatingDisjunction
+msgid "For any propositions `P` and `Q`, the propositions `¬ (P ∨ Q)` and `¬ P ∧ ¬ Q` are logically equivalent."
 msgstr ""
 
 #: Game.Levels.ConjunctionWorld.L06_CompoundImplication
@@ -952,6 +1102,10 @@ msgstr ""
 msgid "What is the logical structure of the type of `«{np}»`?"
 msgstr ""
 
+#: Game.Levels.ClassicalWorld.L02_ExcludedMiddle
+msgid "For any proposition `P`, `Classical.em P : P ∨ ¬ P ` proves that `P` or `¬ P` is true."
+msgstr ""
+
 #: Game.Levels.CoproductWorld.L06_Associativity
 msgid "Given three types `A`, `B`, and `C`, the coproduct type construction may be iterated to define types `(A ⊕ B) ⊕ C` and `A ⊕ (B ⊕ C)`, the latter of which is abbreviated `A ⊕ B ⊕ C`.\n"
 "\n"
@@ -968,6 +1122,10 @@ msgid "Assuming `x` is a variable in the local context with an inductive type, `
 "For example, given an assumption `h : P ∨ Q`, `cases h` splits the main goal into two goals, one assuming `P` holds and the other assuming `Q` holds."
 msgstr ""
 
+#: Game.Levels.EmptyWorld.L07_BossLevel
+msgid "The empty type is a weird type, so what was the point of this world? The hope is that your experience defining functions involving the empty type will prepare you to think about what it means to prove that a proposition is false in Negation World. Go there next."
+msgstr ""
+
 #: Game.Levels.ProductWorld.L07_Uncurrying
 msgid "Consider a function `f : A × B → C` mapping out of a product type. This function takes an ordered pair of elements, one from `A` and one from `B` and returns an element of type `C` denoted by `f ⟨a,b⟩`. Does this sound familiar?\n"
 "\n"
@@ -980,6 +1138,10 @@ msgstr ""
 
 #: Game.Levels.ConjunctionWorld.L01_IntroducingAnd
 msgid "Use the tactic `constructor` to ask Lean to break up the goal into steps, of first proving `«{P}»` and then proving `«{Q}»`."
+msgstr ""
+
+#: Game.Levels.EmptyWorld.L03_ThroughEmpty
+msgid "Recall that for any type `B`, there is a function `Empty.elim : Empty → B`. Using this and your element of `Empty` can you define an element of type `B`?"
 msgstr ""
 
 #: Game.Levels.ProductWorld
@@ -998,6 +1160,20 @@ msgstr ""
 msgid "Define the currying function, convering a function out of a product type into a function of two variables."
 msgstr ""
 
+#: Game.Levels.NegationWorld.L07_NegatingImplication
+msgid "In this level, we will study the proposition `¬ (P → Q)`.\n"
+"\n"
+"How would we disprove the implication `P → Q`?\n"
+"\n"
+"What does it mean for `P → Q` to be false?\n"
+"\n"
+"The implication asserts that if `P` is true then `Q` must be true as well.\n"
+"\n"
+"So if we show that `P` is true but `Q` is false, this would disprove the implication.\n"
+"\n"
+"In this level, we will prove that `P ∧ ¬ Q` implies `¬ (P → Q)`. That is, if `P` is true and `Q` is false, then `P → Q` is not true."
+msgstr ""
+
 #: Game.Levels.EmptyWorld.L01_FromEmpty
 msgid "Type `cases «{p}»` to ask Lean to consider all possible cases involving an element of the empty type. As there are no cases, this will complete the proof."
 msgstr ""
@@ -1012,6 +1188,20 @@ msgstr ""
 
 #: Game.Levels.ProductWorld.L02_FirstProjection
 msgid "For any types `A` and `B`, `Prod.fst : A × B → A` is the function that sends `p : A × B` to its first coordinate `p.1 : A`."
+msgstr ""
+
+#: Game.Levels.NegationWorld.L05_Absurd
+msgid "In the last level we provided the *law of noncontradiction*:\n"
+"\n"
+"`¬ (P ∧ ¬ P)`\n"
+"\n"
+"In this level, we will see that it is possible to prove any proposition `Q` from the hypothesis that both `P` and `¬ P` are true.\n"
+"\n"
+"In other words, `P → ¬ P → Q` is always true.\n"
+"\n"
+"If we swapped the hypothesis, a similar proof would also show that `¬ P → P → Q` is true. In other words, if `P` is false, then `P → Q` is always true.\n"
+"\n"
+"The proof requires a bit of cleverness, but you can ask for a few hints if you get stuck."
 msgstr ""
 
 #: Game.Levels.CoproductWorld.L03_ComponentFunctions
@@ -1046,6 +1236,11 @@ msgstr ""
 msgid "The goal is a product type, so `constructor` can be used to break the goal into pieces."
 msgstr ""
 
+#: Game.Levels.NegationWorld.L08_NegatingDisjunction
+#: Game.Levels.NegationWorld.L08_NegatingDisjunction
+msgid "Look at the theorems about `Or` if you have forgotten how to tell Lean about the relationship between `P` and `P ∨ Q`."
+msgstr ""
+
 #: Game.Levels.DisjunctionWorld.L04_Symmetry
 msgid "Did you give the same proof twice? If so, why does this make sense? If not, could you have done this? In fact, we gave a name `Or.symm` to the proof given in the previous level, as you can see in the list of theorems to the right. Try typing `exact Or.symm` at an appropriate place in your proof."
 msgstr ""
@@ -1061,6 +1256,11 @@ msgstr ""
 #: Game.Levels.DisjunctionWorld.L07_Distributivity
 #: Game.Levels.CoproductWorld.L07_Distributivity
 msgid "Distributivity"
+msgstr ""
+
+#: Game.Levels.EmptyWorld.L05_ProductWithEmpty
+#: Game.Levels.EmptyWorld.L06_CoproductWithEmpty
+msgid "What is the logical structure of this type?"
 msgstr ""
 
 #: Game.Levels.ConjunctionWorld.L08_CurryingImplication
@@ -1079,10 +1279,19 @@ msgstr ""
 msgid "Type `exact «{p}»` to tell Lean that `«{p}»` is a proof of `«{P}»`."
 msgstr ""
 
+#: Game.Levels.NegationWorld.L06_ModusTollens
+#: Game.Levels.NegationWorld.L07_NegatingImplication
+#: Game.Levels.NegationWorld.L09_NegatingConjunction
+#: Game.Levels.NegationWorld.L09_NegatingConjunction
+msgid "What is the logical structure of the goal?"
+msgstr ""
+
 #: Game.Levels.ImplicationWorld.L09_BossLevel
 #: Game.Levels.ConjunctionWorld.L10_BossLevel
 #: Game.Levels.FunctionWorld.L09_BossLevel
 #: Game.Levels.ProductWorld.L10_BossLevel
+#: Game.Levels.EmptyWorld.L07_BossLevel
+#: Game.Levels.NegationWorld.L11_BossLevel
 msgid "Boss Level"
 msgstr ""
 
@@ -1122,6 +1331,10 @@ msgstr ""
 msgid "This was created using the GameSkeleton Github Repo from the Lean Games Server hosted by ADAM: Anticipating the Digital Age of Mathematics at Heinrich Heine University Düsseldorf. It is designed for a first year seminar course taught at Johns Hopkins University in Fall 2025 with the title `Computer-Verified Proof: a Hands-On Introduction to Interactive Theorem Proving`."
 msgstr ""
 
+#: Game.Levels.EmptyWorld.L06_CoproductWithEmpty
+msgid "For any type `A`, there are functions in both directions between the types `A` and `A ⊕ Empty`."
+msgstr ""
+
 #: Game.Levels.ConjunctionWorld.L01_IntroducingAnd
 msgid "Introducing And"
 msgstr ""
@@ -1131,6 +1344,14 @@ msgid "The simplest example of a function is the identity function, which may be
 "`id : A → A` is defined to carry any element `a : A` to itself.\n"
 "\n"
 "To define a function `f : A → B` one must define a rule that converts an arbitrary element `x : A` to some element of type `B`. Start by typing `intro x` to add an arbitrary element `x : A` to the context and update the goal to a term of type `B`."
+msgstr ""
+
+#: Game.Levels.ClassicalWorld.L01_ByContradiction
+msgid "In classical logic, for any proposition `P`, `¬ ¬ P` implies `P`."
+msgstr ""
+
+#: Game.Levels.EmptyWorld.L04_Composition
+msgid "Composition"
 msgstr ""
 
 #: Game.Levels.FunctionWorld.L09_BossLevel
@@ -1149,6 +1370,10 @@ msgstr ""
 
 #: Game.Levels.CoproductWorld.L07_Distributivity
 msgid "For types `A`, `B`, and `C`, there are canonical functions between the types `A × (B ⊕ C)` and `(A × B) ⊕ (A × C)`."
+msgstr ""
+
+#: Game.Levels.ClassicalWorld.L01_ByContradiction
+msgid "Lean has a built-in name `Classical.byContradiction : ¬ ¬ P → P` for this implication, which is also called *double negation elimination*. In the source files for Classical World, we have told that we want to use classical reasoning, which is why typing `exact byContradiction` suffices to solve this level."
 msgstr ""
 
 #: Game.Levels.DisjunctionWorld
@@ -1180,6 +1405,10 @@ msgid "For any proposition `P`, the following is true:\n"
 "Do you see how this relates to the previous levels?"
 msgstr ""
 
+#: Game.Levels.NegationWorld.L11_BossLevel
+msgid "Move on to Classical World to better understand the statements involving negation that we have not been able to prove thus far."
+msgstr ""
+
 #: Game.Levels.DisjunctionWorld.L05_UniversalProperty
 msgid "`P ∨ Q → R` is true if and only if `(P → R) ∧ (Q → R)` is true."
 msgstr ""
@@ -1202,6 +1431,10 @@ msgstr ""
 msgid "We've seen that functions out of a coproduct can be split into component functions. Similarly, component functions `g : A → C` and `h : B → C` can be assembled into a function of type `A ⊕ B → C`, as we will explore in the next level."
 msgstr ""
 
+#: Game.Levels.NegationWorld.L06_ModusTollens
+msgid "Where have you seen this construction before? Can you solve this level in a different way?"
+msgstr ""
+
 #: Game.Levels.FunctionWorld.L07_CompositionRevisited
 msgid "Define the composition of two functions as a multivariable function between function types."
 msgstr ""
@@ -1210,16 +1443,16 @@ msgstr ""
 msgid "For any `a : A`, there is an element `Sum.inl a : A ⊕ B`."
 msgstr ""
 
+#: Game.Levels.NegationWorld.L02_Negation
+msgid "Negation"
+msgstr ""
+
 #: Game.Levels.ConjunctionWorld.L01_IntroducingAnd
 msgid "The `constructor` tactic can be used when the goal is a conjunction (among other settings) to split the goal into cases."
 msgstr ""
 
 #: Game.Levels.ProductWorld.L09_UniversalProperty
 msgid "What type does `«{f}».1` belong to? Is this useful?"
-msgstr ""
-
-#: Game.Levels.NegationWorld.L02_Negation
-msgid "Negation"
 msgstr ""
 
 #: Game.Levels.ProductWorld.L07_Uncurrying
@@ -1246,6 +1479,10 @@ msgid "The type `Empty` has no elements &mdash or, more precisely, the type `Emp
 "The task in this level is to define it."
 msgstr ""
 
+#: Game.Levels.EmptyWorld.L05_ProductWithEmpty
+msgid "If your answer does not use the functions `Empty.elim` and `Prod.snd`, you might have fun trying to solve this level again using them in appropriate places."
+msgstr ""
+
 #: Game.Levels.CoproductWorld.L06_Associativity
 msgid "Next we will study the relationship between products and coproducts."
 msgstr ""
@@ -1262,6 +1499,11 @@ msgstr ""
 msgid "If `P ∧ Q` is true, then `Q ∧ P` is too.\n"
 "\n"
 "In other words, `P ∧ Q` implies `Q ∧ P`, as is expressed by the proposition `P ∧ Q → Q ∧ P` which is implicitly parenthesized as `(P ∧ Q) → (Q ∧ P)`."
+msgstr ""
+
+#: Game.Levels.NegationWorld.L08_NegatingDisjunction
+#: Game.Levels.NegationWorld.L08_NegatingDisjunction
+msgid "What can you do with the hypothesis `«{nor}»`?"
 msgstr ""
 
 #: Game.Levels.ConjunctionWorld.L06_CompoundImplication
@@ -1297,8 +1539,26 @@ msgstr ""
 msgid "Now use `cases «{p}»` or `rcases «{p}» with a | x` or similar to give your own variable names."
 msgstr ""
 
+#: Game.Levels.EmptyWorld.L06_CoproductWithEmpty
+msgid "What proof strategy is available with an element of a coproduct type?"
+msgstr ""
+
 #: Game.Levels.ConjunctionWorld.L01_IntroducingAnd
 msgid "Alternatively, you can type `exact ⟨p,q⟩' using '\\\\<' and '\\\\>' to type the angle brackets."
+msgstr ""
+
+#: Game.Levels.EmptyWorld.L05_ProductWithEmpty
+msgid "Recall that for any types `A` and `B`, there is a *product type* denoted `A × B`.\n"
+"\n"
+"In particular, for any type `A`, we may form the product `A × Empty` with the empty type.\n"
+"\n"
+"Elements of product types are pairs of elements, one from the first type and one from the second type.\n"
+"\n"
+"But the empty type does not have any elements! So this means the product `A × Empty` cannot have any elements either.\n"
+"\n"
+"More precisely, the type `A × Empty` is *equivalent* to the empty type in a sense we cannot yet make precise.\n"
+"\n"
+"But we can at least show that there are functions `Empty → A × Empty` and `A × Empty → Empty`, which as discussed in a previous level, indicates that `A × Empty` cannot have any elements either."
 msgstr ""
 
 #: Game.Levels.FunctionWorld.L05_MultivariableFunctions
@@ -1311,6 +1571,20 @@ msgstr ""
 
 #: Game.Levels.CoproductWorld.L05_Symmetry
 msgid "The coproduct type, like the product type, is *symmetric*, and in particular has a canonical map of type `A ⊕ B → B ⊕ A`. Your task in this level is to define it."
+msgstr ""
+
+#: Game.Levels.EmptyWorld.L06_CoproductWithEmpty
+msgid "Recall that for any types `A` and `B`, there is a *coproduct type* denoted `A ⊕ B`.\n"
+"\n"
+"In particular, for any type `A`, we may form the product `A ⊕ Empty` with the empty type.\n"
+"\n"
+"In general, coproduct types like `A ⊕ Empty` have two types of elements: those of the form `Sum.inl a` for some `a : A` and those of the form `Sum.inr x` for `x : Empty`.\n"
+"\n"
+"But the empty type does not have any elements. So this second case does not exist.\n"
+"\n"
+"It follows that the type `A ⊕ Empty` is *equivalent* to the type `A` in a sense we cannot yet make precise.\n"
+"\n"
+"But we can at least show that there are functions `A → A ⊕ Empty` and `A ⊕ Empty → A`."
 msgstr ""
 
 #: Game.Levels.FunctionWorld.L03_ComposingFunctions
@@ -1347,16 +1621,6 @@ msgstr ""
 
 #: Game.Levels.EmptyWorld.L02_ToEmpty
 msgid "To Empty"
-msgstr ""
-
-#: Game.Levels.NegationWorld.L05_Absurd
-msgid "In the last level we provided the *law of noncontradiction*:\n"
-"\n"
-"`¬ (P ∧ ¬ P)`\n"
-"\n"
-"In this level, we will see that it is possible to prove any proposition `Q` from the hypothesis that both `P` and `¬ P` are true.\n"
-"\n"
-"The proof requires a bit of cleverness, but you can ask for a few hints if you get stuck."
 msgstr ""
 
 #: Game.Levels.NegationWorld
@@ -1464,6 +1728,10 @@ msgstr ""
 msgid "For any types `A` and `B`, there is a canonical function of type `A ⊕ B → B ⊕ A`."
 msgstr ""
 
+#: Game.Levels.NegationWorld.L08_NegatingDisjunction
+msgid "Here the `∧` is the outermost logical connective. How do you prove conjunctions?"
+msgstr ""
+
 #: Game.Levels.ImplicationWorld.L07_OnParentheses
 #: Game.Levels.ImplicationWorld.L07_OnParentheses
 #: Game.Levels.ImplicationWorld.L07_OnParentheses
@@ -1476,6 +1744,10 @@ msgstr ""
 msgid "The goal is a term of a function type so type `intro p` to give yourself a term `p : A × B`."
 msgstr ""
 
+#: Game.Levels.ClassicalWorld.L01_ByContradiction
+msgid "For any proposition `P`, `Classical.byContradiction : ¬ ¬ P → P` proves that if `P` is not false, then `P` is true."
+msgstr ""
+
 #: Game.Levels.ConjunctionWorld.L09_UniversalProperty
 #: Game.Levels.DisjunctionWorld.L05_UniversalProperty
 msgid "Universal Property"
@@ -1484,6 +1756,10 @@ msgstr ""
 #: Game.Levels.DisjunctionWorld.L09_BossLevel
 msgid "If `T ∨ U → V ∧ Y` and `Q → P → T` and `Y → Q → W` and\n"
 "`(V ∧ W) ∨ (X ∧ Y) → Z` and `(R → S → U) ∧ (V → R → X)` then  `P ∧ (Q ∨ R) ∧ S` implies `Z`."
+msgstr ""
+
+#: Game.Levels.EmptyWorld.L07_BossLevel
+msgid "There are functions in both directions between the types `Empty ⊕ (Empty → Empty)` and `(Empty → Empty) × (Empty → Empty)`."
 msgstr ""
 
 #: Game.Levels.ProductWorld.L03_SecondProjection
@@ -1506,12 +1782,51 @@ msgstr ""
 msgid "Recall that `¬ Q` is an abbreviation for the type `Q → False`."
 msgstr ""
 
+#: Game.Levels.ClassicalWorld.L01_ByContradiction
+msgid "By Contradiction"
+msgstr ""
+
 #: Game.Levels.FunctionWorld.L05_MultivariableFunctions
 msgid "Multivariable functions"
 msgstr ""
 
+#: Game.Levels.EmptyWorld.L04_Composition
+msgid "In this level, we will revisit the composition function in the presence of the empty type.\n"
+"\n"
+"Recall that for any types `A`, `B`, and `C`, composition defines a function:\n"
+"\n"
+"`∘ : (B → C) → (A → B) → (A → C)`.\n"
+"\n"
+"In particular, if `C` is the empty type, composition defines a function:\n"
+"\n"
+"`∘ : (B → Empty) → (A → B) → (A → Empty)`.\n"
+"\n"
+"Your task in this level is to define the closely related variant of the composition function which has type:\n"
+"\n"
+"`(A → B) → (B → Empty) → (A → Empty)`\n"
+"\n"
+"as this construction will be more closely related to something we will encounter in the next world."
+msgstr ""
+
+#: Game.Levels.NegationWorld.L09_NegatingConjunction
+#: Game.Levels.NegationWorld.L09_NegatingConjunction
+msgid "What can we prove with the hypothesis `«{pq}»`?"
+msgstr ""
+
 #: Game.Levels.DisjunctionWorld.L03_UsingOr
 msgid "For propositions `P` and `Q`, `Or.symm` is a proof that `P ∨ Q → Q ∨ P`."
+msgstr ""
+
+#: Game.Levels.NegationWorld.L11_BossLevel
+msgid "The Boss Level of Negation World previews the next world by studying the relationship between two *classical* tautologies that we have not been able to prove involving a proposition `P`.\n"
+"\n"
+"One statement we have not been able to prove is called *double negation elimination*: `¬ ¬ P → P`.\n"
+"\n"
+"Another statement we have not been able to prove is called *law of excluded middle*: `P ∨ ¬ P`.\n"
+"\n"
+"What we *can* prove is that law of excluded middle implies double negation elimination.\n"
+"\n"
+"Have fun!"
 msgstr ""
 
 #: Game.Levels.ProductWorld.L08_ComponentFunctions
@@ -1545,8 +1860,16 @@ msgstr ""
 msgid "A function of type `A ⊕ B → C` may be split into component functions of types `A → C` and `B → C`."
 msgstr ""
 
+#: Game.Levels.EmptyWorld.L05_ProductWithEmpty
+msgid "Product With Empty"
+msgstr ""
+
 #: Game.Levels.CoproductWorld.L08_BossLevel
 msgid "Congratulations!"
+msgstr ""
+
+#: Game.Levels.ClassicalWorld
+msgid "Classical World"
 msgstr ""
 
 #: Game.Levels.NegationWorld.L05_Absurd
@@ -1557,13 +1880,13 @@ msgstr ""
 msgid "Recall that `«{c}».1` and `«{c}».2` are the notations used for components of a conjunction, like `«{c}» : P ∧ ¬ P`. You can use these names directly or introduce them as assumptions with `have := «{c}».1` and `have := «{c}».2`."
 msgstr ""
 
+#: Game.Levels.NegationWorld.L02_Negation
+msgid "We have an assumption `«{np}» : P → False`. What can be done with an element of a function type?"
+msgstr ""
+
 #: Game.Levels.ImplicationWorld.L04_ProvingImplication
 #: Game.Levels.ImplicationWorld.L05_ProvingImpliedAssumption
 msgid "Let us now explore other implications that are provable with this strategy."
-msgstr ""
-
-#: Game.Levels.NegationWorld.L02_Negation
-msgid "We have an assumption `«{np}» : P → False`. What can be done with an element of a function type?"
 msgstr ""
 
 #: Game.Levels.ProductWorld.L08_ComponentFunctions
@@ -1574,6 +1897,10 @@ msgstr ""
 msgid "Using Or"
 msgstr ""
 
+#: Game.Levels.NegationWorld.L10_TripleNegation
+msgid "What can you do with hypothesis `«{nnnp}»`?"
+msgstr ""
+
 #: Game.Levels.FunctionWorld.L05_MultivariableFunctions
 msgid "Both `exact b` and `assumption` can be used here."
 msgstr ""
@@ -1582,8 +1909,16 @@ msgstr ""
 msgid "For any proposition `P`, if `¬ P` and `P` are both true, then we obtain a proof of `False`."
 msgstr ""
 
+#: Game.Levels.EmptyWorld.L04_Composition
+msgid "Does this construction feel intuitive or does it feel strange?"
+msgstr ""
+
 #: Game.Levels.ImplicationWorld.L03_ComposingImplication
 msgid "If the goal is to prove `S` and we have a hypothesis `s : S`, the tactic `exact s` supplies the required proof."
+msgstr ""
+
+#: Game.Levels.EmptyWorld.L03_ThroughEmpty
+msgid "Through Empty"
 msgstr ""
 
 #: Game.Levels.EmptyWorld.L01_FromEmpty
@@ -1607,6 +1942,30 @@ msgstr ""
 msgid "Left Inclusion"
 msgstr ""
 
+#: Game.Levels.NegationWorld.L07_NegatingImplication
+msgid "What else can we prove with the hypothesis `«{pnq}»`?"
+msgstr ""
+
+#: Game.Levels.NegationWorld.L10_TripleNegation
+msgid "For any proposition `P`, `¬ P` is logically equivalent to `¬ ¬ ¬ P`."
+msgstr ""
+
+#: Game.Levels.NegationWorld.L08_NegatingDisjunction
+msgid "In this level, we will study the proposition `¬ (P ∨ Q)`.\n"
+"\n"
+"How would we disprove the implication `P ∨ Q`?\n"
+"\n"
+"What does it mean for `P ∨ Q` to be false?\n"
+"\n"
+"Recall, if `P` is true, then we can prove `P ∨ Q`. Similarly, if `Q` is true, we can prove `P ∨ Q`.\n"
+"\n"
+"So if `P ∨ Q` is false, then both `P` and `Q` must be false.\n"
+"\n"
+"In this level, we will show that `¬ (P ∨ Q)` is logically equivalent to `¬ P ∧ ¬ Q`.\n"
+"\n"
+"If you have forgotten the meaning of logical equivalence, denoted `↔`, you can look it up in the library."
+msgstr ""
+
 #: Game.Levels.ProductWorld.L02_FirstProjection
 msgid "Now type `exact «{p}».1` to return the first projection."
 msgstr ""
@@ -1625,6 +1984,10 @@ msgid "What must be true in order to have `P ∨ Q → R`?\n"
 "The aim of this level is to establish a logical equivalence between `P ∨ Q → R` and `(P → R) ∧ (Q → R)`."
 msgstr ""
 
+#: Game.Levels.EmptyWorld.L03_ThroughEmpty
+msgid "Use `have := «{f}» «{a}»` to add an element of the empty type to the list of assumptions."
+msgstr ""
+
 #: Game.Levels.CoproductWorld.L04_UniversalProperty
 msgid "A function `f : A ⊕ B → C` mapping out of a coproduct type may be *broken apart* into component functions of types `A → C` and `B → C`.\n"
 "\n"
@@ -1639,6 +2002,14 @@ msgid "A function `f : A ⊕ B → C` mapping out of a coproduct type may be *br
 "Given a hypothesis `x : A ⊕ B`, either `cases x` or `rcases x with a | b` can be used to split into the two cases mentioned above."
 msgstr ""
 
+#: Game.Levels.EmptyWorld.L06_CoproductWithEmpty
+msgid "If your answer does not use the function `Sum.inl`, you might have fun trying to solve this level again using it in an appropriate place."
+msgstr ""
+
+#: Game.Levels.NegationWorld.L04_Noncontradiction
+msgid "In the next level, we will see that a contradiction of the form `P ∧ ¬ P` can be used to prove any proposition."
+msgstr ""
+
 #: Game.Levels.CoproductWorld.L03_ComponentFunctions
 msgid "Consider a function `f : A ⊕ B → C` mapping out of a coproduct type.\n"
 "\n"
@@ -1647,10 +2018,6 @@ msgid "Consider a function `f : A ⊕ B → C` mapping out of a coproduct type.\
 "The other component function is defined by composing `f : A ⊕ B → C` with the function `Sum.inr : B → A ⊕ B` to obtain a function `h : B → C`.\n"
 "\n"
 "Since a *single* function of type `A ⊕ B → C` decomposes into a pair of functions of types `A → C` and `B → C`, we will define a function from the function type `A ⊕ B → C` into the product of the function types `(A → C) × (B → C)`."
-msgstr ""
-
-#: Game.Levels.NegationWorld.L04_Noncontradiction
-msgid "In the next level, we will see that a contradiction of the form `P ∧ ¬ P` can be used to prove any proposition."
 msgstr ""
 
 #: Game.Levels.FunctionWorld.L08_Evaluation
@@ -1679,6 +2046,31 @@ msgstr ""
 
 #: Game.Levels.CoproductWorld.L02_RightInclusion
 msgid "For any `b : B`, there is an element `Sum.inr b : A ⊕ B`."
+msgstr ""
+
+#: Game.Levels.ClassicalWorld.L02_ExcludedMiddle
+msgid "Double negation elimination implies the law of excluded middle.\n"
+"\n"
+"That is, using the strategy of proof by contradiction, we can prove that `P ∨ ¬ P` holds for any proposition `P`.\n"
+"\n"
+"Start the proof with `apply byContradiction` and see how the goal transforms.\n"
+"\n"
+"Then see if you can complete the rest."
+msgstr ""
+
+#: Game.Levels.NegationWorld.L06_ModusTollens
+#: Game.Levels.NegationWorld.L07_NegatingImplication
+msgid "What is the logical structure of the type of `«{nq}»`?"
+msgstr ""
+
+#: Game.Levels.ClassicalWorld.L02_ExcludedMiddle
+msgid "Excluded Middle"
+msgstr ""
+
+#: Game.Levels.EmptyWorld.L07_BossLevel
+msgid "For the Boss Level of Empty World, we construct something that is just weird.\n"
+"\n"
+"Have fun!"
 msgstr ""
 
 #: Game.Levels.ConjunctionWorld.L04_LogicalEquivalence
@@ -1737,6 +2129,10 @@ msgstr ""
 msgid "Ex Falso"
 msgstr ""
 
+#: Game.Levels.NegationWorld.L09_NegatingConjunction
+msgid "What proof technique is available when you have a hypothesis like `«{hyp}»`?"
+msgstr ""
+
 #: Game.Levels.DisjunctionWorld.L01_IntroducingOr
 msgid "You have two choices: to reduce to the case of proving the left proposition or to reduce to the case of proving the right proposition. Type `apply Or.inl` to tell Lean you'd like too prove the left proposition or type `apply Or.inr` to tell Lean you'd like to prove the right proposition."
 msgstr ""
@@ -1765,6 +2161,10 @@ msgstr ""
 msgid "A hypothesis `h : P ∧ Q` provides explicit proofs of both `P` and `Q` which are denoted in Lean by `h.1 : P` and `h.2 : Q`."
 msgstr ""
 
+#: Game.Levels.EmptyWorld.L06_CoproductWithEmpty
+msgid "Recall you can type `cases «{x}»` to ask Lean to consider which cases are actually possible for the hypothetical element `«{x}»`."
+msgstr ""
+
 #: Game.Levels.ConjunctionWorld.L02_UsingAnd
 msgid "This can be solved in two ways. Can you find them both?"
 msgstr ""
@@ -1777,16 +2177,24 @@ msgstr ""
 msgid "There is another way to solve this level. Start with `apply f` and see what happens. Have you seen a construction like this before?"
 msgstr ""
 
+#: Game.Levels.NegationWorld.L03_DoubleNegation
+msgid "The *double negation* of a proposition `P` is the proposition `¬ ¬ P`.\n"
+"\n"
+"In this level, we reinterpret the construction of the previous level, as a proof that `P → ¬ ¬ P` is always true, no matter whether or not `P` is true."
+msgstr ""
+
 #: Game.Levels.ProductWorld.L06_Currying
 msgid "Lean uses the name `Function.curry : (A × B → C) → (A → B → C)` for the function you have just defined. This function has been added to the library of definitions.\n"
 "\n"
 "We'll now study the reverse process, which converts a function of type `A → B → C` to a function of type `A × B → C`."
 msgstr ""
 
-#: Game.Levels.NegationWorld.L03_DoubleNegation
-msgid "The *double negation* of a proposition `P` is the proposition `¬ ¬ P`.\n"
-"\n"
-"In this level, we reinterpret the construction of the previous level, as a proof that `P → ¬ ¬ P` is always true, no matter whether or not `P` is true."
+#: Game.Levels.EmptyWorld.L04_Composition
+msgid "For any types `A` and `B`, there is a function `(A → B) → (B → Empty) → (A → Empty)` defined by composition."
+msgstr ""
+
+#: Game.Levels.NegationWorld.L07_NegatingImplication
+msgid "What can we prove with the hypothesis `«{pnq}»`?"
 msgstr ""
 
 #: Game.Levels.ImplicationWorld.L08_ModusPonensAgain
@@ -1843,6 +2251,10 @@ msgid "We've seen that functions `f : X → A × B` into product types can be de
 "We'll now consider the reversed process, defining a function into a product type from a pair of component functions."
 msgstr ""
 
+#: Game.Levels.NegationWorld.L06_ModusTollens
+msgid "For any propositions `P` and `Q`, if `P → Q` holds then `¬ Q → ¬ P` also holds."
+msgstr ""
+
 #: Game.Levels.CoproductWorld.L02_RightInclusion
 msgid "We'll now study how hypothesis `x : A ⊕ B` can be used."
 msgstr ""
@@ -1874,6 +2286,14 @@ msgstr ""
 
 #: Game.Levels.DisjunctionWorld.L07_Distributivity
 msgid "Conjunction distributes over disjunction: `P ∧ (Q ∨ R)` and `(P ∧ Q) ∨ (P ∧ R)` are logically equivalent."
+msgstr ""
+
+#: Game.Levels.ClassicalWorld.L02_ExcludedMiddle
+msgid "Lean has a built-in name `Classical.em P  : P ∨ ¬ P` for *the law of excluded middle* at the proposition `P`. In Classical World, classical reasoning techniques are open, so you can solve this level by typing `exact em P`.\n"
+"\n"
+"Note that in contrast to `byContradiction : ¬ ¬ P → P`, the proposition `P` is an *explicit argument* of the function `em`. So `exact em` will not work.\n"
+"\n"
+"This is because when you are applying proof by contradiction, it is usually clear from context which proposition `P` is involved, whereas when you are appealing to the law of excluded middle, this is often not so clear."
 msgstr ""
 
 #: Game.Levels.ProductWorld.L04_Symmetry
@@ -1909,6 +2329,11 @@ msgid "For types `A` and `B`, the coproduct type `A ⊕ B` has two kinds of elem
 "Note that `Sum.inl, Sum.inr : A → A ⊕ A` are *different functions* (as long as the type `A` has at least one element) in a way we will be able to make more precise later."
 msgstr ""
 
+#: Game.Levels.NegationWorld.L07_NegatingImplication
+msgid "Try `have nq : ¬ Q := «{pnq}».2` to add a proof of `¬ Q` to your\n"
+"assumptions, where `\\neg` is used to type `¬`."
+msgstr ""
+
 #: Game.Levels.ConjunctionWorld.L06_CompoundImplication
 msgid "Recall that implication is *NOT* associative: the propositions `(P → Q) → R` and `P → (Q → R)` are not logically equivalent, and `P → Q → R` is an abbreviation for the former.\n"
 "\n"
@@ -1931,6 +2356,10 @@ msgstr ""
 msgid "In summary, something very strange happens if the types `A` and `A → Empty` both have elements."
 msgstr ""
 
+#: Game.Levels.NegationWorld.L07_NegatingImplication
+msgid "For any propositions `P` and `Q`, if `P` is true and `Q` is false, then `P → Q` is not true."
+msgstr ""
+
 #: Game.Levels.ProductWorld.L05_Associativity
 #: Game.Levels.CoproductWorld.L06_Associativity
 #: Game.Levels.CoproductWorld.L07_Distributivity
@@ -1944,6 +2373,26 @@ msgstr ""
 
 #: Game.Levels.ProductWorld.L01_Pairing
 msgid "Now Lean asks you to supply an element of type `«{B}»`. Which tactic applies here?"
+msgstr ""
+
+#: Game.Levels.ClassicalWorld.L01_ByContradiction
+msgid "Let `P` be a proposition.\n"
+"\n"
+"We have learned that there is a default strategy to prove `¬ P`, i.e., that `P` implies `False`.\n"
+"\n"
+"The strategy is to start by assuming we have a proof `p : P`, in other words, assuming that `P` is true.\n"
+"\n"
+"Then the goal is to derive an element of `False`, also known as a *contradiction*.\n"
+"\n"
+"This proof strategy is fully compatible with constructive mathematics.\n"
+"\n"
+"There is a related, by distinct, strategy that can be used to prove a proposition `P` assuming classical logic called &ldquo;proof by contradiction&rdquo;. Here one assumes we have a proof `np : ¬ P`, in other words, assuming that `P` is false.\n"
+"\n"
+"Then the goal is again to derive an element of `False`, also known as a contradiction.\n"
+"\n"
+"Such a proof &mdash; assuming `np : ¬ P` and then deriving an element of `False` &mdash; constructs an element of `¬ ¬ P`.\n"
+"\n"
+"In classical logic, there is an implication `¬ ¬ P → P`, which is why &ldquo;proof by contradiction&rdquo; can be used to ultimately prove that `P` is true."
 msgstr ""
 
 #: Game.Levels.FunctionWorld.L09_BossLevel
@@ -1978,6 +2427,10 @@ msgstr ""
 msgid "From Empty"
 msgstr ""
 
+#: Game.Levels.NegationWorld.L08_NegatingDisjunction
+msgid "What proofs can you extract from the hypothesis `«{andn}»`?"
+msgstr ""
+
 #: Game.Levels.ImplicationWorld.L07_OnParentheses
 msgid "If `P → Q`, then if `Q → R`, then `P → R`."
 msgstr ""
@@ -2001,6 +2454,10 @@ msgid "An element of type `A → B → C`, which abbreviates the type `A → (B 
 "Given `f : A → B → C` and `a : A`, then `f a : B → C` is a function from `B` to `C`.\n"
 "\n"
 "Then given `b : B` we can apply the function `f a` to get an element `f a b : C`."
+msgstr ""
+
+#: Game.Levels.NegationWorld.L08_NegatingDisjunction
+msgid "Here the `↔` is the outermost logical connective. If you've forgotten what this means, you can look it up in the library."
 msgstr ""
 
 #: Game.Levels.ImplicationWorld.L02_ModusPonens
@@ -2033,6 +2490,18 @@ msgid "In this world, we will study the proposition `False` and the logical oper
 "Since `False` has no elements, we think of this process as deriving a contradiction."
 msgstr ""
 
+#: Game.Levels.NegationWorld.L10_TripleNegation
+msgid "This level contains another tautology whose proof you have seen before.\n"
+"\n"
+"We will show that for any proposition `P`, if `P` is not not false, then `P` is false.\n"
+"\n"
+"That is, we will prove `¬ ¬ ¬ P → ¬ P`.\n"
+"\n"
+"In fact, for any proposition `P`, its negation `¬ P` and its triple negation `¬ ¬ ¬ P` are logically equivalent.\n"
+"\n"
+"So we will prove this too."
+msgstr ""
+
 #: Game.Levels.FunctionWorld.L03_ComposingFunctions
 msgid "Lean has built in notation for the composite of `f : A → B` and `g : B → C` namely `g ∘ f : A → C`, using `\\circ` to type `∘`.\n"
 "\n"
@@ -2043,6 +2512,14 @@ msgstr ""
 
 #: Game.Levels.ImplicationWorld.L05_ProvingImpliedAssumption
 msgid "Proving Implied Assumption"
+msgstr ""
+
+#: Game.Levels.NegationWorld.L11_BossLevel
+msgid "The law of excluded middle implies double negation elimination: for any proposition `P`, `P ∨ ¬ P` implies `¬ ¬ P → P`."
+msgstr ""
+
+#: Game.Levels.NegationWorld.L08_NegatingDisjunction
+msgid "Negating Disjunction"
 msgstr ""
 
 #: Game.Levels.CoproductWorld.L08_BossLevel
@@ -2071,6 +2548,10 @@ msgstr ""
 msgid "What sort of inputs does the function `«{f}»` require?"
 msgstr ""
 
+#: Game.Levels.NegationWorld.L09_NegatingConjunction
+msgid "For any propositions `P` and `Q`, if `P` is false or `Q` is false then `P ∧ Q` is false."
+msgstr ""
+
 #: Game.Levels.DisjunctionWorld.L03_UsingOr
 msgid "Recall `Or.inl` and `Or.inr` refer to the left and right propositions in a disjunction `S ∨ T`."
 msgstr ""
@@ -2081,6 +2562,11 @@ msgstr ""
 
 #: Game.Levels.FunctionWorld.L02_UsingFunctions
 msgid "The syntax for the application of the function `«{f}» : «{A}» → «{B}»` on the element `«{a}» : «{A}»` is just `«{f}» «{a}»`. So type `exact «{f}» «{a}»` to obtain an element of type `B`."
+msgstr ""
+
+#: Game.Levels.EmptyWorld.L05_ProductWithEmpty
+#: Game.Levels.EmptyWorld.L06_CoproductWithEmpty
+msgid "Have a look at the library of definitions for a function whose domain is the empty type."
 msgstr ""
 
 #: Game.Levels.ConjunctionWorld.L04_LogicalEquivalence
@@ -2120,6 +2606,10 @@ msgstr ""
 
 #: Game
 msgid "First Year Seminar 270"
+msgstr ""
+
+#: Game.Levels.NegationWorld.L06_ModusTollens
+msgid "Modus Tollens"
 msgstr ""
 
 #: Game
