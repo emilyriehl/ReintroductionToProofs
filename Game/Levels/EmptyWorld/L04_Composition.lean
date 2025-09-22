@@ -19,7 +19,7 @@ Your task in this level is to define the closely related variant of the composit
 
 `(A → B) → (B → Empty) → (A → Empty)`
 
-as this construction will be more closely related to something we will encounter in the next world.
+as this construction will be analogous to something we will encounter in the next world.
 "
 
 /-- For any types `A` and `B`, there is a function `(A → B) → (B → Empty) → (A → Empty)` defined by composition. -/

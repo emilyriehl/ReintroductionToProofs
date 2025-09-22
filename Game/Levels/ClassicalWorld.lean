@@ -26,7 +26,11 @@ This permits the strategy of proof by cases. Under the assumption that `P ∨ ¬
 
 The other axiom, called *double negation elimination*, asserts that for any proposition `P`, `¬ ¬ P → P` is true.
 
-This permits a proof strategy called *proof by contradiction*. If the goal is to prove `P` we can use the assumption `¬ ¬ P → P` to reason as follows. First assume that `P` is false, so `¬ P` is true. Then derive a contradiction, thus constructing a proof of `¬ ¬ P`. Finally, apply the implication `¬ ¬ P → P` to convert this into a proof of `P`.
+This permits a proof strategy called *proof by contradiction*. If the goal is to prove `P` we can use the assumption `¬ ¬ P → P` to reason as follows:
+
+* First assume that `P` is false, so `¬ P` is true.
+* Then use the assumption `¬ P` to derive a contradiction, thus constructing a proof of `¬ ¬ P`.
+* Finally, apply the implication `¬ ¬ P → P` to convert the proof of `¬ ¬ P` into a proof of `P`.
 
 In fact, the law of exluded middle and double negation elimination are equivalent &mdash; even constructively &mdash; as we will show in the Boss Level of this world.
 "
