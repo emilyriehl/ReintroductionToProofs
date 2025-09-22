@@ -3,7 +3,7 @@ import Game.Metadata
 World "ClassicalWorld"
 Level 5
 
-Title "Boss Level"
+Title "Proving Excluded Middle"
 
 Introduction "In Negation World, we proved that for any proposition `P`: `P ∨ ¬ P → (¬ ¬ P → P)`
 
@@ -19,7 +19,7 @@ fact the proof can be understood as a proof in constructive mathematics.
 This is because we are arguing under the assumption that double negation elimination holds, which means
 we are working in a setting where the strategy of proof by contradiction applies.
 
-Good luck!
+You can solve this level immediately with `exact em P` but try starting with `apply byContradiction` instead and see if you can argue without appealing to the law of excluded middle.
 "
 
 section
@@ -29,6 +29,7 @@ open Classical
 Statement {P : Prop} : P ∨ ¬ P := by
   apply byContradiction
   intro nlem
+  Hint (hidden := true) "Recall that `¬(P ∨ ¬ P)` is logically equivalent to `¬ P ∧ ¬ ¬ P`. Can you use `{nlem}` to prove `¬P`? And then can you used `{nlem}` to prove `¬ ¬ P`?"
   have lem : ¬ P ∧ ¬ ¬ P := by
     constructor
     intro p
@@ -41,4 +42,4 @@ Statement {P : Prop} : P ∨ ¬ P := by
 
 end
 
-Conclusion "In the next world, we will finally introduce the slippery topic of equality."
+Conclusion "We are now ready for the Boss Level of Classical World."
