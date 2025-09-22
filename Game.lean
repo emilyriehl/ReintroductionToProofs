@@ -4,6 +4,9 @@ import Game.Levels.FunctionWorld
 import Game.Levels.ProductWorld
 import Game.Levels.DisjunctionWorld
 import Game.Levels.CoproductWorld
+import Game.Levels.EmptyWorld
+import Game.Levels.NegationWorld
+import Game.Levels.ClassicalWorld
 -- import Game.Levels.EqualityWorld
 
 -- Here's what we'll put on the title screen
@@ -45,6 +48,9 @@ Dependency ConjunctionWorld → ProductWorld
 Dependency ConjunctionWorld → DisjunctionWorld
 Dependency ProductWorld → CoproductWorld
 Dependency DisjunctionWorld → CoproductWorld
+Dependency CoproductWorld → EmptyWorld
+Dependency EmptyWorld → NegationWorld
+Dependency NegationWorld → ClassicalWorld
 
 -- Dependency CoproductWorld → EqualityWorld
 
