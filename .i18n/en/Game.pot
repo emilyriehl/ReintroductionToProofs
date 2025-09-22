@@ -1,7 +1,7 @@
 msgid ""
 msgstr "Project-Id-Version: Game v4.23.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-09-21\n"
+"POT-Creation-Date: 2025-09-22\n"
 "Last-Translator: \n"
 "Language-Team: none\n"
 "Language: en\n"
@@ -310,6 +310,10 @@ msgstr ""
 #: Game.Levels.DisjunctionWorld.L07_Distributivity
 #: Game.Levels.DisjunctionWorld.L07_Distributivity
 #: Game.Levels.DisjunctionWorld.L08_MoreDistributivity
+#: Game.Levels.ClassicalWorld.L03_Contrapositive
+#: Game.Levels.ClassicalWorld.L03_Contrapositive
+#: Game.Levels.ClassicalWorld.L03_Contrapositive
+#: Game.Levels.ClassicalWorld.L04_NegatingConjunction
 msgid "What is the outermost logical connective?"
 msgstr ""
 
@@ -494,6 +498,10 @@ msgstr ""
 msgid "If this is not the term you want, how can you use it to define the correct term?"
 msgstr ""
 
+#: Game.Levels.ClassicalWorld.L03_Contrapositive
+msgid "Contrapositive"
+msgstr ""
+
 #. §0: `A`
 #. §1: `B`
 #. §2: `f : A → Empty`
@@ -540,6 +548,29 @@ msgstr ""
 msgid "Negating Implication"
 msgstr ""
 
+#. §0: `¬ P ∨ ¬ Q`
+#. §1: `¬ (P ∧ Q)`
+#. §2: `¬ (P ∧ Q)`
+#. §3: `¬ P ∨ ¬ Q`
+#. §4: `P`
+#. §5: `Q`
+#. §6: `P ∨ ¬ P`
+#. §7: `have := em P`
+#. §8: `P ∨ ¬ P`
+#: Game.Levels.ClassicalWorld.L04_NegatingConjunction
+msgid "We have seen that §0 implies §1.\n"
+"\n"
+"But we were not able to prove constructively that §2 implies §3, since we cannot tell whether §4 or §5 is the false proposition.\n"
+"\n"
+"However, we can prove this using classical logic.\n"
+"\n"
+"Recall that in classical logic, we may assume the *law of excluded middle*, i.e., that §6 is true for any proposition.\n"
+"\n"
+"In particular, in the middle of your proof, you can type §7 to introduce §8 as a hypothesis.\n"
+"\n"
+"Can you use this to prove the desired implication?"
+msgstr ""
+
 #. §0: `Prod.snd : A × B → B`
 #: Game.Levels.ProductWorld.L03_SecondProjection
 msgid "Lean uses the name §0 for the function you have just defined. This function has been added to the library of definitions.\n"
@@ -580,12 +611,25 @@ msgstr ""
 msgid "Composing Implication"
 msgstr ""
 
+#. §0: `«{i}»`
+#. §1: `«{nq}»`
+#: Game.Levels.ClassicalWorld.L03_Contrapositive
+msgid "What can you prove using §0 and §1?"
+msgstr ""
+
 #: Game.Levels.ConjunctionWorld.L08_CurryingImplication
 msgid "Currying Implication"
 msgstr ""
 
 #: Game.Levels.FunctionWorld.L06_SwappingInputs
 msgid "Swapping inputs"
+msgstr ""
+
+#. §0: `«{p}» : P`
+#. §1: `¬ Q`
+#. §2: `apply Or.inr`
+#: Game.Levels.ClassicalWorld.L04_NegatingConjunction
+msgid "Because  §0, it is clear that the strategy is to try to prove §1. You can focus on this goal by §2."
 msgstr ""
 
 #. §0: `P`
@@ -868,6 +912,7 @@ msgid "You have two choices: to reduce to the case of proving the left propositi
 msgstr ""
 
 #: Game.Levels.NegationWorld.L09_NegatingConjunction
+#: Game.Levels.ClassicalWorld.L04_NegatingConjunction
 msgid "Negating Conjunction"
 msgstr ""
 
@@ -1241,6 +1286,7 @@ msgstr ""
 #: Game.Levels.DisjunctionWorld.L08_MoreDistributivity
 #: Game.Levels.DisjunctionWorld.L08_MoreDistributivity
 #: Game.Levels.NegationWorld.L07_NegatingImplication
+#: Game.Levels.ClassicalWorld.L04_NegatingConjunction
 msgid "Try §0."
 msgstr ""
 
@@ -1547,6 +1593,12 @@ msgstr ""
 #. §2: `(A → B) → (B → Empty) → (A → Empty)`
 #: Game.Levels.EmptyWorld.L04_Composition
 msgid "For any types §0 and §1, there is a function §2 defined by composition."
+msgstr ""
+
+#. §0: `«{p}»`
+#. §1: `«{nq}»`
+#: Game.Levels.ClassicalWorld.L04_NegatingConjunction
+msgid "What can you prove with §0 and §1?"
 msgstr ""
 
 #. §0: `S ↔ T`
@@ -1896,6 +1948,12 @@ msgid "In this level, we will study the proposition §0.\n"
 "On the one hand, it suffices for just §3 to be false.\n"
 "\n"
 "On the other hand, it suffices for just §4P§5Q§6P ∧ Q§7¬ P ∨ ¬ Q§8¬ (P ∧ Q)`."
+msgstr ""
+
+#. §0: `P → Q`
+#. §1: `¬ Q → ¬ P`
+#: Game.Levels.ClassicalWorld.L03_Contrapositive
+msgid "Combined with what we know already, we have established a logical equivalence between the implications §0 and §1 in classical logic."
 msgstr ""
 
 #. §0: `B`
@@ -2257,6 +2315,11 @@ msgstr ""
 msgid "Now we are in the setting of two proposition variables §0 and §1 with two hypotheses. The first assumption provides a proof §2 that the proposition §3 is true. The second provides a proof §4 that the implication §5 is true.\n"
 "\n"
 "It follows from both of these facts that §6 is also true and we can construct a proof by applying the hypothesis §7 to the proof §8."
+msgstr ""
+
+#. §0: `«{lem}»`
+#: Game.Levels.ClassicalWorld.L04_NegatingConjunction
+msgid "Now might be a good time to case split on the hypothesis §0."
 msgstr ""
 
 #. §0: `P ∧ Q → R`
@@ -2962,6 +3025,13 @@ msgstr ""
 msgid "Given an element §0 and a function of two variables §1, define a function from §2 by evaluating the first variable of §3 at the element §4."
 msgstr ""
 
+#. §0: `¬ Q → ¬ P`
+#. §1: `P → Q`
+#: Game.Levels.ClassicalWorld.L03_Contrapositive
+#: Game.Levels.ClassicalWorld.L04_NegatingConjunction
+msgid "In classical logic, §0 implies §1."
+msgstr ""
+
 #: Game.Levels.ClassicalWorld.L01_ByContradiction
 msgid "By Contradiction"
 msgstr ""
@@ -3572,6 +3642,10 @@ msgstr ""
 msgid "Now we are ready for the boss level!"
 msgstr ""
 
+#: Game.Levels.ClassicalWorld.L03_Contrapositive
+msgid "Think about where the contradiction will ultimately arise from."
+msgstr ""
+
 #. §0: `«{i}»`
 #. §1: `«{p}»`
 #: Game.Levels.NegationWorld.L07_NegatingImplication
@@ -3748,6 +3822,24 @@ msgstr ""
 msgid "From Empty"
 msgstr ""
 
+#. §0: `P → Q`
+#. §1: `¬ Q → ¬ P`
+#. §2: `¬ Q → ¬ P`
+#. §3: `P → Q`
+#. §4: `¬ Q → ¬ P`
+#. §5: `P → Q`
+#: Game.Levels.ClassicalWorld.L03_Contrapositive
+msgid "We have seen that the implication §0 implies the implication §1.\n"
+"\n"
+"The implication §2 is called the *contrapositive* of §3.\n"
+"\n"
+"In classical logic, these two statements are logically equivalent.\n"
+"\n"
+"That means, arguing classically, we can prove that §4 implies §5.\n"
+"\n"
+"Can you figure out how to prove this?"
+msgstr ""
+
 #. §0: `A`
 #. §1: `B`
 #. §2: `A ⊕ B`
@@ -3882,6 +3974,12 @@ msgstr ""
 #. §3: `fun f a ↦ f a`
 #: Game.Levels.FunctionWorld.L08_Evaluation
 msgid "The evaluation function has type §0 and is defined by the formula §1. By swapping variables, we can also think of evaluation as defining a function §2 where this latter function is defined by §3."
+msgstr ""
+
+#. §0: `¬ (P ∧ Q)`
+#. §1: `¬ P ∧ ¬ Q`
+#: Game.Levels.ClassicalWorld.L04_NegatingConjunction
+msgid "Combined with what we know already, we have established a logical equivalence between  §0 and §1 in classical logic."
 msgstr ""
 
 #. §0: `h : P ∧ Q`
@@ -4019,6 +4117,11 @@ msgstr ""
 
 #: Game.Levels.NegationWorld.L06_ModusTollens
 msgid "Modus Tollens"
+msgstr ""
+
+#. §0: `apply byContradiction`
+#: Game.Levels.ClassicalWorld.L03_Contrapositive
+msgid "Now that you are stuck, it is a good time to try classical reasoning. Try §0."
 msgstr ""
 
 #: Game

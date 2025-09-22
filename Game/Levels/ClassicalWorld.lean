@@ -1,5 +1,7 @@
 import Game.Levels.ClassicalWorld.L01_ByContradiction
 import Game.Levels.ClassicalWorld.L02_ExcludedMiddle
+import Game.Levels.ClassicalWorld.L03_Contrapositive
+import Game.Levels.ClassicalWorld.L04_NegatingConjunction
 
 World "ClassicalWorld"
 Title "Classical World"
