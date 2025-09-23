@@ -8,7 +8,7 @@ Title "Symmetry"
 /--
 For types `A` and `B`, the swapping function has type `A × B → B × A` and can be thought of as the function that sends a pair `⟨a, b⟩` to the pair `⟨b, a⟩`.
 -/
-DefinitionDoc Prod.swap as "Prod.swap"
+DefinitionDoc Prod.swap as "Prod.swap" in "Prod"
 
 Introduction "The product type comes with function of type `A × B → B × A` which swaps the elements of an ordered pair.
 

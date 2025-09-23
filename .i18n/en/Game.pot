@@ -1,7 +1,7 @@
 msgid ""
 msgstr "Project-Id-Version: Game v4.23.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-09-22\n"
+"POT-Creation-Date: 2025-09-23\n"
 "Last-Translator: \n"
 "Language-Team: none\n"
 "Language: en\n"
@@ -195,6 +195,35 @@ msgstr ""
 
 #: Game.Levels.NegationWorld.L05_Absurd
 msgid "Absurd"
+msgstr ""
+
+#. §0: `P`
+#. §1: `P ∨ ¬ P → (¬ ¬ P → P)`
+#. §2: `¬ ¬ P → P`
+#. §3: `P`
+#. §4: `P ∨ ¬ P`
+#. §5: `P`
+#. §6: `apply byContradiction`
+#: Game.Levels.ClassicalWorld.L05_BossLevel
+msgid "In Negation World, we proved that for any proposition §0:\n"
+"\n"
+"§1\n"
+"\n"
+"In other words, we showed that the law of excluded middle implies double negation elimination.\n"
+"\n"
+"We now show that converse: that double negation elimination implies the law of excluded middle. More\n"
+"precisely, if we assume that §2 for any proposition §3, then we can show that §4 for\n"
+"any proposition §5.\n"
+"\n"
+"While the proof will feel like an application of classical logic, using the strategy of proof by contradiction, in\n"
+"fact the proof can be understood as a proof in constructive mathematics.\n"
+"\n"
+"This is because we are arguing under the assumption that double negation elimination holds, which means\n"
+"we are working in a setting where the strategy of proof by contradiction applies.\n"
+"\n"
+"Start the proof with §6 and see how the goal transforms.\n"
+"\n"
+"Then see if you can complete the rest."
 msgstr ""
 
 #. §0: `A`
@@ -621,6 +650,16 @@ msgstr ""
 msgid "Currying Implication"
 msgstr ""
 
+#. §0: `P`
+#. §1: `Q`
+#. §2: `P ∧ Q`
+#. §3: `P ∧ ¬ Q`
+#. §4: `¬ P ∧ Q`
+#. §5: `¬ P and ¬ Q`
+#: Game.Levels.ClassicalWorld.L02_ExcludedMiddle
+msgid "In classical logic, for any propositions §0 and §1, §2 is true or §3 is true or §4 is true or §5 is true."
+msgstr ""
+
 #: Game.Levels.FunctionWorld.L06_SwappingInputs
 msgid "Swapping inputs"
 msgstr ""
@@ -736,19 +775,6 @@ msgstr ""
 msgid "This proves the associativity of disjunction.\n"
 "\n"
 "Note the §0 tactic allows more general patterns of disjunctions. Given §1 try §2. Similarly, given §3, try §4."
-msgstr ""
-
-#. §0: `P → ¬ ¬ P`
-#. §1: `(P → Q) → (¬ Q → ¬ P)`
-#. §2: `¬ P ∨ ¬ Q → ¬ (P ∧ Q)`
-#: Game.Levels.ClassicalWorld
-msgid "In Negation World, we proved various tautologies involving negation such as\n"
-"\n"
-"* §0\n"
-"* §1\n"
-"* §2\n"
-"\n"
-"But we were not able to prove the converses of any of these implications. Why not?"
 msgstr ""
 
 #: Game.Levels.ConjunctionWorld.L06_CompoundImplication
@@ -1519,6 +1545,10 @@ msgstr ""
 msgid "How do you construct elements of a function type?"
 msgstr ""
 
+#: Game.Levels.ClassicalWorld.L02_ExcludedMiddle
+msgid "What can you do with these assumptions?"
+msgstr ""
+
 #. §0: `False`
 #. §1: `p : P`
 #. §2: `P`
@@ -1977,6 +2007,7 @@ msgstr ""
 #: Game.Levels.ProductWorld.L10_BossLevel
 #: Game.Levels.EmptyWorld.L07_BossLevel
 #: Game.Levels.NegationWorld.L11_BossLevel
+#: Game.Levels.ClassicalWorld.L05_BossLevel
 msgid "Boss Level"
 msgstr ""
 
@@ -1992,6 +2023,36 @@ msgstr ""
 msgid "Assuming §0 is a variable in the local context with an inductive type, §1 splits the main goal, producing one goal for each constructor of the inductive type, in which the target is replaced by a general instance of that constructor. If the type of an element in the local context depends on §2, that element is reverted and reintroduced afterward, so that the case split affects that hypothesis as well. §3 detects unreachable cases and closes them automatically.\n"
 "\n"
 "For example, given an assumption §4, §5 splits the main goal into two goals, one assuming §6 holds and the other assuming §7 holds."
+msgstr ""
+
+#. §0: `P`
+#. §1: `P`
+#. §2: `P`
+#. §3: `P`
+#. §4: `P ∨ ¬ P`
+#. §5: `Classical.em P  : P ∨ ¬ P`
+#. §6: `P`
+#. §7: `exact em P`
+#. §8: `byContradiction : ¬ ¬ P → P`
+#. §9: `P`
+#. §10: `em`
+#. §11: `exact em`
+#. §12: `P`
+#. §13: `P`
+#. §14: `Q`
+#: Game.Levels.ClassicalWorld.L02_ExcludedMiddle
+msgid "The *law of excluded middle* asserts that for any proposition §0, either §1 is true or §2 is false.\n"
+"\n"
+"In other words, for any proposition §3, §4 is always true.\n"
+"\n"
+"Lean has a built-in name §5 for *the law of excluded middle* at the proposition §6. In Classical World, classical reasoning techniques are open, so you can solve this level by typing §7.\n"
+"\n"
+"Note that in contrast to §8, the proposition §9 is an *explicit argument* of the function §10. So §11 will not work.\n"
+"\n"
+"This is because when you are applying proof by contradiction, it is usually clear from context which proposition §12 is involved, whereas when you are appealing to the law of excluded middle, this is often not so clear.\n"
+"\n"
+"See if you can use the law of excluded middle to prove that for any propositions §13 and §14 one\n"
+"of the following four conjunctions holds."
 msgstr ""
 
 #. §0: `constructor`
@@ -2788,6 +2849,12 @@ msgstr ""
 msgid "Both §0 and §1 can be used here."
 msgstr ""
 
+#. §0: `Classical.em P : P ∨ ¬ P`
+#. §1: `em _`
+#: Game.Levels.ClassicalWorld.L02_ExcludedMiddle
+msgid "The classical tautology §0 has been added to your library of theorems and can be used by calling §1 whenever classical reasoning is open."
+msgstr ""
+
 #: Game.Levels.ProductWorld.L01_Pairing
 msgid "If this is your first time solving this level, go back and solve it another way."
 msgstr ""
@@ -2800,22 +2867,6 @@ msgstr ""
 #. §5: `(A → B) → B`
 #: Game.Levels.FunctionWorld.L08_Evaluation
 msgid "For types §0 and §1, the evaluation function has type §2, meaning that for §3, §4 has type §5."
-msgstr ""
-
-#. §0: `Classical.em P  : P ∨ ¬ P`
-#. §1: `P`
-#. §2: `exact em P`
-#. §3: `byContradiction : ¬ ¬ P → P`
-#. §4: `P`
-#. §5: `em`
-#. §6: `exact em`
-#. §7: `P`
-#: Game.Levels.ClassicalWorld.L02_ExcludedMiddle
-msgid "Lean has a built-in name §0 for *the law of excluded middle* at the proposition §1. In Classical World, classical reasoning techniques are open, so you can solve this level by typing §2.\n"
-"\n"
-"Note that in contrast to §3, the proposition §4 is an *explicit argument* of the function §5. So §6 will not work.\n"
-"\n"
-"This is because when you are applying proof by contradiction, it is usually clear from context which proposition §7 is involved, whereas when you are appealing to the law of excluded middle, this is often not so clear."
 msgstr ""
 
 #: Game
@@ -2843,6 +2894,13 @@ msgstr ""
 
 #: Game.Levels.NegationWorld.L04_Noncontradiction
 msgid "Noncontradiction"
+msgstr ""
+
+#. §0: `lemP : P ∨ ¬ P := em P`
+#. §1: `P ∨ ¬ P`
+#: Game.Levels.ClassicalWorld.L02_ExcludedMiddle
+#: Game.Levels.ClassicalWorld.L02_ExcludedMiddle
+msgid "To use the law of excluded middle in your proof, type §0 to add an assumption that §1 is true."
 msgstr ""
 
 #. §0: `Q`
@@ -3337,7 +3395,7 @@ msgstr ""
 #. §0: `P`
 #. §1: `P`
 #. §2: `¬ P`
-#: Game.Levels.ClassicalWorld.L02_ExcludedMiddle
+#: Game.Levels.ClassicalWorld.L05_BossLevel
 msgid "In classical logic, for any proposition §0, §1 is true or §2 is true."
 msgstr ""
 
@@ -3357,19 +3415,6 @@ msgstr ""
 #: Game.Levels.CoproductWorld.L04_UniversalProperty
 #: Game.Levels.CoproductWorld.L05_Symmetry
 msgid "Use either §0 or §1 to consider the possible cases for the variable §2."
-msgstr ""
-
-#. §0: `P ∨ ¬ P`
-#. §1: `P`
-#. §2: `apply byContradiction`
-#: Game.Levels.ClassicalWorld.L02_ExcludedMiddle
-msgid "Double negation elimination implies the law of excluded middle.\n"
-"\n"
-"That is, using the strategy of proof by contradiction, we can prove that §0 holds for any proposition §1.\n"
-"\n"
-"Start the proof with §2 and see how the goal transforms.\n"
-"\n"
-"Then see if you can complete the rest."
 msgstr ""
 
 #. §0: `exact byContradiction`
@@ -3504,6 +3549,10 @@ msgstr ""
 #. §0: `assumption`
 #: Game.Levels.ImplicationWorld.L01_ByAssumption
 msgid "The §0 tactic tries to solve the main goal using a hypothesis of compatible type, or else fails."
+msgstr ""
+
+#: Game.Levels.ClassicalWorld.L05_BossLevel
+msgid "In the next world, we will finally introduce the slippery topic of equality."
 msgstr ""
 
 #: Game.Levels.CoproductWorld
@@ -3918,6 +3967,50 @@ msgstr ""
 #. §1: `Empty → A`
 #: Game.Levels.EmptyWorld.L01_FromEmpty
 msgid "For any type §0, there is a function §1 encoding the elimination rule of the empty type."
+msgstr ""
+
+#. §0: `P → ¬ ¬ P`
+#. §1: `(P → Q) → (¬ Q → ¬ P)`
+#. §2: `¬ P ∨ ¬ Q → ¬ (P ∧ Q)`
+#. §3: `P ∨ Q`
+#. §4: `P`
+#. §5: `Q`
+#. §6: `P`
+#. §7: `P ∨ ¬ P`
+#. §8: `P ∨ ¬ P`
+#. §9: `P`
+#. §10: `P`
+#. §11: `P`
+#. §12: `¬ ¬ P → P`
+#. §13: `P`
+#. §14: `¬ ¬ P → P`
+#. §15: `P`
+#. §16: `¬ P`
+#. §17: `¬ ¬ P`
+#. §18: `¬ ¬ P → P`
+#. §19: `P`
+#: Game.Levels.ClassicalWorld
+msgid "In Negation World, we proved various tautologies involving negation such as\n"
+"\n"
+"* §0\n"
+"* §1\n"
+"* §2\n"
+"\n"
+"But we were not able to prove the converses of any of these implications. Why not?\n"
+"\n"
+"The reason is that all of the proofs we have given thusfar involve explicit constructive arguments. For example, whenever we proved that a disjunction §3 held under certain hypotheses, our proof gave the information of *which* of the propositions §4 and §5 is true.\n"
+"\n"
+"In this world, we study *classical mathematics*, which assumes two additional axioms, each of which permits new proof techniques.\n"
+"\n"
+"The first axiom, called the *law of excluded middle*, asserts that for any proposition §6, §7 is true.\n"
+"\n"
+"This permits the strategy of proof by cases. Under the assumption that §8 is true, you can split the argument into two cases, one assuming §9 is true and the other assuming §10 is false.\n"
+"\n"
+"The other axiom, called *double negation elimination*, asserts that for any proposition §11, §12 is true.\n"
+"\n"
+"This permits a proof strategy called *proof by contradiction*. If the goal is to prove §13 we can use the assumption §14 to reason as follows. First assume that §15 is false, so §16 is true. Then derive a contradiction, thus constructing a proof of §17. Finally, apply the implication §18 to convert this into a proof of §19.\n"
+"\n"
+"In fact, the law of exluded middle and double negation elimination are equivalent &mdash; even constructively &mdash; as we will show in the Boss Level of this world."
 msgstr ""
 
 #. §0: `have nq : ¬ Q := «{pnq}».2`
