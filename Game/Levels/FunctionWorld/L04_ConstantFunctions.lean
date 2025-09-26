@@ -8,7 +8,7 @@ Title "Constant functions"
 /--
 For a term `a : A` and a type `B`, `const a : B → A` is the function defined by sending `x : B` to `a : A`.
 -/
-DefinitionDoc const as "const"
+DefinitionDoc const as "const" in "Function"
 
 Introduction "Given a term `a : A` and any type `B`, there is a function of type `B → A` which is *constant* at `a : A`.
 

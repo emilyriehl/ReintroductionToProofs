@@ -8,7 +8,7 @@ Title "Identity Function"
 /--
 For a type `A`, `id : A → A` is the function defined by sending `a : A` to `a : A`.
 -/
-DefinitionDoc id as "id"
+DefinitionDoc id as "id" in "Function"
 
 Introduction "The simplest example of a function is the identity function, which may be defined for any type `A`. The identity function
 `id : A → A` is defined to carry any element `a : A` to itself.

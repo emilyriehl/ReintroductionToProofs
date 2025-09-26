@@ -30,6 +30,6 @@ Conclusion "There are various ways to solve this level. You might enjoy searchin
 /--
 `¬ P`, read as &ldquo; not `P`&rdquo; is an abbreviation for `P → False`.
 -/
-DefinitionDoc neg as "¬"
+DefinitionDoc neg as "¬" in "Logic"
 
 NewDefinition neg

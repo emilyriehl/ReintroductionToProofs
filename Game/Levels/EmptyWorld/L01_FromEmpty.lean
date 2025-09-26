@@ -26,6 +26,6 @@ Conclusion "Lean has a built-in name `Empty.elim : Empty → A` for the function
 /--
 For any type `A`, there is a function `Empty.elim : Empty → A` expressing the elimination rule of the empty type.
 -/
-DefinitionDoc Empty.elim as "Empty.elim" -- in "Empty"
+DefinitionDoc Empty.elim as "Empty.elim" in "Empty"
 
 NewDefinition Empty.elim

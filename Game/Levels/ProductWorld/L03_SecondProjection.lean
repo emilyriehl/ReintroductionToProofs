@@ -23,6 +23,6 @@ In the next level, we'll use the projection functions to prove symmetry of produ
 /--
 For any types `A` and `B`, `Prod.snd : A × B → B` is the function that sends `p : A × B` to its second coordinate `p.2 : B`.
 -/
-DefinitionDoc Prod.snd as "Prod.snd"
+DefinitionDoc Prod.snd as "Prod.snd" in "Prod"
 
 NewDefinition Prod.snd

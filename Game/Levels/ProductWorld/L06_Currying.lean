@@ -38,6 +38,6 @@ We'll now study the reverse process, which converts a function of type `A → B 
 /--
 For any types `A`, `B`, and `C`, `Function.curry : (A × B → C) → (A → B → C)` is the function that sends `f : A × B → C` to the function that sends `a : A` and `b : B` to `f ⟨a, b⟩ : C`.
 -/
-DefinitionDoc Function.curry as "Function.curry"
+DefinitionDoc Function.curry as "Function.curry" in "Function"
 
 NewDefinition Function.curry
