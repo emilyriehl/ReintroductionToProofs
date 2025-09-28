@@ -31,6 +31,6 @@ The operations of *currying* and *uncurrying* are inverses in a sense we will be
 /--
 For any types `A`, `B`, and `C`, `Function.uncurry : (A → B → C) → (A × B → C)` is the function that sends `f : A → B → C` to the function that sends `p : A × B` to `f p.1 p.2 : C`.
 -/
-DefinitionDoc Function.uncurry as "Function.uncurry"
+DefinitionDoc Function.uncurry as "Function.uncurry" in "Function"
 
 NewDefinition Function.uncurry
