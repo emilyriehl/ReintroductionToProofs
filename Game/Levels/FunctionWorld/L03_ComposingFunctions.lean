@@ -32,6 +32,6 @@ Try solving this level with `exact g ∘ f`."
 /--
 Given functions `f : A → B` and `g : B → C`, the *composite function* `g ∘ f : A → C` is defined to send `x : A` to the element `g (f x)`.
 -/
-DefinitionDoc circ as "∘"
+DefinitionDoc circ as "∘" in "Function"
 
 NewDefinition circ

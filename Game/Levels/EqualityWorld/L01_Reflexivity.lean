@@ -17,7 +17,7 @@ can type `exact rfl`. As a shorthand, Lean also defines a tactic called `rfl` th
 For a type `A` and element `a : A`, the proposition `a = a` is true because there is a proof
 `rfl : a = a` witnessing the reflexivity of equality.
 -/
-DefinitionDoc rfl as "rfl"
+DefinitionDoc rfl as "rfl" in "Eq"
 
 Statement {A : Type} {a : A} : a = a := by
   rfl

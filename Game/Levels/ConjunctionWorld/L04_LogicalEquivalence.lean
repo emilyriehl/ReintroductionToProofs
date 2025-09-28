@@ -9,7 +9,7 @@ Title "Logical Equivalence"
 /--
 `P ↔ Q`, read as &ldquo;`P` if and only if `Q`&rdquo; is an abbreviation for `(P → Q) ∧ (Q → P)`.
 -/
-DefinitionDoc iff as "↔"
+DefinitionDoc iff as "↔" in "Logic"
 
 NewDefinition iff
 
