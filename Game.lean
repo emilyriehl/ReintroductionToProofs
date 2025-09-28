@@ -7,7 +7,7 @@ import Game.Levels.CoproductWorld
 import Game.Levels.EmptyWorld
 import Game.Levels.NegationWorld
 import Game.Levels.ClassicalWorld
--- import Game.Levels.EqualityWorld
+import Game.Levels.EqualityWorld
 
 -- Here's what we'll put on the title screen
 Title "Computer-Verified Proof: a Hands-On Introduction to Interactive Theorem Proving"
@@ -51,8 +51,7 @@ Dependency DisjunctionWorld → CoproductWorld
 Dependency CoproductWorld → EmptyWorld
 Dependency EmptyWorld → NegationWorld
 Dependency NegationWorld → ClassicalWorld
-
--- Dependency CoproductWorld → EqualityWorld
+Dependency ClassicalWorld → EqualityWorld
 
 /-! Build the game. Show's warnings if it found a problem with your game. -/
 MakeGame
