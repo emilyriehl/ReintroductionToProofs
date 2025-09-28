@@ -20,7 +20,7 @@ Statement {A B : Type} : (A → Empty) → A → B := by
   intro f
   Hint (hidden := true) "The goal is a function type. What tactic can be used to define an element?"
   intro a
-  Hint (hidden := true) "We assumptions `{f} : A → Empty` and `{a} : A`? What can you construct using this?"
+  Hint (hidden := true) "We have assumptions `{f} : A → Empty` and `{a} : A`? What can you construct using this?"
   Hint (hidden := true) "Use `have := {f} {a}` to add an element of the empty type to the list of assumptions."
   have := f a
   Hint (hidden := true) "Recall that for any type `B`, there is a function `Empty.elim : Empty → B`. Using this and your element of `Empty` can you define an element of type `B`?"

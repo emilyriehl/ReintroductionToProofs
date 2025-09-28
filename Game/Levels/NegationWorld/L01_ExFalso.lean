@@ -5,7 +5,7 @@ Level 1
 
 Title "Ex Falso"
 
-Introduction "The proposition `False` has no elements &mdash there are no proofs of &ldquo;false.&rdquo;.
+Introduction "The proposition `False` has no elements &mdash; there are no proofs of &ldquo;false.&rdquo;.
 
 Consequently, for any other proposition `P`, the implication `False → P` is true.
 

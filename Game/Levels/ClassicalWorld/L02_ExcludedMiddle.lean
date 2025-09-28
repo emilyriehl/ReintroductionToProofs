@@ -9,9 +9,9 @@ Introduction "The *law of excluded middle* asserts that for any proposition `P`,
 
 In other words, for any proposition `P`, `P ∨ ¬ P` is always true.
 
-Lean has a built-in name `Classical.em P  : P ∨ ¬ P` for *the law of excluded middle* at the proposition `P`. In Classical World, classical reasoning techniques are open, so you can solve this level by typing `exact em P`.
+Lean has a built-in name `Classical.em P  : P ∨ ¬ P` for *the law of excluded middle* at the proposition `P`. In Classical World, classical reasoning techniques are open, so you can refer to this proof by typing `em P : P ∨ ¬ P`.
 
-Note that in contrast to `byContradiction : ¬ ¬ P → P`, the proposition `P` is an *explicit argument* of the function `em`. So `exact em` will not work.
+Note that in contrast to `byContradiction : ¬ ¬ P → P`, the proposition `P` is an *explicit argument* of the function `em`. So if you type just `em`, Lean will ask which proposition you have in mind.
 
 This is because when you are applying proof by contradiction, it is usually clear from context which proposition `P` is involved, whereas when you are appealing to the law of excluded middle, this is often not so clear.
 
@@ -24,9 +24,9 @@ open Classical
 
 /-- In classical logic, for any propositions `P` and `Q`, `P ∧ Q` is true or `P ∧ ¬ Q` is true or `¬ P ∧ Q` is true or `¬ P and ¬ Q` is true. -/
 Statement {P Q : Prop} : (P ∧ Q) ∨ (P ∧ ¬ Q) ∨ (¬ P ∧ Q) ∨ (¬ P ∧ ¬ Q) := by
-  Hint "To use the law of excluded middle in your proof, type `lemP : P ∨ ¬ P := em P` to add an assumption that `P ∨ ¬ P` is true."
+  Hint "To use the law of excluded middle in your proof, type `have lemP : P ∨ ¬ P := em P` to add an assumption that `P ∨ ¬ P` is true."
   have lemP := em P
-  Hint (hidden := true) "To use the law of excluded middle in your proof, type `lemQ : Q ∨ ¬ Q := em Q` to add an assumption that `Q ∨ ¬ Q` is true."
+  Hint (hidden := true) "To use the law of excluded middle in your proof, type `have lemQ : Q ∨ ¬ Q := em Q` to add an assumption that `Q ∨ ¬ Q` is true."
   have lemQ := em Q
   Hint (hidden := true) "What can you do with these assumptions?"
   rcases lemP with p | np
@@ -39,7 +39,7 @@ Statement {P Q : Prop} : (P ∧ Q) ∨ (P ∧ ¬ Q) ∨ (¬ P ∧ Q) ∨ (¬ P �
 
 end
 
-Conclusion "The classical tautology `Classical.em P : P ∨ ¬ P` has been added to your library of theorems and can be used by calling `em _` whenever classical reasoning is open."
+Conclusion "The classical tautology `Classical.em P : P ∨ ¬ P` has been added to your library of theorems and can be used by calling `em _`, with the desired proposition replacing the `_`, whenever classical reasoning is open."
 
 /--
 For any proposition `P`, `Classical.em P : P ∨ ¬ P ` proves that `P` or `¬ P` is true.

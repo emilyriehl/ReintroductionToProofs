@@ -25,7 +25,7 @@ Statement {P Q : Prop} : (¬ Q → ¬ P) → (P → Q) := by
   intro i
   Hint (hidden := true) "What is the outermost logical connective?"
   intro p
-  Hint (hidden := true) "Now that you are stuck, it is a good time to try classical reasoning. Try `apply byContradiction`."
+  Hint (hidden := true) "Now that you are stuck, it is a good time to try classical reasoning. Try `apply byContradiction` and see how this transforms the goal."
   apply byContradiction
   Hint (hidden := true) "What is the outermost logical connective?"
   intro nq
