@@ -13,7 +13,7 @@ This can be expressed in various different ways, as we shall see over the next f
 
 In this level, we encode this statement in the way that allows for the simplest proof.
 
-In subsequent levels, we shall express this in several logically equivalent forms.
+In subsequent levels, we shall express this tautology in several logically equivalent forms.
 "
 
 /-- For any proposition `P`, if `¬ P` and `P` are both true, then we obtain a proof of `False`. -/

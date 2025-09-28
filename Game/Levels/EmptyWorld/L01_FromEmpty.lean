@@ -5,7 +5,7 @@ Level 1
 
 Title "From Empty"
 
-Introduction "The type `Empty` has no elements &mdash or, more precisely, the type `Empty` has no introduction rules.
+Introduction "The type `Empty` has no elements &mdash; or, more precisely, the type `Empty` has no introduction rules.
 
 Consequently, for any other type `A`, there is always a function `Empty → A`.
 

@@ -13,7 +13,7 @@ What does it mean for `P ∧ Q` to be false?
 
 On the one hand, it suffices for just `P` to be false.
 
-On the other hand, it suffices for just `Q to be false.
+On the other hand, it suffices for just `Q` to be false.
 
 That is, if either `P` or `Q` is false, then `P ∧ Q` is false.
 
