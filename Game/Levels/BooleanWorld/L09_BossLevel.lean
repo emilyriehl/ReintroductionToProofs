@@ -16,8 +16,16 @@ For the Boss Level, your are asked to characterize an especially complicated exa
 "
 
 /-- The following expression in conjunctive normal form is unsatisfiable. -/
-Statement (p q : Bool) : and (and (and p (not p)) q) (not q)
+Statement (p q r : Bool) :
+and (or (or (not p) (not q)) r)
+(and (or (or p (not q)) r)
+(and (or (or (not p) (not q)) (not r))
+(and (or (or p q) (not r))
+(and (or (or p (not q)) (not r))
+(and (or (or p q) r)
+(and (or (or (not p) q) r)
+(or (or (not p) q) (not r))))))))
 = false := by
-  cases p <;> cases q <;> rfl
+  cases p <;> cases q <;> cases r <;> rfl
 
-Conclusion "If this was too easy never fear. We'll replace this with a harder Boss Level soon."
+Conclusion "If this was too easy, you might find it interesting to learn that the general problem of identifying whether a formula in conjunctive normal form is unsatisfiable is NP complete!"

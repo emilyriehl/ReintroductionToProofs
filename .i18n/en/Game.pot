@@ -158,24 +158,6 @@ msgstr ""
 msgid "On Parentheses"
 msgstr ""
 
-#. §0: `Bool`
-#. §1: `false : Bool`
-#. §2: `true : Bool`
-#. §3: `Bool → Bool`
-#. §4: `false`
-#. §5: `true`
-#. §6: `true`
-#. §7: `false`
-#. §8: `intro b`
-#. §9: `cases b`
-#: Game.Levels.BooleanWorld.L01_Negation
-msgid "Recall the type §0 of booleans has two elements denoted §1 and §2.\n"
-"\n"
-"In this level, our aim is to define a function §3 that encodes the logical operation of negation, i.e., sends §4 to §5 and §6 to §7.\n"
-"\n"
-"You can do this by introducing a generic boolean by typing §8. Then use the tactic §9 to define the output of the function"
-msgstr ""
-
 #. §0: `f : X → A × B`
 #. §1: `fun x ↦ (f x).1 : X → A`
 #. §2: `fun x ↦ (f x).2 : X → B`
@@ -921,6 +903,10 @@ msgstr ""
 msgid "Does this goal seem familiar? If not, it's okay to just follow your nose and let the logical structure guide you."
 msgstr ""
 
+#: Game.Levels.BooleanWorld.L09_BossLevel
+msgid "If this was too easy, you might find it interesting to learn that the general problem of identifying whether a formula in conjunctive normal form is unsatisfiable is NP complete!"
+msgstr ""
+
 #: Game.Levels.ImplicationWorld.L06_ProvingAssumedImplication
 msgid "The lesson of this level is to pay attention to the big picture, namely what exactly you are being asked ot prove under what hypotheses."
 msgstr ""
@@ -1348,7 +1334,7 @@ msgstr ""
 #. §12: `P false`
 #. §13: `P true`
 #. §14: `x : P true`
-#. §15: `True.intro : True`
+#. §15: `⟨⟩ : True`
 #. §16: `False`
 #. §17: `exact Bool.noConfusion`
 #. §18: `¬ (false = true)`
@@ -1527,10 +1513,6 @@ msgstr ""
 msgid "Given a function §0 and any element §1. You can apply the function §2 to §3 to obtain an element §4 of type §5."
 msgstr ""
 
-#: Game.Levels.BooleanWorld.L09_BossLevel
-msgid "If this was too easy never fear. We'll replace this with a harder Boss Level soon."
-msgstr ""
-
 #. §0: `fun x ↦ a`
 #. §1: `x : B`
 #. §2: `a : A`
@@ -1615,10 +1597,10 @@ msgstr ""
 msgid "For a type §0, §1 is the function defined by sending §2 to §3."
 msgstr ""
 
-#. §0: `exact tr True.intro`
+#. §0: `exact tr ⟨⟩`
 #. §1: `False`
 #. §2: `tr`
-#. §3: `True.intro : True`
+#. §3: `⟨⟩ : True`
 #: Game.Levels.BooleanWorld.L08_NotEqual
 msgid "Type §0 to return an element of §1 defined using the function §2 and the element §3."
 msgstr ""
@@ -1635,6 +1617,10 @@ msgstr ""
 msgid "For any booleans §0, §1, capturing the symmetry of conjunction.\n"
 "\n"
 "Note Lean has an alternate notation §2 for §3."
+msgstr ""
+
+#: Game.Levels.BooleanWorld.L07_DeMorgan
+msgid "Can you figure out how you would state other logical equivalences involving truth values in a similar fashion?"
 msgstr ""
 
 #. §0: `A × B → B × A`
@@ -1767,6 +1753,10 @@ msgstr ""
 msgid "The §0 tactic can be used to add new hypotheses provided you can supply a proof. For example, given assumptions §1 and §2, type §3 to add a proof §4 defined by §5."
 msgstr ""
 
+#: Game.Levels.EqualityWorld.L10_BossLevel
+msgid "We will meet some further applications of the equality type in Boolean World. Head there next."
+msgstr ""
+
 #. §0: `constructor`
 #. §1: `intro s`
 #. §2: `exact t`
@@ -1775,6 +1765,15 @@ msgstr ""
 #. §5: `↦`
 #: Game.Levels.ConjunctionWorld.L05_Associativity
 msgid "Can you solve this level with only one use of the §0 tactic? In fact, even this can be avoided using syntax we have not yet introduced: a two line proof §1 followed by §2 can be written §3 writing §4 to type §5."
+msgstr ""
+
+#. §0: `rw [p, q]`
+#. §1: `rw [q, p]`
+#. §2: `rw [← q, ← p]`
+#. §3: `rw [← q, p]`
+#. §4: `rw [← p, ← q]`
+#: Game.Levels.EqualityWorld.L05_Transitivity
+msgid "Try solving the goal by rewriting in both directions. You can also experiment with multiple rewrites at once. Why does §0 work but §1 not? Why does §2 or §3 work but §4 not?"
 msgstr ""
 
 #. §0: `«{A}» → «{A}»`
@@ -2078,10 +2077,6 @@ msgstr ""
 msgid "Type §0 to ask Lean to consider all possible cases involving an element of the empty type. As there are no cases, this will complete the proof."
 msgstr ""
 
-#: Game.Levels.BooleanWorld.L07_DeMorgan
-msgid "Can you figure out how you would state other logical equivalences involving true values in a similar fashion?"
-msgstr ""
-
 #. §0: `not (and x y) = or (not x) (not y)`
 #. §1: `not (or x y) = and (not x) (not y)`
 #. §2: `x y : Bool`
@@ -2162,10 +2157,6 @@ msgstr ""
 #. §0: `«{c}».2`
 #: Game.Levels.NegationWorld.L04_Noncontradiction
 msgid "What is the logical structure of the type that §0 belongs to?"
-msgstr ""
-
-#: Game.Levels.EqualityWorld.L10_BossLevel
-msgid "The equality type tells us what it means for two *elements* of the same type to be the same. Move on to Equivalence World to learn what it means for two *types* to be the same."
 msgstr ""
 
 #. §0: `A`
@@ -2554,6 +2545,13 @@ msgstr ""
 msgid "Given a hypothesis §0, the tactic §1 will replace the first §2 in the goal by §3 and attempt to close the goal with §4. Writing §5 will replace the first §6 in the goal by §7 and attempt to close the goal with §8."
 msgstr ""
 
+#. §0: `Bool`
+#. §1: `Bool.false`
+#: Game.Levels.BooleanWorld.L01_Negation
+#: Game.Levels.BooleanWorld.L01_Negation
+msgid "There is an element of type §0 called §1."
+msgstr ""
+
 #. §0: `cases`
 #. §1: `cases «{hpq}»`
 #. §2: `rcases «{hpq}» with hp | hq`
@@ -2789,6 +2787,28 @@ msgstr ""
 msgid "Now we are in the setting of two proposition variables §0 and §1 with two hypotheses. The first assumption provides a proof §2 that the proposition §3 is true. The second provides a proof §4 that the implication §5 is true.\n"
 "\n"
 "It follows from both of these facts that §6 is also true and we can construct a proof by applying the hypothesis §7 to the proof §8."
+msgstr ""
+
+#. §0: `Bool`
+#. §1: `false : Bool`
+#. §2: `true : Bool`
+#. §3: `Bool → Bool`
+#. §4: `false`
+#. §5: `true`
+#. §6: `true`
+#. §7: `false`
+#. §8: `intro b`
+#. §9: `cases b`
+#. §10: `false`
+#. §11: `true`
+#: Game.Levels.BooleanWorld.L01_Negation
+msgid "Recall the type §0 of booleans has two elements denoted §1 and §2.\n"
+"\n"
+"In this level, our aim is to define a function §3 that encodes the logical operation of negation, i.e., sends §4 to §5 and §6 to §7.\n"
+"\n"
+"You can do this by introducing a generic boolean by typing §8. Then use the tactic §9 to define the output of the function.\n"
+"\n"
+"Note the first case provided by Lean is the case of §10 while the second case is the case of §11. Try toggling to editor mode and perhaps add a few blank lines at the bottom to see if you can see what case you are in."
 msgstr ""
 
 #. §0: `«{lem}»`
@@ -3210,23 +3230,6 @@ msgstr ""
 #. §1: `y = x`
 #: Game.Levels.EqualityWorld.L04_Symmetry
 msgid "Equality is symmetric: if §0 then §1."
-msgstr ""
-
-#. §0: `a : A`
-#. §1: `b : B`
-#. §2: `⟨a ,b⟩ : A × B`
-#. §3: `⟨a, b⟩.fst : A`
-#. §4: `⟨a , b⟩.snd : B`
-#. §5: `a`
-#. §6: `b`
-#. §7: `⟨a, b⟩.fst = a`
-#. §8: `⟨a, b⟩.snd = b`
-#. §9: `rfl`
-#: Game.Levels.EqualityWorld.L03_ProjectedPairs
-msgid "Now consider elements §0 and §1. There is a corresponding pair §2 that we can project back to define terms\n"
-"§3 and §4. How do these relate to the original terms §5 and §6?\n"
-"\n"
-"Another *computation rule* for product types tells us §7 and §8 by definition, meaning that §9 can provide proofs."
 msgstr ""
 
 #. §0: `P`
@@ -3878,7 +3881,6 @@ msgstr ""
 #. §1: `p q : x = y`
 #. §2: `p = q`
 #: Game.Levels.EqualityWorld.L09_EqualityProposition
-#: Game.Levels.EqualityWorld.L10_BossLevel
 msgid "The equality type is a proposition: for §0 if §1 then §2"
 msgstr ""
 
@@ -4730,6 +4732,25 @@ msgid "We have seen that any type §0 has a function from the empty type §1.\n"
 "We will see that if there is a function §7 and if there is an element §8, then we get an element of the empty type, which is very strange indeed!"
 msgstr ""
 
+#. §0: `a : A`
+#. §1: `b : B`
+#. §2: `⟨a ,b⟩ : A × B`
+#. §3: `⟨a, b⟩.fst : A`
+#. §4: `⟨a , b⟩.snd : B`
+#. §5: `a`
+#. §6: `b`
+#. §7: `⟨a, b⟩.fst = a`
+#. §8: `⟨a, b⟩.snd = b`
+#. §9: `rfl`
+#: Game.Levels.EqualityWorld.L03_ProjectedPairs
+msgid "Now consider elements §0 and §1.\n"
+"\n"
+"There is a corresponding pair §2 that we can project back to define terms\n"
+"§3 and §4. How do these relate to the original terms §5 and §6?\n"
+"\n"
+"Another *computation rule* for product types tells us §7 and §8 by definition, meaning that §9 can provide proofs."
+msgstr ""
+
 #. §0: `(P ∧ Q → R) → (P → Q → R)`
 #: Game.Levels.ConjunctionWorld.L06_CompoundImplication
 msgid "This proves that §0. We will now investigate the converse implication."
@@ -4843,14 +4864,6 @@ msgstr ""
 msgid "The evaluation function has type §0 and is defined by the formula §1. By swapping variables, we can also think of evaluation as defining a function §2 where this latter function is defined by §3."
 msgstr ""
 
-#. §0: `rw [p, q]`
-#. §1: `rw [q, p]`
-#. §2: `rw [← q, ← p]`
-#. §3: `rw [← p, ← q]`
-#: Game.Levels.EqualityWorld.L05_Transitivity
-msgid "Try solving the goal by rewriting in both directions. You can also experiment with multiple rewrites at once. Why does §0 work but §1 not? Why does §2 work but §3 not?"
-msgstr ""
-
 #. §0: `¬ (P ∧ Q)`
 #. §1: `¬ P ∧ ¬ Q`
 #: Game.Levels.ClassicalWorld.L04_NegatingConjunction
@@ -4880,6 +4893,15 @@ msgstr ""
 #. §1: `exact Empty.elim`
 #: Game.Levels.EmptyWorld.L01_FromEmpty
 msgid "Lean has a built-in name §0 for the function you have just defined. Thus §1 will also solve this level. This function has been added to the library."
+msgstr ""
+
+#. §0: `a : A`
+#. §1: `b : B`
+#. §2: `⟨a, b⟩ : A × B`
+#. §3: `a : A`
+#. §4: `b : B`
+#: Game.Levels.EqualityWorld.L03_ProjectedPairs
+msgid "If §0 and §1 then the projections of §2 are definitionally equal to §3 and §4, respectively."
 msgstr ""
 
 #. §0: `A ⊕ B → C`
@@ -4939,6 +4961,10 @@ msgstr ""
 
 #: Game.Levels.EmptyWorld
 msgid "Empty World"
+msgstr ""
+
+#: Game.Levels.EqualityWorld.L10_BossLevel
+msgid "Functions out of product types are well-defined."
 msgstr ""
 
 #. §0: `P`

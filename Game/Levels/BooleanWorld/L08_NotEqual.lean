@@ -19,7 +19,7 @@ The key ingredient is to use a function `P : Bool → Prop` defined to send the 
 
 Using this we can define a function `True → False`, i.e., a function `P true → P false` by introduction a hypothesis `x : P true` then rewriting along the equality `p` to change the goal from `P false` to `P true`, then returning `x : P true`.
 
-Applying this function to the element `True.intro : True` returns an element of `False`, a contradiction.
+Applying this function to the element `⟨⟩ : True` returns an element of `False`, a contradiction.
 
 If you like, use the hints to step through this proof.
 
@@ -36,8 +36,8 @@ Statement : ¬ (false = true) := by
   Hint "Define a function `P true → P false` by `have tr : P true → P false := by intro x ; rw [p] ; exact x
  `."
   have tr : P true → P false := by intro x ; rw [p] ; exact x
-  Hint "Type `exact tr True.intro` to return an element of `False` defined using the function `tr` and the element `True.intro : True`."
-  exact tr True.intro
+  Hint "Type `exact tr ⟨⟩` to return an element of `False` defined using the function `tr` and the element `⟨⟩ : True`."
+  exact tr ⟨⟩
 
 Conclusion "We have added the theorem `Bool.noConfusion` to the library."
 
