@@ -6,6 +6,7 @@ import Game.Levels.BooleanWorld.L05_Disjunction
 import Game.Levels.BooleanWorld.L06_DisjunctionSymmetry
 import Game.Levels.BooleanWorld.L07_DeMorgan
 import Game.Levels.BooleanWorld.L08_NotEqual
+import Game.Levels.BooleanWorld.L09_BossLevel
 
 World "BooleanWorld"
 Title "Boolean World"

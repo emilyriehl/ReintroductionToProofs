@@ -6,6 +6,8 @@ Level 4
 Title "Conjunction Symmetry"
 
 Introduction "For any booleans `x y : Bool`, `and x y = and y x`, capturing the symmetry of conjunction.
+
+Note Lean has an alternate notation `x && y` for `and x y`.
 "
 
 /-- The function `and : Bool → Bool → Bool` is symmetric. -/

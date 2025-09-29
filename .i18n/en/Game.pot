@@ -1527,6 +1527,10 @@ msgstr ""
 msgid "Given a function §0 and any element §1. You can apply the function §2 to §3 to obtain an element §4 of type §5."
 msgstr ""
 
+#: Game.Levels.BooleanWorld.L09_BossLevel
+msgid "If this was too easy never fear. We'll replace this with a harder Boss Level soon."
+msgstr ""
+
 #. §0: `fun x ↦ a`
 #. §1: `x : B`
 #. §2: `a : A`
@@ -1617,6 +1621,20 @@ msgstr ""
 #. §3: `True.intro : True`
 #: Game.Levels.BooleanWorld.L08_NotEqual
 msgid "Type §0 to return an element of §1 defined using the function §2 and the element §3."
+msgstr ""
+
+#: Game.Levels.BooleanWorld.L09_BossLevel
+msgid "The following expression in conjunctive normal form is unsatisfiable."
+msgstr ""
+
+#. §0: `x y : Bool`
+#. §1: `and x y = and y x`
+#. §2: `x && y`
+#. §3: `and x y`
+#: Game.Levels.BooleanWorld.L04_ConjunctionSymmetry
+msgid "For any booleans §0, §1, capturing the symmetry of conjunction.\n"
+"\n"
+"Note Lean has an alternate notation §2 for §3."
 msgstr ""
 
 #. §0: `A × B → B × A`
@@ -2346,6 +2364,7 @@ msgstr ""
 #: Game.Levels.NegationWorld.L11_BossLevel
 #: Game.Levels.ClassicalWorld.L06_BossLevel
 #: Game.Levels.EqualityWorld.L10_BossLevel
+#: Game.Levels.BooleanWorld.L09_BossLevel
 msgid "Boss Level"
 msgstr ""
 
@@ -3124,6 +3143,17 @@ msgid "An element of type §0, which abbreviates the type §1, can be thought of
 "Given §2 and §3, then §4 is a function from §5 to §6.\n"
 "\n"
 "Then given §7 we can apply the function §8 to get an element §9."
+msgstr ""
+
+#. §0: `(p || !q || r) && (q || !r) && (!p || r)`
+#: Game.Levels.BooleanWorld.L09_BossLevel
+msgid "An expression involving booleans is in *conjuctive normal form* if it expressed as a conjunction (possibly involving many formulas) of disjunctions (possibly involving many formulas) of either booleans or their negations.\n"
+"\n"
+"Using Lean's alternate notation for conjunction, disjunction, and negation, conjunctive normal form statements look like\n"
+"\n"
+"§0\n"
+"\n"
+"For the Boss Level, your are asked to characterize an especially complicated example of a statement in conjunctive normal form."
 msgstr ""
 
 #. §0: `«{h}»`
@@ -4741,12 +4771,6 @@ msgstr ""
 #: Game.Levels.EmptyWorld.L05_ProductWithEmpty
 #: Game.Levels.EmptyWorld.L06_CoproductWithEmpty
 msgid "For any type §0, there are functions in both directions between the types §1 and §2."
-msgstr ""
-
-#. §0: `x y : Bool`
-#. §1: `and x y = and y x`
-#: Game.Levels.BooleanWorld.L04_ConjunctionSymmetry
-msgid "For any booleans §0, §1, capturing the symmetry of conjunction."
 msgstr ""
 
 #. §0: `A`
