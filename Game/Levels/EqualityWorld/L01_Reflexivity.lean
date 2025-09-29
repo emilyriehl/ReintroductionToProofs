@@ -17,12 +17,15 @@ can type `exact rfl`. As a shorthand, Lean also defines a tactic called `rfl` th
 For a type `A` and element `a : A`, the proposition `a = a` is true because there is a proof
 `rfl : a = a` witnessing the reflexivity of equality.
 -/
-DefinitionDoc rfl as "rfl" in "Eq"
+TheoremDoc rfl as "rfl" in "Eq"
 
 Statement {A : Type} {a : A} : a = a := by
   rfl
 
-NewDefinition rfl
+/-- The tactic `rfl` tries to solve a goal whose type is an equality where the left hand side and right hand side are equal by definition. -/
+TacticDoc rfl
+
+NewTheorem rfl
 NewTactic rfl
 
 Conclusion "In summary, a basic axiom of equality is *reflexivity*:

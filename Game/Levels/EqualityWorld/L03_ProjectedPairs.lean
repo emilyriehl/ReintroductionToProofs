@@ -16,4 +16,4 @@ Statement {A B : Type} (a : A) (b : B) : (⟨a , b⟩ : A × B).fst = a ∧ (⟨
   rfl
   rfl
 
-Conclusion "In summary, `rfl` can also be used to prove propositions of the form `x = y` when `x` and `y` are equal *by definition* (rather than by a more complicated chain of reasoning)."
+Conclusion "Once more, `rfl` can also be used to prove propositions of the form `x = y` when `x` and `y` are equal *by definition* (rather than by a more complicated chain of reasoning)."

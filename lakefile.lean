@@ -85,3 +85,5 @@ package Game where
 
 @[default_target]
 lean_lib Game
+
+require "leanprover-community" / mathlib @ git leanVersion

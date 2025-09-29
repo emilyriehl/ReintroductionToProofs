@@ -15,7 +15,7 @@ Note that `Sum.inl, Sum.inr : A → A ⊕ A` are *different functions* (as long 
 /--
 For types `A` and `B`, the function `Sum.inr : B → A ⊕ B` can be used to include elements of type `B` as elements of the coproduct type `A ⊕ B`.
 -/
-DefinitionDoc Sum.inr as "Sum.inr" in "Sum"
+DefinitionDoc Sum.inr as "inr" in "Sum"
 
 /-- For any `b : B`, there is an element `Sum.inr b : A ⊕ B`. -/
 Statement {A B : Type} (b : B) : A ⊕ B := by

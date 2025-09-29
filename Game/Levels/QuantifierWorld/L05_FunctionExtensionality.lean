@@ -2,7 +2,7 @@ import Game.Metadata
 import Game.Levels.FunctionWorld
 
 World "EqualityWorld"
-Level 5
+Level 15
 
 Title "Function Extensionality"
 

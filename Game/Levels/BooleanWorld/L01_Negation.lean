@@ -1,0 +1,27 @@
+import Game.Metadata
+
+World "BooleanWorld"
+Level 1
+
+Title "Negation"
+
+Introduction "Recall the type `Bool` of booleans has two elements denoted `false : Bool` and `true : Bool`.
+
+In this level, our aim is to define a function `Bool → Bool` that encodes the logical operation of negation, i.e., sends `false` to `true` and `true` to `false`.
+
+You can do this by introducing a generic boolean by typing `intro b`. Then use the tactic `cases b` to define the output of the function
+"
+
+/-- The negation function `not : Bool → Bool` sends the boolean `false` to `true` and `true` to `false`. -/
+Statement : Bool → Bool := by
+  intro b
+  cases b
+  exact true
+  exact false
+
+Conclusion "Lean has a built in name `not` for this function. It is now in your library."
+
+/-- The negation function `Bool.not : Bool → Bool` sends the boolean `false` to `true` and `true` to `false`. -/
+DefinitionDoc Bool.not as "not" in "Bool"
+
+NewDefinition Bool.not

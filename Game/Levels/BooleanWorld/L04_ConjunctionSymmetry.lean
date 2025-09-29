@@ -1,0 +1,21 @@
+import Game.Metadata
+
+World "BooleanWorld"
+Level 4
+
+Title "Conjunction Symmetry"
+
+Introduction "For any booleans `x y : Bool`, `and x y = and y x`, capturing the symmetry of conjunction.
+"
+
+/-- The function `and : Bool → Bool → Bool` is symmetric. -/
+Statement (x y : Bool) : and x y = and y x := by
+  cases x
+  cases y
+  rfl
+  rfl
+  cases y
+  rfl
+  rfl
+
+Conclusion "This proof can be written in one line as `cases x <;> cases y <;> rfl` where the `<;>` means &ldquo;do the following in all cases&rdquo;."

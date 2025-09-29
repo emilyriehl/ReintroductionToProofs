@@ -13,7 +13,7 @@ Lean has a built in function called `Sum.inl : A → A ⊕ B`.
 /--
 For types `A` and `B`, the function `Sum.inl : A → A ⊕ B` can be used to include elements of type `A` as elements of the coproduct type `A ⊕ B`.
 -/
-DefinitionDoc Sum.inl as "Sum.inl" in "Sum"
+DefinitionDoc Sum.inl as "inl" in "Sum"
 
 /-- For any `a : A`, there is an element `Sum.inl a : A ⊕ B`. -/
 Statement {A B : Type} (a : A) : A ⊕ B := by

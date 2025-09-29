@@ -18,6 +18,7 @@ In this case one of the *computation rules* for product types tells us that the 
 
 Note Lean uses `p.fst` and `p.snd` as synomyms for `p.1` and `p.2` respectively."
 
+/-- A term `p : A × B` in a product type is definitionally equal to the pairing of its projections `⟨p.1, p.2⟩`. -/
 Statement {A B : Type} (p : A × B) : p = ⟨p.1, p.2⟩ := by
   rfl
 

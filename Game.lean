@@ -8,6 +8,7 @@ import Game.Levels.EmptyWorld
 import Game.Levels.NegationWorld
 import Game.Levels.ClassicalWorld
 import Game.Levels.EqualityWorld
+import Game.Levels.BooleanWorld
 
 -- Here's what we'll put on the title screen
 Title "Computer-Verified Proof: a Hands-On Introduction to Interactive Theorem Proving"
@@ -52,6 +53,7 @@ Dependency CoproductWorld → EmptyWorld
 Dependency EmptyWorld → NegationWorld
 Dependency NegationWorld → ClassicalWorld
 Dependency ClassicalWorld → EqualityWorld
+Dependency EqualityWorld → BooleanWorld
 
 /-! Build the game. Show's warnings if it found a problem with your game. -/
 MakeGame
