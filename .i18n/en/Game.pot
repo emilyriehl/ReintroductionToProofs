@@ -382,6 +382,13 @@ msgstr ""
 msgid "The implicit parentheses in the goal are to the right §0."
 msgstr ""
 
+#. §0: `Unit ⊕ Unit`
+#. §1: `Bool`
+#. §2: `ℕ`
+#: Game.Levels.EquivalenceWorld.L07_BossLevel
+msgid "The equivalence between the types §0 and §1 has to do with the fact that both are examples of *inductive types*. In the next world, we will finally properly introduce another inductive type, namely the type §2 of natural numbers."
+msgstr ""
+
 #: Game.Levels.BooleanWorld.L05_Disjunction
 msgid "Disjunction"
 msgstr ""
@@ -606,6 +613,16 @@ msgstr ""
 
 #: Game.Levels.ProductWorld.L06_Currying
 msgid "Currying"
+msgstr ""
+
+#. §0: `A`
+#. §1: `B`
+#. §2: `C`
+#. §3: `A → B → C`
+#. §4: `B → A → C`
+#: Game.Levels.EquivalenceWorld.L03_SwappingInputs
+#: Game.Levels.EquivalenceWorld.L04_CurryingUncurrying
+msgid "For any types §0, §1, and §2, the function types §3 and §4 are equivalent."
 msgstr ""
 
 #: Game.Levels.BooleanWorld
@@ -1200,6 +1217,10 @@ msgstr ""
 msgid "The next level will give more practice with the existential quantifier."
 msgstr ""
 
+#: Game.Levels.EquivalenceWorld.L03_SwappingInputs
+msgid "Swapping Inputs"
+msgstr ""
+
 #. §0: `P ∧ Q`
 #. §1: `Q ∧ P`
 #: Game.Levels.ConjunctionWorld.L03_Symmetry
@@ -1260,11 +1281,32 @@ msgstr ""
 #. §0: `constructor`
 #: Game.Levels.EquivalenceWorld.L01_ProductSymmetry
 #: Game.Levels.EquivalenceWorld.L02_CoproductSymmetry
+#: Game.Levels.EquivalenceWorld.L03_SwappingInputs
+#: Game.Levels.EquivalenceWorld.L04_CurryingUncurrying
+#: Game.Levels.EquivalenceWorld.L05_ComponentFunctions
+#: Game.Levels.EquivalenceWorld.L06_MoreComponentFunctions
+#: Game.Levels.EquivalenceWorld.L07_BossLevel
 msgid "Type §0 to split the goal up into the four proof obligations."
 msgstr ""
 
 #: Game.Levels.DisjunctionWorld.L09_BossLevel
 msgid "Move on to Coproduct World to learn about the type theoretic analog of the logical operation of disjunction."
+msgstr ""
+
+#. §0: `Unit`
+#. §1: `() : Unit`
+#. §2: `Bool`
+#. §3: `false true : Bool`
+#. §4: `Unit ⊕ Unit → Bool`
+#. §5: `Bool → Unit ⊕ Unit`
+#: Game.Levels.EquivalenceWorld.L07_BossLevel
+msgid "For the Boss Level of Equivalence World you are asked to establish an equivalence between a priori unrelated types.\n"
+"\n"
+"One of these is the coproduct of the unit type §0 with itself. Recall the unit type has a canonical element §1.\n"
+"\n"
+"The other is the type of booleans §2 which has two canonical elements §3.\n"
+"\n"
+"Be careful how you define the functions §4 and §5. If you make a wrong choice, you will not be able to solve the rest of this level."
 msgstr ""
 
 #. §0: `«{A}»`
@@ -1273,6 +1315,10 @@ msgstr ""
 #. §3: `exact «{x}»`
 #: Game.Levels.FunctionWorld.L01_IdentityFunction
 msgid "Now the goal is an element of type §0, which should be thought of as result of applying the function to the element §1. In the case of the identity function, we want to return §2 again which is done by typing §3."
+msgstr ""
+
+#: Game.Levels.EquivalenceWorld.L03_SwappingInputs
+msgid "In the next level, we will establish another equivalence involving function types."
 msgstr ""
 
 #: Game.Levels.EqualityWorld.L08_EmptyProposition
@@ -1539,6 +1585,23 @@ msgstr ""
 #. §2: `S ∨ T`
 #: Game.Levels.DisjunctionWorld.L03_UsingOr
 msgid "Recall §0 and §1 refer to the left and right propositions in a disjunction §2."
+msgstr ""
+
+#. §0: `A × B → C`
+#. §1: `A → B → C`
+#. §2: `A → B → C`
+#. §3: `A × B → C`
+#. §4: `(A × B → C) ≃ (A → B → C)`
+#: Game.Levels.EquivalenceWorld.L04_CurryingUncurrying
+msgid "*Currying* is the operation that converts a function of type §0 into a function of type §1.\n"
+"\n"
+"*Uncurrying* is the operation that converts a function of type §2 into a function of type §3.\n"
+"\n"
+"These operations are inverses, defining an equivalence of types\n"
+"\n"
+"§4.\n"
+"\n"
+"Note the currying and uncurrying functions are in the library, so can be used (rather than re-defined) in the proof."
 msgstr ""
 
 #: Game.Levels.FunctionWorld.L09_BossLevel
@@ -1920,6 +1983,18 @@ msgstr ""
 msgid "The following expression in conjunctive normal form is unsatisfiable."
 msgstr ""
 
+#. §0: `X → A × B`
+#. §1: `(X → A) × (X → B)`
+#: Game.Levels.EquivalenceWorld.L05_ComponentFunctions
+msgid "Another equivalence of types captures the full universal property of product types.\n"
+"\n"
+"Namely the type of functions §0 into a product type is equivalent to the type of functions\n"
+"\n"
+"§1\n"
+"\n"
+"defined by taking the product of two function types."
+msgstr ""
+
 #. §0: `x y : Bool`
 #. §1: `and x y = and y x`
 #. §2: `x && y`
@@ -2062,6 +2137,10 @@ msgstr ""
 #. §1: `Or.inr : Q → P ∨ Q`
 #: Game.Levels.DisjunctionWorld.L01_IntroducingOr
 msgid "If this is your first time solving this level, delete your code and prove the same theorem another way. You can also use the proofs of the implications §0 and §1 that are now in the library."
+msgstr ""
+
+#: Game.Levels.EquivalenceWorld.L06_MoreComponentFunctions
+msgid "For any types ``A`, `B`, and `C`, the types `A ⊕ B → C` and `(A → C) × (B → C)` are equivalent."
 msgstr ""
 
 #: Game.Levels.DisjunctionWorld.L08_MoreDistributivity
@@ -2386,6 +2465,10 @@ msgstr ""
 msgid "The unit type is a proposition: for §0, §1."
 msgstr ""
 
+#: Game.Levels.EquivalenceWorld.L04_CurryingUncurrying
+msgid "Currying / Uncurrying"
+msgstr ""
+
 #. §0: `P ∧ Q → R`
 #. §1: `P → Q → R`
 #. §2: `(P → Q → R)`
@@ -2394,6 +2477,11 @@ msgstr ""
 msgid "In the previous level we proved that §0 implies §1.\n"
 "\n"
 "We now show that §2 implies §3."
+msgstr ""
+
+#: Game.Levels.EquivalenceWorld.L05_ComponentFunctions
+#: Game.Levels.EquivalenceWorld.L06_MoreComponentFunctions
+msgid "In the next level, we will prove a similar universal property for coproduct types."
 msgstr ""
 
 #. §0: `P`
@@ -2553,6 +2641,18 @@ msgid "The DeMorgan laws for booleans take the form of equalities\n"
 "§4.\n"
 "\n"
 "The objective of this level is to prove these equalities."
+msgstr ""
+
+#. §0: `A ⊕ B → C`
+#. §1: `(A → C) × (B → C)`
+#: Game.Levels.EquivalenceWorld.L06_MoreComponentFunctions
+msgid "Another equivalence of types captures the full universal property of coproduct types.\n"
+"\n"
+"Namely the type of functions §0 out of a coproduct type is equivalent to the type of functions\n"
+"\n"
+"§1\n"
+"\n"
+"defined by taking the product of two function types."
 msgstr ""
 
 #. §0: `have`
@@ -2884,6 +2984,7 @@ msgstr ""
 #: Game.Levels.EqualityWorld.L10_BossLevel
 #: Game.Levels.BooleanWorld.L09_BossLevel
 #: Game.Levels.QuantifierWorld.L12_BossLevel
+#: Game.Levels.EquivalenceWorld.L07_BossLevel
 msgid "Boss Level"
 msgstr ""
 
@@ -3011,6 +3112,12 @@ msgstr ""
 #. §3: `¬ Q → ¬ P`
 #: Game.Levels.NegationWorld.L06_ModusTollens
 msgid "For any propositions §0 and §1, if §2 holds then §3 also holds."
+msgstr ""
+
+#: Game.Levels.EquivalenceWorld.L04_CurryingUncurrying
+#: Game.Levels.EquivalenceWorld.L05_ComponentFunctions
+#: Game.Levels.EquivalenceWorld.L06_MoreComponentFunctions
+msgid "This function is in the library. Rather than redefine it, can you use it?"
 msgstr ""
 
 #. §0: `Bool.noConfusion`
@@ -3536,6 +3643,19 @@ msgid "Given any type §0 and any elements §1, the *equality type* defines a ty
 "Put more precisely, if §3 are two proofs that §4 equals §5, then definitionally we have that §6."
 msgstr ""
 
+#. §0: `A`
+#. §1: `Empty → A`
+#. §2: `A → Empty`
+#. §3: `A → B → C`
+#. §4: `B → A → C`
+#: Game.Levels.EquivalenceWorld.L03_SwappingInputs
+msgid "Function types are *not* symmetric: when §0 is non-empty, the types §1 and §2 are not equivalent.\n"
+"\n"
+"However in the case of functions with multiple variables, the input variables can be exchanged.\n"
+"\n"
+"In this level, you will show that the types §3 and §4 are equivalent."
+msgstr ""
+
 #. §0: `P ↔ Q`
 #. §1: `P`
 #. §2: `Q`
@@ -3640,6 +3760,15 @@ msgid "A function §0 mapping out of a coproduct type may be *broken apart* into
 "This construction should be reminiscent of a proof by cases involving a hypothesis §17 that a disjunction is true and in fact the same tactics apply.\n"
 "\n"
 "Given a hypothesis §18, either §19 or §20 can be used to split into the two cases mentioned above."
+msgstr ""
+
+#. §0: `X`
+#. §1: `A`
+#. §2: `B`
+#. §3: `X → A × B`
+#. §4: `(X → A) × (X → B)`
+#: Game.Levels.EquivalenceWorld.L05_ComponentFunctions
+msgid "For any types §0, §1, and §2, the types §3 and §4 are equivalent."
 msgstr ""
 
 #. §0: `intro p`
@@ -4101,6 +4230,12 @@ msgid "Recall that for any types §0 and §1, we may form their *product type* �
 "In this level, we will see that these functions define an equivalence between the type §5 and the type §6. This gives a more complete account of the symmetry of the product.\n"
 "\n"
 "To define this equivalence, we need four pieces of data. Start by typing §7 to ask Lean to ask you about each piece of data one at a time."
+msgstr ""
+
+#. §0: `exact ⟨Function.curry, Function.uncurry, fun f ↦ rfl, fun f ↦ rfl⟩`
+#: Game.Levels.EquivalenceWorld.L04_CurryingUncurrying
+msgid "Note this level can be solved in one line with\n"
+"§0. Can you make sense of this proof?"
 msgstr ""
 
 #. §0: `f : A → B`
@@ -4671,6 +4806,20 @@ msgstr ""
 msgid "The tactic §0 tries to solve a goal whose type is an equality where the left hand side and right hand side are equal by definition."
 msgstr ""
 
+#. §0: `A`
+#. §1: `B`
+#. §2: `A ≃ B`
+#. §3: `A`
+#. §4: `B`
+#. §5: `⟨f, g, α, β⟩ : A ≃ B`
+#. §6: `f : A → B`
+#. §7: `g : B → A`
+#. §8: `α : ∀ a : A, g (f a) = a`
+#. §9: `β : ∀ b : B, f (g b) = b`
+#: Game.Levels.EquivalenceWorld.L01_ProductSymmetry
+msgid "For types §0 and §1, §2 is the type of equivalences between §3 and §4. Its elements have the form §5 where §6, §7, §8, and §9."
+msgstr ""
+
 #. §0: `P ∨ Q`
 #. §1: `P`
 #. §2: `Q`
@@ -4852,6 +5001,12 @@ msgstr ""
 #. §0: `intro p`
 #: Game.Levels.BooleanWorld.L08_NotEqual
 msgid "Start with §0."
+msgstr ""
+
+#. §0: `Unit ⊕ Unit`
+#. §1: `Bool`
+#: Game.Levels.EquivalenceWorld.L07_BossLevel
+msgid "The types §0 and §1 are equivalent."
 msgstr ""
 
 #. §0: `P`
@@ -5192,6 +5347,11 @@ msgstr ""
 #. §1: `exact «{p}»`
 #: Game.Levels.ImplicationWorld.L01_ByAssumption
 msgid "To use the hypothesis §0 to reach this conclusion type §1."
+msgstr ""
+
+#. §0: `ext`
+#: Game.Levels.EquivalenceWorld.L06_MoreComponentFunctions
+msgid "This is not a definitional equality, so requires the use of function extensionality. Use the tactic §0 to reduce this to proving the componentwise equality of functions."
 msgstr ""
 
 #. §0: `(P ∧ Q) ∧ R`
@@ -5572,6 +5732,7 @@ msgstr ""
 
 #: Game.Levels.ProductWorld.L08_ComponentFunctions
 #: Game.Levels.CoproductWorld.L03_ComponentFunctions
+#: Game.Levels.EquivalenceWorld.L05_ComponentFunctions
 msgid "Component Functions"
 msgstr ""
 
@@ -5611,6 +5772,10 @@ msgstr ""
 #: Game.Levels.NegationWorld.L07_NegatingImplication
 msgid "Try §0 to add a proof of §1 to your\n"
 "assumptions, where §2 is used to type §3."
+msgstr ""
+
+#: Game.Levels.EquivalenceWorld.L06_MoreComponentFunctions
+msgid "More component Functions"
 msgstr ""
 
 #. §0: `∀ x : A, P x`

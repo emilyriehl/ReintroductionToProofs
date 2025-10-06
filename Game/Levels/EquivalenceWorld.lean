@@ -1,5 +1,10 @@
 import Game.Levels.EquivalenceWorld.L01_ProductSymmetry
 import Game.Levels.EquivalenceWorld.L02_CoproductSymmetry
+import Game.Levels.EquivalenceWorld.L03_SwappingInputs
+import Game.Levels.EquivalenceWorld.L04_CurryingUncurrying
+import Game.Levels.EquivalenceWorld.L05_ComponentFunctions
+import Game.Levels.EquivalenceWorld.L06_MoreComponentFunctions
+import Game.Levels.EquivalenceWorld.L07_BossLevel
 
 World "EquivalenceWorld"
 Title "Equivalence World"
