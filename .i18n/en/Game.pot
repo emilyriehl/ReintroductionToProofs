@@ -1,7 +1,7 @@
 msgid ""
 msgstr "Project-Id-Version: Game v4.23.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-10-03\n"
+"POT-Creation-Date: 2025-10-05\n"
 "Last-Translator: \n"
 "Language-Team: none\n"
 "Language: en\n"
@@ -281,6 +281,14 @@ msgid "The logical connective of *disjunction*, denoted by §0, is the mathemati
 "Note that the mathematical &ldquo;or&rdquo; is *inclusive*, meaning that if §11 and §12 are both true, then §13 is true.\n"
 "\n"
 "Using a hypothesis §14 leads to a proof strategy of arguing &ldquo;by cases&rdquo; as we will soon discover."
+msgstr ""
+
+#. §0: `gf_is_surj`
+#. §1: `«{c}»`
+#. §2: `have hc := gf_is_surj «{c}»`
+#: Game.Levels.QuantifierWorld.L07_UsingExistence
+#: Game.Levels.QuantifierWorld.L08_ComposingSurjectivity
+msgid "To use the hypothesis §0 at §1 type §2."
 msgstr ""
 
 #: Game.Levels.QuantifierWorld.L02_MoreTransitivity
@@ -964,6 +972,7 @@ msgstr ""
 #. §0: `b`
 #. §1: `b && b = b || b`
 #: Game.Levels.QuantifierWorld.L06_IntroducingExistence
+#: Game.Levels.QuantifierWorld.L07_UsingExistence
 msgid "There is some boolean §0 so that §1"
 msgstr ""
 
@@ -993,6 +1002,7 @@ msgid "If the goal is to prove §0 and we have a hypothesis §1, the tactic §2 
 msgstr ""
 
 #: Game.Levels.QuantifierWorld.L06_IntroducingExistence
+#: Game.Levels.QuantifierWorld.L08_ComposingSurjectivity
 msgid "The next level will give more practice with the existential quantifier."
 msgstr ""
 
@@ -1409,6 +1419,13 @@ msgstr ""
 #. §5: `apply`
 #: Game.Levels.FunctionWorld.L05_MultivariableFunctions
 msgid "This level can be solved by starting with §0, starting with §1, or starting with §2. If you start with §3, then you can continue with §4 or with §5. If this is your first time solving this level, try to find a different solution."
+msgstr ""
+
+#. §0: `f : A → B`
+#. §1: `g : B → C`
+#. §2: `g ∘ f : A → C`
+#: Game.Levels.QuantifierWorld.L08_ComposingSurjectivity
+msgid "If §0 and §1 are both surjective then §2 is also surjective."
 msgstr ""
 
 #. §0: `g : A → C`
@@ -2608,6 +2625,15 @@ msgstr ""
 msgid "In classical logic, for any propositions §0 and §1, §2 implies §3."
 msgstr ""
 
+#. §0: `have : (g ∘ f) «{a}» = ?? := rfl`
+#. §1: `??`
+#. §2: `rw [← ??]`
+#. §3: `\\l`
+#: Game.Levels.QuantifierWorld.L07_UsingExistence
+#: Game.Levels.QuantifierWorld.L08_ComposingSurjectivity
+msgid "You can either prove a lemma §0 by replacing the §1 with the definition of the composition function. Or you can try §2 using §3 to type the left arrow."
+msgstr ""
+
 #. §0: `A`
 #. §1: `a b : A`
 #. §2: `a = b`
@@ -2745,6 +2771,19 @@ msgid "Let §0 be a predicate over a type §1.\n"
 "Recall that we can think of proofs of universally quantified statements as *dependent functions*. So §8 can be thought of as a function that takes §9 to a proof §10 of the proposition §11.\n"
 "\n"
 "In particular, §12 is our desired proof."
+msgstr ""
+
+#. §0: `f : A → B`
+#. §1: `b : B`
+#. §2: `a : A`
+#. §3: `f a = b`
+#. §4: `f : A → B`
+#. §5: `g : B → C`
+#. §6: `g ∘ f : A → C`
+#: Game.Levels.QuantifierWorld.L08_ComposingSurjectivity
+msgid "Recall that a function §0 is *surjective* if for every §1 there exists some §2 so that §3.\n"
+"\n"
+"Your task in this level is to show that surjective functions compose: if §4 is surjective and §5 is surjective, then §6 is surjective."
 msgstr ""
 
 #. §0: `rfl`
@@ -3753,6 +3792,10 @@ msgstr ""
 msgid "Since §0 It is possible to solve this level with §1."
 msgstr ""
 
+#: Game.Levels.QuantifierWorld.L07_UsingExistence
+msgid "Using Existence"
+msgstr ""
+
 #. §0: `f : A → B`
 #. §1: `g : B → C`
 #. §2: `g ∘ f : A → C`
@@ -3814,6 +3857,12 @@ msgstr ""
 
 #: Game.Levels.EqualityWorld.L02_PairedProjections
 msgid "Paired Projections"
+msgstr ""
+
+#. §0: `cases «{gc}»`
+#. §1: `rcases «{gc}» with ⟨b, hb⟩`
+#: Game.Levels.QuantifierWorld.L08_ComposingSurjectivity
+msgid "Try §0 or §1/"
 msgstr ""
 
 #. §0: `P ∨ Q`
@@ -4138,6 +4187,10 @@ msgstr ""
 #: Game.Levels.NegationWorld.L08_NegatingDisjunction
 #: Game.Levels.NegationWorld.L08_NegatingDisjunction
 msgid "Look at the theorems about §0 if you have forgotten how to tell Lean about the relationship between §1 and §2."
+msgstr ""
+
+#: Game.Levels.QuantifierWorld.L07_UsingExistence
+msgid "In the next level we will prove that surjective functions compose."
 msgstr ""
 
 #: Game.Levels.EmptyWorld.L04_Composition
@@ -4544,6 +4597,13 @@ msgstr ""
 msgid "You can use the tactic §0 by supplying §1 with two arguments, in the correct order, with spaces in between (but no parentheses). Alternatively you can use the tactic §2."
 msgstr ""
 
+#. §0: `intro`
+#. §1: `C`
+#: Game.Levels.QuantifierWorld.L07_UsingExistence
+#: Game.Levels.QuantifierWorld.L08_ComposingSurjectivity
+msgid "To prove a universally quantified statement, start with §0 to introduce an arbitrary element of type §1. "
+msgstr ""
+
 #. §0: `x y : Bool`
 #. §1: `or x y = or y x`
 #. §2: `x || y`
@@ -4561,6 +4621,10 @@ msgstr ""
 
 #: Game.Levels.ClassicalWorld.L06_BossLevel
 msgid "In the next world, we will finally introduce the slippery topic of equality."
+msgstr ""
+
+#: Game.Levels.QuantifierWorld.L08_ComposingSurjectivity
+msgid "Composing surjectivity"
 msgstr ""
 
 #: Game.Levels.CoproductWorld
@@ -4754,6 +4818,20 @@ msgstr ""
 #: Game.Levels.ProductWorld.L08_ComponentFunctions
 #: Game.Levels.ProductWorld.L08_ComponentFunctions
 msgid "What is the type of the term §0? If you're not sure, you can type §1 and read the error message to find out."
+msgstr ""
+
+#. §0: `∃ (x : A), P x`
+#. §1: `use`
+#. §2: `a : A`
+#. §3: `P a`
+#. §4: `∃ (x y : A), P x y`
+#. §5: `use a, a'`
+#. §6: `use`
+#: Game.Levels.QuantifierWorld.L06_IntroducingExistence
+#: Game.Levels.QuantifierWorld.L08_ComposingSurjectivity
+msgid "For goals of the form §0 the tactic §1 can be used to provide an element §2 which will satisfy §3. For multiple constructors like §4, you can provide comma-separated values: §5.\n"
+"\n"
+"Note that the version of the §6 tactic for this game is somewhat weaker than the real one in Mathlib, which automatically tries to solve the remaining goal."
 msgstr ""
 
 #. §0: `f : A → B`
@@ -5127,6 +5205,37 @@ msgstr ""
 #: Game.Levels.NegationWorld.L07_NegatingImplication
 msgid "Try §0 to add a proof of §1 to your\n"
 "assumptions, where §2 is used to type §3."
+msgstr ""
+
+#. §0: `f : A → B`
+#. §1: `b : B`
+#. §2: `x : A`
+#. §3: `f x = b`
+#. §4: `f : A → B`
+#. §5: `g : B → C`
+#. §6: `g ∘ f : A → C`
+#. §7: `g : B → C`
+#. §8: `hc : ∃ x : A, (g ∘ f) x = c`
+#. §9: `A`
+#. §10: `rcases hc with ⟨a, ha⟩`
+#. §11: `a : A`
+#. §12: `ha : (g ∘ f) a = c`
+#: Game.Levels.QuantifierWorld.L07_UsingExistence
+msgid "A function §0 is *surjective* if for every §1 there exists some §2 so that §3.\n"
+"\n"
+"In the level, we will consider a composable pair of functions §4 and §5.\n"
+"\n"
+"We will show that if the composite §6 is surjective, then the function §7 is surjective too.\n"
+"\n"
+"This will give us practice using a hypothesis involving an existential quantifier, which in this case will have the form\n"
+"\n"
+"§8.\n"
+"\n"
+"To decompose this into an element of §9 satisfying the condition you can type\n"
+"\n"
+"§10\n"
+"\n"
+"to the pair of assumptions §11 and §12."
 msgstr ""
 
 #: Game.Levels.ImplicationWorld.L05_ProvingImpliedAssumption

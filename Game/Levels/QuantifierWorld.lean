@@ -4,6 +4,8 @@ import Game.Levels.QuantifierWorld.L03_UniversalElimination
 import Game.Levels.QuantifierWorld.L04_FunctionExtensionality
 import Game.Levels.QuantifierWorld.L05_DoubleNegation
 import Game.Levels.QuantifierWorld.L06_IntroducingExistence
+import Game.Levels.QuantifierWorld.L07_UsingExistence
+import Game.Levels.QuantifierWorld.L08_ComposingSurjectivity
 
 World "QuantifierWorld"
 Title "Quantifier World"
