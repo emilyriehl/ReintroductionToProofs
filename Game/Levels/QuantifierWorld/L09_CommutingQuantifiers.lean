@@ -19,7 +19,7 @@ We will see that the second statement implies the first.
 The converse implication is not true in general. Can you see why?
 "
 
-/-- Given a family of propositions `P : A → B → Prop`, `∃ z : B, ∀ w : A, P w z`implies `∀ a : A, ∃ b : B, P a b` -/
+/-- Given a family of propositions `P : A → B → Prop`, `∃ z : B, ∀ w : A, P w z`implies `∀ x : A, ∃ y : B, P x y` -/
 Statement {A B : Type} (P : A → B → Prop) : (∃ z : B, ∀ w : A, P w z) → ∀ x : A, ∃ y : B, P x y := by
   intro h
   intro a

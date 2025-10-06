@@ -13,12 +13,17 @@ Then if we are given any particular `a : A`. We can use `h` to provide a proof o
 
 How?
 
-Recall that we can think of proofs of universally quantified statements as *dependent functions*. So `h` can be thought of as a function that takes `x : A` to a proof `h x : P x` of the proposition `P x`.
+Recall that we can think of proofs of universally quantified statements as *dependent functions*.
 
-In particular, `h a : P a` is our desired proof."
+Thus, `h` can be thought of as a function that takes `x : A` to a proof `h x : P x` of the proposition `P x`.
 
-/-- For all `w x y z : A` if `w = x ` and `x = y` and `y = z` then `w = z`. -/
+We say that `h` is a *dependent* function because the element `h x` proves the proposition `P x`, while the element `h y` proves a different proposition, namely `P y`.
+
+In particular, `h a : P a` is our desired proof of the proposition `P a`."
+
+/-- Suppose the predicate `P : A → Prop` holds for all `x : A`. Then for any particular element `a : A`, `P a` is true. -/
 Statement {A : Type} {P : A → Prop} (a : A) (h : ∀ x : A, P x) : P a := by
+  Hint (hidden := true) "To apply the proof `h` at the specific element `a`, type `exact h a`."
   exact h a
 
-Conclusion "This explains the *elimination rule* for universally quantified statements."
+Conclusion "This explains the *elimination rule* for universally quantified statements. Like the elimination for function types, it corresponds to evaluating the proof `h : ∀ x : A, P x` at a specific element `a : A`."

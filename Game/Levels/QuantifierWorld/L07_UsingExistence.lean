@@ -13,13 +13,13 @@ We will show that if the composite `g ∘ f : A → C` is surjective, then the f
 
 This will give us practice using a hypothesis involving an existential quantifier, which in this case will have the form
 
-`hc : ∃ x : A, (g ∘ f) x = c`.
+`gf_is_surj : ∃ x : A, (g ∘ f) x = c`.
 
 To decompose this into an element of `A` satisfying the condition you can type
 
-`rcases hc with ⟨a, ha⟩`
+`rcases hgf with ⟨a, ha⟩`
 
-to the pair of assumptions `a : A` and `ha : (g ∘ f) a = c`.
+to replace the assumption `hgf` with the pair of assumptions `a : A` and `ha : (g ∘ f) a = c`.
 "
 
 /-- For functions `f : A → B` and `g : B → C` if `g ∘ f` is surjective, then so is `g`. -/
@@ -28,6 +28,7 @@ Statement {A B C : Type} (f : A → B) (g : B → C) (gf_is_surj : ∀ c : C, �
   intro c
   Hint (hidden := true) "To use the hypothesis `gf_is_surj` at `{c}` type `have hc := gf_is_surj {c}`."
   have hc := gf_is_surj c
+  Hint (hidden := true) "To break down the hypothesis `{hc}` try `cases {hc}` or `rcases {hc} with ⟨a, ha⟩`."
   rcases hc with ⟨a, ha⟩
   use f a
   Hint (hidden := true) "You can either prove a lemma `have : (g ∘ f) {a} = ?? := rfl` by replacing the `??` with the definition of the composition function. Or you can try `rw [← ??]` using `\\l` to type the left arrow."

@@ -21,6 +21,7 @@ In this level we will prove `∀ x : A, ¬ (P x)` implies
 
 /-- Given a family of propositions `P : A → Prop`,  `∀ x : A, ¬ (P x)` is logically equivalent to `¬ (∃ x : A, P x)` -/
 Statement {A : Type} (P : A → Prop) : (∀ x : A, ¬ (P x)) ↔ ¬ (∃ x : A, P x) := by
+  Hint (hidden := true) "Recall the meaning of `↔`. What tactic breaks this goal into its components?"
   constructor
   intro na
   intro ne

@@ -26,4 +26,4 @@ Statement {A : Type} (P : A → Prop) : (∃ x : A, ¬ (P x)) → ¬ (∀ x : A,
   rcases en with ⟨a, ha⟩
   exact ha (na a)
 
-Conclusion "The reverse implication is classical but not constructive as you will show in the Boss Level."
+Conclusion "The converse implication is classical but not constructive as you will show in the Boss Level."
