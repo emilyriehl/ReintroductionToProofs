@@ -31,6 +31,24 @@ msgid "Now we are in the setting of three proposition variables §0, §1, and §
 "If you need help, click the button §10 for reminders/hints."
 msgstr ""
 
+#. §0: `A`
+#. §1: `B`
+#. §2: `A ⊕ B`
+#. §3: `a : A`
+#. §4: `A ⊕ B`
+#. §5: `Sum.inl : A → A ⊕ B`
+#. §6: `A ⊕ B`
+#. §7: `apply Sum.inl`
+#. §8: `A`
+#. §9: `left`
+#: Game.Levels.CoproductWorld.L01_LeftInclusion
+msgid "For types §0 and §1, the coproduct type §2 has two kinds of elements. The first kind can be thought of as copies of elements §3 included into the coproduct §4 *on the left*.\n"
+"\n"
+"Lean has a built in function called §5.\n"
+"\n"
+"If the goal is to produce an element of §6, typing §7 will convert this to a goal of producing an element of §8. The tactic §9 has the same effect."
+msgstr ""
+
 #: Game.Levels.ProductWorld.L09_UniversalProperty
 #: Game.Levels.CoproductWorld.L04_UniversalProperty
 msgid "Universal property"
@@ -231,18 +249,6 @@ msgstr ""
 #. §3: `congrArg f p : f x = f y`
 #: Game.Levels.EqualityWorld.L06_ApplyingFunctions
 msgid "For a function §0 between types, elements §1, and a proof §2, then §3. This theorem has been added to the library."
-msgstr ""
-
-#. §0: `A`
-#. §1: `B`
-#. §2: `A ⊕ B`
-#. §3: `a : A`
-#. §4: `A ⊕ B`
-#. §5: `Sum.inl : A → A ⊕ B`
-#: Game.Levels.CoproductWorld.L01_LeftInclusion
-msgid "For types §0 and §1, the coproduct type §2 has two kinds of elements. The first kind can be thought of as copies of elements §3 included into the coproduct §4 *on the left*.\n"
-"\n"
-"Lean has a built in function called §5."
 msgstr ""
 
 #. §0: `A`
@@ -455,6 +461,10 @@ msgstr ""
 #: Game.Levels.NegationWorld.L03_DoubleNegation
 #: Game.Levels.NegationWorld.L04_Noncontradiction
 msgid "For any proposition §0, §1."
+msgstr ""
+
+#: Game.Levels.EquivalenceWorld.L02_CoproductSymmetry
+msgid "Coproduct Symmetry"
 msgstr ""
 
 #. §0: `«{andn}»`
@@ -692,6 +702,12 @@ msgstr ""
 msgid "If this is not the term you want, how can you use it to define the correct term?"
 msgstr ""
 
+#. §0: `left`
+#. §1: `right`
+#: Game.Levels.DisjunctionWorld.L01_IntroducingOr
+msgid "You have two choices: to reduce to the case of proving the left proposition or to reduce to the case of proving the right proposition. Type §0 to tell Lean you'd like to prove the left proposition or type §1 to tell Lean you'd like to prove the right proposition."
+msgstr ""
+
 #: Game.Levels.ClassicalWorld.L03_Contrapositive
 msgid "Contrapositive"
 msgstr ""
@@ -740,6 +756,14 @@ msgstr ""
 
 #: Game.Levels.NegationWorld.L07_NegatingImplication
 msgid "Negating Implication"
+msgstr ""
+
+#. §0: `«{p}» : A ⊕ B`
+#. §1: `rfl`
+#. §2: `«{p}»`
+#: Game.Levels.EquivalenceWorld.L02_CoproductSymmetry
+#: Game.Levels.EquivalenceWorld.L02_CoproductSymmetry
+msgid "The functions you have just defined are not definitionally inverses on all elements §0. This is why §1 fails. Try splitting §2 into cases first."
 msgstr ""
 
 #. §0: `¬ P ∨ ¬ Q`
@@ -1160,7 +1184,6 @@ msgid "Recall that predicates §0 can also be thought of as indexed families of 
 "an enhanced verison of the transitivity of equality."
 msgstr ""
 
-#: Game.Levels.DisjunctionWorld.L01_IntroducingOr
 #: Game.Levels.DisjunctionWorld.L02_AndImpliesOr
 msgid "If this is your first time solving this level, delete your code and prove the same theorem another way."
 msgstr ""
@@ -1236,6 +1259,7 @@ msgstr ""
 
 #. §0: `constructor`
 #: Game.Levels.EquivalenceWorld.L01_ProductSymmetry
+#: Game.Levels.EquivalenceWorld.L02_CoproductSymmetry
 msgid "Type §0 to split the goal up into the four proof obligations."
 msgstr ""
 
@@ -1273,12 +1297,6 @@ msgstr ""
 #: Game.Levels.CoproductWorld.L05_Symmetry
 #: Game.Levels.EqualityWorld.L04_Symmetry
 msgid "Symmetry"
-msgstr ""
-
-#. §0: `apply Or.inl`
-#. §1: `apply Or.inr`
-#: Game.Levels.DisjunctionWorld.L01_IntroducingOr
-msgid "You have two choices: to reduce to the case of proving the left proposition or to reduce to the case of proving the right proposition. Type §0 to tell Lean you'd like too prove the left proposition or type §1 to tell Lean you'd like to prove the right proposition."
 msgstr ""
 
 #: Game.Levels.NegationWorld.L09_NegatingConjunction
@@ -1425,6 +1443,21 @@ msgstr ""
 #. §2: `Q → P`
 #: Game.Levels.ImplicationWorld.L05_ProvingImpliedAssumption
 msgid "If §0 is true, then for any proposition §1, §2 is always true."
+msgstr ""
+
+#. §0: `P`
+#. §1: `Q`
+#. §2: `left`
+#. §3: `P ∨ Q`
+#. §4: `P`
+#. §5: `A`
+#. §6: `B`
+#. §7: `left`
+#. §8: `A ⊕ B`
+#. §9: `A`
+#: Game.Levels.DisjunctionWorld.L01_IntroducingOr
+#: Game.Levels.DisjunctionWorld.L01_IntroducingOr
+msgid "For propositions §0 and §1, the §2 tactic converts a goal of §3 to a goal of §4. For types §5 and §6, the §7 tactic converts a goal of §8 into a goal of §9."
 msgstr ""
 
 #: Game.Levels.EquivalenceWorld.L01_ProductSymmetry
@@ -2025,6 +2058,12 @@ msgstr ""
 msgid "For any types §0, §1, and §2, §3 is the function that sends §4 to the function that sends §5 to §6."
 msgstr ""
 
+#. §0: `Or.inl : P → P ∨ Q`
+#. §1: `Or.inr : Q → P ∨ Q`
+#: Game.Levels.DisjunctionWorld.L01_IntroducingOr
+msgid "If this is your first time solving this level, delete your code and prove the same theorem another way. You can also use the proofs of the implications §0 and §1 that are now in the library."
+msgstr ""
+
 #: Game.Levels.DisjunctionWorld.L08_MoreDistributivity
 msgid "More Distributivity"
 msgstr ""
@@ -2090,6 +2129,76 @@ msgstr ""
 msgid "Try solving the goal by rewriting in both directions. You can also experiment with multiple rewrites at once. Why does §0 work but §1 not? Why does §2 or §3 work but §4 not?"
 msgstr ""
 
+#. §0: `x y : A`
+#. §1: `x`
+#. §2: `y`
+#. §3: `p : x = y`
+#. §4: `P`
+#. §5: `Q`
+#. §6: `P`
+#. §7: `Q`
+#. §8: `p : P ↔ Q`
+#. §9: `A`
+#. §10: `B`
+#. §11: `p : A ≃ B`
+#. §12: `A ≃ B`
+#. §13: `A`
+#. §14: `B`
+#. §15: `A`
+#. §16: `B`
+#. §17: `f : A → B`
+#. §18: `g : B → A`
+#. §19: `α : ∀ a : A, g (f a) = a`
+#. §20: `β : ∀ b : B, f (g b) = b`
+#. §21: `P ↔ Q`
+#. §22: `f : P → Q`
+#. §23: `g : Q → P`
+#. §24: `A`
+#. §25: `B`
+#. §26: `B`
+#. §27: `A`
+#. §28: `α`
+#. §29: `g ∘ f = id`
+#. §30: `β`
+#. §31: `f ∘ g = id`
+#. §32: `f`
+#. §33: `g`
+#. §34: `f`
+#. §35: `g`
+#. §36: `A`
+#. §37: `B`
+#. §38: `⟨f, g, α, β⟩ : A ≃ B`
+#: Game.Levels.EquivalenceWorld
+msgid "What does it mean for two things to be &ldquo;the same&rdquo;?\n"
+"\n"
+"The answer depends on what sort of things we are talking about.\n"
+"\n"
+"We have seen what it means for two elements of the same type to be the same. Given §0, we think of §1 and §2 as being &ldquo;the same&rdquo; if they are *equal*, meaning there is an element §3 in the equality type.\n"
+"\n"
+"We have also seen what it means for two propositions to be the same. Given propositions §4 and §5, we think of §6 and §7 as being &ldquo;the same&rdquo; if they are *logically equivalent*, meaning there is an element §8.\n"
+"\n"
+"What does it mean for two types to be &ldquo;the same&rdquo;?\n"
+"\n"
+"In this level, we will learn the answer: two types §9 and §10 are &ldquo;the same&rdquo; if they are *equivalent*. This means there is some element §11 in the type §12 of *equivalences* between §13 and §14 that we will introduce.\n"
+"\n"
+"To define an equivalence between §15 and §16 we need four pieces of data:\n"
+"\n"
+"* a function §17\n"
+"* a function §18\n"
+"* a proof §19\n"
+"* a proof §20\n"
+"\n"
+"The first two pieces of data resemble the data required by a logical equivalence §21. For that one needs proofs §22 and §23 of the implications in each direction.\n"
+"\n"
+"The remaining data is relevant because functions carry more information than implications. In particular, there may be multiple functions from §24 to §25 and from §26 to §27.\n"
+"\n"
+"By function extensionality, the proof §28 witnesses the fact that §29 while the proof §30 witnesses the fact that §31. Together this tells us that the functions §32 and §33 are *inverses*.\n"
+"\n"
+"In other words, if §34 and §35 are thought of as operations that exchange elements of types §36 and §37, both operations can be undone.\n"
+"\n"
+"The data §38 is sometimes also referred to as an *isomorphism* but in Lean the term *equivalence* is more common."
+msgstr ""
+
 #. §0: `«{A}» → «{A}»`
 #. §1: `x : «{A}»`
 #. §2: `«{A}»`
@@ -2110,6 +2219,24 @@ msgstr ""
 
 #: Game.Levels.ClassicalWorld.L02_ExcludedMiddle
 msgid "What can you do with these assumptions?"
+msgstr ""
+
+#. §0: `A`
+#. §1: `B`
+#. §2: `A ⊕ B`
+#. §3: `A ⊕ B → B ⊕ A`
+#. §4: `B ⊕ A → A ⊕ B`
+#. §5: `A ⊕ B`
+#. §6: `B ⊕ A`
+#. §7: `constructor`
+#: Game.Levels.EquivalenceWorld.L02_CoproductSymmetry
+msgid "Recall that for any types §0 and §1, we may form their *coproduct type* §2.\n"
+"\n"
+"We proved that there are canonical functions §3 and §4.\n"
+"\n"
+"In this level, we will see that these functions define an equivalence between the type §5 and the type §6. This gives a more complete account of the symmetry of the coproduct.\n"
+"\n"
+"To define this equivalence, we need four pieces of data. Start by typing §7 to ask Lean to ask you about each piece of data one at a time."
 msgstr ""
 
 #: Game.Levels.BooleanWorld.L07_DeMorgan
@@ -2148,6 +2275,14 @@ msgid "In this world, we will study the proposition §0 and the logical operatio
 "Using the introduction rule for implications, such a proof starts by assuming §10 and then deriving an element of §11.\n"
 "\n"
 "Since §12 has no elements, we think of this process as deriving a contradiction."
+msgstr ""
+
+#. §0: `A`
+#. §1: `B`
+#. §2: `A ⊕ B`
+#. §3: `B ⊕ A`
+#: Game.Levels.EquivalenceWorld.L02_CoproductSymmetry
+msgid "For any types §0 and §1, the coproduct types §2 and §3 are equivalent."
 msgstr ""
 
 #: Game.Levels.QuantifierWorld.L09_CommutingQuantifiers
@@ -2569,9 +2704,35 @@ msgid "In this level we will study the relationship between an implication §0 a
 "The other direction of implication is considerably more subtle and will be discussed in the next world."
 msgstr ""
 
+#. §0: `A`
+#. §1: `B`
+#. §2: `A ⊕ B`
+#. §3: `b : A`
+#. §4: `A ⊕ B`
+#. §5: `Sum.inr : B → A ⊕ B`
+#. §6: `A ⊕ B`
+#. §7: `apply Sum.inr`
+#. §8: `B`
+#. §9: `right`
+#. §10: `Sum.inl, Sum.inr : A → A ⊕ A`
+#. §11: `A`
+#: Game.Levels.CoproductWorld.L02_RightInclusion
+msgid "For types §0 and §1, the coproduct type §2 has two kinds of elements. The second kind can be thought of as copies of elements §3 included into the coproduct §4 *on the right*.\n"
+"\n"
+"Lean has a built in function called §5.\n"
+"\n"
+"If the goal is to produce an element of §6, typing §7 will convert this to a goal of producing an element of §8. The tactic §9 has the same effect.\n"
+"\n"
+"Note that §10 are *different functions* (as long as the type §11 has at least one element) in a way we will be able to make more precise later."
+msgstr ""
+
 #. §0: `Bool.noConfusion`
 #: Game.Levels.BooleanWorld.L08_NotEqual
 msgid "We have added the theorem §0 to the library."
+msgstr ""
+
+#: Game.Levels.NegationWorld.L05_Absurd
+msgid "This might be a useful time to apply one of the theorems proven earlier in Negation World."
 msgstr ""
 
 #: Game.Levels.DisjunctionWorld.L07_Distributivity
@@ -2582,10 +2743,6 @@ msgstr ""
 #: Game.Levels.EmptyWorld.L05_ProductWithEmpty
 #: Game.Levels.EmptyWorld.L06_CoproductWithEmpty
 msgid "What is the logical structure of this type?"
-msgstr ""
-
-#: Game.Levels.NegationWorld.L05_Absurd
-msgid "This might be a useful time to apply one of the theorems proven earlier in Negation World."
 msgstr ""
 
 #. §0: `f g : A → B`
@@ -2970,6 +3127,10 @@ msgid "In this level, we will explore another weird consequence of the hypothesi
 "Then it is always possible to define a function §4.\n"
 "\n"
 "The proof requires a bit of cleverness, but you can ask for a few hints if you get stuck."
+msgstr ""
+
+#: Game.Levels.EquivalenceWorld.L01_ProductSymmetry
+msgid "In the next level, we will see that coproduct types are similarly symmetric."
 msgstr ""
 
 #. §0: `f : A × B → C`
@@ -3743,11 +3904,6 @@ msgstr ""
 msgid "Which tactics can be used to prove §0 with our given assumptions?"
 msgstr ""
 
-#: Game.Levels.EquivalenceWorld.L01_ProductSymmetry
-#: Game.Levels.EquivalenceWorld.L01_ProductSymmetry
-msgid "This is probably a bad idea"
-msgstr ""
-
 #. §0: `cases`
 #. §1: `Empty`
 #: Game.Levels.EqualityWorld.L08_EmptyProposition
@@ -3927,6 +4083,24 @@ msgstr ""
 
 #: Game.Levels.BooleanWorld.L08_NotEqual
 msgid "Not Equal"
+msgstr ""
+
+#. §0: `A`
+#. §1: `B`
+#. §2: `A × B`
+#. §3: `A × B → B × A`
+#. §4: `B × A → A × B`
+#. §5: `A × B`
+#. §6: `B × A`
+#. §7: `constructor`
+#: Game.Levels.EquivalenceWorld.L01_ProductSymmetry
+msgid "Recall that for any types §0 and §1, we may form their *product type* §2.\n"
+"\n"
+"We proved that there are canonical functions §3 and §4.\n"
+"\n"
+"In this level, we will see that these functions define an equivalence between the type §5 and the type §6. This gives a more complete account of the symmetry of the product.\n"
+"\n"
+"To define this equivalence, we need four pieces of data. Start by typing §7 to ask Lean to ask you about each piece of data one at a time."
 msgstr ""
 
 #. §0: `f : A → B`
@@ -4411,76 +4585,6 @@ msgstr ""
 
 #: Game.Levels.CoproductWorld.L01_LeftInclusion
 msgid "Left Inclusion"
-msgstr ""
-
-#. §0: `x y : A`
-#. §1: `x`
-#. §2: `y`
-#. §3: `p : x = y`
-#. §4: `P`
-#. §5: `Q`
-#. §6: `P`
-#. §7: `Q`
-#. §8: `p : P ↔ Q`
-#. §9: `A`
-#. §10: `B`
-#. §11: `p : A ≃ B`
-#. §12: `A ≃ B`
-#. §13: `A`
-#. §14: `B`
-#. §15: `A`
-#. §16: `B`
-#. §17: `f : A → B`
-#. §18: `g : B → A`
-#. §19: `α : ∀ a : A, g (f a) = a`
-#. §20: `β : ∀ b : B, f (g b) = b`
-#. §21: `P ↔ Q`
-#. §22: `f : P → Q`
-#. §23: `g : Q → P`
-#. §24: `A`
-#. §25: `B`
-#. §26: `B`
-#. §27: `A`
-#. §28: `α`
-#. §29: `g ∘ f = id`
-#. §30: `β`
-#. §31: `f ∘ g = id`
-#. §32: `f`
-#. §33: `g`
-#. §34: `f`
-#. §35: `g`
-#. §36: `A`
-#. §37: `B`
-#. §38: `⟨f, g, α, β⟩ : A ≃ B`
-#: Game.Levels.EquivalenceWorld
-msgid "What does it mean for two things to be &ldquo;the same&rdquo;?\n"
-"\n"
-"The answer depends on what sort of things we are talking about.\n"
-"\n"
-"We have seen what it means for two elements of the same type to be the same. Given §0, we think of §1 and §2 as being &ldquo;the same&rdquo; if they are *equal*, meaning there is an element §3 in the equality type.\n"
-"\n"
-"We have also seen what it means for two propositions to be the same. Given propositions §4 and §5, we think of §6 and §7 as being &ldquo;the same&rdquo; if they are *logically equivalent, meaning there is an element §8.\n"
-"\n"
-"What does it mean for two types to be &ldquo;the same&rdquo;?\n"
-"\n"
-"In this level, we will learn the answer: two types §9 and §10 are &ldquo;the same&rdquo; if they are *equivalent*. This means there is some element §11 in the type §12 of *equivalences* between §13 and §14 that we will introduce.\n"
-"\n"
-"To define an equivalence between §15 and §16 we need four pieces of data:\n"
-"\n"
-"* a function §17\n"
-"* a function §18\n"
-"* a proof §19\n"
-"* a proof §20\n"
-"\n"
-"The first two pieces of data resemble the data required by a logical equivalence §21. For that one needs proofs §22 and §23 of the implications in each direction.\n"
-"\n"
-"The remaining data is relevant because functions carry more information than implications. In particular, there may be multiple functions from §24 to §25 and from §26 to §27.\n"
-"\n"
-"By function extensionality, the proof §28 witnesses the fact that §29 while the proof §30 witnesses the fact that §31. Together this tells us that the functions §32 and §33 are *inverses*.\n"
-"\n"
-"In other words, if §34 and §35 are thought of as operations that exchange elements of types §36 and §37, both operations can be undone.\n"
-"\n"
-"The data §38 is sometimes also referred to as an *isomorphism* but in Lean the term *equivalence* is more common."
 msgstr ""
 
 #. §0: `«{np}»`
@@ -5231,6 +5335,10 @@ msgstr ""
 msgid "Conjunction"
 msgstr ""
 
+#: Game.Levels.EquivalenceWorld.L02_CoproductSymmetry
+msgid "In the next level, we will establish the first of several equivalences involving function types."
+msgstr ""
+
 #. §0: `P`
 #. §1: `Q`
 #. §2: `P ∧ ¬ Q → ¬ (P → Q)`
@@ -5392,22 +5500,6 @@ msgid "We have seen that the implication §0 implies the implication §1.\n"
 "That means, arguing classically, we can prove that §4 implies §5.\n"
 "\n"
 "Can you figure out how to prove this?"
-msgstr ""
-
-#. §0: `A`
-#. §1: `B`
-#. §2: `A ⊕ B`
-#. §3: `b : A`
-#. §4: `A ⊕ B`
-#. §5: `Sum.inr : B → A ⊕ B`
-#. §6: `Sum.inl, Sum.inr : A → A ⊕ A`
-#. §7: `A`
-#: Game.Levels.CoproductWorld.L02_RightInclusion
-msgid "For types §0 and §1, the coproduct type §2 has two kinds of elements. The second kind can be thought of as copies of elements §3 included into the coproduct §4 *on the right*.\n"
-"\n"
-"Lean has a built in function called §5.\n"
-"\n"
-"Note that §6 are *different functions* (as long as the type §7 has at least one element) in a way we will be able to make more precise later."
 msgstr ""
 
 #. §0: `A`

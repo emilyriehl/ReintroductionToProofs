@@ -9,17 +9,18 @@ Introduction "To prove a disjunction `P ∨ Q` it suffices to supply a proof of 
 
 Thus under the hypothesis that `P` and `Q` are both true, there are two ways to prove `P ∨ Q`: one using `p : P` and one using `q : Q`.
 
-Note `exact p` or `exact q` won't work as these are proofs of different propositions."
+Note `exact p` or `exact q` won't work as these are proofs of different propositions.
+"
 
 /--
-For propositions `P` and `Q`, the `left` tactic converts a goal of `P ∨ Q` to a goal of `P`.
+For propositions `P` and `Q`, the `left` tactic converts a goal of `P ∨ Q` to a goal of `P`. For types `A` and `B`, the `left` tactic converts a goal of `A ⊕ B` into a goal of `A`.
 -/
-TacticDoc left as "left" in "Or"
+TacticDoc left
 
 /--
-For propositions `P` and `Q`, the `right` tactic converts a goal of `P ∨ Q` to a goal of `Q`.
+For propositions `P` and `Q`, the `right` tactic converts a goal of `P ∨ Q` to a goal of `Q`. For types `A` and `B`, the `right` tactic converts a goal of `A ⊕ B` into a goal of `B`.
 -/
-TacticDoc right as "right" in "Or"
+TacticDoc right
 
 /-- There are two ways to prove `P ∨ Q` from the given hypotheses. Can you find them both?-/
 Statement {P Q : Prop} (p : P) (q : Q) : P ∨ Q := by
@@ -34,7 +35,14 @@ Statement {P Q : Prop} (p : P) (q : Q) : P ∨ Q := by
     exact q
   left; exact p
 
-Conclusion "If this is your first time solving this level, delete your code and prove the same theorem another way."
+Conclusion "If this is your first time solving this level, delete your code and prove the same theorem another way. You can also use the proofs of the implications `Or.inl : P → P ∨ Q` and `Or.inr : Q → P ∨ Q` that are now in the library."
 
-/- Use these commands to add items to the game's inventory. -/
 NewTactic left right
+
+/-- For propositions `P` and `Q`, `Or.inl` is a proof that `P → (P ∨ Q)`. -/
+DefinitionDoc Or.inl as "inl" in "Or"
+
+/-- For propositions `P` and `Q`, `Or.inr` is a proof that `Q → (P ∨ Q)`. -/
+DefinitionDoc Or.inr as "inl" in "Or"
+
+NewDefinition Or.inl Or.inr

@@ -9,6 +9,8 @@ Introduction "For types `A` and `B`, the coproduct type `A ⊕ B` has two kinds 
 
 Lean has a built in function called `Sum.inr : B → A ⊕ B`.
 
+If the goal is to produce an element of `A ⊕ B`, typing `apply Sum.inr` will convert this to a goal of producing an element of `B`. The tactic `right` has the same effect.
+
 Note that `Sum.inl, Sum.inr : A → A ⊕ A` are *different functions* (as long as the type `A` has at least one element) in a way we will be able to make more precise later.
 "
 

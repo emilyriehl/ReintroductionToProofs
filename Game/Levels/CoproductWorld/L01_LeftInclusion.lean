@@ -8,6 +8,8 @@ Title "Left Inclusion"
 Introduction "For types `A` and `B`, the coproduct type `A ⊕ B` has two kinds of elements. The first kind can be thought of as copies of elements `a : A` included into the coproduct `A ⊕ B` *on the left*.
 
 Lean has a built in function called `Sum.inl : A → A ⊕ B`.
+
+If the goal is to produce an element of `A ⊕ B`, typing `apply Sum.inl` will convert this to a goal of producing an element of `A`. The tactic `left` has the same effect.
 "
 
 /--
