@@ -30,9 +30,11 @@ Statement {A B : Type} : (A ⊕ B) ≃ (B ⊕ A) := by
   exact b
   left
   exact a
+  Hint "Now Lean wants you to check that the first function followed by the second function yields the identity function at every element `p : A ⊕ B`. Start with `intro p`."
   intro p
   Hint (hidden := true) "The functions you have just defined are not definitionally inverses on all elements `{p} : A ⊕ B`. This is why `rfl` fails. Try splitting `{p}` into cases first."
   rcases p with a | b <;> rfl
+  Hint "Now Lean wants you to check that the first function followed by the second function yields the identity function at every element `p : B ⊕ A`. Start with `intro p`."
   intro p
   Hint (hidden := true) "The functions you have just defined are not definitionally inverses on all elements `{p} : B ⊕ A`. This is why `rfl` fails. Try splitting `{p}` into cases first."
   rcases p with b | a <;> rfl

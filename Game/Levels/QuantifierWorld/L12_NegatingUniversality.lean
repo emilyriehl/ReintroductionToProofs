@@ -1,7 +1,7 @@
 import Game.Metadata
 
 World "QuantifierWorld"
-Level 11
+Level 12
 
 Title "Negating Universality"
 
@@ -22,7 +22,9 @@ In this level we will prove `∃ x : A, ¬ (P x)` implies
 /-- Given a family of propositions `P : A → Prop`,  `∃ x : A, ¬ (P x)` implies `¬ (∀ x : A, P x)` -/
 Statement {A : Type} (P : A → Prop) : (∃ x : A, ¬ (P x)) → ¬ (∀ x : A, P x)  := by
   intro en
+  Hint (hidden := true) "The goal is still an implication, so try another `intro`."
   intro na
+  Hint (hidden := true) "To apply the hypothesis `{na}` it would help to have a specific element of `A` to apply it to. Can you see where this might come from?"
   rcases en with ⟨a, ha⟩
   exact ha (na a)
 

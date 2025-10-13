@@ -1,9 +1,9 @@
 import Game.Metadata
 
 World "QuantifierWorld"
-Level 8
+Level 9
 
-Title "Composing surjectivity"
+Title "Composing Surjectivity"
 
 Introduction "Recall that a function `f : A → B` is *surjective* if for every `b : B` there exists some `a : A` so that `f a = b`.
 
@@ -26,11 +26,3 @@ Statement {A B C : Type} (f : A → B) (g : B → C) (f_is_surj : ∀ b : B, ∃
   rfl
 
 Conclusion "The next level will give more practice with the existential quantifier."
-
-/--
-For goals of the form `∃ (x : A), P x` the tactic `use` can be used to provide an element `a : A` which will satisfy `P a`. For multiple constructors like `∃ (x y : A), P x y`, you can provide comma-separated values: `use a, a'`.
-
-Note that the version of the `use` tactic for this game is somewhat weaker than the real one in Mathlib, which automatically tries to solve the remaining goal.-/
-TacticDoc use
-
-NewTactic use

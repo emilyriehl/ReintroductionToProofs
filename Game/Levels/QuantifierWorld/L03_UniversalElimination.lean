@@ -23,7 +23,7 @@ In particular, `h a : P a` is our desired proof of the proposition `P a`."
 
 /-- Suppose the predicate `P : A → Prop` holds for all `x : A`. Then for any particular element `a : A`, `P a` is true. -/
 Statement {A : Type} {P : A → Prop} (a : A) (h : ∀ x : A, P x) : P a := by
-  Hint (hidden := true) "To apply the proof `h` at the specific element `a`, type `exact h a`."
+  Hint (hidden := true) "To apply the proof `h` at the specific element `a`, type `exact h a`. Alternatively, you can start with `apply h`."
   exact h a
 
 Conclusion "This explains the *elimination rule* for universally quantified statements. Like the elimination for function types, it corresponds to evaluating the proof `h : ∀ x : A, P x` at a specific element `a : A`."

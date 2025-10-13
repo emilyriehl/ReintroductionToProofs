@@ -1,7 +1,7 @@
 import Game.Metadata
 
 World "QuantifierWorld"
-Level 10
+Level 11
 
 Title "Negating Existence"
 
@@ -25,11 +25,16 @@ Statement {A : Type} (P : A → Prop) : (∀ x : A, ¬ (P x)) ↔ ¬ (∃ x : A,
   constructor
   intro na
   intro ne
+  Hint (hidden := true) "How can you use the hypothesis `{ne}`?"
   rcases ne with ⟨a, ha⟩
   have npa := na a
+  Hint (hidden := true) "There are various ways to use `{na}` and `{npa}` to get a contradiction."
   exact npa ha
   intro ne
-  intro a pa
+  intro a
+  Hint (hidden := true) "The goal is still an implication, so try another `intro`."
+  intro pa
+  Hint (hidden := true) "The hypothesis `{ne}` is a proof that `(∃ x, P x) → False`. So try `apply {ne}`."
   apply ne
   use a
   exact pa

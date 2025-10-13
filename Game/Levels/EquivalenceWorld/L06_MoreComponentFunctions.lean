@@ -3,7 +3,7 @@ import Game.Metadata
 World "EquivalenceWorld"
 Level 6
 
-Title "More component Functions"
+Title "More Component Functions"
 
 Introduction "Another equivalence of types captures the full universal property of coproduct types.
 
@@ -37,4 +37,4 @@ Statement {A B C : Type} : (A ⊕ B → C) ≃ (A → C) × (B → C) := by
   intro f
   rfl
 
-Conclusion "In the next level, we will prove a similar universal property for coproduct types."
+Conclusion "We are now ready for the Boss Level of Equivalence World."

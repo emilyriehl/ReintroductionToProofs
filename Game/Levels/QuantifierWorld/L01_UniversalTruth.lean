@@ -20,7 +20,9 @@ In other words, to prove `∀ x : A, P x`, one must construct what is sometimes 
 
 /-- For all `a : A`, `a = a` holds. -/
 Statement {A : Type} : ∀ a : A, a = a := by
+  Hint "To prove a statement of the form `∀ x : A, P x` start with `intro x`. Your goal is then to prove the proposition `P x`."
   intro a
+  Hint (hidden := true) "Recall the `rfl` tactic."
   rfl
 
 Conclusion "Note the similarly with the first level of Equality World. In fact, all of the statements we have proven about arbitrary elements of types can be reinterpreted as proving universally quantified propositions."

@@ -1,7 +1,7 @@
 import Game.Metadata
 
 World "QuantifierWorld"
-Level 7
+Level 8
 
 Title "Using Existence"
 
@@ -13,17 +13,20 @@ We will show that if the composite `g ∘ f : A → C` is surjective, then the f
 
 This will give us practice using a hypothesis involving an existential quantifier, which in this case will have the form
 
-`gf_is_surj : ∃ x : A, (g ∘ f) x = c`.
+`gf_is_surj : ∀ z : C, ∃ x : A, (g ∘ f) x = z`.
+
+In particular, for any element `c : C`, `gf_is_surj c : ∃ x : A, (g ∘ f) x = c` is a proof that there
+is some `x : A` so that `(g ∘ f) x = c`.
 
 To decompose this into an element of `A` satisfying the condition you can type
 
-`rcases hgf with ⟨a, ha⟩`
+`rcases gf_is_surj c with ⟨a, ha⟩`
 
-to replace the assumption `hgf` with the pair of assumptions `a : A` and `ha : (g ∘ f) a = c`.
+to replace the assumption `gf_is_surj` with the pair of assumptions `a : A` and `ha : (g ∘ f) a = c`. Note that the element `a` gets substituted for the variable `x` in the expression `(g ∘ f) x = c`.
 "
 
 /-- For functions `f : A → B` and `g : B → C` if `g ∘ f` is surjective, then so is `g`. -/
-Statement {A B C : Type} (f : A → B) (g : B → C) (gf_is_surj : ∀ c : C, ∃ x : A, (g ∘ f) x = c) : ∀ c : C, ∃ y : B, g y = c := by
+Statement {A B C : Type} (f : A → B) (g : B → C) (gf_is_surj : ∀ z : C, ∃ x : A, (g ∘ f) x = z) : ∀ c : C, ∃ y : B, g y = c := by
   Hint (hidden := true) "To prove a universally quantified statement, start with `intro` to introduce an arbitrary element of type `C`. "
   intro c
   Hint (hidden := true) "To use the hypothesis `gf_is_surj` at `{c}` type `have hc := gf_is_surj {c}`."
@@ -35,4 +38,12 @@ Statement {A B C : Type} (f : A → B) (g : B → C) (gf_is_surj : ∀ c : C, �
   rw [← ha]
   rfl
 
-Conclusion "In the next level we will prove that surjective functions compose."
+Conclusion "In the next level, we will prove that surjective functions compose."
+
+/--
+For goals of the form `∃ (x : A), P x` the tactic `use` can be used to provide an element `a : A` which will satisfy `P a`. For multiple constructors like `∃ (x y : A), P x y`, you can provide comma-separated values: `use a, a'`.
+
+Note that the version of the `use` tactic for this game is somewhat weaker than the real one in Mathlib, which automatically tries to solve the remaining goal.-/
+TacticDoc use
+
+NewTactic use

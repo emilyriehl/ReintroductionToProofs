@@ -11,7 +11,7 @@ There is an idea that a function is determined by its values. In fact, we have `
 
 Similarly of course `rfl : g = fun x ↦ g x`. So when does `f = g`?
 
-By transivity of equality, it suffices for `fun f ↦ f x` and `fun x ↦ g x` to be equal.
+By transitivity of equality, it suffices for `fun f ↦ f x` and `fun x ↦ g x` to be equal.
 
 This suggests that it suffices to have a proof `p x : f x = g x` for all elements `x : A`.
 

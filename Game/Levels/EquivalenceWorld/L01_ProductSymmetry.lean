@@ -18,13 +18,19 @@ To define this equivalence, we need four pieces of data. Start by typing `constr
 Statement {A B : Type} : (A × B) ≃ (B × A) := by
   Hint "Type `constructor` to split the goal up into the four proof obligations."
   constructor
+  Hint "Now Lean wants you to define a function `A × B → B × A`."
   intro p
   exact ⟨p.2, p.1⟩
+  Hint "Now Lean wants you to define a function `B × A → A × B`."
   intro p
   exact ⟨p.2, p.1⟩
+  Hint "Now Lean wants you to check that the first function followed by the second function yields the identity function at every element `p : A × B`. Start with `intro p`."
   intro p
+  Hint (hidden := true) "When in doubt, recall the introduction rule for equality types."
   rfl
+  Hint "Now Lean wants you to check that the second function followed by the first function yields the identity function at every element `p : A × B`. Start with `intro p`."
   intro p
+  Hint (hidden := true) "When in doubt, recall the introduction rule for equality types."
   rfl
 
 Conclusion "In the next level, we will see that coproduct types are similarly symmetric."
