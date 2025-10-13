@@ -14,7 +14,7 @@ Namely the type of functions `A ⊕ B → C` out of a coproduct type is equivale
 defined by taking the product of two function types.
 "
 
-/-- For any types ``A`, `B`, and `C`, the types `A ⊕ B → C` and `(A → C) × (B → C)` are equivalent. -/
+/-- For any types `A`, `B`, and `C`, the types `A ⊕ B → C` and `(A → C) × (B → C)` are equivalent. -/
 Statement {A B C : Type} : (A ⊕ B → C) ≃ (A → C) × (B → C) := by
   Hint (hidden := true) "Type `constructor` to split the goal up into the four proof obligations."
   constructor

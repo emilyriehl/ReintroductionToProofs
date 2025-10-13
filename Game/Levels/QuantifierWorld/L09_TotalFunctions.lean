@@ -1,7 +1,7 @@
 import Game.Metadata
 
 World "QuantifierWorld"
-Level 7
+Level 9
 
 Title "Total Functions"
 

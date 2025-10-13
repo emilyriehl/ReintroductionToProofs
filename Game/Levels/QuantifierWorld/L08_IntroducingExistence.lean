@@ -1,7 +1,7 @@
 import Game.Metadata
 
 World "QuantifierWorld"
-Level 6
+Level 8
 
 Title "Introducing Existence"
 

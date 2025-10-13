@@ -1,9 +1,9 @@
 import Game.Metadata
 
 World "QuantifierWorld"
-Level 8
+Level 10
 
-Title "Using Existence"
+Title "Canceling Surjectivity"
 
 Introduction "A function `f : A → B` is *surjective* if for every `b : B` there exists some `x : A` so that `f x = b`.
 

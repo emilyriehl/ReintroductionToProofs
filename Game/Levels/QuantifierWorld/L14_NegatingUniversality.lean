@@ -1,7 +1,7 @@
 import Game.Metadata
 
 World "QuantifierWorld"
-Level 12
+Level 14
 
 Title "Negating Universality"
 

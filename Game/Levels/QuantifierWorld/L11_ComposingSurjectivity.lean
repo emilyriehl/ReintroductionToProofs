@@ -1,7 +1,7 @@
 import Game.Metadata
 
 World "QuantifierWorld"
-Level 9
+Level 11
 
 Title "Composing Surjectivity"
 

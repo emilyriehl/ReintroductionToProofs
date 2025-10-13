@@ -1,7 +1,7 @@
 import Game.Metadata
 
 World "QuantifierWorld"
-Level 5
+Level 6
 
 Title "Double Negation"
 

@@ -1,7 +1,7 @@
 import Game.Metadata
 
 World "QuantifierWorld"
-Level 10
+Level 12
 
 Title "Commuting Quantifiers"
 
