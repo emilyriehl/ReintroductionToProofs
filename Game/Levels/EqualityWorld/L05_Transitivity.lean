@@ -12,7 +12,7 @@ We've also proven that equality is *symmetric*: if `x = y` then `y = x`.
 In this level, we will prove that equality is *transitive*: if `x = y` and `y = z`, then `x = z`.
 "
 
-/-- Equality is transivite: if `x = y` and `y = z` then `x = z`. -/
+/-- Equality is transitive: if `x = y` and `y = z` then `x = z`. -/
 Statement {A : Type} {x y z : A} (p : x = y) (q : y = z) : x = z  := by
   rw [← q, ← p]
 

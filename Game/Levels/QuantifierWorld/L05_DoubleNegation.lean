@@ -3,7 +3,7 @@ import Game.Metadata
 World "QuantifierWorld"
 Level 5
 
-Title "DoubleNegation"
+Title "Double Negation"
 
 Introduction "Recall the function `not : Bool → Bool` that is defined to send the boolean `false` to `true` and to send the boolean `true` to `false`.
 
