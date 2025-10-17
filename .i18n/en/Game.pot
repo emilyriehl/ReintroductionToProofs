@@ -171,6 +171,23 @@ msgstr ""
 msgid "If §0, §1, §2, §3, §4, and §5 are true, then §6 is true."
 msgstr ""
 
+#. §0: `ℕ`
+#. §1: `0 : ℕ`
+#. §2: `succ : ℕ → ℕ`
+#. §3: `∀ m n : ℕ, succ m = succ n → m = n`
+#. §4: `¬ (∃ n : ℕ, succ n = 0)`
+#: Game.Levels.NaturalNumbersWorld
+msgid "In this world, we will introduce the type §0 of natural numbers.\n"
+"\n"
+"In traditional foundations, the natural numbers are characterized by a series of axioms discovered roughly contemporaneously by Dedekind and Peano that are commonly called the *Peano postulates*. There are five axioms:\n"
+"\n"
+"1. There is a natural number §1 called *zero*.\n"
+"2. There is a function §2 that sends any natural number to its *successor*.\n"
+"3. The successor function is injective: §3.\n"
+"4. Zero is not the successor of any natural number: §4.\n"
+"5. The principle of mathematical induction (about more which below)."
+msgstr ""
+
 #. §0: `P`
 #. §1: `P`
 #. §2: `P`
@@ -1333,6 +1350,10 @@ msgstr ""
 msgid "Using And"
 msgstr ""
 
+#: Game.Levels.NaturalNumbersWorld
+msgid "Natural Numbers World"
+msgstr ""
+
 #. §0: `constructor`
 #: Game.Levels.EquivalenceWorld.L01_ProductSymmetry
 #: Game.Levels.EquivalenceWorld.L02_CoproductSymmetry
@@ -1972,6 +1993,10 @@ msgstr ""
 msgid "Given a function §0 and any element §1. You can apply the function §2 to §3 to obtain an element §4 of type §5."
 msgstr ""
 
+#: Game.Levels.NaturalNumbersWorld.L01_Numerals
+msgid "By definition"
+msgstr ""
+
 #. §0: `have eq1 : (g ∘ f) «{x}» = g (f «{x}») := rfl`
 #: Game.Levels.QuantifierWorld.L05_CancelingInjectivity
 msgid "Use §0 and a similar lemma to give yourself more equalities to rewrite along."
@@ -2093,6 +2118,14 @@ msgstr ""
 msgid "For any booleans §0, §1, capturing the symmetry of conjunction.\n"
 "\n"
 "Note Lean has an alternate notation §2 for §3."
+msgstr ""
+
+#. §0: `1`
+#. §1: `2`
+#. §2: `3`
+#. §3: `4`
+#: Game.Levels.NaturalNumbersWorld.L01_Numerals
+msgid "Explicit numerals §0, §1, §2, §3, and so on are defined as repeated successors of the previous numerals."
 msgstr ""
 
 #: Game.Levels.BooleanWorld.L07_DeMorgan
@@ -3821,6 +3854,7 @@ msgstr ""
 #. §0: `retry`
 #. §1: `assumption`
 #: Game.Levels.ImplicationWorld.L01_ByAssumption
+#: Game.Levels.NaturalNumbersWorld.L01_Numerals
 msgid "You can click on §0 to attempt a different proof. Try typing §1 instead."
 msgstr ""
 
@@ -6072,6 +6106,10 @@ msgstr ""
 #. §1: `exact Empty.elim`
 #: Game.Levels.EmptyWorld.L01_FromEmpty
 msgid "Lean has a built-in name §0 for the function you have just defined. Thus §1 will also solve this level. This function has been added to the library."
+msgstr ""
+
+#: Game.Levels.NaturalNumbersWorld.L01_Numerals
+msgid "Numerals"
 msgstr ""
 
 #: Game.Levels.QuantifierWorld.L08_IntroducingExistence
