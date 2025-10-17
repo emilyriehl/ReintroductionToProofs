@@ -23,8 +23,9 @@ Try solving this level using both types of rewriting.
 /-- Equality is symmetric: if `x = y` then `y = x`. -/
 Statement {A : Type} {x y : A} (p : x = y) : y = x  := by
   rw [p]
+  rfl
 
-/-- Given a hypothesis `p : x = y`, the tactic `rw [p]` will replace the first `x` in the goal by `y` and attempt to close the goal with `rfl`. Writing `rw [← p]` will replace the first `y` in the goal by `x` and attempt to close the goal with `rfl`. -/
+/-- Given a hypothesis `p : x = y`, the tactic `rw [p]` will replace each `x` in the goal by `y`. Writing `rw [← p]` will replace the each `y` in the goal by `x`. This is a slightly less powerful version than the `rw` tactic in Mathlib, which will attempt to close the goal with `rfl`. -/
 TacticDoc rw
 
 Conclusion "We will now explore other applications of the tactic `rw`."

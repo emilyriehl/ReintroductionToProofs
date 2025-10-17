@@ -31,5 +31,6 @@ Statement {A : Type} : ∀ w x y z : A, w = x → x = y → y = z → w = z := b
   intro w x y z p q r
   Hint (hidden := true) "Recall you can rewrite along multiple hypothesized equalities at once by typing `rw [{p}, {q}, {r}]`."
   rw [p, q, r]
+  rfl
 
 Conclusion "In general families of propositions indexed by multiple variables are just functions with multiple input types valued in `Prop`, such as `P : A → B → C → Prop`."

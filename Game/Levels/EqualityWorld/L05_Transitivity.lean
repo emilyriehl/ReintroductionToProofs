@@ -15,5 +15,6 @@ In this level, we will prove that equality is *transitive*: if `x = y` and `y = 
 /-- Equality is transitive: if `x = y` and `y = z` then `x = z`. -/
 Statement {A : Type} {x y z : A} (p : x = y) (q : y = z) : x = z  := by
   rw [← q, ← p]
+  rfl
 
 Conclusion "Try solving the goal by rewriting in both directions. You can also experiment with multiple rewrites at once. Why does `rw [p, q]` work but `rw [q, p]` not? Why does `rw [← q, ← p]` or `rw [← q, p]` work but `rw [← p, ← q]` not?"

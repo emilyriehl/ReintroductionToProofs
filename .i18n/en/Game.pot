@@ -1,7 +1,7 @@
 msgid ""
 msgstr "Project-Id-Version: Game v4.23.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-10-13\n"
+"POT-Creation-Date: 2025-10-17\n"
 "Last-Translator: \n"
 "Language-Team: none\n"
 "Language: en\n"
@@ -2228,6 +2228,19 @@ msgstr ""
 msgid "Now Lean wants you to check that the first function followed by the second function yields the identity function at every element §0. Start with §1."
 msgstr ""
 
+#. §0: `p : x = y`
+#. §1: `rw [p]`
+#. §2: `x`
+#. §3: `y`
+#. §4: `rw [← p]`
+#. §5: `y`
+#. §6: `x`
+#. §7: `rw`
+#. §8: `rfl`
+#: Game.Levels.EqualityWorld.L04_Symmetry
+msgid "Given a hypothesis §0, the tactic §1 will replace each §2 in the goal by §3. Writing §4 will replace the each §5 in the goal by §6. This is a slightly less powerful version than the §7 tactic in Mathlib, which will attempt to close the goal with §8."
+msgstr ""
+
 #. §0: `A`
 #. §1: `B`
 #. §2: `C`
@@ -3254,19 +3267,6 @@ msgstr ""
 
 #: Game.Levels.ConjunctionWorld.L01_IntroducingAnd
 msgid "Introducing And"
-msgstr ""
-
-#. §0: `p : x = y`
-#. §1: `rw [p]`
-#. §2: `x`
-#. §3: `y`
-#. §4: `rfl`
-#. §5: `rw [← p]`
-#. §6: `y`
-#. §7: `x`
-#. §8: `rfl`
-#: Game.Levels.EqualityWorld.L04_Symmetry
-msgid "Given a hypothesis §0, the tactic §1 will replace the first §2 in the goal by §3 and attempt to close the goal with §4. Writing §5 will replace the first §6 in the goal by §7 and attempt to close the goal with §8."
 msgstr ""
 
 #. §0: `Bool`

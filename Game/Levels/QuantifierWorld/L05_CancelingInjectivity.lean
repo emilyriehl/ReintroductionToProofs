@@ -18,5 +18,6 @@ Statement {A B C : Type} (f : A → B) (g : B → C) (gf_is_inj : ∀ x y : A, (
   have eq1 : (g ∘ f) x = g (f x) := rfl
   have eq2 : (g ∘ f) y = g (f y) := rfl
   rw [eq1, eq2, p]
+  rfl
 
 Conclusion "In the next level, we will learn what it means for two functions `f g : A → B` to be *equal*."
