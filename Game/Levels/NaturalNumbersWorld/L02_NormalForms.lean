@@ -1,9 +1,9 @@
 import Game.Metadata
 
 World "NaturalNumbersWorld"
-Level 1
+Level 2
 
-Title "Numerals"
+Title "Normal Forms"
 
 Introduction "
 By definition"
@@ -11,15 +11,7 @@ By definition"
 open Nat
 
 /-- Explicit numerals `1`, `2`, `3`, `4`, and so on are defined as repeated successors of the previous numerals. -/
-Statement : (1 = succ 0) ∧ (2 = succ 1) ∧ (3 = succ 2) ∧ (4 = succ 3) ∧ (9223372036854775809 = succ 9223372036854775808):= by
-  constructor
-  rfl
-  constructor
-  rfl
-  constructor
-  rfl
-  constructor
-  rfl
+Statement : 5 * (3 + 4) = (4 + 3) * 5 := by
   rfl
 
 Conclusion "You can click on `retry` to attempt a different proof. Try typing `assumption` instead."
