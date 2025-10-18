@@ -175,6 +175,13 @@ msgstr ""
 msgid "If §0, §1, §2, §3, §4, and §5 are true, then §6 is true."
 msgstr ""
 
+#. §0: `pred : Nat → Nat`
+#. §1: `n`
+#. §2: `induction n with k predk`
+#: Game.Levels.NaturalNumbersWorld.L08_Recursion
+msgid "To define the function §0 by induction on §1, type §2."
+msgstr ""
+
 #. §0: `P`
 #. §1: `P`
 #. §2: `P`
@@ -575,6 +582,15 @@ msgstr ""
 msgid "We have an assumption §0. What can be done with an element of a function type?"
 msgstr ""
 
+#. §0: `pred : ℕ → ℕ`
+#. §1: `0`
+#. §2: `0`
+#. §3: `succ n`
+#. §4: `n`
+#: Game.Levels.NaturalNumbersWorld.L08_Recursion
+msgid "There is a function §0 that sends §1 to §2 and §3 to §4."
+msgstr ""
+
 #. §0: `Active Goal`
 #. §1: `objects`
 #. §2: `assumptions`
@@ -808,8 +824,9 @@ msgstr ""
 msgid "Now Lean reminds you of the other goal, which is to prove §0. Which tactic applies here?"
 msgstr ""
 
-#. §0: `zero_add : ∀ n : Nat, 0 + n = n`
+#. §0: `Nat.zero_add : ∀ n : ℕ, 0 + n = n`
 #: Game.Levels.NaturalNumbersWorld.L05_AddingZero
+#: Game.Levels.NaturalNumbersWorld.L06_AddingSuccessors
 msgid "The second half of this proves the theorem §0, which is now in your library."
 msgstr ""
 
@@ -820,6 +837,11 @@ msgstr ""
 
 #: Game.Levels.NegationWorld.L07_NegatingImplication
 msgid "Negating Implication"
+msgstr ""
+
+#. §0: `pred 0`
+#: Game.Levels.NaturalNumbersWorld.L08_Recursion
+msgid "We now have two goals. The first goal asks you to define the value of §0."
 msgstr ""
 
 #. §0: `«{p}» : A ⊕ B`
@@ -1023,6 +1045,11 @@ msgstr ""
 
 #: Game.Levels.ConjunctionWorld.L06_CompoundImplication
 msgid "Can we apply our hypothesis now?"
+msgstr ""
+
+#. §0: `Nat.pred : ℕ → ℕ`
+#: Game.Levels.NaturalNumbersWorld.L08_Recursion
+msgid "This defines a function §0 which is now in your library."
 msgstr ""
 
 #. §0: `f : A × B → C`
@@ -1491,6 +1518,11 @@ msgid "We've now reached the Boss Level in the disjunction world.\n"
 "This level illustrates that proofs by cases can be somewhat delicate."
 msgstr ""
 
+#. §0: `induction`
+#: Game.Levels.NaturalNumbersWorld.L03_Induction
+msgid "The §0 tactic is now in your library."
+msgstr ""
+
 #: Game.Levels.NegationWorld.L07_NegatingImplication
 msgid "The converse implication is more subtle, and will be addressed in the next world."
 msgstr ""
@@ -1674,12 +1706,14 @@ msgstr ""
 msgid "Product Symmetry"
 msgstr ""
 
-#. §0: `n : Nat`
-#. §1: `add_zero n`
+#. §0: `n : ℕ`
+#. §1: `Nat.add_zero n`
 #. §2: `n + 0 = n`
 #: Game.Levels.NaturalNumbersWorld.L04_DefiningAddition
 #: Game.Levels.NaturalNumbersWorld.L04_DefiningAddition
 #: Game.Levels.NaturalNumbersWorld.L05_AddingZero
+#: Game.Levels.NaturalNumbersWorld.L06_AddingSuccessors
+#: Game.Levels.NaturalNumbersWorld.L07_CommutingAddition
 msgid "For §0, §1 is the proof that §2."
 msgstr ""
 
@@ -2058,6 +2092,9 @@ msgstr ""
 #: Game.Levels.NaturalNumbersWorld.L02_NormalForms
 #: Game.Levels.NaturalNumbersWorld.L03_Induction
 #: Game.Levels.NaturalNumbersWorld.L05_AddingZero
+#: Game.Levels.NaturalNumbersWorld.L06_AddingSuccessors
+#: Game.Levels.NaturalNumbersWorld.L07_CommutingAddition
+#: Game.Levels.NaturalNumbersWorld.L08_Recursion
 msgid "By definition"
 msgstr ""
 
@@ -2085,6 +2122,15 @@ msgstr ""
 #: Game.Levels.NegationWorld.L07_NegatingImplication
 #: Game.Levels.ClassicalWorld.L04_NegatingConjunction
 msgid "Try §0."
+msgstr ""
+
+#. §0: `pred (succ «{k}»)`
+#. §1: `«{k}» : Nat`
+#. §2: `«{predk}» : Nat`
+#. §3: `pred «{k}»`
+#. §4: `predk`
+#: Game.Levels.NaturalNumbersWorld.L08_Recursion
+msgid "The second goal asks you to define the value of §0. To make this definition, you have access to the natural number §1 as well as the value §2 of the function §3 (which is why we suggested §4 for the variable name)."
 msgstr ""
 
 #. §0: `V`
@@ -2480,9 +2526,9 @@ msgstr ""
 msgid "The classical tautology §0 has been added to your library of theorems and can be used by calling §1, with the desired proposition replacing the §2, whenever classical reasoning is open."
 msgstr ""
 
-#. §0: `+ : Nat → Nat → Nat`
+#. §0: `+ : ℕ → ℕ → ℕ`
 #. §1: `m`
-#. §2: `m + : Nat → Nat`
+#. §2: `m + : ℕ → ℕ`
 #. §3: `m + 0`
 #. §4: `m + succ n`
 #. §5: `n`
@@ -2491,7 +2537,7 @@ msgstr ""
 #. §8: `m + succ n`
 #. §9: `m`
 #. §10: `n`
-#. §11: `m + : Nat → Nat`
+#. §11: `m + : ℕ → ℕ`
 #. §12: `m + succ n`
 #. §13: `m + n`
 #. §14: `m + succ n = succ (m + n)`
@@ -2956,6 +3002,11 @@ msgstr ""
 #. §0: `«{pnq}»`
 #: Game.Levels.NegationWorld.L07_NegatingImplication
 msgid "What else can we prove with the hypothesis §0?"
+msgstr ""
+
+#. §0: `Nat.add_comm : ∀ m n : ℕ, m + n = n + m`
+#: Game.Levels.NaturalNumbersWorld.L07_CommutingAddition
+msgid "This proves the theorem §0, which is now in your library."
 msgstr ""
 
 #. §0: `Bool → Prop`
@@ -3962,7 +4013,6 @@ msgstr ""
 #: Game.Levels.ImplicationWorld.L01_ByAssumption
 #: Game.Levels.NaturalNumbersWorld.L01_Numerals
 #: Game.Levels.NaturalNumbersWorld.L02_NormalForms
-#: Game.Levels.NaturalNumbersWorld.L03_Induction
 msgid "You can click on §0 to attempt a different proof. Try typing §1 instead."
 msgstr ""
 
@@ -4144,6 +4194,15 @@ msgid "An element of type §0, which abbreviates the type §1, can be thought of
 "Given §2 and §3, then §4 is a function from §5 to §6.\n"
 "\n"
 "Then given §7 we can apply the function §8 to get an element §9."
+msgstr ""
+
+#. §0: `Nat.pred : ℕ → ℕ`
+#. §1: `0`
+#. §2: `0`
+#. §3: `succ n`
+#. §4: `n`
+#: Game.Levels.NaturalNumbersWorld.L08_Recursion
+msgid "The function §0 is defined by recursion to send §1 to §2 and §3 to §4."
 msgstr ""
 
 #. §0: `(p || !q || r) && (q || !r) && (!p || r)`
@@ -4530,8 +4589,8 @@ msgid "Recall that for any types §0 and §1, we may form their *product type* �
 "To define this equivalence, we need four pieces of data. Start by typing §7 to ask Lean to ask you about each piece of data one at a time."
 msgstr ""
 
-#. §0: `add_zero : ∀ n : Nat, n + 0 = n`
-#. §1: `add_succ : ∀ m n : Nat, m + succ n = succ (m + n)`
+#. §0: `Nat.add_zero : ∀ n : ℕ, n + 0 = n`
+#. §1: `Nat.add_succ : ∀ m n : ℕ, m + succ n = succ (m + n)`
 #: Game.Levels.NaturalNumbersWorld.L04_DefiningAddition
 msgid "The theorems §0 and §1 are now in your library."
 msgstr ""
@@ -5096,6 +5155,10 @@ msgstr ""
 
 #: Game.Levels.CoproductWorld.L01_LeftInclusion
 msgid "Left Inclusion"
+msgstr ""
+
+#: Game.Levels.NaturalNumbersWorld.L07_CommutingAddition
+msgid "Commuting Addition"
 msgstr ""
 
 #: Game.Levels.QuantifierWorld.L05_CancelingInjectivity
@@ -5867,6 +5930,10 @@ msgstr ""
 msgid "In the next level, we will establish the first of several equivalences involving function types."
 msgstr ""
 
+#: Game.Levels.NaturalNumbersWorld.L06_AddingSuccessors
+msgid "Adding Successors"
+msgstr ""
+
 #. §0: `P`
 #. §1: `Q`
 #. §2: `P ∧ ¬ Q → ¬ (P → Q)`
@@ -6016,6 +6083,7 @@ msgstr ""
 #. §1: `n + 0 = n`
 #. §2: `0 + n = n`
 #: Game.Levels.NaturalNumbersWorld.L05_AddingZero
+#: Game.Levels.NaturalNumbersWorld.L06_AddingSuccessors
 msgid "For all natural numbers §0, §1 and §2."
 msgstr ""
 
@@ -6304,6 +6372,12 @@ msgstr ""
 msgid "Logical Equivalence"
 msgstr ""
 
+#. §0: `m n`
+#. §1: `m + n = n + m`
+#: Game.Levels.NaturalNumbersWorld.L07_CommutingAddition
+msgid "For all natural numbers §0, §1."
+msgstr ""
+
 #. §0: `P`
 #. §1: `¬ ¬ P`
 #. §2: `P`
@@ -6385,6 +6459,10 @@ msgstr ""
 
 #: Game.Levels.NegationWorld.L06_ModusTollens
 msgid "Modus Tollens"
+msgstr ""
+
+#: Game.Levels.NaturalNumbersWorld.L08_Recursion
+msgid "Recursion"
 msgstr ""
 
 #: Game

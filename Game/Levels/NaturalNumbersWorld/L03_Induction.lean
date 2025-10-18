@@ -11,7 +11,7 @@ By definition"
 open Nat
 
 /-- Every natural number is even or odd. -/
-Statement : ∀ n : Nat, (∃ m : Nat, n = 2*m) ∨ (∃ m : Nat, n = 2*m + 1) := by
+Statement : ∀ n : ℕ , (∃ m : ℕ, n = 2 * m) ∨ (∃ m : ℕ, n = 2 * m + 1) := by
   intro n
   induction n with n hn
   left
@@ -29,7 +29,7 @@ Statement : ∀ n : Nat, (∃ m : Nat, n = 2*m) ∨ (∃ m : Nat, n = 2*m + 1) :
   rw [hk]
   rfl
 
-Conclusion "You can click on `retry` to attempt a different proof. Try typing `assumption` instead."
+Conclusion "The `induction` tactic is now in your library."
 
 /--
 ## Summary

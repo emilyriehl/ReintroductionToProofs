@@ -2,6 +2,7 @@ import GameServer
 -- import Mathlib.Tactic.Common
 
 import Game.Metadata.Equivalence
+import Game.Metadata.Nat
 import Game.Metadata.Tactic
 
 /-! Use this file to add things that should be available in all levels.
