@@ -1,7 +1,7 @@
 msgid ""
 msgstr "Project-Id-Version: Game v4.23.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-10-18\n"
+"POT-Creation-Date: 2025-10-20\n"
 "Last-Translator: \n"
 "Language-Team: none\n"
 "Language: en\n"
@@ -430,6 +430,8 @@ msgstr ""
 #: Game.Levels.ClassicalWorld.L03_Contrapositive
 #: Game.Levels.ClassicalWorld.L04_NegatingConjunction
 #: Game.Levels.BooleanWorld.L07_DeMorgan
+#: Game.Levels.NaturalNumbersWorld.L01_Numerals
+#: Game.Levels.NaturalNumbersWorld.L02_NormalForms
 msgid "What is the outermost logical connective?"
 msgstr ""
 
@@ -437,30 +439,6 @@ msgstr ""
 #: Game.Levels.DisjunctionWorld.L08_MoreDistributivity
 #: Game.Levels.DisjunctionWorld.L08_MoreDistributivity
 msgid "The implicit parentheses in the goal are to the right §0."
-msgstr ""
-
-#. §0: `ℕ`
-#. §1: `0 : ℕ`
-#. §2: `succ : ℕ → ℕ`
-#. §3: `∀ m n : ℕ, succ m = succ n → m = n`
-#. §4: `¬ (∃ n : ℕ, succ n = 0)`
-#. §5: `ℕ`
-#: Game.Levels.NaturalNumbersWorld
-msgid "In this world, we will introduce the type §0 of natural numbers.\n"
-"\n"
-"In traditional foundations, the natural numbers are characterized by a series of axioms discovered roughly contemporaneously by Dedekind and Peano that are commonly called the *Peano postulates*. There are five axioms:\n"
-"\n"
-"  1. There is a natural number §1 called *zero*.\n"
-"\n"
-"  2. There is a function §2 that sends any natural number to its *successor*.\n"
-"\n"
-"  3. The successor function is injective: §3.\n"
-"\n"
-"  4. Zero is not the successor of any natural number: §4.\n"
-"\n"
-"  5. The principle of mathematical induction (about more which below).\n"
-"\n"
-"In type theory, the type §5 of natural numbers is instead characterized by introduction and elimination rules."
 msgstr ""
 
 #. §0: `Unit ⊕ Unit`
@@ -951,6 +929,13 @@ msgstr ""
 msgid "Composing Implication"
 msgstr ""
 
+#. §0: `left`
+#. §1: `right`
+#: Game.Levels.NaturalNumbersWorld.L03_Induction
+#: Game.Levels.NaturalNumbersWorld.L03_Induction
+msgid "Use the tactic §0 to indicate that you'd like to prove the left-hand statement or §1 to indicate that you'd like to prove the right-hand statement."
+msgstr ""
+
 #. §0: `«{i}»`
 #. §1: `«{nq}»`
 #: Game.Levels.ClassicalWorld.L03_Contrapositive
@@ -1142,6 +1127,12 @@ msgstr ""
 
 #: Game.Levels.ProductWorld.L10_BossLevel
 msgid "Move on to Disjunction World to learn about another logical operation."
+msgstr ""
+
+#. §0: `rcases «{even}» with ⟨m, hm⟩`
+#: Game.Levels.NaturalNumbersWorld.L03_Induction
+#: Game.Levels.NaturalNumbersWorld.L03_Induction
+msgid "Type §0 to decompose the hypothesis."
 msgstr ""
 
 #. §0: `ext`
@@ -1488,6 +1479,13 @@ msgstr ""
 msgid "Projected Pairs"
 msgstr ""
 
+#. §0: `use ??`
+#. §1: `??`
+#. §2: `m`
+#: Game.Levels.NaturalNumbersWorld.L03_Induction
+msgid "To prove the existential quantifier, type §0 with an explicit numeral in the place of §1 to supply a well-chosen value of §2."
+msgstr ""
+
 #: Game.Levels.QuantifierWorld.L15_BossLevel
 msgid "Move on to Equivalence World to finally answer the question of what it means for two types to be the same in a sense that generalizes logical equivalence of propositions."
 msgstr ""
@@ -1815,6 +1813,49 @@ msgstr ""
 msgid "Move on to Product World to meet a second type forming operation."
 msgstr ""
 
+#. §0: `ℕ`
+#. §1: `0 : ℕ`
+#. §2: `succ : ℕ → ℕ`
+#. §3: `∀ m n : ℕ, succ m = succ n → m = n`
+#. §4: `¬ (∃ n : ℕ, succ n = 0)`
+#. §5: `∀ P : ℕ → Prop, P 0 → (∀ k : ℕ, P k → P (succ k)) → (∀ n : ℕ, P n)`
+#. §6: `ℕ`
+#. §7: `0 : ℕ`
+#. §8: `succ : ℕ → ℕ`
+#. §9: `∀ P : ℕ → Type, P 0 → (∀ k : ℕ, P k → P (succ k)) → (∀ n : ℕ, P n)`
+#. §10: `ℕ`
+#. §11: `0 : ℕ`
+#. §12: `succ : ℕ → ℕ`
+#. §13: `ℕ`
+#. §14: `0`
+#. §15: `succ n`
+#. §16: `n : ℕ`
+#. §17: `ℕ`
+#: Game.Levels.NaturalNumbersWorld
+msgid "In this world, we will introduce the type §0 of natural numbers.\n"
+"\n"
+"In traditional foundations, the natural numbers are characterized by a series of axioms discovered roughly contemporaneously by Dedekind and Peano that are commonly called the *Peano postulates*. There are five axioms:\n"
+"\n"
+"  1. There is a natural number §1 called *zero*.\n"
+"\n"
+"  2. There is a function §2 that sends any natural number to its *successor*.\n"
+"\n"
+"  3. The successor function is injective: §3.\n"
+"\n"
+"  4. Zero is not the successor of any natural number: §4.\n"
+"\n"
+"  5. The principle of mathematical induction: §5.\n"
+"\n"
+"In type theory, the type §6 of natural numbers is instead characterized by introduction and elimination rules:\n"
+"\n"
+"* The *introduction rules* tell us that there is a natural number §7 as well as natural numbers obtained by applying the function §8.\n"
+"* The *elimination rule* extends the principle of mathematical induction to families of types as well as families of propositions: §9.\n"
+"\n"
+"Together these rules say that §10 is an *inductive type* freely generated by §11 and §12. We may define (dependent) functions out of the inductive type §13 &ldquo;by induction&rdquo; by considering only the cases of §14 and §15 for some §16.\n"
+"\n"
+"The type-theoretic definition of §17 closely resembles Peano's first, second, and fifth axioms and in fact implies the other two, as we will see by the end of this world."
+msgstr ""
+
 #. §0: `f : A → B`
 #. §1: `g : B → C`
 #. §2: `g ∘ f : A → C`
@@ -2016,6 +2057,12 @@ msgstr ""
 msgid "level completed with warnings… 🎭"
 msgstr ""
 
+#. §0: `intro n`
+#. §1: `n`
+#: Game.Levels.NaturalNumbersWorld.L03_Induction
+msgid "The goal is a universally quantified statement. Start with §0 to consider an arbitrary natural number §1."
+msgstr ""
+
 #. §0: `P → Q → R → S → T`
 #. §1: `intro p q r s`
 #. §2: `p : P`
@@ -2088,9 +2135,6 @@ msgstr ""
 msgid "Given a function §0 and any element §1. You can apply the function §2 to §3 to obtain an element §4 of type §5."
 msgstr ""
 
-#: Game.Levels.NaturalNumbersWorld.L01_Numerals
-#: Game.Levels.NaturalNumbersWorld.L02_NormalForms
-#: Game.Levels.NaturalNumbersWorld.L03_Induction
 #: Game.Levels.NaturalNumbersWorld.L05_AddingZero
 #: Game.Levels.NaturalNumbersWorld.L06_AddingSuccessors
 #: Game.Levels.NaturalNumbersWorld.L07_CommutingAddition
@@ -2235,7 +2279,6 @@ msgstr ""
 #. §2: `3`
 #. §3: `4`
 #: Game.Levels.NaturalNumbersWorld.L01_Numerals
-#: Game.Levels.NaturalNumbersWorld.L02_NormalForms
 msgid "Explicit numerals §0, §1, §2, §3, and so on are defined as repeated successors of the previous numerals."
 msgstr ""
 
@@ -2467,6 +2510,13 @@ msgstr ""
 msgid "Try solving the goal by rewriting in both directions. You can also experiment with multiple rewrites at once. Why does §0 work but §1 not? Why does §2 or §3 work but §4 not?"
 msgstr ""
 
+#. §0: `constructor`
+#. §1: `exact ⟨rfl, rfl, rfl, rfl, rfl⟩`
+#. §2: `rfl`
+#: Game.Levels.NaturalNumbersWorld.L01_Numerals
+msgid "You can avoid the repeated applications of the §0 tactic by solving this level with §1. In the next level, we will encounter other equalities between natural numbers that can be proven with §2."
+msgstr ""
+
 #. §0: `«{A}» → «{A}»`
 #. §1: `x : «{A}»`
 #. §2: `«{A}»`
@@ -2690,6 +2740,52 @@ msgstr ""
 #. §0: `P ∨ Q`
 #: Game.Levels.DisjunctionWorld.L01_IntroducingOr
 msgid "There are two ways to prove §0 from the given hypotheses. Can you find them both?"
+msgstr ""
+
+#. §0: `∀ n : ℕ, P n`
+#. §1: `P : ℕ → Prop`
+#. §2: `∀ P : ℕ → Prop, P 0 → (∀ k : ℕ, P k → P (succ k)) → (∀ n : ℕ, P n)`
+#. §3: `P`
+#. §4: `P 0`
+#. §5: `P k`
+#. §6: `P (succ k)`
+#. §7: `k`
+#. §8: `∀ n : ℕ, P n`
+#. §9: `∀ n : ℕ, P n`
+#. §10: `P 0`
+#. §11: `k : ℕ`
+#. §12: `P k`
+#. §13: `P (succ k)`
+#. §14: `P 0`
+#. §15: `P 0 → P 1`
+#. §16: `P 1`
+#. §17: `P 1 → P 2`
+#. §18: `P 2`
+#. §19: `P 2 → P 3`
+#. §20: `P 3`
+#: Game.Levels.NaturalNumbersWorld.L03_Induction
+msgid "The *principal of mathematical induction*, also known as the elimination rule for the type of natural numbers, is a strategy for proving statements of the form\n"
+"\n"
+"§0\n"
+"\n"
+"where §1 is a predicate on the natural numbers (also known as a family of propositions).\n"
+"\n"
+"The formal statement of this principle is given by the axiom:\n"
+"\n"
+"§2\n"
+"\n"
+"In plain language it says\n"
+"\n"
+"&ldquo;for any predicate §3 on the natural numbers if §4 is true and §5 implies §6 for all natural numbers §7, then §8 is true&rdquo;\n"
+"\n"
+"That is, we can prove §9 after verifying two things:\n"
+"\n"
+"* the *base case*: proving that §10 is true\n"
+"* the *inductive step*: proving that for any §11, §12 implies §13.\n"
+"\n"
+"By combining these hypothesis, from the fact that §14 is true and §15 is true, we can conclude that §16 is true. Then from the fact that §17 is true, we can conclude that §18 is true. Then from the fact that §19 is true, we can conclude that §20 is true. And so on.\n"
+"\n"
+"In this level, we will use induction to prove that every natural number is even or odd."
 msgstr ""
 
 #: Game.Levels.ConjunctionWorld.L06_CompoundImplication
@@ -2939,6 +3035,17 @@ msgstr ""
 msgid "Define the currying function, convering a function out of a product type into a function of two variables."
 msgstr ""
 
+#. §0: `«{k}»`
+#. §1: `«{k}»`
+#. §2: `«{hk}» : (∃ m, «{k}» = 2 * m) ∨ ∃ m, «{k}» = 2 * m + 1`
+#. §3: `«{k}» + 1`
+#. §4: `k`
+#. §5: `rcases «{hk}» with even | odd`
+#. §6: `«{k}»`
+#: Game.Levels.NaturalNumbersWorld.L03_Induction
+msgid "Now that you have completed the base case, the next goal is to prove the inductive step. Here §0 is an arbitrary natural number and you are given a hypothesis that the predicate is true for §1, i.e., that §2. Your goal is to prove that the analogous result holds for §3, aka, the successor of §4. Type §5 to split into cases depending on whether or not §6 is even or odd."
+msgstr ""
+
 #. §0: `«{Q}» → «{P}»`
 #. §1: `intro q`
 #. §2: `q : «{Q}»`
@@ -2999,6 +3106,32 @@ msgid "How would you disprove a statement of the form\n"
 "§5 and conversely."
 msgstr ""
 
+#. §0: `0 : ℕ`
+#. §1: `succ : ℕ → ℕ`
+#. §2: `0`
+#. §3: `1 = succ 0`
+#. §4: `2 = succ (succ 0)`
+#. §5: `3 = succ (succ (succ 0))`
+#. §6: `4 = succ (succ (succ (succ 0)))`
+#. §7: `rfl`
+#: Game.Levels.NaturalNumbersWorld.L01_Numerals
+msgid "How do we construct examples of natural numbers?\n"
+"\n"
+"By the introduction rules:\n"
+"\n"
+"* There is a natural number §0.\n"
+"* There are natural numbers obtained by applying the function §1.\n"
+"\n"
+"Familiar *numerals* are defined by repeated applications of the successor function to the natural number §2. For example:\n"
+"* §3\n"
+"* §4\n"
+"* §5\n"
+"* §6\n"
+"and so on.\n"
+"\n"
+"As all of these are definitions, the equalities in this level can be proven with §7."
+msgstr ""
+
 #. §0: `«{pnq}»`
 #: Game.Levels.NegationWorld.L07_NegatingImplication
 msgid "What else can we prove with the hypothesis §0?"
@@ -3037,6 +3170,12 @@ msgstr ""
 #. §0: `↔`
 #: Game.Levels.QuantifierWorld.L13_NegatingExistence
 msgid "Recall the meaning of §0. What tactic breaks this goal into its components?"
+msgstr ""
+
+#. §0: `rfl`
+#: Game.Levels.NaturalNumbersWorld.L03_Induction
+#: Game.Levels.NaturalNumbersWorld.L03_Induction
+msgid "This equality does not hold by definition, so §0 fails. But your context has a new hypothesis that can help."
 msgstr ""
 
 #. §0: `P → Q`
@@ -4011,8 +4150,6 @@ msgstr ""
 #. §0: `retry`
 #. §1: `assumption`
 #: Game.Levels.ImplicationWorld.L01_ByAssumption
-#: Game.Levels.NaturalNumbersWorld.L01_Numerals
-#: Game.Levels.NaturalNumbersWorld.L02_NormalForms
 msgid "You can click on §0 to attempt a different proof. Try typing §1 instead."
 msgstr ""
 
@@ -4120,6 +4257,15 @@ msgstr ""
 
 #: Game.Levels.DisjunctionWorld.L02_AndImpliesOr
 msgid "And Implies Or"
+msgstr ""
+
+#. §0: `n`
+#. §1: `0`
+#. §2: `(∃ m : ℕ, 0 = 2 * m) ∨ (∃ m : ℕ, 0 = 2 * m + 1)`
+#. §3: `left`
+#. §4: `right`
+#: Game.Levels.NaturalNumbersWorld.L03_Induction
+msgid "You are first asked to prove the base case assuming the natural number §0 from the original statement is §1. Thus your goal is to prove §2. Use the tactic §3 to indicate that you'd like to prove the left-hand statement or §4 to indicate that you'd like to prove the right-hand statement."
 msgstr ""
 
 #: Game.Levels.EmptyWorld.L06_CoproductWithEmpty
@@ -4255,6 +4401,14 @@ msgid "Consider a family of propositions that depends on elements drawn from two
 "The converse implication is not true in general. Can you see why?"
 msgstr ""
 
+#. §0: `1 + 5 = 2 * 3`
+#. §1: `succ (succ (succ (succ (succ (succ 0))))`
+#: Game.Levels.NaturalNumbersWorld.L02_NormalForms
+msgid "More complicated arithmetic equations involving numerals also hold by definition: for example §0\n"
+"\n"
+"This is because these elements on both the left-hand and right-hand sides reduce to a common *normal form*, an explicit numeral of the form §1."
+msgstr ""
+
 #. §0: `A`
 #. §1: `Empty.elim : Empty → A`
 #: Game.Levels.EmptyWorld.L01_FromEmpty
@@ -4288,6 +4442,13 @@ msgstr ""
 
 #: Game.Levels.NegationWorld
 msgid "Negation World"
+msgstr ""
+
+#. §0: `use ??`
+#. §1: `??`
+#: Game.Levels.NaturalNumbersWorld.L03_Induction
+#: Game.Levels.NaturalNumbersWorld.L03_Induction
+msgid "Type §0 with a well-chosen element in place of the §1."
 msgstr ""
 
 #: Game.Levels.ConjunctionWorld.L05_Associativity
@@ -5006,6 +5167,11 @@ msgstr ""
 msgid "Product With Empty"
 msgstr ""
 
+#. §0: `rfl`
+#: Game.Levels.NaturalNumbersWorld.L03_Induction
+msgid "Recall arithmetical equations involving numerals can be proven with §0."
+msgstr ""
+
 #: Game.Levels.CoproductWorld.L08_BossLevel
 msgid "Congratulations!"
 msgstr ""
@@ -5137,6 +5303,12 @@ msgid "Given a proposition §0, the *negation* of §1 &mdash; abbreviated §2 &m
 "In this level, we encode this statement in the way that allows for the simplest proof.\n"
 "\n"
 "In subsequent levels, we shall express this tautology in several logically equivalent forms."
+msgstr ""
+
+#. §0: `12 + 23 = 5 * (4 + 3)`
+#. §1: `rfl`
+#: Game.Levels.NaturalNumbersWorld.L02_NormalForms
+msgid "Arithmetic equations involving explicit numerals such as §0 hold by §1."
 msgstr ""
 
 #: Game.Levels.QuantifierWorld.L01_UniversalTruth
@@ -5926,6 +6098,11 @@ msgstr ""
 msgid "Conjunction"
 msgstr ""
 
+#. §0: `induction n with k hk`
+#: Game.Levels.NaturalNumbersWorld.L03_Induction
+msgid "To start a proof by induction in Lean, type §0. This will split the goal into two cases: proving the base case and the inductive step."
+msgstr ""
+
 #: Game.Levels.EquivalenceWorld.L02_CoproductSymmetry
 msgid "In the next level, we will establish the first of several equivalences involving function types."
 msgstr ""
@@ -6107,6 +6284,10 @@ msgid "We have seen that the implication §0 implies the implication §1.\n"
 "That means, arguing classically, we can prove that §4 implies §5.\n"
 "\n"
 "Can you figure out how to prove this?"
+msgstr ""
+
+#: Game.Levels.NaturalNumbersWorld.L02_NormalForms
+msgid "Can you solve this level in one line?"
 msgstr ""
 
 #. §0: `A`

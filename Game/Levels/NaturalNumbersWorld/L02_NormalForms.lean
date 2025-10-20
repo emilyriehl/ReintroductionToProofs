@@ -6,12 +6,17 @@ Level 2
 Title "Normal Forms"
 
 Introduction "
-By definition"
+More complicated arithmetic equations involving numerals also hold by definition: for example `1 + 5 = 2 * 3`
+
+This is because these elements on both the left-hand and right-hand sides reduce to a common *normal form*, an explicit numeral of the form `succ (succ (succ (succ (succ (succ 0))))`.
+
+"
 
 open Nat
 
-/-- Explicit numerals `1`, `2`, `3`, `4`, and so on are defined as repeated successors of the previous numerals. -/
-Statement : 5 * (3 + 4) = (4 + 3) * 5 := by
-  rfl
+/-- Arithmetic equations involving explicit numerals such as `12 + 23 = 5 * (4 + 3)` hold by `rfl`. -/
+Statement : (1 + 5 = 2 * 3) ∧ (12 + 23 = 5 * (4 + 3)) ∧ (2 * 5 = 5 * 2) ∧ ((3 + 1) + 2 = 2 + (1 + 3)) := by
+  Hint (hidden := true) "What is the outermost logical connective?"
+  exact ⟨rfl, rfl, rfl, rfl⟩
 
-Conclusion "You can click on `retry` to attempt a different proof. Try typing `assumption` instead."
+Conclusion "Can you solve this level in one line?"

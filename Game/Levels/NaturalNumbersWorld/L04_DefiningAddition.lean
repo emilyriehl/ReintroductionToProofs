@@ -5,7 +5,7 @@ Level 4
 
 Title "Defining Addition"
 
-Introduction "Addition is a binary function on natural numbers, meaning it type `+ : ℕ → ℕ → ℕ`.
+Introduction "Addition is a binary function on natural numbers, meaning it has type `+ : ℕ → ℕ → ℕ`.
 
 In Lean, the addition function is defined *by recursion*, meaning by the constructive form of induction, on its second variable.
 
