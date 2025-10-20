@@ -7,7 +7,7 @@ Title "Defining Addition"
 
 Introduction "Addition is a binary function on natural numbers, meaning it has type `+ : ℕ → ℕ → ℕ`.
 
-In Lean, the addition function is defined *by recursion* &dash; i.e., by the elimination rule for `ℕ` or by the constructive form of induction &mdash; on its second variable.
+In Lean, the addition function is defined *by recursion* &mdash; i.e., by the elimination rule for `ℕ` or by the constructive form of induction &mdash; on its second variable.
 
 This means that for an arbitrary natural number `m` &mdash; the first variable &mdash; we define a function `m + : ℕ → ℕ` by cases, that is by specifying values for
 
@@ -27,6 +27,7 @@ open Nat
 
 /-- For all natural numbers `m` and `n`, `n + 0 = n` and `m + (succ n) = succ (m + n)`. -/
 Statement : (∀ n : ℕ, (n + 0 = n)) ∧ (∀ m n : ℕ, m + (succ n) = succ (m + n)) := by
+  Hint (hidden := true) "The goal asks you to prove two theorems, so start with `constructor`."
   constructor
   intro n
   rfl

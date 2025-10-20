@@ -47,26 +47,26 @@ Statement : ∀ n : ℕ , (∃ m : ℕ, n = 2 * m) ∨ (∃ m : ℕ, n = 2 * m +
   rcases hk with even | odd
   Hint (hidden := true) "Use the tactic `left` to indicate that you'd like to prove the left-hand statement or `right` to indicate that you'd like to prove the right-hand statement."
   right
-  Hint (hidden := true) "Type `rcases {even} with ⟨m, hm⟩` to decompose the hypothesis."
-  rcases even with ⟨m, hm⟩
+  Hint (hidden := true) "Type `rcases {even} with ⟨d, hd⟩` to decompose the hypothesis."
+  rcases even with ⟨d, hd⟩
   Hint (hidden := true) "Type `use ??` with a well-chosen element in place of the `??`."
-  use m
+  use d
   Hint (hidden := true) "This equality does not hold by definition, so `rfl` fails. But your context has a new hypothesis that can help."
-  rw [hm]
+  rw [hd]
   rfl
-  Hint (hidden := true) "Type `rcases {odd} with ⟨m, hm⟩` to decompose the hypothesis."
-  rcases odd with ⟨m, hm⟩
+  Hint (hidden := true) "Type `rcases {odd} with ⟨d, hd⟩` to decompose the hypothesis."
+  rcases odd with ⟨d, hd⟩
   Hint (hidden := true) "Use the tactic `left` to indicate that you'd like to prove the left-hand statement or `right` to indicate that you'd like to prove the right-hand statement."
   left
   Hint (hidden := true) "Type `use ??` with a well-chosen element in place of the `??`."
-  use m + 1
+  use d + 1
   Hint (hidden := true) "This equality does not hold by definition, so `rfl` fails. But your context has a new hypothesis that can help."
   rw [hm]
   rfl
 
 Conclusion "The `induction` tactic is now in your library.
 
-It is a bit surprising that the last equation `2 * m + 1 + 1 = 2 * (m + 1)` holds by `rfl`. This has to do with the way that addition and multiplication are defined in Lean. We will explore the definition of addition in a future level."
+It is a bit surprising that the last equation `2 * d + 1 + 1 = 2 * (d + 1)` holds by `rfl`. This has to do with the way that addition and multiplication are defined in Lean. We will explore the definition of addition in a future level."
 
 /--
 ## Summary

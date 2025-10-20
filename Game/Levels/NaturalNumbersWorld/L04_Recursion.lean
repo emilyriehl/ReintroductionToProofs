@@ -51,6 +51,7 @@ open Nat
 Statement : ∃ f : ℕ → ℕ, (f 0 = 0) ∧ (∀ n : ℕ, f (succ n) = n) := by
   Hint "Use the tactic `constructor` to split the level into two goals, the first of which is to define the function `pred : ℕ → ℕ`."
   constructor
+  Hint "Now your goal is to define a function of type `ℕ → ℕ`. Lean will accept any function of this type, but be careful. If you define a *different* function than the predecessor function, the properties you will be asked to prove later will not hold."
   Hint (hidden := true) "Use `intro n` to start your definition."
   intro n
   Hint "To define the function `pred : Nat → Nat` by induction on `{n}`, type `induction {n} with k predk`."
@@ -69,7 +70,7 @@ Statement : ∃ f : ℕ → ℕ, (f 0 = 0) ∧ (∀ n : ℕ, f (succ n) = n) := 
   Hint "Here `Nat.recAux 0 (fun k predk => k)` is Lean's name for the function you just defined. Your are asked to calculate its value at `{n}.succ` i.e., at `succ n`."
   rfl
 
-Conclusion "This defines a function `Nat.pred : ℕ → ℕ` which is now in your library."
+Conclusion "The function `Nat.pred : ℕ → ℕ` that you have just defined is now in your library as well as the theorem `Nat.pred_succ n : Nat.pred (succ n) = n`."
 
 /--
 The function `Nat.pred : ℕ → ℕ` is defined by recursion to send `0` to `0` and `succ n` to `n`.
@@ -77,3 +78,10 @@ The function `Nat.pred : ℕ → ℕ` is defined by recursion to send `0` to `0`
 DefinitionDoc Nat.pred as "pred" in "ℕ"
 
 NewDefinition Nat.pred
+
+/--
+For all natural numbers `n`, `Nat.pred_succ n` proves that `Nat.pred (succ n) = n`.
+-/
+TheoremDoc Nat.pred_succ as "pred_succ" in "ℕ"
+
+NewTheorem Nat.pred_succ

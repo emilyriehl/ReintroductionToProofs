@@ -557,6 +557,10 @@ msgstr ""
 msgid "In summary, something very strange happens if the types §0 and §1 both have elements."
 msgstr ""
 
+#: Game.Levels.NaturalNumbersWorld.L09_SuccessorInjectivity
+msgid "The redundancy of the final Peano axiom, that zero is not a successor, is harder to prove."
+msgstr ""
+
 #. §0: `«{f}» : A → Empty`
 #: Game.Levels.EmptyWorld.L02_ToEmpty
 #: Game.Levels.NegationWorld.L02_Negation
@@ -923,44 +927,6 @@ msgstr ""
 msgid "Do you see how this relates to the previous level?"
 msgstr ""
 
-#. §0: `+ : ℕ → ℕ → ℕ`
-#. §1: `ℕ`
-#. §2: `m`
-#. §3: `m + : ℕ → ℕ`
-#. §4: `m + 0`
-#. §5: `m + succ n`
-#. §6: `n`
-#. §7: `m + 0 = m`
-#. §8: `rfl : m + 0 = m`
-#. §9: `m + succ n`
-#. §10: `m`
-#. §11: `n`
-#. §12: `m + : ℕ → ℕ`
-#. §13: `m + succ n`
-#. §14: `m + n`
-#. §15: `m + succ n = succ (m + n)`
-#. §16: `rfl : m + succ n = succ (m + n)`
-#. §17: `n.succ`
-#. §18: `succ n`
-#: Game.Levels.NaturalNumbersWorld.L05_DefiningAddition
-msgid "Addition is a binary function on natural numbers, meaning it has type §0.\n"
-"\n"
-"In Lean, the addition function is defined *by recursion* &dash; i.e., by the elimination rule for §1 or by the constructive form of induction &mdash; on its second variable.\n"
-"\n"
-"This means that for an arbitrary natural number §2 &mdash; the first variable &mdash; we define a function §3 by cases, that is by specifying values for\n"
-"\n"
-"* §4 and\n"
-"* §5 for an arbitrary natural number §6.\n"
-"\n"
-"For the first equation, we define §7. Since this is part of the definition of what it means to add zero on the right, we have §8.\n"
-"\n"
-"For the second equation, we must find a formula for §9 using §10, §11, the successor function, and previously defined values of the function §12.\n"
-"\n"
-"In particular, by the time we are looking to calculate §13 we have already defined §14. So we can use this and give the definition §15. Since this is part of the definition of what it means to add zero on the right, we have §16.\n"
-"\n"
-"In this level you are asked to verify the defining equations for the addition function, which is now in your library. Note Lean likes to write §17 for §18."
-msgstr ""
-
 #. §0: `P ∧ (Q ∨ R)`
 #. §1: `(P ∧ Q) ∨ (P ∧ R)`
 #: Game.Levels.DisjunctionWorld.L07_Distributivity
@@ -969,6 +935,11 @@ msgstr ""
 
 #: Game.Levels.ImplicationWorld.L03_ComposingImplication
 msgid "Composing Implication"
+msgstr ""
+
+#. §0: `ℕ → ℕ`
+#: Game.Levels.NaturalNumbersWorld.L04_Recursion
+msgid "Now your goal is to define a function of type §0. Lean will accept any function of this type, but be careful. If you define a *different* function than the predecessor function, the properties you will be asked to prove later will not hold."
 msgstr ""
 
 #. §0: `left`
@@ -1079,11 +1050,6 @@ msgstr ""
 msgid "Can we apply our hypothesis now?"
 msgstr ""
 
-#. §0: `Nat.pred : ℕ → ℕ`
-#: Game.Levels.NaturalNumbersWorld.L04_Recursion
-msgid "This defines a function §0 which is now in your library."
-msgstr ""
-
 #. §0: `f : A × B → C`
 #. §1: `a : A`
 #. §2: `b : B`
@@ -1176,7 +1142,7 @@ msgstr ""
 msgid "Move on to Disjunction World to learn about another logical operation."
 msgstr ""
 
-#. §0: `rcases «{even}» with ⟨m, hm⟩`
+#. §0: `rcases «{even}» with ⟨d, hd⟩`
 #: Game.Levels.NaturalNumbersWorld.L03_Induction
 #: Game.Levels.NaturalNumbersWorld.L03_Induction
 msgid "Type §0 to decompose the hypothesis."
@@ -1690,6 +1656,11 @@ msgid "How should we think about an element of type §0?.\n"
 "This explains the *distributivity* of products over coproducts, which can be encoded by a pair of functions, one of the form §17 and the other of the form §18."
 msgstr ""
 
+#. §0: `constructor`
+#: Game.Levels.NaturalNumbersWorld.L05_DefiningAddition
+msgid "The goal asks you to prove two theorems, so start with §0."
+msgstr ""
+
 #. §0: `g`
 #: Game.Levels.QuantifierWorld.L05_CancelingInjectivity
 msgid "Try applying the hypothesis that §0 is injective."
@@ -1781,6 +1752,7 @@ msgstr ""
 #: Game.Levels.NaturalNumbersWorld.L06_AddingZero
 #: Game.Levels.NaturalNumbersWorld.L07_AddingSuccessors
 #: Game.Levels.NaturalNumbersWorld.L08_CommutingAddition
+#: Game.Levels.NaturalNumbersWorld.L09_SuccessorInjectivity
 msgid "For §0, §1 is the proof that §2."
 msgstr ""
 
@@ -2301,6 +2273,13 @@ msgid "Consider an element in a product type §0. Using the projections, we obta
 "Note Lean uses §13 and §14 as synomyms for §15 and §16 respectively."
 msgstr ""
 
+#. §0: `n`
+#. §1: `Nat.pred_succ n`
+#. §2: `Nat.pred (succ n) = n`
+#: Game.Levels.NaturalNumbersWorld.L04_Recursion
+msgid "For all natural numbers §0, §1 proves that §2."
+msgstr ""
+
 #: Game.Levels.DisjunctionWorld.L08_MoreDistributivity
 msgid "We are now ready for the Boss Level of Disjunction World."
 msgstr ""
@@ -2357,6 +2336,44 @@ msgstr ""
 
 #: Game.Levels.BooleanWorld.L07_DeMorgan
 msgid "Can you figure out how you would state other logical equivalences involving truth values in a similar fashion?"
+msgstr ""
+
+#. §0: `+ : ℕ → ℕ → ℕ`
+#. §1: `ℕ`
+#. §2: `m`
+#. §3: `m + : ℕ → ℕ`
+#. §4: `m + 0`
+#. §5: `m + succ n`
+#. §6: `n`
+#. §7: `m + 0 = m`
+#. §8: `rfl : m + 0 = m`
+#. §9: `m + succ n`
+#. §10: `m`
+#. §11: `n`
+#. §12: `m + : ℕ → ℕ`
+#. §13: `m + succ n`
+#. §14: `m + n`
+#. §15: `m + succ n = succ (m + n)`
+#. §16: `rfl : m + succ n = succ (m + n)`
+#. §17: `n.succ`
+#. §18: `succ n`
+#: Game.Levels.NaturalNumbersWorld.L05_DefiningAddition
+msgid "Addition is a binary function on natural numbers, meaning it has type §0.\n"
+"\n"
+"In Lean, the addition function is defined *by recursion* &mdash; i.e., by the elimination rule for §1 or by the constructive form of induction &mdash; on its second variable.\n"
+"\n"
+"This means that for an arbitrary natural number §2 &mdash; the first variable &mdash; we define a function §3 by cases, that is by specifying values for\n"
+"\n"
+"* §4 and\n"
+"* §5 for an arbitrary natural number §6.\n"
+"\n"
+"For the first equation, we define §7. Since this is part of the definition of what it means to add zero on the right, we have §8.\n"
+"\n"
+"For the second equation, we must find a formula for §9 using §10, §11, the successor function, and previously defined values of the function §12.\n"
+"\n"
+"In particular, by the time we are looking to calculate §13 we have already defined §14. So we can use this and give the definition §15. Since this is part of the definition of what it means to add zero on the right, we have §16.\n"
+"\n"
+"In this level you are asked to verify the defining equations for the addition function, which is now in your library. Note Lean likes to write §17 for §18."
 msgstr ""
 
 #. §0: `A × B → B × A`
@@ -2863,6 +2880,10 @@ msgstr ""
 msgid "Currying / Uncurrying"
 msgstr ""
 
+#: Game.Levels.NaturalNumbersWorld.L09_SuccessorInjectivity
+msgid "Successor Injectivity"
+msgstr ""
+
 #. §0: `P ∧ Q → R`
 #. §1: `P → Q → R`
 #. §2: `(P → Q → R)`
@@ -2893,6 +2914,12 @@ msgstr ""
 #. §3: `Empty`
 #: Game.Levels.EmptyWorld.L02_ToEmpty
 msgid "For any type §0, if there is a function §1 and there is an element §2, then there is an element of the §3 type."
+msgstr ""
+
+#. §0: `Nat.pred : ℕ → ℕ`
+#. §1: `Nat.pred_succ n : Nat.pred (succ n) = n`
+#: Game.Levels.NaturalNumbersWorld.L04_Recursion
+msgid "The function §0 that you have just defined is now in your library as well as the theorem §1."
 msgstr ""
 
 #. §0: `A`
@@ -3382,7 +3409,7 @@ msgid "The goal is an implication. What tactic can be used to start a proof?"
 msgstr ""
 
 #. §0: `induction`
-#. §1: `2 * m + 1 + 1 = 2 * (m + 1)`
+#. §1: `2 * d + 1 + 1 = 2 * (d + 1)`
 #. §2: `rfl`
 #: Game.Levels.NaturalNumbersWorld.L03_Induction
 msgid "The §0 tactic is now in your library.\n"
@@ -3582,6 +3609,13 @@ msgstr ""
 
 #: GameServer.RpcHandlers
 msgid "intermediate goal solved! 🎉"
+msgstr ""
+
+#. §0: `∀ m n : ℕ, succ m = succ n → m = n`
+#: Game.Levels.NaturalNumbersWorld.L09_SuccessorInjectivity
+msgid "In this level, we will prove the third Peano axiom using the introduction and elimination rules for the type of natural numbers.\n"
+"\n"
+"Your objective is to show that the successor function is injective: §0."
 msgstr ""
 
 #. §0: `P`
@@ -5906,6 +5940,10 @@ msgstr ""
 
 #: Game.Levels.ConjunctionWorld.L02_UsingAnd
 msgid "This can be solved in two ways. Can you find them both?"
+msgstr ""
+
+#: Game.Levels.NaturalNumbersWorld.L09_SuccessorInjectivity
+msgid "The successor function is injective"
 msgstr ""
 
 #: Game.Levels.ImplicationWorld.L06_ProvingAssumedImplication
