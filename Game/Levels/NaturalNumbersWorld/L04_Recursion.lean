@@ -31,14 +31,14 @@ then there is a function that for all `n : ℕ` chooses an element of type `P n`
 
 This is easiest to understand in the case of a constant type family `fun _ ↦ A : ℕ → Type` defined using a type `A`.
 
-Now recursion asserts that `A → (∀ k : ℕ, A → A) → (ℕ → A)`. This says that:
+Now recursion asserts that `A → (ℕ → A → A) → (ℕ → A)`. This says that:
 
 * given an element `f_0 : A`
-* and a function that for all `k : ℕ` defines a function `f_succ k : A → A`
+* and a function `f_succ : ℕ → A → A`
 
 then we may recursively define a function `ℕ → A`. We define the function `f : ℕ → A` by specifying that
 * `f 0 = f_0` and
-* `f (succ k) = (f_succ k) (f k)`.
+* `f (succ k) = f_succ k (f k)`.
 
 In this level, your objective is to define a particular function `pred : ℕ → ℕ` by recursion so that
 * `pred 0 = 0` and

@@ -456,71 +456,6 @@ msgstr ""
 msgid "Disjunction"
 msgstr ""
 
-#. §0: `P : ℕ → Prop`
-#. §1: `P 0 → (∀ k : ℕ, P k → P (succ k)) → (∀ n : ℕ, P n)`
-#. §2: `∀ n : ℕ, P n`
-#. §3: `P 0`
-#. §4: `∀ k : ℕ, P k → P (succ k)`
-#. §5: `P : ℕ → Type`
-#. §6: `P 0 → (∀ k : ℕ, P k → P (succ k)) → (∀ n : ℕ, P n)`
-#. §7: `p_0 : P 0`
-#. §8: `k : ℕ`
-#. §9: `p_succ k : P k → P (succ k)`
-#. §10: `n : ℕ`
-#. §11: `P n`
-#. §12: `fun _ ↦ A : ℕ → Type`
-#. §13: `A`
-#. §14: `A → (∀ k : ℕ, A → A) → (ℕ → A)`
-#. §15: `f_0 : A`
-#. §16: `k : ℕ`
-#. §17: `f_succ k : A → A`
-#. §18: `ℕ → A`
-#. §19: `f : ℕ → A`
-#. §20: `f 0 = f_0`
-#. §21: `f (succ k) = (f_succ k) (f k)`
-#. §22: `pred : ℕ → ℕ`
-#. §23: `pred 0 = 0`
-#. §24: `pred (succ k) = k`
-#: Game.Levels.NaturalNumbersWorld.L04_Recursion
-msgid "Recall the principle of mathematical induction, which applies to an arbitrary family of propositions\n"
-"§0 and asserts that\n"
-"\n"
-"§1\n"
-"\n"
-"That is, to prove §2 it suffices to verify:\n"
-"* the base case §3 and\n"
-"* the inductive step §4.\n"
-"\n"
-"The full elimination rule of the type of natural numbers is known in traditional foundations as the\n"
-"*principle of mathematical recursion*. It applies to an arbitrary family of types §5 and\n"
-"asserts that\n"
-"\n"
-"§6\n"
-"\n"
-"The meaning is now slightly different as the arrows should be read as functions rather than implication.\n"
-"This says that:\n"
-"\n"
-"* given an element §7\n"
-"* and a function that for all §8 defines a function §9\n"
-"\n"
-"then there is a function that for all §10 chooses an element of type §11.\n"
-"\n"
-"This is easiest to understand in the case of a constant type family §12 defined using a type §13.\n"
-"\n"
-"Now recursion asserts that §14. This says that:\n"
-"\n"
-"* given an element §15\n"
-"* and a function that for all §16 defines a function §17\n"
-"\n"
-"then we may recursively define a function §18. We define the function §19 by specifying that\n"
-"* §20 and\n"
-"* §21.\n"
-"\n"
-"In this level, your objective is to define a particular function §22 by recursion so that\n"
-"* §23 and\n"
-"* §24."
-msgstr ""
-
 #. §0: `f : A → B`
 #. §1: `a : A`
 #. §2: `b : B`
@@ -2751,6 +2686,70 @@ msgstr ""
 
 #: Game.Levels.QuantifierWorld.L12_CommutingQuantifiers
 msgid "Commuting Quantifiers"
+msgstr ""
+
+#. §0: `P : ℕ → Prop`
+#. §1: `P 0 → (∀ k : ℕ, P k → P (succ k)) → (∀ n : ℕ, P n)`
+#. §2: `∀ n : ℕ, P n`
+#. §3: `P 0`
+#. §4: `∀ k : ℕ, P k → P (succ k)`
+#. §5: `P : ℕ → Type`
+#. §6: `P 0 → (∀ k : ℕ, P k → P (succ k)) → (∀ n : ℕ, P n)`
+#. §7: `p_0 : P 0`
+#. §8: `k : ℕ`
+#. §9: `p_succ k : P k → P (succ k)`
+#. §10: `n : ℕ`
+#. §11: `P n`
+#. §12: `fun _ ↦ A : ℕ → Type`
+#. §13: `A`
+#. §14: `A → (ℕ → A → A) → (ℕ → A)`
+#. §15: `f_0 : A`
+#. §16: `f_succ : ℕ → A → A`
+#. §17: `ℕ → A`
+#. §18: `f : ℕ → A`
+#. §19: `f 0 = f_0`
+#. §20: `f (succ k) = f_succ k (f k)`
+#. §21: `pred : ℕ → ℕ`
+#. §22: `pred 0 = 0`
+#. §23: `pred (succ k) = k`
+#: Game.Levels.NaturalNumbersWorld.L04_Recursion
+msgid "Recall the principle of mathematical induction, which applies to an arbitrary family of propositions\n"
+"§0 and asserts that\n"
+"\n"
+"§1\n"
+"\n"
+"That is, to prove §2 it suffices to verify:\n"
+"* the base case §3 and\n"
+"* the inductive step §4.\n"
+"\n"
+"The full elimination rule of the type of natural numbers is known in traditional foundations as the\n"
+"*principle of mathematical recursion*. It applies to an arbitrary family of types §5 and\n"
+"asserts that\n"
+"\n"
+"§6\n"
+"\n"
+"The meaning is now slightly different as the arrows should be read as functions rather than implication.\n"
+"This says that:\n"
+"\n"
+"* given an element §7\n"
+"* and a function that for all §8 defines a function §9\n"
+"\n"
+"then there is a function that for all §10 chooses an element of type §11.\n"
+"\n"
+"This is easiest to understand in the case of a constant type family §12 defined using a type §13.\n"
+"\n"
+"Now recursion asserts that §14. This says that:\n"
+"\n"
+"* given an element §15\n"
+"* and a function §16\n"
+"\n"
+"then we may recursively define a function §17. We define the function §18 by specifying that\n"
+"* §19 and\n"
+"* §20.\n"
+"\n"
+"In this level, your objective is to define a particular function §21 by recursion so that\n"
+"* §22 and\n"
+"* §23."
 msgstr ""
 
 #. §0: `intro`
