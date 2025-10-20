@@ -1,12 +1,19 @@
 import Game.Metadata
 
 World "NaturalNumbersWorld"
-Level 7
+Level 8
 
 Title "Commuting Addition"
 
 Introduction "
-By definition"
+Using the theorems we have proven so far, we can now prove a serious theorem about the natural numbers, namely the commutativity of addition.
+
+That is, we will show that for all natural numbers `m` and `n`, `m + n = n + m`.
+
+This can be proven by induction on either variable, though you may find one variable easier than the other.
+
+Good luck!
+"
 
 open Nat
 
