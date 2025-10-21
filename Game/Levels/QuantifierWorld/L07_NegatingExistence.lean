@@ -1,7 +1,7 @@
 import Game.Metadata
 
 World "QuantifierWorld"
-Level 13
+Level 7
 
 Title "Negating Existence"
 

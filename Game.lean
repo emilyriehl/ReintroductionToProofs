@@ -10,6 +10,7 @@ import Game.Levels.ClassicalWorld
 import Game.Levels.EqualityWorld
 import Game.Levels.BooleanWorld
 import Game.Levels.QuantifierWorld
+import Game.Levels.AdvancedFunctionWorld
 import Game.Levels.EquivalenceWorld
 import Game.Levels.NaturalNumbersWorld
 
@@ -59,8 +60,9 @@ Dependency EmptyWorld → EqualityWorld
 Dependency NegationWorld → BooleanWorld
 Dependency EqualityWorld → BooleanWorld
 Dependency BooleanWorld → QuantifierWorld
-Dependency QuantifierWorld → EquivalenceWorld
-Dependency QuantifierWorld → NaturalNumbersWorld
+Dependency QuantifierWorld → AdvancedFunctionWorld
+Dependency AdvancedFunctionWorld → EquivalenceWorld
+Dependency AdvancedFunctionWorld → NaturalNumbersWorld
 
 /-! Build the game. Show's warnings if it found a problem with your game. -/
 MakeGame

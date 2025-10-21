@@ -1,7 +1,7 @@
 msgid ""
 msgstr "Project-Id-Version: Game v4.23.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-10-20\n"
+"POT-Creation-Date: 2025-10-21\n"
 "Last-Translator: \n"
 "Language-Team: none\n"
 "Language: en\n"
@@ -148,7 +148,7 @@ msgstr ""
 msgid "For any types §0 and §1, §2 is the function that sends §3 to its second coordinate §4."
 msgstr ""
 
-#: Game.Levels.QuantifierWorld.L14_NegatingUniversality
+#: Game.Levels.QuantifierWorld.L08_NegatingUniversality
 msgid "Negating Universality"
 msgstr ""
 
@@ -243,6 +243,10 @@ msgstr ""
 msgid "We've seen that functions §0 into product types can be decomposed into component functions §1 and §2.\n"
 "\n"
 "We'll now consider the reversed process, defining a function into a product type from a pair of component functions."
+msgstr ""
+
+#: Game.Levels.AdvancedFunctionWorld.L02_Surjectivity
+msgid "In the next level, we will study general properties of surjective functions."
 msgstr ""
 
 #. §0: `A ⊕ B → C`
@@ -345,14 +349,6 @@ msgid "The logical connective of *disjunction*, denoted by §0, is the mathemati
 "Using a hypothesis §14 leads to a proof strategy of arguing &ldquo;by cases&rdquo; as we will soon discover."
 msgstr ""
 
-#. §0: `gf_is_surj`
-#. §1: `«{c}»`
-#. §2: `have hc := gf_is_surj «{c}»`
-#: Game.Levels.QuantifierWorld.L10_CancelingSurjectivity
-#: Game.Levels.QuantifierWorld.L11_ComposingSurjectivity
-msgid "To use the hypothesis §0 at §1 type §2."
-msgstr ""
-
 #: Game.Levels.QuantifierWorld.L02_MoreTransitivity
 msgid "More Transitivity"
 msgstr ""
@@ -397,7 +393,7 @@ msgstr ""
 #. §19: `use a`
 #. §20: `a : A`
 #. §21: `P a`
-#: Game.Levels.QuantifierWorld.L08_IntroducingExistence
+#: Game.Levels.QuantifierWorld.L04_IntroducingExistence
 msgid "Let §0 be a predicate over a type §1.\n"
 "\n"
 "To prove the proposition §2 it suffices to find any element §3 so that §4 holds.\n"
@@ -460,7 +456,7 @@ msgstr ""
 #. §1: `a : A`
 #. §2: `b : B`
 #. §3: `f a = b`
-#: Game.Levels.QuantifierWorld.L09_TotalFunctions
+#: Game.Levels.AdvancedFunctionWorld.L01_TotalFunctions
 msgid "A function §0 must be *total* meaning for each §1 there is some §2 so\n"
 "that §3."
 msgstr ""
@@ -533,6 +529,29 @@ msgstr ""
 #. §0: `intro h1 h2 h3`
 #: Game.Levels.ImplicationWorld.L09_BossLevel
 msgid "Multiple hypothesis can be introduced at once by writing §0 etc. You might consider using names that will help you remember which propositions each hypothesis proves!"
+msgstr ""
+
+#. §0: `f : A → B`
+#. §1: `x y : A`
+#. §2: `x = y`
+#. §3: `f x = f y`
+#. §4: `f : A → B`
+#. §5: `a : A`
+#. §6: `b : B`
+#. §7: `f a`
+#. §8: `b`
+#: Game.Levels.AdvancedFunctionWorld.L01_TotalFunctions
+msgid "Recall from equality world that a function §0 must be *well-defined*.\n"
+"\n"
+"That is if §1 and §2, then §3.\n"
+"\n"
+"In this level, we will state and prove a second defining property of functions.\n"
+"\n"
+"A function §4 must necessarily be &ldquo;total&rdquo;, rather than &ldquo;partially-defined&rdquo;.\n"
+"\n"
+"To say a function is *total* means that for each §5 there is some §6 so that §7 equals §8.\n"
+"\n"
+"Your task this level is to prove this."
 msgstr ""
 
 #. §0: `P`
@@ -627,10 +646,6 @@ msgstr ""
 msgid "The §0 function exchanges the inputs of a function of two variables. For a function with two variables §1, §2 is the function that sends §3 and §4 to §5."
 msgstr ""
 
-#: Game.Levels.QuantifierWorld.L07_FunctionExtensionality
-msgid "In the next level, we will practice using function extensionality to demonstrate an equality between functions."
-msgstr ""
-
 #. §0: `↔`
 #: Game.Levels.NegationWorld.L08_NegatingDisjunction
 msgid "Here the §0 is the outermost logical connective. If you've forgotten what this means, you can look it up in the library."
@@ -640,10 +655,84 @@ msgstr ""
 msgid "Using Functions"
 msgstr ""
 
+#: Game.Levels.QuantifierWorld.L09_BossLevel
+msgid "Move on to Advanced Function World to use quantifiers to study important properties of functions."
+msgstr ""
+
 #. §0: `«{f}».1`
 #: Game.Levels.ProductWorld.L09_UniversalProperty
 #: Game.Levels.ProductWorld.L09_UniversalProperty
 msgid "What type does §0 belong to? Is this useful?"
+msgstr ""
+
+#. §0: `A`
+#. §1: `A → A → Prop`
+#. §2: `x y : A`
+#. §3: `x = y`
+#. §4: `∀ x`
+#. §5: `∃ x`
+#. §6: `∀ y`
+#. §7: `∃ y`
+#. §8: `x`
+#. §9: `y`
+#. §10: `∀ x, ∀ y, x = y ↔ ∀ y, ∀ x, x = y`
+#. §11: `∃ x, ∃ y, x = y ↔ ∃ x, ∃ y, x = y`
+#. §12: `x = y ↔ y = x`
+#. §13: `∀ x, ∃ y, x = y ↔ ∀ y, ∃ x, x = y`
+#. §14: `∃ x, ∀ y, x = y ↔ ∃ y, ∀ x, x = y`
+#. §15: `∀ x : A, ∀ y : A, x = y`
+#. §16: `∀ x : A, ∃ y : A, x = y`
+#. §17: `∃ x : A, ∀ y : A, x = y`
+#. §18: `∃ x : A, ∃ y : A, x = y`
+#. §19: `∃ x : A, ∃ y : A, x = y`
+#. §20: `a : A`
+#. §21: `∀ x : A, ∀ y : A, x = y`
+#. §22: `A`
+#. §23: `A`
+#. §24: `x y : A`
+#. §25: `∃ x : A, ∀ y : A, x = y`
+#. §26: `A`
+#. §27: `A`
+#. §28: `A`
+#. §29: `x : A`
+#. §30: `y : A`
+#. §31: `x`
+#. §32: `∀ x : A, ∃ y : A, x = y`
+#: Game.Levels.QuantifierWorld.L05_MultipleQuantifiers
+msgid "Any type §0 has a family of propositions §1 given by the equality types.\n"
+"\n"
+"For §2, we have the proposition §3.\n"
+"\n"
+"Using the universal and existential quantifiers we can form eight different propositions:\n"
+"\n"
+"* We can choose either §4 or §5.\n"
+"* We can choose either §6 or §7.\n"
+"* We can put the quantifier involving §8 before or after the quantifier involving §9.\n"
+"\n"
+"When we have two existential quantifiers or two universal quantifiers, the order doesn't matter, so we have logical equivalences\n"
+"\n"
+"§10\n"
+"§11\n"
+"\n"
+"In this case, since §12, we have further logical equivalences\n"
+"§13\n"
+"§14\n"
+"\n"
+"The four statements\n"
+"§15\n"
+"§16\n"
+"§17\n"
+"§18\n"
+"have very different meanings.\n"
+"\n"
+"The statement §19 asserts that the type is *inhabited* meaning has an element §20.\n"
+"Whenever such an element exists, this statement is true, but for the empty type, this statement is false.\n"
+"\n"
+"The statement §21 asserts that the type is a *proposition*. When §22 is empty this is true (as there is nothing to prove). When §23 is a true proposition, it is also true, because any two proofs §24 are equal.\n"
+"\n"
+"The statement §25 asserts that the type is a true proposition, or equivalently, that the type §26 is *contractible*. When §27 is empty, this statement is false, but when §28 is a true proposition, it has some proof §29 and any other proof §30 is equal to §31.\n"
+"\n"
+"The final statement §32 is just true for any type. Your objective in this level is to prove this."
 msgstr ""
 
 #: Game.Levels.QuantifierWorld.L01_UniversalTruth
@@ -675,7 +764,7 @@ msgstr ""
 #. §0: `P : A → Prop`
 #. §1: `¬ (∀ x : A, P x)`
 #. §2: `∃ x : A, ¬ (P x)`
-#: Game.Levels.QuantifierWorld.L15_BossLevel
+#: Game.Levels.QuantifierWorld.L09_BossLevel
 msgid "Given a family of propositions §0, using classical logic, §1 implies §2."
 msgstr ""
 
@@ -868,12 +957,6 @@ msgid "Lean uses the name §0 for the function you have just defined. This funct
 "In the next level, we'll use the projection functions to prove symmetry of product types."
 msgstr ""
 
-#. §0: `rfl`
-#. §1: `cases «{b}»`
-#: Game.Levels.QuantifierWorld.L06_DoubleNegation
-msgid "As our previous theorem is not in the library, we'll have to reprove it. Recall §0 only applies for *definitional* equalities, and we only have this for certain cases of Booleans. Try §1."
-msgstr ""
-
 #. §0: `rw`
 #: Game.Levels.EqualityWorld.L04_Symmetry
 msgid "We will now explore other applications of the tactic §0."
@@ -898,21 +981,12 @@ msgstr ""
 msgid "You can solve the goal by explicitly referring to the named hypothesis that Lean supplied or by typing §0 to indicate that the goal matches an assumption."
 msgstr ""
 
-#. §0: `not : Bool → Bool`
-#. §1: `false`
-#. §2: `true`
-#. §3: `true`
-#. §4: `false`
-#. §5: `b = not (not b)`
-#. §6: `b : Bool`
-#. §7: `id = not ∘ not`
-#. §8: `Bool → Bool`
-#: Game.Levels.QuantifierWorld.L06_DoubleNegation
-msgid "Recall the function §0 that is defined to send the boolean §1 to §2 and to send the boolean §3 to §4.\n"
-"\n"
-"In Boolean World, we proved that §5 for any boolean §6.\n"
-"\n"
-"In this world, we will apply that result to prove that §7 as functions §8."
+#. §0: `x : Bool`
+#. §1: `not x = «{b}»`
+#. §2: `«{b}»`
+#. §3: `cases «{b}»`
+#: Game.Levels.AdvancedFunctionWorld.L02_Surjectivity
+msgid "Now you must give an explicit element §0, so that §1. To do this, you need to know which boolean §2 is! Use §3 for this."
 msgstr ""
 
 #. §0: `∨`
@@ -1042,7 +1116,7 @@ msgstr ""
 #. §0: `P : A → B → Prop`
 #. §1: `∃ z : B, ∀ w : A, P w z`
 #. §2: `∀ x : A, ∃ y : B, P x y`
-#: Game.Levels.QuantifierWorld.L12_CommutingQuantifiers
+#: Game.Levels.QuantifierWorld.L06_CommutingQuantifiers
 msgid "Given a family of propositions §0, §1implies §2"
 msgstr ""
 
@@ -1148,11 +1222,6 @@ msgstr ""
 msgid "Type §0 to decompose the hypothesis."
 msgstr ""
 
-#. §0: `ext`
-#: Game.Levels.QuantifierWorld.L07_FunctionExtensionality
-msgid "Type §0 to apply function extensionality and see how the goal state transforms."
-msgstr ""
-
 #. §0: `«{nnnp}»`
 #: Game.Levels.NegationWorld.L10_TripleNegation
 msgid "What can you do with hypothesis §0?"
@@ -1181,7 +1250,7 @@ msgstr ""
 msgid "If this was too easy, you might find it interesting to learn that the general problem of identifying whether a formula in conjunctive normal form is unsatisfiable is NP complete!"
 msgstr ""
 
-#: Game.Levels.QuantifierWorld.L13_NegatingExistence
+#: Game.Levels.QuantifierWorld.L07_NegatingExistence
 msgid "In the next level, we will learn about negating universal quantifiers."
 msgstr ""
 
@@ -1199,7 +1268,7 @@ msgstr ""
 
 #. §0: `b`
 #. §1: `b && b = b || b`
-#: Game.Levels.QuantifierWorld.L08_IntroducingExistence
+#: Game.Levels.QuantifierWorld.L04_IntroducingExistence
 msgid "There is some boolean §0 so that §1"
 msgstr ""
 
@@ -1327,8 +1396,7 @@ msgstr ""
 msgid "If the goal is to prove §0 and we have a hypothesis §1, the tactic §2 supplies the required proof."
 msgstr ""
 
-#: Game.Levels.QuantifierWorld.L08_IntroducingExistence
-#: Game.Levels.QuantifierWorld.L11_ComposingSurjectivity
+#: Game.Levels.QuantifierWorld.L04_IntroducingExistence
 msgid "The next level will give more practice with the existential quantifier."
 msgstr ""
 
@@ -1381,17 +1449,8 @@ msgid "## Summary\n"
 "goal before you can access the second one."
 msgstr ""
 
-#: Game.Levels.QuantifierWorld.L04_ComposingInjectivity
-#: Game.Levels.QuantifierWorld.L04_ComposingInjectivity
-msgid "You have two similar hypothesis. Only one of them applies. Which one is it?"
-msgstr ""
-
 #: Game.Levels.NegationWorld.L10_TripleNegation
 msgid "Triple Negation"
-msgstr ""
-
-#: Game.Levels.QuantifierWorld.L10_CancelingSurjectivity
-msgid "In the next level, we will prove that surjective functions compose."
 msgstr ""
 
 #: Game.Levels.FunctionWorld.L04_ConstantFunctions
@@ -1403,13 +1462,6 @@ msgstr ""
 #. §2: `P → False`
 #: Game.Levels.NegationWorld.L02_Negation
 msgid "§0, read as &ldquo; not §1&rdquo; is an abbreviation for §2."
-msgstr ""
-
-#. §0: `g (f «{x}») = g (f «{y}»)`
-#. §1: `(g ∘ f) «{x}» = (g ∘ f) «{y}»`
-#. §2: `exact «{p}»`
-#: Game.Levels.QuantifierWorld.L04_ComposingInjectivity
-msgid "Your goal §0 is very similar to one of your assumptions §1. Try §2."
 msgstr ""
 
 #. §0: `A`
@@ -1526,10 +1578,6 @@ msgstr ""
 msgid "To prove the existential quantifier, type §0 with an explicit numeral in the place of §1 to supply a well-chosen value of §2."
 msgstr ""
 
-#: Game.Levels.QuantifierWorld.L15_BossLevel
-msgid "Move on to Equivalence World to finally answer the question of what it means for two types to be the same in a sense that generalizes logical equivalence of propositions."
-msgstr ""
-
 #: Game.Levels.ConjunctionWorld.L03_Symmetry
 #: Game.Levels.ProductWorld.L04_Symmetry
 #: Game.Levels.DisjunctionWorld.L04_Symmetry
@@ -1629,6 +1677,18 @@ msgstr ""
 msgid "Now the goal is an element of a product type. How can such elements be defined?"
 msgstr ""
 
+#. §0: `f g : A → B`
+#: Game.Levels.AdvancedFunctionWorld
+msgid "In this world, we will return to our study of functions.\n"
+"\n"
+"Using the universal and existential quantifiers, we will state important properties of functions\n"
+"and prove the interrelationships between these notions.\n"
+"\n"
+"We will also answer the question of what it means for two functions §0 to be equal.\n"
+"\n"
+"These results will be used in Equivalence World to answer what it means for two types to be the same."
+msgstr ""
+
 #. §0: `x : A × (B ⊕ C)`
 #. §1: `x`
 #. §2: `x`
@@ -1661,11 +1721,6 @@ msgstr ""
 msgid "The goal asks you to prove two theorems, so start with §0."
 msgstr ""
 
-#. §0: `g`
-#: Game.Levels.QuantifierWorld.L05_CancelingInjectivity
-msgid "Try applying the hypothesis that §0 is injective."
-msgstr ""
-
 #. §0: `S → T`
 #. §1: `T`
 #. §2: `S`
@@ -1685,37 +1740,6 @@ msgstr ""
 
 #: Game.Levels.ImplicationWorld.L07_OnParentheses
 msgid "Now you can start to apply some hypotheses to reduce the goal to one of your assumptions. Which tactic can be used here?"
-msgstr ""
-
-#. §0: `f g : A → B`
-#. §1: `rfl : f = fun x ↦ f x`
-#. §2: `f`
-#. §3: `x ↦ f x`
-#. §4: `η-rule`
-#. §5: `rfl : g = fun x ↦ g x`
-#. §6: `f = g`
-#. §7: `fun f ↦ f x`
-#. §8: `fun x ↦ g x`
-#. §9: `p x : f x = g x`
-#. §10: `x : A`
-#. §11: `f = g`
-#. §12: `f x = g x`
-#. §13: `x : A`
-#. §14: `ext`
-#: Game.Levels.QuantifierWorld.L07_FunctionExtensionality
-msgid "Suppose that §0 are functions. What does it mean for these functions to be equal?\n"
-"\n"
-"There is an idea that a function is determined by its values. In fact, we have §1, meaning that the function §2 is definitionally equal to the function defined by the formula §3. This is sometimes called the §4 for functions.\n"
-"\n"
-"Similarly of course §5. So when does §6?\n"
-"\n"
-"By transitivity of equality, it suffices for §7 and §8 to be equal.\n"
-"\n"
-"This suggests that it suffices to have a proof §9 for all elements §10.\n"
-"\n"
-"To reduce the question of proving an equality §11 to the question of proving that §12 for all §13, we must appeal to an axiom called *function extensionality*.\n"
-"\n"
-"Function extensionality is an instance of a general §14 tactic that can be used to prove equality in many types."
 msgstr ""
 
 #. §0: `P`
@@ -1927,13 +1951,6 @@ msgstr ""
 msgid "This level can be solved by starting with §0, starting with §1, or starting with §2. If you start with §3, then you can continue with §4 or with §5. If this is your first time solving this level, try to find a different solution."
 msgstr ""
 
-#. §0: `f : A → B`
-#. §1: `g : B → C`
-#. §2: `g ∘ f : A → C`
-#: Game.Levels.QuantifierWorld.L11_ComposingSurjectivity
-msgid "If §0 and §1 are both surjective then §2 is also surjective."
-msgstr ""
-
 #. §0: `g : A → C`
 #. §1: `h : B → C`
 #. §2: `A ⊕ B → C`
@@ -1943,7 +1960,6 @@ msgstr ""
 
 #: Game.Levels.NegationWorld.L03_DoubleNegation
 #: Game.Levels.BooleanWorld.L02_DoubleNegation
-#: Game.Levels.QuantifierWorld.L06_DoubleNegation
 msgid "Double Negation"
 msgstr ""
 
@@ -2187,11 +2203,6 @@ msgstr ""
 msgid "Given a function §0 and any element §1. You can apply the function §2 to §3 to obtain an element §4 of type §5."
 msgstr ""
 
-#. §0: `have eq1 : (g ∘ f) «{x}» = g (f «{x}») := rfl`
-#: Game.Levels.QuantifierWorld.L05_CancelingInjectivity
-msgid "Use §0 and a similar lemma to give yourself more equalities to rewrite along."
-msgstr ""
-
 #. §0: `fun x ↦ a`
 #. §1: `x : B`
 #. §2: `a : A`
@@ -2396,14 +2407,6 @@ msgid "Recall the empty type §0 which has no elements.\n"
 "The empty type is also a proposition: if §1, then §2. Can you prove this?"
 msgstr ""
 
-#. §0: `f : A → B`
-#. §1: `g : B → C`
-#. §2: `g ∘ f : A → C`
-#. §3: `f : A → B`
-#: Game.Levels.QuantifierWorld.L05_CancelingInjectivity
-msgid "Let §0 and §1 be functions and suppose §2 is injective. Then §3 is also injective."
-msgstr ""
-
 #. §0: `P : A → Prop`
 #. §1: `A`
 #. §2: `A`
@@ -2457,6 +2460,10 @@ msgid "Given an element §0 and an element §1 there is a corresponding element 
 "This can be input directly by typing §6constructor` tactic which allows you to first input the first component and then input the second component."
 msgstr ""
 
+#: Game.Levels.AdvancedFunctionWorld
+msgid "Advanced Function World"
+msgstr ""
+
 #. §0: `constructor`
 #: Game.Levels.ProductWorld.L09_UniversalProperty
 msgid "The goal is a product type, so §0 can be used to break the goal into pieces."
@@ -2470,13 +2477,6 @@ msgstr ""
 msgid "The *double negation* of a proposition §0 is the proposition §1.\n"
 "\n"
 "In this level, we reinterpret the construction of the previous level, as a proof that §2 is always true, no matter whether or not §3 is true."
-msgstr ""
-
-#. §0: `ext`
-#. §1: `ext b`
-#. §2: `b : Bool`
-#: Game.Levels.QuantifierWorld.L06_DoubleNegation
-msgid "Type §0 to apply function extensionality or §1 to apply function extensionality with §2 the chosen variable."
 msgstr ""
 
 #. §0: `P`
@@ -2701,7 +2701,7 @@ msgstr ""
 msgid "For any types §0 and §1, the coproduct types §2 and §3 are equivalent."
 msgstr ""
 
-#: Game.Levels.QuantifierWorld.L12_CommutingQuantifiers
+#: Game.Levels.QuantifierWorld.L06_CommutingQuantifiers
 msgid "Commuting Quantifiers"
 msgstr ""
 
@@ -2854,7 +2854,7 @@ msgstr ""
 
 #. §0: `«{na}»`
 #. §1: `A`
-#: Game.Levels.QuantifierWorld.L14_NegatingUniversality
+#: Game.Levels.QuantifierWorld.L08_NegatingUniversality
 msgid "To apply the hypothesis §0 it would help to have a specific element of §1 to apply it to. Can you see where this might come from?"
 msgstr ""
 
@@ -2874,6 +2874,13 @@ msgstr ""
 #. §1: `x = y`
 #: Game.Levels.EqualityWorld.L07_UnitProposition
 msgid "The unit type is a proposition: for §0, §1."
+msgstr ""
+
+#. §0: `! x`
+#. §1: `not x`
+#. §2: `not : Bool → Bool`
+#: Game.Levels.AdvancedFunctionWorld.L02_Surjectivity
+msgid "Here Lean writes §0 for §1, where §2 is the boolean negation function."
 msgstr ""
 
 #: Game.Levels.EquivalenceWorld.L04_CurryingUncurrying
@@ -3080,6 +3087,10 @@ msgid "Another equivalence of types captures the full universal property of copr
 "defined by taking the product of two function types."
 msgstr ""
 
+#: Game.Levels.QuantifierWorld.L05_MultipleQuantifiers
+msgid "In the next level, we will explore the consequences of exchanging the order of universal and existential quantifiers."
+msgstr ""
+
 #. §0: `have`
 #: Game.Levels.ConjunctionWorld.L10_BossLevel
 msgid "For the Boss Level of Conjunction World, the task is to prove a complicated implication.\n"
@@ -3176,7 +3187,7 @@ msgstr ""
 #. §3: `∀ x : A, ¬ (P x)`
 #. §4: `∀ x : A, ¬ (P x)`
 #. §5: `¬ (∃ x : A, P x)`
-#: Game.Levels.QuantifierWorld.L13_NegatingExistence
+#: Game.Levels.QuantifierWorld.L07_NegatingExistence
 msgid "How would you disprove a statement of the form\n"
 "\n"
 "§0?\n"
@@ -3246,6 +3257,15 @@ msgstr ""
 msgid "The function §0 captures the logical operation of conjunction."
 msgstr ""
 
+#. §0: `rcases «{h}» with ⟨b, hb⟩`
+#. §1: `«{h}»`
+#. §2: `b : B`
+#. §3: `hb : ∀ w : A, P w b`
+#: Game.Levels.QuantifierWorld.L06_CommutingQuantifiers
+msgid "Type §0 to replace §1 by the pair of assumptions §2 and\n"
+"§3."
+msgstr ""
+
 #. §0: `«{f}»`
 #. §1: `«{p}»`
 #: Game.Levels.ProductWorld.L07_Uncurrying
@@ -3253,7 +3273,7 @@ msgid "What sort of inputs does the function §0 require and how can these be ex
 msgstr ""
 
 #. §0: `↔`
-#: Game.Levels.QuantifierWorld.L13_NegatingExistence
+#: Game.Levels.QuantifierWorld.L07_NegatingExistence
 msgid "Recall the meaning of §0. What tactic breaks this goal into its components?"
 msgstr ""
 
@@ -3321,21 +3341,14 @@ msgstr ""
 #. §0: `«{ne}»`
 #. §1: `(∃ x, P x) → False`
 #. §2: `apply «{ne}»`
-#: Game.Levels.QuantifierWorld.L13_NegatingExistence
+#: Game.Levels.QuantifierWorld.L07_NegatingExistence
 msgid "The hypothesis §0 is a proof that §1. So try §2."
 msgstr ""
 
 #. §0: `«{na}»`
 #. §1: `«{npa}»`
-#: Game.Levels.QuantifierWorld.L13_NegatingExistence
+#: Game.Levels.QuantifierWorld.L07_NegatingExistence
 msgid "There are various ways to use §0 and §1 to get a contradiction."
-msgstr ""
-
-#. §0: `f g : A → B`
-#. §1: `∀ x : A, f x = g x`
-#. §2: `f = g`
-#: Game.Levels.QuantifierWorld.L07_FunctionExtensionality
-msgid "For functions §0 if §1 then §2."
 msgstr ""
 
 #. §0: `constructor`
@@ -3353,15 +3366,6 @@ msgstr ""
 #: Game.Levels.CoproductWorld.L06_Associativity
 #: Game.Levels.CoproductWorld.L07_Distributivity
 msgid "For types §0, §1, and §2, there are canonical functions between the types §3 and §4."
-msgstr ""
-
-#. §0: `ext`
-#. §1: `f g : A → B`
-#. §2: `f x = g x`
-#. §3: `x : A`
-#. §4: `ext`
-#: Game.Levels.QuantifierWorld.L07_FunctionExtensionality
-msgid "The §0 tactic can be used to apply function extensionality, changing a goal involving proving equality between functions §1 into a goal of proving §2 for an arbitrary §3. The §4 tactic  applies similar extensionality lemmas that have been proven for other types."
 msgstr ""
 
 #. §0: `A`
@@ -3484,7 +3488,7 @@ msgstr ""
 #: Game.Levels.ClassicalWorld.L06_BossLevel
 #: Game.Levels.EqualityWorld.L10_BossLevel
 #: Game.Levels.BooleanWorld.L09_BossLevel
-#: Game.Levels.QuantifierWorld.L15_BossLevel
+#: Game.Levels.QuantifierWorld.L09_BossLevel
 #: Game.Levels.EquivalenceWorld.L07_BossLevel
 msgid "Boss Level"
 msgstr ""
@@ -3521,19 +3525,6 @@ msgstr ""
 #. §3: `P ∧ ¬ Q`
 #: Game.Levels.ClassicalWorld.L06_BossLevel
 msgid "In classical logic, for any propositions §0 and §1, §2 implies §3."
-msgstr ""
-
-#: Game.Levels.QuantifierWorld.L11_ComposingSurjectivity
-msgid "Composing Surjectivity"
-msgstr ""
-
-#. §0: `have : (g ∘ f) «{a}» = ?? := rfl`
-#. §1: `??`
-#. §2: `rw [← ??]`
-#. §3: `\\l`
-#: Game.Levels.QuantifierWorld.L10_CancelingSurjectivity
-#: Game.Levels.QuantifierWorld.L11_ComposingSurjectivity
-msgid "You can either prove a lemma §0 by replacing the §1 with the definition of the composition function. Or you can try §2 using §3 to type the left arrow."
 msgstr ""
 
 #. §0: `A`
@@ -3661,21 +3652,8 @@ msgid "The simplest example of a function is the identity function, which may be
 "To define a function §3 one must define a rule that converts an arbitrary element §4 to some element of type §5. Start by typing §6 to add an arbitrary element §7 to the context and update the goal to a term of type §8."
 msgstr ""
 
-#: Game.Levels.QuantifierWorld.L13_NegatingExistence
+#: Game.Levels.QuantifierWorld.L07_NegatingExistence
 msgid "Negating Existence"
-msgstr ""
-
-#. §0: `f : A → B`
-#. §1: `b : B`
-#. §2: `a : A`
-#. §3: `f a = b`
-#. §4: `f : A → B`
-#. §5: `g : B → C`
-#. §6: `g ∘ f : A → C`
-#: Game.Levels.QuantifierWorld.L11_ComposingSurjectivity
-msgid "Recall that a function §0 is *surjective* if for every §1 there exists some §2 so that §3.\n"
-"\n"
-"Your task in this level is to show that surjective functions compose: if §4 is surjective and §5 is surjective, then §6 is surjective."
 msgstr ""
 
 #. §0: `rfl`
@@ -3803,11 +3781,11 @@ msgstr ""
 
 #. §0: `use`
 #. §1: `Bool`
-#: Game.Levels.QuantifierWorld.L08_IntroducingExistence
+#: Game.Levels.QuantifierWorld.L04_IntroducingExistence
 msgid "Type §0 followed by the name of an element of §1 that you believe will satisfy the predicate."
 msgstr ""
 
-#: Game.Levels.QuantifierWorld.L14_NegatingUniversality
+#: Game.Levels.QuantifierWorld.L08_NegatingUniversality
 msgid "The converse implication is classical but not constructive as you will show in the Boss Level."
 msgstr ""
 
@@ -4034,12 +4012,6 @@ msgstr ""
 msgid "Recall that §0 and §1. We can introduce these as named variables in the context by typing §2 and §3 where §4 and §5 are variable names you get to pick. This allows you to case split on an explicitly named variable. Alternatively, type §6, or use §7 to name your own variables."
 msgstr ""
 
-#. §0: `have eqx : (g ∘ f) x = g (f x) := rfl`
-#. §1: `(g ∘ f) x = (g ∘ f) y`
-#: Game.Levels.QuantifierWorld.L04_ComposingInjectivity
-msgid "Alternatively, you could prove lemmas by §0 and then use rewrites to convert the goal into one where you can apply the hypothesis §1. Because the lemmas hold by definitional equality, you were able to skip that step."
-msgstr ""
-
 #. §0: `P`
 #. §1: `Q`
 #. §2: `R`
@@ -4175,48 +4147,6 @@ msgid "Function types are *not* symmetric: when §0 is non-empty, the types §1 
 "In this level, you will show that the types §3 and §4 are equivalent."
 msgstr ""
 
-#. §0: `f : A → B`
-#. §1: `b : B`
-#. §2: `x : A`
-#. §3: `f x = b`
-#. §4: `f : A → B`
-#. §5: `g : B → C`
-#. §6: `g ∘ f : A → C`
-#. §7: `g : B → C`
-#. §8: `gf_is_surj : ∀ z : C, ∃ x : A, (g ∘ f) x = z`
-#. §9: `c : C`
-#. §10: `gf_is_surj c : ∃ x : A, (g ∘ f) x = c`
-#. §11: `x : A`
-#. §12: `(g ∘ f) x = c`
-#. §13: `A`
-#. §14: `rcases gf_is_surj c with ⟨a, ha⟩`
-#. §15: `gf_is_surj`
-#. §16: `a : A`
-#. §17: `ha : (g ∘ f) a = c`
-#. §18: `a`
-#. §19: `x`
-#. §20: `(g ∘ f) x = c`
-#: Game.Levels.QuantifierWorld.L10_CancelingSurjectivity
-msgid "A function §0 is *surjective* if for every §1 there exists some §2 so that §3.\n"
-"\n"
-"In the level, we will consider a composable pair of functions §4 and §5.\n"
-"\n"
-"We will show that if the composite §6 is surjective, then the function §7 is surjective too.\n"
-"\n"
-"This will give us practice using a hypothesis involving an existential quantifier, which in this case will have the form\n"
-"\n"
-"§8.\n"
-"\n"
-"In particular, for any element §9, §10 is a proof that there\n"
-"is some §11 so that §12.\n"
-"\n"
-"To decompose this into an element of §13 satisfying the condition you can type\n"
-"\n"
-"§14\n"
-"\n"
-"to replace the assumption §15 with the pair of assumptions §16 and §17. Note that the element §18 gets substituted for the variable §19 in the expression §20."
-msgstr ""
-
 #. §0: `P ↔ Q`
 #. §1: `P`
 #. §2: `Q`
@@ -4255,10 +4185,6 @@ msgstr ""
 #: Game.Levels.ConjunctionWorld.L05_Associativity
 #: Game.Levels.ConjunctionWorld.L05_Associativity
 msgid "Think carefully about what §0 proves and what proofs can be extracted from this."
-msgstr ""
-
-#: Game.Levels.QuantifierWorld.L07_FunctionExtensionality
-msgid "Function Extensionality"
 msgstr ""
 
 #. §0: `retry`
@@ -4365,13 +4291,6 @@ msgstr ""
 #. §0: `«{h}»`
 #: Game.Levels.DisjunctionWorld.L08_MoreDistributivity
 msgid "What can you conclude from the hypothesis §0?"
-msgstr ""
-
-#. §0: `«{hc}»`
-#. §1: `cases «{hc}»`
-#. §2: `rcases «{hc}» with ⟨a, ha⟩`
-#: Game.Levels.QuantifierWorld.L10_CancelingSurjectivity
-msgid "To break down the hypothesis §0 try §1 or §2."
 msgstr ""
 
 #: Game.Levels.DisjunctionWorld.L02_AndImpliesOr
@@ -4542,24 +4461,6 @@ msgstr ""
 msgid "Type §0 to ask Lean to consider all possible cases involving a proof of false. As there are no cases, this will complete the proof."
 msgstr ""
 
-#. §0: `P : A → B → Prop`
-#. §1: `∀ x : A, ∃ y : B, P x y`
-#. §2: `∃ z : B, ∀ w : A, P w z`
-#: Game.Levels.QuantifierWorld.L12_CommutingQuantifiers
-msgid "Consider a family of propositions that depends on elements drawn from two separate types:\n"
-"\n"
-"§0\n"
-"\n"
-"In this level, we will compare the two statements\n"
-"\n"
-"§1 and\n"
-"§2.\n"
-"\n"
-"We will see that the second statement implies the first.\n"
-"\n"
-"The converse implication is not true in general. Can you see why?"
-msgstr ""
-
 #. §0: `1 + 5 = 2 * 3`
 #. §1: `succ (succ (succ (succ (succ (succ 0))))`
 #: Game.Levels.NaturalNumbersWorld.L02_NormalForms
@@ -4582,19 +4483,6 @@ msgstr ""
 #. §1: `«{n}»`
 #: Game.Levels.NaturalNumbersWorld.L07_AddingSuccessors
 msgid "You can apply induction on either variable §0 or §1. It will be easiest, however, to induct on the same variable we used to define the addition function."
-msgstr ""
-
-#. §0: `f : A → B`
-#. §1: `a : A`
-#. §2: `b : B`
-#. §3: `f a`
-#. §4: `b`
-#: Game.Levels.QuantifierWorld.L09_TotalFunctions
-msgid "A function §0 must necessarily be &ldquo;total&rdquo;, rather than &ldquo;partially-defined&rdquo;.\n"
-"\n"
-"To say a function is *total* means that for each §1 there is some §2 so that §3 equals §4.\n"
-"\n"
-"Your task this level is to prove this."
 msgstr ""
 
 #: Game.Levels.ProductWorld.L07_Uncurrying
@@ -4787,18 +4675,6 @@ msgid "Lean uses the name §0 for the function you have just defined. This funct
 "The operations of *currying* and *uncurrying* are inverses in a sense we will be able to make precise later."
 msgstr ""
 
-#. §0: `f : A → B`
-#. §1: `∀ x y : A, f x = f y → x = y`
-#. §2: `f : A → B`
-#. §3: `g : B → C`
-#. §4: `g ∘ f : A → C`
-#. §5: `f`
-#: Game.Levels.QuantifierWorld.L05_CancelingInjectivity
-msgid "Recall that a function §0 is *injective* if §1.\n"
-"\n"
-"In this level, we will prove that if §2 and §3 are functions, then if the composite §4 is injective, the function §5 must also be injective."
-msgstr ""
-
 #. §0: `exact b`
 #. §1: `assumption`
 #: Game.Levels.FunctionWorld.L05_MultivariableFunctions
@@ -4817,6 +4693,10 @@ msgstr ""
 #. §5: `(A → B) → B`
 #: Game.Levels.FunctionWorld.L08_Evaluation
 msgid "For types §0 and §1, the evaluation function has type §2, meaning that for §3, §4 has type §5."
+msgstr ""
+
+#: Game.Levels.QuantifierWorld.L05_MultipleQuantifiers
+msgid "Multiple Quantifiers"
 msgstr ""
 
 #: Game
@@ -4885,14 +4765,50 @@ msgstr ""
 msgid "Use §0 to add an element of the empty type to the list of assumptions."
 msgstr ""
 
-#: Game.Levels.QuantifierWorld.L06_DoubleNegation
-msgid "We are now ready to move on to the existential quantifier."
-msgstr ""
-
 #. §0: `«{P}»`
 #. §1: `Show more help!`
 #: Game.Levels.ImplicationWorld.L02_ModusPonens
 msgid "Now your goal is a proof of §0. Can you figure out how to finish the proof? If you need a reminder, click the button §1"
+msgstr ""
+
+#. §0: `P : A → B → Prop`
+#. §1: `∀ x : A, ∃ y : B, P x y`
+#. §2: `∃ z : B, ∀ w : A, P w z`
+#. §3: `h : ∃ z : B, ∀ w : A, P w z`
+#. §4: `h`
+#. §5: `b : B`
+#. §6: `hb : ∀ w : A, P w b`
+#. §7: `h`
+#. §8: `⟨b, hb⟩ : ∃ z : B, ∀ w : A, P w z`
+#. §9: `h = ⟨b, hb⟩`
+#. §10: `h`
+#. §11: `rcases h with ⟨b, hb⟩`
+#. §12: `h`
+#. §13: `b : B`
+#. §14: `hb : ∀ w : A, P w b`
+#: Game.Levels.QuantifierWorld.L06_CommutingQuantifiers
+msgid "Consider a family of propositions that depends on elements drawn from two separate types:\n"
+"\n"
+"§0\n"
+"\n"
+"In this level, we will compare the two statements\n"
+"\n"
+"§1 and\n"
+"§2.\n"
+"\n"
+"We will see that the second statement implies the first.\n"
+"\n"
+"The converse implication is not true in general. Can you see why?\n"
+"\n"
+"To solve this level, you will need to use a hypothesis involving an existential quantifier,\n"
+"which in this case will have the form:\n"
+"\n"
+"§3\n"
+"\n"
+"We would like to decompose the hypothesis §4 into a pair of elements: firstly an element §5\n"
+"and secondly a proof §6. We can think of the proof §7 as being given by this pair of data §8. Indeed §9.\n"
+"\n"
+"To extract this data from the proof §10, type §11 to replace §12 by the pair of assumptions §13 and §14."
 msgstr ""
 
 #. §0: `«{Q}» ∨ «{P}»`
@@ -4934,12 +4850,6 @@ msgstr ""
 #. §3: `congrArg f p : f x = f y`
 #: Game.Levels.EqualityWorld.L06_ApplyingFunctions
 msgid "For a function §0 between types, elements §1, and a proof §2, then §3."
-msgstr ""
-
-#. §0: `id : Bool → Bool`
-#. §1: `not : Bool → Bool`
-#: Game.Levels.QuantifierWorld.L06_DoubleNegation
-msgid "The function §0 equals the composite of the function §1 with itself."
 msgstr ""
 
 #. §0: `«{h}» «{p}» : «{Q}»`
@@ -5063,12 +4973,6 @@ msgstr ""
 msgid "Paired Projections"
 msgstr ""
 
-#. §0: `cases «{gc}»`
-#. §1: `rcases «{gc}» with ⟨b, hb⟩`
-#: Game.Levels.QuantifierWorld.L11_ComposingSurjectivity
-msgid "Try §0 or §1/"
-msgstr ""
-
 #. §0: `A × B → B × A`
 #: Game.Levels.EquivalenceWorld.L01_ProductSymmetry
 #: Game.Levels.EquivalenceWorld.L01_ProductSymmetry
@@ -5171,14 +5075,6 @@ msgid "We've already seen that equality is *reflexive*, meaning that §0 for any
 "This tactic can be used in two directions: §16 &mdash; using §17 to type §18 &mdash; will look for the first instance of a §19 in the goal and replace it with §20, and then try to close the goal with §21.\n"
 "\n"
 "Try solving this level using both types of rewriting."
-msgstr ""
-
-#. §0: `f : A → B`
-#. §1: `g : B → C`
-#. §2: `g ∘ f`
-#. §3: `g`
-#: Game.Levels.QuantifierWorld.L10_CancelingSurjectivity
-msgid "For functions §0 and §1 if §2 is surjective, then so is §3."
 msgstr ""
 
 #. §0: `«{h}»`
@@ -5303,9 +5199,13 @@ msgstr ""
 msgid "If this is your first time solving this level, delete your proof, and try to find another solution."
 msgstr ""
 
+#: Game.Levels.AdvancedFunctionWorld.L01_TotalFunctions
+msgid "We will now study properties that hold of some functions, but not all functions."
+msgstr ""
+
 #. §0: `intro`
-#: Game.Levels.QuantifierWorld.L13_NegatingExistence
-#: Game.Levels.QuantifierWorld.L14_NegatingUniversality
+#: Game.Levels.QuantifierWorld.L07_NegatingExistence
+#: Game.Levels.QuantifierWorld.L08_NegatingUniversality
 msgid "The goal is still an implication, so try another §0."
 msgstr ""
 
@@ -5323,10 +5223,6 @@ msgstr ""
 
 #: Game.Levels.DisjunctionWorld.L03_UsingOr
 msgid "Note now that you've completed the proof in the first case, Lean expects you to provide a proof in the second case."
-msgstr ""
-
-#: Game.Levels.QuantifierWorld.L04_ComposingInjectivity
-msgid "Composing Injectivity"
 msgstr ""
 
 #: Game.Levels.EmptyWorld.L05_ProductWithEmpty
@@ -5408,6 +5304,10 @@ msgstr ""
 #. §2: `«{P}»`
 #: Game.Levels.ImplicationWorld.L02_ModusPonens
 msgid "Type §0 to tell Lean that §1 is a proof of §2."
+msgstr ""
+
+#: Game.Levels.AdvancedFunctionWorld.L02_Surjectivity
+msgid "Surjectivity"
 msgstr ""
 
 #. §0: `exact fun x ↦ x`
@@ -5498,7 +5398,7 @@ msgid "What sort of inputs does the function §0 require?"
 msgstr ""
 
 #. §0: `b`
-#: Game.Levels.QuantifierWorld.L08_IntroducingExistence
+#: Game.Levels.QuantifierWorld.L04_IntroducingExistence
 msgid "Now you are asked to prove a special case of the indexed family of propositions, where the indexing element §0 is specialized to the element you provided."
 msgstr ""
 
@@ -5510,12 +5410,8 @@ msgstr ""
 msgid "Commuting Addition"
 msgstr ""
 
-#: Game.Levels.QuantifierWorld.L05_CancelingInjectivity
-msgid "Canceling Injectivity"
-msgstr ""
-
 #. §0: `«{ne}»`
-#: Game.Levels.QuantifierWorld.L13_NegatingExistence
+#: Game.Levels.QuantifierWorld.L07_NegatingExistence
 msgid "How can you use the hypothesis §0?"
 msgstr ""
 
@@ -5585,10 +5481,6 @@ msgstr ""
 msgid "This was created using the GameSkeleton Github Repo from the Lean Games Server hosted by ADAM: Anticipating the Digital Age of Mathematics at Heinrich Heine University Düsseldorf. It is designed for a first year seminar course taught at Johns Hopkins University in Fall 2025 with the title §0."
 msgstr ""
 
-#: Game.Levels.QuantifierWorld.L09_TotalFunctions
-msgid "In the next level, we will learn how to use a hypothesis involving an existential quantifier."
-msgstr ""
-
 #. §0: `P`
 #. §1: `False.elim : False → P`
 #. §2: `False`
@@ -5621,7 +5513,7 @@ msgstr ""
 msgid "For types §0 and §1, §2 is the type of equivalences between §3 and §4. Its elements have the form §5 where §6, §7, §8, and §9."
 msgstr ""
 
-#: Game.Levels.QuantifierWorld.L09_TotalFunctions
+#: Game.Levels.AdvancedFunctionWorld.L01_TotalFunctions
 msgid "Total Functions"
 msgstr ""
 
@@ -5662,6 +5554,14 @@ msgstr ""
 #. §0: `constructor`
 #: Game.Levels.NaturalNumbersWorld.L06_AddingZero
 msgid "The statement is a conjunction so use §0 to break into subgoals."
+msgstr ""
+
+#. §0: `A`
+#. §1: `x : A`
+#. §2: `y : A`
+#. §3: `x = y`
+#: Game.Levels.QuantifierWorld.L05_MultipleQuantifiers
+msgid "For any type §0, for all elements §1, there exists an element §2, so that §3."
 msgstr ""
 
 #. §0: `f : A → B`
@@ -5712,17 +5612,6 @@ msgid "The type §0 has no elements &mdash; or, more precisely, the type §1 has
 "The task in this level is to define it."
 msgstr ""
 
-#. §0: `f : A → B`
-#. §1: `∀ x y : A, f x = f y → x = y`
-#. §2: `f : A → B`
-#. §3: `g : B → C`
-#. §4: `g ∘ f : A → C`
-#: Game.Levels.QuantifierWorld.L04_ComposingInjectivity
-msgid "Recall that a function §0 is *injective* if §1.\n"
-"\n"
-"In this level, we will prove that if §2 and §3 are both injective functions, then the composite §4 must also be injective."
-msgstr ""
-
 #. §0: `¬(P ∨ ¬ P)`
 #. §1: `¬ P ∧ ¬ ¬ P`
 #. §2: `«{nlem}»`
@@ -5745,7 +5634,7 @@ msgid "Equivalence World"
 msgstr ""
 
 #. §0: `(∃ x : A, ¬ (P x)) → ¬ (∀ x : A, P x)`
-#: Game.Levels.QuantifierWorld.L15_BossLevel
+#: Game.Levels.QuantifierWorld.L09_BossLevel
 msgid "We have just proven an implication\n"
 "\n"
 "§0.\n"
@@ -5916,7 +5805,7 @@ msgstr ""
 #. §0: `P : A → Prop`
 #. §1: `∀ x : A, ¬ (P x)`
 #. §2: `¬ (∃ x : A, P x)`
-#: Game.Levels.QuantifierWorld.L13_NegatingExistence
+#: Game.Levels.QuantifierWorld.L07_NegatingExistence
 msgid "Given a family of propositions §0,  §1 is logically equivalent to §2"
 msgstr ""
 
@@ -5950,10 +5839,6 @@ msgstr ""
 msgid "Proving Assumed Implication"
 msgstr ""
 
-#: Game.Levels.QuantifierWorld.L10_CancelingSurjectivity
-msgid "Canceling Surjectivity"
-msgstr ""
-
 #. §0: `exact`
 #. §1: `«{f}»`
 #. §2: `apply`
@@ -5962,17 +5847,9 @@ msgid "You can use the tactic §0 by supplying §1 with two arguments, in the co
 msgstr ""
 
 #. §0: `intro`
-#. §1: `C`
-#: Game.Levels.QuantifierWorld.L10_CancelingSurjectivity
-#: Game.Levels.QuantifierWorld.L11_ComposingSurjectivity
+#. §1: `Bool`
+#: Game.Levels.AdvancedFunctionWorld.L02_Surjectivity
 msgid "To prove a universally quantified statement, start with §0 to introduce an arbitrary element of type §1. "
-msgstr ""
-
-#. §0: `f : A → B`
-#. §1: `g : B → C`
-#. §2: `g ∘ f : A → C`
-#: Game.Levels.QuantifierWorld.L04_ComposingInjectivity
-msgid "Let §0 and §1 be injective functions. Then §2 is injective."
 msgstr ""
 
 #. §0: `x y : Bool`
@@ -6001,7 +5878,7 @@ msgstr ""
 #. §0: `P : A → Prop`
 #. §1: `∃ x : A, ¬ (P x)`
 #. §2: `¬ (∀ x : A, P x)`
-#: Game.Levels.QuantifierWorld.L14_NegatingUniversality
+#: Game.Levels.QuantifierWorld.L08_NegatingUniversality
 msgid "Given a family of propositions §0,  §1 implies §2"
 msgstr ""
 
@@ -6070,11 +5947,6 @@ msgid "Given a hypothesis §0 we know that *either* §1 or §2 is true (or possi
 "If given a hypothesis §17, then §18 can be used in place of §19 to give hypotheses §20 in the first case and §21 in the second. (Here you can choose any variable names for §22 and §23.)\n"
 "\n"
 "For example, arguing by cases, we can prove that or is symmetric, that is that §24 implies §25."
-msgstr ""
-
-#. §0: `f g : A → B`
-#: Game.Levels.QuantifierWorld.L05_CancelingInjectivity
-msgid "In the next level, we will learn what it means for two functions §0 to be *equal*."
 msgstr ""
 
 #. §0: `exact «{p}».1`
@@ -6161,7 +6033,7 @@ msgstr ""
 msgid "DeMorgan"
 msgstr ""
 
-#: Game.Levels.QuantifierWorld.L12_CommutingQuantifiers
+#: Game.Levels.QuantifierWorld.L06_CommutingQuantifiers
 msgid "In the next levels, we will study the effect of negating existential and universal quantifiers."
 msgstr ""
 
@@ -6222,8 +6094,7 @@ msgstr ""
 #. §4: `∃ (x y : A), P x y`
 #. §5: `use a, a'`
 #. §6: `use`
-#: Game.Levels.QuantifierWorld.L08_IntroducingExistence
-#: Game.Levels.QuantifierWorld.L10_CancelingSurjectivity
+#: Game.Levels.QuantifierWorld.L04_IntroducingExistence
 msgid "For goals of the form §0 the tactic §1 can be used to provide an element §2 which will satisfy §3. For multiple constructors like §4, you can provide comma-separated values: §5.\n"
 "\n"
 "Note that the version of the §6 tactic for this game is somewhat weaker than the real one in Mathlib, which automatically tries to solve the remaining goal."
@@ -6563,6 +6434,11 @@ msgstr ""
 msgid "Component Functions"
 msgstr ""
 
+#. §0: `neg : Bool → Bool`
+#: Game.Levels.AdvancedFunctionWorld.L02_Surjectivity
+msgid "The function §0 is surjective."
+msgstr ""
+
 #. §0: `A`
 #. §1: `Empty`
 #. §2: `A × Empty`
@@ -6600,7 +6476,7 @@ msgstr ""
 #. §3: `∃ x : A, ¬ (P x)`
 #. §4: `∃ x : A, ¬ (P x)`
 #. §5: `¬ (∀ x : A, P x)`
-#: Game.Levels.QuantifierWorld.L14_NegatingUniversality
+#: Game.Levels.QuantifierWorld.L08_NegatingUniversality
 msgid "How would you disprove a statement of the form\n"
 "\n"
 "§0?\n"
@@ -6697,7 +6573,7 @@ msgstr ""
 msgid "Numerals"
 msgstr ""
 
-#: Game.Levels.QuantifierWorld.L08_IntroducingExistence
+#: Game.Levels.QuantifierWorld.L04_IntroducingExistence
 msgid "Introducing Existence"
 msgstr ""
 
@@ -6796,6 +6672,25 @@ msgstr ""
 
 #: Game.Levels.ConjunctionWorld.L04_LogicalEquivalence
 msgid "Logical Equivalence"
+msgstr ""
+
+#. §0: `f : A → B`
+#. §1: `∀ x : A, ∃ y : B, f x = y`
+#. §2: `f : A → B`
+#. §3: `y : B`
+#. §4: `x : A`
+#. §5: `f x = y`
+#. §6: `∀ y : B, ∃ x : A, f x = y`
+#. §7: `not : Bool → Bool`
+#: Game.Levels.AdvancedFunctionWorld.L02_Surjectivity
+msgid "Recall that every function is *total*. For any function §0, we have proven that\n"
+"§1.\n"
+"\n"
+"A function §2 is *surjective* if for every §3 there exists some §4 so that §5.\n"
+"\n"
+"Unlike totality, the statement §6 is true for some functions but false for others.\n"
+"\n"
+"In this level, we will show that the function §7 is surjective."
 msgstr ""
 
 #. §0: `m n`

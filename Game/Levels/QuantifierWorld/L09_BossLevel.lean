@@ -1,7 +1,7 @@
 import Game.Metadata
 
 World "QuantifierWorld"
-Level 15
+Level 9
 
 Title "Boss Level"
 
@@ -29,4 +29,4 @@ Statement {A : Type} (P : A → Prop) : ¬ (∀ x : A, P x) → (∃ x : A, ¬ (
   use a
   assumption
 
-Conclusion "Move on to Equivalence World to finally answer the question of what it means for two types to be the same in a sense that generalizes logical equivalence of propositions."
+Conclusion "Move on to Advanced Function World to use quantifiers to study important properties of functions."
