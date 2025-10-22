@@ -1,7 +1,7 @@
 import Game.Metadata
 
-World "QuantifierWorld"
-Level 5
+World "AdvancedFunctionWorld"
+Level 7
 
 Title "Canceling Injectivity"
 

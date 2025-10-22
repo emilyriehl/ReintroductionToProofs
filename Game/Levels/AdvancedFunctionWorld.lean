@@ -1,14 +1,12 @@
 import Game.Levels.AdvancedFunctionWorld.L01_TotalFunctions
 import Game.Levels.AdvancedFunctionWorld.L02_Surjectivity
--- import Game.Levels.AdvancedFunctionWorld.L03_Injectivity; later, eg not is injective
--- import Game.Levels.AdvancedFunctionWorld.L04_Bijectivity; later, eg not is bijective
-
--- import Game.Levels.QuantifierWorld.L04_ComposingInjectivity
--- import Game.Levels.QuantifierWorld.L05_CancelingInjectivity
--- import Game.Levels.QuantifierWorld.L06_DoubleNegation
--- import Game.Levels.QuantifierWorld.L07_FunctionExtensionality
--- import Game.Levels.QuantifierWorld.L10_CancelingSurjectivity
--- import Game.Levels.QuantifierWorld.L11_ComposingSurjectivity
+import Game.Levels.AdvancedFunctionWorld.L03_CancelingSurjectivity
+import Game.Levels.AdvancedFunctionWorld.L04_ComposingSurjectivity
+import Game.Levels.AdvancedFunctionWorld.L05_Injectivity
+import Game.Levels.AdvancedFunctionWorld.L06_ComposingInjectivity
+import Game.Levels.AdvancedFunctionWorld.L07_CancelingInjectivity
+import Game.Levels.AdvancedFunctionWorld.L08_FunctionExtensionality
+import Game.Levels.AdvancedFunctionWorld.L09_DoubleNegation
 
 World "AdvancedFunctionWorld"
 Title "Advanced Function World"

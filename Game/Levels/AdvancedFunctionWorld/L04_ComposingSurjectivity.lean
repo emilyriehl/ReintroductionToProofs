@@ -1,7 +1,7 @@
 import Game.Metadata
 
-World "QuantifierWorld"
-Level 11
+World "AdvancedFunctionWorld"
+Level 4
 
 Title "Composing Surjectivity"
 
@@ -25,4 +25,4 @@ Statement {A B C : Type} (f : A → B) (g : B → C) (f_is_surj : ∀ b : B, ∃
   rw [← hb, ← ha]
   rfl
 
-Conclusion "The next level will give more practice with the existential quantifier."
+Conclusion "In the next level, we will introduce another property that holds for some, but not all, functions."

@@ -10,6 +10,8 @@ Introduction "Recall that every function is *total*. For any function `f : A →
 
 A function `f : A → B` is *surjective* if for every `y : B` there exists some `x : A` so that `f x = y`.
 
+The condition asserts that every element of `B` is an output of the function `f` for some element of `A`. For each `y : B` there is some `x : A` so that `f x = y`.
+
 Unlike totality, the statement `∀ y : B, ∃ x : A, f x = y` is true for some functions but false for others.
 
 In this level, we will show that the function `not : Bool → Bool` is surjective.
@@ -27,4 +29,4 @@ Statement : ∀ b : Bool, ∃ x : Bool, not x = b := by
   use false
   rfl
 
-Conclusion "In the next level, we will study general properties of surjective functions."
+Conclusion "In the next levels, we will study general properties of surjective functions."

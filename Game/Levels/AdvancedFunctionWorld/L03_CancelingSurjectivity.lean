@@ -1,28 +1,15 @@
 import Game.Metadata
 
-World "QuantifierWorld"
-Level 10
+World "AdvancedFunctionWorld"
+Level 3
 
 Title "Canceling Surjectivity"
 
-Introduction "A function `f : A → B` is *surjective* if for every `b : B` there exists some `x : A` so that `f x = b`.
+Introduction "Recall that a function `f : A → B` is *surjective* if for every `b : B` there exists some `x : A` so that `f x = b`.
 
 In the level, we will consider a composable pair of functions `f : A → B` and `g : B → C`.
 
 We will show that if the composite `g ∘ f : A → C` is surjective, then the function `g : B → C` is surjective too.
-
-This will give us practice using a hypothesis involving an existential quantifier, which in this case will have the form
-
-`gf_is_surj : ∀ z : C, ∃ x : A, (g ∘ f) x = z`.
-
-In particular, for any element `c : C`, `gf_is_surj c : ∃ x : A, (g ∘ f) x = c` is a proof that there
-is some `x : A` so that `(g ∘ f) x = c`.
-
-To decompose this into an element of `A` satisfying the condition you can type
-
-`rcases gf_is_surj c with ⟨a, ha⟩`
-
-to replace the assumption `gf_is_surj` with the pair of assumptions `a : A` and `ha : (g ∘ f) a = c`. Note that the element `a` gets substituted for the variable `x` in the expression `(g ∘ f) x = c`.
 "
 
 /-- For functions `f : A → B` and `g : B → C` if `g ∘ f` is surjective, then so is `g`. -/
@@ -39,11 +26,3 @@ Statement {A B C : Type} (f : A → B) (g : B → C) (gf_is_surj : ∀ z : C, �
   rfl
 
 Conclusion "In the next level, we will prove that surjective functions compose."
-
-/--
-For goals of the form `∃ (x : A), P x` the tactic `use` can be used to provide an element `a : A` which will satisfy `P a`. For multiple constructors like `∃ (x y : A), P x y`, you can provide comma-separated values: `use a, a'`.
-
-Note that the version of the `use` tactic for this game is somewhat weaker than the real one in Mathlib, which automatically tries to solve the remaining goal.-/
-TacticDoc use
-
-NewTactic use

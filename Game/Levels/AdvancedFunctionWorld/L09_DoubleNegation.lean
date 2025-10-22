@@ -1,7 +1,7 @@
 import Game.Metadata
 
-World "QuantifierWorld"
-Level 6
+World "AdvancedFunctionWorld"
+Level 9
 
 Title "Double Negation"
 
@@ -21,4 +21,4 @@ Statement : id = not ∘ not := by
   rfl
   rfl
 
-Conclusion "We are now ready to move on to the existential quantifier."
+Conclusion "More to come."

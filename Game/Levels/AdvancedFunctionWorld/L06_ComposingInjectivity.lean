@@ -1,7 +1,7 @@
 import Game.Metadata
 
-World "QuantifierWorld"
-Level 4
+World "AdvancedFunctionWorld"
+Level 6
 
 Title "Composing Injectivity"
 

@@ -24,7 +24,9 @@ which in this case will have the form:
 `h : ∃ z : B, ∀ w : A, P w z`
 
 We would like to decompose the hypothesis `h` into a pair of elements: firstly an element `b : B`
-and secondly a proof `hb : ∀ w : A, P w b`. We can think of the proof `h` as being given by this pair of data `⟨b, hb⟩ : ∃ z : B, ∀ w : A, P w z`. Indeed `h = ⟨b, hb⟩`.
+and secondly a proof `hb : ∀ w : A, P w b`. Note that the element `b` gets substituted for the variable `z` in the family of propositions `∀ w : A, P w z`.
+
+We can think of the proof `h` as being given by this pair of data `⟨b, hb⟩ : ∃ z : B, ∀ w : A, P w z`. Indeed `h = ⟨b, hb⟩`.
 
 To extract this data from the proof `h`, type `rcases h with ⟨b, hb⟩` to replace `h` by the pair of assumptions `b : B` and `hb : ∀ w : A, P w b`.
 "
