@@ -72,6 +72,8 @@ package Game where
   leanOptions := #[
     /- linter warnings might block the player. (IMPORTANT) -/
     ⟨`linter.all, false⟩,
+    /- to display the values of let declarations, like `:= 42` (IMPORTANT)  -/
+    ⟨`pp.showLetValues, true⟩,
     /- make all assumptions always accessible. -/
     ⟨`tactic.hygienic, false⟩]
   /- Used when calling `lake build`. -/
