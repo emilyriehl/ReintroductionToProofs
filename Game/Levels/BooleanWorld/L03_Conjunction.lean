@@ -13,6 +13,7 @@ We can similarly define a function `Bool → Bool → Bool` that encodes the log
 /-- There is a function `and : Bool → Bool → Bool` that captures the logical operation of conjunction. -/
 Statement : Bool → Bool → Bool := by
   intro x y
+  Hint "If you are using typewriter mode, try `cases h : {x}` to add hypotheses `h : {x} = false` and `h : {x} = true` that clarify which case you are in. Similarly, try `cases k : {y}` whenever you are ready to consider cases on the second boolean variable."
   cases x
   exact false
   cases y

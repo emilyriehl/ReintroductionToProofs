@@ -15,6 +15,8 @@ In this level, we will define a function `Bool → Bool → Bool` that encodes t
 /-- There is a function `or : Bool → Bool → Bool` that captures the logical operation of conjunction. -/
 Statement : Bool → Bool → Bool := by
   intro x y
+  Hint (hidden := true) "Recall `cases h : {x}` and `cases k :
+  cases {y}` may make it clearer which cases are which."
   cases x
   cases y
   exact false

@@ -12,6 +12,8 @@ Note Lean has an alternate notation `x && y` for `and x y`.
 
 /-- The function `and : Bool → Bool → Bool` is symmetric. -/
 Statement (x y : Bool) : and x y = and y x := by
+  Hint (hidden := true) "Recall `cases h : x` and `cases k :
+  cases y` may make it clearer which cases are which."
   cases x
   cases y
   rfl

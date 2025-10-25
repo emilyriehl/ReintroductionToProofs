@@ -28,6 +28,8 @@ The objective of this level is to prove these equalities.
 Statement (x y : Bool) : (not (and x y) = or (not x) (not y)) ∧ (not (or x y) = and (not x) (not y)) := by
   Hint (hidden := true) "What is the outermost logical connective?"
   constructor
+  Hint (hidden := true) "Recall `cases h : x` and `cases k :
+  cases y` may make it clearer which cases are which."
   cases x <;> cases y <;> rfl
   cases x <;> cases y <;> rfl
 

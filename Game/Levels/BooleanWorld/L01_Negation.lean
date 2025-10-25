@@ -11,7 +11,11 @@ In this level, our aim is to define a function `Bool → Bool` that encodes the 
 
 You can do this by introducing a generic boolean by typing `intro b`. Then use the tactic `cases b` to define the output of the function.
 
-Note the first case provided by Lean is the case of `false` while the second case is the case of `true`. Try toggling to editor mode and perhaps add a few blank lines at the bottom to see if you can see what case you are in.
+Note the first case provided by Lean is the case of `false` while the second case is the case of `true`.
+
+Try toggling to editor mode and perhaps add a few blank lines at the bottom to see if you can see what case you are in.
+
+Alternatively, if you prefer to stay in typewriter mode, type `cases h : b` to add hypotheses `h : b = false` in the first case and `h : b = true` in the second case, which makes it clearer which case is listed first.
 "
 
 /-- The negation function `not : Bool → Bool` sends the boolean `false` to `true` and `true` to `false`. -/
