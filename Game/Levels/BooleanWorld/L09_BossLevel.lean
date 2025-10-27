@@ -12,20 +12,41 @@ Using Lean's alternate notation for conjunction, disjunction, and negation, conj
 
 `(p || !q || r) && (q || !r) && (!p || r)`
 
-For the Boss Level, your are asked to characterize an especially complicated example of a statement in conjunctive normal form.
+For the Boss Level, you are asked to find booleans `p q r : Bool` so that
+
+`(!p || q) && (!q || p) && (!p || !r) && (!q || !r) && (p || q)`
+
+is satisfiable, meaning that the after substituting appropriate elements for `p q r`, this conjunctive normal form formula is equal to `true`.
+
+Solve the first three goals by `exact p`, `exact q`, and `exact r` &mdash; replacing the boolean variables by explicit booleans `true` or `false` as appropriate. If you have found the right solution, the final goal should be solvable with `rfl`.
 "
 
-/-- The following expression in conjunctive normal form is unsatisfiable. -/
-Statement (p q r : Bool) :
-and (or (or (not p) (not q)) r)
-(and (or (or p (not q)) r)
-(and (or (or (not p) (not q)) (not r))
-(and (or (or p q) (not r))
-(and (or (or p (not q)) (not r))
-(and (or (or p q) r)
-(and (or (or (not p) q) r)
-(or (or (not p) q) (not r))))))))
-= false := by
-  cases p <;> cases q <;> cases r <;> rfl
+/-- The following expression in conjunctive normal form is satisfiable. -/
+Statement (preamble := let p : Bool := ?_; let q : Bool := ?_; let r : Bool := ?_) : ∃ p : Bool, ∃ q : Bool, ∃ r : Bool,
+and (not p || q)
+(and (not q || p)
+(and (not p || not r)
+(and (not q || not r)
+(p || q)))) = true := by
+  Hint "For this level to work, we need to swap the goals. Type `pick_goal 4` to move the fourth goal to the front."
+  pick_goal 4
+  Hint "Now supply your conjectured value of `p` with `exact ??`."
+  exact true
+  Hint "Now type `pick_goal 3` to move the third goal to the front."
+  pick_goal 3
+  Hint "Now supply your conjectured value of `q` with `exact ??`."
+  exact true
+  Hint "Now type `pick_goal 2` to move the third goal to the front."
+  pick_goal 2
+  Hint "Now supply your conjectured value of `r` with `exact ??`."
+  exact false
+  Hint "Now type `use p; use q; use r` to use these values. Ignore the funny looking `∃` symbol in the formula, which will be explained in a future world."
+  use p; use q; use r
+  rfl
 
-Conclusion "If this was too easy, you might find it interesting to learn that the general problem of identifying whether a formula in conjunctive normal form is unsatisfiable is NP complete!"
+Conclusion "If this was too easy, you might find it interesting to learn that the general problem of identifying whether a formula in conjunctive normal form is satisfiable is NP complete!"
+
+/-- `pick_goal n` will move the `n`-th goal to the front. -/
+TacticDoc pick_goal
+
+NewTactic pick_goal

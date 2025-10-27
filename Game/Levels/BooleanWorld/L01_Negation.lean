@@ -16,14 +16,22 @@ Note the first case provided by Lean is the case of `false` while the second cas
 Try toggling to editor mode and perhaps add a few blank lines at the bottom to see if you can see what case you are in.
 
 Alternatively, if you prefer to stay in typewriter mode, type `cases h : b` to add hypotheses `h : b = false` in the first case and `h : b = true` in the second case, which makes it clearer which case is listed first.
+
+Note this level comes with two pre-defined goals: the first is to define the negation function `Bool → Bool` and the second is to check that your definition is correct by calulating the values of the function you defined on the booleans `true` and `false`.
 "
 
 /-- The negation function `not : Bool → Bool` sends the boolean `false` to `true` and `true` to `false`. -/
-Statement : Bool → Bool := by
+Statement (preamble := let f: Bool → Bool := ?_; use f; swap) :
+  ∃ f : Bool → Bool, f true = false ∧ f false = true := by
+  Hint "Your first objective is to define the negation function."
   intro b
   cases b
   exact true
   exact false
+  Hint "Now you are asked to check that the function `f : Bool → Bool` that you just defined actually *is* the negation function. Specifically, you are asked to check that `f true = false ∧ f false = true`."
+  constructor
+  rfl
+  rfl
 
 Conclusion "Lean has a built in name `not` for this function. It is now in your library."
 

@@ -6,10 +6,9 @@ Level 8
 Title "Not Equal"
 
 Introduction "We will now finally prove an example of an *non equality* of terms, demonstrating that
+the two booleans are not equal:
 
-`¬ (false = true)`
-
-for the two booleans.
+`¬ (false = true)`.
 
 The proof is quite delicate, so let us explain how it works.
 
@@ -33,10 +32,11 @@ Statement : ¬ (false = true) := by
   Hint "Define a function `Bool → Prop` by `  let P : Bool → Prop := by intro b ; cases b ; exact False ; exact True
 `."
   let P : Bool → Prop := by intro b ; cases b ; exact False ; exact True
-  Hint "Define a function `P true → P false` by `have tr : P true → P false := by intro x ; rw [p] ; exact x
+  Hint "Define a function `P true → P false` by `let tr : P true → P false := by intro x ; rw [p] ; exact x
  `."
-  have tr : P true → P false := by intro x ; rw [p] ; exact x
-  Hint "Type `exact tr ⟨⟩` to return an element of `False` defined using the function `tr` and the element `⟨⟩ : True`."
+  let tr : P true → P false := by intro x ; rw [p] ; exact x
+  Hint "By the definition of the family of propositions `P : Bool → Prop`, the function `tr : P true → P false` is a function `tr : True → False`. In particular, if we apply `tr` to an element of `True`, we get an element of `False`, which is what we want."
+  Hint (hidden := true) "Type `exact tr ⟨⟩` to return an element of `False` defined using the function `tr` and the element `⟨⟩ : True`."
   exact tr ⟨⟩
 
 Conclusion "We have added the theorem `Bool.noConfusion` to the library."
@@ -51,3 +51,11 @@ NewTheorem Bool.noConfusion
 TacticDoc «let»
 
 NewTactic «let»
+
+/-- The proposition `False` has no elements. -/
+DefinitionDoc False as "False" in "Prop"
+
+/-- The proposition `True` has a canonical element `⟨⟩ : True`. -/
+DefinitionDoc True as "True" in "Prop"
+
+NewDefinition False True

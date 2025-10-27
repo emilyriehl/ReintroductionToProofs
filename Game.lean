@@ -60,9 +60,10 @@ Dependency EmptyWorld → EqualityWorld
 Dependency NegationWorld → BooleanWorld
 Dependency EqualityWorld → BooleanWorld
 Dependency BooleanWorld → QuantifierWorld
+Dependency ClassicalWorld → QuantifierWorld
 Dependency QuantifierWorld → AdvancedFunctionWorld
 Dependency AdvancedFunctionWorld → EquivalenceWorld
 Dependency AdvancedFunctionWorld → NaturalNumbersWorld
 
-/-! Build the game. Show's warnings if it found a problem with your game. -/
+/-! Build the game. Shows warnings if it found a problem with your game. -/
 MakeGame

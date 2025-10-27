@@ -49,3 +49,11 @@ Statement {A : Type} : ∀ x : A, ∃ y : A, x = y
   rfl
 
 Conclusion "In the next level, we will explore the consequences of exchanging the order of universal and existential quantifiers."
+
+/--
+For goals of the form `∃ (x : A), P x` the tactic `use` can be used to provide an element `a : A` which will satisfy `P a`. For multiple constructors like `∃ (x y : A), P x y`, you can provide comma-separated values: `use a, a'`.
+
+Note that the version of the `use` tactic for this game is somewhat weaker than the real one in Mathlib, which automatically tries to solve the remaining goal.-/
+TacticDoc use
+
+NewTactic use
