@@ -2665,6 +2665,15 @@ msgid "Lean has built in notation for the composite of §0 and §1 namely §2, u
 "Try solving this level with §11."
 msgstr ""
 
+#. §0: ` to use these values and attempt to solve the goal by `
+#. §1: `. If this works, congratulations! If not, go back and change the values for `
+#. §2: `, `
+#. §3: `, and `
+#. §4: `. Ignore the funny looking `
+#: Game.Levels.BooleanWorld.L09_BossLevel
+msgid "Now type ⟨p, q, r, rfl⟩§0rfl§1p§2q§3r§4∃` symbol in the formula, which will be explained in a future world."
+msgstr ""
+
 #. §0: `cases`
 #. §1: `rcases`
 #. §2: `«{p}»`
@@ -4038,12 +4047,6 @@ msgstr ""
 
 #: Game.Levels.FunctionWorld
 msgid "Function World"
-msgstr ""
-
-#. §0: `use p; use q; use r`
-#. §1: `∃`
-#: Game.Levels.BooleanWorld.L09_BossLevel
-msgid "Now type §0 to use these values. Ignore the funny looking §1 symbol in the formula, which will be explained in a future world."
 msgstr ""
 
 #. §0: `h : P ∧ Q`

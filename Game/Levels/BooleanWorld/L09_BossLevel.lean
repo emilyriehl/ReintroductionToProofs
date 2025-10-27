@@ -40,9 +40,8 @@ and (not p || q)
   pick_goal 2
   Hint "Now supply your conjectured value of `r` with `exact ??`."
   exact false
-  Hint "Now type `use p; use q; use r` to use these values. Ignore the funny looking `∃` symbol in the formula, which will be explained in a future world."
-  use p; use q; use r
-  rfl
+  Hint "Now type ⟨p, q, r, rfl⟩` to use these values and attempt to solve the goal by `rfl`. If this works, congratulations! If not, go back and change the values for `p`, `q`, and `r`. Ignore the funny looking `∃` symbol in the formula, which will be explained in a future world."
+  exact ⟨p, q, r, rfl⟩
 
 Conclusion "If this was too easy, you might find it interesting to learn that the general problem of identifying whether a formula in conjunctive normal form is satisfiable is NP complete!"
 
