@@ -104,33 +104,6 @@ msgstr ""
 msgid "Disjunction Boss Level"
 msgstr ""
 
-#. §0: `(p || !q || r) && (q || !r) && (!p || r)`
-#. §1: `p q r : Bool`
-#. §2: `(!p || q) && (!q || p) && (!p || !r) && (!q || !r) && (p || q)`
-#. §3: `p q r`
-#. §4: `true`
-#. §5: `exact p`
-#. §6: `exact q`
-#. §7: `exact r`
-#. §8: `true`
-#. §9: `false`
-#. §10: `rfl`
-#: Game.Levels.BooleanWorld.L09_BossLevel
-msgid "An expression involving booleans is in *conjuctive normal form* if it expressed as a conjunction (possibly involving many formulas) of disjunctions (possibly involving many formulas) of either booleans or their negations.\n"
-"\n"
-"Using Lean's alternate notation for conjunction, disjunction, and negation, conjunctive normal form statements look like\n"
-"\n"
-"§0\n"
-"\n"
-"For the Boss Level, you are asked to find booleans §1 so that\n"
-"\n"
-"§2\n"
-"\n"
-"is satisfiable, meaning that the after substituting appropriate elements for §3, this conjunctive normal form formula is equal to §4.\n"
-"\n"
-"Solve the first three goals by §5, §6, and §7 &mdash; replacing the boolean variables by explicit booleans §8 or §9 as appropriate. If you have found the right solution, the final goal should be solvable with §10."
-msgstr ""
-
 #. §0: `A`
 #. §1: `B`
 #. §2: `A × B → B × A`
@@ -913,11 +886,6 @@ msgstr ""
 
 #: Game.Levels.FunctionWorld.L04_ConstantFunctions
 msgid "Constant functions"
-msgstr ""
-
-#. §0: `pick_goal 4`
-#: Game.Levels.BooleanWorld.L09_BossLevel
-msgid "For this level to work, we need to swap the goals. Type §0 to move the fourth goal to the front."
 msgstr ""
 
 #: Game.Levels.ConjunctionWorld.L02_UsingAnd
@@ -1774,17 +1742,17 @@ msgstr ""
 msgid "What else can we prove with the hypothesis §0?"
 msgstr ""
 
-#. §0: `Nat.add_comm : ∀ m n : ℕ, m + n = n + m`
-#: Game.Levels.NaturalNumbersWorld.L08_CommutingAddition
-msgid "This proves the theorem §0, which is now in your library."
-msgstr ""
-
 #. §0: `Bool → Prop`
 #. §1: `  let P : Bool → Prop := by intro b ; cases b ; exact False ; exact True
 #. `
 #: Game.Levels.BooleanWorld.L08_NotEqual
 #: Game.Levels.BooleanWorld.L08_NotEqual
 msgid "Define a function §0 by §1."
+msgstr ""
+
+#. §0: `Nat.add_comm : ∀ m n : ℕ, m + n = n + m`
+#: Game.Levels.NaturalNumbersWorld.L08_CommutingAddition
+msgid "This proves the theorem §0, which is now in your library."
 msgstr ""
 
 #. §0: `P ∧ ¬ P`
@@ -2665,15 +2633,6 @@ msgid "Lean has built in notation for the composite of §0 and §1 namely §2, u
 "Try solving this level with §11."
 msgstr ""
 
-#. §0: ` to use these values and attempt to solve the goal by `
-#. §1: `. If this works, congratulations! If not, go back and change the values for `
-#. §2: `, `
-#. §3: `, and `
-#. §4: `. Ignore the funny looking `
-#: Game.Levels.BooleanWorld.L09_BossLevel
-msgid "Now type ⟨p, q, r, rfl⟩§0rfl§1p§2q§3r§4∃` symbol in the formula, which will be explained in a future world."
-msgstr ""
-
 #. §0: `cases`
 #. §1: `rcases`
 #. §2: `«{p}»`
@@ -2927,12 +2886,6 @@ msgstr ""
 #. §0: `constructor`
 #: Game.Levels.NaturalNumbersWorld.L06_AddingZero
 msgid "The statement is a conjunction so use §0 to break into subgoals."
-msgstr ""
-
-#. §0: `pick_goal 3`
-#: Game.Levels.BooleanWorld.L09_BossLevel
-#: Game.Levels.BooleanWorld.L09_BossLevel
-msgid "Now type §0 to move the third goal to the front."
 msgstr ""
 
 #. §0: `w x y z : A`
@@ -3315,6 +3268,10 @@ msgstr ""
 msgid "Look carefully at the order of the arguments of §0."
 msgstr ""
 
+#: Game.Levels.AdvancedFunctionWorld.L07_CancelingInjectivity
+msgid "In the next level, we will learn what it means for a function to be both injective and surjective."
+msgstr ""
+
 #: Game.Levels.EmptyWorld.L01_FromEmpty
 msgid "From Empty"
 msgstr ""
@@ -3472,12 +3429,6 @@ msgstr ""
 
 #: Game.Levels.ConjunctionWorld.L04_LogicalEquivalence
 msgid "Logical Equivalence"
-msgstr ""
-
-#. §0: `pick_goal n`
-#. §1: `n`
-#: Game.Levels.BooleanWorld.L09_BossLevel
-msgid "§0 will move the §1-th goal to the front."
 msgstr ""
 
 #. §0: `m n`
@@ -4158,6 +4109,38 @@ msgstr ""
 msgid "It would be nice if we could use the hypothesis §0 to replace the §1 in the goal with the element §2, but the parentheses in the left-hand side of the goal equation are not a match for this. Lean thinks that the left hand side is of the form §3. Do we have any theorems that can be used to rewrite this into something else?"
 msgstr ""
 
+#. §0: `(p || !q || r) && (q || !r) && (!p || r)`
+#. §1: `p q r : Bool`
+#. §2: `(!p || q) && (!q || p) && (!p || !r) && (!q || !r) && (p || q)`
+#. §3: `p q r`
+#. §4: `true`
+#. §5: `?p`
+#. §6: `?q`
+#. §7: `?r`
+#. §8: `exact p`
+#. §9: `exact q`
+#. §10: `exact r`
+#. §11: `true`
+#. §12: `false`
+#. §13: `rfl`
+#: Game.Levels.BooleanWorld.L09_BossLevel
+msgid "An expression involving booleans is in *conjuctive normal form* if it expressed as a conjunction (possibly involving many formulas) of disjunctions (possibly involving many formulas) of either booleans or their negations.\n"
+"\n"
+"Using Lean's alternate notation for conjunction, disjunction, and negation, conjunctive normal form statements look like\n"
+"\n"
+"§0\n"
+"\n"
+"For the Boss Level, you are asked to find booleans §1 so that\n"
+"\n"
+"§2\n"
+"\n"
+"is satisfiable, meaning that the after substituting appropriate elements for §3, this conjunctive normal form formula is equal to §4.\n"
+"\n"
+"You can see this expression in the fourth goal, with §5, §6, and §7 standing in for the yet-to-be-determined boolean variables.\n"
+"\n"
+"Solve the first three goals by §8, §9, and §10 &mdash; replacing the boolean variables by explicit booleans §11 or §12 as appropriate. If you have found the right solution, the final goal should be solvable with §13."
+msgstr ""
+
 #. §0: `«{h}» : «{P}» ∨ «{Q}»`
 #. §1: `cases h`
 #. §2: `P`
@@ -4212,11 +4195,6 @@ msgstr ""
 
 #: Game.Levels.NegationWorld.L10_TripleNegation
 msgid "Triple Negation"
-msgstr ""
-
-#: Game.Levels.AdvancedFunctionWorld.L06_ComposingInjectivity
-#: Game.Levels.AdvancedFunctionWorld.L06_ComposingInjectivity
-msgid "You have two similar hypothesis. Only one of them applies. Which one is it?"
 msgstr ""
 
 #: Game.Levels.AdvancedFunctionWorld.L03_CancelingSurjectivity
@@ -6097,7 +6075,7 @@ msgid "Injectivity"
 msgstr ""
 
 #. §0: `«{eq}»`
-#. §1: `neq : ¬ (true = false) := Bool.noConfusion`
+#. §1: `have neq : ¬ (true = false) := Bool.noConfusion`
 #: Game.Levels.AdvancedFunctionWorld.L05_Injectivity
 msgid "To get the contradiction, you should now add a proof of the negation of §0. You can do this with §1."
 msgstr ""
@@ -6795,23 +6773,10 @@ msgid "Given a hypothesis §0 we know that *either* §1 or §2 is true (or possi
 "For example, arguing by cases, we can prove that or is symmetric, that is that §24 implies §25."
 msgstr ""
 
-#. §0: `f g : A → B`
-#: Game.Levels.AdvancedFunctionWorld.L07_CancelingInjectivity
-msgid "In the next level, we will learn what it means for two functions §0 to be *equal*."
-msgstr ""
-
 #. §0: `exact «{p}».1`
 #: Game.Levels.ProductWorld.L02_FirstProjection
 #: Game.Levels.ProductWorld.L03_SecondProjection
 msgid "Now type §0 to return the first projection."
-msgstr ""
-
-#. §0: `p`
-#. §1: `exact ??`
-#: Game.Levels.BooleanWorld.L09_BossLevel
-#: Game.Levels.BooleanWorld.L09_BossLevel
-#: Game.Levels.BooleanWorld.L09_BossLevel
-msgid "Now supply your conjectured value of §0 with §1."
 msgstr ""
 
 #. §0: `intro`
@@ -6965,6 +6930,12 @@ msgstr ""
 
 #: Game.Levels.ConjunctionWorld.L08_CurryingImplication
 msgid "In the next level we'll meet the universal property of conjunctions."
+msgstr ""
+
+#. §0: `apply`
+#: Game.Levels.AdvancedFunctionWorld.L06_ComposingInjectivity
+#: Game.Levels.AdvancedFunctionWorld.L06_ComposingInjectivity
+msgid "You have two similar hypothesis. Only one of them applies. Which one is it? Try using the tactic §0"
 msgstr ""
 
 #: Game.Levels.AdvancedFunctionWorld.L04_ComposingSurjectivity

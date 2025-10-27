@@ -31,7 +31,7 @@ Statement : ∀ x y : Bool, not x = not y → x = y := by
   apply False.elim
   Hint "Now where does the contradiction come from? We have exactly one hypothesis, namely `{p} : not false = not true`. Recall that `not false = true` and `not true = false`, with both of these equalities by definition. Thus `{p}` is also a proof of `true = false`. You can add this to your context by `have eq : true = false := p`."
   have eq : true = false := p
-  Hint "To get the contradiction, you should now add a proof of the negation of `{eq}`. You can do this with `neq : ¬ (true = false) := Bool.noConfusion`."
+  Hint "To get the contradiction, you should now add a proof of the negation of `{eq}`. You can do this with `have neq : ¬ (true = false) := Bool.noConfusion`."
   have neq : ¬ (true = false) := Bool.noConfusion
   Hint "Revisit Negation World to remind yourself how to get an element of `False` from `{eq}` and `{neq}`."
   exact neq eq

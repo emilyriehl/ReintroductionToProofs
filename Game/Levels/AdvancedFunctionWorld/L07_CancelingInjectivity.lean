@@ -20,4 +20,4 @@ Statement {A B C : Type} (f : A → B) (g : B → C) (gf_is_inj : ∀ x y : A, (
   rw [eq1, eq2, p]
   rfl
 
-Conclusion "In the next level, we will learn what it means for two functions `f g : A → B` to be *equal*."
+Conclusion "In the next level, we will learn what it means for a function to be both injective and surjective."
