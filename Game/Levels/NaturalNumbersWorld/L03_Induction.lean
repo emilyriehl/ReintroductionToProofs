@@ -61,7 +61,7 @@ Statement : ∀ n : ℕ , (∃ m : ℕ, n = 2 * m) ∨ (∃ m : ℕ, n = 2 * m +
   Hint (hidden := true) "Type `use ??` with a well-chosen element in place of the `??`."
   use d + 1
   Hint (hidden := true) "This equality does not hold by definition, so `rfl` fails. But your context has a new hypothesis that can help."
-  rw [hm]
+  rw [hd]
   rfl
 
 Conclusion "The `induction` tactic is now in your library.
