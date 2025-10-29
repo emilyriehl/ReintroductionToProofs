@@ -1,7 +1,7 @@
 import Game.Metadata
 
 World "AdvancedFunctionWorld"
-Level 9
+Level 14
 
 Title "Double Negation"
 

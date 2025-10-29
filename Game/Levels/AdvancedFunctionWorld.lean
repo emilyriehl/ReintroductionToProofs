@@ -5,8 +5,14 @@ import Game.Levels.AdvancedFunctionWorld.L04_ComposingSurjectivity
 import Game.Levels.AdvancedFunctionWorld.L05_Injectivity
 import Game.Levels.AdvancedFunctionWorld.L06_ComposingInjectivity
 import Game.Levels.AdvancedFunctionWorld.L07_CancelingInjectivity
-import Game.Levels.AdvancedFunctionWorld.L08_FunctionExtensionality
-import Game.Levels.AdvancedFunctionWorld.L09_DoubleNegation
+import Game.Levels.AdvancedFunctionWorld.L08_Bijectivity
+import Game.Levels.AdvancedFunctionWorld.L09_Invertibility
+import Game.Levels.AdvancedFunctionWorld.L10_InverseInvertibility
+import Game.Levels.AdvancedFunctionWorld.L11_InvertibleImpliesBijective
+import Game.Levels.AdvancedFunctionWorld.L12_BijectiveImpliesInvertible
+import Game.Levels.AdvancedFunctionWorld.L13_FunctionExtensionality
+import Game.Levels.AdvancedFunctionWorld.L14_DoubleNegation
+import Game.Levels.AdvancedFunctionWorld.L15_BossLevel
 
 World "AdvancedFunctionWorld"
 Title "Advanced Function World"

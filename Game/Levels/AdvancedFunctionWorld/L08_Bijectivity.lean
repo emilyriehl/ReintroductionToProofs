@@ -1,11 +1,13 @@
 import Game.Metadata
 
 World "AdvancedFunctionWorld"
-Level 18 -- later change to 8
+Level 8
 
-Title "Canceling Injectivity"
+Title "Bijectivity"
 
-Introduction "Recall that a function `f : A → B` is *injective* if `∀ x y : A, f x = f y → x = y`.
+Introduction "We have introduced two properties that may or may not hold of a given function `f : A → B`.
+
+Recall that a function `f : A → B` is *injective* if `∀ x y : A, f x = f y → x = y`.
 
 Recall that a function `f : A → B` is *surjective* if for every `b : B` there exists some `x : A` so that `f x = b`.
 
@@ -22,4 +24,5 @@ Statement : (∀ x y : Bool, not x = not y → x = y) ∧ (∀ x : Bool, ∃ y :
   exact ⟨true, rfl⟩
   exact ⟨false, rfl⟩
 
-Conclusion "In the next level, we will learn what it means for a function to be both injective and surjective."
+Conclusion "In the next level, we will introduce a fundamental property of bijective functions, namely their
+invertibility."

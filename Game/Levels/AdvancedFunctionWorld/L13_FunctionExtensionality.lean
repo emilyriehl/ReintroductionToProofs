@@ -1,7 +1,7 @@
 import Game.Metadata
 
 World "AdvancedFunctionWorld"
-Level 8
+Level 13
 
 Title "Function Extensionality"
 
