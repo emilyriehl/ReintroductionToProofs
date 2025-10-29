@@ -15,7 +15,7 @@ Again, this level comes with two pre-defined goals: the first is to define the d
 "
 
 /-- There is a function `or : Bool → Bool → Bool` that captures the logical operation of conjunction. -/
-Statement (preamble := let f: Bool → Bool → Bool := ?_; use f; swap) :
+Statement (preamble := refine let f := ?f; ⟨f, ?eq⟩) :
     ∃ f: Bool → Bool → Bool,
     f true true = true ∧
     f false true = true ∧

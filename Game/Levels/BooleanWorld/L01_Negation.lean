@@ -21,7 +21,7 @@ Note this level comes with two pre-defined goals: the first is to define the neg
 "
 
 /-- The negation function `not : Bool → Bool` sends the boolean `false` to `true` and `true` to `false`. -/
-Statement (preamble := let f: Bool → Bool := ?_; use f; swap) :
+Statement (preamble := refine let f := ?f; ⟨f, ?eq⟩) :
   ∃ f : Bool → Bool, f true = false ∧ f false = true := by
   Hint "Your first objective is to define the negation function."
   intro b

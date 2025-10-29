@@ -1,7 +1,7 @@
 msgid ""
 msgstr "Project-Id-Version: Game v4.23.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-10-28\n"
+"POT-Creation-Date: 2025-10-29\n"
 "Last-Translator: \n"
 "Language-Team: none\n"
 "Language: en\n"
@@ -4114,9 +4114,9 @@ msgstr ""
 #. §2: `(!p || q) && (!q || p) && (!p || !r) && (!q || !r) && (p || q)`
 #. §3: `p q r`
 #. §4: `true`
-#. §5: `?p`
-#. §6: `?q`
-#. §7: `?r`
+#. §5: `p`
+#. §6: `q`
+#. §7: `r`
 #. §8: `exact p`
 #. §9: `exact q`
 #. §10: `exact r`
