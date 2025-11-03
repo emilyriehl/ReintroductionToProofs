@@ -22,8 +22,8 @@ Function extensionality is an instance of a general `ext` tactic that can be use
 
 /-- For functions `f g : A → B` if `∀ x : A, f x = g x` then `f = g`. -/
 Statement {A B : Type} {f g : A → B} (p : ∀ x : A, f x = g x) : f = g  := by
-  Hint "Type `ext` to apply function extensionality and see how the goal state transforms."
-  ext
+  Hint "Type `ext x` to apply function extensionality and see how the goal state transforms."
+  ext x
   exact p x
 
 Conclusion "In the next level, we will practice using function extensionality to demonstrate an equality between functions."

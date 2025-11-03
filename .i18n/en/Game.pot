@@ -1,7 +1,7 @@
 msgid ""
 msgstr "Project-Id-Version: Game v4.23.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-10-29\n"
+"POT-Creation-Date: 2025-11-03\n"
 "Last-Translator: \n"
 "Language-Team: none\n"
 "Language: en\n"
@@ -55,6 +55,10 @@ msgstr ""
 msgid "If your answer does not use the functions §0 and §1, you might have fun trying to solve this level again using them in appropriate places."
 msgstr ""
 
+#: Game.Levels.NaturalNumbersWorld.L04_Recursion
+msgid "While the goal is complicated to read, the outermost logical connective is a conjunction."
+msgstr ""
+
 #. §0: `P : A → Prop`
 #. §1: `A`
 #. §2: `h : ∀ x : A, P x`
@@ -90,10 +94,6 @@ msgid "Let §0 be a predicate over a type §1.\n"
 "We say that §12 is a *dependent* function because the element §13 proves the proposition §14, while the element §15 proves a different proposition, namely §16.\n"
 "\n"
 "In particular, §17 is our desired proof of the proposition §18."
-msgstr ""
-
-#: Game.Levels.NaturalNumbersWorld.L04_Recursion
-msgid "While the goal is complicated to read, the outermost logical connective is a conjunction."
 msgstr ""
 
 #: Game.Levels.EquivalenceWorld.L06_MoreComponentFunctions
@@ -3487,10 +3487,6 @@ msgstr ""
 msgid "Stay tuned for a more interesting Boss Level."
 msgstr ""
 
-#: Game.Levels.AdvancedFunctionWorld.L14_DoubleNegation
-msgid "More to come."
-msgstr ""
-
 #: Game.Levels.ImplicationWorld.L05_ProvingImpliedAssumption
 msgid "Proving Implied Assumption"
 msgstr ""
@@ -4120,23 +4116,6 @@ msgstr ""
 msgid "Now you must give an explicit element §0, so that §1. To do this, you need to know which boolean §2 is! Use §3 for this."
 msgstr ""
 
-#. §0: `not : Bool → Bool`
-#. §1: `false`
-#. §2: `true`
-#. §3: `true`
-#. §4: `false`
-#. §5: `b = not (not b)`
-#. §6: `b : Bool`
-#. §7: `id = not ∘ not`
-#. §8: `Bool → Bool`
-#: Game.Levels.AdvancedFunctionWorld.L14_DoubleNegation
-msgid "Recall the function §0 that is defined to send the boolean §1 to §2 and to send the boolean §3 to §4.\n"
-"\n"
-"In Boolean World, we proved that §5 for any boolean §6.\n"
-"\n"
-"In this world, we will apply that result to prove that §7 as functions §8."
-msgstr ""
-
 #. §0: `P ∧ (Q ∨ R)`
 #. §1: `(P ∧ Q) ∨ (P ∧ R)`
 #: Game.Levels.DisjunctionWorld.L07_Distributivity
@@ -4254,7 +4233,7 @@ msgstr ""
 msgid "Move on to Disjunction World to learn about another logical operation."
 msgstr ""
 
-#. §0: `ext`
+#. §0: `ext x`
 #: Game.Levels.AdvancedFunctionWorld.L13_FunctionExtensionality
 msgid "Type §0 to apply function extensionality and see how the goal state transforms."
 msgstr ""
@@ -5325,6 +5304,10 @@ msgstr ""
 #. §3: `y`
 #: Game.Levels.EqualityWorld.L02_PairedProjections
 msgid "In summary, §0 can also be used to prove propositions of the form §1 when §2 and §3 are equal *by definition* (rather than by a more complicated chain of reasoning)."
+msgstr ""
+
+#: Game.Levels.AdvancedFunctionWorld.L14_DoubleNegation
+msgid "Now you are ready for the Boss Level."
 msgstr ""
 
 #: Game.Levels.EqualityWorld.L06_ApplyingFunctions
@@ -6819,6 +6802,23 @@ msgstr ""
 msgid "Functions are well-defined: if §0 and §1 are equal, then §2."
 msgstr ""
 
+#. §0: `not : Bool → Bool`
+#. §1: `false`
+#. §2: `true`
+#. §3: `true`
+#. §4: `false`
+#. §5: `b = not (not b)`
+#. §6: `b : Bool`
+#. §7: `id = not ∘ not`
+#. §8: `Bool → Bool`
+#: Game.Levels.AdvancedFunctionWorld.L14_DoubleNegation
+msgid "Recall the function §0 that is defined to send the boolean §1 to §2 and to send the boolean §3 to §4.\n"
+"\n"
+"In Boolean World, we proved that §5 for any boolean §6.\n"
+"\n"
+"In this level, we will apply that result to prove that §7 as functions §8."
+msgstr ""
+
 #: Game.Levels.FunctionWorld.L03_ComposingFunctions
 msgid "Composing functions"
 msgstr ""
@@ -7438,6 +7438,12 @@ msgstr ""
 #. §1: `(P ∧ R) ∨ (P ∧ S) ∨ (Q ∧ R) ∨ (Q ∧ S)`
 #: Game.Levels.DisjunctionWorld.L08_MoreDistributivity
 msgid "§0 holds if and only if §1 holds."
+msgstr ""
+
+#. §0: `a : A`
+#. §1: `a = a`
+#: Game.Levels.EqualityWorld.L01_Reflexivity
+msgid "For any element §0, §1 is true by reflexivity."
 msgstr ""
 
 #: Game.Levels.ConjunctionWorld.L03_Symmetry

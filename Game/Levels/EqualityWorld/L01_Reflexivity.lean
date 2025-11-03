@@ -19,6 +19,7 @@ For a type `A` and element `a : A`, the proposition `a = a` is true because ther
 -/
 TheoremDoc rfl as "rfl" in "Eq"
 
+/-- For any element `a : A`, `a = a` is true by reflexivity.-/
 Statement {A : Type} {a : A} : a = a := by
   rfl
 

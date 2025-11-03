@@ -9,7 +9,7 @@ Introduction "Recall the function `not : Bool → Bool` that is defined to send 
 
 In Boolean World, we proved that `b = not (not b)` for any boolean `b : Bool`.
 
-In this world, we will apply that result to prove that `id = not ∘ not` as functions `Bool → Bool`.
+In this level, we will apply that result to prove that `id = not ∘ not` as functions `Bool → Bool`.
 "
 
 /-- The function `id : Bool → Bool` equals the composite of the function `not : Bool → Bool` with itself. -/
@@ -21,4 +21,4 @@ Statement : id = not ∘ not := by
   rfl
   rfl
 
-Conclusion "More to come."
+Conclusion "Now you are ready for the Boss Level."
