@@ -18,6 +18,15 @@ Many mathematical propositions are built out of simpler propositions using logic
 
 To study these connectives, we require *proposition variables* &mdash; denoted with letters like `P`, `Q`, `R` &mdash; which stand for generic propositions, which may be true or false.
 
+The slogan *propositions as types* tells us that we can consider propositions as special cases of *types*.
+
+Recall that we use capital variables like `A` and `B` to denote general types, analogously to the proposition variables `P` and `Q`. We think of the elements `p : P` and `q : Q` as *proofs* that these propositions are true.
+
+In the case of
+propositions, what matters is whether `P` had any elements or not. The elements themselves don't
+carry any information beyond witnessing the truth of the proposition.
+
+
 In this level we study the logical connective *implication* denoted by `→`.
 
 For arbitrary *propositions* `P` and `Q`, `P → Q` is a new proposition asserting that *if* `P` *is true then* `Q` *is true*.

@@ -17,10 +17,3 @@ Statement {P Q : Prop} (p : P) (q : Q) : P ∧ Q := by
   exact q
 
 Conclusion "Alternatively, you can type `exact ⟨p,q⟩' using '\\\\<' and '\\\\>' to type the angle brackets."
-
-/--
-The `constructor` tactic can be used when the goal is a conjunction (among other settings) to split the goal into cases.
--/
-TacticDoc constructor
-
-NewTactic constructor

@@ -26,3 +26,15 @@ Statement {A B : Type} (a : A) : A ⊕ B := by
 NewDefinition Sum.inl
 
 Conclusion "We'll now study the second type of element of in a coproduct type."
+
+/--
+For propositions `P` and `Q`, the `left` tactic converts a goal of `P ∨ Q` to a goal of `P`. For types `A` and `B`, the `left` tactic converts a goal of `A ⊕ B` into a goal of `A`.
+-/
+TacticDoc left
+
+/--
+For propositions `P` and `Q`, the `right` tactic converts a goal of `P ∨ Q` to a goal of `Q`. For types `A` and `B`, the `right` tactic converts a goal of `A ⊕ B` into a goal of `B`.
+-/
+TacticDoc right
+
+NewTactic left right

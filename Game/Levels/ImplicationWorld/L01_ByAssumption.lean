@@ -29,9 +29,7 @@ Conclusion "You can click on `retry` to attempt a different proof. Try typing `a
 /-- The `assumption` tactic tries to solve the main goal using a hypothesis of compatible type, or else fails. -/
 TacticDoc assumption
 
-/-- If there is an assumption `e : E` and the goal has type `E`, then `exact e` closes the goal. -/
-TacticDoc exact
 
-NewTactic assumption exact
+NewTactic assumption
 -- NewTheorem Prop.modus_ponens
 -- NewDefinition Nat Add Eq

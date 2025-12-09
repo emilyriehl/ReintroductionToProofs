@@ -25,10 +25,3 @@ Statement {P : Prop} : P → P := by
 Conclusion "Let us now explore other implications that are provable with this strategy."
 
 /- Use these commands to add items to the game's inventory. -/
-
-/-- The `intro` tactic, short for *introduction*, is used to introduce one or more hypotheses when the goal is an implication. It can be used itself or followed by names for those hypotheses. For example, when the goal is `P → Q`, type `intro p` to add an assumption `p : P` and update the goal to `Q`. When the goal is `P → Q → R`, type `intro p q` to add assumptions `p : P` and `q : Q` and update the goal to `R`. -/
-TacticDoc intro
-
-NewTactic intro
--- NewTheorem Prop.modus_ponens
--- NewDefinition Nat Add Eq

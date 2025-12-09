@@ -24,3 +24,10 @@ Statement {A B : Type} (a : A) (b : B) : A × B := by
 Conclusion "If this is your first time solving this level, go back and solve it another way."
 
 -- Note if you start with the `constructor` tactic you can then use `assumption`. Why does this work?"
+
+/--
+The `constructor` tactic can be used when the goal is a conjunction (among other settings) to split the goal into cases.
+-/
+TacticDoc constructor
+
+NewTactic constructor

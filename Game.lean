@@ -1,9 +1,10 @@
-import Game.Levels.ImplicationWorld
-import Game.Levels.ConjunctionWorld
+import Game.Levels.TypeWorld
 import Game.Levels.FunctionWorld
+import Game.Levels.ImplicationWorld
 import Game.Levels.ProductWorld
-import Game.Levels.DisjunctionWorld
+import Game.Levels.ConjunctionWorld
 import Game.Levels.CoproductWorld
+import Game.Levels.DisjunctionWorld
 import Game.Levels.EmptyWorld
 import Game.Levels.NegationWorld
 import Game.Levels.ClassicalWorld
@@ -15,7 +16,7 @@ import Game.Levels.EquivalenceWorld
 import Game.Levels.NaturalNumbersWorld
 
 -- Here's what we'll put on the title screen
-Title "Computer-Verified Proof: a Hands-On Introduction to Interactive Theorem Proving"
+Title "Reintroduction to Proofs"
 Introduction
 "
 Mathematicians from all over &mdash; most of whom have never met one another &mdash; nevertheless agree to an incredible extent about the nature of the mathematical universe. How did this degree of consensus come about?
@@ -32,27 +33,40 @@ While the idea of a mathematical proof is over 2000 years old, the practice of p
 
 The aim of this game will be to introduce proof writing in a computer proof assistant while developing skils that can be used to develop proofs in other contexts: on paper, in conversation with a friend, or in your head.
 
-There is one caveat, that we will address explicitly. The formal vocabulary we will introduce to discuss mathematical proof is somewhat different from the one that most mathematicians learn. The mathematics we will be developing is essentially unchanged but the formal language introduced here will make it easier to be fully precise about every step in a proof, as is required to convince a computer that a logical argument in sound.
+There is one caveat, that we will address explicitly. The formal vocabulary we will introduce to discuss mathematical proofs is somewhat different from the one that most mathematicians learn. The mathematics we will be developing is essentially unchanged but the formal language introduced here will make it easier to be fully precise about every step in a proof, as is required to convince a computer that a logical argument in sound.
+
+In particular, we will explore an analogy between mathematical propositions and another form of primitive mathematical structure called *types*. Examples of types include:
+
+* The type `ℕ` of natural numbers.
+* The type `Bool` of booleans.
+
+Each type comes with its *elements* such as `17 : ℕ` or `true : Bool` governed by rules which explain the requirements for constructing an element and how previously-constructed elements can be used.
+
+In Type World, we will introduce types and their elements and propositions and their proofs.
+
+Later worlds will reveal that more complicated types can be built from simpler types, like more complicated mathematical statements can be built from simpler propositions. We will begin by studying types and function types before introducing mathematical propositions and the corresponding logical operation of *implication*.
 "
 
-Info "
-This was created using the GameSkeleton Github Repo from the Lean Games Server hosted by ADAM: Anticipating the Digital Age of Mathematics at Heinrich Heine University Düsseldorf. It is designed for a first year seminar course taught at Johns Hopkins University in Fall 2025 with the title `Computer-Verified Proof: a Hands-On Introduction to Interactive Theorem Proving`.
+Info
+"
+This was created using the GameSkeleton Github Repo from the Lean Games Server hosted by ADAM: Anticipating the Digital Age of Mathematics at Heinrich Heine University Düsseldorf. It was originally designed for a first year seminar course taught at Johns Hopkins University in Fall 2025 with the title `Computer-Verified Proof: a Hands-On Introduction to Interactive Theorem Proving`.
 "
 
 /-! Information to be displayed on the servers landing page. -/
 Languages "English"
-CaptionShort "FYS270"
-CaptionLong "First Year Seminar 270"
+CaptionShort "ReintroToProofs"
+CaptionLong "Reintroduction to Proofs"
 -- Prerequisites "" -- add this if your game depends on other games
 CoverImage "images/blue-jay.jpg"
 
-Dependency ImplicationWorld → ConjunctionWorld
-Dependency ImplicationWorld → FunctionWorld
+Dependency TypeWorld → FunctionWorld
+Dependency FunctionWorld → ImplicationWorld
 Dependency FunctionWorld → ProductWorld
-Dependency ConjunctionWorld → ProductWorld
-Dependency ConjunctionWorld → DisjunctionWorld
+Dependency ImplicationWorld → ConjunctionWorld
+Dependency ProductWorld → ConjunctionWorld
 Dependency ProductWorld → CoproductWorld
-Dependency DisjunctionWorld → CoproductWorld
+Dependency ConjunctionWorld → DisjunctionWorld
+Dependency CoproductWorld → DisjunctionWorld
 Dependency CoproductWorld → EmptyWorld
 Dependency EmptyWorld → NegationWorld
 Dependency NegationWorld → ClassicalWorld

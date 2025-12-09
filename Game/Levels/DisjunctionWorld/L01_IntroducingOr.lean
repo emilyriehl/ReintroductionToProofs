@@ -12,16 +12,6 @@ Thus under the hypothesis that `P` and `Q` are both true, there are two ways to 
 Note `exact p` or `exact q` won't work as these are proofs of different propositions.
 "
 
-/--
-For propositions `P` and `Q`, the `left` tactic converts a goal of `P ∨ Q` to a goal of `P`. For types `A` and `B`, the `left` tactic converts a goal of `A ⊕ B` into a goal of `A`.
--/
-TacticDoc left
-
-/--
-For propositions `P` and `Q`, the `right` tactic converts a goal of `P ∨ Q` to a goal of `Q`. For types `A` and `B`, the `right` tactic converts a goal of `A ⊕ B` into a goal of `B`.
--/
-TacticDoc right
-
 /-- There are two ways to prove `P ∨ Q` from the given hypotheses. Can you find them both?-/
 Statement {P Q : Prop} (p : P) (q : Q) : P ∨ Q := by
   Hint "You have two choices: to reduce to the case of proving the left proposition or to reduce to the case of proving the right proposition. Type `left` to tell Lean you'd like to prove the left proposition or type `right` to tell Lean you'd like to prove the right proposition."
@@ -37,7 +27,6 @@ Statement {P Q : Prop} (p : P) (q : Q) : P ∨ Q := by
 
 Conclusion "If this is your first time solving this level, delete your code and prove the same theorem another way. You can also use the proofs of the implications `Or.inl : P → P ∨ Q` and `Or.inr : Q → P ∨ Q` that are now in the library."
 
-NewTactic left right
 
 /-- For propositions `P` and `Q`, `Or.inl` is a proof that `P → (P ∨ Q)`. -/
 DefinitionDoc Or.inl as "inl" in "Or"

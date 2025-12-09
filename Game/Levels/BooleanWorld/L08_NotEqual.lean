@@ -55,7 +55,4 @@ NewTactic «let»
 /-- The proposition `False` has no elements. -/
 DefinitionDoc False as "False" in "Prop"
 
-/-- The proposition `True` has a canonical element `⟨⟩ : True`. -/
-DefinitionDoc True as "True" in "Prop"
-
-NewDefinition False True
+NewDefinition False

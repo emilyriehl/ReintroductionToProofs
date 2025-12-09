@@ -1,7 +1,7 @@
 msgid ""
 msgstr "Project-Id-Version: Game v4.23.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-11-03\n"
+"POT-Creation-Date: 2025-12-09\n"
 "Last-Translator: \n"
 "Language-Team: none\n"
 "Language: en\n"
@@ -47,6 +47,26 @@ msgid "Now we are in the setting of three proposition variables §0, §1, and §
 "The final hypothesis provides a proof §7 that §8 is true. Our goal is to conclude that §9 is true.\n"
 "\n"
 "If you need help, click the button §10 for reminders/hints."
+msgstr ""
+
+#. §0: `Unit`
+#. §1: `⟨⟩ : Unit`
+#. §2: `Unit`
+#. §3: `assumption`
+#. §4: `exact`
+#. §5: `⟨⟩`
+#: Game.Levels.TypeWorld.L04_Unit
+msgid "The previous levels involved type variables or proposition variables.\n"
+"\n"
+"But there are other specific types or propositions that exist in the empty context. In other words, these types are globally defined.\n"
+"\n"
+"One example is the unit type §0 which has a canonical element §1.\n"
+"\n"
+"Here our goal has type §2. We cannot solve this goal with the tactic §3 because we have not made an assumptions!\n"
+"\n"
+"But we can solve this level with the tactic §4 by typing the name of the canonical element.\n"
+"\n"
+"Use '\\\\<' and '\\\\>' to type the angle brackets '§5'."
 msgstr ""
 
 #. §0: `Empty.elim`
@@ -149,6 +169,33 @@ msgstr ""
 
 #: Game.Levels.ImplicationWorld.L07_OnParentheses
 msgid "On Parentheses"
+msgstr ""
+
+#. §0: `Active Goal`
+#. §1: `objects`
+#. §2: `assumptions`
+#. §3: `goal`
+#. §4: `A`
+#. §5: `a : A`
+#. §6: `A`
+#. §7: `A`
+#. §8: `assumption`
+#. §9: `Execute`
+#. §10: `assumption`
+#: Game.Levels.TypeWorld.L01_Elements
+msgid "An interative theorem prover &mdash; in this case Lean &mdash; helps the user &mdash; this means you &mdash; keep track of the state of a proof or a mathematical construction.\n"
+"\n"
+"In the §0 window, Lean keeps track of the §1 and §2 &mdash; which together define the hypotheses of a mathematical statement &mdash; as well as the §3 &mdash; meaning the thing we are trying to prove.\n"
+"\n"
+"The objects and assumptions together define the mathematical *context* for a given theorem or construction.\n"
+"\n"
+"Here our context is given by a single type §4 with a hypothesized element §5.\n"
+"\n"
+"On the right-hand side we see the name of a type, which is the *goal* for this level. Here that type is §6, which means that our goal is to define an element of type §7.\n"
+"\n"
+"We have such an element by assumption, and you can type §8 to tell Lean this. Then click the button §9 to ask Lean to check your work.\n"
+"\n"
+"Here §10 is an example of a *tactic*, which is built into Lean. You can find this in the tactic library on the upper right."
 msgstr ""
 
 #. §0: `not : Bool → Bool`
@@ -267,6 +314,18 @@ msgstr ""
 #. §2: `ℕ`
 #: Game.Levels.EquivalenceWorld.L07_BossLevel
 msgid "The equivalence between the types §0 and §1 has to do with the fact that both are examples of *inductive types*. In the next world, we will finally properly introduce another inductive type, namely the type §2 of natural numbers."
+msgstr ""
+
+#. §0: `Type`
+#: Game.Levels.TypeWorld.L05_TypeOfTypes
+#: Game.Levels.TypeWorld.L06_TypeOfPropositions
+msgid "The type §0 can also be found in the library of definitions."
+msgstr ""
+
+#. §0: `Unit`
+#. §1: `⟨⟩`
+#: Game.Levels.TypeWorld.L04_Unit
+msgid "The unit type §0 has a canonical element §1."
 msgstr ""
 
 #. §0: `f : A → B`
@@ -670,7 +729,7 @@ msgstr ""
 #. §0: `e : E`
 #. §1: `E`
 #. §2: `exact e`
-#: Game.Levels.ImplicationWorld.L01_ByAssumption
+#: Game.Levels.TypeWorld.L03_Exact
 msgid "If there is an assumption §0 and the goal has type §1, then §2 closes the goal."
 msgstr ""
 
@@ -782,6 +841,12 @@ msgstr ""
 #. §1: `b && b = b || b`
 #: Game.Levels.QuantifierWorld.L04_IntroducingExistence
 msgid "There is some boolean §0 so that §1"
+msgstr ""
+
+#. §0: `True`
+#. §1: `⟨⟩ : True`
+#: Game.Levels.TypeWorld.L06_TypeOfPropositions
+msgid "The proposition §0 has a canonical element §1, which may be typed using '\\\\<' and '\\\\>'."
 msgstr ""
 
 #. §0: `intro w x y z p q r`
@@ -909,15 +974,15 @@ msgstr ""
 msgid "Swapping Inputs"
 msgstr ""
 
+#: Game.Levels.FunctionWorld.L04_ConstantFunctions
+msgid "Constant functions"
+msgstr ""
+
 #. §0: `¬ P`
 #. §1: `P`
 #. §2: `P → False`
 #: Game.Levels.NegationWorld.L02_Negation
 msgid "§0, read as &ldquo; not §1&rdquo; is an abbreviation for §2."
-msgstr ""
-
-#: Game.Levels.FunctionWorld.L04_ConstantFunctions
-msgid "Constant functions"
 msgstr ""
 
 #: Game.Levels.ConjunctionWorld.L02_UsingAnd
@@ -953,6 +1018,39 @@ msgstr ""
 #. §2: `m`
 #: Game.Levels.NaturalNumbersWorld.L03_Induction
 msgid "To prove the existential quantifier, type §0 with an explicit numeral in the place of §1 to supply a well-chosen value of §2."
+msgstr ""
+
+#. §0: `A`
+#. §1: `B`
+#. §2: `y : B`
+#. §3: `z : B`
+#. §4: `B`
+#. §5: `B`
+#. §6: `assumption`
+#. §7: `exact`
+#. §8: `E`
+#. §9: `e : E`
+#. §10: `exact e`
+#. §11: `e`
+#. §12: `exact`
+#. §13: `P`
+#. §14: `p : P`
+#. §15: `exact p`
+#. §16: `exact`
+#: Game.Levels.TypeWorld.L03_Exact
+msgid "A more elaborate context may contain multiple types and multiple elements.\n"
+"\n"
+"Thus, we may require a more precise way to tell Lean which data or hypothesis from our context should be used.\n"
+"\n"
+"In this level, our context includes two types §0 and §1 with three elements between them. Note the use of a space rather than a list to indicate that §2 and §3 each define elements of type §4.\n"
+"\n"
+"Our goal is to define an element of type §5 and the tactic §6 will solve this goal. But this tactic does not convey to the reader which assumption was used.\n"
+"\n"
+"In this sort of setting, it is better practice to use the tactic §7. If the goal has type §8 and there is an element §9 in the context, then §10 uses the element §11 to close the goal.\n"
+"\n"
+"The §12 tactic can also be used when the goal is a proposition §13 and the context includes a proof §14. Then §15 will solve the goal.\n"
+"\n"
+"The tactic §16 can now be found in the library."
 msgstr ""
 
 #. §0: `x : A × (B ⊕ C)`
@@ -1001,8 +1099,8 @@ msgstr ""
 #. §7: `left`
 #. §8: `A ⊕ B`
 #. §9: `A`
-#: Game.Levels.DisjunctionWorld.L01_IntroducingOr
-#: Game.Levels.DisjunctionWorld.L01_IntroducingOr
+#: Game.Levels.CoproductWorld.L01_LeftInclusion
+#: Game.Levels.CoproductWorld.L01_LeftInclusion
 msgid "For propositions §0 and §1, the §2 tactic converts a goal of §3 to a goal of §4. For types §5 and §6, the §7 tactic converts a goal of §8 into a goal of §9."
 msgstr ""
 
@@ -1055,24 +1153,20 @@ msgstr ""
 msgid "By Assumption"
 msgstr ""
 
-#: Game
-msgid "Computer-Verified Proof: a Hands-On Introduction to Interactive Theorem Proving"
-msgstr ""
-
 #: Game.Levels.AdvancedFunctionWorld.L10_InverseInvertibility
 msgid "In the next two levels, we will establish the precise relationship between bijective functions and invertible functions."
-msgstr ""
-
-#. §0: `cases «{hpqr}»`
-#. §1: `rcases «{hpqr}» with hpq | hr`
-#: Game.Levels.DisjunctionWorld.L06_Associativity
-msgid "You can use §0 to split your hypothesis into cases or §1 to name your own variables."
 msgstr ""
 
 #. §0: `0`
 #. §1: `rfl`
 #: Game.Levels.NaturalNumbersWorld.L04_Recursion
 msgid "To check that your function was defined correctly, we ask you to calculate its values on §0 and on successors. Hopefully you will be able to solve the goals with §1."
+msgstr ""
+
+#. §0: `cases «{hpqr}»`
+#. §1: `rcases «{hpqr}» with hpq | hr`
+#: Game.Levels.DisjunctionWorld.L06_Associativity
+msgid "You can use §0 to split your hypothesis into cases or §1 to name your own variables."
 msgstr ""
 
 #. §0: `f : Bool → Bool → Bool`
@@ -1154,6 +1248,38 @@ msgstr ""
 msgid "Given functions §0 and §1, the *composite function* §2 is defined to send §3 to the element §4."
 msgstr ""
 
+#. §0: `P`
+#. §1: `A`
+#. §2: `P`
+#. §3: `p : P`
+#. §4: `p`
+#. §5: `P`
+#. §6: `p : P`
+#. §7: `p : P`
+#. §8: `P`
+#. §9: `P`
+#. §10: `p`
+#. §11: `P`
+#. §12: `P`
+#. §13: `P`
+#. §14: `P`
+#. §15: `P`
+#. §16: `assumption`
+#. §17: `P`
+#: Game.Levels.TypeWorld.L02_Proofs
+msgid "In this level, we consider a proposition §0 in place of a type §1.\n"
+"\n"
+"When a proposition §2 has an element §3 we think of §4 as a *proof* that the proposition §5 is true.\n"
+"\n"
+"This is why the context for this level lists §6 as an assumption rather than an object. The presence of the element §7 corresponds to the assumption that the proposition §8 is true.\n"
+"\n"
+"In summary, the context for this level collectively asserts that §9 is a proposition and §10 is a proof of §11. In particular, our assumptions imply that the proposition §12 is true.\n"
+"\n"
+"Our goal, which is displayed to the right of the vertical line, is to prove the proposition §13.\n"
+"\n"
+"We know that §14 is true because we have assumed that §15 is true. So the tactic §16 can be used to tell Lean that §17 is true by assumption."
+msgstr ""
+
 #. §0: `g : A → C`
 #. §1: `h : B → C`
 #. §2: `A ⊕ B → C`
@@ -1175,6 +1301,11 @@ msgid "Recall that a function §0 is *surjective* if for every §1 there exists 
 "In the level, we will consider a composable pair of functions §4 and §5.\n"
 "\n"
 "We will show that if the composite §6 is surjective, then the function §7 is surjective too."
+msgstr ""
+
+#. §0: `Type`
+#: Game.Levels.TypeWorld.L05_TypeOfTypes
+msgid "The type §0 is the type of types at the smallest universe level."
 msgstr ""
 
 #. §0: `P`
@@ -1204,6 +1335,14 @@ msgid "For propositions §0, §1, and §2, the propositions §3 and §4 are not 
 "More generally, §15 refers to §16.\n"
 "\n"
 "Explicit parentheses must be used to express statements with any other parenthesizations."
+msgstr ""
+
+#: Game.Levels.TypeWorld
+msgid "Type World"
+msgstr ""
+
+#: Game
+msgid "ReintroToProofs"
 msgstr ""
 
 #: GameServer.RpcHandlers
@@ -1305,6 +1444,13 @@ msgstr ""
 #. §1: `«{p}» : «{P}»`
 #: Game.Levels.ImplicationWorld.L04_ProvingImplication
 msgid "Now the goal is to prove §0 assuming §1. Which tactic can be used to supply this proof?"
+msgstr ""
+
+#. §0: `P`
+#. §1: `p : P`
+#. §2: `P`
+#: Game.Levels.TypeWorld.L02_Proofs
+msgid "Under the hypothesis that we have a proposition §0 and a proof §1, we may conclude that §2 is true."
 msgstr ""
 
 #. §0: `Prod.fst : A × B → A`
@@ -1514,6 +1660,13 @@ msgstr ""
 msgid "Try solving the goal by rewriting in both directions. You can also experiment with multiple rewrites at once. Why does §0 work but §1 not? Why does §2 or §3 work but §4 not?"
 msgstr ""
 
+#. §0: `constructor`
+#. §1: `exact ⟨rfl, rfl, rfl, rfl, rfl⟩`
+#. §2: `rfl`
+#: Game.Levels.NaturalNumbersWorld.L01_Numerals
+msgid "You can avoid the repeated applications of the §0 tactic by solving this level with §1. In the next level, we will encounter other equalities between natural numbers that can be proven with §2."
+msgstr ""
+
 #. §0: `«{A}» → «{A}»`
 #. §1: `x : «{A}»`
 #. §2: `«{A}»`
@@ -1521,13 +1674,6 @@ msgstr ""
 #. §4: `«{A}»`
 #: Game.Levels.FunctionWorld.L01_IdentityFunction
 msgid "To define a function, in this case a term of type §0, one must define a rule to convert an arbitrary element §1 to some element of type §2. Start by typing §3 to add an arbitrary element of type §4 to the context."
-msgstr ""
-
-#. §0: `constructor`
-#. §1: `exact ⟨rfl, rfl, rfl, rfl, rfl⟩`
-#. §2: `rfl`
-#: Game.Levels.NaturalNumbersWorld.L01_Numerals
-msgid "You can avoid the repeated applications of the §0 tactic by solving this level with §1. In the next level, we will encounter other equalities between natural numbers that can be proven with §2."
 msgstr ""
 
 #: Game.Levels.EmptyWorld.L05_ProductWithEmpty
@@ -1785,6 +1931,10 @@ msgid "To prove an implication, which in this case has the form §0, type §1 to
 "It is also possible to type simply §4 in which case Lean will automatically generate a name for the proof of §5."
 msgstr ""
 
+#: Game.Levels.TypeWorld.L01_Elements
+msgid "In the next level, we will learn about elements of propositions."
+msgstr ""
+
 #. §0: `P`
 #. §1: `Q`
 #. §2: `P`
@@ -1823,6 +1973,33 @@ msgstr ""
 #. §0: `Nat.add_comm : ∀ m n : ℕ, m + n = n + m`
 #: Game.Levels.NaturalNumbersWorld.L08_CommutingAddition
 msgid "This proves the theorem §0, which is now in your library."
+msgstr ""
+
+#. §0: `→`
+#. §1: `∧`
+#. §2: `A → B`
+#. §3: `A`
+#. §4: `B`
+#. §5: `f : A → B`
+#. §6: `A`
+#. §7: `B`
+#. §8: `A → B`
+#. §9: `P → Q`
+#. §10: `A → B`
+#. §11: `A → B`
+#: Game.Levels.FunctionWorld
+msgid "Just as logical connectives like §0 and §1 can be used to build more complicated propositions out of existing propositions, *type forming operations* can be used to build new types from existing types.\n"
+"\n"
+"The first and arguably most important of these is the type §2 of functions from §3 to §4. An element\n"
+"§5 defines a *function* from §6 to §7.\n"
+"\n"
+"In this level, we will explain how to define and use functions and explore the analogy suggested by the fact that we use the same notation for\n"
+"function types §8 as for the implication proposition §9.\n"
+"\n"
+"To understand how functions work in type theory we must learn:\n"
+"\n"
+"* How to construct elements of type §10.\n"
+"* How to use elements of type §11 to construct elements of other types."
 msgstr ""
 
 #. §0: `Bool → Prop`
@@ -1937,10 +2114,6 @@ msgstr ""
 msgid "The goal is an implication. What tactic can be used to start a proof?"
 msgstr ""
 
-#: Game.Levels.QuantifierWorld.L03_UniversalElimination
-msgid "Universal Elimination"
-msgstr ""
-
 #. §0: `induction`
 #. §1: `2 * d + 1 + 1 = 2 * (d + 1)`
 #. §2: `rfl`
@@ -1948,6 +2121,10 @@ msgstr ""
 msgid "The §0 tactic is now in your library.\n"
 "\n"
 "It is a bit surprising that the last equation §1 holds by §2. This has to do with the way that addition and multiplication are defined in Lean. We will explore the definition of addition in a future level."
+msgstr ""
+
+#: Game.Levels.QuantifierWorld.L03_UniversalElimination
+msgid "Universal Elimination"
 msgstr ""
 
 #. §0: `P → Q`
@@ -1986,16 +2163,16 @@ msgstr ""
 #. §5: `cases h`
 #. §6: `P`
 #. §7: `Q`
-#: Game.Levels.DisjunctionWorld.L03_UsingOr
+#: Game.Levels.CoproductWorld.L04_UniversalProperty
 msgid "Assuming §0 is a variable in the local context with an inductive type, §1 splits the main goal, producing one goal for each constructor of the inductive type, in which the target is replaced by a general instance of that constructor. If the type of an element in the local context depends on §2, that element is reverted and reintroduced afterward, so that the case split affects that hypothesis as well. §3 detects unreachable cases and closes them automatically.\n"
 "\n"
 "For example, given an assumption §4, §5 splits the main goal into two goals, one assuming §6 holds and the other assuming §7 holds."
 msgstr ""
 
-#: Game.Levels.ImplicationWorld.L09_BossLevel
-#: Game.Levels.ConjunctionWorld.L10_BossLevel
 #: Game.Levels.FunctionWorld.L09_BossLevel
+#: Game.Levels.ImplicationWorld.L09_BossLevel
 #: Game.Levels.ProductWorld.L10_BossLevel
+#: Game.Levels.ConjunctionWorld.L10_BossLevel
 #: Game.Levels.EmptyWorld.L07_BossLevel
 #: Game.Levels.NegationWorld.L11_BossLevel
 #: Game.Levels.ClassicalWorld.L06_BossLevel
@@ -2073,14 +2250,14 @@ msgid "For any proposition §0, the following is true:\n"
 "Do you see how this relates to the previous levels?"
 msgstr ""
 
+#: Game.Levels.CoproductWorld.L02_RightInclusion
+msgid "Right Inclusion"
+msgstr ""
+
 #. §0: `False.elim : Empty → P`
 #. §1: `exact False.elim`
 #: Game.Levels.NegationWorld.L01_ExFalso
 msgid "Lean has a built-in name §0 for the theorem you have just proven. Thus §1 will also solve this level. This theorem has been added to the library."
-msgstr ""
-
-#: Game.Levels.CoproductWorld.L02_RightInclusion
-msgid "Right Inclusion"
 msgstr ""
 
 #. §0: `«{nor}»`
@@ -2325,36 +2502,6 @@ msgstr ""
 msgid "What is the outermost logical connective? What tactic is used to prove statements of this form?"
 msgstr ""
 
-#. §0: `P`
-#. §1: `Q`
-#. §2: `R`
-#. §3: `→`
-#. §4: `P`
-#. §5: `Q`
-#. §6: `P → Q`
-#. §7: `P`
-#. §8: `Q`
-#. §9: `P → Q`
-#. §10: `P → Q`
-#: Game.Levels.ImplicationWorld
-msgid "We begin our study of proofs with *propositional logic*.\n"
-"\n"
-"Many mathematical propositions are built out of simpler propositions using logical connectives. The structure of a compound proposition &mdash; that is, which connectives appear where &mdash; often suggests proof techniques, as we will discover.\n"
-"\n"
-"To study these connectives, we require *proposition variables* &mdash; denoted with letters like §0, §1, §2 &mdash; which stand for generic propositions, which may be true or false.\n"
-"\n"
-"In this level we study the logical connective *implication* denoted by §3.\n"
-"\n"
-"For arbitrary *propositions* §4 and §5, §6 is a new proposition asserting that *if* §7 *is true then* §8 *is true*.\n"
-"\n"
-"To understand how implications work in logic we must learn:\n"
-"\n"
-"* How to prove theorems of the form §9.\n"
-"* How to use a hypothesis of the form §10 to prove something else.\n"
-"\n"
-"We'll learn the rules for proving implications and using implications in the levels that follow."
-msgstr ""
-
 #. §0: `have eqx : (g ∘ f) x = g (f x) := rfl`
 #. §1: `(g ∘ f) x = (g ∘ f) y`
 #: Game.Levels.AdvancedFunctionWorld.L06_ComposingInjectivity
@@ -2595,6 +2742,51 @@ msgstr ""
 msgid "Use the §0 tactic to consider all possible cases for elements of §1."
 msgstr ""
 
+#. §0: `A`
+#. §1: `B`
+#. §2: `x : A`
+#. §3: `y : B`
+#. §4: `ℕ`
+#. §5: `ℤ`
+#. §6: `ℚ`
+#. §7: `ℝ`
+#. §8: `ℂ`
+#. §9: `ℕ`
+#. §10: `0 : ℕ`
+#. §11: `1 : ℕ`
+#. §12: `57`
+#. §13: `57`
+#. §14: `P`
+#. §15: `Q`
+#. §16: `p : P`
+#. §17: `q : Q`
+#. §18: `P`
+#. §19: `P`
+#. §20: `x y : P`
+#. §21: `x`
+#. §22: `y`
+#: Game.Levels.TypeWorld
+msgid "In this world, we introduce two primitives:\n"
+"\n"
+"* *types* denoted with capital variables like §0 and §1 and\n"
+"* *elements* written §2 or §3.\n"
+"\n"
+"For example, there are types §4 of\n"
+"natural numbers, §5 of integers, §6 of rational numbers, §7 of real numbers, §8 of natural\n"
+"numbers, and so on.\n"
+"\n"
+"Types can have more than one element. The elements of the type §9 are the familiar natural numbers:  §10, §11 and so on.\n"
+"\n"
+"By contrast, elements belong to unique types. The integer §12 is distinct from the natural number §13.\n"
+"\n"
+"Mathematical *propositions* form a special case of types. For propositions §14 and §15, we think of\n"
+"elements §16 and §17 as *proofs* that these propositions are true.\n"
+"\n"
+"By contrast, false propositions will not have any elements. In Negation World, we will learn how to prove that a proposition §18 is false.\n"
+"\n"
+"What distinguishes propositions from types is the fact that the elements do not contain any information. If §19 is a proposition and we have elements §20, then §21 and §22 can be identified in a sense that we will make precise in Equality World."
+msgstr ""
+
 #: Game.Levels.EqualityWorld.L07_UnitProposition
 msgid "Unit Proposition"
 msgstr ""
@@ -2607,15 +2799,15 @@ msgstr ""
 msgid "Now that the goal is an element of type §0 there are several ways to proceed. You can use §1 or §2."
 msgstr ""
 
+#: Game.Levels.ProductWorld.L02_FirstProjection
+msgid "First Projection"
+msgstr ""
+
 #. §0: `Function.uncurry : (A → B → C) → (A × B → C)`
 #: Game.Levels.ProductWorld.L07_Uncurrying
 msgid "Lean uses the name §0 for the function you have just defined. This function has been added to the library of definitions.\n"
 "\n"
 "The operations of *currying* and *uncurrying* are inverses in a sense we will be able to make precise later."
-msgstr ""
-
-#: Game.Levels.ProductWorld.L02_FirstProjection
-msgid "First Projection"
 msgstr ""
 
 #. §0: `f : A → B`
@@ -2644,10 +2836,6 @@ msgstr ""
 #. §5: `(A → B) → B`
 #: Game.Levels.FunctionWorld.L08_Evaluation
 msgid "For types §0 and §1, the evaluation function has type §2, meaning that for §3, §4 has type §5."
-msgstr ""
-
-#: Game
-msgid "FYS270"
 msgstr ""
 
 #: Game.Levels.NegationWorld.L04_Noncontradiction
@@ -3084,6 +3272,29 @@ msgid "For the Boss Level of Empty World, we construct something that is just we
 "Have fun!"
 msgstr ""
 
+#. §0: `Type`
+#. §1: `Type u`
+#. §2: `u`
+#. §3: `Type`
+#. §4: `Type 0`
+#. §5: `Type`
+#. §6: `exact Type`
+#. §7: `Type`
+#. §8: `Type`
+#: Game.Levels.TypeWorld.L05_TypeOfTypes
+msgid "Lean has a built in type of types denoted §0.\n"
+"\n"
+"More precisely --- to avoid a contradiction known as *Russell's paradox* --- Lean has a hierarchy of built in types of types denoted §1 parametrized by universe levels §2.\n"
+"\n"
+"Here §3 is a synonym for §4, which is the type of types at the smallest universe level.\n"
+"\n"
+"The goal in this level is to define an element of the type §5 of types.\n"
+"\n"
+"Note §6 will not work, because the type §7 belongs to the type of types in a larger universe. Try this and see what happens.\n"
+"\n"
+"However, we have introduced a type that is small enough to define an element of §8. Use this to solve this level."
+msgstr ""
+
 #: Game.Levels.ImplicationWorld.L08_ModusPonensAgain
 msgid "Modus Ponens Again"
 msgstr ""
@@ -3137,10 +3348,6 @@ msgstr ""
 msgid "The types §0 and §1 are equivalent."
 msgstr ""
 
-#: Game.Levels.NegationWorld.L01_ExFalso
-msgid "Ex Falso"
-msgstr ""
-
 #. §0: `A`
 #. §1: `B`
 #. §2: `A × B`
@@ -3163,6 +3370,10 @@ msgid "Recall that for any types §0 and §1, there is a *product type* denoted 
 "More precisely, the type §6 is *equivalent* to the empty type in a sense we cannot yet make precise.\n"
 "\n"
 "But we can at least show that there are functions §7 and §8, which as discussed in a previous level, indicates that §9 cannot have any elements either."
+msgstr ""
+
+#: Game.Levels.NegationWorld.L01_ExFalso
+msgid "Ex Falso"
 msgstr ""
 
 #. §0: `«{A}»`
@@ -3229,6 +3440,7 @@ msgid "The successor function is injective"
 msgstr ""
 
 #. §0: `assumption`
+#: Game.Levels.TypeWorld.L01_Elements
 #: Game.Levels.ImplicationWorld.L01_ByAssumption
 msgid "The §0 tactic tries to solve the main goal using a hypothesis of compatible type, or else fails."
 msgstr ""
@@ -3554,6 +3766,52 @@ msgid "The *universal property* of the product is the correspondence between fun
 "We are now ready for the boss level of Product World."
 msgstr ""
 
+#. §0: `P`
+#. §1: `Q`
+#. §2: `R`
+#. §3: `A`
+#. §4: `B`
+#. §5: `P`
+#. §6: `Q`
+#. §7: `p : P`
+#. §8: `q : Q`
+#. §9: `P`
+#. §10: `→`
+#. §11: `P`
+#. §12: `Q`
+#. §13: `P → Q`
+#. §14: `P`
+#. §15: `Q`
+#. §16: `P → Q`
+#. §17: `P → Q`
+#: Game.Levels.ImplicationWorld
+msgid "We begin our study of proofs with *propositional logic*.\n"
+"\n"
+"Many mathematical propositions are built out of simpler propositions using logical connectives. The structure of a compound proposition &mdash; that is, which connectives appear where &mdash; often suggests proof techniques, as we will discover.\n"
+"\n"
+"To study these connectives, we require *proposition variables* &mdash; denoted with letters like §0, §1, §2 &mdash; which stand for generic propositions, which may be true or false.\n"
+"\n"
+"The slogan *propositions as types* tells us that we can consider propositions as special cases of *types*.\n"
+"\n"
+"Recall that we use capital variables like §3 and §4 to denote general types, analogously to the proposition variables §5 and §6. We think of the elements §7 and §8 as *proofs* that these propositions are true.\n"
+"\n"
+"In the case of\n"
+"propositions, what matters is whether §9 had any elements or not. The elements themselves don't\n"
+"carry any information beyond witnessing the truth of the proposition.\n"
+"\n"
+"\n"
+"In this level we study the logical connective *implication* denoted by §10.\n"
+"\n"
+"For arbitrary *propositions* §11 and §12, §13 is a new proposition asserting that *if* §14 *is true then* §15 *is true*.\n"
+"\n"
+"To understand how implications work in logic we must learn:\n"
+"\n"
+"* How to prove theorems of the form §16.\n"
+"* How to use a hypothesis of the form §17 to prove something else.\n"
+"\n"
+"We'll learn the rules for proving implications and using implications in the levels that follow."
+msgstr ""
+
 #. §0: `Q`
 #. §1: `P`
 #. §2: `¬ P`
@@ -3576,6 +3834,11 @@ msgstr ""
 
 #: Game.Levels.ConjunctionWorld.L04_LogicalEquivalence
 msgid "Logical Equivalence"
+msgstr ""
+
+#. §0: `Type`
+#: Game.Levels.TypeWorld.L05_TypeOfTypes
+msgid "The elements of the type §0 of types are types at the lowest universe level."
 msgstr ""
 
 #. §0: `m n`
@@ -3606,10 +3869,6 @@ msgstr ""
 #. §0: `not ∘ not : Bool → Bool`
 #: Game.Levels.BooleanWorld.L02_DoubleNegation
 msgid "It follows that §0 is equal to the identity function by something called *function extensionality* that will be discussed soon."
-msgstr ""
-
-#: Game
-msgid "First Year Seminar 270"
 msgstr ""
 
 #: Game.Levels.NaturalNumbersWorld.L04_Recursion
@@ -3643,6 +3902,15 @@ msgid "When the goal has the form §0, type §1 to introduce an assumption §2 a
 "It is also possible to type simply §4 in which case Lean will automatically generate a name for the proof of §5."
 msgstr ""
 
+#. §0: `A`
+#. §1: `B`
+#. §2: `x : A`
+#. §3: `y z : B`
+#. §4: `B`
+#: Game.Levels.TypeWorld.L03_Exact
+msgid "Under the hypothesis that we have types §0 and §1 and elements §2 and §3, we may define an element of type §4."
+msgstr ""
+
 #: Game.Levels.NaturalNumbersWorld.L02_NormalForms
 msgid "Normal Forms"
 msgstr ""
@@ -3669,6 +3937,13 @@ msgstr ""
 
 #: Game.Levels.QuantifierWorld.L08_NegatingUniversality
 msgid "Negating Universality"
+msgstr ""
+
+#. §0: `assumption`
+#. §1: `P`
+#. §2: `P`
+#: Game.Levels.TypeWorld.L02_Proofs
+msgid "Type §0 to tell Lean to use the assumption that §1 is true to conclude that §2 is true."
 msgstr ""
 
 #. §0: `P`
@@ -3843,6 +4118,16 @@ msgstr ""
 msgid "Disjunction"
 msgstr ""
 
+#. §0: `retry`
+#. §1: `exact x`
+#: Game.Levels.TypeWorld.L03_Exact
+msgid "After solving this level, use the §0 button to solve it again. What happens if you try §1?"
+msgstr ""
+
+#: Game.Levels.TypeWorld.L06_TypeOfPropositions
+msgid "Type of Propositions"
+msgstr ""
+
 #: Game.Levels.CoproductWorld.L05_Symmetry
 #: Game.Levels.CoproductWorld.L05_Symmetry
 msgid "Which function might be useful to apply here?"
@@ -3900,6 +4185,15 @@ msgstr ""
 #. §0: `«{andn}»`
 #: Game.Levels.NegationWorld.L08_NegatingDisjunction
 msgid "What proofs can you extract from the hypothesis §0?"
+msgstr ""
+
+#. §0: `Type`
+#: Game.Levels.TypeWorld.L04_Unit
+msgid "The unit type can be found in the library of definitions in the folder §0."
+msgstr ""
+
+#: Game.Levels.TypeWorld.L02_Proofs
+msgid "Proofs"
 msgstr ""
 
 #. §0: `pred : ℕ → ℕ`
@@ -3997,6 +4291,31 @@ msgstr ""
 msgid "Contrapositive"
 msgstr ""
 
+#. §0: `Prop`
+#. §1: `True`
+#. §2: `⟨⟩ : True`
+#. §3: `P`
+#. §4: `Q`
+#. §5: `p : P`
+#. §6: `P`
+#. §7: `P`
+#. §8: `Q`
+#. §9: `Prop`
+#. §10: `Prop`
+#. §11: `Type`
+#. §12: `Prop : Type`
+#: Game.Levels.TypeWorld.L06_TypeOfPropositions
+msgid "Lean also has a built in type of propositions denoted §0.\n"
+"\n"
+"In the empty context, it contains propositions like §1, which is the true proposition, with canonical proof §2. This can now be found in the library of definitions.\n"
+"\n"
+"In this level we consider the context given by two propositions §3 and §4 together with a proof §5 of §6.\n"
+"\n"
+"Under these assumptions, either §7 or §8 define elements of §9.\n"
+"\n"
+"Note that elements of §10 are considered to be at a smaller universe level than elements of §11 and indeed we have §12."
+msgstr ""
+
 #. §0: `¬ (P ∨ Q)`
 #. §1: `P ∨ Q`
 #. §2: `P ∨ Q`
@@ -4055,17 +4374,17 @@ msgid "Recall that every function is *well-defined*. For any function §0, we ha
 "Recall that when §12, Lean writes §13 for §14."
 msgstr ""
 
+#. §0: `pred 0`
+#: Game.Levels.NaturalNumbersWorld.L04_Recursion
+msgid "We now have two goals. The first goal asks you to define the value of §0."
+msgstr ""
+
 #. §0: `«{p}» : A ⊕ B`
 #. §1: `rfl`
 #. §2: `«{p}»`
 #: Game.Levels.EquivalenceWorld.L02_CoproductSymmetry
 #: Game.Levels.EquivalenceWorld.L02_CoproductSymmetry
 msgid "The functions you have just defined are not definitionally inverses on all elements §0. This is why §1 fails. Try splitting §2 into cases first."
-msgstr ""
-
-#. §0: `pred 0`
-#: Game.Levels.NaturalNumbersWorld.L04_Recursion
-msgid "We now have two goals. The first goal asks you to define the value of §0."
 msgstr ""
 
 #. §0: `Prod.snd : A × B → B`
@@ -4373,6 +4692,10 @@ msgstr ""
 msgid "In the next level, we will prove that surjective functions compose."
 msgstr ""
 
+#: Game.Levels.TypeWorld.L05_TypeOfTypes
+msgid "Type of Types"
+msgstr ""
+
 #. §0: `A`
 #. §1: `B`
 #. §2: `C`
@@ -4472,10 +4795,10 @@ msgstr ""
 msgid "Projected Pairs"
 msgstr ""
 
-#: Game.Levels.ConjunctionWorld.L03_Symmetry
 #: Game.Levels.ProductWorld.L04_Symmetry
-#: Game.Levels.DisjunctionWorld.L04_Symmetry
+#: Game.Levels.ConjunctionWorld.L03_Symmetry
 #: Game.Levels.CoproductWorld.L05_Symmetry
+#: Game.Levels.DisjunctionWorld.L04_Symmetry
 #: Game.Levels.EqualityWorld.L04_Symmetry
 msgid "Symmetry"
 msgstr ""
@@ -4496,71 +4819,6 @@ msgstr ""
 #. §2: `Q`
 #: Game.Levels.ConjunctionWorld.L01_IntroducingAnd
 msgid "To prove a conjunction §0 we need to supply a proof of both §1 and §2."
-msgstr ""
-
-#. §0: `ℕ`
-#. §1: `ℤ`
-#. §2: `ℚ`
-#. §3: `ℝ`
-#. §4: `ℂ`
-#. §5: `A`
-#. §6: `B`
-#. §7: `P`
-#. §8: `Q`
-#. §9: `A`
-#. §10: `x : A`
-#. §11: `y : A`
-#. §12: `P`
-#. §13: `Q`
-#. §14: `p : P`
-#. §15: `q : Q`
-#. §16: `P`
-#. §17: `ℕ`
-#. §18: `0 : ℕ`
-#. §19: `1 : ℕ`
-#. §20: `→`
-#. §21: `∧`
-#. §22: `A → B`
-#. §23: `A`
-#. §24: `B`
-#. §25: `f : A → B`
-#. §26: `A`
-#. §27: `B`
-#. §28: `A → B`
-#. §29: `P → Q`
-#. §30: `A → B`
-#. §31: `A → B`
-#: Game.Levels.FunctionWorld
-msgid "The slogan *propositions as types* tells us that we can consider propositions as special cases of *types*.\n"
-"\n"
-"For example, there are types §0 of\n"
-"natural numbers, §1 of integers, §2 of rational numbers, §3 of real numbers, §4 of natural\n"
-"numbers, and so on.\n"
-"\n"
-"We use capital variables like §5 and §6 to denote general types, analogously to the proposition variables §7 and §8.\n"
-"\n"
-"A type §9 can contain elements §10 and §11. For propositions §12 and §13, we thought of\n"
-"elements §14 and §15 as *proofs* that these propositions are true.\n"
-"\n"
-"In the case of\n"
-"propositions, what mattered was whether §16 had any elements or not. The elements themselves don't\n"
-"carry any information beyond witnessing the truth of the proposition.\n"
-"\n"
-"By contrast, the type §17 of\n"
-"natural numbers contains infinitely many distinct elements: §18, §19 and so on.\n"
-"\n"
-"Just as logical connectives like §20 and §21 can be used to build more complicated propositions out of existing propositions, *type forming operations* can be used to build new types from existing types.\n"
-"\n"
-"The first and arguably most important of these is the type §22 of functions from §23 to §24. An element\n"
-"§25 defines a *function* from §26 to §27.\n"
-"\n"
-"In this level, we will explain how to define and use functions and explore the analogy suggested by the fact that we use the same notation for\n"
-"function types §28 as for the implication proposition §29.\n"
-"\n"
-"To understand how functions work in type theory we must learn:\n"
-"\n"
-"* How to construct elements of type §30.\n"
-"* How to use elements of type §31 to construct elements of other types."
 msgstr ""
 
 #: Game.Levels.NegationWorld.L07_NegatingImplication
@@ -4591,6 +4849,13 @@ msgstr ""
 #. §0: `constructor`
 #: Game.Levels.NaturalNumbersWorld.L05_DefiningAddition
 msgid "The goal asks you to prove two theorems, so start with §0."
+msgstr ""
+
+#. §0: `A`
+#. §1: `a : A`
+#. §2: `A`
+#: Game.Levels.TypeWorld.L01_Elements
+msgid "Under the hypothesis that we have a type §0 and an element §1, we may define an element of §2."
 msgstr ""
 
 #. §0: `S → T`
@@ -4677,12 +4942,6 @@ msgstr ""
 msgid "We can apply the proof §0 to the proof §1 to obtain §2. How can these be used to prove the goal?"
 msgstr ""
 
-#. §0: `True`
-#. §1: `⟨⟩ : True`
-#: Game.Levels.BooleanWorld.L08_NotEqual
-msgid "The proposition §0 has a canonical element §1."
-msgstr ""
-
 #. §0: `intro n`
 #: Game.Levels.NaturalNumbersWorld.L04_Recursion
 msgid "Use §0 to start your definition."
@@ -4709,6 +4968,12 @@ msgid "Given a term §0 and any type §1, there is a function of type §2 which 
 "This means that for any input §4 the output is always the element §5.\n"
 "\n"
 "Can you figure out how to define this function?"
+msgstr ""
+
+#. §0: `Unit`
+#. §1: `⟨⟩`
+#: Game.Levels.TypeWorld.L04_Unit
+msgid "The unit type §0 has a single canonical element §1, which may be typed using '\\\\<' and '\\\\>'."
 msgstr ""
 
 #. §0: `P`
@@ -4847,6 +5112,12 @@ msgid "Two propositions §0 and §1 are *logically equivalent* if §2 implies §
 "The notion of logical equivalence enables us to upgrade our understanding of associativity of symmetry as follows."
 msgstr ""
 
+#. §0: `intro n`
+#. §1: `n`
+#: Game.Levels.NaturalNumbersWorld.L03_Induction
+msgid "The goal is a universally quantified statement. Start with §0 to consider an arbitrary natural number §1."
+msgstr ""
+
 #. §0: `P → Q → R → S → T`
 #. §1: `intro p q r s`
 #. §2: `p : P`
@@ -4855,12 +5126,6 @@ msgstr ""
 #. §5: `s : S`
 #: Game.Levels.ImplicationWorld.L07_OnParentheses
 msgid "For compound implications &mdash; statements of the form §0 &mdash; you can type §1 to introduce hypothesis §2, §3, §4, and §5 all at once."
-msgstr ""
-
-#. §0: `intro n`
-#. §1: `n`
-#: Game.Levels.NaturalNumbersWorld.L03_Induction
-msgid "The goal is a universally quantified statement. Start with §0 to consider an arbitrary natural number §1."
 msgstr ""
 
 #. §0: `f : A → B`
@@ -4884,6 +5149,10 @@ msgstr ""
 msgid "For the function Boss Level, we consider an arbitrary pair of types, which we call §0 and §1 &mdash; for *vector space* and *field* respectively &mdash; because the function to be defined below has a connection to linear algebra that is not explained here.\n"
 "\n"
 "Can you define it?"
+msgstr ""
+
+#: Game.Levels.TypeWorld.L03_Exact
+msgid "Exact"
 msgstr ""
 
 #. §0: `p : A × B`
@@ -5166,10 +5435,6 @@ msgid "Recall the principle of mathematical induction, which applies to an arbit
 "* §23."
 msgstr ""
 
-#: Game.Levels.NegationWorld.L02_Negation
-msgid "There are various ways to solve this level. You might enjoy searching for a shorter proof."
-msgstr ""
-
 #. §0: `intro`
 #. §1: `P → Q`
 #. §2: `intro p`
@@ -5180,8 +5445,12 @@ msgstr ""
 #. §7: `p : P`
 #. §8: `q : Q`
 #. §9: `R`
-#: Game.Levels.ImplicationWorld.L04_ProvingImplication
+#: Game.Levels.FunctionWorld.L03_ComposingFunctions
 msgid "The §0 tactic, short for *introduction*, is used to introduce one or more hypotheses when the goal is an implication. It can be used itself or followed by names for those hypotheses. For example, when the goal is §1, type §2 to add an assumption §3 and update the goal to §4. When the goal is §5, type §6 to add assumptions §7 and §8 and update the goal to §9."
+msgstr ""
+
+#: Game.Levels.NegationWorld.L02_Negation
+msgid "There are various ways to solve this level. You might enjoy searching for a shorter proof."
 msgstr ""
 
 #: Game.Levels.EquivalenceWorld.L06_MoreComponentFunctions
@@ -5266,6 +5535,10 @@ msgstr ""
 #. §1: `«{x}»`
 #: Game.Levels.EmptyWorld.L06_CoproductWithEmpty
 msgid "Recall you can type §0 to ask Lean to consider which cases are actually possible for the hypothetical element §1."
+msgstr ""
+
+#: Game.Levels.TypeWorld.L02_Proofs
+msgid "In the next level, we will learn a new tactic, which allows us to be more precise about which assumption is being used."
 msgstr ""
 
 #. §0: `P`
@@ -5383,15 +5656,6 @@ msgid "In this world, we'll meet the type §0 of *booleans*.\n"
 "We will also show that the type of booleans is *not* a proposition by proving that §6."
 msgstr ""
 
-#. §0: `«{c}».2`
-#: Game.Levels.NegationWorld.L04_Noncontradiction
-msgid "What is the logical structure of the type that §0 belongs to?"
-msgstr ""
-
-#: Game.Levels.BooleanWorld.L09_BossLevel
-msgid "The following expression in conjunctive normal form is satisfiable."
-msgstr ""
-
 #. §0: `«{k}»`
 #. §1: `«{k}»`
 #. §2: `«{hk}» : (∃ m, «{k}» = 2 * m) ∨ ∃ m, «{k}» = 2 * m + 1`
@@ -5401,6 +5665,15 @@ msgstr ""
 #. §6: `«{k}»`
 #: Game.Levels.NaturalNumbersWorld.L03_Induction
 msgid "Now that you have completed the base case, the next goal is to prove the inductive step. Here §0 is an arbitrary natural number and you are given a hypothesis that the predicate is true for §1, i.e., that §2. Your goal is to prove that the analogous result holds for §3, aka, the successor of §4. Type §5 to split into cases depending on whether or not §6 is even or odd."
+msgstr ""
+
+#. §0: `«{c}».2`
+#: Game.Levels.NegationWorld.L04_Noncontradiction
+msgid "What is the logical structure of the type that §0 belongs to?"
+msgstr ""
+
+#: Game.Levels.BooleanWorld.L09_BossLevel
+msgid "The following expression in conjunctive normal form is satisfiable."
 msgstr ""
 
 #. §0: `Prop`
@@ -5483,8 +5756,8 @@ msgstr ""
 msgid "What is the logical structure of this type?"
 msgstr ""
 
-#: Game.Levels.DisjunctionWorld.L07_Distributivity
 #: Game.Levels.CoproductWorld.L07_Distributivity
+#: Game.Levels.DisjunctionWorld.L07_Distributivity
 msgid "Distributivity"
 msgstr ""
 
@@ -5529,7 +5802,7 @@ msgid "Recall that for any type §0, there is a function §1. Using this and you
 msgstr ""
 
 #. §0: `constructor`
-#: Game.Levels.ConjunctionWorld.L01_IntroducingAnd
+#: Game.Levels.ProductWorld.L01_Pairing
 msgid "The §0 tactic can be used when the goal is a conjunction (among other settings) to split the goal into cases."
 msgstr ""
 
@@ -5555,6 +5828,12 @@ msgstr ""
 #: Game.Levels.AdvancedFunctionWorld.L03_CancelingSurjectivity
 #: Game.Levels.AdvancedFunctionWorld.L04_ComposingSurjectivity
 msgid "You can either prove a lemma §0 by replacing the §1 with the definition of the composition function. Or you can try §2 using §3 to type the left arrow."
+msgstr ""
+
+#. §0: `Prop`
+#. §1: `True`
+#: Game.Levels.TypeWorld.L06_TypeOfPropositions
+msgid "The type of propositions §0 contains propositions like §1."
 msgstr ""
 
 #: Game.Levels.EqualityWorld.L08_EmptyProposition
@@ -5804,10 +6083,6 @@ msgstr ""
 msgid "Now the goal is a product type. The §0 tactic will split into two subgoals, defining the functions §1 and §2 respectively."
 msgstr ""
 
-#: Game.Levels.CoproductWorld.L06_Associativity
-msgid "Next we will study the relationship between products and coproducts."
-msgstr ""
-
 #. §0: `P`
 #. §1: `Q`
 #. §2: `R`
@@ -5842,6 +6117,10 @@ msgid "Similarly, for propositions §0, §1, and §2, §3 holds if and only if �
 "Note the §15 tactic allows more general patterns of disjunctions. Given §16 try §17. Similarly, given §18, try §19.\n"
 "\n"
 "Aside: typing §20 using any single digit number produces a subscript with that number, like §21."
+msgstr ""
+
+#: Game.Levels.CoproductWorld.L06_Associativity
+msgid "Next we will study the relationship between products and coproducts."
 msgstr ""
 
 #. §0: `∀ x : A, P x`
@@ -5896,6 +6175,39 @@ msgid "Function types are *not* symmetric: when §0 is non-empty, the types §1 
 "However in the case of functions with multiple variables, the input variables can be exchanged.\n"
 "\n"
 "In this level, you will show that the types §3 and §4 are equivalent."
+msgstr ""
+
+#. §0: `ℕ`
+#. §1: `Bool`
+#. §2: `17 : ℕ`
+#. §3: `true : Bool`
+#: Game
+msgid "Mathematicians from all over &mdash; most of whom have never met one another &mdash; nevertheless agree to an incredible extent about the nature of the mathematical universe. How did this degree of consensus come about?\n"
+"\n"
+"Firstly mathematicians have developed a precise formal language which allows them to define new abstract concepts and state their properties in an unambiguous way. A mathematical *proposition* is a well-formed mathematical statement that is either true or false, for instance:\n"
+"\n"
+"* &ldquo;There are infinitely many prime numbers.&rdquo;\n"
+"* &ldquo;Every prime number is even.&rdquo;\n"
+"* &ldquo;There are infinitely many prime numbers that are two less than another prime.&rdquo;\n"
+"\n"
+"Mathematicians distinguish between the true propositions, the false ones, and the ones whose truth value is not yet known through *proofs* made precise in the formal language of mathematical logic.\n"
+"\n"
+"While the idea of a mathematical proof is over 2000 years old, the practice of proof writing continues to evolve. Today mathematicians may elect to use a tool called a computer proof assistant that can provide real-time feedback to a theorem prover about the status of a logical argument that is currently under development.\n"
+"\n"
+"The aim of this game will be to introduce proof writing in a computer proof assistant while developing skils that can be used to develop proofs in other contexts: on paper, in conversation with a friend, or in your head.\n"
+"\n"
+"There is one caveat, that we will address explicitly. The formal vocabulary we will introduce to discuss mathematical proofs is somewhat different from the one that most mathematicians learn. The mathematics we will be developing is essentially unchanged but the formal language introduced here will make it easier to be fully precise about every step in a proof, as is required to convince a computer that a logical argument in sound.\n"
+"\n"
+"In particular, we will explore an analogy between mathematical propositions and another form of primitive mathematical structure called *types*. Examples of types include:\n"
+"\n"
+"* The type §0 of natural numbers.\n"
+"* The type §1 of booleans.\n"
+"\n"
+"Each type comes with its *elements* such as §2 or §3 governed by rules which explain the requirements for constructing an element and how previously-constructed elements can be used.\n"
+"\n"
+"In Type World, we will introduce types and their elements and propositions and their proofs.\n"
+"\n"
+"Later worlds will reveal that more complicated types can be built from simpler types, like more complicated mathematical statements can be built from simpler propositions. We will begin by studying types and function types before introducing mathematical propositions and the corresponding logical operation of *implication*."
 msgstr ""
 
 #. §0: `P → Q`
@@ -5985,7 +6297,7 @@ msgstr ""
 #. §4: `cases h`
 #. §5: `p : P`
 #. §6: `q : Q`
-#: Game.Levels.DisjunctionWorld.L03_UsingOr
+#: Game.Levels.CoproductWorld.L04_UniversalProperty
 msgid "§0 is a tactic that will perform §1 recursively, according to a pattern. One use is to provide explicit names for variables in each subgoal. For example, given a hypothesis §2, §3 can be used in place of §4 to give hypotheses §5 in the first case and §6."
 msgstr ""
 
@@ -6020,7 +6332,7 @@ msgstr ""
 #. §7: `apply e`
 #. §8: `R`
 #. §9: `S`
-#: Game.Levels.ImplicationWorld.L02_ModusPonens
+#: Game.Levels.FunctionWorld.L02_UsingFunctions
 msgid "The §0 tactic can be used when the goal matches the conclusion of an implication.\n"
 "For example if the goal is §1 and there is a hypothesis §2, then §3 updates the goal to §4. If the goal is §5 and there is a hypothesis §6, then §7 produces two subgoals, one each for §8 and §9."
 msgstr ""
@@ -6047,6 +6359,10 @@ msgid "We've seen that a function §0 out of a product can be regarded as a func
 "These might be called the *component functions* associated to §11.\n"
 "\n"
 "Define a function that extracts the component functions associated to a function into a product."
+msgstr ""
+
+#: Game.Levels.TypeWorld.L04_Unit
+msgid "Unit"
 msgstr ""
 
 #. §0: `«{h}»`
@@ -6077,18 +6393,18 @@ msgid "Suppose §0 is an invertible function.\n"
 "In this level, we will see that the inverse function §3 is itself invertible."
 msgstr ""
 
-#. §0: `A`
-#. §1: `Empty.elim : Empty → A`
-#: Game.Levels.EmptyWorld.L01_FromEmpty
-msgid "For any type §0, there is a function §1 expressing the elimination rule of the empty type."
-msgstr ""
-
 #. §0: `1 + 5 = 2 * 3`
 #. §1: `succ (succ (succ (succ (succ (succ 0))))`
 #: Game.Levels.NaturalNumbersWorld.L02_NormalForms
 msgid "More complicated arithmetic equations involving numerals also hold by definition: for example §0\n"
 "\n"
 "This is because these elements on both the left-hand and right-hand sides reduce to a common *normal form*, an explicit numeral of the form §1."
+msgstr ""
+
+#. §0: `A`
+#. §1: `Empty.elim : Empty → A`
+#: Game.Levels.EmptyWorld.L01_FromEmpty
+msgid "For any type §0, there is a function §1 expressing the elimination rule of the empty type."
 msgstr ""
 
 #: Game.Levels.EmptyWorld.L02_ToEmpty
@@ -6103,18 +6419,18 @@ msgstr ""
 msgid "Invertible Implies Bijective"
 msgstr ""
 
-#: Game.Levels.ConjunctionWorld.L05_Associativity
-#: Game.Levels.ProductWorld.L05_Associativity
-#: Game.Levels.DisjunctionWorld.L06_Associativity
-#: Game.Levels.CoproductWorld.L06_Associativity
-msgid "Associativity"
-msgstr ""
-
 #. §0: `use ??`
 #. §1: `??`
 #: Game.Levels.NaturalNumbersWorld.L03_Induction
 #: Game.Levels.NaturalNumbersWorld.L03_Induction
 msgid "Type §0 with a well-chosen element in place of the §1."
+msgstr ""
+
+#: Game.Levels.ProductWorld.L05_Associativity
+#: Game.Levels.ConjunctionWorld.L05_Associativity
+#: Game.Levels.CoproductWorld.L06_Associativity
+#: Game.Levels.DisjunctionWorld.L06_Associativity
+msgid "Associativity"
 msgstr ""
 
 #. §0: `P`
@@ -6349,6 +6665,10 @@ msgid "The statements of many mathematical propositions require the use of *vari
 "In this world, we will learn how to prove propositions and use hypotheses involving the *universal quantifier* §28 and *existential quantifier* §29."
 msgstr ""
 
+#: Game.Levels.TypeWorld.L01_Elements
+msgid "Elements"
+msgstr ""
+
 #. §0: `f : A → B`
 #. §1: `x y : A`
 #. §2: `p : x = y`
@@ -6405,16 +6725,16 @@ msgstr ""
 msgid "If §0 is true, §1 is true, and §2 is true, then §3 is true."
 msgstr ""
 
-#. §0: `False`
-#. §1: `have := «{np}» «{p}»`
-#: Game.Levels.NegationWorld.L05_Absurd
-msgid "If you like, you can add a proof of §0 to your assumption list by §1."
-msgstr ""
-
 #. §0: `«{P}» ∨ («{Q}» ∨ «{R}»)`
 #: Game.Levels.DisjunctionWorld.L06_Associativity
 #: Game.Levels.DisjunctionWorld.L06_Associativity
 msgid "Here the goal is parenthesized as §0. Using your hypothesis, are you trying to prove the left-hand proposition or the right-hand one?"
+msgstr ""
+
+#. §0: `False`
+#. §1: `have := «{np}» «{p}»`
+#: Game.Levels.NegationWorld.L05_Absurd
+msgid "If you like, you can add a proof of §0 to your assumption list by §1."
 msgstr ""
 
 #. §0: `f : A → B`
@@ -6490,6 +6810,13 @@ msgstr ""
 
 #: Game.Levels.FunctionWorld.L05_MultivariableFunctions
 msgid "Multivariable functions"
+msgstr ""
+
+#. §0: `assumption`
+#. §1: `A`
+#. §2: `A`
+#: Game.Levels.TypeWorld.L01_Elements
+msgid "Type §0 to tell Lean to use the assumed element of §1 to define an element of §2."
 msgstr ""
 
 #. §0: `f : A → B`
@@ -6753,11 +7080,6 @@ msgid "In this level, we will study the proposition §0.\n"
 "So if we show that §5 is true but §6 is false, this would disprove the implication.\n"
 "\n"
 "In this level, we will prove that §7 implies §8. That is, if §9 is true and §10 is false, then §11 is not true."
-msgstr ""
-
-#. §0: `Computer-Verified Proof: a Hands-On Introduction to Interactive Theorem Proving`
-#: Game
-msgid "This was created using the GameSkeleton Github Repo from the Lean Games Server hosted by ADAM: Anticipating the Digital Age of Mathematics at Heinrich Heine University Düsseldorf. It is designed for a first year seminar course taught at Johns Hopkins University in Fall 2025 with the title §0."
 msgstr ""
 
 #. §0: `P`
@@ -7128,6 +7450,12 @@ msgstr ""
 msgid "Equality is transitive: if §0 and §1 then §2."
 msgstr ""
 
+#. §0: `Prop`
+#: Game.Levels.TypeWorld.L06_TypeOfPropositions
+#: Game.Levels.TypeWorld.L06_TypeOfPropositions
+msgid "The type §0 is the type of propositions."
+msgstr ""
+
 #. §0: `«{f}» «{x}»`
 #. §1: `exact «{f}» «{x}»`
 #: Game.Levels.ProductWorld.L08_ComponentFunctions
@@ -7211,13 +7539,6 @@ msgstr ""
 msgid "In the next level, we will introduce another property that holds for some, but not all, functions."
 msgstr ""
 
-#: Game.Levels.ProductWorld.L05_Associativity
-#: Game.Levels.CoproductWorld.L06_Associativity
-#: Game.Levels.CoproductWorld.L07_Distributivity
-#: Game.Levels.CoproductWorld.L07_Distributivity
-msgid "Now the goal is a function type. What tactic is used to define functions?"
-msgstr ""
-
 #. §0: `g : B → C`
 #. §1: `f : A → B`
 #. §2: `g ∘ f : A → C`
@@ -7225,6 +7546,13 @@ msgstr ""
 #. §4: `g (f x)`
 #: Game.Levels.FunctionWorld.L03_ComposingFunctions
 msgid "Given functions §0 and §1, define the composite function §2 that sends §3 to §4."
+msgstr ""
+
+#: Game.Levels.ProductWorld.L05_Associativity
+#: Game.Levels.CoproductWorld.L06_Associativity
+#: Game.Levels.CoproductWorld.L07_Distributivity
+#: Game.Levels.CoproductWorld.L07_Distributivity
+msgid "Now the goal is a function type. What tactic is used to define functions?"
 msgstr ""
 
 #. §0: `«{f}»`
@@ -7446,8 +7774,14 @@ msgstr ""
 msgid "For any element §0, §1 is true by reflexivity."
 msgstr ""
 
-#: Game.Levels.ConjunctionWorld.L03_Symmetry
-msgid "In a compound proposition, the outermost logical connective (the one applied last in forming the proposition) often determines the overall proof strategy."
+#: Game
+#: Game
+msgid "Reintroduction to Proofs"
+msgstr ""
+
+#. §0: `Computer-Verified Proof: a Hands-On Introduction to Interactive Theorem Proving`
+#: Game
+msgid "This was created using the GameSkeleton Github Repo from the Lean Games Server hosted by ADAM: Anticipating the Digital Age of Mathematics at Heinrich Heine University Düsseldorf. It was originally designed for a first year seminar course taught at Johns Hopkins University in Fall 2025 with the title §0."
 msgstr ""
 
 #. §0: `∀ n : ℕ, P n`
@@ -7494,6 +7828,10 @@ msgid "The *principal of mathematical induction* &mdash; also known as the elimi
 "By combining these hypothesis, from the fact that §14 is true and §15 is true, we can conclude that §16 is true. Then from the fact that §17 is true, we can conclude that §18 is true. Then from the fact that §19 is true, we can conclude that §20 is true. And so on.\n"
 "\n"
 "In this level, we will use induction to prove that every natural number is even or odd."
+msgstr ""
+
+#: Game.Levels.ConjunctionWorld.L03_Symmetry
+msgid "In a compound proposition, the outermost logical connective (the one applied last in forming the proposition) often determines the overall proof strategy."
 msgstr ""
 
 #. §0: `P`
@@ -7549,22 +7887,4 @@ msgstr ""
 
 #: Game.Levels.NegationWorld.L06_ModusTollens
 msgid "Modus Tollens"
-msgstr ""
-
-#: Game
-msgid "Mathematicians from all over &mdash; most of whom have never met one another &mdash; nevertheless agree to an incredible extent about the nature of the mathematical universe. How did this degree of consensus come about?\n"
-"\n"
-"Firstly mathematicians have developed a precise formal language which allows them to define new abstract concepts and state their properties in an unambiguous way. A mathematical *proposition* is a well-formed mathematical statement that is either true or false, for instance:\n"
-"\n"
-"* &ldquo;There are infinitely many prime numbers.&rdquo;\n"
-"* &ldquo;Every prime number is even.&rdquo;\n"
-"* &ldquo;There are infinitely many prime numbers that are two less than another prime.&rdquo;\n"
-"\n"
-"Mathematicians distinguish between the true propositions, the false ones, and the ones whose truth value is not yet known through *proofs* made precise in the formal language of mathematical logic.\n"
-"\n"
-"While the idea of a mathematical proof is over 2000 years old, the practice of proof writing continues to evolve. Today mathematicians may elect to use a tool called a computer proof assistant that can provide real-time feedback to a theorem prover about the status of a logical argument that is currently under development.\n"
-"\n"
-"The aim of this game will be to introduce proof writing in a computer proof assistant while developing skils that can be used to develop proofs in other contexts: on paper, in conversation with a friend, or in your head.\n"
-"\n"
-"There is one caveat, that we will address explicitly. The formal vocabulary we will introduce to discuss mathematical proof is somewhat different from the one that most mathematicians learn. The mathematics we will be developing is essentially unchanged but the formal language introduced here will make it easier to be fully precise about every step in a proof, as is required to convince a computer that a logical argument in sound."
 msgstr ""
