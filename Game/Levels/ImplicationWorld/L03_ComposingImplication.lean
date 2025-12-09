@@ -12,8 +12,7 @@ The first assumption provides a proof `p` that the proposition `P` is true.
 The second provides a proof `h1` that the implication `P → Q` is true.
 
 The final hypothesis provides a proof `h2` that `Q → R` is true. Our goal is to conclude that `R` is true.
-
-If you need help, click the button `Show more help!` for reminders/hints."
+"
 
 /-- If `P` is true, `P → Q` is true, and `Q → R` is true, then `R` is true. -/
 Statement {P Q R : Prop} (p : P) (h1 : P → Q) (h2 : Q → R) : R := by

@@ -8,6 +8,8 @@ Title "Modus Ponens"
 Introduction "Now we are in the setting of two proposition variables `P` and `Q` with two hypotheses. The first assumption provides a proof `p` that the proposition `P` is true. The second provides a proof `h` that the implication `P → Q` is true.
 
 It follows from both of these facts that `Q` is also true and we can construct a proof by applying the hypothesis `h` to the proof `p`.
+
+This line of reasoning has the Latin name *modus ponens*.
 "
 
 /-- If `P` is true and `P → Q` is true, then `Q` is true. -/
@@ -18,4 +20,4 @@ Statement {P Q : Prop} (p : P) (h : P → Q) : Q := by
   Hint (hidden := true) "Type `exact {p}` to tell Lean that `{p}` is a proof of `{P}`."
   exact p
 
-Conclusion "Here `apply` is another tactic, which can be found in the library above right."
+Conclusion "Does the proof of Modus Ponens feel familiar?"

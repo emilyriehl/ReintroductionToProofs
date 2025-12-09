@@ -13,6 +13,8 @@ Given a function `f : A → B` and any element `a : A`. You can apply the functi
 Like many programming languages, Lean uses juxtaposition, with a space in between, to denote function application.
 
 In this level, the context contains the elements `a : A` and `f : A → B` and the goal is to define an element of type `B`.
+
+If you need help, click the button `Show more help!` for reminders/hints.
 "
 
 /-- Given a function `f : A → B` and an element `a : A`, there is an element `f a : B` obtained by evaluating the function `f` at `a`. -/

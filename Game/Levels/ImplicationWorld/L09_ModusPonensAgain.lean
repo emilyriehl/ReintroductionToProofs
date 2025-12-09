@@ -1,7 +1,7 @@
 import Game.Metadata
 
 World "ImplicationWorld"
-Level 8
+Level 9
 
 Title "Modus Ponens Again"
 

@@ -23,5 +23,3 @@ Statement {P : Prop} : P → P := by
   exact p
 
 Conclusion "Let us now explore other implications that are provable with this strategy."
-
-/- Use these commands to add items to the game's inventory. -/

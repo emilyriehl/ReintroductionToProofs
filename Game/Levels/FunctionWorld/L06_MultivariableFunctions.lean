@@ -6,11 +6,19 @@ Level 6
 Title "Multivariable functions"
 
 
-Introduction "An element of type `A → B → C`, which abbreviates the type `A → (B → C)`, can be thought of as a function of two variables.
+Introduction "Function types can be iterated.
 
-Given `f : A → B → C` and `a : A`, then `f a : B → C` is a function from `B` to `C`.
+In particular, given types `A`, `B`, and `C`, we may form the function types `(A → B) → C` and `A → (B → C)`, which are not the same.
+
+Elements of the latter type are considerably more common as they define *multivariable functions*, which take more than one input before returning an output.
+
+Here the type `A → B → C` abbreviates the type `A → (B → C)`. A multivariable function `f : A → B → C` may also be thought of as a function that takes an element of type `A` and returns a of type `B → C`.
+
+That is, given `f : A → B → C` and `a : A`, then `f a : B → C` is a function from `B` to `C`.
 
 Then given `b : B` we can apply the function `f a` to get an element `f a b : C`.
+
+More generally, `A → B → C → D → E` abbreviates the iterated function type `A → (B → (C → (D → E)))`. Explicit parentheses must be used to express iterated function types with any other parenthesizations.
 "
 
 /-- Given an element `a : A` and a function of two variables `f : A → B → C`, define a function from `B → C` by evaluating the first variable of `f` at the element `a`. -/

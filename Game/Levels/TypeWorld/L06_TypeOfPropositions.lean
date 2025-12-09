@@ -23,13 +23,9 @@ Statement (P Q : Prop) (p : P) : Prop := by
 Conclusion "The type `Prop` can also be found in the library of definitions."
 
 /-- The type `Prop` is the type of propositions. -/
-DefinitionDoc Type.Prop as "Prop" in "Type"
-
-/-- The type `Prop` is the type of propositions. -/
-DefinitionDoc Type.Prop as "Prop" in "Type"
-
+DefinitionDoc «Prop» as "Prop" in "Type"
 
 /-- The proposition `True` has a canonical element `⟨⟩ : True`, which may be typed using '\\<' and '\\>'. -/
 DefinitionDoc True as "True" in "Prop"
 
-NewDefinition Type.Prop True
+NewDefinition «Prop» True
