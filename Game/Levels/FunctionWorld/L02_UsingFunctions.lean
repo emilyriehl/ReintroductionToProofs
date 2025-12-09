@@ -5,18 +5,19 @@ Level 2
 
 Title "Using Functions"
 
-Introduction "Given a function `f : A → B` and any element `a : A`. You can apply the function `f` to `a` to obtain an element `f a : B` of type `B`."
+Introduction "
+The *elimination rule* for function types explains how functions can be used to define elements of other types.
+
+Given a function `f : A → B` and any element `a : A`. You can apply the function `f` to `a` to obtain an element `f a : B` of type `B`.
+
+Like many programming languages, Lean uses juxtaposition, with a space in between, to denote function application.
+
+In this level, the context contains the elements `a : A` and `f : A → B` and the goal is to define an element of type `B`.
+"
 
 /-- Given a function `f : A → B` and an element `a : A`, there is an element `f a : B` obtained by evaluating the function `f` at `a`. -/
 Statement {A B : Type} (a : A) (f : A → B) : B := by
-  Hint "The syntax for the application of the function `{f} : {A} → {B}` on the element `{a} : {A}` is just `{f} {a}`. So type `exact {f} {a}` to obtain an element of type `B`."
+  Hint (hidden := true) "The syntax for the application of the function `f : A → B` to an element `a : A` is just `f a`. So to solve this level, type `exact f a` to obtain an element of type `B`."
   exact f a
 
-Conclusion "There is another way to solve this level. Start with `apply f` and see what happens. Have you seen a construction like this before?"
-
-
-/-- The `apply` tactic can be used when the goal matches the conclusion of an implication.
-For example if the goal is `Q` and there is a hypothesis `h : P → Q`, then `apply h` updates the goal to `P`. If the goal is `T` and there is a hypothesis `e : R → S → T`, then `apply e` produces two subgoals, one each for `R` and `S`. -/
-TacticDoc apply
-
-NewTactic apply
+Conclusion "In the next level, we will introduce another tactic that can be used to solve this goal."

@@ -25,9 +25,3 @@ Statement {P Q R : Prop} (p : P) (h1 : P → Q) (h2 : Q → R) : R := by
   exact p
 
 Conclusion "We've seen that an implication `h : P → Q` can be applied in the presense of a proof `p : P` to provide a proof of the proposition `Q`. This explains how implications are *used* in proofs of other statements. In the next level, we will see how implications can be *proven*."
-
-/- Use these commands to add items to the game's inventory. -/
-
--- NewTactic apply
--- NewTheorem Prop.modus_ponens
--- NewDefinition Nat Add Eq

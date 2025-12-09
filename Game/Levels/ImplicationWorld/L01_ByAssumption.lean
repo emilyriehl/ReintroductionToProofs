@@ -25,11 +25,3 @@ Statement {P : Prop} (p : P) : P := by
   exact p
 
 Conclusion "You can click on `retry` to attempt a different proof. Try typing `assumption` instead."
-
-/-- The `assumption` tactic tries to solve the main goal using a hypothesis of compatible type, or else fails. -/
-TacticDoc assumption
-
-
-NewTactic assumption
--- NewTheorem Prop.modus_ponens
--- NewDefinition Nat Add Eq

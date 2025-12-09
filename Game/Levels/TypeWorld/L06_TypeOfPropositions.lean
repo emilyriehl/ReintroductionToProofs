@@ -30,6 +30,6 @@ DefinitionDoc Type.Prop as "Prop" in "Type"
 
 
 /-- The proposition `True` has a canonical element `⟨⟩ : True`, which may be typed using '\\<' and '\\>'. -/
-DefinitionDoc Prop.True as "True" in "Prop"
+DefinitionDoc True as "True" in "Prop"
 
-NewDefinition Type.Prop Prop.True
+NewDefinition Type.Prop True

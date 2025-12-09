@@ -1,7 +1,7 @@
 import Game.Metadata
 
 World "FunctionWorld"
-Level 5
+Level 6
 
 Title "Multivariable functions"
 
@@ -18,7 +18,7 @@ Statement {A B C : Type} (a : A) (f : A → B → C) : B → C := by
   intro b
   Hint (hidden := true) "You can use the tactic `exact` by supplying `{f}` with two arguments, in the correct order, with spaces in between (but no parentheses). Alternatively you can use the tactic `apply`."
   apply f
-  Hint "Since `{f}` is a function with two variables, after `apply {f}` we now have two goals, where we need to supply first an element of type `{A}` and then an element of type `{B}`."
+  Hint "Since `{f}` is a function with two variables, after `apply {f}` we now have two goals, where we need to supply first an element of type `{A}` and then an element of type `{B}`. Lean records the first of these as the &ldquo;Active Goal&rdquo; and the second of these as &ldquo;Goal 2&rdquo;."
   exact a
   Hint (hidden := true) "Both `exact b` and `assumption` can be used here."
   exact b

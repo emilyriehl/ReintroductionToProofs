@@ -25,6 +25,6 @@ Statement : Unit := by
 Conclusion "The unit type can be found in the library of definitions in the folder `Type`."
 
 /-- The unit type `Unit` has a single canonical element `⟨⟩`, which may be typed using '\\<' and '\\>'. -/
-DefinitionDoc Type.Unit as "Unit" in "Type"
+DefinitionDoc Unit as "Unit" in "Type"
 
-NewDefinition Type.Unit
+NewDefinition Unit

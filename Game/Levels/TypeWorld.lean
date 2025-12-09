@@ -28,5 +28,5 @@ elements `p : P` and `q : Q` as *proofs* that these propositions are true.
 
 By contrast, false propositions will not have any elements. In Negation World, we will learn how to prove that a proposition `P` is false.
 
-What distinguishes propositions from types is the fact that the elements do not contain any information. If `P` is a proposition and we have elements `x y : P`, then `x` and `y` can be identified in a sense that we will make precise in Equality World.
+What distinguishes propositions from types is the fact that the elements do not contain any information beyond witnessing the truth of the proposition.
 "

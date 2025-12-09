@@ -1,7 +1,7 @@
 import Game.Metadata
 
 World "FunctionWorld"
-Level 4
+Level 5
 
 Title "Constant functions"
 

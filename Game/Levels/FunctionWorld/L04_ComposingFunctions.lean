@@ -1,19 +1,22 @@
 import Game.Metadata
 
 World "FunctionWorld"
-Level 3
+Level 4
 
 Title "Composing functions"
 
-Introduction "Given functions `f : A → B` and `g : B → C` there is a *composite function* from `A` to
-`C`.
+Introduction "Given functions `f : A → B` and `g : B → C` there is a *composite function* from `A` to `C`.
 
 It is defined to be the function that sends `x : A` first to the element `f x : B` and then
 to the element `g (f x) : C`.
 
 Can you solve this level in one line by using `exact fun x ↦ ?` with the appropriate thing in place of the `?`?
 
-Alternatively, you can use other tactics to define the required function step by step."
+Alternatively, you can use other tactics to define the required function step by step.
+
+To delete a proof (or proof attempt) and start over, you might find it helpful to click on the button labelled `</>` in the upper right hand corner to enter `editor mode`. Then delete all the lines of your first proof (or proof attempt). Clicking on `>_` takes you back to `typewriter mode`.
+
+You can also delete a proof attempt in line by line in `typewriter mode` using the `retry` button to the right of that line."
 
 /-- Given functions `g : B → C` and `f : A → B`, define the composite function `g ∘ f : A → C` that sends `x : A` to `g (f x)`. -/
 Statement {A B C : Type} (g : B → C) (f : A → B) : A → C := by
@@ -35,10 +38,3 @@ Given functions `f : A → B` and `g : B → C`, the *composite function* `g ∘
 DefinitionDoc circ as "∘" in "Function"
 
 NewDefinition circ
-
-/-- The `intro` tactic, short for *introduction*, is used to introduce one or more hypotheses when the goal is an implication. It can be used itself or followed by names for those hypotheses. For example, when the goal is `P → Q`, type `intro p` to add an assumption `p : P` and update the goal to `Q`. When the goal is `P → Q → R`, type `intro p q` to add assumptions `p : P` and `q : Q` and update the goal to `R`. -/
-TacticDoc intro
-
-NewTactic intro
--- NewTheorem Prop.modus_ponens
--- NewDefinition Nat Add Eq

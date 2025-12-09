@@ -22,10 +22,7 @@ The slogan *propositions as types* tells us that we can consider propositions as
 
 Recall that we use capital variables like `A` and `B` to denote general types, analogously to the proposition variables `P` and `Q`. We think of the elements `p : P` and `q : Q` as *proofs* that these propositions are true.
 
-In the case of
-propositions, what matters is whether `P` had any elements or not. The elements themselves don't
-carry any information beyond witnessing the truth of the proposition.
-
+Just as logical connectives like `→` and `∧` can be used to build more complicated propositions out of existing propositions, *type forming operations* can be used to build new types from existing types.
 
 In this level we study the logical connective *implication* denoted by `→`.
 
@@ -37,4 +34,7 @@ To understand how implications work in logic we must learn:
 * How to use a hypothesis of the form `P → Q` to prove something else.
 
 We'll learn the rules for proving implications and using implications in the levels that follow.
+
+We will also explore the analogy suggested by the fact that we use the same notation for
+function types `A → B` as for the implication proposition `P → Q`.
 "

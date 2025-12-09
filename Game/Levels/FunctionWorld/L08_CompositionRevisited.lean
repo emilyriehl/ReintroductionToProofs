@@ -1,7 +1,7 @@
 import Game.Metadata
 
 World "FunctionWorld"
-Level 7
+Level 8
 
 Title "Composition revisited"
 
