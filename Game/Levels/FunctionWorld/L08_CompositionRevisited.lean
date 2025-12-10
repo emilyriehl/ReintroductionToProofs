@@ -3,7 +3,7 @@ import Game.Metadata
 World "FunctionWorld"
 Level 8
 
-Title "Composition revisited"
+Title "Composition Revisited"
 
 /--
 For types `A`, `B`, and `C`, the function `comp : (B → C) → (A → B) → (A → C)` takes a function `f : A → B` and a function `g : B → C` to the composite function `comp g f : A → C` defined to take `a : A` to the element `g (f a) : C`.
@@ -16,11 +16,11 @@ Introduction "Recall that given functions `f : A → B` and `g : B → C` there 
 The function `g ∘ f` is defined to be the function that sends `a : A` first to the element `f a : B` and then
 to the element `g (f a) : C`.
 
-Define composition as a multivariable function between function types `comp : (B → C) → (A → B) → (A → C)`.
+The goal in this level is to define composition as a multivariable function between function types `comp : (B → C) → (A → B) → (A → C)`.
 
-We think of composition as the function that takes `g : B → C` and `f : A → B` to the composite function `comp g f : A → C`.
+We think often think of composition as the function that takes `g : B → C` and `f : A → B` to the composite function `comp g f : A → C`.
 
-It can also be thought of a function that takes `g`, `f`, and `a : A` to the element `g (f a) : C`.
+But it can also be thought of a function that takes `g`, `f`, and `a : A` to the element `g (f a) : C`.
 
 Aside: Lean treats the functions `comp` and `∘` slightly differently because the former uses the usual notation for multivariable functions (where the arguments are provided afterwards as `comp g f`) while the latter uses infix notation (where the function name appears inbetween the two arguments as `g ∘ f`).
 "

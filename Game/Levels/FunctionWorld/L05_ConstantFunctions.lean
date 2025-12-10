@@ -3,7 +3,7 @@ import Game.Metadata
 World "FunctionWorld"
 Level 5
 
-Title "Constant functions"
+Title "Constant Functions"
 
 /--
 For a term `a : A` and a type `B`, `const a : B → A` is the function defined by sending `x : B` to `a : A`.

@@ -3,22 +3,28 @@ import Game.Metadata
 World "FunctionWorld"
 Level 6
 
-Title "Multivariable functions"
+Title "Multivariable Functions"
 
 
 Introduction "Function types can be iterated.
 
-In particular, given types `A`, `B`, and `C`, we may form the function types `(A → B) → C` and `A → (B → C)`, which are not the same.
+In particular, given types `A`, `B`, and `C`, we may form the function types `(A → B) → C` and `A → (B → C)`. These types are not the same!
 
-Elements of the latter type are considerably more common as they define *multivariable functions*, which take more than one input before returning an output.
+Elements of the type `(A → B) → C` are functions that take a function from `A` to `B` as input and return an element of type `C` as output. Functions of this form exist but they are relatively obscure.
 
-Here the type `A → B → C` abbreviates the type `A → (B → C)`. A multivariable function `f : A → B → C` may also be thought of as a function that takes an element of type `A` and returns a of type `B → C`.
+By contrast, elements of the type `A → (B → C)` are *multivariable functions*, which take more than one input before returning an output. As these are relatively common, the simplified notation `A → B → C` is used as an abbreviation for the type `A → (B → C)`.
 
-That is, given `f : A → B → C` and `a : A`, then `f a : B → C` is a function from `B` to `C`.
+A multivariable function `f : A → B → C` takes a first input from type `A` and a second input from type `B` before returning an output of type `C`.
+
+The element `f` may also be thought of as a function that takes an element of type `A` and returns a of type `B → C`.
+
+Given `f : A → B → C` and `a : A`, then `f a : B → C` is a function from `B` to `C`.
 
 Then given `b : B` we can apply the function `f a` to get an element `f a b : C`.
 
-More generally, `A → B → C → D → E` abbreviates the iterated function type `A → (B → (C → (D → E)))`. Explicit parentheses must be used to express iterated function types with any other parenthesizations.
+In this level, you are given a multivariable function together with an element from its first input type. You are asked to define a function of the appropriate function type.
+
+This level can be solved by starting with `exact`, starting with `apply`, or starting with `intro`. If you start with `intro`, then you can continue with `exact` or with `apply`. If this is your first time solving this level, try to find a different solution.
 "
 
 /-- Given an element `a : A` and a function of two variables `f : A → B → C`, define a function from `B → C` by evaluating the first variable of `f` at the element `a`. -/
@@ -31,4 +37,4 @@ Statement {A B C : Type} (a : A) (f : A → B → C) : B → C := by
   Hint (hidden := true) "Both `exact b` and `assumption` can be used here."
   exact b
 
-Conclusion "This level can be solved by starting with `exact`, starting with `apply`, or starting with `intro`. If you start with `intro`, then you can continue with `exact` or with `apply`. If this is your first time solving this level, try to find a different solution."
+Conclusion "More generally, `A → B → C → D → E` abbreviates the iterated function type `A → (B → (C → (D → E)))`. Explicit parentheses must be used to express iterated function types with any other parenthesizations."

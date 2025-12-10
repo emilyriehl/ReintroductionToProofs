@@ -3,7 +3,7 @@ import Game.Metadata
 World "FunctionWorld"
 Level 7
 
-Title "Swapping inputs"
+Title "Swapping Inputs"
 
 Introduction "Recall that an element of type `A → B → C` can be thought of as a function of two variables.
 

@@ -13,6 +13,8 @@ DefinitionDoc ev as "ev"
 Introduction "While an element of type `A → (B → C)`, more commonly written as `A → B → C`, is a function of two variables, an element of type `(A → B) → C` is instead a function that takes a function `f : A → B` as input and returns an element of type `C`.
 
 For example, if we are given `a : A`, then it is possible to define a function of type `(A → B) → B` which is called *evaluation* at `a : A`. Given `f : A → B`, we return `f a : B`.
+
+Your task in this level is to define the evaluation function.
 "
 
 /-- Define the *evaluation* function that takes `a : A` and `f : A → B` to `f a : B`. -/

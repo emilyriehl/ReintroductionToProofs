@@ -3,7 +3,7 @@ import Game.Metadata
 World "FunctionWorld"
 Level 4
 
-Title "Composing functions"
+Title "Composing Functions"
 
 Introduction "Given functions `f : A → B` and `g : B → C` there is a *composite function* from `A` to `C`.
 
