@@ -1,9 +1,9 @@
 import Game.Metadata
 
 World "ImplicationWorld"
-Level 7
+Level 8
 
-Title "On Parentheses"
+Title "Transitivity"
 
 Introduction "For propositions `P`, `Q`, and `R`, the propositions `(P → Q) → R` and `P → (Q → R)` are not the same.
 
@@ -13,7 +13,9 @@ Mathematical statements of this second form `P → (Q → R)` are much more comm
 
 More generally, `P → Q → R → S → T` refers to `P → (Q → (R → (S → T)))`.
 
-Explicit parentheses must be used to express statements with any other parenthesizations."
+Explicit parentheses must be used to express statements with any other parenthesizations.
+
+Your objective in this level is to prove the transitivity of implication."
 
 /-- If `P → Q`, then if `Q → R`, then `P → R`. -/
 Statement {P Q R : Prop} : (P → Q) → (Q → R) → (P → R) := by

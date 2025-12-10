@@ -1,11 +1,11 @@
 import Game.Levels.ImplicationWorld.L01_ByAssumption
 import Game.Levels.ImplicationWorld.L02_ModusPonens
-import Game.Levels.ImplicationWorld.L03_ComposingImplication
-import Game.Levels.ImplicationWorld.L04_ProvingImplication
-import Game.Levels.ImplicationWorld.L05_ProvingImpliedAssumption
-import Game.Levels.ImplicationWorld.L06_ProvingAssumedImplication
-import Game.Levels.ImplicationWorld.L07_OnParentheses
-import Game.Levels.ImplicationWorld.L08_CompoundImplication
+import Game.Levels.ImplicationWorld.L03_ApplyingImplication
+import Game.Levels.ImplicationWorld.L04_ComposingImplication
+import Game.Levels.ImplicationWorld.L05_ProvingImplication
+import Game.Levels.ImplicationWorld.L06_ProvingImpliedAssumption
+import Game.Levels.ImplicationWorld.L07_ProvingAssumedImplication
+import Game.Levels.ImplicationWorld.L08_Transitivity
 import Game.Levels.ImplicationWorld.L09_ModusPonensAgain
 import Game.Levels.ImplicationWorld.L10_BossLevel
 
@@ -41,5 +41,5 @@ We'll learn the rules for proving implications and using implications in the lev
 The introduction and elimination rules for implications precisely mirror the introduction and elimination rules for function types.
 
 This analogy is further emphasized by the fact that we use the same notation for implications `P → Q` as for
-function types `A → B`.
+function types `A → B`. The Lean tactics that were introduced to define and work with functions will play an analogous role when proving or using implications.
 "

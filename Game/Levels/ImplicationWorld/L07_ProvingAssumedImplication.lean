@@ -1,7 +1,7 @@
 import Game.Metadata
 
 World "ImplicationWorld"
-Level 6
+Level 7
 
 Title "Proving Assumed Implication"
 

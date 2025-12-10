@@ -20,4 +20,4 @@ Statement {P Q : Prop} (p : P) (h : P → Q) : Q := by
   Hint (hidden := true) "Type `exact {p}` to tell Lean that `{p}` is a proof of `{P}`."
   exact p
 
-Conclusion "Does the proof of Modus Ponens feel familiar?"
+Conclusion "Does this proof of modus ponens feel familiar?"

@@ -20,7 +20,7 @@ If it is helpful to review the `assumption` and `exact` tactics, you can read mo
 
 /-- If the proposition `P` is true, then `P` is true.-/
 Statement {P : Prop} (p : P) : P := by
-  Hint "To use the hypothesis `{p}` to reach this conclusion type `exact {p}`."
+  Hint (hidden := true) "To use the hypothesis `{p}` to reach this conclusion type `exact {p}`."
   exact p
 
-Conclusion "You can click on `retry` to attempt a different proof. Try typing `assumption` instead."
+Conclusion "You can click on `Retry` to attempt a different proof."
