@@ -3,7 +3,7 @@ import Game.Metadata
 World "TypeWorld"
 Level 4
 
-Title "Unit"
+Title "Unit Type"
 
 Introduction "The previous levels involved type variables or proposition variables.
 
@@ -15,7 +15,7 @@ Here our goal has type `Unit`. We cannot solve this goal with the tactic `assump
 
 But we can solve this level with the tactic `exact` by typing the name of the canonical element.
 
-Use '\\\\<' and '\\\\>' to type the angle brackets '`⟨⟩`'.
+Use `\\<` and `\\>` to type the angle brackets `⟨⟩`.
 "
 
 /-- The unit type `Unit` has a canonical element `⟨⟩`. -/
@@ -24,7 +24,7 @@ Statement : Unit := by
 
 Conclusion "The unit type can be found in the library of definitions in the folder `Type`."
 
-/-- The unit type `Unit` has a single canonical element `⟨⟩`, which may be typed using '\\<' and '\\>'. -/
+/-- The unit type `Unit` has a single canonical element `⟨⟩`, which may be typed using `\<` and `\>`. -/
 DefinitionDoc Unit as "Unit" in "Type"
 
 NewDefinition Unit

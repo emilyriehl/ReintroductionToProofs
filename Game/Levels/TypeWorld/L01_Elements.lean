@@ -15,7 +15,7 @@ Here our context is given by a single type `A` with a hypothesized element `a : 
 
 On the right-hand side we see the name of a type, which is the *goal* for this level. Here that type is `A`, which means that our goal is to define an element of type `A`.
 
-We have such an element by assumption, and you can type `assumption` to tell Lean this. Then click the button `Execute` to ask Lean to check your work.
+We have such an element by assumption, and you can type `assumption` to tell Lean this. Then type `enter` or click the button `Execute` to ask Lean to check your work.
 
 Here `assumption` is an example of a *tactic*, which is built into Lean. You can find this in the tactic library on the upper right."
 

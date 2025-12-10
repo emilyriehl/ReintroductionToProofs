@@ -3,9 +3,9 @@ import Game.Metadata
 World "TypeWorld"
 Level 3
 
-Title "Exact"
+Title "Exact Elements"
 
-Introduction "A more elaborate context may contain multiple types and multiple elements.
+Introduction "A more elaborate context may contain multiple types and multiple elements, or a mix of types, elements, propositions, and proofs.
 
 Thus, we may require a more precise way to tell Lean which data or hypothesis from our context should be used.
 
@@ -24,7 +24,7 @@ The tactic `exact` can now be found in the library.
 Statement {A B : Type} (x : A) (y z : B) : B := by
   exact z
 
-Conclusion "After solving this level, use the `retry` button to solve it again. What happens if you try `exact x`?"
+Conclusion "After solving this level, use the `Retry` button to solve it again. What happens if you try `exact x`?"
 
 /-- If there is an assumption `e : E` and the goal has type `E`, then `exact e` closes the goal. -/
 TacticDoc exact

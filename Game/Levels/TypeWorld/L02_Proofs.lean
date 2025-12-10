@@ -9,9 +9,9 @@ Introduction "In this level, we consider a proposition `P` in place of a type `A
 
 When a proposition `P` has an element `p : P` we think of `p` as a *proof* that the proposition `P` is true.
 
-This is why the context for this level lists `p : P` as an assumption rather than an object. The presence of the element `p : P` corresponds to the assumption that the proposition `P` is true.
+The context for this level collectively asserts that `P` is a proposition and `p` is a proof of `P`. In particular, our assumptions imply that the proposition `P` is true.
 
-In summary, the context for this level collectively asserts that `P` is a proposition and `p` is a proof of `P`. In particular, our assumptions imply that the proposition `P` is true.
+As we will see, it is useful to have an explicit name `p` for the proof that `P` is true. When we reference the truth of the proposition `P` to prove other propositions, we will do so by referring to the element `p`.
 
 Our goal, which is displayed to the right of the vertical line, is to prove the proposition `P`.
 
