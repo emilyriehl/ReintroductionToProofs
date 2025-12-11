@@ -1815,6 +1815,20 @@ msgid "Can you solve this level in one line by using §0 with the appropriate th
 "Can you solve this level in one line by using §2 with the appropriate thing in place of the §3?"
 msgstr ""
 
+#. §0: `not : Bool → Bool`
+#. §1: `and : Bool → Bool → Bool`
+#. §2: `Bool → Bool → Bool`
+#. §3: `Bool → Bool → Bool`
+#: Game.Levels.BooleanWorld.L05_Disjunction
+msgid "We have seen that the logical operation of negation can be encoded as a function §0.\n"
+"\n"
+"We have also defined a function §1 that encodes the logical operation of conjunction.\n"
+"\n"
+"In this level, we will define a function §2 that encodes the logical operation of disjunction.\n"
+"\n"
+"Again, this level comes with two pre-defined goals: the first is to define the disjunction function §3 and the second is to check that your definition is correct by calculating the values of the function you defined on explicit pairs of booleans."
+msgstr ""
+
 #: Game.Levels.QuantifierWorld.L05_MultipleQuantifiers
 msgid "In the next level, we will explore the consequences of exchanging the order of universal and existential quantifiers."
 msgstr ""
@@ -2701,6 +2715,40 @@ msgstr ""
 msgid "Here §0 is Lean's name for the function you just defined. Your are asked to show that its value at §1 equals §2."
 msgstr ""
 
+#. §0: `Bool`
+#. §1: `false : Bool`
+#. §2: `true : Bool`
+#. §3: `Bool → Bool`
+#. §4: `false`
+#. §5: `true`
+#. §6: `true`
+#. §7: `false`
+#. §8: `intro b`
+#. §9: `cases b`
+#. §10: `false`
+#. §11: `true`
+#. §12: `cases h : b`
+#. §13: `h : b = false`
+#. §14: `h : b = true`
+#. §15: `Bool → Bool`
+#. §16: `true`
+#. §17: `false`
+#: Game.Levels.BooleanWorld.L01_Negation
+msgid "Recall the type §0 of booleans has two elements denoted §1 and §2.\n"
+"\n"
+"In this level, our aim is to define a function §3 that encodes the logical operation of negation, i.e., sends §4 to §5 and §6 to §7.\n"
+"\n"
+"You can do this by introducing a generic boolean by typing §8. Then use the tactic §9 to define the output of the function.\n"
+"\n"
+"Note the first case provided by Lean is the case of §10 while the second case is the case of §11.\n"
+"\n"
+"Try toggling to editor mode and perhaps add a few blank lines at the bottom to see if you can see what case you are in.\n"
+"\n"
+"Alternatively, if you prefer to stay in typewriter mode, type §12 to add hypotheses §13 in the first case and §14 in the second case, which makes it clearer which case is listed first.\n"
+"\n"
+"Note this level comes with two pre-defined goals: the first is to define the negation function §15 and the second is to check that your definition is correct by calculating the values of the function you defined on the booleans §16 and §17."
+msgstr ""
+
 #. §0: `«{h}»`
 #: Game.Levels.DisjunctionWorld.L05_UniversalProperty
 msgid "What implications can you extract from §0?"
@@ -3205,14 +3253,6 @@ msgstr ""
 msgid "For all §0 if §1 and §2 and §3 then §4."
 msgstr ""
 
-#. §0: `f`
-#. §1: `f`
-#. §2: `f`
-#. §3: `f`
-#: Game.Levels.AdvancedFunctionWorld.L11_InvertibleImpliesBijective
-msgid "In the proof that §0 is injective, you used only one half of the invertibility condition. Can you use this observation to state a theorem that proves that §1 is injective under a weaker hypothesis? Similarly, in the proof that §2 is surjective, you used only the other half of the invertiblility condition. Can you use this observation to state a theorem that proves that §3 is surjective under a weaker hypothesis?"
-msgstr ""
-
 #. §0: `Empty`
 #. §1: `Empty`
 #. §2: `A`
@@ -3332,17 +3372,6 @@ msgstr ""
 #. §1: `f true = false ∧ f false = true`
 #: Game.Levels.BooleanWorld.L01_Negation
 msgid "Now you are asked to check that the function §0 that you just defined actually *is* the negation function. Specifically, you are asked to check that §1."
-msgstr ""
-
-#. §0: `not : Bool → Bool`
-#. §1: `Bool → Bool → Bool`
-#. §2: `Bool → Bool → Bool`
-#: Game.Levels.BooleanWorld.L03_Conjunction
-msgid "We have seen that the logical operation of negation can be encoded as a function §0.\n"
-"\n"
-"We can similarly define a function §1 that encodes the logical operation of conjunction.\n"
-"\n"
-"Again, this level comes with two pre-defined goals: the first is to define the conjunction function §2 and the second is to check that your definition is correct by calculating the values of the function you defined on explicit pairs of booleans."
 msgstr ""
 
 #. §0: `cases`
@@ -3998,6 +4027,14 @@ msgid "This level contains another tautology whose proof you have seen before.\n
 "In fact, for any proposition §4, its negation §5 and its triple negation §6 are logically equivalent.\n"
 "\n"
 "So we will prove this too."
+msgstr ""
+
+#. §0: `f`
+#. §1: `f`
+#. §2: `f`
+#. §3: `f`
+#: Game.Levels.AdvancedFunctionWorld.L11_InvertibleImpliesBijective
+msgid "In the proof that §0 is injective, you used only one half of the invertibility condition. Can you use this observation to state a theorem that proves that §1 is injective under a weaker hypothesis? Similarly, in the proof that §2 is surjective, you used only the other half of the invertibility condition. Can you use this observation to state a theorem that proves that §3 is surjective under a weaker hypothesis?"
 msgstr ""
 
 #. §0: `f : X → A × B`
@@ -5529,6 +5566,17 @@ msgid "To prove an implication §0 one needs to give a construction of a proof o
 "In this level, we will see that for any proposition §15, §16 is true. Indeed, this is the case even if §17 itself is false!"
 msgstr ""
 
+#. §0: `not : Bool → Bool`
+#. §1: `Bool → Bool → Bool`
+#. §2: `Bool → Bool → Bool`
+#: Game.Levels.BooleanWorld.L03_Conjunction
+msgid "We have seen that the logical operation of negation can be encoded as a function §0.\n"
+"\n"
+"We can similarly define a function §1 that encodes the logical operation of conjunction.\n"
+"\n"
+"Again, this level comes with two pre-defined goals: the first is to define the conjunction function §2 and the second is to check that your definition is correct by calculating the values of the function you defined on explicit pairs of booleans."
+msgstr ""
+
 #. §0: `P : ℕ → Prop`
 #. §1: `P 0 → (∀ k : ℕ, P k → P (succ k)) → (∀ n : ℕ, P n)`
 #. §2: `∀ n : ℕ, P n`
@@ -5699,20 +5747,6 @@ msgstr ""
 #: Game.Levels.DisjunctionWorld.L01_IntroducingOr
 #: Game.Levels.DisjunctionWorld.L03_UsingOr
 msgid "For propositions §0 and §1, §2 is a proof that §3."
-msgstr ""
-
-#. §0: `not : Bool → Bool`
-#. §1: `and : Bool → Bool → Bool`
-#. §2: `Bool → Bool → Bool`
-#. §3: `Bool → Bool → Bool`
-#: Game.Levels.BooleanWorld.L05_Disjunction
-msgid "We have seen that the logical operation of negation can be encoded as a function §0.\n"
-"\n"
-"We have also defined a function §1 that encodes the logical operation of conjunction.\n"
-"\n"
-"In this level, we will define a function §2 that encodes the logical operation of disjunction.\n"
-"\n"
-"Again, this level comes with two pre-defined goals: the first is to define the disjunction function §3 and the second is to check that your definition is correct by calculating the values of the function you defined on explicit pairs of booleans."
 msgstr ""
 
 #. §0: `P`
@@ -7199,40 +7233,6 @@ msgid "In this world, we will introduce the *empty type*, which is commonly deno
 "In the case of a function from the type §10 to a type §11, there are no obligations because the empty type has no elements.\n"
 "\n"
 "In this world, we will explore constructions involving the §12 type."
-msgstr ""
-
-#. §0: `Bool`
-#. §1: `false : Bool`
-#. §2: `true : Bool`
-#. §3: `Bool → Bool`
-#. §4: `false`
-#. §5: `true`
-#. §6: `true`
-#. §7: `false`
-#. §8: `intro b`
-#. §9: `cases b`
-#. §10: `false`
-#. §11: `true`
-#. §12: `cases h : b`
-#. §13: `h : b = false`
-#. §14: `h : b = true`
-#. §15: `Bool → Bool`
-#. §16: `true`
-#. §17: `false`
-#: Game.Levels.BooleanWorld.L01_Negation
-msgid "Recall the type §0 of booleans has two elements denoted §1 and §2.\n"
-"\n"
-"In this level, our aim is to define a function §3 that encodes the logical operation of negation, i.e., sends §4 to §5 and §6 to §7.\n"
-"\n"
-"You can do this by introducing a generic boolean by typing §8. Then use the tactic §9 to define the output of the function.\n"
-"\n"
-"Note the first case provided by Lean is the case of §10 while the second case is the case of §11.\n"
-"\n"
-"Try toggling to editor mode and perhaps add a few blank lines at the bottom to see if you can see what case you are in.\n"
-"\n"
-"Alternatively, if you prefer to stay in typewriter mode, type §12 to add hypotheses §13 in the first case and §14 in the second case, which makes it clearer which case is listed first.\n"
-"\n"
-"Note this level comes with two pre-defined goals: the first is to define the negation function §15 and the second is to check that your definition is correct by calculating the values of the function you defined on the booleans §16 and §17."
 msgstr ""
 
 #. §0: `exact`
