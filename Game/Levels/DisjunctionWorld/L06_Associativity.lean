@@ -7,7 +7,7 @@ Title "Associativity"
 
 Introduction "Similarly, for propositions `P`, `Q`, and `R`, `(P ∨ Q) ∨ R` holds if and only if `P ∨ (Q ∨ R)` holds.
 
-Lean uses `P ∨ Q ∨ R` as an abbreviation for `P ∨ (Q ∨ R)`.
+Similarly to the conventions used for products, conjunctions, and coproducts, Lean uses `P ∨ Q ∨ R` as an abbreviation for `P ∨ (Q ∨ R)`.
 
 Given a hypothesis `h₁ : (P ∨ Q) ∨ R`, `cases h₁` will split the hypothesis into two cases: one assuming that `P ∨ Q` is true and the other assuming `R` is true.
 
@@ -15,7 +15,7 @@ Similarly given a hypothesis `h₂ : P ∨ Q ∨ R`, `cases h₂` the hypothesis
 
 Note the `rcases` tactic allows more general patterns of disjunctions. Given `h₁ : (P ∨ Q) ∨ R` try `rcases h₁ with (p | q) | r`. Similarly, given `h₂ : P ∨ Q ∨ R`, try `rcases h₂ with p | q | r`.
 
-Aside: typing `\\7` using any single digit number produces a subscript with that number, like `₇`.
+Aside: Typing `\\7` using any single digit number produces a subscript with that number, like `₇`. You can use this if you'd like to use numerical subscripts in your variable names.
 "
 
 /-- Or is associative: `(P ∨ Q) ∨ R` is true if and only if `P ∨ (Q ∨ R)` is true.-/
@@ -41,8 +41,4 @@ Statement {P Q R : Prop} : (P ∨ Q) ∨ R ↔ P ∨ Q ∨ R := by
   exact Or.inr hr
 
 Conclusion "This proves the associativity of disjunction.
-
-Note the `rcases` tactic allows more general patterns of disjunctions. Given `h : (P ∨ Q) ∨ R` try `rcases h with (p | q) | r`. Similarly, given `k : P ∨ Q ∨ R`, try `rcases k with p | q | r`.
 "
-
-/- Use these commands to add items to the game's inventory. -/

@@ -5,9 +5,11 @@ Level 9
 
 Title "Disjunction Boss Level"
 
-Introduction "We've now reached the Boss Level in the disjunction world.
+Introduction "We've now reached the Boss Level in the Disjunction World.
 
 This level illustrates that proofs by cases can be somewhat delicate.
+
+Have fun!
 "
 
 /-- If `T ∨ U → V ∧ Y` and `Q → P → T` and `Y → Q → W` and
@@ -29,4 +31,4 @@ Z := by
   have x := k.2 v r
   exact ⟨x, y⟩
 
-Conclusion "Move on to Coproduct World to learn about the type theoretic analog of the logical operation of disjunction."
+Conclusion "The next topic in our study of propositional logic is *negation*, which is used to assert that a proposition is false rather than true. But to help us understand it, move on to Empty World to learn about the empty type."

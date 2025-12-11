@@ -6,7 +6,7 @@ Level 8
 Title "Boss level"
 
 
-Introduction "For the boss level, your task is to:
+Introduction "For the Boss Level, your task is to:
 
 * break apart a function from a coproduct type into a product type into four separate component functions and
 
@@ -27,4 +27,4 @@ Statement {A B C D : Type} : ((A ⊕ B → C × D) → (A → C) × (B → C) ×
   exact ⟨f a, h a⟩
   exact ⟨g b, k b⟩
 
-Conclusion "Congratulations!"
+Conclusion "Next move on to Disjunction World to study the logical operation that is analogous to coproduct types."

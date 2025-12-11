@@ -35,6 +35,9 @@ Statement (preamble := refine let f := ?f; ⟨f, ?eq⟩) :
 
 Conclusion "Lean has a built in name `not` for this function. It is now in your library."
 
+/-- The type `Bool` is the type of booleans. It contains two elements, denoted `false` and `true`. -/
+DefinitionDoc Bool as "Bool" in "Type"
+
 /-- The negation function `Bool.not : Bool → Bool` sends the boolean `false` to `true` and `true` to `false`. -/
 DefinitionDoc Bool.not as "not" in "Bool"
 
@@ -45,4 +48,4 @@ DefinitionDoc Bool.false as "false" in "Bool"
 DefinitionDoc Bool.true as "true" in "Bool"
 
 
-NewDefinition Bool.not Bool.false Bool.true
+NewDefinition Bool Bool.not Bool.false Bool.true

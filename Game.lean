@@ -61,7 +61,7 @@ Languages "English"
 CaptionShort "ReintroToProofs"
 CaptionLong "Reintroduction to Proofs"
 -- Prerequisites "" -- add this if your game depends on other games
-CoverImage "images/blue-jay.jpg"
+CoverImage "images/blue-jay-curry-howard-blue.png"
 
 Dependency TypeWorld → FunctionWorld
 Dependency FunctionWorld → ImplicationWorld

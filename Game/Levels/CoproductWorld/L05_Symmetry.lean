@@ -6,6 +6,10 @@ Level 5
 Title "Symmetry"
 
 Introduction "The coproduct type, like the product type, is *symmetric*, and in particular has a canonical map of type `A ⊕ B → B ⊕ A`. Your task in this level is to define it.
+
+Use the elimination rule for coproduct types and the associated tactics `cases` or `rcases` to map out of the type `A ⊕ B`.
+
+Then use the introduction rules for coproduct types and the associated tactics `left` and `right` to map into the type `B ⊕ A`.
 "
 
 /-- For any types `A` and `B`, there is a canonical function of type `A ⊕ B → B ⊕ A`. -/
