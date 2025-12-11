@@ -1140,6 +1140,23 @@ msgid "Suppose §0 is a bijective function, meaning §1 is both injective and su
 "explain how to do so at that stage in the proof."
 msgstr ""
 
+#. §0: `Boss Level`
+#. §1: `assumption`
+#. §2: `exact`
+#. §3: `Type`
+#. §4: `Type`
+#: Game.Levels.TypeWorld.L07_BossLevel
+msgid "Each world will end with a §0, which is intended to be more challenging than the levels that came before.\n"
+"\n"
+"It is not so easy to design a challenging exercise involving only the tactics §1 and §2 but nevertheless, we will end with a puzzle that you may find interesting.\n"
+"\n"
+"Your task in this level, like in the previous level, is to define an element in the type §3.\n"
+"\n"
+"In the previous level, you were asked to do this in the empty context. Here our context contains certain assumptions which could potentially be used to make your task easier.\n"
+"\n"
+"You are allowed, if you insist, to solve this level in the same way you solved the previous level. But we challenge you to define a different element of the type §4 than you used previously."
+msgstr ""
+
 #: Game.Levels.ImplicationWorld.L01_ByAssumption
 msgid "By Assumption"
 msgstr ""
@@ -2499,23 +2516,6 @@ msgstr ""
 #: Game.Levels.ConjunctionWorld.L05_Associativity
 #: Game.Levels.ConjunctionWorld.L05_Associativity
 msgid "Think carefully about what §0 proves and what proofs can be extracted from this."
-msgstr ""
-
-#. §0: `Boss Level`
-#. §1: `assumption`
-#. §2: `exact`
-#. §3: `Type`
-#. §4: `Type`
-#: Game.Levels.TypeWorld.L07_BossLevel
-msgid "Each world will end with a §0, which is intended to be more challenging than the levels that came before.\n"
-"\n"
-"It is not so easy to design a challenging exercise involving only the tactics §1 and §2 but nevertheless, we will end with an interesting puzzle.\n"
-"\n"
-"Your task in this level, like in the previous level, is to define an element in the type §3.\n"
-"\n"
-"In the previous level, you were asked to do this in the empty context. Here our context contains certain assumptions which could potentially be used to make your task easier.\n"
-"\n"
-"You are allowed, if you insist, to solve this level in the same way you solved the previous level. But we challenge you to define a different element of the type §4 than you used previously."
 msgstr ""
 
 #. §0: `And.symm`
