@@ -46,12 +46,6 @@ TheoremDoc Bool.noConfusion as "noConfusion" in "Bool"
 
 NewTheorem Bool.noConfusion
 
-/-- The `let` tactic is like `have`, but for creating elements of types rather than proofs of propositions. The `let` tactic will add new elements to your context provided you can define them. For example, given elements `a : A` and `b : B`, you can type `let p : A × B := ⟨a, b⟩` to add their pair to the context or type `let f : A → B := fun _ ↦ b` to add the constant function at `b` to the context.
--/
-TacticDoc «let»
-
-NewTactic «let»
-
 /-- The proposition `False` has no elements. -/
 DefinitionDoc False as "False" in "Prop"
 

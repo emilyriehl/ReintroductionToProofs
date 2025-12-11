@@ -5,9 +5,16 @@ Level 2
 
 Title "First Projection"
 
-Introduction "The product type comes with *projection functions* of type `A × B → A` and `A × B → B` which take an element `p : A × B` and return the corresponding components from `A` and `B` respectively.
+Introduction "The elimination rules for product types tell us which elements can be constructed from an element `p : A × B`.
 
-In Lean, the elements defined by projecting from `p : A × B` are denoted `p.1 : A` and `p.2 : B`."
+There are two elimination rules: from an element `p : A × B`, we may extract an element of `A`, thought of as its first component, and also an element of `B`, thought of as its second component.
+
+In Lean, the elements defined by projecting from `p : A × B` are denoted `p.1 : A` and `p.2 : B` or `p.fst : A` and `p.snd : B`.
+
+These rules define *projection functions* of type `A × B → A` and `A × B → B`, which take an element `p : A × B` and return the corresponding components from `A` and `B` respectively.
+
+Your task in this level is to define the first projection function.
+"
 
 /-- Define the canonical function projecting from a product type to its first argument. -/
 Statement {A B : Type} : A × B → A:= by

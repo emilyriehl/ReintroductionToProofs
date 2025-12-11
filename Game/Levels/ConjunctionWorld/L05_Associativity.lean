@@ -12,7 +12,11 @@ Lean likes to drop parentheses whenever possible so uses `P ∧ Q ∧ R` as an a
 Given a proof `h : (P ∧ Q) ∧ R`, we obtain proofs `h.1 : P ∧ Q` and `h.2 : R`. From the first of these,
 we obtain further proofs `h.1.1 : P` and `h.1.2 : Q`.
 
-Similarly, given proofs `p : P`, `q : Q`, `r : R`, then `⟨⟨p, q⟩, r⟩ : (P ∧ Q) ∧ R` while `⟨p, ⟨q, r⟩⟩ : P ∧ (Q ∧ R)`. Lean allows the shorthand `⟨p, q, r⟩ : P ∧ Q ∧ R` for the latter proof.
+A proof `k : P ∧ (Q ∧ R)` can be decomposed similarly, using different notation. Now we have proofs `k.1 : P` and `k.2 : Q ∧ R` and the latter proof decomposes further as `k.2.1 : Q` and `k.2.2 : R`.
+
+Similarly, given proofs `p : P`, `q : Q`, `r : R`, then `⟨⟨p, q⟩, r⟩ : (P ∧ Q) ∧ R` while `⟨p, ⟨q, r⟩⟩ : P ∧ (Q ∧ R)` are proofs of the triple conjunction. Lean allows the shorthand `⟨p, q, r⟩ : P ∧ Q ∧ R` for the latter proof.
+
+Your goal in this level is to prove the associativity of conjunction.
 "
 
 /-- Conjunction is associative: `(P ∧ Q) ∧ R` is true if and only if `P ∧ (Q ∧ R)` is true. -/
@@ -38,6 +42,4 @@ Statement {P Q R : Prop} : (P ∧ Q) ∧ R ↔ P ∧ (Q ∧ R) := by
   exact k.2.1
   exact k.2.2
 
-Conclusion "Can you solve this level with only one use of the `constructor` tactic? In fact, even this can be avoided using syntax we have not yet introduced: a two line proof `intro s` followed by `exact t` can be written `fun s ↦ t` writing `\\mapsto` to type `↦`."
-
-/- Use these commands to add items to the game's inventory. -/
+Conclusion "To practice using the syntax for elements of conjunctions, try to solve this level with fewer uses of the `constructor` tactic. In fact, the `constructor` tactic can be avoided entirely by using expressions like `fun s ↦ t` to prove implications like `S → T`, writing `\\mapsto` to type `↦`."

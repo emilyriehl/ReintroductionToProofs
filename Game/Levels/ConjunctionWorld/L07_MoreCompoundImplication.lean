@@ -12,7 +12,7 @@ TheoremDoc And.uncurry as "uncurry" in "And"
 
 Introduction "In the previous level we proved that `P ∧ Q → R` implies `P → Q → R`.
 
-We now show that `(P → Q → R)` implies `P ∧ Q → R`.
+We now show that `P → Q → R` implies `P ∧ Q → R`.
 "
 
 /-- `P → Q → R` implies `P ∧ Q → R`. -/
@@ -25,8 +25,9 @@ Statement And.uncurry {P Q R : Prop} (h : P → Q → R) : P ∧ Q → R := by
   exact pq.1
   exact pq.2
 
-Conclusion "This proves that `(P → Q → R) → (P ∧ Q → R)`. We can now conclude that `P ∧ Q → R` and `P → Q → R` are logically equivalent."
+Conclusion "This proves the theorem `And.uncurry : (P → Q → R) → (P ∧ Q → R)`. In the next level, we will combine these results to show that `P ∧ Q → R` and `P → Q → R` are logically equivalent."
 
 /- Use these commands to add items to the game's inventory. -/
 
 NewTheorem And.uncurry
+DisabledTheorem And.uncurry

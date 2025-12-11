@@ -22,9 +22,11 @@ To understand how conjunctions work in logic we must learn:
 * How to prove theorems of the form `P ∧ Q`.
 * How to use a hypothesis of the form `P ∧ Q` to prove something else.
 
-To prove `P ∧ Q`, one must supply proofs `p : P` and `q : Q`, which can be done using the syntax `⟨p,q⟩ : P ∧ Q`. Use '\\\\<' and '\\\\>' to type the angle brackets.
+To prove `P ∧ Q`, one must supply proofs `p : P` and `q : Q`, which can be done using the syntax `⟨p,q⟩ : P ∧ Q`. Use `\\<` and `\\>` to type the angle brackets.
 
 If we have a proof `h : P ∧ Q` then we can extract proofs that `P` and `Q` are true using the syntax `h.1 : P` and `h.2 : Q`.
+
+Like the analogy between function types and implication, there is a close analogy between product types and the logical operation of conjunction.
 
 The reuse of the syntax we first introduced for product types is deliberate, as the introduction and elimination rules for conjunctions precisely mirror those introduced for product types.
 "

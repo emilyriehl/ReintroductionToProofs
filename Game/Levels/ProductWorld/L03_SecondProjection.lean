@@ -5,9 +5,13 @@ Level 3
 
 Title "Second Projection"
 
-Introduction "The product type comes with *projection functions* of type `A × B → A` and `A × B → B` which take an element `p : A × B` and return the corresponding components from `A` and `B` respectively.
+Introduction "
+The elimination rules for product types can be understood as defining *projection functions* of type `A × B → A` and `A × B → B` which take an element `p : A × B` and return the corresponding components from `A` and `B` respectively.
 
-In Lean, the elements defined by projecting from `p : A × B` are denoted `p.1 : A` and `p.2 : B`."
+In Lean, the elements defined by projecting from `p : A × B` are denoted `p.1 : A` and `p.2 : B` or `p.fst : A` and `p.snd : B`.
+
+Your task in this level is to define the second projection function.
+"
 
 /-- Define the canonical function projecting from a product type to its second argument. -/
 Statement {A B : Type} : A × B → B := by

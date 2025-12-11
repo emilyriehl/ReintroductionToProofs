@@ -5,15 +5,17 @@ Level 8
 
 Title "Component Functions"
 
-Introduction "We've seen that a function `f : A × B → C` out of a product can be regarded as a function of two variables `curry f : A → B → C`.
+Introduction "We've seen that a function `f : A × B → C` out of a product can be regarded as a function of two variables `Function.curry f : A → B → C`.
 
 How should we think about a function into a product?
 
-Given a function `f : X → A × B` from a type `X` into a product type `A × B` one can define a pair of functions with types `X → A` and `X → B` that for `x : X` record the values `(f x).1 : A` and `(f x).2 : B` defined by projecting the pair `f x : A × B` to its components.
+Consider a function `f : X → A × B` from a type `X` into a product type `A × B`.
 
-These might be called the *component functions* associated to `f : X → A × B`.
+From this data, one can define a pair of functions with types `X → A` and `X → B` that map an element `x : X` to the values `(f x).1 : A` and `(f x).2 : B` defined by projecting the pair `f x : A × B` to its components.
 
-Define a function that extracts the component functions associated to a function into a product.
+These functions are called the *component functions* associated to `f : X → A × B`.
+
+Your task in this level is to define a function that extracts the component functions associated to a function into a product type.
 "
 
 /-- A function into a product type has a pair of component functions. -/

@@ -21,4 +21,4 @@ Statement {P Q R S T U V W X Y Z : Prop} : P → (R → S ∧ T) → (U → P �
   intro u
   exact (g ⟨(f (h (k u p)).1).2, (h (k u p)).2 , (f (h (k u p)).1).1⟩).2
 
-Conclusion "Next move on to `Function World` to learn about types and functions."
+Conclusion "Next move on to Coproduct World to learn about another type forming operation, which is in some sense &ldquo;dual&rdquo; to product types."

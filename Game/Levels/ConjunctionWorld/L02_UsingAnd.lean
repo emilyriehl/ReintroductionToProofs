@@ -5,7 +5,9 @@ Level 2
 
 Title "Using And"
 
-Introduction "A hypothesis `h : P ∧ Q` provides explicit proofs of both `P` and `Q` which are denoted in Lean by `h.1 : P` and `h.2 : Q`."
+Introduction "A hypothesis `h : P ∧ Q` provides explicit proofs of both `P` and `Q` which are denoted in Lean by `h.1 : P` and `h.2 : Q`.
+
+Collectively, this expresses the pair of elimination rules for the logical operation of conjunction."
 
 /-- If `P ∧ Q` is true then `P ∧ Q` is true. -/
 Statement {P Q : Prop} (h : P ∧ Q) : P ∧ Q := by

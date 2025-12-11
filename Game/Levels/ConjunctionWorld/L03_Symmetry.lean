@@ -12,11 +12,15 @@ TheoremDoc And.symm as "symm" in "And"
 
 Introduction "If `P ∧ Q` is true, then `Q ∧ P` is too.
 
-In other words, `P ∧ Q` implies `Q ∧ P`, as is expressed by the proposition `P ∧ Q → Q ∧ P` which is implicitly parenthesized as `(P ∧ Q) → (Q ∧ P)`."
+In other words, `P ∧ Q` implies `Q ∧ P`, as is expressed by the proposition `P ∧ Q → Q ∧ P` which is implicitly parenthesized as `(P ∧ Q) → (Q ∧ P)`.
+
+In a compound proposition such as `P ∧ Q → Q ∧ P`, formed by iteratively applying logical connectives, the outermost logical connective (the one applied last in forming the proposition) often determines the overall proof strategy.
+
+Can you prove this?"
 
 /-- `P ∧ Q` implies `Q ∧ P`. -/
 Statement {P Q : Prop} : P ∧ Q → Q ∧ P := by
-  Hint (hidden := true) "In a compound proposition, the outermost logical connective (the one applied last in forming the proposition) often determines the overall proof strategy."
+  Hint (hidden := true) "Start by identifying the outermost logical connective and use the tactic corresponding to its introduction rule."
   intro h
   constructor
   Hint (hidden := true) "Note the goal window in the interactive theorem prover keeps track of exactly what proposition you are trying to prove."
@@ -31,3 +35,5 @@ In fact `P ∧ Q` is true if and only if `Q ∧ P` is true, as we will now demon
 TheoremTab "And"
 
 NewTheorem And.symm
+
+DisabledTheorem And.symm

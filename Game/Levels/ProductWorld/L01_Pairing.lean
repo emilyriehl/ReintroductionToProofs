@@ -5,13 +5,18 @@ Level 1
 
 Title "Pairing"
 
-Introduction "Given an element `a : A` and an element `b : B` there is a corresponding element of the product type `A × B` that is denoted by `⟨a , b⟩ : A × B`.
+Introduction "The introduction rule for product types tells us that elements of a product type `A × B` are formed by *pairing* elements of type `A` with elements of type `B`.
+
+Given an element `a : A` and an element `b : B` there is a corresponding element of the product type `A × B` that is denoted by `⟨a , b⟩ : A × B`.
 
 This element should be thought of as an *ordered pair* whose first component is the element `a : A` and whose second element is the element `b : B`.
 
-This can be input directly by typing `exact ⟨a,b⟩' using '\\\\<' and '\\\\>' to type the angle brackets; note the spacing around the angle brackets and the commas is not important.
+This can be input directly by typing `exact ⟨a,b⟩` using `\\<` and `\\>` to type the angle brackets; note the spacing around the angle brackets and the commas is not important.
 
-Alternatively, you can apply the `constructor` tactic which allows you to first input the first component and then input the second component."
+Alternatively, you can apply the `constructor` tactic which allows you to first input the first component and then input the second component.
+
+When the goal is a product type `A × B`, typing `constructor` will produce two goals, the first of which has type `A` and the second of which has type `B`.
+"
 
 /-- By pairing any element `a : A` with any element `b : B`, there is an element `⟨a, b⟩ : A × B`. -/
 Statement {A B : Type} (a : A) (b : B) : A × B := by
