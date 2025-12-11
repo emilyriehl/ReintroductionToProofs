@@ -17,7 +17,7 @@ Try toggling to editor mode and perhaps add a few blank lines at the bottom to s
 
 Alternatively, if you prefer to stay in typewriter mode, type `cases h : b` to add hypotheses `h : b = false` in the first case and `h : b = true` in the second case, which makes it clearer which case is listed first.
 
-Note this level comes with two pre-defined goals: the first is to define the negation function `Bool → Bool` and the second is to check that your definition is correct by calulating the values of the function you defined on the booleans `true` and `false`.
+Note this level comes with two pre-defined goals: the first is to define the negation function `Bool → Bool` and the second is to check that your definition is correct by calculating the values of the function you defined on the booleans `true` and `false`.
 "
 
 /-- The negation function `not : Bool → Bool` sends the boolean `false` to `true` and `true` to `false`. -/

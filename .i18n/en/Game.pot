@@ -3293,7 +3293,7 @@ msgid "We have seen that the logical operation of negation can be encoded as a f
 "\n"
 "We can similarly define a function §1 that encodes the logical operation of conjunction.\n"
 "\n"
-"Again, this level comes with two pre-defined goals: the first is to define the conjunction function §2 and the second is to check that your definition is correct by calulating the values of the function you defined on explicit pairs of booleans."
+"Again, this level comes with two pre-defined goals: the first is to define the conjunction function §2 and the second is to check that your definition is correct by calculating the values of the function you defined on explicit pairs of booleans."
 msgstr ""
 
 #. §0: `cases`
@@ -5672,7 +5672,7 @@ msgid "We have seen that the logical operation of negation can be encoded as a f
 "\n"
 "In this level, we will define a function §2 that encodes the logical operation of disjunction.\n"
 "\n"
-"Again, this level comes with two pre-defined goals: the first is to define the disjunction function §3 and the second is to check that your definition is correct by calulating the values of the function you defined on explicit pairs of booleans."
+"Again, this level comes with two pre-defined goals: the first is to define the disjunction function §3 and the second is to check that your definition is correct by calculating the values of the function you defined on explicit pairs of booleans."
 msgstr ""
 
 #. §0: `P`
@@ -7207,7 +7207,7 @@ msgid "Recall the type §0 of booleans has two elements denoted §1 and §2.\n"
 "\n"
 "Alternatively, if you prefer to stay in typewriter mode, type §12 to add hypotheses §13 in the first case and §14 in the second case, which makes it clearer which case is listed first.\n"
 "\n"
-"Note this level comes with two pre-defined goals: the first is to define the negation function §15 and the second is to check that your definition is correct by calulating the values of the function you defined on the booleans §16 and §17."
+"Note this level comes with two pre-defined goals: the first is to define the negation function §15 and the second is to check that your definition is correct by calculating the values of the function you defined on the booleans §16 and §17."
 msgstr ""
 
 #. §0: `exact`
