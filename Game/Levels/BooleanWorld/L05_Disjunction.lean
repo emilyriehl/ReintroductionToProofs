@@ -11,7 +11,7 @@ We have also defined a function `and : Bool → Bool → Bool` that encodes the 
 
 In this level, we will define a function `Bool → Bool → Bool` that encodes the logical operation of disjunction.
 
-Again, this level comes with two pre-defined goals: the first is to define the disjunction function `Bool → Bool → Bool` and the second is to check that your definition is correct by calulating the values of the function you defined on explicit pairs of booleans.
+Again, this level comes with two pre-defined goals: the first is to define the disjunction function `Bool → Bool → Bool` and the second is to check that your definition is correct by calculating the values of the function you defined on explicit pairs of booleans.
 "
 
 /-- There is a function `or : Bool → Bool → Bool` that captures the logical operation of conjunction. -/
