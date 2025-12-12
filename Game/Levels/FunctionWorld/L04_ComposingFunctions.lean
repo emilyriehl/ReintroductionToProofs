@@ -33,7 +33,7 @@ Given `x : A`, `(g ∘ f) x` is defined to be the element `g (f x)`, which is wh
 Try solving this level with `exact g ∘ f`."
 
 /--
-Given functions `f : A → B` and `g : B → C`, the *composite function* `g ∘ f : A → C` is defined to send `x : A` to the element `g (f x)`.
+Given functions `f : A → B` and `g : B → C`, the *composite function* `g ∘ f : A → C` is defined to send `x : A` to the element `g (f x)`. *Composition* itself defines a function `Function.comp : (B → C) → (A → B) → (A → C)` between function types.
 -/
 DefinitionDoc circ as "∘" in "Function"
 

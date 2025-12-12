@@ -21,11 +21,13 @@ Statement {A : Type} : Empty → A := by
 
 Conclusion "Lean has a built-in name `Empty.elim : Empty → A` for the function you have just defined. Thus `exact Empty.elim` will also solve this level. This function has been added to the library."
 
--- DefinitionTab "Empty"
+
+/-- The empty type `Empty` has no introduction rules. It is an inductive type, meaning that it is in some sense *freely generated* by the elements provided by its introduction rules. In this case, this means that the elimination rule provides a canonical function `Empty.elim : Empty → A` valued in any type `A`. -/
+DefinitionDoc Empty as "Empty" in "Type"
 
 /--
 For any type `A`, there is a function `Empty.elim : Empty → A` expressing the elimination rule of the empty type.
 -/
 DefinitionDoc Empty.elim as "Empty.elim" in "Empty"
 
-NewDefinition Empty.elim
+NewDefinition Empty Empty.elim

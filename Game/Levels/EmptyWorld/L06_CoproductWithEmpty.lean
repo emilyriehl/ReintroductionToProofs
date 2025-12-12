@@ -16,6 +16,8 @@ But the empty type does not have any elements. So this second case does not exis
 It follows that the type `A ⊕ Empty` is *equivalent* to the type `A` in a sense we cannot yet make precise.
 
 But we can at least show that there are functions `A → A ⊕ Empty` and `A ⊕ Empty → A`.
+
+Your task in this level is to define these functions.
 "
 
 /-- For any type `A`, there are functions in both directions between the types `A` and `A ⊕ Empty`. -/

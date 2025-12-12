@@ -12,6 +12,8 @@ By contrast, if there is a function `f : A → Empty` from `A` to the empty type
 We do not have all the tools needed to define equivalence of types just yet, so in this level we observe something else.
 
 We will see that if there is a function `f : A → Empty` and if there is an element `a : A`, then we get an element of the empty type, which is very strange indeed!
+
+Can you construct this element?
 "
 
 /-- For any type `A`, if there is a function `f : A → Empty` and there is an element `a : A`, then there is an element of the `Empty` type. -/

@@ -1,7 +1,7 @@
 msgid ""
 msgstr "Project-Id-Version: Game v4.23.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-12-11\n"
+"POT-Creation-Date: 2025-12-12\n"
 "Last-Translator: \n"
 "Language-Team: none\n"
 "Language: en\n"
@@ -537,7 +537,7 @@ msgid "Any type §0 has a family of propositions §1 given by the equality types
 "The final statement §32 is just true for any type. Your objective in this level is to prove this."
 msgstr ""
 
-#: Game.Levels.FunctionWorld.L07_SwappingInputs
+#: Game.Levels.FunctionWorld.L07_FlippingInputs
 msgid "From a function of two variables, define another function of two variables, where the inputs are swapped."
 msgstr ""
 
@@ -577,31 +577,6 @@ msgstr ""
 
 #. §0: `A`
 #. §1: `B`
-#. §2: `C`
-#. §3: `∘ : (B → C) → (A → B) → (A → C)`
-#. §4: `C`
-#. §5: `∘ : (B → Empty) → (A → B) → (A → Empty)`
-#. §6: `(A → B) → (B → Empty) → (A → Empty)`
-#: Game.Levels.EmptyWorld.L04_Composition
-msgid "In this level, we will revisit the composition function in the presence of the empty type.\n"
-"\n"
-"Recall that for any types §0, §1, and §2, composition defines a function:\n"
-"\n"
-"§3.\n"
-"\n"
-"In particular, if §4 is the empty type, composition defines a function:\n"
-"\n"
-"§5.\n"
-"\n"
-"Your task in this level is to define the closely related variant of the composition function which has type:\n"
-"\n"
-"§6\n"
-"\n"
-"as this construction will be analogous to something we will encounter in the next world."
-msgstr ""
-
-#. §0: `A`
-#. §1: `B`
 #. §2: `f : A → Empty`
 #. §3: `A → B`
 #: Game.Levels.EmptyWorld.L03_ThroughEmpty
@@ -617,6 +592,18 @@ msgstr ""
 #: Game.Levels.NaturalNumbersWorld.L06_AddingZero
 #: Game.Levels.NaturalNumbersWorld.L07_AddingSuccessors
 msgid "The second half of this proves the theorem §0, which is now in your library."
+msgstr ""
+
+#. §0: `A`
+#. §1: `B`
+#. §2: `C`
+#. §3: `
+#. flip Function.comp : (A → B) → (B → C) → (A → C)`
+#. §4: `C`
+#. §5: `Empty`
+#. §6: `exact flip Function.comp`
+#: Game.Levels.EmptyWorld.L04_Composition
+msgid "For any types §0, §1, and §2, we have the function §3 defined by exchanging the inputs. This specializes in the case where §4 is the type §5 to define the function we seek here. Indeed, this level can be solved with §6. Does this perspective make this construction feel less strange?"
 msgstr ""
 
 #: Game.Levels.NegationWorld.L07_NegatingImplication
@@ -768,6 +755,18 @@ msgstr ""
 #. §2: `∀ x : A, ∃ y : B, P x y`
 #: Game.Levels.QuantifierWorld.L06_CommutingQuantifiers
 msgid "Given a family of propositions §0, §1implies §2"
+msgstr ""
+
+#. §0: `A`
+#. §1: `B`
+#. §2: `C`
+#. §3: `f : A → B → C`
+#. §4: `flip f : B → A → C`
+#. §5: `b : B`
+#. §6: `a : A`
+#. §7: `f a b : C`
+#: Game.Levels.FunctionWorld.L07_FlippingInputs
+msgid "For any types §0, §1, and §2 and function §3, §4 is the function that carries §5 and §6 to §7."
 msgstr ""
 
 #. §0: `«{A}»`
@@ -1010,7 +1009,6 @@ msgstr ""
 msgid "§0 implies §1."
 msgstr ""
 
-#: Game.Levels.FunctionWorld.L07_SwappingInputs
 #: Game.Levels.EquivalenceWorld.L03_SwappingInputs
 msgid "Swapping Inputs"
 msgstr ""
@@ -1285,15 +1283,6 @@ msgid "In this world, we will introduce the type §0 of natural numbers.\n"
 "The type-theoretic definition of §17 closely resembles Peano's first, second, and fifth axioms and in fact implies the other two, as we will see by the end of this world."
 msgstr ""
 
-#. §0: `f : A → B`
-#. §1: `g : B → C`
-#. §2: `g ∘ f : A → C`
-#. §3: `x : A`
-#. §4: `g (f x)`
-#: Game.Levels.FunctionWorld.L04_ComposingFunctions
-msgid "Given functions §0 and §1, the *composite function* §2 is defined to send §3 to the element §4."
-msgstr ""
-
 #. §0: `g : A → C`
 #. §1: `h : B → C`
 #. §2: `A ⊕ B → C`
@@ -1428,6 +1417,10 @@ msgstr ""
 #. §1: `«{p}» : «{P}»`
 #: Game.Levels.ImplicationWorld.L05_ProvingImplication
 msgid "Now the goal is to prove §0 assuming §1. Which tactic can be used to supply this proof?"
+msgstr ""
+
+#: Game.Levels.FunctionWorld.L07_FlippingInputs
+msgid "Flipping Inputs"
 msgstr ""
 
 #. §0: `P`
@@ -1834,12 +1827,6 @@ msgstr ""
 #. §3: `Empty`
 #: Game.Levels.EmptyWorld.L02_ToEmpty
 msgid "For any type §0, if there is a function §1 and there is an element §2, then there is an element of the §3 type."
-msgstr ""
-
-#. §0: `A`
-#. §1: `A → Empty`
-#: Game.Levels.EmptyWorld.L03_ThroughEmpty
-msgid "Again, something very strange happens if the types §0 and §1 both have elements."
 msgstr ""
 
 #. §0: `A ⊕ B → C × D`
@@ -2416,6 +2403,31 @@ msgid "In this level, we will explore another weird consequence of the hypothesi
 "The proof requires a bit of cleverness, but you can ask for a few hints if you get stuck."
 msgstr ""
 
+#. §0: `A → B → C`
+#. §1: `f : A → B → C`
+#. §2: `a : A`
+#. §3: `b : B`
+#. §4: `f a b : C`
+#. §5: `f`
+#. §6: `a`
+#. §7: `b`
+#. §8: `A → B → C`
+#. §9: `B → A → C`
+#. §10: `A → B → C`
+#. §11: `B`
+#. §12: `A`
+#. §13: `C`
+#. §14: `intro f b a`
+#: Game.Levels.FunctionWorld.L07_FlippingInputs
+msgid "Recall that an element of type §0 can be thought of as a function of two variables.\n"
+"\n"
+"Given §1, §2, and §3, §4 denotes §5 applied first to §6 and then to §7.\n"
+"\n"
+"From a function of type §8, we can define a function of type §9 by exchanging the order of the variables that are input into the function.\n"
+"\n"
+"Here the goal is a multivariable function type that takes three inputs &mdash; of types §10 and §11 and §12 &mdash; and returns one ouput, of type §13. If you like, you can start with §14 to introduce all three variables at once."
+msgstr ""
+
 #. §0: `x = x`
 #. §1: `x : A`
 #. §2: `x = y`
@@ -2548,31 +2560,6 @@ msgstr ""
 msgid "Alternatively, you could prove lemmas by §0 and then use rewrites to convert the goal into one where you can apply the hypothesis §1. Because the lemmas hold by definitional equality, you were able to skip that step."
 msgstr ""
 
-#. §0: `A → B → C`
-#. §1: `f : A → B → C`
-#. §2: `a : A`
-#. §3: `b : B`
-#. §4: `f a b : C`
-#. §5: `f`
-#. §6: `a`
-#. §7: `b`
-#. §8: `A → B → C`
-#. §9: `B → A → C`
-#. §10: `A → B → C`
-#. §11: `B`
-#. §12: `A`
-#. §13: `C`
-#. §14: `intro f b a`
-#: Game.Levels.FunctionWorld.L07_SwappingInputs
-msgid "Recall that an element of type §0 can be thought of as a function of two variables.\n"
-"\n"
-"Given §1, §2, and §3, §4 denotes §5 applied first to §6 and then to §7.\n"
-"\n"
-"From a function of type §8, we can define a function of type §9 by swapping the order of the variables that are input into the function.\n"
-"\n"
-"Here the goal is a multivariable function type that takes three inputs &mdash; of types §10 and §11 and §12 &mdash; and returns one ouput, of type §13. If you like, you can start with §14 to introduce all three variables at once."
-msgstr ""
-
 #: Game.Levels.AdvancedFunctionWorld.L10_InverseInvertibility
 msgid "Inverse Invertibility"
 msgstr ""
@@ -2653,6 +2640,16 @@ msgid "The proof you have just constructed is now recorded as a theorem called �
 "In fact §1 is true if and only if §2 is true, as we will now demonstrate."
 msgstr ""
 
+#. §0: `X`
+#. §1: `A`
+#. §2: `B`
+#. §3: `X → A × B`
+#. §4: `(X → A) × (X → B)`
+#: Game.Levels.EquivalenceWorld.L05_ComponentFunctions
+#: Game.Levels.EquivalenceWorld.L06_MoreComponentFunctions
+msgid "For any types §0, §1, and §2, the types §3 and §4 are equivalent."
+msgstr ""
+
 #. §0: `intro p`
 #. §1: `p : A × B`
 #: Game.Levels.ProductWorld.L02_FirstProjection
@@ -2669,16 +2666,6 @@ msgstr ""
 #: Game.Levels.BooleanWorld.L06_DisjunctionSymmetry
 #: Game.Levels.BooleanWorld.L07_DeMorgan
 msgid "Recall §0 and §1 may make it clearer which cases are which."
-msgstr ""
-
-#. §0: `X`
-#. §1: `A`
-#. §2: `B`
-#. §3: `X → A × B`
-#. §4: `(X → A) × (X → B)`
-#: Game.Levels.EquivalenceWorld.L05_ComponentFunctions
-#: Game.Levels.EquivalenceWorld.L06_MoreComponentFunctions
-msgid "For any types §0, §1, and §2, the types §3 and §4 are equivalent."
 msgstr ""
 
 #: Game.Levels.DisjunctionWorld.L02_AndImpliesOr
@@ -2994,6 +2981,12 @@ msgid "Note this level can be solved in one line with\n"
 "§0. Can you make sense of this proof?"
 msgstr ""
 
+#. §0: `let e := «{f}» «{a}»`
+#. §1: `let e : Empty := «{f}» «{a}»`
+#: Game.Levels.EmptyWorld.L03_ThroughEmpty
+msgid "Use §0 or §1 to add an element of the empty type to the list of assumptions."
+msgstr ""
+
 #. §0: `f : A → B`
 #. §1: `x y : A`
 #. §2: `p : x = y`
@@ -3145,6 +3138,39 @@ msgstr ""
 msgid "To use the built in function §0 to change the goal from §1 to §2 type §3."
 msgstr ""
 
+#. §0: `Empty`
+#. §1: `Empty`
+#. §2: `A`
+#. §3: `A`
+#. §4: `Empty.elim : Empty → A`
+#. §5: `Empty → A`
+#. §6: `X`
+#. §7: `A`
+#. §8: `x : X`
+#. §9: `A`
+#. §10: `Empty`
+#. §11: `A`
+#. §12: `Empty`
+#: Game.Levels.EmptyWorld
+msgid "In this world, we will introduce the *empty type*, which is commonly denoted by §0 in Lean.\n"
+"\n"
+"In general, types are characterized by:\n"
+"* Introduction rules: which explain how to construct elements of the given type.\n"
+"* Elimination rules: which explain how to use elements of the given type to construct elements of other types.\n"
+"\n"
+"In the case of the empty type, there are no introduction rules. This corresponds colloquially to the idea that the empty type has &ldquo;no elements.&rdquo;\n"
+"\n"
+"The elimination rule for the empty type defines a function from §1 to any other type §2, with no obligations on the type §3. This provides a canonical element §4 of the function type.\n"
+"\n"
+"There is another way to understand why the type §5 should always have an element.\n"
+"\n"
+"In order to define a function from a type §6 to a type §7 one must fulfill the following obligation: for each §8 one must specify an element of type §9.\n"
+"\n"
+"In the case of a function from the type §10 to a type §11, there are no obligations because the empty type has no elements.\n"
+"\n"
+"In this world, we will explore constructions involving the §12 type."
+msgstr ""
+
 #. §0: `P`
 #. §1: `Q`
 #. §2: `R`
@@ -3250,10 +3276,6 @@ msgstr ""
 
 #: Game.Levels.AdvancedFunctionWorld.L02_Surjectivity
 msgid "Surjectivity"
-msgstr ""
-
-#: Game.Levels.EmptyWorld.L04_Composition
-msgid "Does this construction feel intuitive or does it feel strange?"
 msgstr ""
 
 #. §0: `intro n`
@@ -3466,12 +3488,6 @@ msgstr ""
 
 #: Game.Levels.ClassicalWorld.L02_ExcludedMiddle
 msgid "Excluded Middle"
-msgstr ""
-
-#: Game.Levels.EmptyWorld.L07_BossLevel
-msgid "For the Boss Level of Empty World, we construct something that is just weird.\n"
-"\n"
-"Have fun!"
 msgstr ""
 
 #: Game.Levels.ImplicationWorld.L09_ModusPonensAgain
@@ -3695,6 +3711,18 @@ msgstr ""
 msgid "Think about where the contradiction will ultimately arise from."
 msgstr ""
 
+#: Game.Levels.EmptyWorld.L07_BossLevel
+msgid "For the Boss Level of Empty World, we construct something that is just weird.\n"
+"\n"
+"Your challenge is to define functions in both directions between types that are formed by iteratively applying certain type forming operations to the empty type.\n"
+"\n"
+"Interestingly each of these types has an element, which can be used to define the functions if you wish.\n"
+"\n"
+"There are other strategies to defining the funtions as well, so you may enjoy trying to solve this level in multiple ways.\n"
+"\n"
+"Have fun!"
+msgstr ""
+
 #. §0: `∃ (x : A), P x`
 #. §1: `use`
 #. §2: `a : A`
@@ -3805,7 +3833,7 @@ msgid "Conjunction World"
 msgstr ""
 
 #. §0: `«{f}»`
-#: Game.Levels.FunctionWorld.L07_SwappingInputs
+#: Game.Levels.FunctionWorld.L07_FlippingInputs
 msgid "Look carefully at the order of the arguments of §0."
 msgstr ""
 
@@ -3849,6 +3877,16 @@ msgid "We have seen that the implication §0 implies the implication §1.\n"
 "That means, arguing classically, we can prove that §4 implies §5.\n"
 "\n"
 "Can you figure out how to prove this?"
+msgstr ""
+
+#. §0: `f : A → B`
+#. §1: `g : B → C`
+#. §2: `g ∘ f : A → C`
+#. §3: `x : A`
+#. §4: `g (f x)`
+#. §5: `Function.comp : (B → C) → (A → B) → (A → C)`
+#: Game.Levels.FunctionWorld.L04_ComposingFunctions
+msgid "Given functions §0 and §1, the *composite function* §2 is defined to send §3 to the element §4. *Composition* itself defines a function §5 between function types."
 msgstr ""
 
 #. §0: `«{c}».1`
@@ -4759,9 +4797,9 @@ msgid "Can we apply our hypothesis now?"
 msgstr ""
 
 #. §0: `intro`
-#: Game.Levels.FunctionWorld.L07_SwappingInputs
-#: Game.Levels.FunctionWorld.L07_SwappingInputs
-#: Game.Levels.FunctionWorld.L07_SwappingInputs
+#: Game.Levels.FunctionWorld.L07_FlippingInputs
+#: Game.Levels.FunctionWorld.L07_FlippingInputs
+#: Game.Levels.FunctionWorld.L07_FlippingInputs
 #: Game.Levels.FunctionWorld.L09_Evaluation
 #: Game.Levels.FunctionWorld.L09_Evaluation
 msgid "When in doubt, start defining a function by using the tactic §0 followed by your preferred variable name."
@@ -5071,6 +5109,13 @@ msgstr ""
 msgid "Symmetry"
 msgstr ""
 
+#. §0: `Empty`
+#. §1: `Empty.elim : Empty → A`
+#. §2: `A`
+#: Game.Levels.EmptyWorld.L01_FromEmpty
+msgid "The empty type §0 has no introduction rules. It is an inductive type, meaning that it is in some sense *freely generated* by the elements provided by its introduction rules. In this case, this means that the elimination rule provides a canonical function §1 valued in any type §2."
+msgstr ""
+
 #: Game.Levels.NegationWorld.L09_NegatingConjunction
 #: Game.Levels.ClassicalWorld.L04_NegatingConjunction
 msgid "Negating Conjunction"
@@ -5360,6 +5405,36 @@ msgstr ""
 #. §2: `↦`
 #: Game.Levels.ImplicationWorld.L06_ProvingImpliedAssumption
 msgid "The proof of an implication constructs a function which converts a proof of the first proposition into a proof of the second function. Try solving this level again by typing §0, using §1 to type the §2 symbol."
+msgstr ""
+
+#. §0: `A`
+#. §1: `B`
+#. §2: `A ⊕ B`
+#. §3: `A`
+#. §4: `A ⊕ Empty`
+#. §5: `A ⊕ Empty`
+#. §6: `Sum.inl a`
+#. §7: `a : A`
+#. §8: `Sum.inr x`
+#. §9: `x : Empty`
+#. §10: `A ⊕ Empty`
+#. §11: `A`
+#. §12: `A → A ⊕ Empty`
+#. §13: `A ⊕ Empty → A`
+#: Game.Levels.EmptyWorld.L06_CoproductWithEmpty
+msgid "Recall that for any types §0 and §1, there is a *coproduct type* denoted §2.\n"
+"\n"
+"In particular, for any type §3, we may form the product §4 with the empty type.\n"
+"\n"
+"In general, coproduct types like §5 have two types of elements: those of the form §6 for some §7 and those of the form §8 for §9.\n"
+"\n"
+"But the empty type does not have any elements. So this second case does not exist.\n"
+"\n"
+"It follows that the type §10 is *equivalent* to the type §11 in a sense we cannot yet make precise.\n"
+"\n"
+"But we can at least show that there are functions §12 and §13.\n"
+"\n"
+"Your task in this level is to define these functions."
 msgstr ""
 
 #. §0: `P ∧ Q`
@@ -5900,8 +5975,8 @@ msgstr ""
 #. §0: `f : A → B → C`
 #. §1: `A`
 #. §2: `B`
-#. §3: `swap f : B → A → C`
-#: Game.Levels.FunctionWorld.L07_SwappingInputs
+#. §3: `flip f : B → A → C`
+#: Game.Levels.FunctionWorld.L07_FlippingInputs
 msgid "Note that for a particular multvariable function §0, its type dictates that the variable of type §1 must be supplied before the variable of type §2. But as observed in this level, we can then define a corresponding function §3 which encodes the same information."
 msgstr ""
 
@@ -5931,6 +6006,11 @@ msgstr ""
 msgid "Can we apply our hypothesis yet or must we act on the goal first?"
 msgstr ""
 
+#. §0: `A → Empty`
+#: Game.Levels.EmptyWorld.L03_ThroughEmpty
+msgid "This level illustrates another strange construction that can be made from an element of type §0."
+msgstr ""
+
 #. §0: `x y : Unit`
 #. §1: `x = y`
 #: Game.Levels.EqualityWorld.L07_UnitProposition
@@ -5949,6 +6029,27 @@ msgstr ""
 msgid "In the previous level we proved that §0 implies §1.\n"
 "\n"
 "We now show that §2 implies §3."
+msgstr ""
+
+#. §0: `A`
+#. §1: `Empty.elim : Empty → A`
+#. §2: `f : A → Empty`
+#. §3: `A`
+#. §4: `Empty`
+#. §5: `A`
+#. §6: `A`
+#. §7: `f : A → Empty`
+#. §8: `a : A`
+#: Game.Levels.EmptyWorld.L02_ToEmpty
+msgid "We have seen that any type §0 has a function from the empty type §1.\n"
+"\n"
+"By contrast, if there is a function §2 from §3 to the empty type §4 then §5 must be very special: this is only possible if §6 is *equivalent* to the empty type.\n"
+"\n"
+"We do not have all the tools needed to define equivalence of types just yet, so in this level we observe something else.\n"
+"\n"
+"We will see that if there is a function §7 and if there is an element §8, then we get an element of the empty type, which is very strange indeed!\n"
+"\n"
+"Can you construct this element?"
 msgstr ""
 
 #. §0: `Nat.pred : ℕ → ℕ`
@@ -6497,34 +6598,6 @@ msgstr ""
 msgid "Equality World"
 msgstr ""
 
-#. §0: `A`
-#. §1: `B`
-#. §2: `A ⊕ B`
-#. §3: `A`
-#. §4: `A ⊕ Empty`
-#. §5: `A ⊕ Empty`
-#. §6: `Sum.inl a`
-#. §7: `a : A`
-#. §8: `Sum.inr x`
-#. §9: `x : Empty`
-#. §10: `A ⊕ Empty`
-#. §11: `A`
-#. §12: `A → A ⊕ Empty`
-#. §13: `A ⊕ Empty → A`
-#: Game.Levels.EmptyWorld.L06_CoproductWithEmpty
-msgid "Recall that for any types §0 and §1, there is a *coproduct type* denoted §2.\n"
-"\n"
-"In particular, for any type §3, we may form the product §4 with the empty type.\n"
-"\n"
-"In general, coproduct types like §5 have two types of elements: those of the form §6 for some §7 and those of the form §8 for §9.\n"
-"\n"
-"But the empty type does not have any elements. So this second case does not exist.\n"
-"\n"
-"It follows that the type §10 is *equivalent* to the type §11 in a sense we cannot yet make precise.\n"
-"\n"
-"But we can at least show that there are functions §12 and §13."
-msgstr ""
-
 #. §0: `false`
 #. §1: `Empty`
 #. §2: `true`
@@ -6702,6 +6775,31 @@ msgstr ""
 #. §6: `q : Q`
 #: Game.Levels.CoproductWorld.L04_UniversalProperty
 msgid "§0 is a tactic that will perform §1 recursively, according to a pattern. One use is to provide explicit names for variables in each subgoal. For example, given a hypothesis §2, §3 can be used in place of §4 to give hypotheses §5 in the first case and §6."
+msgstr ""
+
+#. §0: `A`
+#. §1: `B`
+#. §2: `C`
+#. §3: `Function.comp : (B → C) → (A → B) → (A → C)`
+#. §4: `C`
+#. §5: `Function.comp : (B → Empty) → (A → B) → (A → Empty)`
+#. §6: `(A → B) → (B → Empty) → (A → Empty)`
+#: Game.Levels.EmptyWorld.L04_Composition
+msgid "In this level, we will revisit the composition function in the presence of the empty type.\n"
+"\n"
+"Recall that for any types §0, §1, and §2, composition defines a function:\n"
+"\n"
+"§3.\n"
+"\n"
+"In particular, if §4 is the empty type, composition defines a function:\n"
+"\n"
+"§5.\n"
+"\n"
+"Your task in this level is to define the closely related variant of the composition function which has type:\n"
+"\n"
+"§6\n"
+"\n"
+"This construction will be analogous to something we will encounter in Negation World."
 msgstr ""
 
 #. §0: `g : B → A`
@@ -7097,11 +7195,6 @@ msgstr ""
 msgid "To use the law of excluded middle in your proof, type §0 to add an assumption that §1 is true."
 msgstr ""
 
-#. §0: `have := «{f}» «{a}»`
-#: Game.Levels.EmptyWorld.L03_ThroughEmpty
-msgid "Use §0 to add an element of the empty type to the list of assumptions."
-msgstr ""
-
 #. §0: `«{Q}» ∨ «{P}»`
 #: Game.Levels.DisjunctionWorld.L03_UsingOr
 msgid "Note now that Lean provides two goals, both of which are to prove that §0 is true, under two different hypothesies. Your first task is to prove the theorem in the first case."
@@ -7340,39 +7433,6 @@ msgstr ""
 #. §0: `rfl`
 #: Game.Levels.NaturalNumbersWorld.L03_Induction
 msgid "Recall arithmetical equations involving numerals can be proven with §0."
-msgstr ""
-
-#. §0: `Empty`
-#. §1: `Empty`
-#. §2: `A`
-#. §3: `A`
-#. §4: `Empty.elim : Empty → A`
-#. §5: `Empty → A`
-#. §6: `X`
-#. §7: `A`
-#. §8: `x : X`
-#. §9: `A`
-#. §10: `Empty`
-#. §11: `A`
-#. §12: `Empty`
-#: Game.Levels.EmptyWorld
-msgid "In this world, we will introduce the *empty type*, which is commonly denoted by §0 in Lean.\n"
-"\n"
-"In general, types can be characterized by:\n"
-"* Introduction rules: which explain how to construct elements of the given type.\n"
-"* Elimination rules: which explain how to use elements of the given type to construct elements of other types.\n"
-"\n"
-"In the case of the empty type, there are no introduction rules. This corresponds colloquially to the idea that the empty type has &ldquo;no elements.&rdquo;\n"
-"\n"
-"The elimination rule for the empty type defines a function from the §1 type to any other type §2, with no obligations on the type §3. This provides a canonical element §4 of the function type.\n"
-"\n"
-"There is another way to understand why the type §5 should always have an element.\n"
-"\n"
-"In order to define a function from a type §6 to a type §7 one must fulfill the following obligation: for each §8 one must specify an element of type §9.\n"
-"\n"
-"In the case of a function from the type §10 to a type §11, there are no obligations because the empty type has no elements.\n"
-"\n"
-"In this world, we will explore constructions involving the §12 type."
 msgstr ""
 
 #. §0: `exact`
@@ -8094,25 +8154,6 @@ msgstr ""
 #. §4: `apply False.elim`
 #: Game.Levels.AdvancedFunctionWorld.L05_Injectivity
 msgid "This case is considerably more difficult than the previous one because your goal is to prove that §0. But you may recall from Boolean world that we can prove §1 and §2. This suggests that the only way we will be able to prove §3 is by finding a contradition among our hypothesis. To set up this proof strategy, type §4.   "
-msgstr ""
-
-#. §0: `A`
-#. §1: `Empty.elim : Empty → A`
-#. §2: `f : A → Empty`
-#. §3: `A`
-#. §4: `Empty`
-#. §5: `A`
-#. §6: `A`
-#. §7: `f : A → Empty`
-#. §8: `a : A`
-#: Game.Levels.EmptyWorld.L02_ToEmpty
-msgid "We have seen that any type §0 has a function from the empty type §1.\n"
-"\n"
-"By contrast, if there is a function §2 from §3 to the empty type §4 then §5 must be very special: this is only possible if §6 is *equivalent* to the empty type.\n"
-"\n"
-"We do not have all the tools needed to define equivalence of types just yet, so in this level we observe something else.\n"
-"\n"
-"We will see that if there is a function §7 and if there is an element §8, then we get an element of the empty type, which is very strange indeed!"
 msgstr ""
 
 #. §0: `a : A`

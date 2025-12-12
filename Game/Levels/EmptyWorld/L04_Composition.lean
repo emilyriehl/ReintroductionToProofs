@@ -9,17 +9,17 @@ Introduction "In this level, we will revisit the composition function in the pre
 
 Recall that for any types `A`, `B`, and `C`, composition defines a function:
 
-`∘ : (B → C) → (A → B) → (A → C)`.
+`Function.comp : (B → C) → (A → B) → (A → C)`.
 
 In particular, if `C` is the empty type, composition defines a function:
 
-`∘ : (B → Empty) → (A → B) → (A → Empty)`.
+`Function.comp : (B → Empty) → (A → B) → (A → Empty)`.
 
 Your task in this level is to define the closely related variant of the composition function which has type:
 
 `(A → B) → (B → Empty) → (A → Empty)`
 
-as this construction will be analogous to something we will encounter in the next world.
+This construction will be analogous to something we will encounter in Negation World.
 "
 
 /-- For any types `A` and `B`, there is a function `(A → B) → (B → Empty) → (A → Empty)` defined by composition. -/
@@ -29,4 +29,5 @@ Statement {A B : Type} : (A → B) → (B → Empty) → (A → Empty) := by
   intro a
   exact nb (f a)
 
-Conclusion "Does this construction feel intuitive or does it feel strange?"
+Conclusion "For any types `A`, `B`, and `C`, we have the function `
+flip Function.comp : (A → B) → (B → C) → (A → C)` defined by exchanging the inputs. This specializes in the case where `C` is the type `Empty` to define the function we seek here. Indeed, this level can be solved with `exact flip Function.comp`. Does this perspective make this construction feel less strange?"

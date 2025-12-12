@@ -7,6 +7,12 @@ Title "Boss Level"
 
 Introduction "For the Boss Level of Empty World, we construct something that is just weird.
 
+Your challenge is to define functions in both directions between types that are formed by iteratively applying certain type forming operations to the empty type.
+
+Interestingly each of these types has an element, which can be used to define the functions if you wish.
+
+There are other strategies to defining the funtions as well, so you may enjoy trying to solve this level in multiple ways.
+
 Have fun!
 "
 
