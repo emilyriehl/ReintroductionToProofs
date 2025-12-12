@@ -16,7 +16,7 @@ Firstly, both of these are elements of the same type, namely `A × B`. Thus, the
 In this case one of the *computation rules* for product types tells us that the proposition
  `p = ⟨p.1, p.2⟩` is true, essentially by definition of the projection and pairing functions associated to products. Thus the proof is again by reflexivity and we have `rfl : p = ⟨p.1, p.2⟩`.
 
-Note Lean uses `p.fst` and `p.snd` as synomyms for `p.1` and `p.2` respectively."
+Note Lean uses `p.fst` and `p.snd` as synonyms for `p.1` and `p.2` respectively."
 
 /-- A term `p : A × B` in a product type is definitionally equal to the pairing of its projections `⟨p.1, p.2⟩`. -/
 Statement {A B : Type} (p : A × B) : p = ⟨p.1, p.2⟩ := by

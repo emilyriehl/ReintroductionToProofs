@@ -29,7 +29,7 @@ Statement {P Q : Prop} : P ∨ Q → Q ∨ P := by
   intro h
   Hint (hidden := true) "After introducing the hypothesis `{h} : {P} ∨ {Q}`, type `cases h` to ask Lean to consider both cases: the first being that `P` is true and the second being that `Q` is true."
   rcases h with q | p
-  Hint "Note now that Lean provides two goals, both of which are to prove that `{Q} ∨ {P}` is true, under two different hypothesies. Your first task is to prove the theorem in the first case."
+  Hint "Note now that Lean provides two goals, both of which are to prove that `{Q} ∨ {P}` is true, under two different hypotheses. Your first task is to prove the theorem in the first case."
   Hint (hidden := true) "Recall `Or.inl` and `Or.inr` refer to the left and right propositions in a disjunction `S ∨ T`."
   apply Or.inr
   Hint (hidden := true) "You can solve the goal by explicitly referring to the named hypothesis that Lean supplied or by typing `assumption` to indicate that the goal matches an assumption."
