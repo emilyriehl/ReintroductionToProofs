@@ -10,7 +10,7 @@ For propositions `P` and `Q`, `Or.symm` is a proof that `P ∨ Q → Q ∨ P`.
 -/
 TheoremDoc Or.symm as "symm" in "Or"
 
-Introduction "Given a hypothesis `h : P ∨ Q` we know that *either* `P` or `Q` is true (or possibly both are true).
+Introduction "Given a hypothesis `h : P ∨ Q`, we know that *either* `P` or `Q` is true (or possibly both are true).
 
 But we don't know *which* of `P` or `Q` is true.
 
@@ -20,9 +20,11 @@ If we have an assumption of the form `h : P ∨ Q`, then type `cases h` to ask L
 
 There is another tactic, similar to `cases`, which allows you to give explicit names for the hypotheses assumed in each case.
 
-If given a hypothesis `h : P ∨ Q`, then `rcases h with p | q` can be used in place of `cases h` to give hypotheses `p : P` in the first case and `q : Q` in the second. (Here you can choose any variable names for `p` and `q`.)
+When given a hypothesis `h : P ∨ Q`, then `rcases h with p | q` can be used in place of `cases h` to give hypotheses `p : P` in the first case and `q : Q` in the second. (Here you can choose any variable names for `p` and `q`.)
 
-For example, arguing by cases, we can prove that or is symmetric, that is that `P ∨ Q` implies `Q ∨ P`."
+This proof strategy should be reminiscent of a definition by cases of a function mapping out of a coproduct type `A ⊕ B`. Recall the same tactics may be used for that sort of construction.
+
+In this level, use the strategy of arguing by cases to prove that or is symmetric, that is that `P ∨ Q` implies `Q ∨ P`."
 
 Statement {P Q : Prop} : P ∨ Q → Q ∨ P := by
   Hint (hidden := true) "What is the outermost logical connective?"

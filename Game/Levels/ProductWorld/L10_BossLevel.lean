@@ -39,7 +39,7 @@ Statement {A B C D E M N X Y Z : Type} :
 
 Conclusion "The `let` tactic can also be used to decompose an element of a product type into its components. For example, using an element `p : A × B × C × D × E`, typing `let ⟨a, b, c, d, e⟩ := p` will add elements `a : A`, `b : B`, `c : C`, `d : D`, and `e : E` to your context.
 
-Move on to Conjunction World to learn about a logical operation that is analogous to product types."
+Move on to Conjunction World to learn about the logical operation that is analogous to product types."
 
 -- "You may be wondering about the relationship between terms `p : A × B` and `⟨p.1, p.2⟩ : A × B`. To be able to answer this and similar questions, move on to Euuality World."
 

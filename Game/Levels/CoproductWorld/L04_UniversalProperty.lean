@@ -9,13 +9,19 @@ Introduction "A function `f : A ⊕ B → C` mapping out of a coproduct type may
 
 Conversely, given an arbitrary pair of functions `g : A → C` and `h : B → C`, one can build a function of type `A ⊕ B → C`.
 
-This function is defined by introducing a variable term `x : A ⊕ B` and then splitting into two cases: the case where `x` is of the form `Sum.inl a` for some `a : A` and the case where `x` is of the form `Sum.inr b` for some `b : B`.
+This function is defined by introducing a variable element `x : A ⊕ B` and then splitting into two cases: the case where `x` is of the form `Sum.inl a` for some `a : A` and the case where `x` is of the form `Sum.inr b` for some `b : B`.
 
 In the first case, the function `g` can be used to define an element `g a : C`, while in the second case the function `h` can be used to define an element `h b : C`.
 
-This construction should be reminiscent of a proof by cases involving a hypothesis `x` that a disjunction is true and in fact the same tactics apply.
+Given an element `x : A ⊕ B`, type `cases x` to ask Lean to consider both cases arising from the introduction rules for coproduct types: the first being that `x` is of the form `Sum.inl a` for some `a : A` and the second being that `x` is of the form `Sum.inr b` for some `b : B`.
 
-Given a hypothesis `x : A ⊕ B`, either `cases x` or `rcases x with a | b` can be used to split into the two cases mentioned above.
+There is another tactic, similar to `cases`, which allows you to give explicit names for the elements appearing in each case.
+
+Given an element `x : A ⊕ B`, then `rcases x with a | b` can be used in place of `cases x` to provide an element `a : A` in the first case and an element `b : B` in the second. (Here you can choose any variable names for `a` and `b`.)
+
+Either `cases x` or `rcases x with a | b` can be used to split into the two cases mentioned above.
+
+Both cases will have the same goal type but will have a different context of objects, one of which contains the element `a : A` and the other of which contains the element `b : B`.
 "
 
 /-- Two functions `g : A → C` and `h : B → C` combine to define a single function of type `A ⊕ B → C`. -/

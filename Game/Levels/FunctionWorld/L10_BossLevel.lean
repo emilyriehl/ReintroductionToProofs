@@ -6,9 +6,10 @@ Level 10
 Title "Boss Level"
 
 
-Introduction "From here on, each world will end with a `Boss Level`, which is intended to be more challenging than the levels that came before. Have fun with this.
+Introduction "
+We have now reached the Boss Level of Function World, which is considerably more challenging than the Boss Level of Type World. Have fun with this.
 
-For the Boss Level of Function World, we consider an arbitrary pair of types, which we call `V` and `F` &mdash; for *vector space* and *field* respectively &mdash; because the function to be defined below has a connection to linear algebra that is not explained here.
+We consider an arbitrary pair of types, which we call `V` and `F` &mdash; for *vector space* and *field* respectively &mdash; because the function to be defined below has a connection to linear algebra that is not explained here.
 
 Can you define it?
 "

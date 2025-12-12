@@ -25,5 +25,15 @@ There are two strategies to prove `P ∨ Q`. It suffices to supply a proof of `P
 
 Note that the mathematical &ldquo;or&rdquo; is *inclusive*, meaning that if `P` and `Q` are both true, then `P ∨ Q` is true.
 
+Together these strategies define the two introduction rules for disjunctions. Note that a proof that employs either of these strategies carries extra information. In addition to concluding that `P ∨ Q` is true, a proof using the first strategy will prove along the way that `P` is true (perhaps subject to certain hypotheses) while a proof using the second strategy will prove along the way that `Q` is true (perhaps subject to other hypotheses).
+
+Similarly, the construction of an element of a coproduct type via either of the introduction rules will carry the information of whether the element comes from the left-hand type or the right-hand type.
+
+The elimination rule for disjunctions explains how to use a hypothesis `h : P ∨ Q` to prove something else.
+
 Using a hypothesis `h : P ∨ Q` leads to a proof strategy of arguing &ldquo;by cases&rdquo; as we will soon discover.
+
+Like the analogy between function types and implication, and product types and conjunction, there is a close analogy between coproduct types and the logical operation of disjunction.
+
+In particular, we will use similar notations and the same tactics introduced in Coproduct World.
 "

@@ -14,7 +14,7 @@ Similar reasoning shows that if `P ∨ Q → R` is true, then `Q → R` is true.
 
 Conversely, if *either* `P → R` or `Q → R` are true, this does not necessarily imply that `P ∨ Q → R` is true. Can you see why?
 
-However, if *both* `P → R` and `Q → R` are true, then `P ∨ Q → R` is true.
+However, if *both* `P → R` and `Q → R` are true, then `P ∨ Q → R` is true, as you can argue using the strategy of proof by cases.
 
 The aim of this level is to establish a logical equivalence between `P ∨ Q → R` and `(P → R) ∧ (Q → R)`."
 
@@ -42,5 +42,3 @@ Statement {P Q R : Prop} : (P ∨ Q → R) ↔ (P → R) ∧ (Q → R) := by
   exact q
 
 Conclusion "This logical equivalence captures the *universal property* of disjunction, explaining how the mathematical or is used in a proof."
-
-/- Use these commands to add items to the game's inventory. -/

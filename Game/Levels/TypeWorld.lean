@@ -2,9 +2,9 @@ import Game.Levels.TypeWorld.L01_Elements
 import Game.Levels.TypeWorld.L02_Proofs
 import Game.Levels.TypeWorld.L03_ExactElements
 import Game.Levels.TypeWorld.L04_UnitType
-import Game.Levels.TypeWorld.L05_TypeOfTypes
-import Game.Levels.TypeWorld.L06_TypeOfPropositions
-
+import Game.Levels.TypeWorld.L05_TypeOfPropositions
+import Game.Levels.TypeWorld.L06_TypeOfTypes
+import Game.Levels.TypeWorld.L07_BossLevel
 
 World "TypeWorld"
 Title "Type World"
