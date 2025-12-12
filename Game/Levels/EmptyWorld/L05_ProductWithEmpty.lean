@@ -16,6 +16,8 @@ But the empty type does not have any elements! So this means the product `A × E
 More precisely, the type `A × Empty` is *equivalent* to the empty type in a sense we cannot yet make precise.
 
 But we can at least show that there are functions `Empty → A × Empty` and `A × Empty → Empty`, which as discussed in a previous level, indicates that `A × Empty` cannot have any elements either.
+
+Your task in this level is to define these functions.
 "
 
 /-- For any type `A`, there are functions in both directions between the types `Empty` and `A × Empty`. -/
