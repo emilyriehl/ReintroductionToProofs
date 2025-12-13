@@ -26,7 +26,7 @@ Statement : ∀ n : ℕ, (n + 0 = n) ∧ (0 + n = n) := by
   Hint (hidden := true) "The statement is a conjunction so use `constructor` to break into subgoals."
   constructor
   rfl
-  Hint (hidden := true) "To use the principle of mathematical induction, type `indunction n with k hk`."
+  Hint (hidden := true) "To use the principle of mathematical induction, type `induction n with k hk`."
   induction n with k hk
   rfl
   Hint "It would be nice if we could use the hypothesis `{hk}` to replace the `0 + {k}` in the goal with the element `{k}`, but the parentheses in the left-hand side of the goal equation are not a match for this. Lean thinks that the left hand side is of the form `0 + succ {k}`. Do we have any theorems that can be used to rewrite this into something else?"
