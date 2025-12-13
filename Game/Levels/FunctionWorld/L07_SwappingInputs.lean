@@ -25,4 +25,4 @@ Statement {A B C : Type} : (A → B → C) → (B → A → C) := by
   Hint (hidden := true) "Look carefully at the order of the arguments of `{f}`."
   exact f a b
 
-Conclusion "Note that for a particular multvariable function `f : A → B → C`, its type dictates that the variable of type `A` must be supplied before the variable of type `B`. But as observed in this level, we can then define a corresponding function `swap f : B → A → C` which encodes the same information."
+Conclusion "Note that for a particular multivariable function `f : A → B → C`, its type dictates that the variable of type `A` must be supplied before the variable of type `B`. But as observed in this level, we can then define a corresponding function `swap f : B → A → C` which encodes the same information."
