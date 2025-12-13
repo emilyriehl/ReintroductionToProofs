@@ -8,7 +8,7 @@ Title "Boss Level"
 Introduction "The objective of this Boss Level is to define a function that takes five variables as inputs and has three
 variables as outputs by combining the data of four simpler functions.
 
-This function is defined as a composite &mdash; in a much more complicated sense than we have seen thusfar &mdash; of the given functions.
+This function is defined as a composite &mdash; in a much more complicated sense than we have seen thus far &mdash; of the given functions.
 
 Can you do it?
 

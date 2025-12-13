@@ -20,7 +20,7 @@ The difference is that `f : A × B → C` is thought of as a function that takes
 The process of converting a function of type `A × B → C` to one of type `A → B → C` is called *currying*. Your task in this level is to define the currying function.
 "
 
-/-- Define the currying function, convering a function out of a product type into a function of two variables. -/
+/-- Define the currying function, converting a function out of a product type into a function of two variables. -/
 Statement {A B C : Type} : (A × B → C) → (A → B → C) := by
   Hint (hidden := true) "The goal is a function type, so start with `intro`."
   intro f
