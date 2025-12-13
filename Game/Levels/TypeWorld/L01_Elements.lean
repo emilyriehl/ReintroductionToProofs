@@ -5,7 +5,7 @@ Level 1
 
 Title "Elements"
 
-Introduction "An interative theorem prover &mdash; in this case Lean &mdash; helps the user &mdash; this means you &mdash; keep track of the state of a proof or a mathematical construction.
+Introduction "An interactive theorem prover &mdash; in this case Lean &mdash; helps the user &mdash; this means you &mdash; keep track of the state of a proof or a mathematical construction.
 
 In the `Active Goal` window, Lean keeps track of the `objects` and `assumptions` &mdash; which together define the hypotheses of a mathematical statement &mdash; as well as the `goal` &mdash; meaning the thing we are trying to prove.
 

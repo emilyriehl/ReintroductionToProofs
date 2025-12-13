@@ -22,7 +22,7 @@ Thus, we will be able to prove
 
 `∀ w x y z : A, w = x → x = y → y = z → w = z`
 
-an enhanced verison of the transitivity of equality.
+an enhanced version of the transitivity of equality.
 "
 
 /-- For all `w x y z : A` if `w = x ` and `x = y` and `y = z` then `w = z`. -/
