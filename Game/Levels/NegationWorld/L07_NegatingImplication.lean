@@ -24,18 +24,14 @@ Statement {P Q : Prop} : P ∧ ¬ Q → ¬ (P → Q) := by
   Hint (hidden := true) "What is the logical structure of the goal?"
   intro i
   Hint (hidden := true) "What can we prove with the hypothesis `{pnq}`?"
-  Hint (hidden := true) "Try `have p : P := {pnq}.1` to add a proof of `P` to your assumptions."
-  have p : P := pnq.1
-  Hint (hidden := true) "What can we prove with the hypotheses `{i}` and `{p}`?"
-  Hint (hidden := true) "Try `have q : Q := {i} {p}` to add a proof of `Q` to your assumptions."
-  have q : Q := i p
-  Hint (hidden := true) "What else can we prove with the hypothesis `{pnq}`?"
-  Hint (hidden := true) "Try `have nq : ¬ Q := {pnq}.2` to add a proof of `¬ Q` to your
-  assumptions, where `\\neg` is used to type `¬`."
-  have nq : ¬ Q := pnq.2
+  Hint (hidden := true) "You can use `have ⟨p, nq⟩ := {pnq}` to apply the elimination rule for conjunctions to obtain a proof `p` of `P` and a proof `nq` of `¬ Q`."
+  have ⟨p, nq⟩ := pnq
   Hint (hidden := true) "What is the logical structure of the type of `{nq}`?"
   Hint (hidden := true) "Try `apply {nq}`."
   apply nq
+  Hint (hidden := true) "What can we prove with the hypotheses `{i}` and `{p}`?"
+  Hint (hidden := true) "Try `have q : Q := {i} {p}` to add a proof of `Q` to your assumptions."
+  have q := i p
   exact q
 
-Conclusion "The converse implication is more subtle, and will be addressed in the next world."
+Conclusion "The converse implication is more subtle, and will be addressed in the Classical World."

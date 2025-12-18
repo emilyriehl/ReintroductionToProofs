@@ -15,7 +15,7 @@ Title "Negation World"
 
 Introduction "In this world, we will study the proposition `False` and the logical operation of *negation*.
 
-Recall that an element `p : P` of a proposition `P` may be thought of as a proof that the proposition is true. The proposition `False` is not true so it does not contain any elements.
+Recall that an element `p : P` of a proposition `P` may be thought of as a proof that the proposition is true. We do not have any proofs of the proposition `False`, so it does not contain any elements.
 
 For any proposition `P`, we define its *negation* to be the proposition `P → False`, pronounced &ldquo;`P` implies false&rdquo;. This is commonly abbreviated with the shorthand `¬ P`, pronounced &ldquo;not P&rdquo;.
 
@@ -24,4 +24,8 @@ A *proof of negation* means a proof of a proposition of the form `¬ P` for some
 Using the introduction rule for implications, such a proof starts by assuming `p : P` and then deriving an element of `False`.
 
 Since `False` has no elements, we think of this process as deriving a contradiction.
+
+There is a related technique called *proof by contradiction* for proving that `P` is true that will be discussed in Classical World, as one of the proof strategies that is available when reasoning non-constructively.
+
+By contrast, a proof of negation is constructive, as it is analogous to the construction of a function between types, as we saw in Empty World.
 "

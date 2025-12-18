@@ -15,8 +15,8 @@ This is because these elements on both the left-hand and right-hand sides reduce
 open Nat
 
 /-- Arithmetic equations involving explicit numerals such as `12 + 23 = 5 * (4 + 3)` hold by `rfl`. -/
-Statement : (1 + 5 = 2 * 3) ∧ (12 + 23 = 5 * (4 + 3)) ∧ (2 * 5 = 5 * 2) ∧ ((3 + 1) + 2 = 2 + (1 + 3)) := by
+Statement : (2 + 2 = 4) ∧ (1 + 5 = 2 * 3) ∧ (12 + 23 = 5 * (4 + 3)) ∧ (2 * 5 = 5 * 2) ∧ ((3 + 1) + 2 = 2 + (1 + 3)) := by
   Hint (hidden := true) "What is the outermost logical connective?"
-  exact ⟨rfl, rfl, rfl, rfl⟩
+  exact ⟨rfl, rfl, rfl, rfl, rfl⟩
 
 Conclusion "Can you solve this level in one line?"

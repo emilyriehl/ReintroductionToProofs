@@ -1,7 +1,7 @@
 import Game.Metadata
 
 World "ClassicalWorld"
-Level 3
+Level 2
 
 Title "Contrapositive"
 
@@ -29,8 +29,8 @@ Statement {P Q : Prop} : (¬ Q → ¬ P) → (P → Q) := by
   apply byContradiction
   Hint (hidden := true) "What is the outermost logical connective?"
   intro nq
-  Hint (hidden := true) "What can you prove using `{i}` and `{nq}`?"
   Hint (hidden := true) "Think about where the contradiction will ultimately arise from."
+  Hint (hidden := true) "What can you prove using `{i}` and `{nq}`? Use the tactic `have` to add this to your context."
   exact (i nq) p
 
 end

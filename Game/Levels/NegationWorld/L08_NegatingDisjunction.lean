@@ -46,4 +46,4 @@ Statement {P Q : Prop} : ¬ (P ∨ Q) ↔ ¬ P ∧ ¬ Q := by
   exact andn.1 p
   exact andn.2 q
 
-Conclusion "Have another look at the Universal Property Level of Disjunction World. How are these statements related?"
+Conclusion "Have another look at Level 5 of Disjunction World, discussing the universal property of disjunction. How are these statements related?"

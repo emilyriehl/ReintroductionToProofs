@@ -1,7 +1,7 @@
 import Game.Metadata
 
 World "ClassicalWorld"
-Level 2
+Level 3
 
 Title "Excluded Middle"
 
@@ -24,7 +24,7 @@ open Classical
 
 /-- In classical logic, for any propositions `P` and `Q`, `P ∧ Q` is true or `P ∧ ¬ Q` is true or `¬ P ∧ Q` is true or `¬ P and ¬ Q` is true. -/
 Statement {P Q : Prop} : (P ∧ Q) ∨ (P ∧ ¬ Q) ∨ (¬ P ∧ Q) ∨ (¬ P ∧ ¬ Q) := by
-  Hint "To use the law of excluded middle in your proof, type `have lemP : P ∨ ¬ P := em P` to add an assumption that `P ∨ ¬ P` is true."
+  Hint (hidden := true) "To use the law of excluded middle in your proof, type `have lemP : P ∨ ¬ P := em P` to add an assumption that `P ∨ ¬ P` is true."
   have lemP := em P
   Hint (hidden := true) "To use the law of excluded middle in your proof, type `have lemQ : Q ∨ ¬ Q := em Q` to add an assumption that `Q ∨ ¬ Q` is true."
   have lemQ := em Q
@@ -39,7 +39,7 @@ Statement {P Q : Prop} : (P ∧ Q) ∨ (P ∧ ¬ Q) ∨ (¬ P ∧ Q) ∨ (¬ P �
 
 end
 
-Conclusion "The classical tautology `Classical.em P : P ∨ ¬ P` has been added to your library of theorems and can be used by calling `em _`, with the desired proposition replacing the `_`, whenever classical reasoning is open."
+Conclusion "The classical tautology `Classical.em P : P ∨ ¬ P` has been added to your library of theorems and can be referred to by the name `em _`, with the desired proposition replacing the `_`, whenever classical reasoning is open."
 
 /--
 For any proposition `P`, `Classical.em P : P ∨ ¬ P ` proves that `P` or `¬ P` is true.

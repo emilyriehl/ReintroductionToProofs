@@ -38,4 +38,4 @@ Statement {P Q : Prop} : ¬ P ∨ ¬ Q → ¬ (P ∧ Q) := by
   apply nq
   exact pq.2
 
-Conclusion "The converse implication is more subtle because if `P ∧ Q` is false we don't know which of `P` or `Q` is false. This will be addressed in the next world."
+Conclusion "The converse implication is more subtle because if `P ∧ Q` is false we don't know which of `P` or `Q` is false. This will be addressed in Classical World."

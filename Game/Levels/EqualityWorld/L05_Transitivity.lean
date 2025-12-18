@@ -17,4 +17,4 @@ Statement {A : Type} {x y z : A} (p : x = y) (q : y = z) : x = z  := by
   rw [← q, ← p]
   rfl
 
-Conclusion "Try solving the goal by rewriting in both directions. You can also experiment with multiple rewrites at once. Why does `rw [p, q]` work but `rw [q, p]` not? Why does `rw [← q, ← p]` or `rw [← q, p]` work but `rw [← p, ← q]` not?"
+Conclusion "Try solving the goal by rewriting in both directions. You can also experiment with multiple rewrites at once, using a comma to separate multiple proofs of equality inside the brackets. Why does `rw [p, q]` work but `rw [q, p]` not? Why does `rw [← q, ← p]` or `rw [← q, p]` work but `rw [← p, ← q]` not?"

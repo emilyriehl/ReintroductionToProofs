@@ -18,17 +18,17 @@ In subsequent levels, we shall express this tautology in several logically equiv
 
 /-- For any proposition `P`, if `¬ P` and `P` are both true, then we obtain a proof of `False`. -/
 Statement {P : Prop} : ¬ P → P → False := by
-  Hint (hidden := true) "The goal is a function type. What tactic can be used to define an element?"
+  Hint (hidden := true) "The goal is to prove an implication. What tactic can be used to get started?"
   intro np
-  Hint (hidden := true) "The goal is a function type. What tactic can be used to define an element?"
+  Hint (hidden := true) "The goal is to prove an implication. What tactic can be used to get started?"
   intro p
-  Hint (hidden := true) "We have an assumption `{np} : P → False`. What can be done with an element of a function type?"
+  Hint (hidden := true) "We have an assumption `{np} : P → False`. What can be done with a proof of implication?"
   exact np p
 
-Conclusion "There are various ways to solve this level. You might enjoy searching for a shorter proof."
+Conclusion "There are various ways to solve this level. You might enjoy searching for a shorter proof. For instance, there is a proof that takes just line and involves eight characters."
 
 /--
-`¬ P`, read as &ldquo; not `P`&rdquo; is an abbreviation for `P → False`.
+`¬ P`, read as &ldquo; not `P`&rdquo; is an abbreviation for `P → False`. Use `\neg` to type `¬`.
 -/
 DefinitionDoc neg as "¬" in "Logic"
 

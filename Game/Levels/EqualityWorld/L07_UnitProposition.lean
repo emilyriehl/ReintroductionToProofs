@@ -5,7 +5,7 @@ Level 7
 
 Title "Unit Proposition"
 
-Introduction "Lean has a built in unit type `Unit` that contains just one element denoted `() : Unit`.
+Introduction "Recall from Type World that Lean has a built in unit type `Unit` that contains just one element denoted `⟨⟩ : Unit`.
 
 The unit type is a proposition, meaning that it has at most one element.
 
