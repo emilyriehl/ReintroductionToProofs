@@ -23,4 +23,5 @@ Statement (b : Bool) : b = not (not b)  := by
   rfl
   rfl
 
-Conclusion "It follows that `not ∘ not : Bool → Bool` is equal to the identity function by something called *function extensionality* that will be discussed soon."
+Conclusion "This level can be solved in one line with `cases b <;> rfl` where the `<;>` indicates that the
+tactic `rfl` should be applied in each of the cases. It follows that `not ∘ not : Bool → Bool` is equal to the identity function by something called *function extensionality* that will be discussed in Advanced Function World."

@@ -33,4 +33,4 @@ Statement (x y : Bool) : (not (and x y) = or (not x) (not y)) ∧ (not (or x y) 
   cases x <;> cases y <;> rfl
   cases x <;> cases y <;> rfl
 
-Conclusion "Can you figure out how you would state other logical equivalences involving truth values in a similar fashion?"
+Conclusion "Can you figure out how you would encode other logical equivalences involving proposition variables as equalities involving booleans?"

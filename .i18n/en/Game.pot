@@ -541,14 +541,6 @@ msgid "Any type §0 has a family of propositions §1 given by the equality types
 "The final statement §32 is just true for any type. Your objective in this level is to prove this."
 msgstr ""
 
-#: Game.Levels.FunctionWorld.L07_FlippingInputs
-msgid "From a function of two variables, define another function of two variables, where the inputs are swapped."
-msgstr ""
-
-#: Game.Levels.BooleanWorld
-msgid "Boolean World"
-msgstr ""
-
 #. §0: `A`
 #. §1: `B`
 #. §2: `C`
@@ -557,6 +549,14 @@ msgstr ""
 #: Game.Levels.EquivalenceWorld.L03_SwappingInputs
 #: Game.Levels.EquivalenceWorld.L04_CurryingUncurrying
 msgid "For any types §0, §1, and §2, the function types §3 and §4 are equivalent."
+msgstr ""
+
+#: Game.Levels.FunctionWorld.L07_FlippingInputs
+msgid "From a function of two variables, define another function of two variables, where the inputs are swapped."
+msgstr ""
+
+#: Game.Levels.BooleanWorld
+msgid "Boolean World"
 msgstr ""
 
 #. §0: `¬ (P ∧ ¬ P)`
@@ -772,8 +772,7 @@ msgstr ""
 msgid "Or is associative: §0 is true if and only if §1 is true."
 msgstr ""
 
-#. §0: `and`
-#: Game.Levels.BooleanWorld.L03_Conjunction
+#. §0: `or`
 #: Game.Levels.BooleanWorld.L05_Disjunction
 msgid "Was it necessary to consider all four cases of two boolean elements or can you define this function by considering fewer cases? The function §0 is now in your library."
 msgstr ""
@@ -861,6 +860,15 @@ msgstr ""
 #: Game.Levels.NaturalNumbersWorld.L03_Induction
 #: Game.Levels.NaturalNumbersWorld.L03_Induction
 msgid "Type §0 to decompose the hypothesis."
+msgstr ""
+
+#. §0: `cases b <;> rfl`
+#. §1: `<;>`
+#. §2: `rfl`
+#. §3: `not ∘ not : Bool → Bool`
+#: Game.Levels.BooleanWorld.L02_DoubleNegation
+msgid "This level can be solved in one line with §0 where the §1 indicates that the\n"
+"tactic §2 should be applied in each of the cases. It follows that §3 is equal to the identity function by something called *function extensionality* that will be discussed in Advanced Function World."
 msgstr ""
 
 #: Game.Levels.FunctionWorld.L10_BossLevel
@@ -1093,6 +1101,10 @@ msgid "Recall from Type World that Lean has a built in unit type §0 that contai
 "The unit type is a proposition, meaning that it has at most one element.\n"
 "\n"
 "More precisely, if §2 are elements of the unit type, then we can prove §3 by a definitional equality, aka, by reflexivity."
+msgstr ""
+
+#: Game.Levels.BooleanWorld.L07_DeMorgan
+msgid "Can you figure out how you would encode other logical equivalences involving proposition variables as equalities involving booleans?"
 msgstr ""
 
 #. §0: `A`
@@ -1452,6 +1464,16 @@ msgstr ""
 
 #: GameServer.RpcHandlers
 msgid "level completed with warnings… 🎭"
+msgstr ""
+
+#. §0: `cases h : «{x}»`
+#. §1: `h : «{x}» = false`
+#. §2: `h : «{x}» = true`
+#. §3: `cases k : «{y}»`
+#. §4: `match «{x}» , «{y}» with | ? , ? => exact ? | ? , ? => exact ? | ? , ? => exact ? | ? , ? => exact ?`
+#. §5: `?`
+#: Game.Levels.BooleanWorld.L03_Conjunction
+msgid "If you are using typewriter mode, try §0 to add hypotheses §1 and §2 that clarify which case you are in. Similarly, try §3 whenever you are ready to consider cases on the second boolean variable. Alternatively, you can define the function on one line with §4 replacing each §5 with appropriate boolean elements."
 msgstr ""
 
 #: Game.Levels.AdvancedFunctionWorld.L08_Bijectivity
@@ -2075,9 +2097,7 @@ msgid "This proves the theorem §0, which is now in your library."
 msgstr ""
 
 #. §0: `Bool → Prop`
-#. §1: `  let P : Bool → Prop := by intro b ; cases b ; exact False ; exact True
-#. `
-#: Game.Levels.BooleanWorld.L08_NotEqual
+#. §1: `let P : Bool → Prop := by intro b ; match b with | false => exact False | true => exact True`
 #: Game.Levels.BooleanWorld.L08_NotEqual
 msgid "Define a function §0 by §1."
 msgstr ""
@@ -2316,6 +2336,51 @@ msgstr ""
 msgid "What can you do with the hypothesis §0?"
 msgstr ""
 
+#. §0: `Bool`
+#. §1: `false : Bool`
+#. §2: `true : Bool`
+#. §3: `Bool → Bool`
+#. §4: `false`
+#. §5: `true`
+#. §6: `true`
+#. §7: `false`
+#. §8: `intro b`
+#. §9: `Bool`
+#. §10: `b`
+#. §11: `false`
+#. §12: `true`
+#. §13: `cases b`
+#. §14: `false`
+#. §15: `true`
+#. §16: `cases`
+#. §17: `intro b`
+#. §18: `match b with | false => exact ? | true => exact ?`
+#. §19: `?`
+#. §20: `Bool`
+#. §21: `Bool → Bool`
+#. §22: `true`
+#. §23: `false`
+#: Game.Levels.BooleanWorld.L01_Negation
+msgid "Recall the type §0 of booleans has two elements denoted §1 and §2.\n"
+"\n"
+"In this level, our aim is to define a function §3 that encodes the logical operation of negation, i.e., sends §4 to §5 and §6 to §7.\n"
+"\n"
+"You can start to define this function in the usual way, by typing §8. Lean will then update the goal to ask you to supply an element of type §9. But which element should you pick?\n"
+"\n"
+"The correct answer depends on whether §10 is §11 or §12. The type of Booleans is an example of an *inductive type*, which is\n"
+"similar to a coproduct type, and thus you can type §13 to split into the two possible cases.\n"
+"\n"
+"Note the first case provided by Lean is the case of §14 while the second case is the case of §15.\n"
+"\n"
+"Unfortunately, it is difficult to see which case is which in typewriter mode. Try toggling to editor mode and perhaps add a few blank lines at the bottom to see if you can see what case you are in.\n"
+"\n"
+"Alternatively, if you prefer to stay in typewriter mode, you can avoid the §16 tactic and define the entire function at once in one line.\n"
+"\n"
+"After §17, try typing §18 where each §19 should be replaced by the appropriate element of §20.\n"
+"\n"
+"Note this level comes with two pre-defined goals: the first is to define the negation function §21 and the second is to check that your definition is correct by calculating the values of the function you defined on the booleans §22 and §23."
+msgstr ""
+
 #. §0: `P`
 #. §1: `Q`
 #. §2: `P → Q`
@@ -2351,14 +2416,6 @@ msgid "We now establish a logical equivalence between §0 and §1.\n"
 "The two implications that comprise this logical equivalence are referred to as *currying* and *uncurrying* because they are the logical analogs of the currying and uncurrying operations on functions of two variables.\n"
 "\n"
 "Note the two implications proven in the previous two levels have been added to the theorem library, should you wish to use them. Their full names are §4 and §5."
-msgstr ""
-
-#. §0: `cases h : «{x}»`
-#. §1: `h : «{x}» = false`
-#. §2: `h : «{x}» = true`
-#. §3: `cases k : «{y}»`
-#: Game.Levels.BooleanWorld.L03_Conjunction
-msgid "If you are using typewriter mode, try §0 to add hypotheses §1 and §2 that clarify which case you are in. Similarly, try §3 whenever you are ready to consider cases on the second boolean variable."
 msgstr ""
 
 #. §0: `P ∧ Q`
@@ -2886,6 +2943,12 @@ msgstr ""
 msgid "Equality is symmetric: if §0 then §1."
 msgstr ""
 
+#. §0: `false : Bool`
+#. §1: `true : Bool`
+#: Game.Levels.BooleanWorld.L08_NotEqual
+msgid "The elements §0 and §1 are not equal."
+msgstr ""
+
 #. §0: `«{P}» → «{Q}»`
 #: Game.Levels.ImplicationWorld.L07_ProvingAssumedImplication
 msgid "Which tactics can be used to prove §0 with our given assumptions?"
@@ -2902,40 +2965,6 @@ msgstr ""
 #. §2: `0`
 #: Game.Levels.NaturalNumbersWorld.L04_Recursion
 msgid "Here §0 is Lean's name for the function you just defined. Your are asked to show that its value at §1 equals §2."
-msgstr ""
-
-#. §0: `Bool`
-#. §1: `false : Bool`
-#. §2: `true : Bool`
-#. §3: `Bool → Bool`
-#. §4: `false`
-#. §5: `true`
-#. §6: `true`
-#. §7: `false`
-#. §8: `intro b`
-#. §9: `cases b`
-#. §10: `false`
-#. §11: `true`
-#. §12: `cases h : b`
-#. §13: `h : b = false`
-#. §14: `h : b = true`
-#. §15: `Bool → Bool`
-#. §16: `true`
-#. §17: `false`
-#: Game.Levels.BooleanWorld.L01_Negation
-msgid "Recall the type §0 of booleans has two elements denoted §1 and §2.\n"
-"\n"
-"In this level, our aim is to define a function §3 that encodes the logical operation of negation, i.e., sends §4 to §5 and §6 to §7.\n"
-"\n"
-"You can do this by introducing a generic boolean by typing §8. Then use the tactic §9 to define the output of the function.\n"
-"\n"
-"Note the first case provided by Lean is the case of §10 while the second case is the case of §11.\n"
-"\n"
-"Try toggling to editor mode and perhaps add a few blank lines at the bottom to see if you can see what case you are in.\n"
-"\n"
-"Alternatively, if you prefer to stay in typewriter mode, type §12 to add hypotheses §13 in the first case and §14 in the second case, which makes it clearer which case is listed first.\n"
-"\n"
-"Note this level comes with two pre-defined goals: the first is to define the negation function §15 and the second is to check that your definition is correct by calculating the values of the function you defined on the booleans §16 and §17."
 msgstr ""
 
 #. §0: `«{h}»`
@@ -4186,11 +4215,6 @@ msgstr ""
 msgid "Given a function §0 and an element §1, there is an element §2 obtained by evaluating the function §3 at §4."
 msgstr ""
 
-#. §0: `not ∘ not : Bool → Bool`
-#: Game.Levels.BooleanWorld.L02_DoubleNegation
-msgid "It follows that §0 is equal to the identity function by something called *function extensionality* that will be discussed soon."
-msgstr ""
-
 #: Game.Levels.NaturalNumbersWorld.L04_Recursion
 msgid "Recursion"
 msgstr ""
@@ -4345,6 +4369,14 @@ msgstr ""
 #. §3: `Q`
 #: Game.Levels.ClassicalWorld.L04_NegatingConjunction
 msgid "Type §0 or §1 to appeal to the law of excluded middle for §2. Alternatively, you can appeal to the law of excluded middle for §3 or for any other proposition."
+msgstr ""
+
+#. §0: `P true → P false`
+#. §1: `let tr : P true → P false := by intro x ; rw [p] ; exact x
+#. `
+#. §2: `let tr : P true → P false := by`
+#: Game.Levels.BooleanWorld.L08_NotEqual
+msgid "Define a function §0 by §1. In editor mode, start with §2 then continue with each of the three tactics on three subsequent lines. This way you can see how the goal evolves with each step in the construction."
 msgstr ""
 
 #. §0: `f`
@@ -5239,12 +5271,12 @@ msgstr ""
 msgid "Now the goal is an element of type §0, which should be thought of as result of applying the function to the element §1. In the case of the identity function, we want to return §2 again which is done by typing §3."
 msgstr ""
 
-#: Game.Levels.EqualityWorld.L08_EmptyProposition
-msgid "In the next level, we will see that the equality type is itself a proposition."
-msgstr ""
-
 #: Game.Levels.EquivalenceWorld.L03_SwappingInputs
 msgid "In the next level, we will establish another equivalence involving function types."
+msgstr ""
+
+#: Game.Levels.EqualityWorld.L08_EmptyProposition
+msgid "In the next level, we will see that the equality type is itself a proposition."
 msgstr ""
 
 #: Game.Levels.EmptyWorld.L06_CoproductWithEmpty
@@ -5611,6 +5643,46 @@ msgid "We can improve our understanding of the symmetry of disjunction as follow
 "To prove this you might find it useful to use the theorem §4 proven in the previous level. This is now in your library."
 msgstr ""
 
+#. §0: `¬ (false = true)`
+#. §1: `p : false = true`
+#. §2: `False`
+#. §3: `P : Bool → Prop`
+#. §4: `false`
+#. §5: `False`
+#. §6: `true`
+#. §7: `True`
+#. §8: `True → False`
+#. §9: `P true → P false`
+#. §10: `x : P true`
+#. §11: `p`
+#. §12: `P false`
+#. §13: `P true`
+#. §14: `x : P true`
+#. §15: `⟨⟩ : True`
+#. §16: `False`
+#. §17: `exact Bool.noConfusion`
+#. §18: `¬ (false = true)`
+#: Game.Levels.BooleanWorld.L08_NotEqual
+msgid "We will now finally prove an example that two elements of a type are distinct, demonstrating that\n"
+"the two booleans are not equal:\n"
+"\n"
+"§0.\n"
+"\n"
+"The proof is quite delicate, so let us explain how it works.\n"
+"\n"
+"We are asked to prove a negation so suppose we have §1. We would like to derive a contradiction, that is an element of §2.\n"
+"\n"
+"The key ingredient is to use a function §3 defined to send the boolean §4 to the proposition §5 and the boolean §6 to the proposition §7.\n"
+"\n"
+"Using this we can define a function §8, i.e., a function §9 by introduction a hypothesis §10 then rewriting along the equality §11 to change the goal from §12 to §13, then returning §14.\n"
+"\n"
+"Applying this function to the element §15 returns an element of §16, a contradiction.\n"
+"\n"
+"Use the hints to step through this proof.\n"
+"\n"
+"Alternatively, type §17 to solve this level with Lean's built in proof that §18."
+msgstr ""
+
 #. §0: `A`
 #. §1: `id : A → A`
 #. §2: `a : A`
@@ -5656,10 +5728,6 @@ msgid "Another equivalence of types captures the full universal property of prod
 "§1\n"
 "\n"
 "defined by taking the product of two function types."
-msgstr ""
-
-#: Game.Levels.BooleanWorld.L07_DeMorgan
-msgid "Can you figure out how you would state other logical equivalences involving truth values in a similar fashion?"
 msgstr ""
 
 #. §0: `P ∨ Q`
@@ -5923,6 +5991,13 @@ msgstr ""
 #. §3: `m + (succ n) = succ (m + n)`
 #: Game.Levels.NaturalNumbersWorld.L05_DefiningAddition
 msgid "For all natural numbers §0 and §1, §2 and §3."
+msgstr ""
+
+#. §0: `match`
+#. §1: `_`
+#. §2: `and`
+#: Game.Levels.BooleanWorld.L03_Conjunction
+msgid "Was it necessary to consider all four cases of two boolean elements or can you define this function by considering fewer cases? If using the tactic §0, try replacement one of the input booleans with §1 to indicate that the value does not matter. The function §2 is now in your library."
 msgstr ""
 
 #. §0: `A × B`
@@ -6461,6 +6536,20 @@ msgstr ""
 msgid "Next move on to Product World to meet a second type forming operation, which will again have a corresponding logical connective."
 msgstr ""
 
+#. §0: `match`
+#. §1: `b : Bool`
+#. §2: `match b with | false => ? | true => ?`
+#. §3: `b`
+#. §4: `b`
+#. §5: `?`
+#. §6: `x y : Bool`
+#. §7: `match x y with | false, false => ? | false, true => ? | true, false => ? | true, true => ?`
+#: Game.Levels.BooleanWorld.L01_Negation
+msgid "The tactic §0 can be used to define a function by cases. For example, in the context of an\n"
+"element §1, §2 splits the construction into the case where §3 is false followed by the case where §4 is true. Here both §5 should be replaced by the appropriate sequence of tactics for each case, using semicolons if more than one tactic is needed. In the context of §6,\n"
+"§7 splits into the four possible cases."
+msgstr ""
+
 #. §0: `B`
 #. §1: `Empty.elim : Empty → B`
 #. §2: `Empty`
@@ -6558,46 +6647,6 @@ msgstr ""
 
 #: Game.Levels.EqualityWorld.L08_EmptyProposition
 msgid "Empty Proposition"
-msgstr ""
-
-#. §0: `¬ (false = true)`
-#. §1: `p : false = true`
-#. §2: `False`
-#. §3: `P : Bool → Prop`
-#. §4: `false`
-#. §5: `False`
-#. §6: `true`
-#. §7: `True`
-#. §8: `True → False`
-#. §9: `P true → P false`
-#. §10: `x : P true`
-#. §11: `p`
-#. §12: `P false`
-#. §13: `P true`
-#. §14: `x : P true`
-#. §15: `⟨⟩ : True`
-#. §16: `False`
-#. §17: `exact Bool.noConfusion`
-#. §18: `¬ (false = true)`
-#: Game.Levels.BooleanWorld.L08_NotEqual
-msgid "We will now finally prove an example of an *non equality* of terms, demonstrating that\n"
-"the two booleans are not equal:\n"
-"\n"
-"§0.\n"
-"\n"
-"The proof is quite delicate, so let us explain how it works.\n"
-"\n"
-"We are asked to prove a negation so suppose we have §1. We would like to derive a contradiction, that is an element of §2.\n"
-"\n"
-"The key ingredient is to use a function §3 defined to send the boolean §4 to the proposition §5 and the boolean §6 to the proposition §7.\n"
-"\n"
-"Using this we can define a function §8, i.e., a function §9 by introduction a hypothesis §10 then rewriting along the equality §11 to change the goal from §12 to §13, then returning §14.\n"
-"\n"
-"Applying this function to the element §15 returns an element of §16, a contradiction.\n"
-"\n"
-"If you like, use the hints to step through this proof.\n"
-"\n"
-"Alternatively, type §17 to solve this level with Lean's built in proof that §18."
 msgstr ""
 
 #: GameServer.RpcHandlers
@@ -6760,14 +6809,6 @@ msgstr ""
 
 #: Game.Levels.EqualityWorld
 msgid "Equality World"
-msgstr ""
-
-#. §0: `false`
-#. §1: `Empty`
-#. §2: `true`
-#. §3: `Unit`
-#: Game.Levels.BooleanWorld.L08_NotEqual
-msgid "There is a function that realizes a boolean as a type, defined to send §0 to §1 and §2 to §3."
 msgstr ""
 
 #: Game.Levels.NegationWorld.L06_ModusTollens
