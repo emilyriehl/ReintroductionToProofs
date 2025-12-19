@@ -1,4 +1,4 @@
-import Game.Metadata
+import Game.Levels.BooleanWorld.L02_DoubleNegation
 
 World "BooleanWorld"
 Level 3

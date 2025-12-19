@@ -1,4 +1,4 @@
-import Game.Metadata
+import Game.Levels.ProductWorld.L08_ComponentFunctions
 
 World "ProductWorld"
 Level 9

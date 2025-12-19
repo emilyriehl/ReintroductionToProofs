@@ -1,4 +1,4 @@
-import Game.Metadata
+import Game.Levels.QuantifierWorld.L05_MultipleQuantifiers
 
 World "QuantifierWorld"
 Level 6

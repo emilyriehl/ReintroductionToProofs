@@ -1,4 +1,4 @@
-import Game.Metadata
+import Game.Levels.NaturalNumbersWorld.L01_Numerals
 
 World "NaturalNumbersWorld"
 Level 2

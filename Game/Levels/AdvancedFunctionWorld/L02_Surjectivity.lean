@@ -1,4 +1,4 @@
-import Game.Metadata
+import Game.Levels.AdvancedFunctionWorld.L01_TotalFunctions
 
 World "AdvancedFunctionWorld"
 Level 2

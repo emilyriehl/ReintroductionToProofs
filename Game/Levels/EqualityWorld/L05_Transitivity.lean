@@ -1,4 +1,4 @@
-import Game.Metadata
+import Game.Levels.EqualityWorld.L04_Symmetry
 
 World "EqualityWorld"
 Level 5

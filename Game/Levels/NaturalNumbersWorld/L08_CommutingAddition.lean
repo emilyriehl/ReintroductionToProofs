@@ -1,4 +1,4 @@
-import Game.Metadata
+import Game.Levels.NaturalNumbersWorld.L07_AddingSuccessors
 
 World "NaturalNumbersWorld"
 Level 8

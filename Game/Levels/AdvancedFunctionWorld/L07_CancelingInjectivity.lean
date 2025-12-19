@@ -1,4 +1,4 @@
-import Game.Metadata
+import Game.Levels.AdvancedFunctionWorld.L06_ComposingInjectivity
 
 World "AdvancedFunctionWorld"
 Level 7

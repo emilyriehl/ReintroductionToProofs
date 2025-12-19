@@ -1,4 +1,4 @@
-import Game.Metadata
+import Game.Levels.BooleanWorld.L05_Disjunction
 
 World "BooleanWorld"
 Level 6

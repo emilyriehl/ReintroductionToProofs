@@ -1,4 +1,4 @@
-import Game.Metadata
+import Game.Levels.NaturalNumbersWorld.L03_Induction
 
 World "NaturalNumbersWorld"
 Level 4

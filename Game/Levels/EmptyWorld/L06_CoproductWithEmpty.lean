@@ -1,4 +1,4 @@
-import Game.Metadata
+import Game.Levels.EmptyWorld.L05_ProductWithEmpty
 
 World "EmptyWorld"
 Level 6

@@ -1,4 +1,4 @@
-import Game.Metadata
+import Game.Levels.NegationWorld.L08_NegatingDisjunction
 
 World "NegationWorld"
 Level 9

@@ -1,4 +1,4 @@
-import Game.Metadata
+import Game.Levels.QuantifierWorld.L01_UniversalTruth
 
 World "QuantifierWorld"
 Level 2

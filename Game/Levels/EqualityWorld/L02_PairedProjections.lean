@@ -1,4 +1,4 @@
-import Game.Metadata
+import Game.Levels.EqualityWorld.L01_Reflexivity
 
 World "EqualityWorld"
 Level 2

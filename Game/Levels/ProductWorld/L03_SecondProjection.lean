@@ -1,4 +1,4 @@
-import Game.Metadata
+import Game.Levels.ProductWorld.L02_FirstProjection
 
 World "ProductWorld"
 Level 3

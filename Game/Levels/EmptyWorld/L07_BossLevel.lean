@@ -1,4 +1,4 @@
-import Game.Metadata
+import Game.Levels.EmptyWorld.L06_CoproductWithEmpty
 
 World "EmptyWorld"
 Level 7

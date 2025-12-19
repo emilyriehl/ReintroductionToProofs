@@ -1,4 +1,4 @@
-import Game.Metadata
+import Game.Levels.CoproductWorld.L06_Associativity
 
 World "CoproductWorld"
 Level 7

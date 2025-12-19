@@ -1,4 +1,4 @@
-import Game.Metadata
+import Game.Levels.ClassicalWorld.L05_NegatingImplication
 
 World "ClassicalWorld"
 Level 6

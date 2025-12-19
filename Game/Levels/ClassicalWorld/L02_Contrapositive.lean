@@ -1,4 +1,4 @@
-import Game.Metadata
+import Game.Levels.ClassicalWorld.L01_ByContradiction
 
 World "ClassicalWorld"
 Level 2

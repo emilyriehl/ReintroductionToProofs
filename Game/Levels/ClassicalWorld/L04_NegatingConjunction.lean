@@ -1,4 +1,4 @@
-import Game.Metadata
+import Game.Levels.ClassicalWorld.L03_ExcludedMiddle
 
 World "ClassicalWorld"
 Level 4

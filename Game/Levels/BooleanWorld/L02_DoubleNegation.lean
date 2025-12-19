@@ -1,4 +1,4 @@
-import Game.Metadata
+import Game.Levels.BooleanWorld.L01_Negation
 
 World "BooleanWorld"
 Level 2

@@ -1,4 +1,4 @@
-import Game.Metadata
+import Game.Levels.EquivalenceWorld.L02_CoproductSymmetry
 
 World "EquivalenceWorld"
 Level 3

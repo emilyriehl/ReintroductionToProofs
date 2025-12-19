@@ -1,4 +1,4 @@
-import Game.Metadata
+import Game.Levels.CoproductWorld.L03_ComponentFunctions
 
 World "CoproductWorld"
 Level 4

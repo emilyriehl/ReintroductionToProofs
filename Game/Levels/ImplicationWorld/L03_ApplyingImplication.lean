@@ -1,4 +1,4 @@
-import Game.Metadata
+import Game.Levels.ImplicationWorld.L02_ModusPonens
 
 World "ImplicationWorld"
 Level 3

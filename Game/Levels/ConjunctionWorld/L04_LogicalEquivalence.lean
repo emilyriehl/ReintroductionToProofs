@@ -1,4 +1,4 @@
-import Game.Metadata
+import Game.Levels.ConjunctionWorld.L03_Symmetry
 
 World "ConjunctionWorld"
 Level 4

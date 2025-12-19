@@ -1,4 +1,4 @@
-import Game.Metadata
+import Game.Levels.EmptyWorld.L01_FromEmpty
 
 World "EmptyWorld"
 Level 2

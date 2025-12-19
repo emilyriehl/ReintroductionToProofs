@@ -1,4 +1,4 @@
-import Game.Metadata
+import Game.Levels.DisjunctionWorld.L07_Distributivity
 
 World "DisjunctionWorld"
 Level 8

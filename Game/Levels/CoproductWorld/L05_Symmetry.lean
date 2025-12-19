@@ -1,4 +1,4 @@
-import Game.Metadata
+import Game.Levels.CoproductWorld.L04_UniversalProperty
 
 World "CoproductWorld"
 Level 5

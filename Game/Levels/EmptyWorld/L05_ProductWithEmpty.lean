@@ -1,4 +1,4 @@
-import Game.Metadata
+import Game.Levels.EmptyWorld.L04_Composition
 
 World "EmptyWorld"
 Level 5

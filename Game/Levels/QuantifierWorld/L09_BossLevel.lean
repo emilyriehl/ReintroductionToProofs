@@ -1,4 +1,4 @@
-import Game.Metadata
+import Game.Levels.QuantifierWorld.L08_NegatingUniversality
 
 World "QuantifierWorld"
 Level 9

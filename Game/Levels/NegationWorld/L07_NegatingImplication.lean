@@ -1,4 +1,4 @@
-import Game.Metadata
+import Game.Levels.NegationWorld.L06_ModusTollens
 
 World "NegationWorld"
 Level 7

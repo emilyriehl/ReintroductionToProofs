@@ -1,4 +1,4 @@
-import Game.Metadata
+import Game.Levels.NegationWorld.L04_Noncontradiction
 
 World "NegationWorld"
 Level 5

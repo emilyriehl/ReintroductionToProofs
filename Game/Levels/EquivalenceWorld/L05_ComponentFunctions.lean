@@ -1,4 +1,4 @@
-import Game.Metadata
+import Game.Levels.EquivalenceWorld.L04_CurryingUncurrying
 
 World "EquivalenceWorld"
 Level 5

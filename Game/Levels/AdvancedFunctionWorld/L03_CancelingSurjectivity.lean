@@ -1,4 +1,4 @@
-import Game.Metadata
+import Game.Levels.AdvancedFunctionWorld.L02_Surjectivity
 
 World "AdvancedFunctionWorld"
 Level 3

@@ -1,4 +1,4 @@
-import Game.Metadata
+import Game.Levels.AdvancedFunctionWorld.L09_Invertibility
 
 World "AdvancedFunctionWorld"
 Level 10

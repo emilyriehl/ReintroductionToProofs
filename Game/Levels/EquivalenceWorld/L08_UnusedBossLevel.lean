@@ -1,4 +1,4 @@
-import Game.Metadata
+import Game.Levels.EquivalenceWorld.L07_BossLevel
 
 World "EquivalenceWorld"
 Level 8

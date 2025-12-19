@@ -1,4 +1,4 @@
-import Game.Metadata
+import Game.Levels.ProductWorld.L01_Pairing
 
 World "ProductWorld"
 Level 2

@@ -1,4 +1,4 @@
-import Game.Metadata
+import Game.Levels.DisjunctionWorld.L01_IntroducingOr
 
 World "DisjunctionWorld"
 Level 2

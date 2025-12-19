@@ -1,4 +1,4 @@
-import Game.Metadata
+import Game.Levels.EqualityWorld.L07_UnitProposition
 
 World "EqualityWorld"
 Level 8

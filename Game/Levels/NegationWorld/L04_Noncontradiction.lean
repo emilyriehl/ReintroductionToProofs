@@ -1,4 +1,4 @@
-import Game.Metadata
+import Game.Levels.NegationWorld.L03_DoubleNegation
 
 World "NegationWorld"
 Level 4

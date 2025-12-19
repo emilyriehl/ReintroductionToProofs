@@ -1,4 +1,4 @@
-import Game.Metadata
+import Game.Levels.EqualityWorld.L06_ApplyingFunctions
 
 World "EqualityWorld"
 Level 7

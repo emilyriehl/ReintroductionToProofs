@@ -1,4 +1,4 @@
-import Game.Metadata
+import Game.Levels.ImplicationWorld.L04_ComposingImplication
 
 World "ImplicationWorld"
 Level 5

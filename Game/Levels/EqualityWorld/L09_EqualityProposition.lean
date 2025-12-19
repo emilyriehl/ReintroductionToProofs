@@ -1,4 +1,4 @@
-import Game.Metadata
+import Game.Levels.EqualityWorld.L08_EmptyProposition
 
 World "EqualityWorld"
 Level 9

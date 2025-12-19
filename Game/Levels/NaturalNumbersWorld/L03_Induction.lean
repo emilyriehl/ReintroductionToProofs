@@ -1,4 +1,4 @@
-import Game.Metadata
+import Game.Levels.NaturalNumbersWorld.L02_NormalForms
 
 World "NaturalNumbersWorld"
 Level 3

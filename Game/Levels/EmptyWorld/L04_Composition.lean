@@ -1,4 +1,4 @@
-import Game.Metadata
+import Game.Levels.EmptyWorld.L03_ThroughEmpty
 
 World "EmptyWorld"
 Level 4

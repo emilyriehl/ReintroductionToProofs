@@ -1,4 +1,4 @@
-import Game.Metadata
+import Game.Levels.EquivalenceWorld.L01_ProductSymmetry
 
 World "EquivalenceWorld"
 Level 2

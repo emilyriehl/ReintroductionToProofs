@@ -1,4 +1,4 @@
-import Game.Metadata
+import Game.Levels.ProductWorld.L09_UniversalProperty
 
 World "ProductWorld"
 Level 10

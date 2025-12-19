@@ -1,4 +1,4 @@
-import Game.Metadata
+import Game.Levels.AdvancedFunctionWorld.L05_Injectivity
 
 World "AdvancedFunctionWorld"
 Level 6

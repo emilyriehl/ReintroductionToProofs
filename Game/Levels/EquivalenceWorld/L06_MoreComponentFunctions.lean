@@ -1,4 +1,4 @@
-import Game.Metadata
+import Game.Levels.EquivalenceWorld.L05_ComponentFunctions
 
 World "EquivalenceWorld"
 Level 6

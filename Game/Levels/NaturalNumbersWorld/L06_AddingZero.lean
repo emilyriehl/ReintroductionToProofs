@@ -1,4 +1,4 @@
-import Game.Metadata
+import Game.Levels.NaturalNumbersWorld.L05_DefiningAddition
 
 World "NaturalNumbersWorld"
 Level 6

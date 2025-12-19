@@ -1,4 +1,4 @@
-import Game.Metadata
+import Game.Levels.NegationWorld.L05_Absurd
 
 World "NegationWorld"
 Level 6

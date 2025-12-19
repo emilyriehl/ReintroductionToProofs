@@ -1,4 +1,4 @@
-import Game.Metadata
+import Game.Levels.BooleanWorld.L06_DisjunctionSymmetry
 
 World "BooleanWorld"
 Level 7

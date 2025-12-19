@@ -1,4 +1,4 @@
-import Game.Metadata
+import Game.Levels.ConjunctionWorld.L08_CurryingImplication
 
 World "ConjunctionWorld"
 Level 9

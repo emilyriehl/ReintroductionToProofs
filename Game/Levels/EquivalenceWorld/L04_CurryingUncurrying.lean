@@ -1,4 +1,4 @@
-import Game.Metadata
+import Game.Levels.EquivalenceWorld.L03_SwappingInputs
 
 World "EquivalenceWorld"
 Level 4

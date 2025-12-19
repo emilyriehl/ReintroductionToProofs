@@ -1,4 +1,4 @@
-import Game.Metadata
+import Game.Levels.NegationWorld.L01_ExFalso
 
 World "NegationWorld"
 Level 2

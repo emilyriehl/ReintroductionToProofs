@@ -1,4 +1,4 @@
-import Game.Metadata
+import Game.Levels.ProductWorld.L07_Uncurrying
 
 World "ProductWorld"
 Level 8

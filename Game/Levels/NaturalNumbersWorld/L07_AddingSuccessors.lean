@@ -1,4 +1,4 @@
-import Game.Metadata
+import Game.Levels.NaturalNumbersWorld.L06_AddingZero
 
 World "NaturalNumbersWorld"
 Level 7

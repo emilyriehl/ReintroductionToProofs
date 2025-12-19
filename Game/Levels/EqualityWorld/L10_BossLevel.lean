@@ -1,4 +1,4 @@
-import Game.Metadata
+import Game.Levels.EqualityWorld.L09_EqualityProposition
 
 World "EqualityWorld"
 Level 10

@@ -1,4 +1,4 @@
-import Game.Metadata
+import Game.Levels.QuantifierWorld.L03_UniversalElimination
 
 World "QuantifierWorld"
 Level 4

@@ -1,4 +1,4 @@
-import Game.Metadata
+import Game.Levels.AdvancedFunctionWorld.L08_Bijectivity
 
 World "AdvancedFunctionWorld"
 Level 9

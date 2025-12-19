@@ -1,4 +1,4 @@
-import Game.Metadata
+import Game.Levels.ConjunctionWorld.L06_CompoundImplication
 
 World "ConjunctionWorld"
 Level 7

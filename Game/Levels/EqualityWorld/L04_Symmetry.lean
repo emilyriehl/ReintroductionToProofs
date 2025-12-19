@@ -1,4 +1,4 @@
-import Game.Metadata
+import Game.Levels.EqualityWorld.L03_ProjectedPairs
 
 World "EqualityWorld"
 Level 4

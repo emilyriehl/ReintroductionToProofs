@@ -1,4 +1,4 @@
-import Game.Metadata
+import Game.Levels.ConjunctionWorld.L01_IntroducingAnd
 
 World "ConjunctionWorld"
 Level 2

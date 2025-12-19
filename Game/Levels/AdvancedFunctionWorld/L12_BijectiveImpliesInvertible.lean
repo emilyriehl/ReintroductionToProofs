@@ -1,4 +1,4 @@
-import Game.Metadata
+import Game.Levels.AdvancedFunctionWorld.L11_InvertibleImpliesBijective
 
 World "AdvancedFunctionWorld"
 Level 12
