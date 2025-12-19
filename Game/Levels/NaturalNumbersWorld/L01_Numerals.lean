@@ -1,4 +1,4 @@
-import Game.Metadata
+import Game.Levels.AdvancedFunctionWorld
 
 World "NaturalNumbersWorld"
 Level 1

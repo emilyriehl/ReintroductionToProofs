@@ -1,4 +1,4 @@
-import Game.Metadata
+import Game.Levels.NegationWorld
 
 World "ClassicalWorld"
 Level 1

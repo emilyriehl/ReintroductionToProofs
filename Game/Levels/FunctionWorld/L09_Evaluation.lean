@@ -1,4 +1,4 @@
-import Game.Metadata
+import Game.Levels.FunctionWorld.L08_CompositionRevisited
 
 World "FunctionWorld"
 Level 9

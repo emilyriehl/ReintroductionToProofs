@@ -1,4 +1,4 @@
-import Game.Metadata
+import Game.Levels.CoproductWorld
 
 World "EmptyWorld"
 Level 1

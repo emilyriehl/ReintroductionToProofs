@@ -1,4 +1,4 @@
-import Game.Metadata
+import Game.Levels.FunctionWorld.L01_IdentityFunction
 
 World "FunctionWorld"
 Level 2

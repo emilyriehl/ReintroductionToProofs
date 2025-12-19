@@ -1,4 +1,4 @@
-import Game.Metadata
+import Game.Levels.FunctionWorld.L06_MultivariableFunctions
 
 World "FunctionWorld"
 Level 7

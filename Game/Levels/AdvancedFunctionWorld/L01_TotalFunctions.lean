@@ -1,4 +1,4 @@
-import Game.Metadata
+import Game.Levels.QuantifierWorld
 
 World "AdvancedFunctionWorld"
 Level 1

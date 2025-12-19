@@ -1,4 +1,4 @@
-import Game.Metadata
+import Game.Levels.FunctionWorld.L05_ConstantFunctions
 
 World "FunctionWorld"
 Level 6

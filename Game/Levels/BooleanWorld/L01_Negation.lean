@@ -1,4 +1,5 @@
-import Game.Metadata
+import Game.Levels.NegationWorld
+import Game.Levels.EqualityWorld
 
 World "BooleanWorld"
 Level 1

@@ -1,7 +1,7 @@
 msgid ""
 msgstr "Project-Id-Version: Game v4.23.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-12-18\n"
+"POT-Creation-Date: 2025-12-19\n"
 "Last-Translator: \n"
 "Language-Team: none\n"
 "Language: en\n"
@@ -2556,6 +2556,51 @@ msgid "We just proved modus ponens using backwards reasoning.\n"
 "In particular, we can apply the function §15 to the proof §16 to obtain a proof of §17 denoted by §18.\n"
 "\n"
 "Thus, you can solve this level, proving modus ponens again, simply by typing §19."
+msgstr ""
+
+#. §0: `a : A`
+#. §1: `b : B`
+#. §2: `f : A × B → C`
+#. §3: `⟨a, b⟩ : A × B`
+#. §4: `h : C → D`
+#. §5: `a' : A`
+#. §6: `b' : B`
+#. §7: `g : A × B → C`
+#. §8: `⟨a',b'⟩ : A × B`
+#. §9: `k : C → D`
+#. §10: `p : a = a'`
+#. §11: `q : b = b'`
+#. §12: `r : h ∘ f = k ∘ g`
+#. §13: `h ∘ f`
+#. §14: `k ∘ g`
+#. §15: `h ∘ f`
+#. §16: `k ∘ g`
+#. §17: `r`
+#: Game.Levels.EqualityWorld.L10_BossLevel
+msgid "For the Boss Level of Equality World, you are asked to prove an equality of a more elaborate form than we've seen thus far.\n"
+"\n"
+"On the left-hand side of the equality is an element defined by\n"
+"\n"
+"* starting with a pair of elements §0 and §1,\n"
+"* applying a function §2 to the pair §3, and\n"
+"* then applying a function §4 to the result.\n"
+"\n"
+"On the right-hand side of the equality is an element defined by\n"
+"* starting with a pair of elements §5 and §6,\n"
+"* applying a function §7 to the pair §8, and\n"
+"* then applying a function §9 to the result.\n"
+"\n"
+"In general, these elements would be distinct. However, we have assumed that we have equalities §10, §11, and §12.\n"
+"\n"
+"The last of these hypotheses is in a form that makes it somewhat difficult to use, as the functions §13 and §14 do not appear explicitly in the goal.\n"
+"\n"
+"But if you recall the way that composition of functions is defined, you'll see that these elements do appear implicitly in the goal.\n"
+"\n"
+"To solve this level, you will need to prove and then rewrite along another equality so that at least one of the functions §15 or §16 appears explicitly in the goal. This technique will be used frequently in Advanced Function World.\n"
+"\n"
+"Then you will be able to use the hypothesis §17 to complete the proof.\n"
+"\n"
+"Good luck!"
 msgstr ""
 
 #. §0: `have eqx : (g ∘ f) x = g (f x) := rfl`
@@ -7799,51 +7844,6 @@ msgstr ""
 
 #: Game.Levels.EquivalenceWorld
 msgid "Equivalence World"
-msgstr ""
-
-#. §0: `a : A`
-#. §1: `b : B`
-#. §2: `f : A × B → C`
-#. §3: `⟨a, b⟩ : A × B`
-#. §4: `h : C → D`
-#. §5: `a' : A`
-#. §6: `b' : B`
-#. §7: `g : A × B → C`
-#. §8: `⟨a',b'⟩ : A × B`
-#. §9: `k : C → D`
-#. §10: `p : a = a'`
-#. §11: `q : b = b'`
-#. §12: `r : h ∘ f = k ∘ g`
-#. §13: `h ∘ f`
-#. §14: `k ∘ g`
-#. §15: `h ∘ f`
-#. §16: `k ∘ g`
-#. §17: `r`
-#: Game.Levels.EqualityWorld.L10_BossLevel
-msgid "For the Boss Level of Equality World, you are asked to prove an equality of a more elaborate form than we've seen thus far.\n"
-"\n"
-"On the left-hand side of the equality is an element defined by\n"
-"\n"
-"* starting with a pair of elements §0 and §1,\n"
-"* applying a function §2 to the pair §3, and\n"
-"* then applying a function §4 to the result.\n"
-"\n"
-"On the right-hand side of the equality is an element defined by\n"
-"* starting with a pair of elements §5 and §6,\n"
-"* applying a function §7 to the pair §8, and\n"
-"* then applying a function §9 to the result.\n"
-"\n"
-"In general, these elements would be distinct. However, we have assumed that we have equalities §10, §11, and §12.\n"
-"\n"
-"The last of these hypotheses is in a form that makes it somewhat difficult to use, as the functions §13 and §14 do not appear explicitly in the goal.\n"
-"\n"
-"But if you recall the way that composition of functions is defined, you'll see that these elements do appear implicitly in the goal.\n"
-"\n"
-"To solve this level, you will need to state and prove some other equalities and rewrite along these so that the functions §15 and §16 &mdash; or at least one of these composite functions &mdash; appear explicitly in the goal. This technique will be used frequently in Advanced Function World.\n"
-"\n"
-"Then you will be able to use the hypothesis §17 to complete the proof.\n"
-"\n"
-"Good luck!"
 msgstr ""
 
 #. §0: `cases «{x}»`

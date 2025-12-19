@@ -1,4 +1,4 @@
-import Game.Metadata
+import Game.Levels.FunctionWorld.L04_ComposingFunctions
 
 World "FunctionWorld"
 Level 5

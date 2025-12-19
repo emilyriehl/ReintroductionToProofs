@@ -1,4 +1,5 @@
-import Game.Metadata
+import Game.Levels.ImplicationWorld
+import Game.Levels.ProductWorld
 
 World "ConjunctionWorld"
 Level 1

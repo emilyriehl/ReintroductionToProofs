@@ -1,4 +1,4 @@
-import Game.Metadata
+import Game.Levels.TypeWorld.L02_Proofs
 
 World "TypeWorld"
 Level 3

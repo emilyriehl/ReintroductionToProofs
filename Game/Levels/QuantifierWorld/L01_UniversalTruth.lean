@@ -1,4 +1,5 @@
-import Game.Metadata
+import Game.Levels.BooleanWorld
+import Game.Levels.ClassicalWorld
 
 World "QuantifierWorld"
 Level 1

@@ -1,4 +1,4 @@
-import Game.Metadata
+import Game.Levels.TypeWorld.L01_Elements
 
 World "TypeWorld"
 Level 2

@@ -1,4 +1,5 @@
-import Game.Metadata
+import Game.Levels.EmptyWorld
+import Game.Levels.DisjunctionWorld
 
 World "NegationWorld"
 Level 1

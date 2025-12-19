@@ -1,4 +1,4 @@
-import Game.Metadata
+import Game.Levels.AdvancedFunctionWorld
 
 World "EquivalenceWorld"
 Level 1
