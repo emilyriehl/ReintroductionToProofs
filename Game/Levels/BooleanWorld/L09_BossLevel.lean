@@ -36,4 +36,4 @@ Statement (preamble := refine let p := ?p; let q := ?q; let r := ?r ;  ⟨p, q, 
   exact false
   rfl
 
-Conclusion "If this was too easy, you might find it interesting to learn that the general problem of identifying whether a formula in conjunctive normal form is satisfiable is NP complete!"
+Conclusion "If this was too easy, you might find it interesting to learn that the general problem of identifying whether a formula in conjunctive normal form is satisfiable is NP complete! Move on to Quantifier World to meet the universal and existential quantifiers."

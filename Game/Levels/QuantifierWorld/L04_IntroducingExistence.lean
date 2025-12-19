@@ -40,3 +40,10 @@ Note that the version of the `use` tactic for this game is somewhat weaker than 
 TacticDoc use
 
 NewTactic use
+
+/--
+For a family of propositions `P : A → Prop`, `∃ x : A, P x` is the proposition that asserts that there is some element `a : A` so that `P a` is true. An element of `∃ x : A, P x` may be thought of as a *dependent pair* `⟨a, p_a⟩` where the first component specifies an element `a : A` while the second component specifies a proof `p_a : P a` of the corresponding proposition `P a`.
+-/
+DefinitionDoc «∃» as "∃" in "Logic"
+
+NewDefinition «∃»

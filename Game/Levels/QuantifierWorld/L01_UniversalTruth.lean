@@ -27,3 +27,11 @@ Statement {A : Type} : ∀ a : A, a = a := by
   rfl
 
 Conclusion "Note the similarly with the first level of Equality World. In fact, all of the statements we have proven about arbitrary elements of types can be reinterpreted as proving universally quantified propositions."
+
+/--
+For a family of propositions `P : A → Prop`, `∀ x : A, P x` is the proposition that asserts that `P a` is true for
+every element `a : A`. Elements `h : ∀ x : A, P x` can be thought of as *dependent functions* that carry an arbitrary element `a : A` to a proof `h a` of the proposition `P a`.
+-/
+DefinitionDoc «∀» as "∀" in "Logic"
+
+NewDefinition «∀»

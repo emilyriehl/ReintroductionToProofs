@@ -17,8 +17,13 @@ Unlike totality, the statement `∀ y : B, ∃ x : A, f x = y` is true for some 
 In this level, we will show that the function `not : Bool → Bool` is surjective.
 "
 
-/-- The function `neg : Bool → Bool` is surjective. -/
-Statement : ∀ b : Bool, ∃ x : Bool, not x = b := by
+/-- The function `not : Bool → Bool` is surjective. -/
+TheoremDoc ReintroductionToProofs.Bool.not_surjective as "not_surjective" in "Bool"
+
+namespace ReintroductionToProofs
+
+/-- The function `not : Bool → Bool` is surjective. -/
+Statement Bool.not_surjective : ∀ b : Bool, ∃ x : Bool, not x = b := by
   Hint (hidden := true) "To prove a universally quantified statement, start with `intro` to introduce an arbitrary element of type `Bool`. "
   intro b
   Hint "Here Lean writes `! x` for `not x`, where `not : Bool → Bool` is the boolean negation function."
@@ -30,3 +35,5 @@ Statement : ∀ b : Bool, ∃ x : Bool, not x = b := by
   rfl
 
 Conclusion "In the next levels, we will study general properties of surjective functions."
+
+end ReintroductionToProofs

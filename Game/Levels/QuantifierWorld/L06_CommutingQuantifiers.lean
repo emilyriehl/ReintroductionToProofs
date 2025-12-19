@@ -29,13 +29,15 @@ and secondly a proof `hb : ∀ w : A, P w b`. Note that the element `b` gets sub
 We can think of the proof `h` as being given by this pair of data `⟨b, hb⟩ : ∃ z : B, ∀ w : A, P w z`. Indeed `h = ⟨b, hb⟩`.
 
 To extract this data from the proof `h`, type `rcases h with ⟨b, hb⟩` to replace `h` by the pair of assumptions `b : B` and `hb : ∀ w : A, P w b`.
+
+Alternatively, type `let ⟨b, hb⟩ := h` to extract the elements `b : B` and `hb : ∀ w : A, P w b` from `h`.
 "
 
 /-- Given a family of propositions `P : A → B → Prop`, `∃ z : B, ∀ w : A, P w z`implies `∀ x : A, ∃ y : B, P x y` -/
 Statement {A B : Type} (P : A → B → Prop) : (∃ z : B, ∀ w : A, P w z) → ∀ x : A, ∃ y : B, P x y := by
   intro h
   intro a
-  Hint "Type `rcases {h} with ⟨b, hb⟩` to replace `{h}` by the pair of assumptions `b : B` and
+  Hint (hidden := true) "Type `rcases {h} with ⟨b, hb⟩` to replace `{h}` by the pair of assumptions `b : B` and
   `hb : ∀ w : A, P w b`."
   rcases h with ⟨b, hb⟩
   use b

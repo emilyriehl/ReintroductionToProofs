@@ -24,7 +24,7 @@ Predicates may also depend on multiple variables. For example the equality type 
 There are two general ways to turn an arbitrary predicate `P : A → Prop` into a proposition which no longer depends on the value of a variable of type `A`.
 
 The first method uses the *universal quantifier* `∀`:
-`∀ x : A, P x` is the proposition that asserts that `P x` is true for every `x : A`
+`∀ x : A, P x` is the proposition that asserts that `P a` is true for every `a : A`
 
 The second method uses the *existential quantifier* `∃`:
 `∃ x : A, P x` is the proposition that asserts that there is some `a : A` so that `P a` is true.

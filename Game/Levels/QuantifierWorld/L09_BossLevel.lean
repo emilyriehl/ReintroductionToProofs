@@ -10,6 +10,8 @@ Introduction "We have just proven an implication
 `(∃ x : A, ¬ (P x)) → ¬ (∀ x : A, P x)`.
 
 Use classical logic to prove the converse implication.
+
+Good luck!
 "
 
 open Classical
