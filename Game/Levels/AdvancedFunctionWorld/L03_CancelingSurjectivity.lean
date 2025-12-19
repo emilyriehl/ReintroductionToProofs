@@ -13,16 +13,23 @@ We will show that if the composite `g ∘ f : A → C` is surjective, then the f
 "
 
 /-- For functions `f : A → B` and `g : B → C` if `g ∘ f` is surjective, then so is `g`. -/
-Statement {A B C : Type} (f : A → B) (g : B → C) (gf_is_surj : ∀ z : C, ∃ x : A, (g ∘ f) x = z) : ∀ c : C, ∃ y : B, g y = c := by
+TheoremDoc ReintroductionToProofs.Function.Surjective.of_comp as "Surjective.of_comp" in "Function"
+
+namespace ReintroductionToProofs
+
+/-- For functions `f : A → B` and `g : B → C` if `g ∘ f` is surjective, then so is `g`. -/
+Statement Function.Surjective.of_comp {A B C : Type} (f : A → B) (g : B → C) (gf_is_surj : ∀ z : C, ∃ x : A, (g ∘ f) x = z) : ∀ c : C, ∃ y : B, g y = c := by
   Hint (hidden := true) "To prove a universally quantified statement, start with `intro` to introduce an arbitrary element of type `C`. "
   intro c
   Hint (hidden := true) "To use the hypothesis `gf_is_surj` at `{c}` type `have hc := gf_is_surj {c}`."
   have hc := gf_is_surj c
-  Hint (hidden := true) "To break down the hypothesis `{hc}` try `cases {hc}` or `rcases {hc} with ⟨a, ha⟩`."
+  Hint (hidden := true) "To break down the hypothesis `{hc}` try `cases {hc}` or `rcases {hc} with ⟨a, ha⟩` or `let ⟨a, ha⟩ = {hc}`."
   rcases hc with ⟨a, ha⟩
   use f a
-  Hint (hidden := true) "You can either prove a lemma `have : (g ∘ f) {a} = ?? := rfl` by replacing the `??` with the definition of the composition function. Or you can try `rw [← ??]` using `\\l` to type the left arrow."
+  Hint (hidden := true) "You can either prove a lemma `have : (g ∘ f) {a} = ? := rfl` by replacing the `?` with the definition of the composition function. Or you can try `rw [← ?]` for an appropriate proof of equality using `\\l` to type the left arrow."
   rw [← ha]
   rfl
 
 Conclusion "In the next level, we will prove that surjective functions compose."
+
+end ReintroductionToProofs
