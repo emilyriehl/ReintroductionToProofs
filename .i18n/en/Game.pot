@@ -1,7 +1,7 @@
 msgid ""
 msgstr "Project-Id-Version: Game v4.23.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-12-19\n"
+"POT-Creation-Date: 2025-12-20\n"
 "Last-Translator: \n"
 "Language-Team: none\n"
 "Language: en\n"
@@ -65,6 +65,15 @@ msgstr ""
 
 #: Game.Levels.DisjunctionWorld.L09_BossLevel
 msgid "Disjunction Boss Level"
+msgstr ""
+
+#. §0: `f : A → B`
+#. §1: `g : B → C`
+#. §2: `g ∘ f`
+#. §3: `f`
+#: Game.Levels.AdvancedFunctionWorld.L07_CancelingInjectivity
+#: Game.Levels.AdvancedFunctionWorld.L07_CancelingInjectivity
+msgid "For functions §0 and §1 if §2 is injective, then so is §3."
 msgstr ""
 
 #. §0: `left`
@@ -139,6 +148,7 @@ msgstr ""
 
 #. §0: `not : Bool → Bool`
 #: Game.Levels.AdvancedFunctionWorld.L08_Bijectivity
+#: Game.Levels.AdvancedFunctionWorld.L08_Bijectivity
 msgid "The function §0 is bijective."
 msgstr ""
 
@@ -173,7 +183,6 @@ msgstr ""
 #. §1: `«{c}»`
 #. §2: `have hc := gf_is_surj «{c}»`
 #: Game.Levels.AdvancedFunctionWorld.L03_CancelingSurjectivity
-#: Game.Levels.AdvancedFunctionWorld.L04_ComposingSurjectivity
 msgid "To use the hypothesis §0 at §1 type §2."
 msgstr ""
 
@@ -261,6 +270,31 @@ msgstr ""
 msgid "The equivalence between the types §0 and §1 has to do with the fact that both are examples of *inductive types*. In the next world, we will finally properly introduce another inductive type, namely the type §2 of natural numbers."
 msgstr ""
 
+#. §0: `f : A → B`
+#. §1: `f : A → B`
+#. §2: `∀ x y : A, f x = f y → x = y`
+#. §3: `f : A → B`
+#. §4: `b : B`
+#. §5: `x : A`
+#. §6: `f x = b`
+#. §7: `not : Bool → Bool`
+#. §8: `not`
+#. §9: `Bool.not_injective`
+#. §10: `Bool.not_surjective`
+#: Game.Levels.AdvancedFunctionWorld.L08_Bijectivity
+msgid "We have introduced two properties that may or may not hold of a given function §0.\n"
+"\n"
+"Recall that a function §1 is *injective* if §2.\n"
+"\n"
+"Recall that a function §3 is *surjective* if for every §4 there exists some §5 so that §6.\n"
+"\n"
+"If a function is both injective and surjective, then it is called *bijective*.\n"
+"\n"
+"We have shown that the function §7 is both injective and surjective. Thus, we conclude that §8 is bijective.\n"
+"\n"
+"You do not need to reprove these results, which can be found in your library with the names §9 and §10."
+msgstr ""
+
 #. §0: `Unit`
 #. §1: `⟨⟩`
 #: Game.Levels.TypeWorld.L04_UnitType
@@ -297,6 +331,11 @@ msgid "To prove a conjunction §0 we need to supply a proof of both §1 and §2.
 "This expresses the introduction rule for the logical operation of conjunction.\n"
 "\n"
 "Use the tactic §3 to ask Lean to break up the goal or proving §4 into two steps, of first proving §5 and then proving §6."
+msgstr ""
+
+#. §0: `And.symm`
+#: Game.Levels.AdvancedFunctionWorld.L10_InverseInvertibility
+msgid "You might be able to shorten your proof by applying the theorem §0 from our library at the appropriate point. In the next two levels, we will establish the precise relationship between bijective functions and invertible functions."
 msgstr ""
 
 #. §0: `A`
@@ -1077,6 +1116,7 @@ msgstr ""
 
 #. §0: `not : Bool → Bool`
 #: Game.Levels.AdvancedFunctionWorld.L09_Invertibility
+#: Game.Levels.AdvancedFunctionWorld.L09_Invertibility
 msgid "The function §0 is invertible."
 msgstr ""
 
@@ -1228,10 +1268,6 @@ msgstr ""
 
 #: Game.Levels.ImplicationWorld.L01_ByAssumption
 msgid "By Assumption"
-msgstr ""
-
-#: Game.Levels.AdvancedFunctionWorld.L10_InverseInvertibility
-msgid "In the next two levels, we will establish the precise relationship between bijective functions and invertible functions."
 msgstr ""
 
 #. §0: `0`
@@ -2315,6 +2351,10 @@ msgid "We now establish a logical equivalence between §0 and §1.\n"
 "Note the two implications proven in the previous two levels have been added to the theorem library, should you wish to use them. Their full names are §4 and §5."
 msgstr ""
 
+#: Game.Levels.AdvancedFunctionWorld.L08_Bijectivity
+msgid "A function is *bijective* if it is both injective and surjective."
+msgstr ""
+
 #. §0: `P ∧ Q`
 #. §1: `P ∧ Q`
 #: Game.Levels.ConjunctionWorld.L02_UsingAnd
@@ -2456,7 +2496,7 @@ msgstr ""
 msgid "The inverse of an invertible function is invertible."
 msgstr ""
 
-#. §0: `neg : Bool → Bool`
+#. §0: `not : Bool → Bool`
 #: Game.Levels.AdvancedFunctionWorld.L05_Injectivity
 msgid "The function §0 is injective."
 msgstr ""
@@ -2557,7 +2597,7 @@ msgid "For the Boss Level of Equality World, you are asked to prove an equality 
 "Good luck!"
 msgstr ""
 
-#. §0: `have eqx : (g ∘ f) x = g (f x) := rfl`
+#. §0: `have eq : ∀ a : A, (g ∘ f) a = g (f a) := fun a ↦ rfl`
 #. §1: `(g ∘ f) x = (g ∘ f) y`
 #: Game.Levels.AdvancedFunctionWorld.L06_ComposingInjectivity
 msgid "Alternatively, you could prove lemmas by §0 and then use rewrites to convert the goal into one where you can apply the hypothesis §1. Because the lemmas hold by definitional equality, you were able to skip that step."
@@ -2716,13 +2756,6 @@ msgstr ""
 msgid "And Implies Or"
 msgstr ""
 
-#. §0: `«{hc}»`
-#. §1: `cases «{hc}»`
-#. §2: `rcases «{hc}» with ⟨a, ha⟩`
-#: Game.Levels.AdvancedFunctionWorld.L03_CancelingSurjectivity
-msgid "To break down the hypothesis §0 try §1 or §2."
-msgstr ""
-
 #. §0: `n`
 #. §1: `0`
 #. §2: `(∃ m : ℕ, 0 = 2 * m) ∨ (∃ m : ℕ, 0 = 2 * m + 1)`
@@ -2853,6 +2886,7 @@ msgstr ""
 
 #. §0: `f : A → B`
 #. §1: `f`
+#: Game.Levels.AdvancedFunctionWorld.L15_BossLevel
 #: Game.Levels.AdvancedFunctionWorld.L15_BossLevel
 msgid "The function §0 is an isomorphism if and only if §1 is invertible."
 msgstr ""
@@ -3060,12 +3094,6 @@ msgstr ""
 #: Game.Levels.AdvancedFunctionWorld.L12_BijectiveImpliesInvertible
 msgid "Given a proof §0 for some §1, §2 gives a proof that the\n"
 "element §3 satisfies §4."
-msgstr ""
-
-#. §0: `cases «{gc}»`
-#. §1: `rcases «{gc}» with ⟨b, hb⟩`
-#: Game.Levels.AdvancedFunctionWorld.L04_ComposingSurjectivity
-msgid "Try §0 or §1/"
 msgstr ""
 
 #. §0: `P → Q`
@@ -3370,14 +3398,6 @@ msgstr ""
 msgid "Recall you can rewrite along multiple hypothesized equalities at once by typing §0."
 msgstr ""
 
-#. §0: `P ∨ Q`
-#. §1: `P`
-#. §2: `Q`
-#. §3: `«{rs}» : «{R}» ∨ «{S}»`
-#: Game.Levels.DisjunctionWorld.L08_MoreDistributivity
-msgid "This completes the proof in the case where §0 holds because §1 holds. Now we've started the case where §2 holds, which requires another case split over the proof §3."
-msgstr ""
-
 #. §0: `A`
 #. §1: `B`
 #. §2: `A ≃ B`
@@ -3390,6 +3410,14 @@ msgstr ""
 #. §9: `β : ∀ b : B, f (g b) = b`
 #: Game.Levels.EquivalenceWorld.L01_ProductSymmetry
 msgid "For types §0 and §1, §2 is the type of equivalences between §3 and §4. Its elements have the form §5 where §6, §7, §8, and §9."
+msgstr ""
+
+#. §0: `P ∨ Q`
+#. §1: `P`
+#. §2: `Q`
+#. §3: `«{rs}» : «{R}» ∨ «{S}»`
+#: Game.Levels.DisjunctionWorld.L08_MoreDistributivity
+msgid "This completes the proof in the case where §0 holds because §1 holds. Now we've started the case where §2 holds, which requires another case split over the proof §3."
 msgstr ""
 
 #. §0: `P ∨ Q`
@@ -3700,6 +3728,15 @@ msgstr ""
 msgid "Think about where the contradiction will ultimately arise from."
 msgstr ""
 
+#. §0: `g_is_surj`
+#. §1: `«{c}»`
+#. §2: `have gc := g_is_surj «{c}»`
+#. §3: `let ⟨b, hb⟩ := g_is_surj c`
+#: Game.Levels.AdvancedFunctionWorld.L04_ComposingSurjectivity
+#: Game.Levels.AdvancedFunctionWorld.L04_ComposingSurjectivity
+msgid "To use the hypothesis §0 at §1 type §2 or §3."
+msgstr ""
+
 #: Game.Levels.EmptyWorld.L07_BossLevel
 msgid "For the Boss Level of Empty World, we construct something that is just weird.\n"
 "\n"
@@ -3779,6 +3816,12 @@ msgstr ""
 msgid "Lean uses the name §0 for the function you have just defined. This function has been added to the library of definitions.\n"
 "\n"
 "We'll now study the reverse process, which converts a function of type §1 to a function of type §2."
+msgstr ""
+
+#. §0: `f : A → B`
+#. §1: `∃ g : B → A, (∀ a : A, g (f a) = a) ∧ (∀ b : B, f (g b) = b)`
+#: Game.Levels.AdvancedFunctionWorld.L09_Invertibility
+msgid "A function §0 is *invertible* if §1."
 msgstr ""
 
 #. §0: `P ∨ Q`
@@ -4101,6 +4144,15 @@ msgstr ""
 #: Game.Levels.FunctionWorld.L02_UsingFunctions
 #: Game.Levels.FunctionWorld.L03_UsingFunctionsBackwards
 msgid "Given a function §0 and an element §1, there is an element §2 obtained by evaluating the function §3 at §4."
+msgstr ""
+
+#. §0: `false = true`
+#. §1: `¬ (false = true) := Bool.noConfusion`
+#. §2: `¬ (true = false) := Bool.noConfusion`
+#. §3: `false = true`
+#. §4: `exfalso`
+#: Game.Levels.AdvancedFunctionWorld.L05_Injectivity
+msgid "This case is considerably more difficult than the previous one because your goal is to prove that §0. But you may recall from Boolean world that we can prove §1 and §2. This suggests that the only way we will be able to prove §3 is by finding a contradition among our hypothesis. To set up this proof strategy, use the tactic §4."
 msgstr ""
 
 #: Game.Levels.NaturalNumbersWorld.L04_Recursion
@@ -4481,6 +4533,10 @@ msgstr ""
 msgid "What can we prove with the hypothesis §0?"
 msgstr ""
 
+#: Game.Levels.EquivalenceWorld.L02_CoproductSymmetry
+msgid "Coproduct Symmetry"
+msgstr ""
+
 #. §0: `P : Bool → Prop`
 #. §1: `tr : P true → P false`
 #. §2: `tr : True → False`
@@ -4489,10 +4545,6 @@ msgstr ""
 #. §5: `False`
 #: Game.Levels.BooleanWorld.L08_NotEqual
 msgid "By the definition of the family of propositions §0, the function §1 is a function §2. In particular, if we apply §3 to an element of §4, we get an element of §5, which is what we want."
-msgstr ""
-
-#: Game.Levels.EquivalenceWorld.L02_CoproductSymmetry
-msgid "Coproduct Symmetry"
 msgstr ""
 
 #. §0: `«{andn}»`
@@ -4579,6 +4631,7 @@ msgstr ""
 msgid "Given a family of propositions §0, using classical logic, §1 implies §2."
 msgstr ""
 
+#: Game.Levels.AdvancedFunctionWorld.L12_BijectiveImpliesInvertible
 #: Game.Levels.AdvancedFunctionWorld.L12_BijectiveImpliesInvertible
 msgid "A bijective function is invertible."
 msgstr ""
@@ -4997,6 +5050,12 @@ msgstr ""
 #. §3: `0 + succ «{k}»`
 #: Game.Levels.NaturalNumbersWorld.L06_AddingZero
 msgid "It would be nice if we could use the hypothesis §0 to replace the §1 in the goal with the element §2, but the parentheses in the left-hand side of the goal equation are not a match for this. Lean thinks that the left hand side is of the form §3. Do we have any theorems that can be used to rewrite this into something else?"
+msgstr ""
+
+#. §0: `f : A → B`
+#. §1: `∀ x y : A, x = y → f x = f y`
+#: Game.Levels.AdvancedFunctionWorld.L05_Injectivity
+msgid "A function §0 is *injective* if §1."
 msgstr ""
 
 #. §0: `(p || !q || r) && (q || !r) && (!p || r)`
@@ -5462,6 +5521,7 @@ msgstr ""
 #. §1: `g : B → C`
 #. §2: `g ∘ f : A → C`
 #: Game.Levels.AdvancedFunctionWorld.L04_ComposingSurjectivity
+#: Game.Levels.AdvancedFunctionWorld.L04_ComposingSurjectivity
 msgid "If §0 and §1 are both surjective then §2 is also surjective."
 msgstr ""
 
@@ -5580,6 +5640,12 @@ msgstr ""
 msgid "The proposition §0 is *stronger* than the proposition §1 because §2 is true in general, but the implication §3 does not necessarily hold.\n"
 "\n"
 "Note the implication §4 holds because the mathematical or is *inclusive*, meaning that if §5 and §6 are both true, then §7 is true, and in fact can be proven in two different ways."
+msgstr ""
+
+#. §0: `cases «{gc}»`
+#. §1: `rcases «{gc}» with ⟨b, hb⟩`
+#: Game.Levels.AdvancedFunctionWorld.L04_ComposingSurjectivity
+msgid "Try §0 or §1."
 msgstr ""
 
 #. §0: `P`
@@ -5748,14 +5814,6 @@ msgid "Addition is a binary function on natural numbers, meaning it has type §0
 "In particular, by the time we are looking to calculate §13 we have already defined §14. So we can use this and give the definition §15. Since this is part of the definition of what it means to add zero on the right, we have §16.\n"
 "\n"
 "In this level you are asked to verify the defining equations for the addition function, which is now in your library. Note Lean likes to write §17 for §18."
-msgstr ""
-
-#. §0: `f : A → B`
-#. §1: `g : B → C`
-#. §2: `g ∘ f : A → C`
-#. §3: `f : A → B`
-#: Game.Levels.AdvancedFunctionWorld.L07_CancelingInjectivity
-msgid "Let §0 and §1 be functions and suppose §2 is injective. Then §3 is also injective."
 msgstr ""
 
 #. §0: `constructor`
@@ -6582,7 +6640,6 @@ msgstr ""
 #. §1: `??`
 #. §2: `rw [← ??]`
 #. §3: `\\l`
-#: Game.Levels.AdvancedFunctionWorld.L03_CancelingSurjectivity
 #: Game.Levels.AdvancedFunctionWorld.L04_ComposingSurjectivity
 msgid "You can either prove a lemma §0 by replacing the §1 with the definition of the composition function. Or you can try §2 using §3 to type the left arrow."
 msgstr ""
@@ -6809,6 +6866,14 @@ msgstr ""
 msgid "Next we will study the relationship between products and coproducts."
 msgstr ""
 
+#. §0: `f : A → B`
+#. §1: `g : B → C`
+#. §2: `g ∘ f : A → C`
+#: Game.Levels.AdvancedFunctionWorld.L06_ComposingInjectivity
+#: Game.Levels.AdvancedFunctionWorld.L06_ComposingInjectivity
+msgid "If §0 and §1 are both injective functions, then §2 is also injective."
+msgstr ""
+
 #. §0: `constructor`
 #. §1: `constructor`
 #. §2: `fun s ↦ t`
@@ -7010,6 +7075,14 @@ msgstr ""
 #. §1: `(Empty → Empty) × (Empty → Empty)`
 #: Game.Levels.EmptyWorld.L07_BossLevel
 msgid "There are functions in both directions between the types §0 and §1."
+msgstr ""
+
+#. §0: `have : (g ∘ f) «{a}» = ? := rfl`
+#. §1: `?`
+#. §2: `rw [← ?]`
+#. §3: `\\l`
+#: Game.Levels.AdvancedFunctionWorld.L03_CancelingSurjectivity
+msgid "You can either prove a lemma §0 by replacing the §1 with the definition of the composition function. Or you can try §2 for an appropriate proof of equality using §3 to type the left arrow."
 msgstr ""
 
 #: Game.Levels.BooleanWorld.L09_BossLevel
@@ -7461,6 +7534,12 @@ msgid "Suppose §0 is a function.\n"
 "Can you prove this?"
 msgstr ""
 
+#. §0: `f : A → B`
+#. §1: `∀ y : B, ∃ x : A, f x = y`
+#: Game.Levels.AdvancedFunctionWorld.L02_Surjectivity
+msgid "A function §0 is *surjective* if §1."
+msgstr ""
+
 #. §0: `A × B → B × A`
 #. §1: `A × B`
 #. §2: `B × A`
@@ -7517,6 +7596,7 @@ msgstr ""
 #. §1: `g : B → C`
 #. §2: `g ∘ f`
 #. §3: `g`
+#: Game.Levels.AdvancedFunctionWorld.L03_CancelingSurjectivity
 #: Game.Levels.AdvancedFunctionWorld.L03_CancelingSurjectivity
 msgid "For functions §0 and §1 if §2 is surjective, then so is §3."
 msgstr ""
@@ -7642,6 +7722,7 @@ msgid "The goal is to prove an implication. What tactic can be used to get start
 msgstr ""
 
 #: Game.Levels.AdvancedFunctionWorld.L11_InvertibleImpliesBijective
+#: Game.Levels.AdvancedFunctionWorld.L11_InvertibleImpliesBijective
 msgid "An invertible function is bijective."
 msgstr ""
 
@@ -7682,6 +7763,14 @@ msgstr ""
 #. §2: `p = q`
 #: Game.Levels.EqualityWorld.L09_EqualityProposition
 msgid "The equality type is a proposition: for §0 if §1 then §2"
+msgstr ""
+
+#. §0: `«{hc}»`
+#. §1: `cases «{hc}»`
+#. §2: `rcases «{hc}» with ⟨a, ha⟩`
+#. §3: `let ⟨a, ha⟩ = «{hc}»`
+#: Game.Levels.AdvancedFunctionWorld.L03_CancelingSurjectivity
+msgid "To break down the hypothesis §0 try §1 or §2 or §3."
 msgstr ""
 
 #. §0: `P`
@@ -8063,13 +8152,6 @@ msgid "For any booleans §0, §1, capturing the symmetry of disjunction.\n"
 "Note Lean has an alternate notation §2 for §3."
 msgstr ""
 
-#. §0: `f : A → B`
-#. §1: `g : B → C`
-#. §2: `g ∘ f : A → C`
-#: Game.Levels.AdvancedFunctionWorld.L06_ComposingInjectivity
-msgid "Let §0 and §1 be injective functions. Then §2 is injective."
-msgstr ""
-
 #. §0: `A`
 #. §1: `B`
 #. §2: `A ⊕ B`
@@ -8099,27 +8181,6 @@ msgid "For types §0 and §1, the coproduct type §2 has two kinds of elements. 
 "The tactic §9 has the same effect. When the goal is a coproduct type §10, using the tactic §11 tells Lean that you plan to provide an element of type §12, which should then be converted to an element of type §13 by applying the function §14. Thus, typing §15 will update the goal to type §16.\n"
 "\n"
 "Note that §17 are *different functions* (as long as the type §18 has at least one element) in a way we will be able to make more precise later."
-msgstr ""
-
-#. §0: `f : A → B`
-#. §1: `f : A → B`
-#. §2: `∀ x y : A, f x = f y → x = y`
-#. §3: `f : A → B`
-#. §4: `b : B`
-#. §5: `x : A`
-#. §6: `f x = b`
-#. §7: `not : Bool → Bool`
-#. §8: `not`
-#: Game.Levels.AdvancedFunctionWorld.L08_Bijectivity
-msgid "We have introduced two properties that may or may not hold of a given function §0.\n"
-"\n"
-"Recall that a function §1 is *injective* if §2.\n"
-"\n"
-"Recall that a function §3 is *surjective* if for every §4 there exists some §5 so that §6.\n"
-"\n"
-"If a function is both injective and surjective, then it is called *bijective*.\n"
-"\n"
-"We have shown that the function §7 is both surjective and injective. Thus, we conclude that §8 is bijective."
 msgstr ""
 
 #: Game.Levels.CoproductWorld
@@ -8409,15 +8470,6 @@ msgid "A function §0 mapping out of a coproduct type may be *broken apart* into
 "Both cases will have the same goal type but will have a different context of objects, one of which contains the element §35 and the other of which contains the element §36."
 msgstr ""
 
-#. §0: `false = true`
-#. §1: `¬ (false = true) := Bool.noConfusion`
-#. §2: `¬ (true = false) := Bool.noConfusion`
-#. §3: `false = true`
-#. §4: `apply False.elim`
-#: Game.Levels.AdvancedFunctionWorld.L05_Injectivity
-msgid "This case is considerably more difficult than the previous one because your goal is to prove that §0. But you may recall from Boolean world that we can prove §1 and §2. This suggests that the only way we will be able to prove §3 is by finding a contradition among our hypothesis. To set up this proof strategy, type §4.   "
-msgstr ""
-
 #. §0: `a : A`
 #. §1: `b : B`
 #. §2: `⟨a ,b⟩ : A × B`
@@ -8454,6 +8506,7 @@ msgstr ""
 #. §0: `not : Bool → Bool`
 #: Game.Levels.AdvancedFunctionWorld.L02_Surjectivity
 #: Game.Levels.AdvancedFunctionWorld.L02_Surjectivity
+#: Game.Levels.AdvancedFunctionWorld.L05_Injectivity
 msgid "The function §0 is surjective."
 msgstr ""
 

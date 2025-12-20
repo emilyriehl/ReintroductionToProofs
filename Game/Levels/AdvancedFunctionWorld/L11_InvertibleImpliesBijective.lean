@@ -13,7 +13,12 @@ Your objective this level is to prove this.
 "
 
 /-- An invertible function is bijective. -/
-Statement {A B : Type} (f : A → B) (inv : ∃ g : B → A, (∀ a : A, g (f a) = a) ∧ (∀ b : B, f (g b) = b)) : (∀ x y : A, f x = f y → x = y) ∧ (∀ b : B, ∃ x : A, f x = b) := by
+TheoremDoc ReintroductionToProofs.Function.bijective_of_invertible as "bijective_of_invertible" in "Function"
+
+namespace ReintroductionToProofs
+
+/-- An invertible function is bijective. -/
+Statement Function.bijective_of_invertible {A B : Type} (f : A → B) (inv : ∃ g : B → A, (∀ a : A, g (f a) = a) ∧ (∀ b : B, f (g b) = b)) : (∀ x y : A, f x = f y → x = y) ∧ (∀ b : B, ∃ x : A, f x = b) := by
   have ⟨g, linv, rinv⟩ := inv
   constructor
   intro x y p
@@ -24,3 +29,5 @@ Statement {A B : Type} (f : A → B) (inv : ∃ g : B → A, (∀ a : A, g (f a)
   apply rinv
 
 Conclusion "In the proof that `f` is injective, you used only one half of the invertibility condition. Can you use this observation to state a theorem that proves that `f` is injective under a weaker hypothesis? Similarly, in the proof that `f` is surjective, you used only the other half of the invertibility condition. Can you use this observation to state a theorem that proves that `f` is surjective under a weaker hypothesis?"
+
+end ReintroductionToProofs

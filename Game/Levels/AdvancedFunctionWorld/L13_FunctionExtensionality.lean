@@ -20,6 +20,8 @@ To reduce the question of proving an equality `f = g` to the question of proving
 Function extensionality is an instance of a general `ext` tactic that can be used to prove equality in many types.
 "
 
+namespace ReintroductionToProofs
+
 /-- For functions `f g : A → B` if `∀ x : A, f x = g x` then `f = g`. -/
 Statement {A B : Type} {f g : A → B} (p : ∀ x : A, f x = g x) : f = g  := by
   Hint "Type `ext x` to apply function extensionality and see how the goal state transforms."
@@ -27,6 +29,8 @@ Statement {A B : Type} {f g : A → B} (p : ∀ x : A, f x = g x) : f = g  := by
   exact p x
 
 Conclusion "In the next level, we will practice using function extensionality to demonstrate an equality between functions."
+
+end ReintroductionToProofs
 
 /-- The `ext` tactic can be used to apply function extensionality, changing a goal involving proving equality between functions `f g : A → B` into a goal of proving `f x = g x` for an arbitrary `x : A`. The `ext` tactic  applies similar extensionality lemmas that have been proven for other types. -/
 TacticDoc ext

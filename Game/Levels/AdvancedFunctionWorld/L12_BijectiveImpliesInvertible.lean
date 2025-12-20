@@ -23,15 +23,22 @@ explain how to do so at that stage in the proof.
 open Classical
 
 /-- A bijective function is invertible. -/
-Statement {A B : Type} (f : A → B) (inj : ∀ x y : A, f x = f y → x = y) (surj : ∀ b : B, ∃ x : A, f x = b) :
+TheoremDoc ReintroductionToProofs.Function.invertible_of_bijective as "invertible_of_bijective" in "Function"
+
+
+namespace ReintroductionToProofs
+
+/-- A bijective function is invertible. -/
+Statement Function.invertible_of_bijective {A B : Type} (f : A → B) (inj : ∀ x y : A, f x = f y → x = y) (surj : ∀ b : B, ∃ x : A, f x = b) :
     ∃ g : B → A, (∀ a : A, g (f a) = a) ∧ (∀ b : B, f (g b) = b) := by
+  Hint (hidden := true) "Use `constructor` to isolate the goal of defining the inverse function."
   constructor
   intro b
-  Hint "The idea is to apply the surjectivity hypothesis at `{b}`, using the element `surj {b} : ∃ x : A, f x = {b}`. To extract an element of `a` satisfying this condition type `let a := (surj {b}).choose`."
+  Hint (hidden := true) "At this stage of the proof, the idea is to apply the surjectivity hypothesis at `{b}`, using the element `surj {b} : ∃ x : A, f x = {b}`. To extract an element of `a` satisfying this condition type `let a := (surj {b}).choose`."
   let a := (surj b).choose
-  Hint "You can also add the proof that your element `{a}` satisfies the equation `f {a} = {b}` to the context by typing `have ahyp : f a = b := (surj b).choose_spec`"
-  have ahyp : f a = b := (surj b).choose_spec
-  Hint "Now finish the definition of the inverse function with `exact {a}`."
+  Hint "You can also add the proof that your element `{a}` satisfies the equation `f {a} = {b}` to the context by typing `have ha : f a = b := (surj b).choose_spec`."
+  have ha : f a = b := (surj b).choose_spec
+  Hint (hidden := true) "Now finish the definition of the inverse function with `exact {a}`."
   exact a
   Hint (hidden := true) "You have two things to prove. To break the goals into pieces, type `constructor."
   constructor
@@ -46,7 +53,7 @@ Statement {A B : Type} (f : A → B) (inj : ∀ x y : A, f x = f y → x = y) (s
 
 Conclusion "The upshot of this level and the previous one is that in classical logic at least, a function is bijective if and only if it is invertible."
 
-
+end ReintroductionToProofs
 
 /-- Given a proof `h : ∃ a : A, P a` for some `P : A → Prop`, the axiom of choice selects an element
 `h.choose : A`. The theorem `h.choose_spec` then proves the proposition `P (h.choose)`. -/

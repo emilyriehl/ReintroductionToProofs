@@ -13,16 +13,26 @@ Recall that a function `f : A → B` is *surjective* if for every `b : B` there 
 
 If a function is both injective and surjective, then it is called *bijective*.
 
-We have shown that the function `not : Bool → Bool` is both surjective and injective. Thus, we conclude that `not` is bijective."
+We have shown that the function `not : Bool → Bool` is both injective and surjective. Thus, we conclude that `not` is bijective.
+
+You do not need to reprove these results, which can be found in your library with the names `Bool.not_injective` and `Bool.not_surjective`."
+
 
 /-- The function `not : Bool → Bool` is bijective. -/
-Statement : (∀ x y : Bool, not x = not y → x = y) ∧ (∀ x : Bool, ∃ y : Bool, not y = x) := by
-  constructor
-  apply Bool.not_inj
-  intro x
-  cases x
-  exact ⟨true, rfl⟩
-  exact ⟨false, rfl⟩
+TheoremDoc ReintroductionToProofs.Bool.not_bijective as "not_bijective" in "Bool"
+
+namespace ReintroductionToProofs
+
+/-- The function `not : Bool → Bool` is bijective. -/
+Statement Bool.not_bijective : (∀ x y : Bool, not x = not y → x = y) ∧ (∀ x : Bool, ∃ y : Bool, not y = x) := by
+  exact ⟨Bool.not_injective, Bool.not_surjective⟩
 
 Conclusion "In the next level, we will introduce a fundamental property of bijective functions, namely their
 invertibility."
+
+/-- A function is *bijective* if it is both injective and surjective. -/
+DefinitionDoc Function.bijective as "bijective" in "Function"
+
+NewDefinition Function.bijective
+
+end ReintroductionToProofs

@@ -19,7 +19,12 @@ For the Boss Level, prove the logical equivalence between the conditions that wh
 "
 
 /-- The function `f : A → B` is an isomorphism if and only if `f` is invertible. -/
-Statement {A B : Type} (f : A → B) : (∃ g : B → A, g ∘ f = id ∧ f ∘ g = id) ↔ (∃ g : B → A, (∀ a : A, g (f a) =a) ∧ (∀ b : B, f (g b) = b))  := by
+TheoremDoc ReintroductionToProofs.Function.isomorphism_iff_invertible as "isomorphism_iff_invertible" in "Function"
+
+namespace ReintroductionToProofs
+
+/-- The function `f : A → B` is an isomorphism if and only if `f` is invertible. -/
+Statement Function.isomorphism_iff_invertible {A B : Type} (f : A → B) : (∃ g : B → A, g ∘ f = id ∧ f ∘ g = id) ↔ (∃ g : B → A, (∀ a : A, g (f a) =a) ∧ (∀ b : B, f (g b) = b))  := by
   constructor
   intro iso
   have ⟨g, iso⟩ := iso
@@ -45,3 +50,5 @@ Statement {A B : Type} (f : A → B) : (∃ g : B → A, g ∘ f = id ∧ f ∘ 
   apply inv.2
 
 Conclusion "Using our newly understood notion of bijective function, or invertible function, or isomorphism, we can now study what it means for a pair of types to be *equivalent*. Move on to Equivalence World next."
+
+end ReintroductionToProofs

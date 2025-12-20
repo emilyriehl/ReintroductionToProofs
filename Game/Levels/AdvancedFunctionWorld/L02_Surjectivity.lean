@@ -36,4 +36,9 @@ Statement Bool.not_surjective : ∀ b : Bool, ∃ x : Bool, not x = b := by
 
 Conclusion "In the next levels, we will study general properties of surjective functions."
 
+/-- A function `f : A → B` is *surjective* if `∀ y : B, ∃ x : A, f x = y`. -/
+DefinitionDoc Function.surjective as "surjective" in "Function"
+
+NewDefinition Function.surjective
+
 end ReintroductionToProofs
