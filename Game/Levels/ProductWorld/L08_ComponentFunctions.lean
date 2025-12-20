@@ -19,6 +19,11 @@ Your task in this level is to define a function that extracts the component func
 "
 
 /-- A function into a product type has a pair of component functions. -/
+DefinitionDoc ReintroductionToProofs.Prod.componentFunctions as "componentFunctions" in "Prod"
+
+namespace ReintroductionToProofs
+
+/-- A function into a product type has a pair of component functions. -/
 Statement {X A B : Type} : (X → A × B) → (X → A) × (X → B) := by
   Hint (hidden := true) "The goal is a function type, so start with `intro`."
   intro f
@@ -38,3 +43,8 @@ Statement {X A B : Type} : (X → A × B) → (X → A) × (X → B) := by
 Conclusion "We've seen that functions `f : X → A × B` into product types can be decomposed into component functions `fun x ↦ (f x).1 : X → A` and `fun x ↦ (f x).2 : X → B`.
 
 We'll now consider the reversed process, defining a function into a product type from a pair of component functions."
+
+def Prod.componentFunctions {X A B : Type} : (X → A × B) → (X → A) × (X → B) :=
+  fun f ↦ ⟨fun x ↦ (f x).1, fun x ↦ (f x).2⟩
+
+end ReintroductionToProofs

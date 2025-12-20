@@ -37,4 +37,4 @@ Statement : Unit ⊕ Unit ≃ Bool := by
   rfl
   rfl
 
-Conclusion "The equivalence between the types `Unit ⊕ Unit` and `Bool` has to do with the fact that both are examples of *inductive types*. In the next world, we will finally properly introduce another inductive type, namely the type `ℕ` of natural numbers."
+Conclusion "The equivalence between the types `Unit ⊕ Unit` and `Bool` has to do with the fact that both are examples of *inductive types*. In Natural Numbers World, we will finally properly introduce another inductive type, namely the type `ℕ` of natural numbers. Go there next."

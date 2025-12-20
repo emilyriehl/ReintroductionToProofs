@@ -1,4 +1,4 @@
-import Game.Levels.FunctionWorld.L07_FlippingInputs
+import Game.Levels.FunctionWorld.L07_SwappingInputs
 
 World "FunctionWorld"
 Level 8

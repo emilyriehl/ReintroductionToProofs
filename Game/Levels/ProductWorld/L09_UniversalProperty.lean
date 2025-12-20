@@ -24,8 +24,13 @@ Typing `let g : X → A := p.1` will add the function defined by the first compo
 Practice using the `let` tactic while solving this level.
 "
 
-/-- Combine a pair of functions `g : X → A` and `h : X → A` into a single function from `X` to the product type `A × B`. -/
-Statement {X A B : Type} : (X → A) × (X → B) → (X → A × B):= by
+/-- A pair of functions `g : X → A` and `h : X → A` may be combined into a single function from `X` to the product type `A × B`. -/
+DefinitionDoc ReintroductionToProofs.Prod.lift as "lift" in "Prod"
+
+namespace ReintroductionToProofs
+
+/-- A pair of functions `g : X → A` and `h : X → A` may be combined into a single function from `X` to the product type `A × B`. -/
+Statement {X A B : Type} : (X → A) × (X → B) → (X → A × B) := by
   Hint (hidden := true) "The goal is a function type, so start with `intro`."
   intro f
   Hint (hidden := true) "The goal is a still function type, so continue with `intro`."
@@ -41,6 +46,12 @@ Statement {X A B : Type} : (X → A) × (X → B) → (X → A × B):= by
 Conclusion "The *universal property* of the product is the correspondence between functions `X → A × B` into a product and pairs of functions `(X → A) × (X → B)`.
 
 We are now ready for the Boss Level of Product World."
+
+
+def Prod.lift {X A B : Type} : (X → A) × (X → B) → (X → A × B) :=
+  fun f x ↦ ⟨f.1 x, f.2 x⟩
+
+end ReintroductionToProofs
 
 /-- The `let` tactic is like `have`, but for creating elements of types rather than proofs of propositions. The `let` tactic will add new elements to your context provided you can define them. For example, given elements `a : A` and `b : B`, you can type `let p : A × B := ⟨a, b⟩` to add their pair to the context or type `let f : A → B := fun _ ↦ b` to add the constant function at `b` to the context.
 -/

@@ -35,7 +35,7 @@ The remaining data is relevant because functions carry more information than imp
 
 By function extensionality, the proof `α` witnesses the fact that `g ∘ f = id` while the proof `β` witnesses the fact that `f ∘ g = id`. Together this tells us that the functions `f` and `g` are *inverses*.
 
-In other words, if `f` and `g` are thought of as operations that exchange elements of types `A` and `B`, both operations can be undone.
+In other words, if `f` and `g` are thought of as operations that exchange elements of types `A` and `B`, both operations can be undone by applying the other operation.
 
 The data `⟨f, g, α, β⟩ : A ≃ B` is sometimes also referred to as an *isomorphism* or a *bijection* but in Lean the term *equivalence* is more common.
 "

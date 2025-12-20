@@ -28,6 +28,6 @@ Conclusion "Lean uses the name `Prod.fst : A × B → A` for the function you ha
 /--
 For any types `A` and `B`, `Prod.fst : A × B → A` is the function that sends `p : A × B` to its first coordinate `p.1 : A`.
 -/
-DefinitionDoc Prod.fst as "Prod.fst" in "Prod"
+DefinitionDoc Prod.fst as "fst" in "Prod"
 
 NewDefinition Prod.fst

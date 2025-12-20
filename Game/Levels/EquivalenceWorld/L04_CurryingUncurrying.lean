@@ -22,6 +22,7 @@ Statement {A B C : Type} : (A × B → C) ≃ (A → B → C) := by
   constructor
   Hint (hidden := true) "This function is in the library. Rather than redefine it, can you use it?"
   exact Function.curry
+  Hint (hidden := true) "This function is in the library. Rather than redefine it, can you use it?"
   exact Function.uncurry
   intro f
   rfl

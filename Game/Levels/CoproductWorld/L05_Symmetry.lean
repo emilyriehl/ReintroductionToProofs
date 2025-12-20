@@ -27,3 +27,10 @@ Statement {A B : Type} : A ⊕ B → B ⊕ A := by
 
 
 Conclusion "The same construction defines a function of type `B ⊕ A → A ⊕ B`, demonstrating the symmetry of the coproduct."
+
+/--
+For types `A` and `B`, the function `Sum.swap : A ⊕ B → B ⊕ A` is defined to send elements of the form `Sum.inl a` to `Sum.inr a` and elements of the form `Sum.inr b` to `Sum.inl b`.
+-/
+DefinitionDoc Sum.swap as "Sum.swap" in "Sum"
+
+NewDefinition Sum.swap

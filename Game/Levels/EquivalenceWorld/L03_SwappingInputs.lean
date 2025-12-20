@@ -16,10 +16,8 @@ In this level, you will show that the types `A → B → C` and `B → A → C` 
 Statement {A B C : Type} : (A → B → C) ≃ (B → A → C) := by
   Hint (hidden := true) "Type `constructor` to split the goal up into the four proof obligations."
   constructor
-  intro f b a
-  exact f a b
-  intro f a b
-  exact f b a
+  exact Function.swap
+  exact Function.swap
   intro f
   rfl
   intro f

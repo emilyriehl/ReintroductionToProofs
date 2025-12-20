@@ -6,9 +6,9 @@ Level 4
 Title "Symmetry"
 
 /--
-For types `A` and `B`, the swapping function has type `A × B → B × A` and can be thought of as the function that sends a pair `⟨a, b⟩` to the pair `⟨b, a⟩`.
+For types `A` and `B`, the function `Prod.swap : A × B → B × A` can be thought of as the function that sends a pair `⟨a, b⟩` to the pair `⟨b, a⟩`.
 -/
-DefinitionDoc Prod.swap as "Prod.swap" in "Prod"
+DefinitionDoc Prod.swap as "swap" in "Prod"
 
 Introduction "
 The product type comes with function of type `A × B → B × A` which swaps the elements of an ordered pair.
@@ -28,7 +28,7 @@ Statement {A B : Type} : A × B → B × A := by
   Hint (hidden := true) "Now the goal is an element of a product type. How can such elements be defined?"
   exact ⟨p.2, p.1⟩
 
-Conclusion "Are function types symmetric? Why or why not?"
+Conclusion "Lean calls the function you have just defined `Prod.swap`. It is now part of your library of definitions. Are function types symmetric? Why or why not?"
 
 -- "The function just defined is sometimes called `swap` and is now part of the library of definitions on the right."
 --  If you solved this level with `cases` or `rcases`, try solving it without, and conversely."

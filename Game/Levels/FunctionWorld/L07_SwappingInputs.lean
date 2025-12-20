@@ -3,7 +3,7 @@ import Game.Levels.FunctionWorld.L06_MultivariableFunctions
 World "FunctionWorld"
 Level 7
 
-Title "Flipping Inputs"
+Title "Swapping Inputs"
 
 Introduction "Recall that an element of type `A → B → C` can be thought of as a function of two variables.
 
@@ -27,7 +27,7 @@ Statement {A B C : Type} : (A → B → C) → (B → A → C) := by
 
 Conclusion "Note that for a particular multvariable function `f : A → B → C`, its type dictates that the variable of type `A` must be supplied before the variable of type `B`. But as observed in this level, we can then define a corresponding function `flip f : B → A → C` which encodes the same information."
 
-/-- For any types `A`, `B`, and `C` and function `f : A → B → C`, `flip f : B → A → C` is the function that carries `b : B` and `a : A` to `f a b : C`. -/
-DefinitionDoc flip as "flip" in "Function"
+/-- For any types `A`, `B`, and `C` and function `f : A → B → C`, `Function.swap f : B → A → C` is the function that carries `b : B` and `a : A` to `f a b : C`. -/
+DefinitionDoc Function.swap as "swap" in "Function"
 
-NewDefinition flip
+NewDefinition Function.swap
