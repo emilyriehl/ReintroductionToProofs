@@ -8,6 +8,7 @@ import Game.Levels.NaturalNumbersWorld.L07_AddingZero
 import Game.Levels.NaturalNumbersWorld.L08_AddingSuccessors
 import Game.Levels.NaturalNumbersWorld.L09_CommutingAddition
 import Game.Levels.NaturalNumbersWorld.L10_SuccessorInjectivity
+import Game.Levels.NaturalNumbersWorld.L11_BossLevel
 
 World "NaturalNumbersWorld"
 Title "Natural Numbers World"

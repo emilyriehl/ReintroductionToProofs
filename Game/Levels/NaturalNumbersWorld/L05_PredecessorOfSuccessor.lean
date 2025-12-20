@@ -20,7 +20,7 @@ Can you recall how to establish an equality between functions? Revisit the Funct
 open Nat
 
 /-- The composite of `succ : ℕ → ℕ` followed by `pred : ℕ → ℕ` is the identity function. -/
-TheoremDoc ReintroductionToProofs.Nat.pred_comp_succ as "pred_comp_succ" in "Nat"
+TheoremDoc ReintroductionToProofs.Nat.pred_comp_succ as "pred_comp_succ" in "ℕ"
 
 namespace ReintroductionToProofs
 
