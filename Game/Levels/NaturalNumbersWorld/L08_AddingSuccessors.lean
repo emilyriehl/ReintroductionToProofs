@@ -1,7 +1,7 @@
-import Game.Levels.NaturalNumbersWorld.L06_AddingZero
+import Game.Levels.NaturalNumbersWorld.L07_AddingZero
 
 World "NaturalNumbersWorld"
-Level 7
+Level 8
 
 Title "Adding Successors"
 
@@ -41,3 +41,5 @@ For `m n : Nat`, `Nat.succ_add m n` is the proof that `(succ m) + n = succ (m + 
 TheoremDoc Nat.succ_add as "succ_add" in "ℕ"
 
 NewTheorem Nat.succ_add
+
+DisabledTheorem Nat.succ_add

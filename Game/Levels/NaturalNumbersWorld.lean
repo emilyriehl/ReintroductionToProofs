@@ -2,11 +2,12 @@ import Game.Levels.NaturalNumbersWorld.L01_Numerals
 import Game.Levels.NaturalNumbersWorld.L02_NormalForms
 import Game.Levels.NaturalNumbersWorld.L03_Induction
 import Game.Levels.NaturalNumbersWorld.L04_Recursion
-import Game.Levels.NaturalNumbersWorld.L05_DefiningAddition
-import Game.Levels.NaturalNumbersWorld.L06_AddingZero
-import Game.Levels.NaturalNumbersWorld.L07_AddingSuccessors
-import Game.Levels.NaturalNumbersWorld.L08_CommutingAddition
-import Game.Levels.NaturalNumbersWorld.L09_SuccessorInjectivity
+import Game.Levels.NaturalNumbersWorld.L05_PredecessorOfSuccessor
+import Game.Levels.NaturalNumbersWorld.L06_DefiningAddition
+import Game.Levels.NaturalNumbersWorld.L07_AddingZero
+import Game.Levels.NaturalNumbersWorld.L08_AddingSuccessors
+import Game.Levels.NaturalNumbersWorld.L09_CommutingAddition
+import Game.Levels.NaturalNumbersWorld.L10_SuccessorInjectivity
 
 World "NaturalNumbersWorld"
 Title "Natural Numbers World"

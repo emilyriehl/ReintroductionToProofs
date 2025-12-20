@@ -1,7 +1,7 @@
-import Game.Levels.NaturalNumbersWorld.L07_AddingSuccessors
+import Game.Levels.NaturalNumbersWorld.L08_AddingSuccessors
 
 World "NaturalNumbersWorld"
-Level 8
+Level 9
 
 Title "Commuting Addition"
 
@@ -36,3 +36,5 @@ For `m n : Nat`, `Nat.add_comm m n` is the proof that `m + n = n + m`.
 TheoremDoc Nat.add_comm as "add_comm" in "ℕ"
 
 NewTheorem Nat.add_comm
+
+DisabledTheorem Nat.add_comm

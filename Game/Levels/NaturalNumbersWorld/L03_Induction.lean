@@ -47,14 +47,14 @@ Statement : ∀ n : ℕ , (∃ m : ℕ, n = 2 * m) ∨ (∃ m : ℕ, n = 2 * m +
   rcases hk with even | odd
   Hint (hidden := true) "Use the tactic `left` to indicate that you'd like to prove the left-hand statement or `right` to indicate that you'd like to prove the right-hand statement."
   right
-  Hint (hidden := true) "Type `rcases {even} with ⟨d, hd⟩` to decompose the hypothesis."
+  Hint (hidden := true) "Type `rcases {even} with ⟨d, hd⟩` or `let ⟨d, hd⟩ := {even}` to decompose the hypothesis."
   rcases even with ⟨d, hd⟩
   Hint (hidden := true) "Type `use ??` with a well-chosen element in place of the `??`."
   use d
   Hint (hidden := true) "This equality does not hold by definition, so `rfl` fails. But your context has a new hypothesis that can help."
   rw [hd]
   rfl
-  Hint (hidden := true) "Type `rcases {odd} with ⟨d, hd⟩` to decompose the hypothesis."
+  Hint (hidden := true) "Type `rcases {odd} with ⟨d, hd⟩` or `let ⟨d, hd⟩ := {odd}` to decompose the hypothesis."
   rcases odd with ⟨d, hd⟩
   Hint (hidden := true) "Use the tactic `left` to indicate that you'd like to prove the left-hand statement or `right` to indicate that you'd like to prove the right-hand statement."
   left

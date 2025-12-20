@@ -1,7 +1,7 @@
-import Game.Levels.NaturalNumbersWorld.L05_DefiningAddition
+import Game.Levels.NaturalNumbersWorld.L06_DefiningAddition
 
 World "NaturalNumbersWorld"
-Level 6
+Level 7
 
 Title "Adding Zero"
 
@@ -45,3 +45,5 @@ For `n : ℕ`, `Nat.zero_add n` is the proof that `0 + n = n`.
 TheoremDoc Nat.zero_add as "zero_add" in "ℕ"
 
 NewTheorem Nat.zero_add
+
+DisabledTheorem Nat.zero_add

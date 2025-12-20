@@ -1,7 +1,7 @@
-import Game.Levels.NaturalNumbersWorld.L04_Recursion
+import Game.Levels.NaturalNumbersWorld.L05_PredecessorOfSuccessor
 
 World "NaturalNumbersWorld"
-Level 5
+Level 6
 
 Title "Defining Addition"
 
@@ -12,15 +12,15 @@ In Lean, the addition function is defined *by recursion* &mdash; i.e., by the el
 This means that for an arbitrary natural number `m` &mdash; the first variable &mdash; we define a function `m + : ℕ → ℕ` by cases, that is by specifying values for
 
 * `m + 0` and
-* `m + succ n` for an arbitrary natural number `n`.
+* `m + succ k` for an arbitrary natural number `k`.
 
 For the first equation, we define `m + 0 = m`. Since this is part of the definition of what it means to add zero on the right, we have `rfl : m + 0 = m`.
 
-For the second equation, we must find a formula for `m + succ n` using `m`, `n`, the successor function, and previously defined values of the function `m + : ℕ → ℕ`.
+For the second equation, we must find a formula for `m + succ k` using `m`, `k`, the successor function, and previously defined values of the function `m + : ℕ → ℕ`.
 
-In particular, by the time we are looking to calculate `m + succ n` we have already defined `m + n`. So we can use this and give the definition `m + succ n = succ (m + n)`. Since this is part of the definition of what it means to add zero on the right, we have `rfl : m + succ n = succ (m + n)`.
+In particular, by the time we are looking to calculate `m + succ k` we have already defined `m + k`. So we can use this to give the definition `m + succ k = succ (m + k)`. Since this is part of the definition of what it means to add zero on the right, we have `rfl : m + succ k = succ (m + k)`.
 
-In this level you are asked to verify the defining equations for the addition function, which is now in your library. Note Lean likes to write `n.succ` for `succ n`.
+In this level you are asked to verify the defining equations for the addition function, which is now in your library. Note Lean likes to write `k.succ` for `succ k`.
 "
 
 open Nat

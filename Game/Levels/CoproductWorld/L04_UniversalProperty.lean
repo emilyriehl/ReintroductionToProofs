@@ -27,6 +27,14 @@ Both cases will have the same goal type but will have a different context of obj
 /-- Two functions `g : A → C` and `h : B → C` combine to define a single function of type `A ⊕ B → C`. -/
 DefinitionDoc ReintroductionToProofs.Sum.lift as "lift" in "Sum"
 
+def ReintroductionToProofs.Sum.lift {A B C : Type} (g : A → C) (h : B → C) : (A ⊕ B → C) := by
+  intro x
+  rcases x with a | b
+  apply g
+  exact a
+  apply h
+  exact b
+
 namespace ReintroductionToProofs
 
 /-- Two functions `g : A → C` and `h : B → C` combine to define a single function of type `A ⊕ B → C`. -/
@@ -41,14 +49,6 @@ Statement {A B C : Type} (g : A → C) (h : B → C) : (A ⊕ B → C) := by
   exact b
 
 Conclusion "We will see later that functions of type `A ⊕ B → C` are uniquely determined by their component functions `(A → C) × (B → C)`."
-
-def Sum.lift {A B C : Type} (g : A → C) (h : B → C) : (A ⊕ B → C) := by
-  intro x
-  rcases x with a | b
-  apply g
-  exact a
-  apply h
-  exact b
 
 end ReintroductionToProofs
 
