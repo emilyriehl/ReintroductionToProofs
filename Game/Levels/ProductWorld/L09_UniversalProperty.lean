@@ -56,7 +56,7 @@ TacticDoc «let»
 
 NewTactic «let»
 
-/-- A pair of functions `g : X → A` and `h : X → A` may be combined into a single function from `X` to the product type `A × B`. -/
+/-- For types `X`, `A`, and `B`, `Prod.lift : (X → A) × (X → B) → (X → A × B)` combines a pair of functions of types `X → A` and `X → B` to define a single function of type `X → A × B`. -/
 DefinitionDoc ReintroductionToProofs.Prod.lift as "lift" in "Prod"
 
 NewDefinition ReintroductionToProofs.Prod.lift

@@ -21,7 +21,7 @@ Statement {X A B : Type} : (X → A × B) ≃ (X → A) × (X → B) := by
   Hint (hidden := true) "Type `constructor` to split the goal up into the four proof obligations."
   constructor
   Hint (hidden := true) "This function is in the library. Rather than redefine it, can you use it?"
-  exact Prod.componentFunctions
+  exact Prod.components
   Hint (hidden := true) "This function is in the library. Rather than redefine it, can you use it?"
   exact Prod.lift
   intro f

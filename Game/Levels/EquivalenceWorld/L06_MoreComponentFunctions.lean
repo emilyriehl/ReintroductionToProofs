@@ -21,7 +21,7 @@ Statement {A B C : Type} : (A ⊕ B → C) ≃ (A → C) × (B → C) := by
   Hint (hidden := true) "Type `constructor` to split the goal up into the four proof obligations."
   constructor
   Hint (hidden := true) "This function is in the library. Rather than redefine it, can you use it?"
-  exact Sum.componentFunctions
+  exact Sum.components
   Hint (hidden := true) "You have a very close approximation to this function in your library. Can you see how to modify it to have the form you need here?"
   exact Function.uncurry Sum.lift
   intro f

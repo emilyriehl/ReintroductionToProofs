@@ -24,7 +24,7 @@ Either `cases x` or `rcases x with a | b` can be used to split into the two case
 Both cases will have the same goal type but will have a different context of objects, one of which contains the element `a : A` and the other of which contains the element `b : B`.
 "
 
-/-- Two functions `g : A → C` and `h : B → C` combine to define a single function of type `A ⊕ B → C`. -/
+/-- For types `A`, `B`, and `C`, `Sum.lift : (A → C) → (B → C) → (A ⊕ B → C)` combines a pair of functions of types `A → C` and `B → C` to define a single function of type `A ⊕ B → C`. -/
 DefinitionDoc ReintroductionToProofs.Sum.lift as "lift" in "Sum"
 
 def ReintroductionToProofs.Sum.lift {A B C : Type} (g : A → C) (h : B → C) : (A ⊕ B → C) := by

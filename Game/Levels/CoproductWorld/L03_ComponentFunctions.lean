@@ -29,12 +29,12 @@ Statement {A B C : Type} : (A ⊕ B → C) → (A → C) × (B → C) := by
 
 Conclusion "This level can be solved in one line with `exact fun f ↦ ⟨f ∘ Sum.inl, f ∘ Sum.inr⟩`. Can you make sense of this construction?"
 
-def Sum.componentFunctions {A B C : Type} : (A ⊕ B → C) → (A → C) × (B → C) :=
+def Sum.components {A B C : Type} : (A ⊕ B → C) → (A → C) × (B → C) :=
   fun f ↦ ⟨fun a ↦ f (Sum.inl a), fun b ↦ f (Sum.inr b)⟩
 
-/-- A function of type `A ⊕ B → C` may be split into component functions of types `A → C` and `B → C`. -/
-DefinitionDoc ReintroductionToProofs.Sum.componentFunctions as "componentFunctions" in "Sum"
+/-- For types `A`, `B`, and `C`, `Sum.components : (A ⊕ B → C) → (A → C) × (B → C)` decomposes a function out of a coproduct type into its component functions. -/
+DefinitionDoc ReintroductionToProofs.Sum.components as "components" in "Sum"
 
-NewDefinition ReintroductionToProofs.Sum.componentFunctions
+NewDefinition ReintroductionToProofs.Sum.components
 
 end ReintroductionToProofs

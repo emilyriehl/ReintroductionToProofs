@@ -11,7 +11,7 @@ The *dependent pair type* `(x : A) × B x` collects together all of the elements
 
 More precisely, each element `p : (x : A) × B x` defines a pair of elements. Its first component defines an element `p.1 : A` in the indexing type, which Lean also denotes by `p.fst : A`.
 
-Its second component defines an element `p.2 : B p.1` in the fiber over the first component, which Lean also denotes by `p.snd : B p.snd`.
+Its second component defines an element `p.2 : B p.1` in the fiber over the first component, which Lean also denotes by `p.snd : B p.fst`.
 
 Your task in this level is to define both projection functions from the dependent pair type.
 

@@ -20,7 +20,7 @@ Your task in this level is to define a function that extracts the component func
 
 namespace ReintroductionToProofs
 
-/-- A function into a product type has a pair of component functions. -/
+/-- A function into a product type decomposes into a pair of component functions. -/
 Statement {X A B : Type} : (X → A × B) → (X → A) × (X → B) := by
   Hint (hidden := true) "The goal is a function type, so start with `intro`."
   intro f
@@ -41,13 +41,13 @@ Conclusion "We've seen that functions `f : X → A × B` into product types can 
 
 We'll now consider the reversed process, defining a function into a product type from a pair of component functions."
 
-def Prod.componentFunctions {X A B : Type} : (X → A × B) → (X → A) × (X → B) :=
+def Prod.components {X A B : Type} : (X → A × B) → (X → A) × (X → B) :=
   fun f ↦ ⟨fun x ↦ (f x).1, fun x ↦ (f x).2⟩
 
 end ReintroductionToProofs
 
 
-/-- A function into a product type has a pair of component functions. -/
-DefinitionDoc ReintroductionToProofs.Prod.componentFunctions as "componentFunctions" in "Prod"
+/-- For types `X`, `A`, and `B`, `Prod.components : (X → A × B) → (X → A) × (X → B)` decomposes a function into a product type into its component functions. -/
+DefinitionDoc ReintroductionToProofs.Prod.components as "components" in "Prod"
 
-NewDefinition ReintroductionToProofs.Prod.componentFunctions
+NewDefinition ReintroductionToProofs.Prod.components

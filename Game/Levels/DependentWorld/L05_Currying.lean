@@ -25,12 +25,18 @@ defined by currying and uncurrying.
 Your task in this level is in fact to construct a further generalization of this equivalence where the type `C` is replaced by a type family over the dependent pair type `(x : A) × B x`.
 
 While the statement of the equivalence in this case is harder to read, the construction of the equivalence in all three settings is identical.
+
+Note as a special case of the equivalence you will demonstrate here, there is an equivalence of types
+
+`((x : A) × B x → Type) ≃ ((x : A) → B x → Type)`
+
+Thus families of types `C` over the dependent pair type `(x : A) × B x` can also be encoded by elements of type `C : (x : A) → B x → Type`, and in the final level of Dependent World, we will adopt this latter convention, which is more common.
 "
 
 /-- There is an equivalence between the type of dependent functions out of the dependent pair type `(x : A) × B x` and the type of dependent functions of two variables `x : A` and `y : B x` defined by currying and uncurrying. -/
 Statement {A : Type} {B : A → Type} {C : (x : A) × B x → Type} :
     ((p : (x : A) × B x) → C p) ≃ ((x : A) → (y : B x) → C ⟨x, y⟩) := by
   Hint (hidden := true) "Recall that equivalences of types require four separate pieces of data. Type `constructor` to split the goal up into the four proof obligations."
-  exact ⟨fun f x y ↦ f ⟨x, y⟩, fun f p ↦ f p.1 p.2, fun f ↦ rfl, fun f ↦ rfl⟩
+  exact ⟨fun f x y ↦ f ⟨x, y⟩, fun f p ↦ f p.1 p.2, fun _ ↦ rfl, fun _ ↦ rfl⟩
 
-Conclusion "While our `Function.curry` and `Function.uncurry` cannot be used here, this level can still be solved in one line with `⟨fun f x y ↦ f ⟨x, y⟩, fun f p ↦ f p.1 p.2, fun f ↦ rfl, fun f ↦ rfl⟩`, which also defines the corresponding equivalence of ordinary function types in Equivalence World."
+Conclusion "While our `Function.curry` and `Function.uncurry` cannot be used here, this level can still be solved in one line with `exact ⟨fun f x y ↦ f ⟨x, y⟩, fun f p ↦ f p.1 p.2, fun _ ↦ rfl, fun _ ↦ rfl⟩`, which also defines the corresponding equivalence of ordinary function types in Equivalence World."

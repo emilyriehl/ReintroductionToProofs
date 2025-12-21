@@ -30,7 +30,7 @@ It takes the form of an equivalence between:
 
 In the case where the types `C x y` are all propositions, an element of the first type proves that for all `x : A` there is some `y : B x` so that `C x y` holds. The first component of an element of the second type is a dependent function `s : (x : A) → B x` that specifies an element `s x : B x` for each `x : A` so that `C x (s x)` holds. This is why the equivalence is referred to as the type theoretic &ldquo;axiom of choice&rdquo;.
 
-If you get stuck, it might help to consider the case where `B` and `C` are constant type families. As in the previous level, this equivalence is a familiar one!
+If you get stuck, it might help to consider the case where `B` and `C` are constant type families. As was the case for the previous level, this equivalence is a familiar one!
 "
 
 /--
@@ -53,4 +53,4 @@ Statement {A : Type} {B : A → Type} (C : (x : A) → B x → Type) :
   intro x
   rfl
 
-Conclusion "Congratulations for defeating the final Boss Level!"
+Conclusion "Congratulations! You have completed the final Boss Level!"
