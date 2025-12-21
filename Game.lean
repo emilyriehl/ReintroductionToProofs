@@ -14,6 +14,7 @@ import Game.Levels.QuantifierWorld
 import Game.Levels.AdvancedFunctionWorld
 import Game.Levels.EquivalenceWorld
 import Game.Levels.NaturalNumbersWorld
+import Game.Levels.DependentWorld
 
 -- Here's what we'll put on the title screen
 Title "Reintroduction to Proofs"
@@ -82,6 +83,8 @@ Dependency ClassicalWorld → QuantifierWorld
 Dependency QuantifierWorld → AdvancedFunctionWorld
 Dependency AdvancedFunctionWorld → EquivalenceWorld
 Dependency AdvancedFunctionWorld → NaturalNumbersWorld
+Dependency EquivalenceWorld → DependentWorld
+Dependency NaturalNumbersWorld → DependentWorld
 
 /-! Build the game. Shows warnings if it found a problem with your game. -/
 MakeGame

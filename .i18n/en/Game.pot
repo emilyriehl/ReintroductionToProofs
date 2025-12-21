@@ -1,7 +1,7 @@
 msgid ""
 msgstr "Project-Id-Version: Game v4.23.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-12-20\n"
+"POT-Creation-Date: 2025-12-21\n"
 "Last-Translator: \n"
 "Language-Team: none\n"
 "Language: en\n"
@@ -433,6 +433,7 @@ msgid "Move on to Advanced Function World to use quantifiers to study important 
 msgstr ""
 
 #: Game.Levels.ProductWorld.L06_Currying
+#: Game.Levels.DependentWorld.L05_Currying
 msgid "Currying"
 msgstr ""
 
@@ -660,6 +661,11 @@ msgstr ""
 #. §2: `Q`
 #: Game.Levels.NegationWorld.L09_NegatingConjunction
 msgid "The converse implication is more subtle because if §0 is false we don't know which of §1 or §2 is false. This will be addressed in Classical World."
+msgstr ""
+
+#. §0: `(A : Type) → A → A`
+#: Game.Levels.DependentWorld.L02_Functions
+msgid "The polymorphic identity function has type §0."
 msgstr ""
 
 #. §0: `e : E`
@@ -1096,6 +1102,10 @@ msgstr ""
 msgid "Because  §0, it is unlikely that you will be able to prove §1. So instead try to prove §2. You can focus on this goal by using the tactic §3."
 msgstr ""
 
+#: Game.Levels.DependentWorld.L06_BossLevel
+msgid "Congratulations for defeating the final Boss Level!"
+msgstr ""
+
 #: Game.Levels.ImplicationWorld.L08_Transitivity
 msgid "Now you can start to apply some hypotheses to reduce the goal to one of your assumptions. Which tactic can be used here?"
 msgstr ""
@@ -1264,6 +1274,64 @@ msgstr ""
 #: Game.Levels.CoproductWorld.L04_UniversalProperty
 #: Game.Levels.CoproductWorld.L04_UniversalProperty
 msgid "Two functions §0 and §1 combine to define a single function of type §2."
+msgstr ""
+
+#. §0: `P : A → Prop`
+#. §1: `A`
+#. §2: `∀`
+#. §3: `∀ x : A, P x`
+#. §4: `∃`
+#. §5: `∃ x : A, P x`
+#. §6: `B : A → Type`
+#. §7: `(x : A) → B x`
+#. §8: `(x : A) × B x`
+#. §9: `Π x : A, B x`
+#. §10: `Σ x : A, B x`
+#. §11: `fun x ↦ B : A → Type`
+#. §12: `A → B`
+#. §13: `fun x ↦ B : A → Type`
+#. §14: `A × B`
+#. §15: `f : (x : A) → B x`
+#. §16: `B : A → Type`
+#. §17: `B a`
+#. §18: `a : A`
+#. §19: `p : (x : A) × B x`
+#. §20: `B : A→ Type`
+#. §21: `p : (x : A) × B x`
+#. §22: `p.1 : A`
+#. §23: `p.2 : B p.1`
+#: Game.Levels.DependentWorld
+msgid "In Quantifier World, we studied familes of propositions §0 &mdash; also called *predicates* &mdash; indexed by elements of another type §1.\n"
+"\n"
+"We introduced two operations that  covert a family of propositions into a single proposition:\n"
+"\n"
+"* the *universal quantifier* §2, which yields the proposition §3 and\n"
+"\n"
+"* the *existential quantifier* §4, which yields the proposition §5.\n"
+"\n"
+"To conclude our reintroduction to proofs in dependent type theory, we study analogous families of types §6, which are also called *dependent types*.\n"
+"\n"
+"We also introduce a pair of type forming operations that turn a family of types into a single type:\n"
+"\n"
+"* the *dependent function type*, which yields a type denoted by §7 and\n"
+"\n"
+"* the *dependent pair type*, which yields a type denoted by §8.\n"
+"\n"
+"Dependent function types are also called *Pi types* and denoted by §9, although this notation is not used in Lean.\n"
+"\n"
+"Dependent pair types are also called *Sigma types* and denoted by §10.\n"
+"\n"
+"As the name suggests, the dependent function type generalizes the function type, introduced in Function World. Indeed, in the case of a constant type family §11, the dependent function type reduces to the ordinary function type §12.\n"
+"\n"
+"Similarly the dependent pair type generalizes the product type, introduced in Product World. Indeed, in the case of a constant type family §13, the dependent pair type reduces to the ordinary product type §14.\n"
+"\n"
+"(Dependent pair types are sometimes also called &ldquo;dependent product types&rdquo;, but this name is also used for the dependent function type, which can be thought of as forming the product of an indexed family of types; to avoid this confusion, we won't use this term in either setting.)\n"
+"\n"
+"An element §15 of the dependent function type associated to a type family §16 is called a *dependent function*. The introduction and elimination rules for dependent function types are analogous to those for ordinary function types and for the universal quantifier. In particular, dependent functions are necessarily total functions. To define a dependent function it is necessary to specify an element of the type §17 for every element §18.\n"
+"\n"
+"An element §19 of the dependent pair type associated to a type family §20 is called a *dependent pair*. The introduction and elimination rules for dependent pair types are analogous to those for ordinary product types and for the existential quantifier. In particular, a dependent pair §21 projects to define an element §22 and an element §23.\n"
+"\n"
+"Because of these analogies, you won't need any new tactics or syntax to solve the puzzles in this level. Let's begin!"
 msgstr ""
 
 #. §0: `f : A → B`
@@ -1534,6 +1602,10 @@ msgstr ""
 msgid "For any types §0, §1, and §2, §3 is the function that sends §4 to the function that sends §5 to §6."
 msgstr ""
 
+#: Game.Levels.DependentWorld.L04_Pairs
+msgid "Pairs"
+msgstr ""
+
 #. §0: `x : A × (B ⊕ C)`
 #. §1: `rcases x with ⟨a, b | c⟩`
 #. §2: `a : A`
@@ -1565,6 +1637,57 @@ msgstr ""
 #. §2: `Q`
 #: Game.Levels.ImplicationWorld.L09_ModusPonensAgain
 msgid "If §0 is true, then if §1 is true, then §2 is true."
+msgstr ""
+
+#. §0: `Π x : A, B x`
+#. §1: `Σ x : A, B x`
+#. §2: `∀ x : A, P x`
+#. §3: `∃ x : A, P x`
+#. §4: `P : A → Prop`
+#. §5: `Π`
+#. §6: `Σ`
+#. §7: `A`
+#. §8: `B : A → Type`
+#. §9: `A`
+#. §10: `C : (x : A) → B x → C`
+#. §11: `(x : A) → Σ y : B x, C x y`
+#. §12: `(s : (x : A) → B x) × ((x : A) → C x (s x))`
+#. §13: `C x y`
+#. §14: `x : A`
+#. §15: `y : B x`
+#. §16: `C x y`
+#. §17: `s : (x : A) → B x`
+#. §18: `s x : B x`
+#. §19: `x : A`
+#. §20: `C x (s x)`
+#. §21: `B`
+#. §22: `C`
+#: Game.Levels.DependentWorld.L06_BossLevel
+msgid "We have now reached our final Boss Level.\n"
+"\n"
+"Your task is to define another equivalence involving dependent function and dependent pair types that is rather surprising.\n"
+"\n"
+"Recall that dependent function types are also called *Pi types* and can be denoted by §0, while dependent pair types are also called *Sigma types* and can be denoted by §1.\n"
+"\n"
+"These alternate notations are more directly analogous to the universal and existential quantifiers §2 and §3 used for a family of propositions §4.\n"
+"\n"
+"The equivalence of types you will construct here reveals that it is possible to move the quantifier §5 inside the quantifier §6.\n"
+"\n"
+"This equivalence does not contradict the observations made in Quantifier World that the order of the universal and existential quantifiers matters.\n"
+"\n"
+"Here the type appearing on the right-hand side of this equivalence &mdash; which is known as the *type theoretic axiom of choice* &mdash; is more elaborate.\n"
+"\n"
+"The type theoretic axiom of choice is an equivalence of types\n"
+"involving a type §7, a type family §8 over §9, and a type family §10.\n"
+"\n"
+"It takes the form of an equivalence between:\n"
+"\n"
+"* the type §11 and\n"
+"* the type §12.\n"
+"\n"
+"In the case where the types §13 are all propositions, an element of the first type proves that for all §14 there is some §15 so that §16 holds. The first component of an element of the second type is a dependent function §17 that specifies an element §18 for each §19 so that §20 holds. This is why the equivalence is referred to as the type theoretic &ldquo;axiom of choice&rdquo;.\n"
+"\n"
+"If you get stuck, it might help to consider the case where §21 and §22 are constant type families. As in the previous level, this equivalence is a familiar one!"
 msgstr ""
 
 #. §0: `have`
@@ -1707,6 +1830,12 @@ msgstr ""
 #. §2: `not : Bool → Bool`
 #: Game.Levels.AdvancedFunctionWorld.L02_Surjectivity
 msgid "Here Lean writes §0 for §1, where §2 is the boolean negation function."
+msgstr ""
+
+#. §0: `B C : A → Type`
+#. §1: `f : (x : A) → B x → C x`
+#: Game.Levels.DependentWorld.L03_Application
+msgid "Given a pair of type families §0 and a fiberwise function §1, then there is a function from sections of the first type family to sections of the second type family."
 msgstr ""
 
 #: Game.Levels.NaturalNumbersWorld.L10_SuccessorInjectivity
@@ -1934,6 +2063,12 @@ msgstr ""
 msgid "In the next level, we will see that a contradiction of the form §0 can be used to prove any proposition."
 msgstr ""
 
+#. §0: `C : Bool → Type`
+#. §1: `(b : Bool) → C b`
+#: Game.Levels.DependentWorld.L01_Types
+msgid "Does the family of types §0 you have just defined have any dependent functions of type §1. If not, could you define a different family of types that would have dependent functions? If so, could you define a different family of types that would not have dependent functions?"
+msgstr ""
+
 #. §0: `and : Bool → Bool → Bool`
 #: Game.Levels.BooleanWorld.L03_Conjunction
 #: Game.Levels.BooleanWorld.L05_Disjunction
@@ -2078,6 +2213,7 @@ msgstr ""
 #: Game.Levels.AdvancedFunctionWorld.L15_BossLevel
 #: Game.Levels.EquivalenceWorld.L07_BossLevel
 #: Game.Levels.NaturalNumbersWorld.L11_BossLevel
+#: Game.Levels.DependentWorld.L06_BossLevel
 msgid "Boss Level"
 msgstr ""
 
@@ -2538,6 +2674,12 @@ msgstr ""
 #. §7: `f «{x}» : B`
 #: Game.Levels.AdvancedFunctionWorld.L12_BijectiveImpliesInvertible
 msgid "If §0 is the name of the inverse function you defined using the axiom of choice, now you are now meant to show that §1 for an arbitrary element §2. This element §3 was chosen using the surjectivity hypothesis so that when you apply §4 you get the element §5 back. Type §6 to apply the other half of the surjectivity hypothesis at the element §7."
+msgstr ""
+
+#. §0: `g : ((y : A) → B y) → ((z : A) → C z)`
+#. §1: `(x : A) → B x → C x`
+#: Game.Levels.DependentWorld.L03_Application
+msgid "Note that from a function §0 it would not necessarily be possible to define a dependent function of type §1. Can you use the analogy with the universal quantifier to understand why not?"
 msgstr ""
 
 #. §0: `f : A → B`
@@ -3178,6 +3320,10 @@ msgstr ""
 msgid "Surjectivity"
 msgstr ""
 
+#: Game.Levels.DependentWorld.L02_Functions
+msgid ""
+msgstr ""
+
 #. §0: `intro n`
 #: Game.Levels.NaturalNumbersWorld.L04_Recursion
 msgid "Start with §0 to prove the universally quantified statement."
@@ -3228,6 +3374,10 @@ msgstr ""
 
 #: Game.Levels.NaturalNumbersWorld.L09_CommutingAddition
 msgid "Commuting Addition"
+msgstr ""
+
+#: Game.Levels.DependentWorld.L01_Types
+msgid "Types"
 msgstr ""
 
 #: Game.Levels.FunctionWorld.L04_ComposingFunctions
@@ -3331,6 +3481,10 @@ msgstr ""
 
 #: Game.Levels.FunctionWorld.L09_Evaluation
 msgid "Evaluation"
+msgstr ""
+
+#: Game.Levels.DependentWorld.L02_Functions
+msgid "Functions"
 msgstr ""
 
 #. §0: `constructor`
@@ -3530,6 +3684,11 @@ msgstr ""
 msgid "For types §0 and §1, the function §2 can be used to include elements of type §3 as elements of the coproduct type §4."
 msgstr ""
 
+#. §0: `constructor`
+#: Game.Levels.DependentWorld.L05_Currying
+msgid "Recall that equivalences of types require four separate pieces of data. Type §0 to split the goal up into the four proof obligations."
+msgstr ""
+
 #: Game.Levels.AdvancedFunctionWorld.L05_Injectivity
 msgid "In the next levels, we will study general properties of injective functions."
 msgstr ""
@@ -3548,6 +3707,10 @@ msgstr ""
 #. §1: `exact «{p}»`
 #: Game.Levels.ImplicationWorld.L01_ByAssumption
 msgid "To use the hypothesis §0 to reach this conclusion type §1."
+msgstr ""
+
+#: Game.Levels.DependentWorld.L06_BossLevel
+msgid "The type theoretic axiom of choice characterizes dependent functions into a dependent pair type."
 msgstr ""
 
 #. §0: `A`
@@ -4129,6 +4292,10 @@ msgstr ""
 msgid "How can you use §0 and §1 to get a contradiction?"
 msgstr ""
 
+#: Game.Levels.DependentWorld.L04_Pairs
+msgid "In the next level, we will consider general functions mapping out of a dependent pair type."
+msgstr ""
+
 #. §0: `A`
 #. §1: `B`
 #. §2: `A × B`
@@ -4407,6 +4574,10 @@ msgstr ""
 msgid "Product types are associative: for types §0, §1, and §2, there are canonical functions in each direction between the types §3 and §4."
 msgstr ""
 
+#: Game.Levels.DependentWorld.L03_Application
+msgid "Application"
+msgstr ""
+
 #. §0: `«{P}»`
 #: Game.Levels.ImplicationWorld.L06_ProvingImpliedAssumption
 msgid "Now the goal is to prove §0 using *any* of our given hypotheses. Which tactic can be used to supply this proof?"
@@ -4423,6 +4594,13 @@ msgstr ""
 #: Game.Levels.QuantifierWorld.L01_UniversalTruth
 msgid "For a family of propositions §0, §1 is the proposition that asserts that §2 is true for\n"
 "every element §3. Elements §4 can be thought of as *dependent functions* that carry an arbitrary element §5 to a proof §6 of the proposition §7."
+msgstr ""
+
+#. §0: `(x : A) × B x`
+#. §1: `x : A`
+#. §2: `y : B x`
+#: Game.Levels.DependentWorld.L05_Currying
+msgid "There is an equivalence between the type of dependent functions out of the dependent pair type §0 and the type of dependent functions of two variables §1 and §2 defined by currying and uncurrying."
 msgstr ""
 
 #. §0: `P → ¬ ¬ P`
@@ -4547,6 +4725,39 @@ msgstr ""
 msgid "The syntax for the application of the function §0 to an element §1 is just §2. So to solve this level, type §3 to obtain an element of type §4."
 msgstr ""
 
+#. §0: `B : A → Type`
+#. §1: `(x : A) × B x`
+#. §2: `(x : A) × B x → C`
+#. §3: `C`
+#. §4: `B`
+#. §5: `A × B`
+#. §6: `(A × B → C) ≃ (A → B → C)`
+#. §7: `B : A → Type`
+#. §8: `((x : A) × B x → C) ≃ ((x : A) → B x → C)`
+#. §9: `C`
+#. §10: `(x : A) × B x`
+#: Game.Levels.DependentWorld.L05_Currying
+msgid "Consider a family of types §0 and the associated dependent pair type §1.\n"
+"\n"
+"In this level, we will characterize the type of functions §2 valued in another type §3.\n"
+"\n"
+"In the case of a constant type family valued at a type §4, the dependent pair type reduces to the ordinary product type §5. In this setting, we have an equivalence of types\n"
+"\n"
+"§6\n"
+"\n"
+"defined by currying and uncurrying.\n"
+"\n"
+"Similarly, when §7 is a non-constant type family, there is an equivalence of types\n"
+"\n"
+"§8\n"
+"\n"
+"defined by currying and uncurrying.\n"
+"\n"
+"Your task in this level is in fact to construct a further generalization of this equivalence where the type §9 is replaced by a type family over the dependent pair type §10.\n"
+"\n"
+"While the statement of the equivalence in this case is harder to read, the construction of the equivalence in all three settings is identical."
+msgstr ""
+
 #: Game.Levels.BooleanWorld.L05_Disjunction
 msgid "Disjunction"
 msgstr ""
@@ -4669,6 +4880,24 @@ msgstr ""
 #. §2: `∃ x : A, ¬ (P x)`
 #: Game.Levels.QuantifierWorld.L09_BossLevel
 msgid "Given a family of propositions §0, using classical logic, §1 implies §2."
+msgstr ""
+
+#. §0: `Bool`
+#. §1: `C : Bool → Type`
+#. §2: `C false`
+#. §3: `C true`
+#. §4: `b : Bool`
+#. §5: `match`
+#. §6: `cases`
+#. §7: `false`
+#: Game.Levels.DependentWorld.L01_Types
+msgid "Your challenge in this level is to define an example of a dependent type indexed by the type of booleans.\n"
+"\n"
+"There are many ways to do this. In particular, it is perfectly valid to define a constant type family.\n"
+"\n"
+"But the elimination rule for the type §0 can be used to define a non-constant type family. To define a family of types §1, it suffices to specify types §2 and §3.\n"
+"\n"
+"After introducing a generic element §4 use the tactics §5 or §6 to consider the explicit booleans §7 and `true."
 msgstr ""
 
 #: Game.Levels.AdvancedFunctionWorld.L12_BijectiveImpliesInvertible
@@ -5571,6 +5800,25 @@ msgstr ""
 msgid "Recall §0 and §1 refer to the left and right propositions in a disjunction §2."
 msgstr ""
 
+#. §0: `Type`
+#. §1: `A → A`
+#. §2: `A : Type`
+#. §3: `Type → Type`
+#. §4: `A : Type`
+#. §5: `A → A`
+#. §6: `(A : Type) → A → A`
+#. §7: `A : Type`
+#. §8: `A → A`
+#: Game.Levels.DependentWorld.L02_Functions
+msgid "We have already seen many examples of dependent types and dependent functions indexed by the type §0 of types.\n"
+"\n"
+"For example, consider the family of types §1 indexed by §2. This defines an element of §3 defined to send §4 to the function type §5.\n"
+"\n"
+"Your task in this level is to define an element of the corresponding dependent function type §6. That is, for each §7, you are asked to define an element of type §8.\n"
+"\n"
+"Can you do it?"
+msgstr ""
+
 #: Game.Levels.CoproductWorld.L08_BossLevel
 msgid "For the Boss Level, your task is to:\n"
 "\n"
@@ -6252,6 +6500,10 @@ msgstr ""
 msgid "The next topic in our study of propositional logic is *negation*, which is used to assert that a proposition is false rather than true. But to help us understand it, move on to Empty World to learn about the empty type."
 msgstr ""
 
+#: Game.Levels.DependentWorld
+msgid "Dependent World"
+msgstr ""
+
 #. §0: `cases «{x}»`
 #. §1: `«{x}»`
 #: Game.Levels.EmptyWorld.L06_CoproductWithEmpty
@@ -6260,6 +6512,31 @@ msgstr ""
 
 #: Game.Levels.TypeWorld.L02_Proofs
 msgid "In the next level, we will learn a new tactic, which allows us to be more precise about which assumption is being used."
+msgstr ""
+
+#. §0: `B C : A → Type`
+#. §1: `A`
+#. §2: `B`
+#. §3: `C`
+#. §4: `A`
+#. §5: `a : A`
+#. §6: `B a`
+#. §7: `C a`
+#. §8: `(x : A) → B x`
+#. §9: `B`
+#. §10: `f : (x : A) → B x → C x`
+#. §11: `B a → C a`
+#. §12: `a : A`
+#: Game.Levels.DependentWorld.L03_Application
+msgid "In this level, we consider a pair of type families §0 indexed by the type §1.\n"
+"\n"
+"The families of types §2 and §3 can be pictured as &ldquo;bundles&rdquo; of types living over the &ldquo;base&rdquo; type §4. For each element §5, there is a corresponding fiber §6 and §7 specified by each type family.\n"
+"\n"
+"With this mental image, an element of the dependent function type §8 may also be thought of as a *section* of the type family §9, as it specifies an element of the fiber living over each element of the base type.\n"
+"\n"
+"In this level, you are given a dependent function §10 that specifies a map between fibers §11 for each element §12 of the base type.\n"
+"\n"
+"Using this, your task is define a function that sends a section of the first type family to a section of the second type family."
 msgstr ""
 
 #. §0: `P`
@@ -6508,6 +6785,11 @@ msgstr ""
 
 #: Game.Levels.ConjunctionWorld.L07_MoreCompoundImplication
 msgid "More Compound Implication"
+msgstr ""
+
+#. §0: `(x : A) × B x`
+#: Game.Levels.DependentWorld.L04_Pairs
+msgid "The dependent pair type §0 has a pair of projection functions, sending a dependent pair to its first and second components respectively."
 msgstr ""
 
 #: Game.Levels.ImplicationWorld.L10_BossLevel
@@ -7924,6 +8206,11 @@ msgstr ""
 msgid "What is the logical structure of the type of §0?"
 msgstr ""
 
+#. §0: `constructor`
+#: Game.Levels.DependentWorld.L04_Pairs
+msgid "Your goal is to define a pair of functions, so start with the tactic §0."
+msgstr ""
+
 #: Game.Levels.NaturalNumbersWorld.L03_Induction
 msgid "Induction"
 msgstr ""
@@ -8545,6 +8832,40 @@ msgid "A function §0 mapping out of a coproduct type may be *broken apart* into
 "Both cases will have the same goal type but will have a different context of objects, one of which contains the element §35 and the other of which contains the element §36."
 msgstr ""
 
+#. §0: `B : A → Type`
+#. §1: `(x : A) × B x`
+#. §2: `B x`
+#. §3: `x`
+#. §4: `A`
+#. §5: `p : (x : A) × B x`
+#. §6: `p.1 : A`
+#. §7: `p.fst : A`
+#. §8: `p.2 : B p.1`
+#. §9: `p.snd : B p.snd`
+#. §10: `(x : A) × B x`
+#. §11: `A`
+#. §12: `(x : A) × B x`
+#. §13: `p : (x : A) × B x`
+#. §14: `p : (x : A) × B x`
+#. §15: `rfl : p = ⟨p.1, p.2⟩`
+#: Game.Levels.DependentWorld.L04_Pairs
+msgid "Consider a family of types §0.\n"
+"\n"
+"The *dependent pair type* §1 collects together all of the elements of the types §2 as §3 ranges over all elements of the indexing type §4.\n"
+"\n"
+"More precisely, each element §5 defines a pair of elements. Its first component defines an element §6 in the indexing type, which Lean also denotes by §7.\n"
+"\n"
+"Its second component defines an element §8 in the fiber over the first component, which Lean also denotes by §9.\n"
+"\n"
+"Your task in this level is to define both projection functions from the dependent pair type.\n"
+"\n"
+"The first of these defines an ordinary function from the type §10 to the type §11.\n"
+"\n"
+"The second of these defines a dependent function mapping out of type type §12. The reason the second project is a *dependent* function is that its output type depends on the input element §13.\n"
+"\n"
+"Note that for §14, we have §15."
+msgstr ""
+
 #. §0: `a : A`
 #. §1: `b : B`
 #. §2: `⟨a ,b⟩ : A × B`
@@ -8601,6 +8922,13 @@ msgstr ""
 #: Game.Levels.AdvancedFunctionWorld.L02_Surjectivity
 #: Game.Levels.AdvancedFunctionWorld.L05_Injectivity
 msgid "The function §0 is surjective."
+msgstr ""
+
+#. §0: `Function.curry`
+#. §1: `Function.uncurry`
+#. §2: `⟨fun f x y ↦ f ⟨x, y⟩, fun f p ↦ f p.1 p.2, fun f ↦ rfl, fun f ↦ rfl⟩`
+#: Game.Levels.DependentWorld.L05_Currying
+msgid "While our §0 and §1 cannot be used here, this level can still be solved in one line with §2, which also defines the corresponding equivalence of ordinary function types in Equivalence World."
 msgstr ""
 
 #. §0: `A`
@@ -8787,6 +9115,10 @@ msgid "In Negation World, we proved that for any propositions §0 and §1:\n"
 "Our aim in this level is to prove the converse implication using classical reasoning.\n"
 "\n"
 "Good luck!"
+msgstr ""
+
+#: Game.Levels.DependentWorld.L01_Types
+msgid "Define any dependent family of types indexed by the type of booleans."
 msgstr ""
 
 #. §0: `let`
