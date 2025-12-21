@@ -24,9 +24,6 @@ Typing `let g : X → A := p.1` will add the function defined by the first compo
 Practice using the `let` tactic while solving this level.
 "
 
-/-- A pair of functions `g : X → A` and `h : X → A` may be combined into a single function from `X` to the product type `A × B`. -/
-DefinitionDoc ReintroductionToProofs.Prod.lift as "lift" in "Prod"
-
 namespace ReintroductionToProofs
 
 /-- A pair of functions `g : X → A` and `h : X → A` may be combined into a single function from `X` to the product type `A × B`. -/
@@ -58,3 +55,8 @@ end ReintroductionToProofs
 TacticDoc «let»
 
 NewTactic «let»
+
+/-- A pair of functions `g : X → A` and `h : X → A` may be combined into a single function from `X` to the product type `A × B`. -/
+DefinitionDoc ReintroductionToProofs.Prod.lift as "lift" in "Prod"
+
+NewDefinition ReintroductionToProofs.Prod.lift

@@ -35,6 +35,8 @@ def ReintroductionToProofs.Sum.lift {A B C : Type} (g : A → C) (h : B → C) :
   apply h
   exact b
 
+NewDefinition ReintroductionToProofs.Sum.lift
+
 namespace ReintroductionToProofs
 
 /-- Two functions `g : A → C` and `h : B → C` combine to define a single function of type `A ⊕ B → C`. -/

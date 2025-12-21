@@ -18,9 +18,6 @@ These functions are called the *component functions* associated to `f : X → A 
 Your task in this level is to define a function that extracts the component functions associated to a function into a product type.
 "
 
-/-- A function into a product type has a pair of component functions. -/
-DefinitionDoc ReintroductionToProofs.Prod.componentFunctions as "componentFunctions" in "Prod"
-
 namespace ReintroductionToProofs
 
 /-- A function into a product type has a pair of component functions. -/
@@ -48,3 +45,9 @@ def Prod.componentFunctions {X A B : Type} : (X → A × B) → (X → A) × (X 
   fun f ↦ ⟨fun x ↦ (f x).1, fun x ↦ (f x).2⟩
 
 end ReintroductionToProofs
+
+
+/-- A function into a product type has a pair of component functions. -/
+DefinitionDoc ReintroductionToProofs.Prod.componentFunctions as "componentFunctions" in "Prod"
+
+NewDefinition ReintroductionToProofs.Prod.componentFunctions

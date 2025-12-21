@@ -16,9 +16,6 @@ Since a *single* function of type `A ⊕ B → C` decomposes into a pair of func
 Your task in this level is to define this operation, which splits a function out of a coproduct into into component functions.
 "
 
-/-- A function of type `A ⊕ B → C` may be split into component functions of types `A → C` and `B → C`. -/
-DefinitionDoc ReintroductionToProofs.Sum.componentFunctions as "componentFunctions" in "Sum"
-
 namespace ReintroductionToProofs
 
 /-- A function of type `A ⊕ B → C` may be split into component functions of types `A → C` and `B → C`. -/
@@ -34,5 +31,10 @@ Conclusion "This level can be solved in one line with `exact fun f ↦ ⟨f ∘ 
 
 def Sum.componentFunctions {A B C : Type} : (A ⊕ B → C) → (A → C) × (B → C) :=
   fun f ↦ ⟨fun a ↦ f (Sum.inl a), fun b ↦ f (Sum.inr b)⟩
+
+/-- A function of type `A ⊕ B → C` may be split into component functions of types `A → C` and `B → C`. -/
+DefinitionDoc ReintroductionToProofs.Sum.componentFunctions as "componentFunctions" in "Sum"
+
+NewDefinition ReintroductionToProofs.Sum.componentFunctions
 
 end ReintroductionToProofs
