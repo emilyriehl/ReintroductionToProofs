@@ -6692,7 +6692,7 @@ msgstr ""
 #. §4: `b`
 #. §5: `?`
 #. §6: `x y : Bool`
-#. §7: `match x y with | false, false => ? | false, true => ? | true, false => ? | true, true => ?`
+#. §7: `match x, y with | false, false => ? | false, true => ? | true, false => ? | true, true => ?`
 #: Game.Levels.BooleanWorld.L01_Negation
 msgid "The tactic §0 can be used to define a function by cases. For example, in the context of an\n"
 "element §1, §2 splits the construction into the case where §3 is false followed by the case where §4 is true. Here both §5 should be replaced by the appropriate sequence of tactics for each case, using semicolons if more than one tactic is needed. In the context of §6,\n"
