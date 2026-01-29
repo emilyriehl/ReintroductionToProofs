@@ -11,7 +11,7 @@ By composing with the function `Sum.inl : A → A ⊕ B` we obtain a function `g
 
 The other component function is defined by composing `f : A ⊕ B → C` with the function `Sum.inr : B → A ⊕ B` to obtain a function `h : B → C`.
 
-Since a *single* function of type `A ⊕ B → C` decomposes into a pair of functions of types `A → C` and `B → C`, we may  define a function from the function type `A ⊕ B → C` to the product of the function types `(A → C) × (B → C)`. Thus carries a function `f : A ⊕ B → C` to its pair of component functions.
+Since a *single* function of type `A ⊕ B → C` decomposes into a pair of functions of types `A → C` and `B → C`, we may  define a function from the function type `A ⊕ B → C` to the product of the function types `(A → C) × (B → C)`. This carries a function `f : A ⊕ B → C` to its pair of component functions.
 
 Your task in this level is to define this operation, which splits a function out of a coproduct into into component functions.
 "
