@@ -1,7 +1,7 @@
 msgid ""
 msgstr "Project-Id-Version: Game v4.23.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-12-21\n"
+"POT-Creation-Date: 2026-04-23\n"
 "Last-Translator: \n"
 "Language-Team: none\n"
 "Language: en\n"
@@ -284,6 +284,10 @@ msgstr ""
 #. §1: `⟨⟩`
 #: Game.Levels.TypeWorld.L04_UnitType
 msgid "The unit type §0 has a canonical element §1."
+msgstr ""
+
+#: Game.Levels.ProductWorld.L07_Uncurrying
+msgid "Define the uncurrying function, converting a function of two variables into a function out of a product type."
 msgstr ""
 
 #. §0: `f : A → B`
@@ -1303,10 +1307,6 @@ msgstr ""
 msgid "Type World"
 msgstr ""
 
-#: Game
-msgid "ReintroToProofs"
-msgstr ""
-
 #: GameServer.RpcHandlers
 msgid "level completed with warnings… 🎭"
 msgstr ""
@@ -1892,10 +1892,6 @@ msgid "Given three types §0, §1, and §2, the coproduct type construction may 
 "By convention, the notation §14 is an abbreviation for the coproduct type §15. For an element §16, typing §17 will split directly into the three cases corresponding to elements §18, §19, or §20.\n"
 "\n"
 "Similarly, for an element §21, §22 will split directly into the three cases corresponding to elements §23, §24, or §25."
-msgstr ""
-
-#: Game.Levels.ProductWorld.L06_Currying
-msgid "Define the currying function, convering a function out of a product type into a function of two variables."
 msgstr ""
 
 #: Game.Levels.TypeWorld.L01_Elements
@@ -4987,43 +4983,6 @@ msgstr ""
 msgid "Conjunction distributes over disjunction: §0 and §1 are logically equivalent."
 msgstr ""
 
-#. §0: `ℕ`
-#. §1: `Bool`
-#. §2: `17 : ℕ`
-#. §3: `true : Bool`
-#: Game
-msgid "Mathematicians from all over &mdash; most of whom have never met one another &mdash; nevertheless agree to an incredible extent about the nature of the mathematical universe. How did this degree of consensus come about?\n"
-"\n"
-"Firstly mathematicians have developed a precise formal language which allows them to define new abstract concepts and state their properties in an unambiguous way. A mathematical *proposition* is a well-formed mathematical statement that is either true or false, for instance:\n"
-"\n"
-"* &ldquo;There are infinitely many prime numbers.&rdquo;\n"
-"* &ldquo;Every prime number is odd.&rdquo;\n"
-"* &ldquo;There are infinitely many prime numbers that are two less than another prime.&rdquo;\n"
-"\n"
-"Mathematicians distinguish between the true propositions, the false ones, and the ones whose truth value is not yet known through *proofs* made precise in the formal language of mathematical logic.\n"
-"\n"
-"While the idea of a mathematical proof is over 2000 years old, the practice of proof writing continues to evolve. Today mathematicians may elect to use a tool called a computer proof assistant that can provide real-time feedback to a theorem prover about the status of a logical argument that is currently under development.\n"
-"\n"
-"The aim of this game will be to introduce proof writing in a computer proof assistant while developing skils that can be used to develop proofs in other contexts: on paper, in conversation with a friend, or in your head.\n"
-"\n"
-"There is one caveat to this introduction to proof writing, which we now address explicitly. The formal vocabulary we will introduce to discuss mathematical proofs is somewhat different from the one that most mathematicians learn. The mathematics we will be developing is essentially unchanged but the formal language introduced here will make it easier to be fully precise about every step in a proof, as is required to convince a computer that a logical argument in sound.\n"
-"\n"
-"In particular, we will explore an analogy between mathematical *propositions* and another form of primitive mathematical structure called *types*. Examples of types include:\n"
-"\n"
-"* The type §0 of natural numbers.\n"
-"* The type §1 of booleans.\n"
-"\n"
-"Each type comes with its *elements* such as §2 or §3 governed by rules which explain the requirements for constructing an element and how previously-constructed elements can be used. We will see that these rules closely parallel the logical rules which dictate the requirements for proving a proposition and explain how a previously-proven proposition can be used to prove other theorems.\n"
-"\n"
-"This formal vocabulary for mathematics is called *dependent type theory*, with the adjective &ldquo;dependent&rdquo; referring to the fact that all of the rules just mentioned apply in any *context* of previously-constructed elements of types and previously-proven propositions.\n"
-"\n"
-"In Type World, we will introduce types and their elements and propositions and their proofs. We will explore these notions interactively with the computer proof assistant Lean.\n"
-"\n"
-"Later worlds will reveal that more complicated types can be built from simpler types, like more complicated mathematical statements can be built from simpler propositions.\n"
-"\n"
-"Let's begin!"
-msgstr ""
-
 #. §0: `A`
 #. §1: `B`
 #. §2: `Sum.swap : A ⊕ B → B ⊕ A`
@@ -5437,6 +5396,10 @@ msgstr ""
 
 #: Game.Levels.EqualityWorld.L03_ProjectedPairs
 msgid "Projected Pairs"
+msgstr ""
+
+#: Game.Levels.ProductWorld.L06_Currying
+msgid "Define the currying function, converting a function out of a product type into a function of two variables."
 msgstr ""
 
 #: Game.Levels.ProductWorld.L04_Symmetry
@@ -6358,6 +6321,43 @@ msgid "In the previous level we proved that §0 implies §1.\n"
 "We now show that §2 implies §3."
 msgstr ""
 
+#. §0: `ℕ`
+#. §1: `Bool`
+#. §2: `17 : ℕ`
+#. §3: `true : Bool`
+#: Game
+msgid "Mathematicians from all over &mdash; most of whom have never met one another &mdash; nevertheless agree to an incredible extent about the nature of the mathematical universe. How did this degree of consensus come about?\n"
+"\n"
+"Firstly mathematicians have developed a precise formal language which allows them to define new abstract concepts and state their properties in an unambiguous way. A mathematical *proposition* is a well-formed mathematical statement that is either true or false, for instance:\n"
+"\n"
+"* &ldquo;There are infinitely many prime numbers.&rdquo;\n"
+"* &ldquo;Every prime number is odd.&rdquo;\n"
+"* &ldquo;There are infinitely many prime numbers that are two less than another prime.&rdquo;\n"
+"\n"
+"Mathematicians distinguish between the true propositions, the false ones, and the ones whose truth value is not yet known through *proofs* made precise in the formal language of mathematical logic.\n"
+"\n"
+"While the idea of a mathematical proof is over 2000 years old, the practice of proof writing continues to evolve. Today mathematicians may elect to use a tool called a computer proof assistant that can provide real-time feedback to a theorem prover about the status of a logical argument that is currently under development.\n"
+"\n"
+"The aim of this game will be to introduce proof writing in a computer proof assistant while developing skills that can be used to develop proofs in other contexts: on paper, in conversation with a friend, or in your head.\n"
+"\n"
+"There is one caveat to this introduction to proof writing, which we now address explicitly. The formal vocabulary we will introduce to discuss mathematical proofs is somewhat different from the one that most mathematicians learn. The mathematics we will be developing is essentially unchanged but the formal language introduced here will make it easier to be fully precise about every step in a proof, as is required to convince a computer that a logical argument is sound. \n"
+"\n"
+"In particular, we will explore an analogy between mathematical *propositions* and another form of primitive mathematical structure called *types*. Examples of types include:\n"
+"\n"
+"* The type §0 of natural numbers.\n"
+"* The type §1 of booleans.\n"
+"\n"
+"Each type comes with its *elements* such as §2 or §3 governed by rules which explain the requirements for constructing an element and how previously-constructed elements can be used. We will see that these rules closely parallel the logical rules which dictate the requirements for proving a proposition and explain how a previously-proven proposition can be used to prove other theorems.\n"
+"\n"
+"This formal vocabulary for mathematics is called *dependent type theory*, with the adjective &ldquo;dependent&rdquo; referring to the fact that all of the rules just mentioned apply in any *context* of previously-constructed elements of types and previously-proven propositions.\n"
+"\n"
+"In Type World, we will introduce types and their elements and propositions and their proofs. We will explore these notions interactively with the computer proof assistant Lean.\n"
+"\n"
+"Later worlds will reveal that more complicated types can be built from simpler types, like more complicated mathematical statements can be built from simpler propositions.\n"
+"\n"
+"Let's begin!"
+msgstr ""
+
 #. §0: `A`
 #. §1: `Empty.elim : Empty → A`
 #. §2: `f : A → Empty`
@@ -6979,6 +6979,10 @@ msgstr ""
 msgid "The converse implication is classical but not constructive as you will show in the Boss Level."
 msgstr ""
 
+#: Game
+msgid "An introduction to proofs in dependent type theory."
+msgstr ""
+
 #: Game.Levels.TypeWorld.L03_ExactElements
 msgid "Exact Elements"
 msgstr ""
@@ -7479,10 +7483,6 @@ msgid "Similarly, for propositions §0, §1, and §2, §3 holds if and only if �
 "Note the §15 tactic allows more general patterns of disjunctions. Given §16 try §17. Similarly, given §18, try §19.\n"
 "\n"
 "Aside: Typing §20 using any single digit number produces a subscript with that number, like §21. You can use this if you'd like to use numerical subscripts in your variable names."
-msgstr ""
-
-#: Game.Levels.ProductWorld.L07_Uncurrying
-msgid "Define the uncurrying function, convering a function of two variables into a function out of a product type."
 msgstr ""
 
 #: Game.Levels.AdvancedFunctionWorld.L11_InvertibleImpliesBijective
@@ -8492,6 +8492,12 @@ msgstr ""
 msgid "Next move on to Coproduct World to learn about another type forming operation, which is in some sense &ldquo;dual&rdquo; to product types."
 msgstr ""
 
+#: Game
+msgid "This game introduces mathematical proof writing in a formal vocabulary that is designed to make it easier to be fully precise about every step in a proof, as is required to convince a computer that a logical argument is sound. \n"
+"\n"
+"The language of dependent type theory can be used in parallel to state and prove mathematical theorems as well as to specify and define examples of mathematical objects."
+msgstr ""
+
 #. §0: `X → A × B`
 #. §1: `(X → A) × (X → B)`
 #: Game.Levels.ProductWorld.L09_UniversalProperty
@@ -9053,7 +9059,6 @@ msgstr ""
 msgid "For any element §0, §1 is true by reflexivity."
 msgstr ""
 
-#: Game
 #: Game
 msgid "Reintroduction to Proofs"
 msgstr ""
