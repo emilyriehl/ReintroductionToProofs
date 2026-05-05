@@ -1,7 +1,7 @@
-import Game.Levels.EqualityWorld.L06_ApplyingFunctions
+import Game.Levels.EqualityWorld.L07_ApplyingEquality
 
 World "EqualityWorld"
-Level 7
+Level 8
 
 Title "Unit Proposition"
 

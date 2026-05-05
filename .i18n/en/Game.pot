@@ -1,7 +1,7 @@
 msgid ""
 msgstr "Project-Id-Version: Game v4.23.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-04-23\n"
+"POT-Creation-Date: 2026-05-05\n"
 "Last-Translator: \n"
 "Language-Team: none\n"
 "Language: en\n"
@@ -153,7 +153,7 @@ msgstr ""
 
 #. §0: `x y : Empty`
 #. §1: `x = y`
-#: Game.Levels.EqualityWorld.L08_EmptyProposition
+#: Game.Levels.EqualityWorld.L09_EmptyProposition
 msgid "The empty type is a proposition: for §0, §1."
 msgstr ""
 
@@ -697,34 +697,7 @@ msgstr ""
 msgid "Was it necessary to consider all four cases of two boolean elements or can you define this function by considering fewer cases? The function §0 is now in your library."
 msgstr ""
 
-#. §0: `f : A → B`
-#. §1: `f : A → B`
-#. §2: `g : B → A`
-#. §3: `g ∘ f = id`
-#. §4: `f ∘ g = id`
-#. §5: `A`
-#. §6: `A`
-#. §7: `∀ a : A, g (f a)`
-#. §8: `B`
-#. §9: `B`
-#. §10: `∀ b : B, f (g a)`
-#. §11: `f`
-#. §12: `f`
-#: Game.Levels.AdvancedFunctionWorld.L15_BossLevel
-msgid "Using function extensionality, we can give a third logically equivalence characterization of what it means for a function §0 to be bijective or invertible.\n"
-"\n"
-"A function §1 is an *isomorphism* if there exists a function §2 so that §3 and §4.\n"
-"\n"
-"The first equation is between functions from §5 to §6. By function extensionality, it is equivalent to the condition that §7.\n"
-"\n"
-"The second equation is between functions from §8 to §9. By function extensionality, it is equivalent to the condition that §10.\n"
-"\n"
-"In Lean, isomorphisms of types are also called *equivalences*, perhaps acknowledging a newly discovered connection between dependent type theory and homotopy theory.\n"
-"\n"
-"For the Boss Level, prove the logical equivalence between the conditions that whether §11 is invertible or whether §12 is an isomorphism."
-msgstr ""
-
-#: Game.Levels.EqualityWorld.L09_EqualityProposition
+#: Game.Levels.EqualityWorld.L10_EqualityProposition
 msgid "Equality Proposition"
 msgstr ""
 
@@ -947,7 +920,7 @@ msgstr ""
 #. §1: `⟨⟩ : Unit`
 #. §2: `x y : Unit`
 #. §3: `x = y`
-#: Game.Levels.EqualityWorld.L07_UnitProposition
+#: Game.Levels.EqualityWorld.L08_UnitProposition
 msgid "Recall from Type World that Lean has a built in unit type §0 that contains just one element denoted §1.\n"
 "\n"
 "The unit type is a proposition, meaning that it has at most one element.\n"
@@ -1593,7 +1566,7 @@ msgstr ""
 msgid "The §0 tactic can be used to add new hypotheses provided you can supply a proof. For example, given assumptions §1 and §2, type §3 to add a proof §4 defined by §5."
 msgstr ""
 
-#: Game.Levels.EqualityWorld.L10_BossLevel
+#: Game.Levels.EqualityWorld.L11_BossLevel
 msgid "We will meet some further applications of the equality type in Boolean World. Head there next."
 msgstr ""
 
@@ -2090,10 +2063,10 @@ msgstr ""
 #: Game.Levels.EmptyWorld.L07_BossLevel
 #: Game.Levels.NegationWorld.L11_BossLevel
 #: Game.Levels.ClassicalWorld.L06_BossLevel
-#: Game.Levels.EqualityWorld.L10_BossLevel
+#: Game.Levels.EqualityWorld.L11_BossLevel
 #: Game.Levels.BooleanWorld.L09_BossLevel
 #: Game.Levels.QuantifierWorld.L09_BossLevel
-#: Game.Levels.AdvancedFunctionWorld.L15_BossLevel
+#: Game.Levels.AdvancedFunctionWorld.L16_BossLevel
 #: Game.Levels.EquivalenceWorld.L07_BossLevel
 #: Game.Levels.NaturalNumbersWorld.L11_BossLevel
 #: Game.Levels.DependentWorld.L06_BossLevel
@@ -2415,6 +2388,10 @@ msgstr ""
 msgid "To prove a universally quantified statement, start with §0 to introduce arbitrary elements of type §1. "
 msgstr ""
 
+#: Game.Levels.EqualityWorld.L07_ApplyingEquality
+msgid "Applying Equality"
+msgstr ""
+
 #: Game.Levels.AdvancedFunctionWorld.L10_InverseInvertibility
 msgid "The inverse of an invertible function is invertible."
 msgstr ""
@@ -2536,7 +2513,7 @@ msgstr ""
 #. §15: `h ∘ f`
 #. §16: `k ∘ g`
 #. §17: `r`
-#: Game.Levels.EqualityWorld.L10_BossLevel
+#: Game.Levels.EqualityWorld.L11_BossLevel
 msgid "For the Boss Level of Equality World, you are asked to prove an equality of a more elaborate form than we've seen thus far.\n"
 "\n"
 "On the left-hand side of the equality is an element defined by\n"
@@ -2663,7 +2640,7 @@ msgstr ""
 msgid "Think carefully about what §0 proves and what proofs can be extracted from this."
 msgstr ""
 
-#: Game.Levels.EqualityWorld.L10_BossLevel
+#: Game.Levels.EqualityWorld.L11_BossLevel
 msgid "Functions out of product types are well-defined, both regarding equalities between elements and equalities between hypotheses."
 msgstr ""
 
@@ -2866,8 +2843,8 @@ msgstr ""
 
 #. §0: `f : A → B`
 #. §1: `f`
-#: Game.Levels.AdvancedFunctionWorld.L15_BossLevel
-#: Game.Levels.AdvancedFunctionWorld.L15_BossLevel
+#: Game.Levels.AdvancedFunctionWorld.L15_Isomorphism
+#: Game.Levels.AdvancedFunctionWorld.L15_Isomorphism
 msgid "The function §0 is an isomorphism if and only if §1 is invertible."
 msgstr ""
 
@@ -2878,7 +2855,7 @@ msgstr ""
 
 #. §0: `cases`
 #. §1: `Empty`
-#: Game.Levels.EqualityWorld.L08_EmptyProposition
+#: Game.Levels.EqualityWorld.L09_EmptyProposition
 msgid "Use the §0 tactic to consider all possible cases for elements of §1."
 msgstr ""
 
@@ -2886,7 +2863,7 @@ msgstr ""
 msgid "The converse implication is more subtle, and will be addressed in the Classical World."
 msgstr ""
 
-#: Game.Levels.EqualityWorld.L07_UnitProposition
+#: Game.Levels.EqualityWorld.L08_UnitProposition
 msgid "Unit Proposition"
 msgstr ""
 
@@ -3842,6 +3819,10 @@ msgid "If §0 and §1 and §2 and\n"
 "§3 and §4 then  §5 implies §6."
 msgstr ""
 
+#: Game.Levels.AdvancedFunctionWorld.L15_Isomorphism
+msgid "Isomorphism"
+msgstr ""
+
 #. §0: `And.symm`
 #. §1: `exact And.symm`
 #: Game.Levels.ConjunctionWorld.L04_LogicalEquivalence
@@ -4063,6 +4044,14 @@ msgstr ""
 msgid "level completed! 🎉"
 msgstr ""
 
+#. §0: `f g : A → B`
+#. §1: `p : f = g`
+#. §2: `a : A`
+#. §3: `congrFun p a : f a = g a`
+#: Game.Levels.EqualityWorld.L07_ApplyingEquality
+msgid "For functions §0 between types, a proof §1, and an element §2, then §3."
+msgstr ""
+
 #. §0: `«{n}».succ`
 #. §1: `succ «{n}»`
 #. §2: `«{n}»`
@@ -4099,6 +4088,26 @@ msgid "Two propositions §0 and §1 are *logically equivalent* if §2 implies §
 "See the library of definitions to the right for a reminder about what the symbol §16 means.\n"
 "\n"
 "The notion of logical equivalence enables us to upgrade our understanding of associativity of symmetry as follows."
+msgstr ""
+
+#. §0: `f g : A → B`
+#. §1: `f = g`
+#. §2: `f`
+#. §3: `g`
+#. §4: `p : f = g`
+#. §5: `f g : A → B`
+#. §6: `a : A`
+#. §7: `f a = g a`
+#: Game.Levels.EqualityWorld.L07_ApplyingEquality
+msgid "Suppose §0 are parallel functions. What does it mean to prove §1?\n"
+"\n"
+"The answer involves an additional axiom in dependent type theory called *function extensionality*, which we are not able to formally state just yet.\n"
+"\n"
+"But if we cannot yet construct a proof that §2 and §3 are equal, we can establish a useful consequence of a hypothesis of the form §4.\n"
+"\n"
+"If two functions §5 are equal and §6 then §7.\n"
+"\n"
+"Can you prove this?"
 msgstr ""
 
 #: Game.Levels.ImplicationWorld.L06_ProvingImpliedAssumption
@@ -4271,7 +4280,7 @@ msgid "Recall that implication is *NOT* associative: the propositions §0 and §
 "Your task in this level is to prove this implication."
 msgstr ""
 
-#: Game.Levels.EqualityWorld.L07_UnitProposition
+#: Game.Levels.EqualityWorld.L08_UnitProposition
 msgid "In the next level, we will prove that the empty type is also a proposition."
 msgstr ""
 
@@ -4365,7 +4374,7 @@ msgstr ""
 #. §0: `Empty`
 #. §1: `x y : Empty`
 #. §2: `x = y`
-#: Game.Levels.EqualityWorld.L08_EmptyProposition
+#: Game.Levels.EqualityWorld.L09_EmptyProposition
 msgid "Recall from Empty World, that Lean has a built in empty type §0 which has no elements.\n"
 "\n"
 "The empty type is also a proposition: if §1, then §2. Can you prove this?"
@@ -4798,7 +4807,8 @@ msgstr ""
 msgid "If this is not the term you want, how can you use it to define the correct term?"
 msgstr ""
 
-#: Game.Levels.AdvancedFunctionWorld.L15_BossLevel
+#: Game.Levels.AdvancedFunctionWorld.L15_Isomorphism
+#: Game.Levels.AdvancedFunctionWorld.L16_BossLevel
 msgid "Using our newly understood notion of bijective function, or invertible function, or isomorphism, we can now study what it means for a pair of types to be *equivalent*. Move on to Equivalence World next."
 msgstr ""
 
@@ -5363,7 +5373,7 @@ msgstr ""
 msgid "In the next level, we will establish another equivalence involving function types."
 msgstr ""
 
-#: Game.Levels.EqualityWorld.L08_EmptyProposition
+#: Game.Levels.EqualityWorld.L09_EmptyProposition
 msgid "In the next level, we will see that the equality type is itself a proposition."
 msgstr ""
 
@@ -5804,6 +5814,33 @@ msgstr ""
 msgid "The proposition §0 is *stronger* than the proposition §1 because §2 is true in general, but the implication §3 does not necessarily hold.\n"
 "\n"
 "Note the implication §4 holds because the mathematical or is *inclusive*, meaning that if §5 and §6 are both true, then §7 is true, and in fact can be proven in two different ways."
+msgstr ""
+
+#. §0: `f : A → B`
+#. §1: `f : A → B`
+#. §2: `g : B → A`
+#. §3: `g ∘ f = id`
+#. §4: `f ∘ g = id`
+#. §5: `A`
+#. §6: `A`
+#. §7: `∀ a : A, g (f a)`
+#. §8: `B`
+#. §9: `B`
+#. §10: `∀ b : B, f (g a)`
+#. §11: `f`
+#. §12: `f`
+#: Game.Levels.AdvancedFunctionWorld.L15_Isomorphism
+msgid "Using function extensionality, we can give a third logically equivalence characterization of what it means for a function §0 to be bijective or invertible.\n"
+"\n"
+"A function §1 is an *isomorphism* if there exists a function §2 so that §3 and §4.\n"
+"\n"
+"The first equation is between functions from §5 to §6. By function extensionality, it is equivalent to the condition that §7.\n"
+"\n"
+"The second equation is between functions from §8 to §9. By function extensionality, it is equivalent to the condition that §10.\n"
+"\n"
+"In Lean, isomorphisms of types are also called *equivalences*, perhaps acknowledging a newly discovered connection between dependent type theory and homotopy theory.\n"
+"\n"
+"The goal in this level is to prove the logical equivalence between the conditions that whether §11 is invertible or whether §12 is an isomorphism."
 msgstr ""
 
 #. §0: `cases «{gc}»`
@@ -6303,7 +6340,7 @@ msgstr ""
 
 #. §0: `x y : Unit`
 #. §1: `x = y`
-#: Game.Levels.EqualityWorld.L07_UnitProposition
+#: Game.Levels.EqualityWorld.L08_UnitProposition
 msgid "The unit type is a proposition: for §0, §1."
 msgstr ""
 
@@ -6319,6 +6356,13 @@ msgstr ""
 msgid "In the previous level we proved that §0 implies §1.\n"
 "\n"
 "We now show that §2 implies §3."
+msgstr ""
+
+#. §0: `f g : A → B`
+#. §1: `a : A`
+#. §2: `f a = g a`
+#: Game.Levels.EqualityWorld.L07_ApplyingEquality
+msgid "Functions are well-defined: if §0 are equal and §1, then §2."
 msgstr ""
 
 #. §0: `ℕ`
@@ -6623,6 +6667,14 @@ msgid "Type §0 to replace §1 by the pair of assumptions §2 and\n"
 "§3."
 msgstr ""
 
+#. §0: `f g : A → B`
+#. §1: `p : f = g`
+#. §2: `a : A`
+#. §3: `congrFun p a : f a = g a`
+#: Game.Levels.EqualityWorld.L07_ApplyingEquality
+msgid "For functions §0 between types, a proof §1, and an element §2, then §3. This theorem has been added to the library."
+msgstr ""
+
 #. §0: `↔`
 #: Game.Levels.QuantifierWorld.L07_NegatingExistence
 msgid "Recall the meaning of §0. What tactic breaks this goal into its components?"
@@ -6797,7 +6849,7 @@ msgstr ""
 msgid "Zero is not the successor of any natural number."
 msgstr ""
 
-#: Game.Levels.EqualityWorld.L08_EmptyProposition
+#: Game.Levels.EqualityWorld.L09_EmptyProposition
 msgid "Empty Proposition"
 msgstr ""
 
@@ -7050,6 +7102,15 @@ msgstr ""
 msgid "Negation"
 msgstr ""
 
+#. §0: `f : A → A → B`
+#. §1: `A`
+#. §2: `A → B`
+#. §3: `B`
+#: Game.Levels.AdvancedFunctionWorld.L16_BossLevel
+#: Game.Levels.AdvancedFunctionWorld.L16_BossLevel
+msgid "If §0 is surjective as a function from §1 to §2, then any endomorphism of §3 has a fixed point."
+msgstr ""
+
 #. §0: `P`
 #. §1: `¬ ¬ P`
 #. §2: `P → ¬ ¬ P`
@@ -7143,7 +7204,7 @@ msgstr ""
 #. §4: `x`
 #. §5: `y`
 #. §6: `p = q`
-#: Game.Levels.EqualityWorld.L09_EqualityProposition
+#: Game.Levels.EqualityWorld.L10_EqualityProposition
 msgid "Given any type §0 and any elements §1, the *equality type* defines a type §2.\n"
 "\n"
 "This type is also a proposition, meaning that it has at most one element.\n"
@@ -7946,14 +8007,6 @@ msgstr ""
 msgid "The overall objective here is to prove a conjunction. Which tactic can help break this up into simpler statements?"
 msgstr ""
 
-#. §0: `exact «{p}»`
-#. §1: `«{p}»`
-#. §2: `«{P}»`
-#: Game.Levels.ImplicationWorld.L02_ModusPonens
-#: Game.Levels.ImplicationWorld.L03_ApplyingImplication
-msgid "Type §0 to tell Lean that §1 is a proof of §2."
-msgstr ""
-
 #. §0: `A`
 #. §1: `B`
 #. §2: `A × B`
@@ -7970,6 +8023,14 @@ msgid "Recall that for any types §0 and §1, we may form their *product type* �
 "In this level, we will see that these functions define an equivalence between the type §5 and the type §6. This gives a more complete account of the symmetry of the product.\n"
 "\n"
 "To define this equivalence, we need four pieces of data. Start by typing §7 to tell Lean to ask you to supply each piece of data one at a time."
+msgstr ""
+
+#. §0: `exact «{p}»`
+#. §1: `«{p}»`
+#. §2: `«{P}»`
+#: Game.Levels.ImplicationWorld.L02_ModusPonens
+#: Game.Levels.ImplicationWorld.L03_ApplyingImplication
+msgid "Type §0 to tell Lean that §1 is a proof of §2."
 msgstr ""
 
 #: Game.Levels.NegationWorld.L02_Negation
@@ -8019,7 +8080,7 @@ msgstr ""
 #. §0: `x y : A`
 #. §1: `p q : x = y`
 #. §2: `p = q`
-#: Game.Levels.EqualityWorld.L09_EqualityProposition
+#: Game.Levels.EqualityWorld.L10_EqualityProposition
 msgid "The equality type is a proposition: for §0 if §1 then §2"
 msgstr ""
 
@@ -8959,7 +9020,7 @@ msgstr ""
 msgid "For any type §0, there is a function §1 encoding the elimination rule of the empty type."
 msgstr ""
 
-#: Game.Levels.EqualityWorld.L09_EqualityProposition
+#: Game.Levels.EqualityWorld.L10_EqualityProposition
 msgid "We are now ready for the Boss Level of Equality World."
 msgstr ""
 
@@ -9171,6 +9232,22 @@ msgid "The objective of this Boss Level is to define a function that takes five 
 "Can you do it?\n"
 "\n"
 "The §0 tactic, which is now in your library, may be helpful for making partial progress."
+msgstr ""
+
+#. §0: `A`
+#. §1: `B`
+#. §2: `f : A → A → B`
+#. §3: `A`
+#. §4: `A → B`
+#. §5: `n : B → B`
+#. §6: `b : B`
+#. §7: `n b = b`
+#: Game.Levels.AdvancedFunctionWorld.L16_BossLevel
+msgid "Lawvere's fixed point theorem is an abstraction of Cantor's famous diagonal argument, repackaged as a constructive statement about functions rather than a proof by contradiction.\n"
+"\n"
+"The goal in this level is to prove this result in the setting of types and functions. (It can be stated more generally in a cartesian closed category.)\n"
+"\n"
+"In this setting, Lawvere's fixed point theorem asserts the following. If §0 and §1 are any types and §2 is a function, which is surjective when considered as a function from the type §3 to the type §4, then any endomorphism §5 has a fixed point: there exists some §6 so that §7."
 msgstr ""
 
 #: Game.Levels.ImplicationWorld.L09_ModusPonensAgain

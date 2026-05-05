@@ -1,7 +1,7 @@
-import Game.Levels.EqualityWorld.L07_UnitProposition
+import Game.Levels.EqualityWorld.L08_UnitProposition
 
 World "EqualityWorld"
-Level 8
+Level 9
 
 Title "Empty Proposition"
 

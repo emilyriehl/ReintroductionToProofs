@@ -3,7 +3,7 @@ import Game.Levels.AdvancedFunctionWorld.L14_DoubleNegation
 World "AdvancedFunctionWorld"
 Level 15
 
-Title "Boss Level"
+Title "Isomorphism"
 
 Introduction "Using function extensionality, we can give a third logically equivalence characterization of what it means for a function `f : A → B` to be bijective or invertible.
 
@@ -15,7 +15,7 @@ The second equation is between functions from `B` to `B`. By function extensiona
 
 In Lean, isomorphisms of types are also called *equivalences*, perhaps acknowledging a newly discovered connection between dependent type theory and homotopy theory.
 
-For the Boss Level, prove the logical equivalence between the conditions that whether `f` is invertible or whether `f` is an isomorphism.
+The goal in this level is to prove the logical equivalence between the conditions that whether `f` is invertible or whether `f` is an isomorphism.
 "
 
 /-- The function `f : A → B` is an isomorphism if and only if `f` is invertible. -/
@@ -26,8 +26,7 @@ namespace ReintroductionToProofs
 /-- The function `f : A → B` is an isomorphism if and only if `f` is invertible. -/
 Statement Function.isomorphism_iff_invertible {A B : Type} (f : A → B) : (∃ g : B → A, g ∘ f = id ∧ f ∘ g = id) ↔ (∃ g : B → A, (∀ a : A, g (f a) =a) ∧ (∀ b : B, f (g b) = b))  := by
   constructor
-  intro iso
-  have ⟨g, iso⟩ := iso
+  intro ⟨g, iso⟩
   use g
   constructor
   intro a
@@ -40,8 +39,7 @@ Statement Function.isomorphism_iff_invertible {A B : Type} (f : A → B) : (∃ 
   rw [← lem₂]
   rw [iso.2]
   rfl
-  intro inv
-  have ⟨g, inv⟩ := inv
+  intro ⟨g, inv⟩
   use g
   constructor
   ext

@@ -1,7 +1,7 @@
-import Game.Levels.EqualityWorld.L09_EqualityProposition
+import Game.Levels.EqualityWorld.L10_EqualityProposition
 
 World "EqualityWorld"
-Level 10
+Level 11
 
 Title "Boss Level"
 
