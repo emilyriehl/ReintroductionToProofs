@@ -47,6 +47,6 @@ Statement Function.isomorphism_iff_invertible {A B : Type} (f : A → B) : (∃ 
   ext
   apply inv.2
 
-Conclusion "Using our newly understood notion of bijective function, or invertible function, or isomorphism, we can now study what it means for a pair of types to be *equivalent*. Move on to Equivalence World next."
+Conclusion "Now you are ready for the Boss Level."
 
 end ReintroductionToProofs

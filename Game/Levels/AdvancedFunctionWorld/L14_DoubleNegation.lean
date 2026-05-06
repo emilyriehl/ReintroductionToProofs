@@ -26,6 +26,6 @@ Statement Bool.not_involutive : not ∘ not = id := by
   rfl
   rfl
 
-Conclusion "Now you are ready for the Boss Level."
+Conclusion "Next we will use function extensionality to prove a third characterization of bijective or invertible functions."
 
 end ReintroductionToProofs

@@ -10,6 +10,8 @@ Introduction "Lawvere's fixed point theorem is an abstraction of Cantor's famous
 The goal in this level is to prove this result in the setting of types and functions. (It can be stated more generally in a cartesian closed category.)
 
 In this setting, Lawvere's fixed point theorem asserts the following. If `A` and `B` are any types and `f : A → A → B` is a function, which is surjective when considered as a function from the type `A` to the type `A → B`, then any endomorphism `n : B → B` has a fixed point: there exists some `b : B` so that `n b = b`.
+
+Your objective in the boss level is to prove this.
 "
 
 /-- If `f : A → A → B` is surjective as a function from `A` to `A → B`, then any endomorphism of `B` has a fixed point. -/

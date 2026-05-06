@@ -34,3 +34,10 @@ TacticDoc rw
 Conclusion "We will now explore other applications of the tactic `rw`."
 
 NewTactic rw
+
+/-- Given elements `x y : A` and a proof `p : x = y`, `Eq.symm p` or `p.symm` are two names for the corresponding proof `y = x`. -/
+TheoremDoc Eq.symm as "symm" in "Eq"
+
+NewTheorem Eq.symm
+
+DisabledTheorem Eq.symm
