@@ -34,7 +34,9 @@ Statement {P : Prop} : ¬ ¬ P → P := by
 
 end
 
-Conclusion "Lean has a built-in name `Classical.byContradiction : ¬ ¬ P → P` for this implication, which is also called *double negation elimination*. In the source files for Classical World, we have told that we want to use classical reasoning (by opening the `Classical` namespace), which is why typing `exact byContradiction` suffices to solve this level."
+Conclusion "Lean has a built-in name `Classical.byContradiction : ¬ ¬ P → P` for this implication,
+which is also called *double negation elimination*. In the source files for Classical World, we have
+told Lean that we want to use classical reasoning (by opening the `Classical` namespace), which is why typing `exact byContradiction` suffices to solve this level."
 
 TheoremTab "Classical"
 

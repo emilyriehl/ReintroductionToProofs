@@ -33,4 +33,4 @@ Statement {A : Type} : ∀ w x y z : A, w = x → x = y → y = z → w = z := b
   rw [p, q, r]
   rfl
 
-Conclusion "In general families of propositions indexed by multiple variables are just functions with multiple input types valued in `Prop`, such as `P : A → B → C → Prop`."
+Conclusion "In general, families of propositions indexed by multiple variables are just functions with multiple input types valued in `Prop`, such as `P : A → B → C → Prop`."

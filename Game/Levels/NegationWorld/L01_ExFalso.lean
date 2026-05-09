@@ -22,7 +22,7 @@ Statement {P : Prop} : False → P := by
   Hint (hidden := true) "Type `cases {p}` to ask Lean to consider all possible cases involving a proof of false. As there are no cases, this will complete the proof."
   cases p
 
-Conclusion "Lean has a built-in name `False.elim : Empty → P` for the theorem you have just proven. Thus `exact False.elim` will also solve this level. This theorem has been added to the library."
+Conclusion "Lean has a built-in name `False.elim : False → P` for the theorem you have just proven. Thus `exact False.elim` will also solve this level. This theorem has been added to the library."
 
 TheoremTab "False"
 

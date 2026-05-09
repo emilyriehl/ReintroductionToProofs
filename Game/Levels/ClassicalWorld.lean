@@ -45,5 +45,5 @@ This permits a proof strategy called *proof by contradiction*. If the goal is to
 * Then use the assumption `¬ P` to derive a contradiction, thus constructing a proof of `¬ ¬ P`.
 * Finally, apply the implication `¬ ¬ P → P` to convert the proof of `¬ ¬ P` into a proof of `P`.
 
-In fact, as statements concerning arbitrary propositions, the law of exluded middle and double negation elimination are equivalent &mdash; even constructively &mdash; as we will show in the Boss Level of this world.
+In fact, as statements concerning arbitrary propositions, the law of excluded middle and double negation elimination are equivalent &mdash; even constructively &mdash; as we will show in the Boss Level of this world.
 "

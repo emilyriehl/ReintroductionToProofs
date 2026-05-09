@@ -31,7 +31,8 @@ Statement (preamble := refine let f := ?f; ⟨f, ?eq⟩) :
   -- now prove that you defined the right thing
   exact ⟨rfl, rfl, rfl, rfl⟩
 
-Conclusion "Was it necessary to consider all four cases of two boolean elements or can you define this function by considering fewer cases? If using the tactic `match`, try replacement one of the input booleans with `_` to indicate that the value does not matter. The function `and` is now in your library."
+Conclusion "Was it necessary to consider all four cases of two boolean elements or can you define
+this function by considering fewer cases? If using the tactic `match`, try replacing one of the input booleans with `_` to indicate that the value does not matter. The function `and` is now in your library."
 
 /-- The function `and : Bool → Bool → Bool` captures the logical operation of conjunction. -/
 DefinitionDoc Bool.and as "and" in "Bool"
