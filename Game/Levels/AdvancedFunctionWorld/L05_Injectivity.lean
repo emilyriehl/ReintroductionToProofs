@@ -35,10 +35,7 @@ Statement Bool.not_injective : ∀ x y : Bool, not x = not y → x = y := by
   Hint (hidden := true) "{p} is a contradictory hypothesis, and so `cases {p}` will close the goal"
   cases p
   Hint (hidden := true) "This case is similar to the previous one. Can you figure out how to solve it?"
-  apply False.elim
-  have eq : false = true := p
-  have neq : ¬ (false = true) := Bool.noConfusion
-  exact neq eq
+  cases p
   rfl
 
 Conclusion "In the next levels, we will study general properties of injective functions."
