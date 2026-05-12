@@ -14,6 +14,8 @@ The other is the type of booleans `Bool` which has two canonical elements `false
 Be careful how you define the functions `Unit ⊕ Unit → Bool` and `Bool → Unit ⊕ Unit`. If you make a wrong choice, you will not be able to solve the rest of this level.
 "
 
+open ReintroductionToProofs
+
 /-- Both the empty type and an arbitrary inhabited proposition `P` satisfy equivalences of the form `P ≃ (P → Empty) → Empty` -/
 Statement  : (Empty ≃ ((Empty → Empty) → Empty)) × (∀ P : Type, P → (∀ x y : P, x = y) → P ≃ ((P → Empty) → Empty)) := by
   constructor

@@ -15,6 +15,8 @@ Your task in this level is to define an element of the corresponding dependent f
 Can you do it?
 "
 
+open ReintroductionToProofs
+
 /--
 The polymorphic identity function has type `(A : Type) → A → A`.
 -/

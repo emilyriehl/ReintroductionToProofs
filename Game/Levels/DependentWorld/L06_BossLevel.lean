@@ -33,6 +33,8 @@ In the case where the types `C x y` are all propositions, an element of the firs
 If you get stuck, it might help to consider the case where `B` and `C` are constant type families. As was the case for the previous level, this equivalence is a familiar one!
 "
 
+open ReintroductionToProofs
+
 /--
 The type theoretic axiom of choice characterizes dependent functions into a dependent pair type.
 -/

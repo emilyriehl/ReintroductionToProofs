@@ -14,6 +14,8 @@ In this level, we will see that these functions define an equivalence between th
 To define this equivalence, we need four pieces of data. Start by typing `constructor` to tell Lean to ask you to supply each piece of data one at a time.
 "
 
+open ReintroductionToProofs
+
 /-- For any types `A` and `B`, the coproduct types `A ⊕ B` and `B ⊕ A` are equivalent. -/
 Statement {A B : Type} : (A ⊕ B) ≃ (B ⊕ A) := by
   constructor
