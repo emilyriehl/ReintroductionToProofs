@@ -1,7 +1,7 @@
 msgid ""
 msgstr "Project-Id-Version: Game v4.23.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-05-12\n"
+"POT-Creation-Date: 2026-05-13\n"
 "Last-Translator: \n"
 "Language-Team: none\n"
 "Language: en\n"
@@ -253,13 +253,6 @@ msgstr ""
 #: Game.Levels.NaturalNumbersWorld.L01_Numerals
 #: Game.Levels.NaturalNumbersWorld.L02_NormalForms
 msgid "What is the outermost logical connective?"
-msgstr ""
-
-#. §0: `Unit ⊕ Unit`
-#. §1: `Bool`
-#. §2: `ℕ`
-#: Game.Levels.EquivalenceWorld.L08_UnusedBossLevel
-msgid "The equivalence between the types §0 and §1 has to do with the fact that both are examples of *inductive types*. In the next world, we will finally properly introduce another inductive type, namely the type §2 of natural numbers."
 msgstr ""
 
 #. §0: `f : A → B`
@@ -2109,7 +2102,6 @@ msgstr ""
 #: Game.Levels.EquivalenceWorld.L07_BossLevel
 #: Game.Levels.NaturalNumbersWorld.L11_BossLevel
 #: Game.Levels.DependentWorld.L06_BossLevel
-#: Game.Levels.EquivalenceWorld.L08_UnusedBossLevel
 msgid "Boss Level"
 msgstr ""
 
@@ -5427,7 +5419,6 @@ msgstr ""
 #. §4: `Unit ⊕ Unit → Bool`
 #. §5: `Bool → Unit ⊕ Unit`
 #: Game.Levels.EquivalenceWorld.L07_BossLevel
-#: Game.Levels.EquivalenceWorld.L08_UnusedBossLevel
 msgid "For the Boss Level of Equivalence World you are asked to establish an equivalence between a priori unrelated types.\n"
 "\n"
 "One of these is the coproduct of the unit type §0 with itself. Recall the unit type has a canonical element §1.\n"
@@ -6428,12 +6419,6 @@ msgstr ""
 #. §0: `A → Empty`
 #: Game.Levels.EmptyWorld.L03_ThroughEmpty
 msgid "This level illustrates another strange construction that can be made from an element of type §0."
-msgstr ""
-
-#. §0: `P`
-#. §1: `P ≃ (P → Empty) → Empty`
-#: Game.Levels.EquivalenceWorld.L08_UnusedBossLevel
-msgid "Both the empty type and an arbitrary inhabited proposition §0 satisfy equivalences of the form §1"
 msgstr ""
 
 #. §0: `x y : Unit`
