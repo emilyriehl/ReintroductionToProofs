@@ -16,7 +16,7 @@ In this world, we introduce two primitives:
 * *elements* written `x : A` or `y : B`.
 
 For example, there are types `ℕ` of
-natural numbers, `ℤ` of integers, `ℚ` of rational numbers, `ℝ` of real numbers, `ℂ` of natural
+natural numbers, `ℤ` of integers, `ℚ` of rational numbers, `ℝ` of real numbers, `ℂ` of complex
 numbers, and so on. There are also types of more sophisticated mathematical structures, like vector spaces or groups.
 
 Types can have more than one element. The elements of the type `ℕ` are the familiar natural numbers:  `0 : ℕ`, `1 : ℕ` and so on.
