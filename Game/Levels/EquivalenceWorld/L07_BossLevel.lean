@@ -14,6 +14,9 @@ The other is the type of booleans `Bool` which has two canonical elements `false
 Be careful how you define the functions `Unit ⊕ Unit → Bool` and `Bool → Unit ⊕ Unit`. If you make a wrong choice, you will not be able to solve the rest of this level.
 "
 
+open ReintroductionToProofs
+
+
 /-- The types `Unit ⊕ Unit` and `Bool` are equivalent. -/
 Statement : Unit ⊕ Unit ≃ Bool := by
   Hint (hidden := true) "Type `constructor` to split the goal up into the four proof obligations."

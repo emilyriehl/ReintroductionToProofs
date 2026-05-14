@@ -12,7 +12,8 @@ import Game.Levels.AdvancedFunctionWorld.L11_InvertibleImpliesBijective
 import Game.Levels.AdvancedFunctionWorld.L12_BijectiveImpliesInvertible
 import Game.Levels.AdvancedFunctionWorld.L13_FunctionExtensionality
 import Game.Levels.AdvancedFunctionWorld.L14_DoubleNegation
-import Game.Levels.AdvancedFunctionWorld.L15_BossLevel
+import Game.Levels.AdvancedFunctionWorld.L15_Isomorphism
+import Game.Levels.AdvancedFunctionWorld.L16_BossLevel
 
 World "AdvancedFunctionWorld"
 Title "Advanced Function World"

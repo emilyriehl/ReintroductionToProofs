@@ -20,6 +20,8 @@ But we can at least show that there are functions `Empty → A × Empty` and `A 
 Your task in this level is to define these functions.
 "
 
+open ReintroductionToProofs
+
 /-- For any type `A`, there are functions in both directions between the types `Empty` and `A × Empty`. -/
 Statement {A : Type} : (Empty → A × Empty) × (A × Empty → Empty) := by
   Hint (hidden := true) "What is the logical structure of this type?"

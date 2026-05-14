@@ -16,6 +16,8 @@ There are other strategies to defining the funtions as well, so you may enjoy tr
 Have fun!
 "
 
+open ReintroductionToProofs
+
 /-- There are functions in both directions between the types `Empty ⊕ (Empty → Empty)` and `(Empty → Empty) × (Empty → Empty)`. -/
 Statement : (Empty ⊕ (Empty → Empty) → (Empty → Empty) × (Empty → Empty)) × ((Empty → Empty) × (Empty → Empty) → Empty ⊕ (Empty → Empty))  := by
   constructor

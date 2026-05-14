@@ -22,6 +22,8 @@ The second of these defines a dependent function mapping out of type type `(x : 
 Note that for `p : (x : A) × B x`, we have `rfl : p = ⟨p.1, p.2⟩`.
 "
 
+open ReintroductionToProofs
+
 /--
 The dependent pair type `(x : A) × B x` has a pair of projection functions, sending a dependent pair to its first and second components respectively.
 -/

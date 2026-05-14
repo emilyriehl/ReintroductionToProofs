@@ -4,10 +4,11 @@ import Game.Levels.EqualityWorld.L03_ProjectedPairs
 import Game.Levels.EqualityWorld.L04_Symmetry
 import Game.Levels.EqualityWorld.L05_Transitivity
 import Game.Levels.EqualityWorld.L06_ApplyingFunctions
-import Game.Levels.EqualityWorld.L07_UnitProposition
-import Game.Levels.EqualityWorld.L08_EmptyProposition
-import Game.Levels.EqualityWorld.L09_EqualityProposition
-import Game.Levels.EqualityWorld.L10_BossLevel
+import Game.Levels.EqualityWorld.L07_ApplyingEquality
+import Game.Levels.EqualityWorld.L08_UnitProposition
+import Game.Levels.EqualityWorld.L09_EmptyProposition
+import Game.Levels.EqualityWorld.L10_EqualityProposition
+import Game.Levels.EqualityWorld.L11_BossLevel
 
 World "EqualityWorld"
 Title "Equality World"

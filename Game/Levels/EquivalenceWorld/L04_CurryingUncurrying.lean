@@ -16,6 +16,8 @@ These operations are inverses, defining an equivalence of types
 Note the currying and uncurrying functions are in the library, so can be used (rather than re-defined) in the proof.
 "
 
+open ReintroductionToProofs
+
 /-- For any types `A`, `B`, and `C`, the function types `A × B → C` and `A → B → C` are equivalent. -/
 Statement {A B C : Type} : (A × B → C) ≃ (A → B → C) := by
   Hint (hidden := true) "Type `constructor` to split the goal up into the four proof obligations."

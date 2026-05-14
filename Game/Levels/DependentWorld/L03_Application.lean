@@ -16,6 +16,8 @@ In this level, you are given a dependent function `f : (x : A) → B x → C x` 
 Using this, your task is define a function that sends a section of the first type family to a section of the second type family.
 "
 
+open ReintroductionToProofs
+
 /--
 Given a pair of type families `B C : A → Type` and a fiberwise function `f : (x : A) → B x → C x`, then there is a function from sections of the first type family to sections of the second type family.
 -/

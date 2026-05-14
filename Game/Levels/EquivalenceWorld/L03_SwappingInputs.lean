@@ -12,6 +12,8 @@ However in the case of functions with multiple variables, the input variables ca
 In this level, you will show that the types `A → B → C` and `B → A → C` are equivalent.
 "
 
+open ReintroductionToProofs
+
 /-- For any types `A`, `B`, and `C`, the function types `A → B → C` and `B → A → C` are equivalent. -/
 Statement {A B C : Type} : (A → B → C) ≃ (B → A → C) := by
   Hint (hidden := true) "Type `constructor` to split the goal up into the four proof obligations."

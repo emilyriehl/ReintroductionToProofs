@@ -33,6 +33,8 @@ Note as a special case of the equivalence you will demonstrate here, there is an
 Thus families of types `C` over the dependent pair type `(x : A) × B x` can also be encoded by elements of type `C : (x : A) → B x → Type`, and in the final level of Dependent World, we will adopt this latter convention, which is more common.
 "
 
+open ReintroductionToProofs
+
 /-- There is an equivalence between the type of dependent functions out of the dependent pair type `(x : A) × B x` and the type of dependent functions of two variables `x : A` and `y : B x` defined by currying and uncurrying. -/
 Statement {A : Type} {B : A → Type} {C : (x : A) × B x → Type} :
     ((p : (x : A) × B x) → C p) ≃ ((x : A) → (y : B x) → C ⟨x, y⟩) := by

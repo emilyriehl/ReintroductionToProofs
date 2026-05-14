@@ -15,6 +15,8 @@ But the elimination rule for the type `Bool` can be used to define a non-constan
 After introducing a generic element `b : Bool` use the tactics `match` or `cases` to consider the explicit booleans `false` and `true`.
 "
 
+open ReintroductionToProofs
+
 /--
 Define any dependent family of types indexed by the type of booleans.
 -/
