@@ -97,7 +97,6 @@ import Game.Levels.EquivalenceWorld.L04_CurryingUncurrying
 import Game.Levels.EquivalenceWorld.L05_ComponentFunctions
 import Game.Levels.EquivalenceWorld.L06_MoreComponentFunctions
 import Game.Levels.EquivalenceWorld.L07_BossLevel
-import Game.Levels.EquivalenceWorld.L08_UnusedBossLevel
 import Game.Levels.FunctionWorld
 import Game.Levels.FunctionWorld.L01_IdentityFunction
 import Game.Levels.FunctionWorld.L02_UsingFunctions
