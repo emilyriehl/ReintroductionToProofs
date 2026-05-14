@@ -22,4 +22,4 @@ Statement {P Q : Prop} (h : P → Q) : P → Q := by
     exact p
   exact h
 
-Conclusion "The lesson of this level is to pay attention to the big picture, namely what exactly you are being asked ot prove under what hypotheses."
+Conclusion "The lesson of this level is to pay attention to the big picture, namely what exactly you are being asked to prove under what hypotheses."
