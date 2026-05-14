@@ -1,4 +1,4 @@
-import Game.Metadata
+import Game.Levels.ConjunctionWorld.L07_MoreCompoundImplication
 import Game.Levels.ConjunctionWorld.L06_CompoundImplication
 import Game.Levels.ConjunctionWorld.L07_MoreCompoundImplication
 

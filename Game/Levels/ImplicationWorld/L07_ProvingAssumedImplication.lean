@@ -1,4 +1,4 @@
-import Game.Metadata
+import Game.Levels.ImplicationWorld.L06_ProvingImpliedAssumption
 
 World "ImplicationWorld"
 Level 7

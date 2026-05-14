@@ -1,4 +1,4 @@
-import Game.Metadata
+import Game.Levels.QuantifierWorld.L02_MoreTransitivity
 
 World "QuantifierWorld"
 Level 3

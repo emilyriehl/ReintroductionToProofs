@@ -1,4 +1,4 @@
-import Game.Metadata
+import Game.Levels.ConjunctionWorld.L09_UniversalProperty
 
 World "ConjunctionWorld"
 Level 10

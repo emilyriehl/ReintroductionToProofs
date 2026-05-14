@@ -1,4 +1,4 @@
-import Game.Metadata
+import Game.Levels.QuantifierWorld.L06_CommutingQuantifiers
 
 World "QuantifierWorld"
 Level 7

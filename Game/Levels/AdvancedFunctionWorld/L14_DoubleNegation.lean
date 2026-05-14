@@ -1,4 +1,4 @@
-import Game.Metadata
+import Game.Levels.AdvancedFunctionWorld.L13_FunctionExtensionality
 
 World "AdvancedFunctionWorld"
 Level 14
@@ -12,8 +12,13 @@ In Boolean World, we proved that `b = not (not b)` for any boolean `b : Bool`.
 In this level, we will apply that result to prove that `id = not ∘ not` as functions `Bool → Bool`.
 "
 
-/-- The function `id : Bool → Bool` equals the composite of the function `not : Bool → Bool` with itself. -/
-Statement : id = not ∘ not := by
+/-- The composite of the function `not : Bool → Bool` with itself equals the identity function -/
+TheoremDoc ReintroductionToProofs.Bool.not_involutive as "not_involutive" in "Bool"
+
+namespace ReintroductionToProofs
+
+/-- The composite of the function `not : Bool → Bool` with itself equals the identity function -/
+Statement Bool.not_involutive : not ∘ not = id := by
   Hint (hidden := true) "Type `ext` to apply function extensionality or `ext b` to apply function extensionality with `b : Bool` the chosen variable."
   ext b
   Hint (hidden := true) "As our previous theorem is not in the library, we'll have to reprove it. Recall `rfl` only applies for *definitional* equalities, and we only have this for certain cases of Booleans. Try `cases {b}`."
@@ -21,4 +26,6 @@ Statement : id = not ∘ not := by
   rfl
   rfl
 
-Conclusion "Now you are ready for the Boss Level."
+Conclusion "Next we will use function extensionality to prove a third characterization of bijective or invertible functions."
+
+end ReintroductionToProofs

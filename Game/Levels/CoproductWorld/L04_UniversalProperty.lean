@@ -1,4 +1,4 @@
-import Game.Metadata
+import Game.Levels.CoproductWorld.L03_ComponentFunctions
 
 World "CoproductWorld"
 Level 4
@@ -24,6 +24,21 @@ Either `cases x` or `rcases x with a | b` can be used to split into the two case
 Both cases will have the same goal type but will have a different context of objects, one of which contains the element `a : A` and the other of which contains the element `b : B`.
 "
 
+/-- For types `A`, `B`, and `C`, `Sum.lift : (A → C) → (B → C) → (A ⊕ B → C)` combines a pair of functions of types `A → C` and `B → C` to define a single function of type `A ⊕ B → C`. -/
+DefinitionDoc ReintroductionToProofs.Sum.lift as "lift" in "Sum"
+
+def ReintroductionToProofs.Sum.lift {A B C : Type} (g : A → C) (h : B → C) : (A ⊕ B → C) := by
+  intro x
+  rcases x with a | b
+  apply g
+  exact a
+  apply h
+  exact b
+
+NewDefinition ReintroductionToProofs.Sum.lift
+
+namespace ReintroductionToProofs
+
 /-- Two functions `g : A → C` and `h : B → C` combine to define a single function of type `A ⊕ B → C`. -/
 Statement {A B C : Type} (g : A → C) (h : B → C) : (A ⊕ B → C) := by
   Hint (hidden := true) "Use the `intro` tactic to define a term in a function type."
@@ -36,6 +51,8 @@ Statement {A B C : Type} (g : A → C) (h : B → C) : (A ⊕ B → C) := by
   exact b
 
 Conclusion "We will see later that functions of type `A ⊕ B → C` are uniquely determined by their component functions `(A → C) × (B → C)`."
+
+end ReintroductionToProofs
 
 /-- Assuming `x` is a variable in the local context with an inductive type, `cases x` splits the main goal, producing one goal for each constructor of the inductive type, in which the target is replaced by a general instance of that constructor. If the type of an element in the local context depends on `x`, that element is reverted and reintroduced afterward, so that the case split affects that hypothesis as well. `cases` detects unreachable cases and closes them automatically.
 

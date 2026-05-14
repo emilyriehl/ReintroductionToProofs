@@ -1,4 +1,4 @@
-import Game.Metadata
+import Game.Levels.EquivalenceWorld.L06_MoreComponentFunctions
 
 World "EquivalenceWorld"
 Level 7
@@ -13,6 +13,9 @@ The other is the type of booleans `Bool` which has two canonical elements `false
 
 Be careful how you define the functions `Unit ⊕ Unit → Bool` and `Bool → Unit ⊕ Unit`. If you make a wrong choice, you will not be able to solve the rest of this level.
 "
+
+open ReintroductionToProofs
+
 
 /-- The types `Unit ⊕ Unit` and `Bool` are equivalent. -/
 Statement : Unit ⊕ Unit ≃ Bool := by
@@ -37,4 +40,4 @@ Statement : Unit ⊕ Unit ≃ Bool := by
   rfl
   rfl
 
-Conclusion "The equivalence between the types `Unit ⊕ Unit` and `Bool` has to do with the fact that both are examples of *inductive types*. In the next world, we will finally properly introduce another inductive type, namely the type `ℕ` of natural numbers."
+Conclusion "The equivalence between the types `Unit ⊕ Unit` and `Bool` has to do with the fact that both are examples of *inductive types*. In Natural Numbers World, we will finally properly introduce another inductive type, namely the type `ℕ` of natural numbers. Go there next."

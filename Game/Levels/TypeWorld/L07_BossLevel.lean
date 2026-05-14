@@ -1,4 +1,4 @@
-import Game.Metadata
+import Game.Levels.TypeWorld.L06_TypeOfTypes
 
 World "TypeWorld"
 Level 7

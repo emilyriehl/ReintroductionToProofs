@@ -1,4 +1,4 @@
-import Game.Metadata
+import Game.Levels.ImplicationWorld.L08_Transitivity
 
 World "ImplicationWorld"
 Level 9

@@ -1,4 +1,4 @@
-import Game.Metadata
+import Game.Levels.ConjunctionWorld.L05_Associativity
 
 World "ConjunctionWorld"
 Level 6

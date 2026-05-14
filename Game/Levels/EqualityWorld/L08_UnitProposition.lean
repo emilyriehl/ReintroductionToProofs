@@ -1,11 +1,11 @@
-import Game.Metadata
+import Game.Levels.EqualityWorld.L07_ApplyingEquality
 
 World "EqualityWorld"
-Level 7
+Level 8
 
 Title "Unit Proposition"
 
-Introduction "Lean has a built in unit type `Unit` that contains just one element denoted `() : Unit`.
+Introduction "Recall from Type World that Lean has a built in unit type `Unit` that contains just one element denoted `⟨⟩ : Unit`.
 
 The unit type is a proposition, meaning that it has at most one element.
 

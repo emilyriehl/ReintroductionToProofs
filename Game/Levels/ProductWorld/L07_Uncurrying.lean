@@ -1,4 +1,4 @@
-import Game.Metadata
+import Game.Levels.ProductWorld.L06_Currying
 
 World "ProductWorld"
 Level 7

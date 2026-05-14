@@ -1,4 +1,4 @@
-import Game.Metadata
+import Game.Levels.EqualityWorld.L05_Transitivity
 
 World "EqualityWorld"
 Level 6

@@ -1,4 +1,4 @@
-import Game.Metadata
+import Game.Levels.ImplicationWorld.L01_ByAssumption
 
 World "ImplicationWorld"
 Level 2

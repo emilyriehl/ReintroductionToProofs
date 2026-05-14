@@ -1,4 +1,4 @@
-import Game.Metadata
+import Game.Levels.CoproductWorld.L07_Distributivity
 
 World "CoproductWorld"
 Level 8

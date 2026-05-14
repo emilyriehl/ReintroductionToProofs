@@ -1,4 +1,4 @@
-import Game.Metadata
+import Game.Levels.DisjunctionWorld.L04_Symmetry
 
 World "DisjunctionWorld"
 Level 5

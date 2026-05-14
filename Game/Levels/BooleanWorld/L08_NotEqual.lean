@@ -1,11 +1,11 @@
-import Game.Metadata
+import Game.Levels.BooleanWorld.L07_DeMorgan
 
 World "BooleanWorld"
 Level 8
 
 Title "Not Equal"
 
-Introduction "We will now finally prove an example of an *non equality* of terms, demonstrating that
+Introduction "We will now finally prove an example that two elements of a type are distinct, demonstrating that
 the two booleans are not equal:
 
 `¬ (false = true)`.
@@ -20,22 +20,21 @@ Using this we can define a function `True → False`, i.e., a function `P true �
 
 Applying this function to the element `⟨⟩ : True` returns an element of `False`, a contradiction.
 
-If you like, use the hints to step through this proof.
+Use the hints to step through this proof.
 
 Alternatively, type `exact Bool.noConfusion` to solve this level with Lean's built in proof that `¬ (false = true)`.
 "
 
-/-- There is a function that realizes a boolean as a type, defined to send `false` to `Empty` and `true` to `Unit`. -/
+/-- The elements `false : Bool` and `true : Bool` are not equal. -/
 Statement : ¬ (false = true) := by
-  Hint "Start with `intro p`."
+  Hint (hidden := true) "Start with `intro p`."
   intro p
-  Hint "Define a function `Bool → Prop` by `  let P : Bool → Prop := by intro b ; cases b ; exact False ; exact True
-`."
-  let P : Bool → Prop := by intro b ; cases b ; exact False ; exact True
-  Hint "Define a function `P true → P false` by `let tr : P true → P false := by intro x ; rw [p] ; exact x
- `."
+  Hint (hidden := true) "Define a function `Bool → Prop` by `let P : Bool → Prop := by intro b ; match b with | false => exact False | true => exact True`."
+  let P : Bool → Prop := by intro b ; match b with | false => exact False | true => exact True
+  Hint (hidden := true) "Define a function `P true → P false` by `let tr : P true → P false := by intro x ; rw [p] ; exact x
+ `. In editor mode, start with `let tr : P true → P false := by` then continue with each of the three tactics on three subsequent lines. This way you can see how the goal evolves with each step in the construction."
   let tr : P true → P false := by intro x ; rw [p] ; exact x
-  Hint "By the definition of the family of propositions `P : Bool → Prop`, the function `tr : P true → P false` is a function `tr : True → False`. In particular, if we apply `tr` to an element of `True`, we get an element of `False`, which is what we want."
+  Hint (hidden := true) "By the definition of the family of propositions `P : Bool → Prop`, the function `tr : P true → P false` is a function `tr : True → False`. In particular, if we apply `tr` to an element of `True`, we get an element of `False`, which is what we want."
   Hint (hidden := true) "Type `exact tr ⟨⟩` to return an element of `False` defined using the function `tr` and the element `⟨⟩ : True`."
   exact tr ⟨⟩
 

@@ -1,4 +1,4 @@
-import Game.Metadata
+import Game.Levels.DisjunctionWorld.L06_Associativity
 
 World "DisjunctionWorld"
 Level 7

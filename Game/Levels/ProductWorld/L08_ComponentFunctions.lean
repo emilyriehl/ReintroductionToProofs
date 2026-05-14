@@ -1,4 +1,4 @@
-import Game.Metadata
+import Game.Levels.ProductWorld.L07_Uncurrying
 
 World "ProductWorld"
 Level 8
@@ -18,7 +18,9 @@ These functions are called the *component functions* associated to `f : X → A 
 Your task in this level is to define a function that extracts the component functions associated to a function into a product type.
 "
 
-/-- A function into a product type has a pair of component functions. -/
+namespace ReintroductionToProofs
+
+/-- A function into a product type decomposes into a pair of component functions. -/
 Statement {X A B : Type} : (X → A × B) → (X → A) × (X → B) := by
   Hint (hidden := true) "The goal is a function type, so start with `intro`."
   intro f
@@ -38,3 +40,14 @@ Statement {X A B : Type} : (X → A × B) → (X → A) × (X → B) := by
 Conclusion "We've seen that functions `f : X → A × B` into product types can be decomposed into component functions `fun x ↦ (f x).1 : X → A` and `fun x ↦ (f x).2 : X → B`.
 
 We'll now consider the reversed process, defining a function into a product type from a pair of component functions."
+
+def Prod.components {X A B : Type} : (X → A × B) → (X → A) × (X → B) :=
+  fun f ↦ ⟨fun x ↦ (f x).1, fun x ↦ (f x).2⟩
+
+end ReintroductionToProofs
+
+
+/-- For types `X`, `A`, and `B`, `Prod.components : (X → A × B) → (X → A) × (X → B)` decomposes a function into a product type into its component functions. -/
+DefinitionDoc ReintroductionToProofs.Prod.components as "components" in "Prod"
+
+NewDefinition ReintroductionToProofs.Prod.components

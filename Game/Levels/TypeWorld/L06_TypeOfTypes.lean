@@ -1,4 +1,4 @@
-import Game.Metadata
+import Game.Levels.TypeWorld.L05_TypeOfPropositions
 
 World "TypeWorld"
 Level 6

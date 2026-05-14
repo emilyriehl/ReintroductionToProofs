@@ -1,11 +1,11 @@
-import Game.Metadata
+import Game.Levels.EqualityWorld.L08_UnitProposition
 
 World "EqualityWorld"
-Level 8
+Level 9
 
 Title "Empty Proposition"
 
-Introduction "Recall the empty type `Empty` which has no elements.
+Introduction "Recall from Empty World, that Lean has a built in empty type `Empty` which has no elements.
 
 The empty type is also a proposition: if `x y : Empty`, then `x = y`. Can you prove this?
 "

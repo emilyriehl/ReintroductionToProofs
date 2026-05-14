@@ -1,7 +1,7 @@
-import Game.Metadata
+import Game.Levels.EqualityWorld.L09_EmptyProposition
 
 World "EqualityWorld"
-Level 9
+Level 10
 
 Title "Equality Proposition"
 

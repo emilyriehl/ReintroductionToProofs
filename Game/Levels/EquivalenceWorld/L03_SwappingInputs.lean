@@ -1,4 +1,4 @@
-import Game.Metadata
+import Game.Levels.EquivalenceWorld.L02_CoproductSymmetry
 
 World "EquivalenceWorld"
 Level 3
@@ -12,14 +12,14 @@ However in the case of functions with multiple variables, the input variables ca
 In this level, you will show that the types `A → B → C` and `B → A → C` are equivalent.
 "
 
+open ReintroductionToProofs
+
 /-- For any types `A`, `B`, and `C`, the function types `A → B → C` and `B → A → C` are equivalent. -/
 Statement {A B C : Type} : (A → B → C) ≃ (B → A → C) := by
   Hint (hidden := true) "Type `constructor` to split the goal up into the four proof obligations."
   constructor
-  intro f b a
-  exact f a b
-  intro f a b
-  exact f b a
+  exact Function.swap
+  exact Function.swap
   intro f
   rfl
   intro f

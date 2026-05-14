@@ -1,4 +1,4 @@
-import Game.Metadata
+import Game.Levels.BooleanWorld.L03_Conjunction
 
 World "BooleanWorld"
 Level 4

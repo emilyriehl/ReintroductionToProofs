@@ -11,13 +11,13 @@ Title "Empty World"
 
 Introduction "In this world, we will introduce the *empty type*, which is commonly denoted by `Empty` in Lean.
 
-In general, types can be characterized by:
+In general, types are characterized by:
 * Introduction rules: which explain how to construct elements of the given type.
 * Elimination rules: which explain how to use elements of the given type to construct elements of other types.
 
 In the case of the empty type, there are no introduction rules. This corresponds colloquially to the idea that the empty type has &ldquo;no elements.&rdquo;
 
-The elimination rule for the empty type defines a function from the `Empty` type to any other type `A`, with no obligations on the type `A`. This provides a canonical element `Empty.elim : Empty → A` of the function type.
+The elimination rule for the empty type defines a function from `Empty` to any other type `A`, with no obligations on the type `A`. This provides a canonical element `Empty.elim : Empty → A` of the function type.
 
 There is another way to understand why the type `Empty → A` should always have an element.
 

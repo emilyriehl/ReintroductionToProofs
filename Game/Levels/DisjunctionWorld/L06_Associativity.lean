@@ -1,4 +1,4 @@
-import Game.Metadata
+import Game.Levels.DisjunctionWorld.L05_UniversalProperty
 
 World "DisjunctionWorld"
 Level 6

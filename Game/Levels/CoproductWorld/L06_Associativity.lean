@@ -1,4 +1,4 @@
-import Game.Metadata
+import Game.Levels.CoproductWorld.L05_Symmetry
 
 World "CoproductWorld"
 Level 6

@@ -1,4 +1,4 @@
-import Game.Metadata
+import Game.Levels.CoproductWorld.L01_LeftInclusion
 
 World "CoproductWorld"
 Level 2

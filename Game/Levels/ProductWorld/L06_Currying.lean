@@ -1,4 +1,4 @@
-import Game.Metadata
+import Game.Levels.ProductWorld.L05_Associativity
 
 World "ProductWorld"
 Level 6

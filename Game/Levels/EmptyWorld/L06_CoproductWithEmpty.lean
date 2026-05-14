@@ -1,4 +1,4 @@
-import Game.Metadata
+import Game.Levels.EmptyWorld.L05_ProductWithEmpty
 
 World "EmptyWorld"
 Level 6
@@ -16,7 +16,11 @@ But the empty type does not have any elements. So this second case does not exis
 It follows that the type `A ⊕ Empty` is *equivalent* to the type `A` in a sense we cannot yet make precise.
 
 But we can at least show that there are functions `A → A ⊕ Empty` and `A ⊕ Empty → A`.
+
+Your task in this level is to define these functions.
 "
+
+open ReintroductionToProofs
 
 /-- For any type `A`, there are functions in both directions between the types `A` and `A ⊕ Empty`. -/
 Statement {A : Type} : (A → A ⊕ Empty) × (A ⊕ Empty → A) := by

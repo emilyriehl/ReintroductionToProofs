@@ -1,4 +1,4 @@
-import Game.Metadata
+import Game.Levels.ConjunctionWorld.L04_LogicalEquivalence
 
 World "ConjunctionWorld"
 Level 5

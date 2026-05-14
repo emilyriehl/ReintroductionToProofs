@@ -1,4 +1,4 @@
-import Game.Metadata
+import Game.Levels.FunctionWorld
 
 World "ImplicationWorld"
 Level 1

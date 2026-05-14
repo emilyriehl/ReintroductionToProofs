@@ -1,4 +1,4 @@
-import Game.Metadata
+import Game.Levels.NegationWorld.L09_NegatingConjunction
 
 World "NegationWorld"
 Level 10

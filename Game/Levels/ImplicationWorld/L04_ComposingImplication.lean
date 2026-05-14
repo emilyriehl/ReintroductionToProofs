@@ -1,4 +1,4 @@
-import Game.Metadata
+import Game.Levels.ImplicationWorld.L03_ApplyingImplication
 
 World "ImplicationWorld"
 Level 4

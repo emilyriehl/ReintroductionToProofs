@@ -1,4 +1,4 @@
-import Game.Metadata
+import Game.Levels.FunctionWorld.L02_UsingFunctions
 
 World "FunctionWorld"
 Level 3

@@ -1,4 +1,5 @@
-import Game.Metadata
+import Game.Levels.EmptyWorld
+import Game.Levels.ImplicationWorld
 
 World "EqualityWorld"
 Level 1
