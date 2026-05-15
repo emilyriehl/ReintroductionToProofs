@@ -9,9 +9,11 @@ Introduction "Using function extensionality, we can give a third logically equiv
 
 A function `f : A → B` is an *isomorphism* if there exists a function `g : B → A` so that `g ∘ f = id` and `f ∘ g = id`.
 
-The first equation is between functions from `A` to `A`. By function extensionality, it is equivalent to the condition that `∀ a : A, g (f a)`.
+The first equation is between functions from `A` to `A`. By function extensionality, it is
+equivalent to the condition that `∀ a : A, g (f a) = a`.
 
-The second equation is between functions from `B` to `B`. By function extensionality, it is equivalent to the condition that `∀ b : B, f (g a)`.
+The second equation is between functions from `B` to `B`. By function extensionality, it is
+equivalent to the condition that `∀ b : B, f (g b) = b`.
 
 In Lean, isomorphisms of types are also called *equivalences*, perhaps acknowledging a newly discovered connection between dependent type theory and homotopy theory.
 

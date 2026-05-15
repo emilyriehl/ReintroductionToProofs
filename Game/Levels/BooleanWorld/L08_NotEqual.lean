@@ -29,9 +29,9 @@ Alternatively, type `exact Bool.noConfusion` to solve this level with Lean's bui
 Statement : ¬ (false = true) := by
   Hint (hidden := true) "Start with `intro p`."
   intro p
-  Hint (hidden := true) "Define a function `Bool → Prop` by `let P : Bool → Prop := by intro b ; match b with | false => exact False | true => exact True`."
+  Hint (strict:=true) (hidden := true) "Define a function `Bool → Prop` by `let P : Bool → Prop := by intro b ; match b with | false => exact False | true => exact True`."
   let P : Bool → Prop := by intro b ; match b with | false => exact False | true => exact True
-  Hint (hidden := true) "Define a function `P true → P false` by `let tr : P true → P false := by intro x ; rw [p] ; exact x
+  Hint (strict:=true) (hidden := true) "Define a function `P true → P false` by `let tr : P true → P false := by intro x ; rw [p] ; exact x
  `. In editor mode, start with `let tr : P true → P false := by` then continue with each of the three tactics on three subsequent lines. This way you can see how the goal evolves with each step in the construction."
   let tr : P true → P false := by intro x ; rw [p] ; exact x
   Hint (hidden := true) "By the definition of the family of propositions `P : Bool → Prop`, the function `tr : P true → P false` is a function `tr : True → False`. In particular, if we apply `tr` to an element of `True`, we get an element of `False`, which is what we want."

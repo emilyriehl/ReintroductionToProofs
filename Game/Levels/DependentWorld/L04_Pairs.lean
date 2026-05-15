@@ -17,7 +17,8 @@ Your task in this level is to define both projection functions from the dependen
 
 The first of these defines an ordinary function from the type `(x : A) × B x` to the type `A`.
 
-The second of these defines a dependent function mapping out of type type `(x : A) × B x`. The reason the second project is a *dependent* function is that its output type depends on the input element `p : (x : A) × B x`.
+The second of these defines a dependent function mapping out of type `(x : A) × B x`. The reason the
+second projection is a *dependent* function is that its output type depends on the input element `p : (x : A) × B x`.
 
 Note that for `p : (x : A) × B x`, we have `rfl : p = ⟨p.1, p.2⟩`.
 "

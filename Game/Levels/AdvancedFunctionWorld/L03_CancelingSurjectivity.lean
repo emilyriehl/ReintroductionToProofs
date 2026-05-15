@@ -7,7 +7,7 @@ Title "Canceling Surjectivity"
 
 Introduction "Recall that a function `f : A → B` is *surjective* if for every `b : B` there exists some `x : A` so that `f x = b`.
 
-In the level, we will consider a composable pair of functions `f : A → B` and `g : B → C`.
+In this level, we will consider a composable pair of functions `f : A → B` and `g : B → C`.
 
 We will show that if the composite `g ∘ f : A → C` is surjective, then the function `g : B → C` is surjective too.
 "

@@ -9,7 +9,7 @@ Introduction "Recall that every function is *well-defined*. For any function `f 
 
 A function `f : A → B` is *injective* if for every `x y : A`, `f x = f y` implies `x = y`.
 
-This condition says that any output element of `f` has a unique corresponding input. Note it is not necessary that any element of `B` is an output of an injective function. Instead, injectivity asserts that if two elements of `A` have the same output, then those elements must be equal.
+This condition says that any output element of `f` has a unique corresponding input. Note that it is not necessary that any element of `B` is an output of an injective function. Instead, injectivity asserts that if two elements of `A` have the same output, then those elements must be equal.
 
 Unlike well-definedness, the statement `∀ x y : A, f x = f y → x = y` is true for some functions `f` but false for others.
 
