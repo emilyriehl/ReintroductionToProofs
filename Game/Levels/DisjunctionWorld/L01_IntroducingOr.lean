@@ -36,6 +36,6 @@ Conclusion "If this is your first time solving this level, delete your code and 
 DefinitionDoc Or.inl as "inl" in "Or"
 
 /-- For propositions `P` and `Q`, `Or.inr` is a proof that `Q → (P ∨ Q)`. -/
-DefinitionDoc Or.inr as "inl" in "Or"
+DefinitionDoc Or.inr as "inr" in "Or"
 
 NewDefinition Or.inl Or.inr
