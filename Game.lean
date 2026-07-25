@@ -58,9 +58,15 @@ This was created using the GameSkeleton Github Repo from the Lean Games Server h
 "
 
 /-! Information to be displayed on the servers landing page. -/
-Languages "English"
-CaptionShort "ReintroToProofs"
-CaptionLong "Reintroduction to Proofs"
+Languages "en"   -- List of ISO 2-letter abbreviations
+/-! `CaptionShort` is the subtitle displayed above the image -/
+CaptionShort "An introduction to proofs in dependent type theory."
+/-! `CaptionLong` is the description of the game displayed below the image -/
+CaptionLong "This game introduces mathematical proof writing in a formal vocabulary that is designed to make it easier to be fully precise about every step in a proof, as is required to convince a computer that a logical argument is sound.
+
+The language of dependent type theory can be used in parallel to state and prove mathematical theorems as well as to specify and define examples of mathematical objects.
+"
+
 -- Prerequisites "" -- add this if your game depends on other games
 CoverImage "images/blue-jay-curry-howard-blue.png"
 
