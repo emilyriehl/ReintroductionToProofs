@@ -40,7 +40,7 @@ Statement Bool.not_injective : ∀ x y : Bool, not x = not y → x = y := by
 
 Conclusion "In the next levels, we will study general properties of injective functions."
 
-/-- A function `f : A → B` is *injective* if `∀ x y : A, x = y → f x = f y`. -/
+/-- A function `f : A → B` is *injective* if `∀ x y : A, f x = f y → x = y`. -/
 DefinitionDoc Function.injective as "injective" in "Function"
 
 NewDefinition Function.injective
