@@ -33,8 +33,6 @@ Statement {A B C : Type}: (B → C) → (A → B) → (A → C) := by
   exact g (f a)
 
 Conclusion "Can you solve this level in one line by using `exact fun g f a ↦ ?` with the appropriate thing in place of the `?`?
-
-Can you solve this level in one line by using `exact fun g f ↦ ?` with the appropriate thing in place of the `?`?
 "
 
 /--
