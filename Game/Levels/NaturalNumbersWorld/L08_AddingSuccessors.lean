@@ -19,13 +19,14 @@ Good luck.
 "
 
 open Nat
+open Nat (zero_add add_zero)
 
 /-- For all natural numbers `m n`, `m + succ n = succ (m + n)` and `succ m + n = succ (m + n)`. -/
 Statement : ∀ m n : ℕ, m + succ n = succ (m + n) ∧ succ m + n = succ (m + n)  := by
   intro m n
   constructor
   rfl
-  Hint "You can apply induction on either variable `{m}` or `{n}`. It will be easiest, however, to induct on the same variable we used to define the addition function."
+  Hint "It is time to appeal to induction, but should induct in the variable `{m}` or `{n}`? If we had already proven that addition is commutative, the choice would not matter, but given what we have shown so far, you will find that to make progress you need to induct on the same variable we used to define the addition function."
   induction n with k hk
   rfl
   rw [add_succ]

@@ -10,18 +10,19 @@ Using the theorems we have proven so far, we can now prove a serious theorem abo
 
 That is, we will show that for all natural numbers `m` and `n`, `m + n = n + m`.
 
-This can be proven by induction on either variable, though you may find one variable easier than the other.
+This can be proven by induction on either variable. For an extra challenge, try proving this both ways.
 
 Good luck!
 "
 
 open Nat
+open Nat (zero_add add_zero)
 
 /-- For all natural numbers `m n`, `m + n = n + m`. -/
 Statement : ∀ m n : ℕ, m + n = n + m := by
   intro m n
   induction n with k hk
-  rw [Nat.zero_add]
+  rw [zero_add]
   rfl
   rw [add_succ]
   rw [hk]

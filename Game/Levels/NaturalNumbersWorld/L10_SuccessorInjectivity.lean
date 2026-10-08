@@ -13,13 +13,12 @@ There are several ways to make use of the function `pred : ℕ → ℕ` to prove
 "
 
 open Nat
+open Nat (zero_add add_zero)
 
 /-- The successor function is injective. -/
 TheoremDoc ReintroductionToProofs.Nat.succ_injective as "succ_injective" in "ℕ"
 
 namespace ReintroductionToProofs
-
-open Nat
 
 /-- The successor function is injective. -/
 Statement Nat.succ_injective : ∀ m n : ℕ, succ m = succ n → m = n := by

@@ -13,11 +13,10 @@ Good luck!
 "
 
 open Nat
-
+open Nat (zero_add add_zero add_comm)
 
 namespace ReintroductionToProofs
 
-open Nat
 
 /-- Zero is not the successor of any natural number. -/
 Statement : ¬ (∃ n : ℕ, succ n = 0) := by
