@@ -1,7 +1,7 @@
 msgid ""
 msgstr "Project-Id-Version: Game v4.23.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-05-22\n"
+"POT-Creation-Date: 2026-10-08\n"
 "Last-Translator: \n"
 "Language-Team: none\n"
 "Language: en\n"
@@ -1380,10 +1380,6 @@ msgstr ""
 msgid "Type World"
 msgstr ""
 
-#: Game
-msgid "ReintroToProofs"
-msgstr ""
-
 #: GameServer.RpcHandlers
 msgid "level completed with warnings… 🎭"
 msgstr ""
@@ -1616,10 +1612,8 @@ msgstr ""
 msgid "Now use §0 or §1 or similar to give your own variable names."
 msgstr ""
 
-#. §0: `p : A × B`
+#. §0: `p : «{A}» ⊕ «{B}»`
 #. §1: `intro p`
-#: Game.Levels.EquivalenceWorld.L01_ProductSymmetry
-#: Game.Levels.EquivalenceWorld.L02_CoproductSymmetry
 #: Game.Levels.EquivalenceWorld.L02_CoproductSymmetry
 msgid "Now Lean wants you to check that the first function followed by the second function yields the identity function at every element §0. Start with §1."
 msgstr ""
@@ -1947,7 +1941,6 @@ msgid "We've seen that an implication §0 can be applied in the presense of a pr
 msgstr ""
 
 #: Game.Levels.EquivalenceWorld.L01_ProductSymmetry
-#: Game.Levels.EquivalenceWorld.L01_ProductSymmetry
 msgid "When in doubt, recall the introduction rule for equality types."
 msgstr ""
 
@@ -1960,16 +1953,6 @@ msgstr ""
 #: Game.Levels.CoproductWorld.L04_UniversalProperty
 #: Game.Levels.CoproductWorld.L05_Symmetry
 msgid "Use the §0 tactic to define a term in a function type."
-msgstr ""
-
-#. §0: `exact fun g f a ↦ ?`
-#. §1: `?`
-#. §2: `exact fun g f ↦ ?`
-#. §3: `?`
-#: Game.Levels.FunctionWorld.L08_CompositionRevisited
-msgid "Can you solve this level in one line by using §0 with the appropriate thing in place of the §1?\n"
-"\n"
-"Can you solve this level in one line by using §2 with the appropriate thing in place of the §3?"
 msgstr ""
 
 #. §0: `not : Bool → Bool`
@@ -3027,12 +3010,6 @@ msgstr ""
 msgid "Type §0 to ask Lean to consider all possible cases involving a proof of false. As there are no cases, this will complete the proof."
 msgstr ""
 
-#. §0: `«{m}»`
-#. §1: `«{n}»`
-#: Game.Levels.NaturalNumbersWorld.L08_AddingSuccessors
-msgid "You can apply induction on either variable §0 or §1. It will be easiest, however, to induct on the same variable we used to define the addition function."
-msgstr ""
-
 #: Game.Levels.NegationWorld
 msgid "Negation World"
 msgstr ""
@@ -3573,6 +3550,19 @@ msgid "Given a hypothesis §0, we know that *either* §1 or §2 is true (or poss
 "This proof strategy should be reminiscent of a definition by cases of a function mapping out of a coproduct type §24. Recall the same tactics may be used for that sort of construction.\n"
 "\n"
 "In this level, use the strategy of arguing by cases to prove that or is symmetric, that is that §25 implies §26."
+msgstr ""
+
+#. §0: `m`
+#. §1: `n`
+#. §2: `m + n = n + m`
+#: Game.Levels.NaturalNumbersWorld.L09_CommutingAddition
+msgid "Using the theorems we have proven so far, we can now prove a serious theorem about the natural numbers, namely the commutativity of addition.\n"
+"\n"
+"That is, we will show that for all natural numbers §0 and §1, §2.\n"
+"\n"
+"This can be proven by induction on either variable. For an extra challenge, try proving this both ways.\n"
+"\n"
+"Good luck!"
 msgstr ""
 
 #. §0: `rw [«{p}», «{q}», «{r}»]`
@@ -5039,10 +5029,9 @@ msgid "For types §0 and §1, the coproduct type §2 has two kinds of elements. 
 "The tactic §9 has the same effect. When the goal is a coproduct type §10, using the tactic §11 tells Lean that you plan to provide an element of type §12, which should then be converted to an element of type §13 by applying the function §14. Thus, typing §15 will update the goal to type §16."
 msgstr ""
 
-#. §0: `«{p}» : A ⊕ B`
+#. §0: `«{p}» : «{A}» ⊕ «{B}»`
 #. §1: `rfl`
 #. §2: `«{p}»`
-#: Game.Levels.EquivalenceWorld.L02_CoproductSymmetry
 #: Game.Levels.EquivalenceWorld.L02_CoproductSymmetry
 msgid "The functions you have just defined are not definitionally inverses on all elements §0. This is why §1 fails. Try splitting §2 into cases first."
 msgstr ""
@@ -5390,7 +5379,7 @@ msgid "In Equality World, we say that all elements of product types are definiti
 msgstr ""
 
 #. §0: `f : A → B`
-#. §1: `∀ x y : A, x = y → f x = f y`
+#. §1: `∀ x y : A, f x = f y → x = y`
 #: Game.Levels.AdvancedFunctionWorld.L05_Injectivity
 msgid "A function §0 is *injective* if §1."
 msgstr ""
@@ -5861,6 +5850,12 @@ msgstr ""
 msgid "Recall §0 and §1 refer to the left and right propositions in a disjunction §2."
 msgstr ""
 
+#: Game
+msgid "This game introduces mathematical proof writing in a formal vocabulary that is designed to make it easier to be fully precise about every step in a proof, as is required to convince a computer that a logical argument is sound.\n"
+"\n"
+"The language of dependent type theory can be used in parallel to state and prove mathematical theorems as well as to specify and define examples of mathematical objects."
+msgstr ""
+
 #. §0: `Type`
 #. §1: `A → A`
 #. §2: `A : Type`
@@ -6252,12 +6247,24 @@ msgstr ""
 msgid "What can you do with these assumptions?"
 msgstr ""
 
+#. §0: `«{m}»`
+#. §1: `«{n}»`
+#: Game.Levels.NaturalNumbersWorld.L08_AddingSuccessors
+msgid "It is time to appeal to induction, but should induct in the variable §0 or §1? If we had already proven that addition is commutative, the choice would not matter, but given what we have shown so far, you will find that to make progress you need to induct on the same variable we used to define the addition function."
+msgstr ""
+
 #. §0: `m`
 #. §1: `n`
 #. §2: `n + 0 = n`
 #. §3: `m + (succ n) = succ (m + n)`
 #: Game.Levels.NaturalNumbersWorld.L06_DefiningAddition
 msgid "For all natural numbers §0 and §1, §2 and §3."
+msgstr ""
+
+#. §0: `exact fun g f a ↦ ?`
+#. §1: `?`
+#: Game.Levels.FunctionWorld.L08_CompositionRevisited
+msgid "Can you solve this level in one line by using §0 with the appropriate thing in place of the §1?"
 msgstr ""
 
 #. §0: `A × B`
@@ -7092,6 +7099,10 @@ msgstr ""
 
 #: Game.Levels.QuantifierWorld.L09_NegatingUniversality
 msgid "The converse implication is classical but not constructive as you will show in the Boss Level."
+msgstr ""
+
+#: Game
+msgid "An introduction to proofs in dependent type theory."
 msgstr ""
 
 #: Game.Levels.TypeWorld.L03_ExactElements
@@ -8000,7 +8011,7 @@ msgstr ""
 msgid "In classical logic, §0 implies §1."
 msgstr ""
 
-#. §0: `p : A × B`
+#. §0: `p : «{A}» × «{B}»`
 #. §1: `intro p`
 #: Game.Levels.EquivalenceWorld.L01_ProductSymmetry
 msgid "Now Lean wants you to check that the second function followed by the first function yields the identity function at every element §0. Start with §1."
@@ -8462,19 +8473,6 @@ msgstr ""
 #. §4: `P → Q`
 #: Game.Levels.NegationWorld.L07_NegatingImplication
 msgid "For any propositions §0 and §1, if §2 is true and §3 is false, then §4 is not true."
-msgstr ""
-
-#. §0: `m`
-#. §1: `n`
-#. §2: `m + n = n + m`
-#: Game.Levels.NaturalNumbersWorld.L09_CommutingAddition
-msgid "Using the theorems we have proven so far, we can now prove a serious theorem about the natural numbers, namely the commutativity of addition.\n"
-"\n"
-"That is, we will show that for all natural numbers §0 and §1, §2.\n"
-"\n"
-"This can be proven by induction on either variable, though you may find one variable easier than the other.\n"
-"\n"
-"Good luck!"
 msgstr ""
 
 #. §0: `cases «{x}»`
@@ -9122,10 +9120,8 @@ msgstr ""
 msgid "Negating Disjunction"
 msgstr ""
 
-#. §0: `A × B → B × A`
+#. §0: `«{A}» × «{B}» → «{B}» × «{A}»`
 #: Game.Levels.EquivalenceWorld.L01_ProductSymmetry
-#: Game.Levels.EquivalenceWorld.L01_ProductSymmetry
-#: Game.Levels.EquivalenceWorld.L02_CoproductSymmetry
 #: Game.Levels.EquivalenceWorld.L02_CoproductSymmetry
 msgid "Now Lean wants you to define a function §0. You can either define this again or find this function in your library."
 msgstr ""
@@ -9183,7 +9179,6 @@ msgstr ""
 msgid "For any element §0, §1 is true by reflexivity."
 msgstr ""
 
-#: Game
 #: Game
 msgid "Reintroduction to Proofs"
 msgstr ""
