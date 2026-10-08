@@ -9160,7 +9160,7 @@ msgid "For propositions §0, §1, and §2, the propositions §3 and §4 are not 
 "\n"
 "More generally, §15 refers to §16.\n"
 "\n"
-"Explicit parentheses must be used to express statements with any other parenthesizations.\n"
+"Explicit parentheses must be used to express statements with any other order of application.\n"
 "\n"
 "Your objective in this level is to prove the transitivity of implication."
 msgstr ""
