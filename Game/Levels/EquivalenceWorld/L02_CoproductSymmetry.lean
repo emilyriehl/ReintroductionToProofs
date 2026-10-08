@@ -19,12 +19,12 @@ open ReintroductionToProofs
 /-- For any types `A` and `B`, the coproduct types `A ⊕ B` and `B ⊕ A` are equivalent. -/
 Statement {A B : Type} : (A ⊕ B) ≃ (B ⊕ A) := by
   constructor
-  Hint (hidden := true) "Now Lean wants you to define a function `{A} ⊕ {B} → {B} ⊕ {A}`. You can either define this again or find this function in your library."
+  Hint (hidden := true) (strict := true) "Now Lean wants you to define a function `{A} ⊕ {B} → {B} ⊕ {A}`. You can either define this again or find this function in your library."
   exact Sum.swap
   exact Sum.swap
   Hint "Now Lean wants you to check that the first function followed by the second function yields the identity function at every element `p : {A} ⊕ {B}`. Start with `intro p`."
   intro p
-  Hint (hidden := true) "The functions you have just defined are not definitionally inverses on all elements `{p} : {A} ⊕ {B}`. This is why `rfl` fails. Try splitting `{p}` into cases first."
+  Hint (hidden := true) (strict := true) "The functions you have just defined are not definitionally inverses on all elements `{p} : {A} ⊕ {B}`. This is why `rfl` fails. Try splitting `{p}` into cases first."
   rcases p with a | b <;> rfl
   intro p
   rcases p with b | a <;> rfl
