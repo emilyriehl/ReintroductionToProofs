@@ -1270,7 +1270,7 @@ msgid "Each world will end with a §0, which is intended to be more challenging 
 "\n"
 "In the previous level, you were asked to do this in the empty context. Here our context contains certain assumptions which could potentially be used to make your task easier.\n"
 "\n"
-"You are allowed, if you insist, to solve this level in the same way you solved the previous level. But we challenge you to define a different element of the type §4 than you used previously."
+"You are allowed, if you insist, to solve this level in the same way you solved the previous level. But we challenge you to specify a different element of the type §4 than you used previously."
 msgstr ""
 
 #: Game.Levels.ImplicationWorld.L01_ByAssumption
