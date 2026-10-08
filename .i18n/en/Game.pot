@@ -722,7 +722,7 @@ msgid "Mathematicians from all over &mdash; most of whom have never met one anot
 "\n"
 "The aim of this game will be to introduce proof writing in a computer proof assistant while developing skils that can be used to develop proofs in other contexts: on paper, in conversation with a friend, or in your head.\n"
 "\n"
-"There is one caveat to this introduction to proof writing, which we now address explicitly. The formal vocabulary we will introduce to discuss mathematical proofs is somewhat different from the one that most mathematicians learn. The mathematics we will be developing is essentially unchanged but the formal language introduced here will make it easier to be fully precise about every step in a proof, as is required to convince a computer that a logical argument in sound.\n"
+"There is one caveat to this introduction to proof writing, which we now address explicitly. The formal vocabulary we will introduce to discuss mathematical proofs is somewhat different from the one that most mathematicians learn. The mathematics we will be developing is essentially unchanged but the formal language introduced here will make it easier to be fully precise about every step in a proof, as is required to convince a computer that a logical argument is sound.\n"
 "\n"
 "In particular, we will explore an analogy between mathematical *propositions* and another form of primitive mathematical structure called *types*. Examples of types include:\n"
 "\n"
