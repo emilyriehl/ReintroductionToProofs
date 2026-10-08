@@ -4726,7 +4726,7 @@ msgstr ""
 #. §8: `R`
 #. §9: `S`
 #: Game.Levels.FunctionWorld.L03_UsingFunctionsBackwards
-msgid "The §0 tactic can be used when the goal matches the conclusion of an implication or the output type of a function. For example if the goal is §1 and there is a hypothesis §2, then §3 updates the goal to §4. If the goal is §5 and there is a hypothesis §6, then §7 produces two subgoals, one each for §8 and §9."
+msgid "The §0 tactic can be used when the goal matches the conclusion of an implication or the output type of a function. For example if the goal is §1 and there is a hypothesis §2, then §3 updates the goal to §4. If the goal is §5 and there is a hypothesis §6, then §7 produces two subgoals, one for each of §8 and §9."
 msgstr ""
 
 #. §0: `f : A → B`
