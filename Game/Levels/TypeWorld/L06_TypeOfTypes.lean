@@ -13,7 +13,9 @@ Here `Type` is a synonym for `Type 0`, which is the type of types at the smalles
 
 The goal in this level is to define an element of the type `Type` of types.
 
-Note `exact Type` will not work, because the type `Type` belongs to the type of types in a larger universe. Try this and see what happens.
+Note `exact Type` will not work, because the type `Type` belongs to the type of types in a larger
+universe(`Type 1`). You can verify this using `#check Type` to see what type `Type` has or by trying `exact Type` and reading the error message. 
+After these experiments, you can should undo that step by clicking `retry`.
 
 However, we have introduced a type that is small enough to define an element of `Type`. Use this to solve this level.
 "
