@@ -24,14 +24,14 @@ The tactic `use` is used to introduce proofs of existentially quantified predica
 If the goal is to prove `∃ x : A, P x`, one can type `use a` referencing a specific element `a : A` to reduce the goal to proving `P a`.
 "
 
-/-- For any type `A`, for all elements `x : A`, there exists an element `y : A`, so that `x = y`. -/
-Statement {A : Type} : ∀ x : A, ∃ y : A, x = y
- := by
-  intro a
-  use a
+/-- There is some boolean `b` so that `b && b = b || b` -/
+Statement : ∃ b : Bool, (b && b) = (b || b) := by
+  Hint "Type `use` followed by the name of an element of `Bool` that you believe will satisfy the predicate."
+  use false
+  Hint "Now you are asked to prove a special case of the indexed family of propositions, where the indexing element `b` is specialized to the element you provided."
   rfl
 
-Conclusion "In the next level, we will explore the consequences of exchanging the order of universal and existential quantifiers."
+Conclusion "The next level will give more practice with the existential quantifier."
 
 /--
 For goals of the form `∃ (x : A), P x` the tactic `use` can be used to provide an element `a : A` which will satisfy `P a`. For multiple constructors like `∃ (x y : A), P x y`, you can provide comma-separated values: `use a, a'`.
