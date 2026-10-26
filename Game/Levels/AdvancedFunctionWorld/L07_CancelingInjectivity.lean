@@ -17,7 +17,7 @@ namespace ReintroductionToProofs
 /-- For functions `f : A → B` and `g : B → C` if `g ∘ f` is injective, then so is `f`. -/
 Statement Function.Injective.of_comp {A B C : Type} (f : A → B) (g : B → C) (gf_is_inj : ∀ x y : A, (g ∘ f) x = (g ∘ f) y → x = y) : ∀ x y : A, f x = f y → x = y := by
   intro x y p
-  Hint (hidden := true) "Try applying the hypothesis that `g` is injective."
+  Hint (hidden := true) "Try applying the hypothesis that `g ∘ f` is injective."
   apply gf_is_inj
   Hint (hidden := true) "Use `have eq1 : (g ∘ f) {x} = g (f {x}) := rfl` and a similar lemma to give yourself more equalities to rewrite along."
   have eq : ∀ x : A, (g ∘ f) x = g (f x) := fun x ↦ rfl
