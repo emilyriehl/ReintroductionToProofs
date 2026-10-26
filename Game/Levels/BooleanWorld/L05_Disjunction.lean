@@ -14,7 +14,7 @@ In this level, we will define a function `Bool → Bool → Bool` that encodes t
 Again, this level comes with two pre-defined goals: the first is to define the disjunction function `Bool → Bool → Bool` and the second is to check that your definition is correct by calculating the values of the function you defined on explicit pairs of booleans.
 "
 
-/-- There is a function `or : Bool → Bool → Bool` that captures the logical operation of conjunction. -/
+/-- There is a function `or : Bool → Bool → Bool` that captures the logical operation of disjunction. -/
 Statement (preamble := refine let f := ?f; ⟨f, ?eq⟩) :
     ∃ f: Bool → Bool → Bool,
     f true true = true ∧
@@ -35,7 +35,7 @@ Statement (preamble := refine let f := ?f; ⟨f, ?eq⟩) :
 
 Conclusion "Was it necessary to consider all four cases of two boolean elements or can you define this function by considering fewer cases? The function `or` is now in your library."
 
-/-- The function `or : Bool → Bool → Bool` captures the logical operation of conjunction. -/
+/-- The function `or : Bool → Bool → Bool` captures the logical operation of disjunction. -/
 DefinitionDoc Bool.or as "or" in "Bool"
 
 NewDefinition Bool.or
