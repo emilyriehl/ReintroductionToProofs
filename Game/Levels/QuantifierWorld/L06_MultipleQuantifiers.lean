@@ -42,3 +42,12 @@ The statement `∃ x : A, ∀ y : A, x = y` asserts that the type `A` is a true 
 The final statement `∀ x : A, ∃ y : A, x = y` is just true for any type `A`. Your objective in this level is to prove this.
 "
 
+/-- For any type `A`, for all elements `x : A`, there exists an element `y : A`, so that `x = y`. -/
+Statement {A : Type} : ∀ x : A, ∃ y : A, x = y
+ := by
+  intro a
+  use a
+  rfl
+
+Conclusion "In the next level, we will explore the consequences of exchanging the order of universal and existential quantifiers."
+
