@@ -5,7 +5,7 @@ Level 3
 
 Title "Induction"
 
-Introduction "The *principal of mathematical induction* &mdash; also known as the elimination rule for the type of natural numbers &mdash; is a strategy for proving statements of the form
+Introduction "The *principle of mathematical induction* &mdash; also known as the elimination rule for the type of natural numbers &mdash; is a strategy for proving statements of the form
 
 `∀ n : ℕ, P n`
 
@@ -24,7 +24,7 @@ That is, we can prove `∀ n : ℕ, P n` after verifying two things:
 * the *base case*: proving that `P 0` is true
 * the *inductive step*: proving that for any `k : ℕ`, `P k` implies `P (succ k)`.
 
-By combining these hypothesis, from the fact that `P 0` is true and `P 0 → P 1` is true, we can conclude that `P 1` is true. Then from the fact that `P 1 → P 2` is true, we can conclude that `P 2` is true. Then from the fact that `P 2 → P 3` is true, we can conclude that `P 3` is true. And so on.
+By combining these hypotheses, from the fact that `P 0` is true and `P 0 → P 1` is true, we can conclude that `P 1` is true. Then from the fact that `P 1 → P 2` is true, we can conclude that `P 2` is true. Then from the fact that `P 2 → P 3` is true, we can conclude that `P 3` is true. And so on.
 
 In this level, we will use induction to prove that every natural number is even or odd.
 "
