@@ -18,7 +18,7 @@ In this level, we will show that the function `not : Bool → Bool` is injective
 Recall that when `b : Bool`, Lean writes `! b` for `not b`.
 "
 
-/-- The function `not : Bool → Bool` is surjective. -/
+/-- The function `not : Bool → Bool` is injective. -/
 TheoremDoc ReintroductionToProofs.Bool.not_injective as "not_injective" in "Bool"
 
 namespace ReintroductionToProofs

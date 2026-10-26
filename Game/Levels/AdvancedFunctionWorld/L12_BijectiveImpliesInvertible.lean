@@ -45,7 +45,7 @@ Statement Function.invertible_of_bijective {A B : Type} (f : A → B) (inj : ∀
   intro x
   Hint (hidden := true) "If `g : B → A` is the name of the inverse function you defined using the axiom of choice, you are now meant to show that `g (f {x}) = {x}` for an arbitrary element `{x} : A`. Here you can apply the injectivity hypothesis by typing `apply inj`."
   apply inj
-  Hint (hidden := true) "If `g : B → A` is the name of the inverse function you defined using the axiom of choice, now you are now meant to show that `f (g (f {x})) = f {x}` for an arbitrary element `{x} : A`. This element `g (f ({x}))` was chosen using the surjectivity hypothesis so that when you apply `f` you get the element `f {x}` back. Type `apply (surj f {x}).choose_spec` to apply the other half of the surjectivity hypothesis at the element `f {x} : B`."
+  Hint (hidden := true) "If `g : B → A` is the name of the inverse function you defined using the axiom of choice, you are now meant to show that `f (g (f {x})) = f {x}` for an arbitrary element `{x} : A`. This element `g (f ({x}))` was chosen using the surjectivity hypothesis so that when you apply `f` you get the element `f {x}` back. Type `apply (surj (f {x})).choose_spec` to apply the other half of the surjectivity hypothesis at the element `f {x} : B`."
   apply (surj (f x)).choose_spec
   intro b
   Hint "Type `apply (surj {b}).choose_spec` to apply the other half of the surjectivity hypothesis."
