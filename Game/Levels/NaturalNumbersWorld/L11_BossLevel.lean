@@ -7,7 +7,7 @@ Title "Boss Level"
 Introduction "
 For the Boss Level of Natural Numbers World you are challenged to prove the fifth Peano axiom, that zero is not the successor of any natural numbers.
 
-For guidance, revisit the proof that `¬ (true = false)` from Boolean World.
+For guidance, revisit the proof that `¬ (false = true)` from Boolean World.
 
 Good luck!
 "
