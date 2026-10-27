@@ -11,7 +11,7 @@ In other words, we showed that the law of excluded middle implies double negatio
 
 We now show that converse: that double negation elimination implies the law of excluded middle. More
 precisely, if we assume that `¬ ¬ P → P` for all propositions `P`, then we can show that `P ∨ ¬ P` for
-all proposition `P`.
+all propositions `P`.
 
 While the proof will feel like an application of classical logic, using the strategy of proof by contradiction, in
 fact the proof can be understood as a proof in constructive mathematics.

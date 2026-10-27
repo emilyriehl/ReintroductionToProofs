@@ -8,7 +8,7 @@ Title "Associativity"
 
 Introduction "Given three types `A`, `B`, and `C`, the coproduct type construction may be iterated to define types `(A ⊕ B) ⊕ C` and `A ⊕ (B ⊕ C)`.
 
-For both of these types, there are three cases of elements: those coming from `a : A`, those coming from `b : B`, and those coming from `c : C`. The notation for the corresponding elements of the iterated coproduct type depends on the parentheses: the terms `b : B` include as `Sum.inl (Sum.inr b) : (A ⊕ B) ⊕ C` but include as `Sum.inr (Sum.inl b) : A ⊕ (B ⊕ C)`.
+For both of these types, there are three cases of elements: those coming from `a : A`, those coming from `b : B`, and those coming from `c : C`. The notation for the corresponding elements of the iterated coproduct type depends on the parentheses: the terms `b : B` are included as `Sum.inl (Sum.inr b) : (A ⊕ B) ⊕ C` or as `Sum.inr (Sum.inl b) : A ⊕ (B ⊕ C)`.
 
 The objective in this level is to define a pair of functions between these types in each direction, the first of type `((A ⊕ B) ⊕ C) → (A ⊕ (B ⊕ C))` and the second of type `(A ⊕ (B ⊕ C)) → ((A ⊕ B) ⊕ C)`. That is, define a single element of type
 

@@ -24,5 +24,5 @@ To understand how products work in type theory we must learn:
 * How to construct elements of type `A × B`.
 * How to use elements of type `A × B` to construct elements of other types.
 
-Like all type forming operations, the product type is characterized by these introduction and elimination rules.
+Like all other types, the product type is characterized by its introduction and elimination rules.
 "

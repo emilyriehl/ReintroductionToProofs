@@ -34,6 +34,6 @@ Statement Function.total {A B : Type} (f : A → B) : ∀ a : A, ∃ b : B, f a 
   use f a
   rfl
 
-Conclusion "We will now study properties that hold of some functions, but not all functions."
+Conclusion "We will now study properties that hold of some, but not all, functions."
 
 end ReintroductionToProofs

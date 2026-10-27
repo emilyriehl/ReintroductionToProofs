@@ -25,7 +25,7 @@ Statement {A B C : Type} : (A × (B ⊕ C) → (A × B) ⊕ (A × C)) × ((A × 
   constructor
   Hint (hidden := true) "Now the goal is a function type. What tactic is used to define functions?"
   intro p
-  Hint (hidden := true) "You can use `cases` or `rcases` either on `{p}` to split it up into components or directly on its component in `B ⊕ C`.Be careful to use the syntax that is appropriate for terms of product or coproduct types, respectively."
+  Hint (hidden := true) "You can use `cases` or `rcases` either on `{p}` to split it up into components or directly on its component in `B ⊕ C`. Be careful to use the syntax that is appropriate for terms of product or coproduct types, respectively."
   rcases p.2 with b | c
   exact Sum.inl ⟨p.1, b⟩
   exact Sum.inr ⟨p.1, c⟩

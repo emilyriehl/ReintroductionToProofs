@@ -15,7 +15,7 @@ Then the goal is to derive an element of `False`, also known as a *contradiction
 
 This proof strategy is fully compatible with constructive mathematics.
 
-There is a related, by distinct, strategy in classical logic that can be used to prove a proposition `P` assuming called &ldquo;proof by contradiction&rdquo;. Here one assumes we have a proof `np : ¬ P`, in other words, assuming that `P` is false.
+There is a related, but distinct, strategy in classical logic that can be used to prove a proposition `P` assuming called &ldquo;proof by contradiction&rdquo;. Here one assumes we have a proof `np : ¬ P`, in other words, assuming that `P` is false.
 
 The goal is again to derive an element of `False`, also known as a contradiction.
 

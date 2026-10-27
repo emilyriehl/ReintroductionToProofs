@@ -13,7 +13,7 @@ The second provides a proof `h1` that the implication `P → Q` is true.
 
 The final hypothesis provides a proof `h2` that `Q → R` is true. Our goal is to conclude that `R` is true.
 
-This can be proven either backwards &mdash; by using the `apply` tactic &mdash; or forwards &mdash; by directly constructing proofs out of our hypothesis.
+This can be proven either backwards &mdash; by using the `apply` tactic &mdash; or forwards &mdash; by directly constructing proofs out of our hypotheses.
 
 But it is also possible to work forwards with the `have` tactic, which is now in your library.
 

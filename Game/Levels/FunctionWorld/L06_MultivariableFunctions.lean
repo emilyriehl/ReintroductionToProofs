@@ -14,9 +14,9 @@ Elements of the type `(A → B) → C` are functions that take a function from `
 
 By contrast, elements of the type `A → (B → C)` are *multivariable functions*, which take more than one input before returning an output. As these are relatively common, the simplified notation `A → B → C` is used as an abbreviation for the type `A → (B → C)`.
 
-A multivariable function `f : A → B → C` takes a first input from type `A` and a second input from type `B` before returning an output of type `C`.
+A multivariable function `f : A → B → C` takes a first input of type `A` and a second input of type `B` before returning an output of type `C`.
 
-The element `f` may also be thought of as a function that takes an element of type `A` and returns a of type `B → C`.
+The element `f` may also be thought of as a function that takes an element of type `A` and returns an element of type `B → C`.
 
 Given `f : A → B → C` and `a : A`, then `f a : B → C` is a function from `B` to `C`.
 

@@ -13,7 +13,7 @@ The other component function is defined by composing `f : A ⊕ B → C` with th
 
 Since a *single* function of type `A ⊕ B → C` decomposes into a pair of functions of types `A → C` and `B → C`, we may  define a function from the function type `A ⊕ B → C` to the product of the function types `(A → C) × (B → C)`. This carries a function `f : A ⊕ B → C` to its pair of component functions.
 
-Your task in this level is to define this operation, which splits a function out of a coproduct into into component functions.
+Your task in this level is to define this operation, which splits a function out of a coproduct type into component functions.
 "
 
 namespace ReintroductionToProofs

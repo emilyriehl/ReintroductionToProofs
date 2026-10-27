@@ -5,9 +5,9 @@ Level 8
 
 Title "Component Functions"
 
-Introduction "We've seen that a function `f : A × B → C` out of a product can be regarded as a function of two variables `Function.curry f : A → B → C`.
+Introduction "We've seen that a function `f : A × B → C` out of a product type can be regarded as a function of two variables `Function.curry f : A → B → C`.
 
-How should we think about a function into a product?
+How should we think about a function into a product type?
 
 Consider a function `f : X → A × B` from a type `X` into a product type `A × B`.
 

@@ -14,7 +14,7 @@ Your task in this level, like in the previous level, is to define an element in 
 
 In the previous level, you were asked to do this in the empty context. Here our context contains certain assumptions which could potentially be used to make your task easier.
 
-You are allowed, if you insist, to solve this level in the same way you solved the previous level. But we challenge you to define a different element of the type `Type` than you used previously.
+You are allowed, if you insist, to solve this level in the same way you solved the previous level. But we challenge you to specify a different element of the type `Type` than you used previously.
 "
 
 /-- The elements of the type `Type` of types are types at the lowest universe level. -/

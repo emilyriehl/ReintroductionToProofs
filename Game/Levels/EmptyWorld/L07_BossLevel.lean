@@ -11,7 +11,7 @@ Your challenge is to define functions in both directions between types that are 
 
 Interestingly each of these types has an element, which can be used to define the functions if you wish.
 
-There are other strategies to defining the funtions as well, so you may enjoy trying to solve this level in multiple ways.
+There are other strategies to defining the functions as well, so you may enjoy trying to solve this level in multiple ways.
 
 Have fun!
 "

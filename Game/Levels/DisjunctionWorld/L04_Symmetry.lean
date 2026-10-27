@@ -10,7 +10,7 @@ We can improve our understanding of the symmetry of disjunction as follows.
 
 For propositions `P` and `Q`, `P ∨ Q` is true if and only if `Q ∨ P` is true.
 
-To prove this you might find it useful to use the theorem `Or.symm` proven in the previous level. This is now in your library."
+To prove this you might find it useful to apply the theorem `Or.symm` proven in the previous level. It is now in your library."
 
 /-- `P ∨ Q` is true if and only if `Q ∨ P` is true. -/
 Statement {P Q : Prop} : P ∨ Q ↔ Q ∨ P := by

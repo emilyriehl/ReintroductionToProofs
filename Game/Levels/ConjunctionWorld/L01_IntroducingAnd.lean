@@ -10,7 +10,7 @@ Introduction "To prove a conjunction `P ∧ Q` we need to supply a proof of both
 
 This expresses the introduction rule for the logical operation of conjunction.
 
-Use the tactic `constructor` to ask Lean to break up the goal or proving `P ∧ Q` into two steps, of first proving `P` and then proving `Q`.
+Use the tactic `constructor` to ask Lean to break up the goal of proving `P ∧ Q` into two steps: first proving `P` and then proving `Q`.
 "
 
 /-- If `P` is true and `Q` is true, then `P ∧ Q` is true. -/

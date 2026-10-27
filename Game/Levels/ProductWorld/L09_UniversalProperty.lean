@@ -30,7 +30,7 @@ namespace ReintroductionToProofs
 Statement {X A B : Type} : (X → A) × (X → B) → (X → A × B) := by
   Hint (hidden := true) "The goal is a function type, so start with `intro`."
   intro f
-  Hint (hidden := true) "The goal is a still function type, so continue with `intro`."
+  Hint (hidden := true) "The goal is still a function type, so continue with `intro`."
   intro x
   Hint (hidden := true) "The goal is a product type, so `constructor` can be used to break the goal into pieces."
   constructor

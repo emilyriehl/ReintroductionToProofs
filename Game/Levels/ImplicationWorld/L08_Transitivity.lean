@@ -13,7 +13,7 @@ Mathematical statements of this second form `P → (Q → R)` are much more comm
 
 More generally, `P → Q → R → S → T` refers to `P → (Q → (R → (S → T)))`.
 
-Explicit parentheses must be used to express statements with any other parenthesizations.
+Explicit parentheses must be used to express statements with any other order of application.
 
 Your objective in this level is to prove the transitivity of implication."
 
@@ -30,4 +30,4 @@ Statement {P Q R : Prop} : (P → Q) → (Q → R) → (P → R) := by
   apply h1
   exact p
 
-Conclusion "For compound implications &mdash; statements of the form `P → Q → R → S → T` &mdash; you can type `intro p q r s` to introduce hypothesis `p : P`, `q : Q`, `r : R`, and `s : S` all at once."
+Conclusion "For compound implications &mdash; statements of the form `P → Q → R → S → T` &mdash; you can type `intro p q r s` to introduce hypotheses `p : P`, `q : Q`, `r : R`, and `s : S` all at once."

@@ -24,7 +24,7 @@ Statement {A B : Type} (a : A) (f : A → B) : B := by
 Conclusion "While the tactics used in this level and the previous one are different, both solutions ultimately tell Lean to use the element `f a : B` built by applying the function `f` to the element `a`."
 
 
-/-- The `apply` tactic can be used when the goal matches the conclusion of an implication or the output type of a function. For example if the goal is `Q` and there is a hypothesis `h : P → Q`, then `apply h` updates the goal to `P`. If the goal is `T` and there is a hypothesis `e : R → S → T`, then `apply e` produces two subgoals, one each for `R` and `S`. -/
+/-- The `apply` tactic can be used when the goal matches the conclusion of an implication or the output type of a function. For example if the goal is `Q` and there is a hypothesis `h : P → Q`, then `apply h` updates the goal to `P`. If the goal is `T` and there is a hypothesis `e : R → S → T`, then `apply e` produces two subgoals, one for each of `R` and `S`. -/
 TacticDoc apply
 
 NewTactic apply

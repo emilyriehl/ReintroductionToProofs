@@ -25,7 +25,7 @@ Statement {P : Prop} : ¬ P → P → False := by
   Hint (hidden := true) "We have an assumption `{np} : P → False`. What can be done with a proof of implication?"
   exact np p
 
-Conclusion "There are various ways to solve this level. You might enjoy searching for a shorter proof. For instance, there is a proof that takes just line and involves eight characters."
+Conclusion "There are various ways to solve this level. You might enjoy searching for a shorter proof. For instance, there is a proof that takes just one line and involves eight characters."
 
 /--
 `¬ P`, read as &ldquo; not `P`&rdquo; is an abbreviation for `P → False`. Use `\neg` to type `¬`.
