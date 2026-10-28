@@ -16,7 +16,7 @@ Alternatively, you can use other tactics to define the required function step by
 
 To delete a proof (or proof attempt) and start over, you might find it helpful to click on the button labelled `</>` in the upper right hand corner to enter `editor mode`. Then delete all the lines of your first proof (or proof attempt). Clicking on `>_` takes you back to `typewriter mode`.
 
-You can also delete a proof attempt in line by line in `typewriter mode` using the `retry` button to the right of that line."
+You can also delete a proof attempt line by line in `typewriter mode` using the `retry` button to the right of that line."
 
 /-- Given functions `g : B → C` and `f : A → B`, define the composite function `g ∘ f : A → C` that sends `x : A` to `g (f x)`. -/
 Statement {A B C : Type} (g : B → C) (f : A → B) : A → C := by

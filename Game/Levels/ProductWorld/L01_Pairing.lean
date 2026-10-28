@@ -5,9 +5,9 @@ Level 1
 
 Title "Pairing"
 
-Introduction "The introduction rule for product types tells us that elements of a product type `A × B` are formed by *pairing* elements of type `A` with elements of type `B`.
+Introduction "The introduction rule for product types tells us that elements of a product type `A × B` are constructed by *pairing* elements of type `A` with elements of type `B`.
 
-Given an element `a : A` and an element `b : B` there is a corresponding element of the product type `A × B` that is denoted by `⟨a , b⟩ : A × B`.
+Given an element `a : A` and an element `b : B` there is a corresponding element of the product type `A × B` that is denoted by `⟨a, b⟩ : A × B`.
 
 This element should be thought of as an *ordered pair* whose first component is the element `a : A` and whose second element is the element `b : B`.
 

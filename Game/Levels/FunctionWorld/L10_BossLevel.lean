@@ -23,4 +23,4 @@ Statement {F V : Type} : ((((V → F) → F) → F) → F) → ((V → F) → F)
   apply α
   exact φ
 
-Conclusion "Move on to Implication World to revisit these constructions from the prospective of propositions rather than types."
+Conclusion "Move on to Implication World to revisit these constructions from the perspective of propositions rather than types."

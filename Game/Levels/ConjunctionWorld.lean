@@ -28,5 +28,5 @@ If we have a proof `h : P ∧ Q` then we can extract proofs that `P` and `Q` are
 
 Like the analogy between function types and implication, there is a close analogy between product types and the logical operation of conjunction.
 
-The reuse of the syntax we first introduced for product types is deliberate, as the introduction and elimination rules for conjunctions precisely mirror those introduced for product types.
+The reuse of the syntax we first introduced for product types is deliberate, as the introduction and elimination rules for conjunctions precisely mirror those for product types.
 "

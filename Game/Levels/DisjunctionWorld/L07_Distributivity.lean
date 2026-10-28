@@ -37,4 +37,4 @@ Statement {P Q R : Prop} : P ∧ (Q ∨ R) ↔ (P ∧ Q) ∨ (P ∧ R) := by
   exact q
   exact ⟨p, Or.inr r⟩
 
-Conclusion "This proves the that conjunction distributes over disjunction. A more involved form of distributivity appears in the next level."
+Conclusion "This proves that conjunction distributes over disjunction. A more involved form of distributivity appears in the next level."

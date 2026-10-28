@@ -18,11 +18,11 @@ to the element `g (f a) : C`.
 
 The goal in this level is to define composition as a multivariable function between function types `comp : (B → C) → (A → B) → (A → C)`.
 
-We think often think of composition as the function that takes `g : B → C` and `f : A → B` to the composite function `comp g f : A → C`.
+We often think of composition as the function that takes `g : B → C` and `f : A → B` to the composite function `comp g f : A → C`.
 
-But it can also be thought of a function that takes `g`, `f`, and `a : A` to the element `g (f a) : C`.
+But it can also be thought of as a function that takes `g`, `f`, and `a : A` to the element `g (f a) : C`.
 
-Aside: Lean treats the functions `comp` and `∘` slightly differently because the former uses the usual notation for multivariable functions (where the arguments are provided afterwards as `comp g f`) while the latter uses infix notation (where the function name appears inbetween the two arguments as `g ∘ f`).
+Aside: Lean treats the functions `comp` and `∘` slightly differently because the former uses standard notation for multivariable functions (where the arguments are provided afterwards as `comp g f`) while the latter uses infix notation (where the function name appears inbetween the two arguments as `g ∘ f`).
 "
 
 /-- Define the composition of two functions as a multivariable function between function types. -/

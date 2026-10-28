@@ -11,7 +11,7 @@ Similarly to the conventions used for products, conjunctions, and coproducts, Le
 
 Given a hypothesis `h₁ : (P ∨ Q) ∨ R`, `cases h₁` will split the hypothesis into two cases: one assuming that `P ∨ Q` is true and the other assuming `R` is true.
 
-Similarly given a hypothesis `h₂ : P ∨ Q ∨ R`, `cases h₂` the hypothesis into two cases: one assuming that `P` is true and the other assuming `Q ∨ R` is true.
+Similarly given a hypothesis `h₂ : P ∨ Q ∨ R`, `cases h₂` will split the hypothesis into two cases: one assuming that `P` is true and the other assuming `Q ∨ R` is true.
 
 Note the `rcases` tactic allows more general patterns of disjunctions. Given `h₁ : (P ∨ Q) ∨ R` try `rcases h₁ with (p | q) | r`. Similarly, given `h₂ : P ∨ Q ∨ R`, try `rcases h₂ with p | q | r`.
 

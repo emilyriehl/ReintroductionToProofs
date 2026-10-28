@@ -17,7 +17,7 @@ Recall the function `and : Bool → Bool → Bool` capturing the logical notion 
 
 Recall also the function `or : Bool → Bool → Bool` capturing the logical notion of disjunction. Lean uses the alternate notation `x || y = or x y`
 
-In this level, you are asked to prove that there exists some boolean `b : B` so that `b && b = b || b`.
+In this level, you are asked to prove that there exists some boolean `b : Bool` so that `b && b = b || b`.
 
 The tactic `use` is used to introduce proofs of existentially quantified predicates.
 

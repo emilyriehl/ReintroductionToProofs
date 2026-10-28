@@ -9,7 +9,7 @@ Introduction "Let `P : A → Prop` be a predicate over a type `A`.
 
 Suppose we have a proof `h : ∀ x : A, P x` that for all `x : A`, `P x` is true.
 
-Then if we are given any particular `a : A`. We can use `h` to provide a proof of `P a`.
+Then if we are given any particular `a : A`, we can use `h` to provide a proof of `P a`.
 
 How?
 

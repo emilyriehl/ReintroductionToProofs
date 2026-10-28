@@ -25,7 +25,7 @@ Conclusion "The proposition `True` and the type `Prop` are now in your library o
 /-- The type `Prop` is the type of propositions. -/
 DefinitionDoc «Prop» as "Prop" in "Type"
 
-/-- The proposition `True` has a canonical element `⟨⟩ : True`, which may be typed using '\<' and '\>'. -/
+/-- The proposition `True` has a canonical element `⟨⟩ : True`, which may be typed using `\<>`. -/
 DefinitionDoc True as "True" in "Prop"
 
 NewDefinition «Prop» True
