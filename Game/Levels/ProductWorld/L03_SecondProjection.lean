@@ -17,7 +17,7 @@ Your task in this level is to define the second projection function.
 Statement {A B : Type} : A × B → B := by
   Hint (hidden := true) "The goal is a term of a function type so type `intro p` to give yourself a term `p : A × B`."
   intro p
-  Hint (hidden := true) "Now type `exact {p}.2` to return the first projection."
+  Hint (hidden := true) "Now type `exact {p}.2` to return the second projection."
   exact p.2
 
 Conclusion "Lean uses the name `Prod.snd : A × B → B` for the function you have just defined. This function has been added to the library of definitions.
