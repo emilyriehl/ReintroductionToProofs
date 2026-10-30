@@ -1,0 +1,166 @@
+associativity,ассоциативность
+assumption,гипотеза
+axiom of choice,аксиома выбора
+base case,база индукции
+base,базовый тип
+bijective,биективная
+bracket,скобка
+bundle,расслоение
+by definition,по определению
+by reflexivity,по рефлексивности
+commutativity,коммутативность
+component functions,компонентные функции
+composite function,композиция функций
+computation rule,правило вычисления
+constant function,постоянная функция
+contractible,стягиваемый
+contrapositive,контрапозиция
+coproduct type,тип копроизведения
+currying,каррирование
+definitional equality,равенство по определению
+dependent function type,тип зависимых функций
+dependent function,зависимая функция
+dependent pair type,тип зависимых пар
+dependent pair,зависимая пара
+dependent type,зависимый тип
+distributivity,дистрибутивность
+elimination rule,правило устранения
+equality,равенство
+equation,уравнение
+equivalence,эквивалентность
+evaluation function,функция вычисления значения
+evaluation,вычисление значения
+existentially quantified,с квантором существования
+explicit numeral,числовой литерал
+expression,выражение
+false,ложь
+family,семейство
+fiber,слой
+forming,формирование
+function extensionality,экстенсиональность функции
+function type,тип функций
+hypothesis,гипотеза
+identity function,функция тождества
+induction,индукция
+inductive hypothesis,гипотеза индукции
+inductive step,шаг индукции
+inhabited,населен
+injective,инъективная
+input,аргумент
+introduction rule,правило введения
+inverse,обратная
+inverses,взаимно обратны
+invertible,обратимая
+isomorphism,изоморфизм
+kind,род
+lemma,лемма
+lemmas,леммы
+logical connective,логическая связка
+map,отображение
+mapping out of,заданная на
+monoid,моноид
+natural number,натуральное число
+noncontradiction,непротиворечивость
+normal form,нормальная форма
+notation,обозначения
+number,число
+numeral,числовой литерал
+outermost logical connective,корневая логическая связка
+output,значение
+pairing,образование пары
+parenthesis,скобка
+parenthesization,расстановка скобок
+partial order,частичный порядок
+Pi type,Pi-тип
+predecessor,предшественник
+predecessor,предшественник
+preorder,предпорядок
+product type,тип произведения
+projection,проекция
+proof,доказательство
+satisfiable,выполнимая
+section,сечение
+semiring,полукольцо
+Sigma type,Sigma-тип
+statement,высказывание
+successor,следующее число
+surjective,сюръективная
+theorem,теорема
+to prove,доказывать
+total function,всюду определённая функция
+total function,всюду определённая функция
+totality,всюду определенность
+totally ordered,линейно упорядоченный
+true,истина
+truth value,значение истинности
+type forming,формирование типа
+uncurrying,декаррирование
+universal property,универсальное свойство
+universally quantified,с квантором всеобщности
+universe level,уровень вселенной
+valued at a type,со значениями типа
+valued,со значениями
+variable,переменная
+well-defined,корректно определённая
+X distributes over Y,дистрибутивность X относительно Y
+argument,аргумент
+definition,определение
+function,функция
+goal,цель
+goal state,изменение цели
+notation,обозначение
+proof term,элемент доказательства
+solvable goal,достижимая цель
+tactic,тактика
+term,элемент
+a rewrite (noun),переписывать
+to rewrite (verb),переписывать
+to rewrite backwards,переписывать в обратном порядке
+to solve a goal,достичь цели
+to close a goal,закрыть цель
+to take arguments,принимать аргументы
+type,тип
+Advanced Function World,Мир свойств функций
+Boolean World,Мир булева типа
+boss level,уровень «Босс»
+boss,сложное задание
+button,кнопка
+Classical World,Мир классической логики
+Conjunction World,Мир конъюнкций
+Coproduct World,Мир копроизведений
+Dependent World,Мир зависимых типов
+Disjunction World,Мир дизъюнкций
+Editor mode,режим редактора
+editor mode,режим редактора
+Empty World,Мир пустого типа
+Equality World,Мир равенства
+Equivalence World,Мир эквивалентности
+final boss,уровень «Босс»
+function into,функция, область значений которой —
+function from,функция, область определения которой —
+Function World,Мир функций
+hold of,истинные для
+hold,истинны
+holds,истинно
+Implication World,Мир импликаций
+inventory,набор
+Level,Уровень
+main boss,самое сложное задание
+meaning that,т.е.
+meaning of X,значение X
+meaning,т.е.
+Natural Numbers World,Мир натуральных чисел
+Negation World,Мир отрицаний
+Product World,Мир произведений
+Quantifier World,Мир кванторов
+so that,"такой, что"
+sub-boss,задание повышенной сложности
+tab,вкладка
+thought of as,рассматриваться как
+Type World,Мир типов
+typewriter mode,строчный режим
+World,Мир игры
+a bit of cleverness,определенной сообразительности
+mathematician,математик
+user,пользователь
+
