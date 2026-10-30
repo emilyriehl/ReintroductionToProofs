@@ -29,7 +29,7 @@ For example: `2 + 2 = 4` is true for elements `(2 + 2) 4 : ℕ`. In Natural Numb
 But the proposition `0 = 1` is false, again for
 `0 1 : ℕ`.
 
-In Natural Numbers World, we will see how to prove its *negation*, in other words that `0 = 1` is false.
+In Natural Numbers World, we will see how to prove its *negation*, in other words that `¬(0 = 1)` is true.
 
 To understand the proposition `x = y` for elements `x y : A`, we must understand:
 
