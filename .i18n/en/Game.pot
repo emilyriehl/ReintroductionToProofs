@@ -1,7 +1,7 @@
 msgid ""
 msgstr "Project-Id-Version: Game v4.23.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-10-27\n"
+"POT-Creation-Date: 2026-10-30\n"
 "Last-Translator: \n"
 "Language-Team: none\n"
 "Language: en\n"
@@ -128,6 +128,11 @@ msgstr ""
 
 #: Game.Levels.NegationWorld.L05_Absurd
 msgid "Absurd"
+msgstr ""
+
+#. §0: `exact «{p}».2`
+#: Game.Levels.ProductWorld.L03_SecondProjection
+msgid "Now type §0 to return the second projection."
 msgstr ""
 
 #. §0: `A → B → C → D → E`
@@ -745,6 +750,69 @@ msgstr ""
 msgid "For any types §0, §1, and §2 and function §3, §4 is the function that carries §5 and §6 to §7."
 msgstr ""
 
+#. §0: `A`
+#. §1: `x y : A`
+#. §2: `x = y`
+#. §3: `x`
+#. §4: `y`
+#. §5: `x = y`
+#. §6: `x`
+#. §7: `y`
+#. §8: `A`
+#. §9: `P`
+#. §10: `x = y`
+#. §11: `x = y`
+#. §12: `p : x = y`
+#. §13: `x`
+#. §14: `y`
+#. §15: `A`
+#. §16: `2 + 2 = 4`
+#. §17: `(2 + 2) 4 : ℕ`
+#. §18: `0 = 1`
+#. §19: `0 1 : ℕ`
+#. §20: `¬(0 = 1)`
+#. §21: `x = y`
+#. §22: `x y : A`
+#. §23: `x = y`
+#. §24: `x = y`
+#. §25: `p : x = y`
+#. §26: `x`
+#. §27: `y`
+#. §28: `p`
+#. §29: `x`
+#. §30: `y`
+#. §31: `x`
+#: Game.Levels.EqualityWorld
+msgid "Consider a type §0. For any two elements §1 there is a proposition §2\n"
+"that encodes the mathematical assertion that §3 and §4 are *equal*.\n"
+"\n"
+"Note that the proposition §5 is only well-formed if §6 and §7 are elements of the same type §8.\n"
+"\n"
+"Like with generic propositions §9, the proposition §10 is not necessarily *true*.\n"
+"\n"
+"To prove that\n"
+"§11 is true, we must construct an element §12 which can be thought of as a *proof* that\n"
+"§13 equals §14 as elements of type §15.\n"
+"\n"
+"For example: §16 is true for elements §17. In Natural Numbers World, we will see a proof of this.\n"
+"\n"
+"But the proposition §18 is false, again for\n"
+"§19.\n"
+"\n"
+"In Natural Numbers World, we will see how to prove its *negation*, in other words that §20 is true.\n"
+"\n"
+"To understand the proposition §21 for elements §22, we must understand:\n"
+"\n"
+"* How to prove propositions of the form §23.\n"
+"* How to use hypotheses of the form §24 to prove other propositions or define elements of other types.\n"
+"\n"
+"The introduction rule for proving equality is surprisingly weak, only proving equalities that hold trivially &ldquo;by reflexivity&rdquo; or &ldquo;by definition&rdquo;.\n"
+"\n"
+"By contrast, the elimination rule for using proofs of equality is quite strong, expressing something like the *indiscernibility of identicals*: informally, if we have §25, then anything that is true of §26 must also be true of §27 (and conversely).\n"
+"\n"
+"Lean provides a tactic that can be applied to the proof §28 to convert a goal involving the element §29 to an analogous goal with §30 substituted in place of §31."
+msgstr ""
+
 #. §0: `cases «{p}»`
 #: Game.Levels.AdvancedFunctionWorld.L05_Injectivity
 msgid "«{p}» is a contradictory hypothesis, and so §0 will close the goal"
@@ -908,69 +976,6 @@ msgstr ""
 
 #: Game.Levels.BooleanWorld.L07_DeMorgan
 msgid "Can you figure out how you would encode other logical equivalences involving proposition variables as equalities involving booleans?"
-msgstr ""
-
-#. §0: `A`
-#. §1: `x y : A`
-#. §2: `x = y`
-#. §3: `x`
-#. §4: `y`
-#. §5: `x = y`
-#. §6: `x`
-#. §7: `y`
-#. §8: `A`
-#. §9: `P`
-#. §10: `x = y`
-#. §11: `x = y`
-#. §12: `p : x = y`
-#. §13: `x`
-#. §14: `y`
-#. §15: `A`
-#. §16: `2 + 2 = 4`
-#. §17: `(2 + 2) 4 : ℕ`
-#. §18: `0 = 1`
-#. §19: `0 1 : ℕ`
-#. §20: `0 = 1`
-#. §21: `x = y`
-#. §22: `x y : A`
-#. §23: `x = y`
-#. §24: `x = y`
-#. §25: `p : x = y`
-#. §26: `x`
-#. §27: `y`
-#. §28: `p`
-#. §29: `x`
-#. §30: `y`
-#. §31: `x`
-#: Game.Levels.EqualityWorld
-msgid "Consider a type §0. For any two elements §1 there is a proposition §2\n"
-"that encodes the mathematical assertion that §3 and §4 are *equal*.\n"
-"\n"
-"Note that the proposition §5 is only well-formed if §6 and §7 are elements of the same type §8.\n"
-"\n"
-"Like with generic propositions §9, the proposition §10 is not necessarily *true*.\n"
-"\n"
-"To prove that\n"
-"§11 is true, we must construct an element §12 which can be thought of as a *proof* that\n"
-"§13 equals §14 as elements of type §15.\n"
-"\n"
-"For example: §16 is true for elements §17. In Natural Numbers World, we will see a proof of this.\n"
-"\n"
-"But the proposition §18 is false, again for\n"
-"§19.\n"
-"\n"
-"In Natural Numbers World, we will see how to prove its *negation*, in other words that §20 is false.\n"
-"\n"
-"To understand the proposition §21 for elements §22, we must understand:\n"
-"\n"
-"* How to prove propositions of the form §23.\n"
-"* How to use hypotheses of the form §24 to prove other propositions or define elements of other types.\n"
-"\n"
-"The introduction rule for proving equality is surprisingly weak, only proving equalities that hold trivially &ldquo;by reflexivity&rdquo; or &ldquo;by definition&rdquo;.\n"
-"\n"
-"By contrast, the elimination rule for using proofs of equality is quite strong, expressing something like the *indiscernibility of identicals*: informally, if we have §25, then anything that is true of §26 must also be true of §27 (and conversely).\n"
-"\n"
-"Lean provides a tactic that can be applied to the proof §28 to convert a goal involving the element §29 to an analogous goal with §30 substituted in place of §31."
 msgstr ""
 
 #. §0: `+ : ℕ → ℕ → ℕ`
@@ -2507,6 +2512,11 @@ msgstr ""
 msgid "Now might be a good time to case split on the hypothesis §0."
 msgstr ""
 
+#. §0: `Computer-Verified Proof: a Hands-On Introduction to Interactive Theorem Proving`
+#: Game
+msgid "This was created using the GameSkeleton Github Repo from the Lean Games Server hosted by ADAM: Anticipating the Digital Age of Mathematics at Heinrich Heine University Düsseldorf. It was originally designed for a first year seminar course taught at Johns Hopkins University in Fall 2025 with the title §0. A sister version of this game, [Reintroduction to Proofs (Verbose Lean edition)](https://adam.math.hhu.de/#/g/emilyriehl/VerboseReintroductionToProofs), solves the same levels in the controlled English of [Verbose Lean](https://github.com/PatrickMassot/verbose-lean4)."
+msgstr ""
+
 #: Game.Levels.ConjunctionWorld.L08_CurryingImplication
 msgid "What is the outermost logical connective? What tactic is used to prove statements of this form?"
 msgstr ""
@@ -3716,6 +3726,45 @@ msgstr ""
 msgid "We will explore the precise relationship between bijective functions and invertible functions soon. But first, we show that the inverse of an invertible function is again invertible."
 msgstr ""
 
+#. §0: `ℕ`
+#. §1: `Bool`
+#. §2: `17 : ℕ`
+#. §3: `true : Bool`
+#: Game
+msgid "Mathematicians from all over &mdash; most of whom have never met one another &mdash; nevertheless agree to an incredible extent about the nature of the mathematical universe. How did this degree of consensus come about?\n"
+"\n"
+"Firstly mathematicians have developed a precise formal language which allows them to define new abstract concepts and state their properties in an unambiguous way. A mathematical *proposition* is a well-formed mathematical statement that is either true or false, for instance:\n"
+"\n"
+"* &ldquo;There are infinitely many prime numbers.&rdquo;\n"
+"* &ldquo;Every prime number is odd.&rdquo;\n"
+"* &ldquo;There are infinitely many prime numbers that are two less than another prime.&rdquo;\n"
+"\n"
+"Mathematicians distinguish between the true propositions, the false ones, and the ones whose truth value is not yet known through *proofs* made precise in the formal language of mathematical logic.\n"
+"\n"
+"While the idea of a mathematical proof is over 2000 years old, the practice of proof writing continues to evolve. Today mathematicians may elect to use a tool called a computer proof assistant that can provide real-time feedback to a theorem prover which verifies the status of a logical argument that is currently under development.\n"
+"\n"
+"The aim of this game will be to introduce proof writing in a computer proof assistant while developing skills that can be used to develop proofs in other contexts: on paper, in conversation with a friend, or in your head.\n"
+"\n"
+"There is also a sister version of this game, [Reintroduction to Proofs (Verbose Lean edition)](https://adam.math.hhu.de/#/g/emilyriehl/VerboseReintroductionToProofs), in which the same levels are solved by writing sentences in a controlled form of English, provided by [Verbose Lean](https://github.com/PatrickMassot/verbose-lean4). In this version you will learn the proof assistant's own, terser commands.\n"
+"\n"
+"There is one caveat to this introduction to proof writing, which we now address explicitly. The formal vocabulary we will introduce to discuss mathematical proofs is somewhat different from the one that most mathematicians learn. The mathematics we will be developing is essentially unchanged but the formal language introduced here will make it easier to be fully precise about every step in a proof, as is required to convince a computer that a logical argument is sound.\n"
+"\n"
+"In particular, we will explore an analogy between mathematical *propositions* and another form of primitive mathematical structure called *types*. Examples of types include:\n"
+"\n"
+"* The type §0 of natural numbers.\n"
+"* The type §1 of booleans.\n"
+"\n"
+"Each type comes with its *elements* such as §2 or §3 governed by rules which explain the requirements for constructing an element and how previously-constructed elements can be used. We will see that these rules closely parallel the logical rules which dictate the requirements for proving a proposition and explain how a previously-proven proposition can be used to prove other theorems.\n"
+"\n"
+"This formal vocabulary for mathematics is called *dependent type theory*, with the adjective &ldquo;dependent&rdquo; referring to the fact that all of the rules just mentioned apply in any *context* of previously-constructed elements of types and previously-proven propositions.\n"
+"\n"
+"In Type World, we will introduce types and their elements and propositions and their proofs. We will explore these notions interactively with the computer proof assistant Lean.\n"
+"\n"
+"Later worlds will reveal that more complicated types can be built from simpler types, like more complicated mathematical statements can be built from simpler propositions.\n"
+"\n"
+"Let's begin!"
+msgstr ""
+
 #. §0: `A`
 #. §1: `B`
 #. §2: `Sum.inl : A → A ⊕ B`
@@ -3924,6 +3973,14 @@ msgstr ""
 #. §5: `a : A`
 #: Game.Levels.FunctionWorld.L05_ConstantFunctions
 msgid "For any types §0 and §1 and element §2, there is a constant function §3 that sends any §4 to the element §5."
+msgstr ""
+
+#: Game
+msgid "This game introduces mathematical proof writing in a formal vocabulary that is designed to make it easier to be fully precise about every step in a proof, as is required to convince a computer that a logical argument is sound.\n"
+"\n"
+"The language of dependent type theory can be used in parallel to state and prove mathematical theorems as well as to specify and define examples of mathematical objects.\n"
+"\n"
+"The same levels can also be played in the controlled English of [Verbose Lean](https://github.com/PatrickMassot/verbose-lean4) in the sister game [Reintroduction to Proofs (Verbose Lean edition)](https://adam.math.hhu.de/#/g/emilyriehl/VerboseReintroductionToProofs)."
 msgstr ""
 
 #. §0: `induction «{n}» with k hk`
@@ -5724,12 +5781,6 @@ msgstr ""
 msgid "Recall §0 and §1 refer to the left and right propositions in a disjunction §2."
 msgstr ""
 
-#: Game
-msgid "This game introduces mathematical proof writing in a formal vocabulary that is designed to make it easier to be fully precise about every step in a proof, as is required to convince a computer that a logical argument is sound.\n"
-"\n"
-"The language of dependent type theory can be used in parallel to state and prove mathematical theorems as well as to specify and define examples of mathematical objects."
-msgstr ""
-
 #. §0: `Type`
 #. §1: `A → A`
 #. §2: `A : Type`
@@ -6024,6 +6075,13 @@ msgstr ""
 msgid "The goal is a product type, so §0 can be used to break the goal into pieces."
 msgstr ""
 
+#. §0: `ext`
+#. §1: `ext b`
+#. §2: `b : Bool`
+#: Game.Levels.AdvancedFunctionWorld.L14_DoubleNegation
+msgid "Type §0 to apply function extensionality or §1 to apply function extensionality with §2 the chosen variable."
+msgstr ""
+
 #. §0: `P`
 #. §1: `Q`
 #. §2: `R`
@@ -6033,13 +6091,6 @@ msgstr ""
 #: Game.Levels.ConjunctionWorld.L06_CompoundImplication
 #: Game.Levels.ConjunctionWorld.L07_MoreCompoundImplication
 msgid "For propositions §0, §1, and §2, §3 is a proof that §4 implies §5."
-msgstr ""
-
-#. §0: `ext`
-#. §1: `ext b`
-#. §2: `b : Bool`
-#: Game.Levels.AdvancedFunctionWorld.L14_DoubleNegation
-msgid "Type §0 to apply function extensionality or §1 to apply function extensionality with §2 the chosen variable."
 msgstr ""
 
 #. §0: `A`
@@ -7064,43 +7115,6 @@ msgstr ""
 #. §1: `«{a}» : A`
 #: Game.Levels.EmptyWorld.L03_ThroughEmpty
 msgid "We have assumptions §0 and §1? What can you construct using this?"
-msgstr ""
-
-#. §0: `ℕ`
-#. §1: `Bool`
-#. §2: `17 : ℕ`
-#. §3: `true : Bool`
-#: Game
-msgid "Mathematicians from all over &mdash; most of whom have never met one another &mdash; nevertheless agree to an incredible extent about the nature of the mathematical universe. How did this degree of consensus come about?\n"
-"\n"
-"Firstly mathematicians have developed a precise formal language which allows them to define new abstract concepts and state their properties in an unambiguous way. A mathematical *proposition* is a well-formed mathematical statement that is either true or false, for instance:\n"
-"\n"
-"* &ldquo;There are infinitely many prime numbers.&rdquo;\n"
-"* &ldquo;Every prime number is odd.&rdquo;\n"
-"* &ldquo;There are infinitely many prime numbers that are two less than another prime.&rdquo;\n"
-"\n"
-"Mathematicians distinguish between the true propositions, the false ones, and the ones whose truth value is not yet known through *proofs* made precise in the formal language of mathematical logic.\n"
-"\n"
-"While the idea of a mathematical proof is over 2000 years old, the practice of proof writing continues to evolve. Today mathematicians may elect to use a tool called a computer proof assistant that can provide real-time feedback to a theorem prover which verifies the status of a logical argument that is currently under development.\n"
-"\n"
-"The aim of this game will be to introduce proof writing in a computer proof assistant while developing skills that can be used to develop proofs in other contexts: on paper, in conversation with a friend, or in your head.\n"
-"\n"
-"There is one caveat to this introduction to proof writing, which we now address explicitly. The formal vocabulary we will introduce to discuss mathematical proofs is somewhat different from the one that most mathematicians learn. The mathematics we will be developing is essentially unchanged but the formal language introduced here will make it easier to be fully precise about every step in a proof, as is required to convince a computer that a logical argument is sound.\n"
-"\n"
-"In particular, we will explore an analogy between mathematical *propositions* and another form of primitive mathematical structure called *types*. Examples of types include:\n"
-"\n"
-"* The type §0 of natural numbers.\n"
-"* The type §1 of booleans.\n"
-"\n"
-"Each type comes with its *elements* such as §2 or §3 governed by rules which explain the requirements for constructing an element and how previously-constructed elements can be used. We will see that these rules closely parallel the logical rules which dictate the requirements for proving a proposition and explain how a previously-proven proposition can be used to prove other theorems.\n"
-"\n"
-"This formal vocabulary for mathematics is called *dependent type theory*, with the adjective &ldquo;dependent&rdquo; referring to the fact that all of the rules just mentioned apply in any *context* of previously-constructed elements of types and previously-proven propositions.\n"
-"\n"
-"In Type World, we will introduce types and their elements and propositions and their proofs. We will explore these notions interactively with the computer proof assistant Lean.\n"
-"\n"
-"Later worlds will reveal that more complicated types can be built from simpler types, like more complicated mathematical statements can be built from simpler propositions.\n"
-"\n"
-"Let's begin!"
 msgstr ""
 
 #. §0: `apply`
@@ -8519,7 +8533,6 @@ msgstr ""
 
 #. §0: `exact «{p}».1`
 #: Game.Levels.ProductWorld.L02_FirstProjection
-#: Game.Levels.ProductWorld.L03_SecondProjection
 msgid "Now type §0 to return the first projection."
 msgstr ""
 
@@ -9195,11 +9208,6 @@ msgstr ""
 
 #: Game
 msgid "Reintroduction to Proofs"
-msgstr ""
-
-#. §0: `Computer-Verified Proof: a Hands-On Introduction to Interactive Theorem Proving`
-#: Game
-msgid "This was created using the GameSkeleton Github Repo from the Lean Games Server hosted by ADAM: Anticipating the Digital Age of Mathematics at Heinrich Heine University Düsseldorf. It was originally designed for a first year seminar course taught at Johns Hopkins University in Fall 2025 with the title §0."
 msgstr ""
 
 #. §0: `P`
