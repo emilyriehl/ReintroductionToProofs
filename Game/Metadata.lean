@@ -1,4 +1,4 @@
-import GameServer
+import GameApi
 -- import Mathlib.Tactic.Common
 
 import Game.Metadata.Equivalence
