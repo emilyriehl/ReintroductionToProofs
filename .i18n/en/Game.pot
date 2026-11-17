@@ -1,7 +1,7 @@
 msgid ""
 msgstr "Project-Id-Version: Game v4.23.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-10-30\n"
+"POT-Creation-Date: 2026-11-17\n"
 "Last-Translator: \n"
 "Language-Team: none\n"
 "Language: en\n"
@@ -2512,11 +2512,6 @@ msgstr ""
 msgid "Now might be a good time to case split on the hypothesis §0."
 msgstr ""
 
-#. §0: `Computer-Verified Proof: a Hands-On Introduction to Interactive Theorem Proving`
-#: Game
-msgid "This was created using the GameSkeleton Github Repo from the Lean Games Server hosted by ADAM: Anticipating the Digital Age of Mathematics at Heinrich Heine University Düsseldorf. It was originally designed for a first year seminar course taught at Johns Hopkins University in Fall 2025 with the title §0. A sister version of this game, [Reintroduction to Proofs (Verbose Lean edition)](https://adam.math.hhu.de/#/g/emilyriehl/VerboseReintroductionToProofs), solves the same levels in the controlled English of [Verbose Lean](https://github.com/PatrickMassot/verbose-lean4)."
-msgstr ""
-
 #: Game.Levels.ConjunctionWorld.L08_CurryingImplication
 msgid "What is the outermost logical connective? What tactic is used to prove statements of this form?"
 msgstr ""
@@ -3272,10 +3267,6 @@ msgstr ""
 
 #: Game.Levels.AdvancedFunctionWorld.L02_Surjectivity
 msgid "Surjectivity"
-msgstr ""
-
-#: Game.Levels.DependentWorld.L02_Functions
-msgid ""
 msgstr ""
 
 #. §0: `intro n`
@@ -5592,6 +5583,13 @@ msgid "Consider a family of propositions that depends on elements drawn from two
 "To extract this data from the proof §13, type §14 to replace §15 by the pair of assumptions §16 and §17.\n"
 "\n"
 "Alternatively, type §18 to extract the elements §19 and §20 from §21."
+msgstr ""
+
+#. §0: `Computer-Verified Proof: a Hands-On Introduction to Interactive Theorem Proving`
+#: Game
+msgid "This was created using the GameSkeleton Github Repo from the Lean Games Server hosted by ADAM: Anticipating the Digital Age of Mathematics at Heinrich Heine University Düsseldorf. It was originally designed for a first year seminar course taught at Johns Hopkins University in Fall 2025 with the title §0. A sister version of this game, [Reintroduction to Proofs (Verbose Lean edition)](https://adam.math.hhu.de/#/g/emilyriehl/VerboseReintroductionToProofs), solves the same levels in the controlled English of [Verbose Lean](https://github.com/PatrickMassot/verbose-lean4).\n"
+"\n"
+"Russian translation by: [Ruslan Shvedov](https://github.com/rnsatg), [Konstantin Belyanin](https://github.com/k88-b) / Gemini Argon."
 msgstr ""
 
 #: Game.Levels.ProductWorld.L04_Symmetry
