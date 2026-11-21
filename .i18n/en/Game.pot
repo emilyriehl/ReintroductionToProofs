@@ -1,7 +1,7 @@
 msgid ""
 msgstr "Project-Id-Version: Game v4.23.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-10-30\n"
+"POT-Creation-Date: 2026-11-21\n"
 "Last-Translator: \n"
 "Language-Team: none\n"
 "Language: en\n"
@@ -901,6 +901,13 @@ msgstr ""
 msgid "Recall you can introduce multiple variables and hypothesis at once by typing §0."
 msgstr ""
 
+#. §0: `f : (x : A) → B x → C x`
+#. §1: `B`
+#. §2: `C`
+#: Game.Levels.DependentWorld.L03_Application
+msgid "A family of maps §0 induces a map from sections of §1 to sections of §2."
+msgstr ""
+
 #. §0: `P ∧ Q`
 #. §1: `Q ∧ P`
 #. §2: `P ∧ Q`
@@ -1687,12 +1694,6 @@ msgstr ""
 #. §2: `not : Bool → Bool`
 #: Game.Levels.AdvancedFunctionWorld.L02_Surjectivity
 msgid "Here Lean writes §0 for §1, where §2 is the boolean negation function."
-msgstr ""
-
-#. §0: `B C : A → Type`
-#. §1: `f : (x : A) → B x → C x`
-#: Game.Levels.DependentWorld.L03_Application
-msgid "Given a pair of type families §0 and a fiberwise function §1, then there is a function from sections of the first type family to sections of the second type family."
 msgstr ""
 
 #: Game.Levels.NaturalNumbersWorld.L10_SuccessorInjectivity
@@ -2629,12 +2630,6 @@ msgstr ""
 
 #: Game.Levels.AdvancedFunctionWorld.L10_InverseInvertibility
 msgid "Inverse Invertibility"
-msgstr ""
-
-#. §0: `g : ((y : A) → B y) → ((z : A) → C z)`
-#. §1: `(x : A) → B x → C x`
-#: Game.Levels.DependentWorld.L03_Application
-msgid "Note that from a function §0 it would not necessarily be possible to define a dependent function of type §1. Can you use the analogy with the universal quantifier to understand why not?"
 msgstr ""
 
 #: Game.Levels.AdvancedFunctionWorld.L12_BijectiveImpliesInvertible
@@ -5059,6 +5054,12 @@ msgstr ""
 msgid "For types §0 and §1, the function §2 is defined to send elements of the form §3 to §4 and elements of the form §5 to §6."
 msgstr ""
 
+#. §0: `«{s}»`
+#. §1: `«{f}» «{a}»`
+#: Game.Levels.DependentWorld.L03_Application
+msgid "Which value of the section §0 can you pass to §1?"
+msgstr ""
+
 #. §0: `left`
 #. §1: `right`
 #: Game.Levels.NaturalNumbersWorld.L03_Induction
@@ -6380,31 +6381,6 @@ msgstr ""
 
 #: Game.Levels.TypeWorld.L02_Proofs
 msgid "In the next level, we will learn a new tactic, which allows us to be more precise about which assumption is being used."
-msgstr ""
-
-#. §0: `B C : A → Type`
-#. §1: `A`
-#. §2: `B`
-#. §3: `C`
-#. §4: `A`
-#. §5: `a : A`
-#. §6: `B a`
-#. §7: `C a`
-#. §8: `(x : A) → B x`
-#. §9: `B`
-#. §10: `f : (x : A) → B x → C x`
-#. §11: `B a → C a`
-#. §12: `a : A`
-#: Game.Levels.DependentWorld.L03_Application
-msgid "In this level, we consider a pair of type families §0 indexed by the type §1.\n"
-"\n"
-"The families of types §2 and §3 can be pictured as &ldquo;bundles&rdquo; of types living over the &ldquo;base&rdquo; type §4. For each element §5, there is a corresponding fiber §6 and §7 specified by each type family.\n"
-"\n"
-"With this mental image, an element of the dependent function type §8 may also be thought of as a *section* of the type family §9, as it specifies an element of the fiber living over each element of the base type.\n"
-"\n"
-"In this level, you are given a dependent function §10 that specifies a map between fibers §11 for each element §12 of the base type.\n"
-"\n"
-"Using this, your task is define a function that sends a section of the first type family to a section of the second type family."
 msgstr ""
 
 #. §0: `P`
@@ -8325,6 +8301,30 @@ msgstr ""
 msgid "Use either §0 or §1 to consider the possible cases for the variable §2."
 msgstr ""
 
+#. §0: `B C : A → Type`
+#. §1: `A`
+#. §2: `a : A`
+#. §3: `B a`
+#. §4: `C a`
+#. §5: `∀ x : A, P x`
+#. §6: `P a`
+#. §7: `a : A`
+#. §8: `B`
+#. §9: `(x : A) → B x`
+#. §10: `B a`
+#. §11: `a : A`
+#. §12: `f`
+#. §13: `f a : B a → C a`
+#. §14: `B`
+#. §15: `C`
+#: Game.Levels.DependentWorld.L03_Application
+msgid "Picture the families of types §0 as two bundles over the same base type §1. Over each §2 lie the fibers §3 and §4.\n"
+"\n"
+"Recall that a proof of §5 gives a proof of §6 for each §7. Similarly, a *section* of §8 is a dependent function of type §9 that gives an element of each fiber §10.\n"
+"\n"
+"For each §11, the given function §12 specifies a map §13. Use these maps to send a section of §14 to a section of §15."
+msgstr ""
+
 #. §0: `P`
 #. §1: `Q`
 #. §2: `p`
@@ -9208,6 +9208,27 @@ msgstr ""
 
 #: Game
 msgid "Reintroduction to Proofs"
+msgstr ""
+
+#. §0: `B : Bool → Type`
+#. §1: `C`
+#. §2: `B false`
+#. §3: `s`
+#. §4: `B`
+#. §5: `C`
+#. §6: `B`
+#. §7: `B a → C a`
+#. §8: `a`
+#. §9: `B false`
+#. §10: `Empty`
+#. §11: `B true`
+#. §12: `Unit`
+#. §13: `B true → C true`
+#. §14: `()`
+#: Game.Levels.DependentWorld.L03_Application
+msgid "Let §0 and let §1 be the constant family with value §2. Given a section §3 of §4, what value could you return at both booleans to define a section of §5?\n"
+"\n"
+"This gives a map between sections for any §6. Must there also be a map §7 for each §8? Take §9 to be §10 and §11 to be §12. Where would a map §13 send §14?"
 msgstr ""
 
 #. §0: `P`
