@@ -57,10 +57,12 @@ Let's begin!
 Info
 "
 This was created using the GameSkeleton Github Repo from the Lean Games Server hosted by ADAM: Anticipating the Digital Age of Mathematics at Heinrich Heine University Düsseldorf. It was originally designed for a first year seminar course taught at Johns Hopkins University in Fall 2025 with the title `Computer-Verified Proof: a Hands-On Introduction to Interactive Theorem Proving`. A sister version of this game, [Reintroduction to Proofs (Verbose Lean edition)](https://adam.math.hhu.de/#/g/emilyriehl/VerboseReintroductionToProofs), solves the same levels in the controlled English of [Verbose Lean](https://github.com/PatrickMassot/verbose-lean4).
+
+Russian translation by: [Ruslan Shvedov](https://github.com/rnsatg), [Konstantin Belyanin](https://github.com/k88-b) / Gemini Argon.
 "
 
 /-! Information to be displayed on the servers landing page. -/
-Languages "en"   -- List of ISO 2-letter abbreviations
+Languages "en" "ru"   -- List of ISO 2-letter abbreviations
 /-! `CaptionShort` is the subtitle displayed above the image -/
 CaptionShort "An introduction to proofs in dependent type theory."
 /-! `CaptionLong` is the description of the game displayed below the image -/
