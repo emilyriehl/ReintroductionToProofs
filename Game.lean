@@ -25,7 +25,7 @@ Mathematicians from all over &mdash; most of whom have never met one another &md
 Firstly mathematicians have developed a precise formal language which allows them to define new abstract concepts and state their properties in an unambiguous way. A mathematical *proposition* is a well-formed mathematical statement that is either true or false, for instance:
 
 * &ldquo;There are infinitely many prime numbers.&rdquo;
-* &ldquo;Every prime number is odd.&rdquo;
+* &ldquo;Every prime number other than 2 is odd.&rdquo;
 * &ldquo;There are infinitely many prime numbers that are two less than another prime.&rdquo;
 
 Mathematicians distinguish between the true propositions, the false ones, and the ones whose truth value is not yet known through *proofs* made precise in the formal language of mathematical logic.
